@@ -22,6 +22,9 @@
     display: inline-block;
     position: relative;
     vertical-align: middle;
+    background-color: #fff;
+    border-color: #000;
+    transition: background-color 140ms, border-color 140ms;
 }
 
 .pcheckmark {
@@ -37,6 +40,11 @@
     margin-left: 1px;
     margin-top: 1px;
     color: white;
+}
+
+.pcheckbox--checked {
+    background-color: #3f51b5;
+    border-color: #3f51b5;
 }
 
 .plabel {

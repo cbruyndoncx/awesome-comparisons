@@ -6,9 +6,8 @@ import { Store } from '@ngrx/store';
 import { IUCAppState } from '../../redux/uc.app-state';
 import { ConfigurationService } from './configuration/configuration.service';
 import { UCClickAction, UCDetailsAction, UCNewStateAction, UCSearchUpdateAction, UCTableOrderAction } from '../../redux/uc.action';
-import { isNullOrUndefined } from 'util';
+import { isNullOrUndefined } from '../../shared/util/null-check';
 
-import { saveAs } from 'file-saver';
 import { Criteria, DataElement, Label } from '../../../../lib/gulp/model/model.module';
 
 @Component({
@@ -82,10 +81,14 @@ export class ComparisonComponent {
 
     public latexDownload() {
         let content: string = this.latexTable.element.nativeElement.textContent;
-        content = content.substr(content.indexOf('%'), content.length);
-        const blob: Blob = new Blob([content], {type: 'plain/text'});
-        saveAs(blob, 'latextable.tex');
-        return window.URL.createObjectURL(blob);
+        content = content.substring(content.indexOf('%'));
+        const blob: Blob = new Blob([content], {type: 'text/plain'});
+        const downloadUrl = window.URL.createObjectURL(blob);
+        const anchor = document.createElement('a');
+        anchor.href = downloadUrl;
+        anchor.download = 'latextable.tex';
+        anchor.click();
+        window.URL.revokeObjectURL(downloadUrl);
     }
 
     /**

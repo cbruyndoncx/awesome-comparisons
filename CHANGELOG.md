@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+### Removed
+
+- Java/Gradle md-to-json pipeline retired in favor of the MD_TO_JSON_COMMAND-driven Python workflow.
+- lib/md-to-json directory has been removed.
+
 ## [v2.0.0-alpha.32] – 2020-02-21
 
 ### Fixed

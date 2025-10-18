@@ -1,5 +1,5 @@
-import { AfterViewChecked, ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, Output } from '@angular/core';
-import * as AnchorJS from 'anchor-js';
+import { AfterViewChecked, ChangeDetectionStrategy, Component, EventEmitter, Inject, Input, OnChanges, Output } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { CriteriaData, Label } from '../../../../../lib/gulp/model/model.module';
 
 @Component({
@@ -23,7 +23,10 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
     @Input() order: Array<number> = [];
 
     private table;
-    private anchor;
+    private anchorsInitialised = false;
+
+    constructor(@Inject(DOCUMENT) private document: Document) {
+    }
 
     public labelClick(event: MouseEvent, key: Label, index: number) {
         this.searchFor.emit({event, key, index});
@@ -34,7 +37,9 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
     }
 
     ngAfterViewChecked(): void {
-        this.anchor = new AnchorJS({placement: 'right'}).add('.anchored');
+        if (!this.anchorsInitialised) {
+            this.addAnchors();
+        }
     }
 
     ngOnChanges(changes): void {
@@ -45,5 +50,18 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
         if (this.table != null) {
             this.table.trigger('reflow');
         }
+    }
+
+    private addAnchors(): void {
+        if (!this.document) {
+            return;
+        }
+        const anchoredElements = Array.from(this.document.querySelectorAll<HTMLElement>('.anchored'));
+        anchoredElements.forEach((element, index) => {
+            if (!element.getAttribute('id')) {
+                element.setAttribute('id', `anchored-${index}`);
+            }
+        });
+        this.anchorsInitialised = true;
     }
 }

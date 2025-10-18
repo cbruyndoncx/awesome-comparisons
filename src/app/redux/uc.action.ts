@@ -12,7 +12,7 @@ import { IUCAppState } from './uc.app-state';
 import { Criteria, DataElement } from '../../../lib/gulp/model/model.module';
 
 export class UCAction implements Action {
-    type: string;
+    type!: string;
     value: number;
 }
 
@@ -21,7 +21,7 @@ export class UCRouterAction extends UCAction {
 }
 
 export class UCDataUpdateAction extends UCAction {
-    type = UPDATE_DATA;
+    override type = UPDATE_DATA;
 
     constructor(public criterias: Map<string, Criteria>) {
         super();
@@ -29,7 +29,7 @@ export class UCDataUpdateAction extends UCAction {
 }
 
 export class UCSearchUpdateAction extends UCAction {
-    type = UPDATE_SEARCH;
+    override type = UPDATE_SEARCH;
 
     constructor(public criterias: Map<string, string>) {
         super();
@@ -37,7 +37,7 @@ export class UCSearchUpdateAction extends UCAction {
 }
 
 export class UCTableOrderAction extends UCAction {
-    type = UPDATE_ORDER;
+    override type = UPDATE_ORDER;
 
     constructor(public index: number, public ctrl: boolean) {
         super();
@@ -45,7 +45,7 @@ export class UCTableOrderAction extends UCAction {
 }
 
 export class UCSettingsUpdateAction extends UCAction {
-    type = UPDATE_SETTINGS;
+    override type = UPDATE_SETTINGS;
 
     constructor(public enable: boolean, public operation: string) {
         super();
@@ -53,7 +53,7 @@ export class UCSettingsUpdateAction extends UCAction {
 }
 
 export class UCClickAction extends UCAction {
-    type = CLICK_ACTION;
+    override type = CLICK_ACTION;
 
     constructor(public val: string, public index: number) {
         super();
@@ -61,7 +61,7 @@ export class UCClickAction extends UCAction {
 }
 
 export class UCNewStateAction extends UCAction {
-    type = NEW_STATE_ACTION;
+    override type = NEW_STATE_ACTION;
 
     constructor(public newState: IUCAppState) {
         super();
@@ -69,7 +69,7 @@ export class UCNewStateAction extends UCAction {
 }
 
 export class UCDetailsAction extends UCAction {
-    type = TOGGLE_DETAILS_ACTION;
+    override type = TOGGLE_DETAILS_ACTION;
 
     constructor(public data: DataElement) {
         super();

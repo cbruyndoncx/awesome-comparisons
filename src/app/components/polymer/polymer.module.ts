@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { PaperCardComponent } from './paper-card/paper-card.component';
 import { IronIconComponent } from './iron-icon/iron-icon.component';
 import { TooltipComponent } from './tooltip/tooltip.component';
@@ -11,7 +11,7 @@ import { PaperCheckboxComponent } from './paper-checkbox/paper-checkbox.componen
 
 @NgModule({
     imports: [
-        BrowserModule
+        CommonModule
     ],
     exports: [
         PaperCardComponent,

@@ -1,6 +1,11 @@
 import {
-    ChangeDetectionStrategy, Component, ElementRef, EventEmitter, HostListener, Input, OnChanges, Output,
-    Renderer
+    ChangeDetectionStrategy,
+    Component,
+    EventEmitter,
+    HostBinding,
+    HostListener,
+    Input,
+    Output
 } from "@angular/core";
 
 @Component({
@@ -9,39 +14,27 @@ import {
     styleUrls: ['./paper-checkbox.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PaperCheckboxComponent implements OnChanges {
+export class PaperCheckboxComponent {
     @Input() label: string;
-    @Input() checked: boolean;
-    @Output() checkedChange: EventEmitter<any> = new EventEmitter();
+    @Input() checked = false;
+    @Output() checkedChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-    constructor(private el: ElementRef, private renderer: Renderer) {
+    @HostBinding('attr.role') role = 'checkbox';
+    @HostBinding('attr.tabindex') tabIndex = 0;
+    @HostBinding('attr.aria-checked') get ariaChecked(): string {
+        return String(this.checked);
     }
 
-    ngOnChanges() {
-        if (this.checked) {
-            this.renderer.setElementStyle(this.el.nativeElement.children[0], 'background-color', '#3f51b5');
-            this.renderer.setElementStyle(this.el.nativeElement.children[0], 'border-color', '#3f51b5');
-        } else {
-            this.renderer.setElementStyle(this.el.nativeElement.children[0], 'background-color', '#fff');
-            this.renderer.setElementStyle(this.el.nativeElement.children[0], 'border-color', '#000');
-        }
-        this.el.nativeElement.checked = this.checked;
-    }
-
-    @HostListener('click', ['$event'])
-    onChange(e) {
+    @HostListener('click')
+    public toggle(): void {
         this.checked = !this.checked;
-        if (this.checked) {
-            this.renderer.setElementStyle(this.el.nativeElement.children[0], 'background-color', '#3f51b5');
-            this.renderer.setElementStyle(this.el.nativeElement.children[0], 'border-color', '#3f51b5');
-        } else {
-            this.renderer.setElementStyle(this.el.nativeElement.children[0], 'background-color', '#fff');
-            this.renderer.setElementStyle(this.el.nativeElement.children[0], 'border-color', '#000');
-        }
-        this.el.nativeElement.checked = this.checked;
         this.checkedChange.emit(this.checked);
     }
 
-    private toogleCheck() {
+    @HostListener('keydown.enter', ['$event'])
+    @HostListener('keydown.space', ['$event'])
+    public handleKey(event: KeyboardEvent): void {
+        event.preventDefault();
+        this.toggle();
     }
 }

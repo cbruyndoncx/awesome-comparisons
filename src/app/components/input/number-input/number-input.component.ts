@@ -1,7 +1,7 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { ComparisonComponent } from '../../comparison/comparison.component';
 import { InputInterface } from '../input-interface';
-import { isNullOrUndefined } from 'util';
+import { isNullOrUndefined } from '../../../shared/util/null-check';
 import { IUCAppState } from '../../../redux/uc.app-state';
 import { Criteria } from '../../../../../lib/gulp/model/model.module';
 

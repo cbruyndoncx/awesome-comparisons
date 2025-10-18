@@ -1,8 +1,11 @@
-<ng-select #selector
-           [items]="options"
-           [multiple]=true
-           (selected)="select($event)"
-           (removed)="deSelect($event)"
-           [placeholder]="placeholder"
-           [active]="active">
-</ng-select>
+<div class="select2-container" role="listbox" [attr.aria-label]="placeholder || name">
+    <span class="select2-placeholder" *ngIf="placeholder && selectedIds.size === 0">{{ placeholder }}</span>
+    <button
+        type="button"
+        class="select2-option"
+        *ngFor="let option of options; trackBy: trackByOption"
+        [class.select2-option--active]="isSelected(option)"
+        (click)="toggleOption(option)">
+        {{ getOptionText(option) }}
+    </button>
+</div>

@@ -1,0 +1,9 @@
+# Browserslist configuration for Angular 17 evergreen browsers
+
+last 2 Chrome versions
+last 2 Firefox versions
+last 2 Edge versions
+last 2 Safari versions
+last 2 iOS versions
+Firefox ESR
+not IE 11

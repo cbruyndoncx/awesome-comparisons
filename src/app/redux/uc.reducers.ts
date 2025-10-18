@@ -10,7 +10,7 @@ import {
     UCSettingsUpdateAction,
     UCTableOrderAction
 } from './uc.action';
-import { isNullOrUndefined } from 'util';
+import { isNullOrUndefined } from '../shared/util/null-check';
 import { ConfigurationService } from '../components/comparison/configuration/configuration.service';
 import { ROUTER_NAVIGATION } from '@ngrx/router-store';
 import { Criteria, CriteriaData, CriteriaTypes, DataElement, Label } from '../../../lib/gulp/model/model.module';
@@ -748,6 +748,7 @@ function searchElement(state: IUCAppState, detailsKey: string): DataElement {
             return element;
         }
     }
+    return new DataElement(detailsKey, '', '', new Map());
 }
 
 function filterReducer(state: IUCAppState = new UcAppState(), action: UCAction) {

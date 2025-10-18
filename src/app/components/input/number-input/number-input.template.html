@@ -1,4 +1,5 @@
 <input #content
-       type="text" [placeholder]="criteria.placeholder"
-       (keyup)="criteriaChanged($event, crit)"
+       type="text"
+       [placeholder]="criteria.placeholder"
+       (keyup)="criteriaChanged()"
        [value]="getValue()">

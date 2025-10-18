@@ -4,8 +4,8 @@ import { HttpClient } from '@angular/common/http';
 
 import { Citation, Configuration, Criteria, CriteriaTypes, CriteriaValue, Data } from '../../../../../lib/gulp/model/model.module';
 
-import * as Showdown from 'showdown';
-import { isNullOrUndefined } from 'util';
+import { isNullOrUndefined } from '../../../shared/util/null-check';
+import { renderMarkdown, renderMarkdownToText } from '../../../shared/util/markdown';
 import { Store } from '@ngrx/store';
 import { IUCAppState } from '../../../redux/uc.app-state';
 import { UCDataUpdateAction } from '../../../redux/uc.action';
@@ -13,7 +13,6 @@ import { UCDataUpdateAction } from '../../../redux/uc.action';
 @Injectable()
 export class ConfigurationService {
     public static data: Data = new Data([]);
-    public static converter: Showdown.Converter;
     public description = '';
     public criteria: Array<Criteria> = [];
     public configuration: Configuration = Configuration.empty();
@@ -25,12 +24,14 @@ export class ConfigurationService {
     constructor(public title: Title,
                 private http: HttpClient,
                 private store: Store<IUCAppState>) {
-        ConfigurationService.converter = new Showdown.Converter();
     }
 
-    static getHtml(converter: Showdown.Converter, citation: Map<string, Citation>, markdown: string): string {
-        if (isNullOrUndefined(markdown)) return null;
-        return ConfigurationService.converter.makeHtml(markdown.toString()).replace(/(?:\[@)([^\]]*)(?:\])/g, (match, dec) => {
+    static getHtml(citation: Map<string, Citation>, markdown: string): string {
+        if (isNullOrUndefined(markdown)) {
+            return '';
+        }
+        const html = renderMarkdown(markdown.toString());
+        return html.replace(/(?:\[@)([^\]]*)(?:\])/g, (match, dec) => {
             if (citation.has(dec)) {
                 return '<a class="cite-link" href="#' + dec + '">[' + citation.get(dec).index + ']</a>';
             } else {
@@ -39,11 +40,12 @@ export class ConfigurationService {
         });
     }
 
-    static getLatex(converter: Showdown.Converter, text: string): string {
+    static getLatex(text: string): string {
         if (isNullOrUndefined(text)) {
             return null;
         }
-        return ConfigurationService.converter.makeHtml(text.toString()).replace(/(?:\[@)([^\]]*)(?:\])/g, (match, dec) => {
+        const plainText = renderMarkdownToText(text.toString());
+        return plainText.replace(/(?:\[@)([^\]]*)(?:\])/g, (match, dec) => {
             return '\\cite{' + dec + '}';
         });
     }
@@ -78,29 +80,26 @@ export class ConfigurationService {
             ConfigurationService.data.dataElements = ConfigurationService.data.dataElements.map(dataElement => {
                     // Build html strings and labelArrays
                     dataElement.html = ConfigurationService.getHtml(
-                        ConfigurationService.converter, this.citation, dataElement.description
+                        this.citation, dataElement.description
                     );
                     dataElement.latex = ConfigurationService.getLatex(
-                        ConfigurationService.converter, dataElement.description
+                        dataElement.description
                     );
                     dataElement.criteriaData = Array.from(dataElement.criteriaData).map(([key, criteriaData]) => {
                         switch (criteriaData.type) {
                             case CriteriaTypes.MARKDOWN:
                             case CriteriaTypes.RATING:
                                 criteriaData.html = ConfigurationService.getHtml(
-                                    ConfigurationService.converter,
                                     this.citation,
                                     criteriaData.text
                                 );
                                 criteriaData.latex = ConfigurationService.getLatex(
-                                    ConfigurationService.converter,
                                     criteriaData.text
                                 );
                                 break;
                             case CriteriaTypes.LABEL:
                             case CriteriaTypes.REPOSITORY:
                                 criteriaData.labels.forEach(label => label.tooltip.html = ConfigurationService.getHtml(
-                                    ConfigurationService.converter,
                                     this.citation,
                                     label.tooltip.plain
                                 ));
@@ -118,7 +117,6 @@ export class ConfigurationService {
 
             // Set description
             this.description = ConfigurationService.getHtml(
-                ConfigurationService.converter,
                 this.citation,
                 String(result[2]));
 

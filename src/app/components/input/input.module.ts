@@ -1,13 +1,11 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { SelectModule } from "ng2-select";
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 import { Select2Component } from "./select2/select2.component";
 import { NumberInputComponent } from "./number-input/number-input.component";
 
 @NgModule({
     imports: [
-        BrowserModule,
-        SelectModule
+        CommonModule
     ],
     exports: [
         Select2Component,
@@ -17,8 +15,7 @@ import { NumberInputComponent } from "./number-input/number-input.component";
         Select2Component,
         NumberInputComponent
     ],
-    providers: [],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    providers: []
 })
 export class InputModule {
 }
