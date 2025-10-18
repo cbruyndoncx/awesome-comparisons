@@ -22,6 +22,7 @@ export class ComparisonDetailsComponent implements OnChanges {
     @Input() headers: Array<string> = [];
     //@Input() ratings: Array<number> = [];
     @Input() tooltipAsText: boolean = true;
+    @Input() labelColorsEnabled: boolean = true;
 
     constructor(public configurationService: ConfigurationService) {
     }
@@ -51,17 +52,20 @@ export class ComparisonDetailsComponent implements OnChanges {
             const types: Array<CriteriaTypes> = [];
             const headers: Array<string> = [];
 
-
-            criteriaDataMap.forEach((criteriaData, key) => {
-                const criteria = configuration.getCriteria(key);
-                if (criteria && criteria.id !== body.bodyRef && criteria.detail) {
-                    tags.push(criteriaData);
-                    types.push(criteria.type);
-                    if (criteriaData.type !== CriteriaTypes.RATING) {
-                        headers.push(criteria.name);
-                    } else {
-                        headers.push(criteria.name && criteria.name.length > 0 ? criteria.name : criteria.id);
-                    }
+            configuration.criteria.forEach(criteria => {
+                if (!criteria.detail || criteria.id === body.bodyRef) {
+                    return;
+                }
+                const criteriaData = criteriaDataMap.get(criteria.name) || criteriaDataMap.get(criteria.id);
+                if (!criteriaData) {
+                    return;
+                }
+                tags.push(criteriaData);
+                types.push(criteria.type);
+                if (criteriaData.type !== CriteriaTypes.RATING) {
+                    headers.push(criteria.name && criteria.name.length > 0 ? criteria.name : criteria.id);
+                } else {
+                    headers.push(criteria.name && criteria.name.length > 0 ? criteria.name : criteria.id);
                 }
             });
             this.tags = tags;

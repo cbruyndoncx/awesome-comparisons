@@ -32,28 +32,34 @@
                     {{entry.content}}
                 </td>
                 <td *ngIf="types[i] ===  'LABEL' || types[i] === 'REPOSITORY'">
-                    <ng-template ngFor let-label [ngForOf]="entry?.labelArray">
-                        <ptooltip [tooltip]="label.tooltip.text"
-                                  [tooltipHtml]="label.tooltip.html" [position]="'n'">
-                            <div class="label mylabel {{label.clazz}}" [style.color]="label.color"
-                                 [style.background-color]="label.backgroundColor"
-                                 (click)="labelClick($event, label, i)">
-                                {{label.name}}
-                            </div>
-                        </ptooltip>
-                        <ptooltip *ngIf="label == null"
-                                  [tooltipHtml]="'There was no value for this field. Please submit one via pull request.'">
-                            <div class="label mylabel unknown">unknown</div>
-                        </ptooltip>
+                    <ng-container *ngIf="entry?.labelArray?.length; else missingLabelBlock">
+                        <ng-container *ngFor="let label of entry?.labelArray">
+                            <ptooltip [tooltip]="label.tooltip.text"
+                                      [tooltipHtml]="label.tooltip.html" [position]="'n'">
+                                <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
+                                     [style.color]="labelColorsEnabled ? label.color : null"
+                                     [style.background-color]="labelColorsEnabled ? label.backgroundColor : null"
+                                     (click)="labelClick($event, label, i)">
+                                    {{label.name}}
+                                </div>
+                            </ptooltip>
+                        </ng-container>
+                    </ng-container>
+                    <ng-template #missingLabelBlock>
+                        <div class="label mylabel label--missing">Missing</div>
                     </ng-template>
+                    <div class="repository-links" *ngIf="entry?.type === 'REPOSITORY' && entry?.urlList?.length">
+                        <a *ngFor="let link of entry.urlList" [href]="link" target="_blank" rel="noopener noreferrer">{{link}}</a>
+                    </div>
                 </td>
 
                 <td *ngIf="types[i] === 'MARKDOWN'">
                     <div [innerHtml]="entry?.html | sanitizeHtml"></div>
                 </td>
                 <td *ngIf="types[i] === 'RATING'">
-                    <iicon icon="star" *ngIf="entry?.rating">{{entry.rating}}
+                    <iicon icon="star" *ngIf="entry?.rating !== undefined && entry?.rating !== null">{{entry.rating}}
                     </iicon>
+                    <span *ngIf="entry?.rating === undefined || entry?.rating === null">Missing</span>
                 </td>
             </ng-template>
             <td>
@@ -64,4 +70,3 @@
     </ng-template>
     </tbody>
 </table>
-

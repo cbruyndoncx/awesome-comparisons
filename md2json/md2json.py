@@ -1,13 +1,11 @@
 import argparse
 import json
 import os
-from typing import List
-
-from to_json_serializer import HeaderNode, Node, RootNode, ToJSONSerializer
+from typing import Dict, List, Optional, Tuple
 
 
 class Md2Json:
-    """Utility that converts markdown comparison files into JSON."""
+    """Utility that converts markdown comparison files into JSON compatible with the legacy pipeline."""
 
     def __init__(self, level: int = 1, pretty_printing: bool = False):
         self.level = level
@@ -33,58 +31,36 @@ class Md2Json:
         except IOError as exc:
             print(f"Error writing to file {path}: {exc}")
 
-    def convert_markdown_to_json(self, markdown_content: str) -> dict:
-        """Builds an AST from markdown content and returns the JSON representation."""
-        root_node = self.create_ast(markdown_content)
-        serializer = ToJSONSerializer()
-        serializer.set_raw(markdown_content)
-        json_content = serializer.to_json(root_node)
-        return json.loads(json_content)
+    def convert_markdown_to_json(self, markdown_content: str) -> Optional[Dict]:
+        """Parses markdown into the legacy JSON structure expected by the Angular/Gulp stack."""
+        lines = [line.rstrip() for line in markdown_content.splitlines()]
 
-    def create_ast(self, markdown_content: str) -> RootNode:
-        """Creates a simple AST capturing headers, list items and paragraphs."""
-        root_node = RootNode()
-        lines = markdown_content.splitlines()
+        # Extract title
+        title_line = self._find_first_header(lines)
+        if title_line is None:
+            return None
 
-        for line in lines:
-            line = line.strip()
-            if not line:
-                continue
+        title = self._strip_header_marker(lines[title_line])
 
-            if line.startswith("#"):
-                level = len(line) - len(line.lstrip("#"))
-                header_node = HeaderNode(level)
-                text_content = line.lstrip("#").strip()
-                header_node.add_child(text_content)
-                header_node.set_start_index(line.index(text_content))
-                header_node.set_end_index(line.index(text_content) + len(text_content))
-                root_node.add_child(header_node)
-            elif line.startswith("- "):
-                list_item_node = Node()
-                text_content = line[2:].strip()
-                list_item_node.add_child(text_content)
-                list_item_node.set_start_index(line.index(text_content))
-                list_item_node.set_end_index(line.index(text_content) + len(text_content))
-                root_node.add_child(list_item_node)
-            elif line.startswith(">"):
-                blockquote_node = Node()
-                text_content = line[1:].strip()
-                blockquote_node.add_child(text_content)
-                blockquote_node.set_start_index(line.index(text_content))
-                blockquote_node.set_end_index(line.index(text_content) + len(text_content))
-                root_node.add_child(blockquote_node)
-            else:
-                para_node = Node()
-                text_content = line.strip()
-                para_node.add_child(text_content)
-                para_node.set_start_index(line.index(text_content))
-                para_node.set_end_index(line.index(text_content) + len(text_content))
-                root_node.add_child(para_node)
+        description_lines, criteria_blocks = self._extract_sections(lines, title_line + 1)
 
-        return root_node
+        description = self._normalise_description(description_lines)
+        criteria = [self._build_criteria_block(block) for block in criteria_blocks]
+
+        children = []
+        if description:
+            children.append({"type": "text", "content": description})
+        children.extend(criteria)
+
+        return {
+            "type": "header",
+            "level": 1,
+            "content": title,
+            "children": children
+        }
 
     def dir_to_json(self, input_dir: str, output_path_tmp: str, output_path: str) -> None:
-        json_array: List[dict] = []
+        json_array: List[Dict] = []
         if not os.path.isdir(input_dir):
             print(f"Input directory {input_dir} not found.")
             return
@@ -96,7 +72,11 @@ class Md2Json:
             markdown_content = self.read_file(file_path)
             if not markdown_content:
                 continue
+
             json_object = self.convert_markdown_to_json(markdown_content)
+            if not json_object:
+                continue
+
             json_array.append(json_object)
             json_string = json.dumps(json_object, indent=4 if self.pretty_printing else None)
             tmp_target = os.path.join(output_path_tmp, filename.replace(".md", ".json"))
@@ -104,6 +84,89 @@ class Md2Json:
 
         final_json = json.dumps(json_array, indent=4 if self.pretty_printing else None)
         self.write_file(output_path, final_json)
+
+    def _find_first_header(self, lines: List[str]) -> Optional[int]:
+        for idx, line in enumerate(lines):
+            if line.strip().startswith("#"):
+                return idx
+        return None
+
+    def _strip_header_marker(self, line: str) -> str:
+        stripped = line.lstrip("#").strip()
+        return stripped
+
+    def _extract_sections(self, lines: List[str], start_index: int) -> Tuple[List[str], List[Tuple[str, List[str]]]]:
+        description_lines: List[str] = []
+        criteria_blocks: List[Tuple[str, List[str]]] = []
+
+        current_criterion: Optional[Tuple[str, List[str]]] = None
+
+        for line in lines[start_index:]:
+            stripped = line.strip()
+            if stripped.startswith("##"):
+                # Flush existing criterion
+                if current_criterion:
+                    criteria_blocks.append(current_criterion)
+                criterion_name = stripped.lstrip("#").strip()
+                current_criterion = (criterion_name, [])
+            elif stripped.startswith("#"):
+                # Another top-level header indicates a new entry; stop processing
+                break
+            else:
+                if current_criterion:
+                    current_criterion[1].append(line)
+                else:
+                    description_lines.append(line)
+
+        if current_criterion:
+            criteria_blocks.append(current_criterion)
+
+        return description_lines, criteria_blocks
+
+    def _normalise_description(self, description_lines: List[str]) -> str:
+        cleaned = [line.strip() for line in description_lines if line.strip()]
+        return "\n".join(cleaned)
+
+    def _build_criteria_block(self, criterion: Tuple[str, List[str]]) -> Dict:
+        name, lines = criterion
+        text_lines: List[str] = []
+        list_items: List[str] = []
+
+        for line in lines:
+            stripped = line.strip()
+            if not stripped:
+                continue
+            if stripped.startswith("-"):
+                item = stripped.lstrip("-").strip()
+                if item:
+                    list_items.append(item)
+            else:
+                text_lines.append(stripped)
+
+        children: List[Dict] = []
+        if text_lines:
+            children.append({"type": "text", "content": "\n".join(text_lines)})
+        if list_items:
+            children.append({
+                "type": "list",
+                "level": 2,
+                "children": [
+                    {
+                        "type": "item",
+                        "level": 1,
+                        "content": item,
+                        "plainChildren": ""
+                    }
+                    for item in list_items
+                ]
+            })
+
+        return {
+            "type": "header",
+            "level": 2,
+            "content": name,
+            "children": children
+        }
 
 
 def build_arg_parser() -> argparse.ArgumentParser:

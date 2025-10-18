@@ -110,6 +110,9 @@ export function masterReducer(state: IUCAppState = new UcAppState(), action: UCA
                 case 'DetailsDisplayTooltips':
                     state.detailsDisplayTooltips = act.enable;
                     break;
+                case 'LabelColorsEnabled':
+                    state.labelColorsEnabled = act.enable;
+                    break;
             }
             break;
         case NEW_STATE_ACTION:
@@ -642,8 +645,7 @@ function sort(first: Array<CriteriaData>,
         } else {
             switch (types[keys[index]]) {
                 case CriteriaTypes.NAME_URL:
-                    // TODO
-                    result = stringCompare(criteriaDataFirst.name, criteriaDataSecond.name);
+                    result = stringCompare(criteriaDataFirst.text, criteriaDataSecond.text);
                     break;
                 case CriteriaTypes.TEXT:
                 case CriteriaTypes.MARKDOWN:

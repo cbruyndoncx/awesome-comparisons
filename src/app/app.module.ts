@@ -16,6 +16,13 @@ import { CustomRouterStateSerializer } from './redux/custom-router-state-seriali
         ComparisonModule,
         StoreModule.forRoot({
             state: masterReducer
+        }, {
+            runtimeChecks: {
+                strictStateImmutability: false,
+                strictActionImmutability: false,
+                strictStateSerializability: false,
+                strictActionSerializability: false
+            }
         }),
         RouterModule.forRoot([{
             path: '', component: ComparisonComponent

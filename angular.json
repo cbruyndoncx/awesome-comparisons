@@ -40,7 +40,14 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "@citation-js/core",
+              "@citation-js/plugin-wikidata",
+              "@larsgw/wikibase-sdk/commonjs/wikidata.org",
+              "fetch-ponyfill",
+              "sync-fetch"
+            ]
           },
           "configurations": {
             "production": {

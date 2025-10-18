@@ -62,6 +62,13 @@
                        [label]="'Display tooltips as footnotes'"></pcheckbox>
         </pitem>
 
+        <h5>Labels</h5>
+        <pitem>
+            <pcheckbox [checked]="labelColorsEnabled"
+                       (checkedChange)="labelColorsEnabledChange.emit($event)"
+                       [label]="'Show label colors'"></pcheckbox>
+        </pitem>
+
         <h5>Details</h5>
         <pitem>
             <pcheckbox [checked]="detailsDisplayTooltips"

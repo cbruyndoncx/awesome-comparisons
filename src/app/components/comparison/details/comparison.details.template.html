@@ -1,13 +1,19 @@
 <div class="pheader">
     <h2>{{data.name}}
         <ng-template ngFor let-label [ngForOf]="headerLabels">
-            <ptooltip [tooltip]="label.tooltip.text"
-                      [tooltipHtml]="prefixInternalLink(label.tooltip.html)" [position]="'s'">
-                <div class="label mylabel {{label.clazz}}" [style.color]="label.color"
-                     [style.background-color]="label.backgroundColor">
-                    {{label.name}}
-                </div>
-            </ptooltip>
+            <ng-container *ngIf="label; else missingHeaderLabel">
+                <ptooltip [tooltip]="label.tooltip.text"
+                          [tooltipHtml]="prefixInternalLink(label.tooltip.html)" [position]="'s'">
+                    <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
+                         [style.color]="labelColorsEnabled ? label.color : null"
+                         [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
+                        {{label.name}}
+                    </div>
+                </ptooltip>
+            </ng-container>
+        </ng-template>
+        <ng-template #missingHeaderLabel>
+            <div class="label mylabel label--missing">Missing</div>
         </ng-template>
         <small><a href="{{data.url}}" target="_blank">{{data.url}}</a></small>
     </h2>
@@ -22,28 +28,40 @@
 
     <ng-template ngFor let-entry [ngForOf]="tags" let-i="index">
         <pcard heading="{{headers[i]}}">
-            <p class="card-content">
+            <div class="card-content">
                 <a *ngIf="types[i] === 'url'" class="anchored"
                    href="{{entry.link}}"
                    target="_blank">{{entry.text}}</a>
-                <ng-template *ngIf="types[i] === 'LABEL'" ngFor let-label [ngForOf]="entry?.labelArray">
-                    <ptooltip *ngIf="!tooltipAsText"
-                              [tooltip]="label.tooltip.text"
-                              [tooltipHtml]="prefixInternalLink(label.tooltip.html)" [position]="'n'">
-                        <div class="label mylabel {{label.clazz}}" [style.color]="label.color"
-                             [style.background-color]="label.backgroundColor">
-                            {{label.name}}
-                        </div>
-                    </ptooltip>
-                    <div *ngIf="tooltipAsText" class="tt-container">
-                        <span class="label mylabel {{label.clazz}} tt-label" [style.color]="label.color"
-                              [style.background-color]="label.backgroundColor">
-                        {{label.name}}
-                        </span>
-                        <span class="tooltip-text tt-tooltip" [innerHtml]="label.tooltip.text|sanitizeHtml"></span>
-                        <br *ngIf="label.tooltip.text && label.tooltip.html">
-                        <span class="tooltip-text tt-tooltip" [innerHtml]="prefixInternalLink(label.tooltip.html|sanitizeHtml)"></span>
+                <ng-container *ngIf="types[i] === 'LABEL' || types[i] === 'REPOSITORY'">
+                    <ng-container *ngIf="entry?.labelArray?.length; else missingDetailLabel">
+                        <ng-container *ngFor="let label of entry?.labelArray">
+                            <ptooltip *ngIf="!tooltipAsText"
+                                      [tooltip]="label.tooltip.text"
+                                      [tooltipHtml]="prefixInternalLink(label.tooltip.html)" [position]="'n'">
+                                <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
+                                     [style.color]="labelColorsEnabled ? label.color : null"
+                                     [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
+                                    {{label.name}}
+                                </div>
+                            </ptooltip>
+                            <div *ngIf="tooltipAsText" class="tt-container">
+                                <span class="label mylabel {{label.clazz}} tt-label" [class.label--plain]="!labelColorsEnabled"
+                                      [style.color]="labelColorsEnabled ? label.color : null"
+                                      [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
+                                {{label.name}}
+                                </span>
+                                <span class="tooltip-text tt-tooltip" [innerHtml]="label.tooltip.text|sanitizeHtml"></span>
+                                <br *ngIf="label.tooltip.text && label.tooltip.html">
+                                <span class="tooltip-text tt-tooltip" [innerHtml]="prefixInternalLink(label.tooltip.html|sanitizeHtml)"></span>
+                            </div>
+                        </ng-container>
+                    </ng-container>
+                    <div class="repository-links" *ngIf="entry?.type === 'REPOSITORY' && entry?.urlList?.length">
+                        <a *ngFor="let link of entry.urlList" [href]="link" target="_blank" rel="noopener noreferrer">{{link}}</a>
                     </div>
+                </ng-container>
+                <ng-template #missingDetailLabel>
+                    <div class="label mylabel label--missing">Missing</div>
                 </ng-template>
 
                 <span *ngIf="types[i] === 'TEXT'">{{entry.content}}</span>
@@ -52,7 +70,8 @@
                       [innerHtml]="prefixInternalLink(entry?.html | sanitizeHtml)"></span>
 
                 <span *ngIf="types[i] === 'RATING'" [innerHtml]="prefixInternalLink(entry?.html | sanitizeHtml)"></span>
-            </p>
+                <span *ngIf="types[i] === 'RATING' && (entry?.rating === undefined || entry?.rating === null)" class="missing-text">Missing</span>
+            </div>
         </pcard>
     </ng-template>
 

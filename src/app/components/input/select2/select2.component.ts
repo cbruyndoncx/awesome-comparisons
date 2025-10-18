@@ -84,9 +84,9 @@ export class Select2Component implements InputInterface, OnChanges {
         }
     }
 
-    public trackByOption(_: number, option: SelectOption | string): string {
+    public trackByOption = (_: number, option: SelectOption | string): string => {
         return this.getOptionId(option);
-    }
+    };
 
     public getOptionText(option: SelectOption | string): string {
         if (typeof option === 'string') {

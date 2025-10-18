@@ -8,6 +8,7 @@ export class CriteriaData {
   public labelArray: Array<Label>;
   public type: CriteriaTypes;
   public url: string;
+  public urlList: Array<string>;
   public rating: number;
   public html: string;
   public latex: string;

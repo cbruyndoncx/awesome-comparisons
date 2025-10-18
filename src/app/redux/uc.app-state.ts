@@ -93,6 +93,7 @@ export interface IUCAppState {
     detailsData: DataElement;
 
     detailsDisplayTooltips: boolean;
+    labelColorsEnabled: boolean;
 
     tableExpand: boolean;
     currentSaved: boolean;
@@ -121,6 +122,7 @@ export class UcAppState implements IUCAppState {
     detailsData = null;
 
     detailsDisplayTooltips = false;
+    labelColorsEnabled = true;
 
     tableExpand = false;
 

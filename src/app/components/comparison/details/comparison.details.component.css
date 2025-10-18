@@ -25,6 +25,38 @@
     display: inline-table;
 }
 
+.label--plain {
+    background-color: #f5f5f5 !important;
+    color: #333 !important;
+    border: 1px solid #dddddd;
+}
+
+.label--missing {
+    background-color: #ffe0b2 !important;
+    color: #bf360c !important;
+    border: 1px solid #ffcc80;
+}
+
+.repository-links {
+    margin-top: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.repository-links a {
+    color: #1565c0;
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+.missing-text {
+    display: block;
+    margin-top: 4px;
+    color: #757575;
+    font-style: italic;
+}
+
 .tooltip-text ::ng-deep ul {
     padding-left: 15px;
 }

@@ -70,6 +70,7 @@
                           [index]="(store | async).state.rowIndexes"
                           [order]="(store | async).state.columnOrder"
                           [changeNum]="configurationService.tableColumns.length + (store | async).state.currentColumnNames.length + (settingsOpen? 0: 1) + changed"
+                          [labelColorsEnabled]="(store | async).state.labelColorsEnabled"
                           (settingsCallback)="settingsOpen = true"
                           (showDetails)="showDetails($event)"
                           (orderChange)="changeOrder($event)"
@@ -96,7 +97,8 @@
     <pdialog [opened]="(store | async).state.detailsOpen" *ngIf="(store | async).state.detailsOpen"
              (openedChange)="closeDetails()">
         <comparison-details [data]="(store | async).state.detailsData"
-                            [tooltipAsText]="(store | async).state.detailsDisplayTooltips"></comparison-details>
+                            [tooltipAsText]="(store | async).state.detailsDisplayTooltips"
+                            [labelColorsEnabled]="(store | async).state.labelColorsEnabled"></comparison-details>
     </pdialog>
 
     <pdialog *ngIf="settingsOpen"
@@ -114,6 +116,7 @@
             [latexEnableTooltips]="(store | async).state.latexEnableTooltips"
             [latexTooltipsAsFootnotes]="(store | async).state.latexTooltipsAsFootnotes"
             [detailsDisplayTooltips]="(store | async).state.detailsDisplayTooltips"
+            [labelColorsEnabled]="(store | async).state.labelColorsEnabled"
             (columnsDisplayAllChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'ColumnDisplayAll'})"
             (columnChange)="store.dispatch({type: 'UPDATE_SETTINGS', value: $event, operation: 'ColumnChange'})"
             (elementsDisplayAllChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'ElementDisplayAll'})"
@@ -122,6 +125,7 @@
             (latexEnableTooltipsChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'LatexEnableTooltips'})"
             (latexTooltipsAsFootnotesChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'LatexTooltipsAsFootnotes'})"
             (detailsDisplayTooltipsChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'DetailsDisplayTooltips'})"
+            (labelColorsEnabledChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'LabelColorsEnabled'})"
             (latexDownload)="latexDownload()"
         ></comparison-settings>
     </pdialog>

@@ -21,6 +21,62 @@ export class ConfigurationService {
     public tableColumns: Array<string> = [];
     public criteriaValues: Array<Array<{ id: string, text: string, criteriaValue: CriteriaValue }>>;
 
+    private static resolveTemplateValue(value: any, context: Record<string, any>): string {
+        if (isNullOrUndefined(value)) {
+            return '';
+        }
+        if (typeof value === 'string') {
+            return value;
+        }
+        if (typeof value === 'object' && !Array.isArray(value)) {
+            const template = typeof value.template === 'string' ? value.template : '';
+            const variables = Array.isArray(value.variables) ? value.variables : [];
+            if (template.length > 0) {
+                let result = template;
+                variables.forEach(variable => {
+                    const replacement = !isNullOrUndefined(context[variable]) ? String(context[variable]) : '';
+                    if (result.indexOf('{}') !== -1) {
+                        result = result.replace("{}", replacement);
+                    }
+                    const namedToken = `{${variable}}`;
+                    if (result.indexOf(namedToken) !== -1) {
+                        result = result.replace(new RegExp(`\\{${variable}\\}`, 'g'), replacement);
+                    }
+                });
+                return result;
+            }
+        }
+        return '';
+    }
+
+    private static parseOrder(criteria: Criteria): number {
+        if (criteria.id === 'id') {
+            return Number.NEGATIVE_INFINITY;
+        }
+        const order = criteria.order;
+        if (isNullOrUndefined(order) || order === '') {
+            return Number.POSITIVE_INFINITY;
+        }
+        const numericOrder = Number(order);
+        return Number.isFinite(numericOrder) ? numericOrder : Number.POSITIVE_INFINITY;
+    }
+
+    private static sortCriteriaByOrder(criteria: Array<Criteria>): Array<Criteria> {
+        return criteria
+            .map((crit, index) => ({
+                crit,
+                index,
+                order: ConfigurationService.parseOrder(crit)
+            }))
+            .sort((a, b) => {
+                if (a.order === b.order) {
+                    return a.index - b.index;
+                }
+                return a.order - b.order;
+            })
+            .map(item => item.crit);
+    }
+
     constructor(public title: Title,
                 private http: HttpClient,
                 private store: Store<IUCAppState>) {
@@ -53,13 +109,36 @@ export class ConfigurationService {
     public loadComparison(cd: ChangeDetectorRef) {
         Promise.all(
             [
-                this.http.get('comparison.json'),
-                this.http.get('data.json'),
-                this.http.get('description.md', {responseType: 'text'})
+                this.http.get('assets/generated/comparison.json'),
+                this.http.get('assets/generated/data.json'),
+                this.http.get('assets/generated/description.md', {responseType: 'text'})
             ].map(res => res.toPromise())
         ).then((result) => {
             // Set configuration model
             this.configuration = Configuration.load(result[0]);
+            const processedCriteria = this.configuration.criteria.map(criteria => {
+                const context: Record<string, any> = {
+                    id: criteria.id,
+                    name: typeof criteria.name === 'string' ? criteria.name : criteria.id,
+                    type: criteria.type
+                };
+                const resolvedName = ConfigurationService.resolveTemplateValue(criteria.name, context);
+                if (resolvedName.length > 0) {
+                    context.name = resolvedName;
+                    criteria.name = resolvedName;
+                }
+                const placeholder = ConfigurationService.resolveTemplateValue(criteria.placeholder, context);
+                if (placeholder.length > 0) {
+                    criteria.placeholder = placeholder;
+                }
+                const description = ConfigurationService.resolveTemplateValue(criteria.description, context);
+                if (description.length > 0) {
+                    criteria.description = description;
+                }
+                return criteria;
+            });
+            this.configuration.criteria = ConfigurationService.sortCriteriaByOrder(processedCriteria);
+            this.tableColumns = this.configuration.criteria.filter(criteria => criteria.table).map(criteria => criteria.id);
             this.criteria = this.configuration.criteria.filter(criteria => criteria.search);
             this.criteriaValues = this.criteria.map(criteria =>
                 Array.from(criteria.values).map(([key, value]) => {
@@ -104,6 +183,13 @@ export class ConfigurationService {
                                     label.tooltip.plain
                                 ));
                                 criteriaData.labelArray = Array.from(criteriaData.labels).map(([key, value]) => value);
+                                if (criteriaData.type === CriteriaTypes.REPOSITORY) {
+                                    const urls = (criteriaData.url || '')
+                                        .split('\n')
+                                        .map(url => url.trim())
+                                        .filter(url => url.length > 0);
+                                    criteriaData.urlList = Array.from(new Set(urls));
+                                }
                                 break;
                         }
                         return criteriaData;

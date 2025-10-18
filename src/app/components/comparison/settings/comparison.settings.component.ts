@@ -19,6 +19,7 @@ export class ComparisonSettingsComponent {
     @Input() latexTooltipsAsFootnotes: boolean = false;
 
     @Input() detailsDisplayTooltips: boolean = false;
+    @Input() labelColorsEnabled: boolean = true;
 
     @Output() columnsDisplayAllChange: EventEmitter<boolean> = new EventEmitter<boolean>();
     @Output() columnChange: EventEmitter<number> = new EventEmitter<number>();
@@ -32,4 +33,5 @@ export class ComparisonSettingsComponent {
     @Output() latexDownload: EventEmitter<any> = new EventEmitter();
 
     @Output() detailsDisplayTooltipsChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+    @Output() labelColorsEnabledChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 }

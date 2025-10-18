@@ -1,2 +1,28 @@
 citations: []
-criteria: []
+criteria:
+  - MCP Support:
+      name: MCP Support
+      type: MARKDOWN
+      search: false
+      table: true
+      detail: true
+      description: ''
+      placeholder: ''
+      order: ''
+      andSearch: false
+      rangeSearch: false
+  - LastUpdated:
+      name: LastUpdated
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: Default description for LastUpdated
+      placeholder: Select LastUpdated ...
+      order: ''
+      andSearch: false
+      rangeSearch: false
+      values:
+        'No':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
