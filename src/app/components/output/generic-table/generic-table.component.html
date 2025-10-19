@@ -29,20 +29,30 @@
                                                        target="_blank">{{entry.text}}</a>
                 </td>
                 <td *ngIf="types[i] === 'TEXT'">
-                    {{entry.content}}
+                    {{entry?.tableText || entry?.summaryText || entry?.text || entry?.content}}
                 </td>
                 <td *ngIf="types[i] ===  'LABEL' || types[i] === 'REPOSITORY'">
                     <ng-container *ngIf="entry?.labelArray?.length; else missingLabelBlock">
                         <ng-container *ngFor="let label of entry?.labelArray">
-                            <ptooltip [tooltip]="label.tooltip.text"
-                                      [tooltipHtml]="label.tooltip.html" [position]="'n'">
+                            <ng-container *ngIf="label.tooltip?.text || label.tooltip?.html; else plainLabel">
+                                <ptooltip [tooltip]="label.tooltip.text"
+                                          [tooltipHtml]="label.tooltip.html" [position]="'n'">
+                                    <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
+                                         [style.color]="labelColorsEnabled ? label.color : null"
+                                         [style.background-color]="labelColorsEnabled ? label.backgroundColor : null"
+                                         (click)="labelClick($event, label, i)">
+                                        {{label.name}}
+                                    </div>
+                                </ptooltip>
+                            </ng-container>
+                            <ng-template #plainLabel>
                                 <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
                                      [style.color]="labelColorsEnabled ? label.color : null"
                                      [style.background-color]="labelColorsEnabled ? label.backgroundColor : null"
                                      (click)="labelClick($event, label, i)">
                                     {{label.name}}
                                 </div>
-                            </ptooltip>
+                            </ng-template>
                         </ng-container>
                     </ng-container>
                     <ng-template #missingLabelBlock>
@@ -54,7 +64,12 @@
                 </td>
 
                 <td *ngIf="types[i] === 'MARKDOWN'">
-                    <div [innerHtml]="entry?.html | sanitizeHtml"></div>
+                    <ng-container *ngIf="entry?.tableText; else markdownHtml">
+                        {{entry?.tableText}}
+                    </ng-container>
+                    <ng-template #markdownHtml>
+                        <div [innerHtml]="entry?.html | sanitizeHtml"></div>
+                    </ng-template>
                 </td>
                 <td *ngIf="types[i] === 'RATING'">
                     <iicon icon="star" *ngIf="entry?.rating !== undefined && entry?.rating !== null">{{entry.rating}}

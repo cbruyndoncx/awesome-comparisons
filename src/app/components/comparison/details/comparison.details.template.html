@@ -56,6 +56,9 @@
                             </div>
                         </ng-container>
                     </ng-container>
+                    <ul *ngIf="entry?.detailLabels?.length" class="detail-list">
+                        <li *ngFor="let detail of entry.detailLabels">{{detail.name}}</li>
+                    </ul>
                     <div class="repository-links" *ngIf="entry?.type === 'REPOSITORY' && entry?.urlList?.length">
                         <a *ngFor="let link of entry.urlList" [href]="link" target="_blank" rel="noopener noreferrer">{{link}}</a>
                     </div>

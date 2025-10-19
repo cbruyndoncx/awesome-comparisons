@@ -5,6 +5,8 @@ export class Label {
   public name: string;
   public tooltip: Tooltip;
 
+  public isDetail: boolean;
+
   public clazz: string;
   public color: string;
   public backgroundColor: string;

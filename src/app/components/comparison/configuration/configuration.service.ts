@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 
-import { Citation, Configuration, Criteria, CriteriaTypes, CriteriaValue, Data } from '../../../../../lib/gulp/model/model.module';
+import { Citation, Configuration, Criteria, CriteriaTypes, CriteriaValue, Data, Label } from '../../../../../lib/gulp/model/model.module';
 
 import { isNullOrUndefined } from '../../../shared/util/null-check';
 import { renderMarkdown, renderMarkdownToText } from '../../../shared/util/markdown';
@@ -75,6 +75,23 @@ export class ConfigurationService {
                 return a.order - b.order;
             })
             .map(item => item.crit);
+    }
+
+    private static buildSummary(text: string): string {
+        if (isNullOrUndefined(text)) {
+            return '';
+        }
+        const normalized = text.replace(/\r\n/g, '\n');
+        const lines = normalized.split('\n')
+            .map(line => line.trim())
+            .filter(line => line.length > 0 && !line.startsWith('-'));
+        if (lines.length > 0) {
+            return lines[0];
+        }
+        const fallback = normalized.split('\n')
+            .map(line => line.trim())
+            .filter(line => line.length > 0);
+        return fallback.length > 0 ? fallback[0] : '';
     }
 
     constructor(public title: Title,
@@ -165,6 +182,7 @@ export class ConfigurationService {
                         dataElement.description
                     );
                     dataElement.criteriaData = Array.from(dataElement.criteriaData).map(([key, criteriaData]) => {
+                        const criteria = this.configuration.getCriteria(criteriaData.name);
                         switch (criteriaData.type) {
                             case CriteriaTypes.MARKDOWN:
                             case CriteriaTypes.RATING:
@@ -175,14 +193,28 @@ export class ConfigurationService {
                                 criteriaData.latex = ConfigurationService.getLatex(
                                     criteriaData.text
                                 );
+                                const markdownSummary = ConfigurationService.buildSummary(criteriaData.text);
+                                const markdownFallback = renderMarkdownToText(criteriaData.text || '').split('\n').map(line => line.trim()).filter(line => line.length > 0);
+                                criteriaData.summaryText = markdownSummary;
+                                criteriaData.tableText = markdownSummary.length > 0
+                                    ? markdownSummary
+                                    : (markdownFallback.length > 0 ? markdownFallback[0] : (criteriaData.text || ''));
                                 break;
                             case CriteriaTypes.LABEL:
                             case CriteriaTypes.REPOSITORY:
-                                criteriaData.labels.forEach(label => label.tooltip.html = ConfigurationService.getHtml(
-                                    this.citation,
-                                    label.tooltip.plain
-                                ));
-                                criteriaData.labelArray = Array.from(criteriaData.labels).map(([key, value]) => value);
+                                const recognizedLabels: Array<Label> = [];
+                                const detailLabels: Array<Label> = [];
+                                criteriaData.labels.forEach((label, key) => {
+                                    label.tooltip.html = ConfigurationService.getHtml(
+                                        this.citation,
+                                        label.tooltip.plain
+                                    );
+                                    const recognized = !!criteria && !!criteria.values && criteria.values.has(key);
+                                    label.isDetail = !recognized;
+                                    (recognized ? recognizedLabels : detailLabels).push(label);
+                                });
+                                criteriaData.labelArray = recognizedLabels;
+                                criteriaData.detailLabels = detailLabels;
                                 if (criteriaData.type === CriteriaTypes.REPOSITORY) {
                                     const urls = (criteriaData.url || '')
                                         .split('\n')
@@ -191,6 +223,11 @@ export class ConfigurationService {
                                     criteriaData.urlList = Array.from(new Set(urls));
                                 }
                                 break;
+                        }
+                        if (criteriaData.type === CriteriaTypes.TEXT) {
+                            const summary = ConfigurationService.buildSummary(criteriaData.text);
+                            criteriaData.summaryText = summary;
+                            criteriaData.tableText = summary.length > 0 ? summary : (criteriaData.text || '');
                         }
                         return criteriaData;
                     }).reduce((map, obj) => {
