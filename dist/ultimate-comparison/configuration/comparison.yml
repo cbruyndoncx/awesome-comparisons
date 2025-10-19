@@ -1,0 +1,331 @@
+citations: []
+criteria:
+  - Version:
+      name: Version
+      type: MARKDOWN
+      search: false
+      table: true
+      detail: true
+      description: ''
+      placeholder: ''
+      order: '10'
+      andSearch: false
+      rangeSearch: false
+  # Rating references the second level header 'Rating'
+  # (With type=rating) e.g. '## Rating\n - [1] Comment 1\n - [3] Comment 2'
+  #   => Column value for Rating (average): 2 stars
+  #   => Details Rating section: '- 1 star Comment 1\n 3 stars Comment 2'
+  - Rating:
+      name: Rating
+      search: false
+      table: true
+      detail: true
+      referencedHeader: Development
+      type: RATING
+      order: '94'
+  # Repository references the second level header 'Repository'
+  # (With type=repository) e.g. 'https://github.com/ultimate-comparisons/ultimate-comparison-BASE'
+  # The npm start task will check the repository url (github repo url required) for the last commit and automatically
+  # adds values for the 'referencedHeader' (in this case 'Development')
+  - Repository:
+      search: false
+      table: true
+      detail: true
+      type: REPOSITORY
+      order: '95'
+      values:
+        Active:
+          minAge: -1                                          # default: -1
+          maxAge: 1                                           # default: -1
+          minAgeUnit: months                                  # default: months
+          maxAgeUnit: months                                  # default: 'min-age-unit'
+          class: label-success
+        Inactive:
+          minAge: 6
+          class: label-danger
+        Not Sure:
+          minAge: 1
+          maxAge: 6
+          class: label-warning
+  - Languages:
+      name: Languages
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: &ref_0
+        template: 'Default description for {}'
+        variables:
+          - name
+      placeholder: &ref_1
+        template: 'Select {} ...'
+        variables:
+          - name
+      order: '15'
+      andSearch: true
+      rangeSearch: false
+      values:
+        Any:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        Java:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        Bash:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        XML:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        Python:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        Ruby:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        Groovy:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        JavaScript:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        C++:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        SQL:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Go:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Rust:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        PHP:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        HTML/CSS:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        TypeScript:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        C:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+  - Extensible:
+      name: Extensible
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: *ref_0
+      placeholder: *ref_1
+      order: '20'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'No':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        '':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+  - Description:
+      name: Description
+      type: MARKDOWN
+      search: false
+      table: true
+      detail: true
+      description: ''
+      placeholder: ''
+      order: '10'
+      andSearch: false
+      rangeSearch: false
+  - BYOK:
+      name: BYOK
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: *ref_0
+      placeholder: *ref_1
+      order: '50'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'No':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        '':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+  - LocalOffline:
+      name: LocalOffline
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: *ref_0
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'No':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        '':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+  - FreeTrial:
+      name: FreeTrial
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: *ref_0
+      placeholder: *ref_1
+      order: '95'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        '':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        'No':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+  - GitSupport:
+      name: GitSupport
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: *ref_0
+      placeholder: *ref_1
+      order: '20'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'No':
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        '':
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+  - MCPSupport:
+      name: MCPSupport
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: ''
+      placeholder: ''
+      order: '21'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'No':
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        '':
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+  - Terminal:
+      name: Terminal
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: *ref_0
+      placeholder: *ref_1
+      order: '20'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'No':
+          color: '#ffff00'
+          backgroundColor: 'hsl(270, 100%, 70%)'
+        '':
+          color: '#ffff00'
+          backgroundColor: 'hsl(270, 100%, 70%)'
+  - Opensource:
+      name: Opensource
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: *ref_0
+      placeholder: *ref_1
+      order: '90'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'No':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        '':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+  - License:
+      name: License
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: *ref_0
+      placeholder: *ref_1
+      order: '91'
+      andSearch: false
+      rangeSearch: false
+      values:
+        MIT:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+  - Notes:
+      name: Notes
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: true
+      description: ''
+      placeholder: ''
+      order: 'Y'
+      andSearch: false
+      rangeSearch: false
+  - LastUpdated:
+      name: Last Update
+      type: MARKDOWN
+      search: false
+      table: true
+      detail: true
+      description: 'Date last updated'
+      placeholder: 'yyyy-mm-dd'
+      order: 'Z'
+      andSearch: false
+      rangeSearch: false

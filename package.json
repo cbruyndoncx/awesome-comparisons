@@ -5,7 +5,7 @@
     "data:prepare": "node ./node_modules/gulp/bin/gulp.js default --gulpfile=./lib/gulp/gulpfile.js",
     "data:watch": "node ./node_modules/gulp/bin/gulp.js dev --gulpfile=./lib/gulp/gulpfile.js",
     "start": "npm run data:prepare && ng serve",
-	"md2build" : "MD_TO_JSON_COMMAND=\"python ../../md2json/md2json.py\" npm run build",
+    "md2build": "MD_TO_JSON_COMMAND=\"python ../../md2json/md2json.py\" npm run build",
     "dev": "concurrently \"npm run data:watch\" \"ng serve\"",
     "build": "npm run data:prepare && ng build",
     "build:prod": "npm run data:prepare && ng build --configuration production",
@@ -29,7 +29,9 @@
     "url": "git@github.com:ultimate-comparisons/ultimate-comparison-BASE.git"
   },
   "babel": {
-    "presets": ["@babel/preset-env"]
+    "presets": [
+      "@babel/preset-env"
+    ]
   },
   "dependencies": {
     "@angular/animations": "^17.3.8",
@@ -65,6 +67,7 @@
     "@angular/language-service": "^17.3.8",
     "@types/jasmine": "~5.1.4",
     "@types/node": "^20.11.30",
+    "gh-pages": "^6.3.0",
     "jasmine-core": "~5.1.1",
     "karma": "~6.4.2",
     "karma-chrome-launcher": "~3.2.0",
