@@ -1,4 +1,4 @@
-# Codex CLI - https://github.com/openai/codex-cli/
+# Codex CLI - https://github.com/openai/codex/
 Codex CLI is an open-source command-line interface for interacting with OpenAI's Codex model and other compatible LLM providers.
 ## Version
  (2025-10-19)
@@ -6,7 +6,7 @@ Codex CLI is an open-source command-line interface for interacting with OpenAI's
 
 
 ## Repository
-- https://github.com/openai/codex-cli
+- https://github.com/openai/codex
 ## Languages
 - Python
 - JavaScript
@@ -44,4 +44,4 @@ Codex CLI provides a lightweight, terminal-first agent that lets developers read
 - AGENTS.md: repository-level guidance files can be added to help the agent understand project structure, test commands, and conventions.
 - Useful for exploratory code tasks, automated refactors, running test-fix cycles, and generating PR-ready diffs; best results when the repository includes clear tests and documentation.
 
-Sources: GitHub repository (https://github.com/openai/codex-cli) and project documentation/examples aggregated from public write-ups about Codex CLI and its configuration.
+Sources: GitHub repository (https://github.com/openai/codex) and project documentation/examples aggregated from public write-ups about Codex CLI and its configuration.

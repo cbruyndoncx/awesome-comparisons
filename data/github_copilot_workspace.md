@@ -1,4 +1,4 @@
-# GitHub Copilot Workspace
+# GitHub Copilot Workspace - https://github.com/features/copilot
 A cloud-hosted, agentic development environment experiment from GitHub (technical preview). Copilot Workspace combined multi-agent planning, editable specifications, and automated implementation to help developers plan, write, test and iterate on code using natural language prompts.
 
 ## Version
@@ -10,7 +10,7 @@ Archived v0.1 (2025-05-30)
 - [2] Limited availability — technical preview ended / not generally available
 
 ## Repository
-- https://github.com/features/copilot
+- 
 
 ## Languages
 - Any

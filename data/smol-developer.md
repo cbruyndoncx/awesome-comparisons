@@ -7,7 +7,8 @@ A lightweight open-source AI developer agent for generating small projects and p
 - [3] Powerful for small whole-program synthesis tasks but not a full IDE replacement
 
 ## Repository
-- https://github.com/smol-ai/developer/ 
+- https://github.com/smol-ai/developer
+  
 ## Languages
 - Python (tooling)
 - JavaScript (target examples)

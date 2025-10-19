@@ -16,7 +16,7 @@ vN/A (2025-10-19)
   
 ## Extensible
 - Yes
-  - Extension registry available; growing ecosystem but smaller than VS Code's marketplace
+> Extension registry available; growing ecosystem but smaller than VS Code's marketplace
   
 ## Description
 Zed is a modern code editor engineered for low latency and smooth UX. It renders its UI on the GPU (GPUI approach) and is written in Rust, which together produce very fast startup, typing responsiveness, and large-file handling. Zed emphasizes real-time collaboration (multi-user editing, shared notes, chat) and tight integration with AI: an Assistant Panel for conversational, project-aware assistance and inline transformations that apply AI-suggested diffs directly in-editor. Zed also supports multibuffer editing, an integrated terminal, robust language support via Tree-sitter/WebAssembly and LSP, and a first-class Vim mode.
@@ -27,7 +27,7 @@ Zed is a modern code editor engineered for low latency and smooth UX. It renders
   
 ## LocalOffline
 - Yes
-  - Zed can be configured to use local LLMs (via Ollama or other OpenAI-compatible endpoints) so prompts and code can stay on-device. It also supports running Ollama on remote GPU hosts (SSH/port-forwarding) if needed.
+  Zed can be configured to use local LLMs (via Ollama or other OpenAI-compatible endpoints) so prompts and code can stay on-device. It also supports running Ollama on remote GPU hosts (SSH/port-forwarding) if needed.
   
 ## FreeTrial
 - Yes
@@ -46,11 +46,12 @@ Zed is a modern code editor engineered for low latency and smooth UX. It renders
   - Core source available on GitHub
   
 ## License
-- GPL-3.0 (core editor), AGPL for certain server/collab components; other crates/components may use Apache/MIT for specific parts
+- GPL
+  GPL-3.0 (core editor), AGPL for certain server/collab components; other crates/components may use Apache/MIT for specific parts
   
 ## MCPSupport
 - Yes
-  - MCP servers are integrated similar to other extensions like e.g. theming
+> MCP servers are integrated similar to other extensions like e.g. theming
   
 ## Notes
 - Performance: Uses a GPU-first rendering approach (handcrafted shaders) and is implemented in Rust — developers report substantially lower typing latency and better handling of very large files compared with many existing editors.

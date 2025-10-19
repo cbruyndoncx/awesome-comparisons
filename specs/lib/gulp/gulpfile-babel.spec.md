@@ -34,11 +34,12 @@ Converts markdown files to JSON using an external Python-based converter, replac
 
 ### Configuration Management
 
-Merges user configuration with auto-generated configuration and outputs final JSON.
+Merges user configuration with auto-generated configuration and outputs final JSON. Trims label value entries in the auto-generated YAML to remove explanatory follow-up lines while preserving main value blocks and metadata.
 
 - Loads user configuration from comparison.yml [@test](./tests/config-processing.spec.js)
 - Loads auto configuration from comparison-auto-config.yml [@test](./tests/config-processing.spec.js)
 - Combines configurations using Configuration.load and combine methods [@test](./tests/config-processing.spec.js)
+- Strips additional indented explanatory lines from label values while keeping the main value and its metadata intact
 - Writes merged configuration as comparison.json to dist directory [@test](./tests/config-processing.spec.js)
 
 ### Asset Management

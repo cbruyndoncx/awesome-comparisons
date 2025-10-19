@@ -110,12 +110,6 @@ criteria:
         TypeScript:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        Python (primary focus):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        JavaScript (beta):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         C:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -134,22 +128,10 @@ criteria:
         'No':
           color: '#0d0d0d'
           backgroundColor: 'hsl(120, 100%, 70%)'
-        Plugins:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
-        API:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
         '':
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
-        VS Code Extension:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
-        VSCode Extensions:
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
   - Description:
@@ -184,12 +166,6 @@ criteria:
         '':
           color: '#0d0d0d'
           backgroundColor: 'hsl(150, 100%, 70%)'
-        No (uses its own models):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        No (integrated into Replit):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
   - LocalOffline:
       name: LocalOffline
       type: LABEL
@@ -205,19 +181,10 @@ criteria:
         'Yes':
           color: '#0d0d0d'
           backgroundColor: 'hsl(120, 100%, 70%)'
-        Ollama:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
           color: '#0d0d0d'
           backgroundColor: 'hsl(180, 100%, 70%)'
         '':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
-        No (cloud-based):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
-        Yes (Enterprise version):
           color: '#0d0d0d'
           backgroundColor: 'hsl(180, 100%, 70%)'
   - FreeTrial:
@@ -241,12 +208,6 @@ criteria:
         'No':
           color: '#0d0d0d'
           backgroundColor: 'hsl(210, 100%, 70%)'
-        Yes (basic version is free):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
-        Yes (limited features in free tier):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
   - GitSupport:
       name: GitSupport
       type: LABEL
@@ -266,18 +227,6 @@ criteria:
           color: '#ffff00'
           backgroundColor: 'hsl(240, 100%, 70%)'
         '':
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        No (API-based tool):
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        No (focuses on code completion):
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        Yes (via Replit platform):
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        Yes (via IDE integration):
           color: '#ffff00'
           backgroundColor: 'hsl(240, 100%, 70%)'
   - MCPSupport:
@@ -322,15 +271,6 @@ criteria:
         '':
           color: '#ffff00'
           backgroundColor: 'hsl(270, 100%, 70%)'
-        No (API-based tool):
-          color: '#ffff00'
-          backgroundColor: 'hsl(270, 100%, 70%)'
-        No (integrates with IDEs):
-          color: '#ffff00'
-          backgroundColor: 'hsl(270, 100%, 70%)'
-        Yes (within Replit IDE):
-          color: '#ffff00'
-          backgroundColor: 'hsl(270, 100%, 70%)'
   - Opensource:
       name: Opensource
       type: LABEL
@@ -344,9 +284,6 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        MIT:
           color: '#0d0d0d'
           backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
@@ -370,21 +307,6 @@ criteria:
         MIT:
           color: '#0d0d0d'
           backgroundColor: 'hsl(120, 100%, 70%)'
-  - BestFor:
-      name: BestFor
-      type: LABEL
-      search: true
-      table: true
-      detail: true
-      description: *ref_0
-      placeholder: *ref_1
-      order: ''
-      andSearch: false
-      rangeSearch: false
-      values:
-        Vercel Frontend:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
   - Notes:
       name: Notes
       type: MARKDOWN
@@ -398,7 +320,7 @@ criteria:
       rangeSearch: false
   - LastUpdated:
       name: Last Update
-      type: LABEL
+      type: MARKDOWN
       search: false
       table: true
       detail: true
@@ -407,5 +329,3 @@ criteria:
       order: 'Z'
       andSearch: false
       rangeSearch: false
-      values:
-        'No':

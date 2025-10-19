@@ -74,4 +74,7 @@
 # goose run --recipe research_aicoder_recipe.yaml --params topic="app.build"
 # goose run --recipe research_aicoder_recipe.yaml --params topic="CodeLayer"
 # goose run --recipe research_aicoder_recipe.yaml --params topic="Warp" # Terminal
+
 # goose run --recipe research_aicoder_recipe.yaml --params topic="CodeCompanion.ai" # no more opensource 7.0.45 (Jun 1, 2025)
+
+goose run --recipe research_aicoder_recipe.yaml --params topic="EasyCode.ai" 

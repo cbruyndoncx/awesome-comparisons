@@ -11,7 +11,7 @@ Archived (2022-12-31)
 - [2] Business viability: failed to monetize sufficiently
 
 ## Repository
-- https://github.com/kiteco/kiteco
+- 
 
 ## Languages
 - Python

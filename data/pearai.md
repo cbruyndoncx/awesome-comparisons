@@ -9,7 +9,7 @@ v1.x (active; releases during 2024-2025)
 - [3] Early-stage rough edges; initial licensing controversy
 
 ## Repository
-- https://github.com/trypear
+- 
 
 ## Languages
 - TypeScript (primary), JavaScript, CSS/HTML for web UI

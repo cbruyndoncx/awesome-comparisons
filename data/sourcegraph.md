@@ -10,7 +10,8 @@ vN/A (2025-10-19)
 - [3] License and governance concerns after relicensing/private repo move
 
 ## Repository
-- https://github.com/sourcegraph/sourcegraph  (note: core repo made private Aug 2024; public snapshot available historically)
+- https://github.com/sourcegraph/sourcegraph-public-snapshot
+  note: core repo made private Aug 2024; public snapshot available historically)
 
 ## Languages
 - Any (heavy language support: JavaScript/TypeScript, Python, Java, Go, C/C++, C#, Ruby, PHP, Rust, SQL, Shell, etc.)
