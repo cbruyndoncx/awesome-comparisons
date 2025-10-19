@@ -31,7 +31,7 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
 ## Opensource
 - No
 ## License
-- Proprietary / Commercial
+- Proprietary
 ## MCPSupport
 - 
 ## Notes

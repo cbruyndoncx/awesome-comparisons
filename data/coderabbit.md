@@ -38,7 +38,7 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
 ## Opensource
 - No
 ## License
-- Commercial SaaS / proprietary
+- Proprietary
 ## MCPSupport
 - No
 ## Notes

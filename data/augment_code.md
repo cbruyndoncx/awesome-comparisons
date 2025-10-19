@@ -5,7 +5,7 @@ AI-powered developer platform focused on deep codebase understanding and autonom
 vN.N (yyyy-mm-dd)
 
 ## Rating
-- [ ] Placeholder rating entries
+  
 
 ## Repository
 
@@ -45,7 +45,7 @@ Augment Code is an AI-first development platform built to help professional engi
 - No
 
 ## License
-- Proprietary / commercial
+- Proprietary
 
 ## MCPSupport
 - Yes

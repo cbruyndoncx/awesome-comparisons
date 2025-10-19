@@ -47,7 +47,7 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
 - No
 
 ## License
-- Proprietary / Commercial
+- Proprietary
 
 ## MCPSupport
 

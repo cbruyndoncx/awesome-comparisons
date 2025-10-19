@@ -34,7 +34,7 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
 ## Opensource
 - No
 ## License
-- Commercial / Proprietary
+- Proprietary
 ## MCPSupport
 - No
 ## Notes

@@ -42,7 +42,7 @@ The platform emphasizes a structured process (uses MoSCoW prioritization) and ta
 - No
 
 ## License
-- Proprietary / Commercial
+- Proprietary
 
 ## MCPSupport
 - No

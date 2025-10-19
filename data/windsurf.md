@@ -25,8 +25,7 @@ Windsurf is an AI-powered, agentic development environment (IDE-like) designed t
 
 ## LocalOffline
 - No
-  - Windsurf is primarily a cloud-hosted agent; local/offline modes are limited compared with some local-first 
-  - tools (though integrations and enterprise offerings may offer stronger controls).
+  - Windsurf is primarily a cloud-hosted agent; local/offline modes are limited compared with some local-first tools (though integrations and enterprise offerings may offer stronger controls).
 ## FreeTrial
 - Yes
 ## GitSupport

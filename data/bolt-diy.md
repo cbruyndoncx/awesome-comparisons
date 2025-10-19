@@ -1,6 +1,4 @@
 # Bolt DIY - https://bolt.diy/
-
-[short description]
 Bolt.diy is an open-source, model-agnostic AI-assisted development platform for building, editing, and deploying full-stack web applications directly in the browser or self-hosted environments.
 
 ## Version
@@ -27,8 +25,9 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 - Yes
 
 ## LocalOffline
-- Yes (self-hosted / Docker with local model providers like Ollama)
-  - Indented note: Running locally with Ollama or other on-prem model hosts enables offline development.
+- Yes
+  - Self-hosted / Docker with local model providers like Ollama
+  - Running locally with Ollama or other on-prem model hosts enables offline development.
 
 ## FreeTrial
 - Yes

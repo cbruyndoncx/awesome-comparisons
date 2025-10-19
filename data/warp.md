@@ -43,7 +43,7 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 - No
 
 ## License
-- Proprietary / Commercial
+- Proprietary
 
 ## MCPSupport
 - Yes
