@@ -1,0 +1,1037 @@
+citations: []
+criteria:
+  - Extensible:
+      type: LABEL
+      values:
+        Supports multiple LLM backends and local model adapters; configurable via model adapters and API-key settings:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Via the AWS IDE Toolkit / IDE extensions and integrations:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Supports Model Context Protocol (MCP) connections and a plugin/alias system for third-party tooling (monitoring, security providers)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Plugin / "Codi Apps" modular tools model:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Plugins / IDE extensions (VS Code, JetBrains, Vim/Neovim)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Integrations with GitHub, Jira, Confluence, Notion, Linear':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Supports npm packages and integrations (can install libraries and use third-party APIs):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        VS Code extension plus MCP (Model Context Protocol) support for custom tools:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        API / integrations / IDE extensions:
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        Extensible via IDE plugins and an AI-native IDE (Windsurf) with agent capabilities:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Plugins / integrations for IDEs and VCS platforms:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Offers specialized "modes" for plugins (ACF, Elementor, WooCommerce, Gravity Forms, etc.) and an API for integration':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Yes (via provider gateways and config):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Plugins / Jupyter extension:
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        'Continue is built to be extensible via blocks, MCP integrations and a hub for sharing assistants.':
+          color: '#ffff00'
+          backgroundColor: 'hsl(285, 100%, 70%)'
+        'Modular architecture designed to add new model adapters, tools, and integrations':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Integrations (GitHub, VS Code, Slack) and plugin-like connectors for repos and CI/CD':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'VS Code extension available (integrates chat, slash commands, inline quick edits)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        'Integrations: Figma import (Builder.io plugin), GitHub/GitLab/Bitbucket import, template gallery':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Editor and IDE integrations (VS Code, Visual Studio, JetBrains, Xcode, Vim/Neovim, Eclipse), GitHub Marketplace extensions and CLI/Terminal integrations':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Integrates with Vertex AI and supports function-calling/tool integrations:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        IDE plugin surface for different JetBrains products:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Integrates with IDEs (VS Code, Cursor), web app and desktop client; supports multi-repo context and external LLMs':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        MCP (Model Context Protocol) Server Marketplace for custom tools and integrations:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Editor plugins and integrations (VS Code, Sublime, Atom, JetBrains IDEs)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Fine-tuning / post-training on private repos:
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        Integration via plugins and Continue.dev:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'API, CLI, and integrations (VS Code, GitHub, Jupyter reported)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Fork of VSCode + modular submodules for AI features; supports plugins and integrations:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Editor extensions are available on paid tiers (editor plugins/support mentioned in product features):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'VS Code extension architecture, custom modes, MCP (Model Context Protocol) servers, and provider/plugin integrations':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Integrations: IDE plugins (VS Code, JetBrains, Visual Studio, Eclipse), browser extensions, code host integrations (GitHub, GitLab, Bitbucket), API and webhooks, app/extensions framework':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Integrates with major IDEs (VS Code, JetBrains, Neovim) and offers chat integrations; product roadmap and integrations may expand':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Modular architecture designed for composing custom IDEs and integrating extensions (supports VS Code extensions via Open VSX):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Custom connectors, plugins, and ability to import React components; CLI for extensions':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Platform API available for integrations and automation:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Support for Workflows, Notebooks, Drive-based sharing and agent configuration':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Supports webhooks, custom data uploads and integration points for connecting external services':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Extension registry available; growing ecosystem but smaller than VS Code's marketplace:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+  - LocalOffline:
+      type: LABEL
+      values:
+        Supports local model usage via adapters (community integrations exist for local runtimes such as Ollama and other self-hosted LLMs):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        AIXcoder emphasizes local/offline model operation so code and context can remain on-device. The product also offers cloud modes for extended functionality.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'Any additional details: CodeWhisperer is a cloud service (runs on AWS infrastructure) and does not provide an official fully-local/offline model runtime for on-prem usage.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Supports MCP servers which can point to local or self-hosted model/context providers:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        '[app.build relies on remote LLMs and hosted infrastructure (Neon/Koyeb) for generation and deployment.]':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Cloud-first product; local/in-IDE operations likely use cloud model/augmentation:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        Self-hosted / Docker with local model providers like Ollama:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Running locally with Ollama or other on-prem model hosts enables offline development.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(165, 100%, 70%)'
+        'Any additional details: Runs entirely in the browser using WebContainers; requires network access for AI features and many integrations.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        '[Brokk''s client is open-source Java software; it ships with or can leverage Jlama for local/tiny-model inference and supports workflows that minimize cloud calls. Some advanced features may use hosted models depending on configuration.]':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'Any additional details like Ollama: Claude Code relies on remote model endpoints by default. Anthropic and enterprise customers can route requests through cloud provider-hosted model deployments, but a fully offline/local model runtime is not provided as a standard option.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'Any additional details like Ollama: Anthropic''s desktop offering is primarily cloud-connected. Public documentation does not describe a fully local/offline model runtime. Enterprise/Team tooling (like Claude Code) can be configured to route through organization-managed endpoints; if BYOK/local hosting matters for your use case, contact Anthropic sales/support for enterprise deployment options.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'Any additional details like Ollama: supports local model hosts (Ollama, LM Studio) as backends for offline/local use':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        '[All user data (code, DBs, etc.) is described as being stored locally on the user''s machine, but the assistant makes API calls to OpenAI for model inference — so it is not fully offline.]':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Model can be run locally for research/inference with appropriate GPU hardware; supports NVIDIA GPUs and Huawei Ascend platforms (weights are large and require significant memory).:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        Codeium is primarily a cloud service; there is no widely documented offline/local model deployment for consumer users. Enterprise options are described at a high level but BYOK/local-hosted details are not publicly documented.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        Supports fully air-gapped / on-premises deployments that do not require external network connectivity.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        'Primarily designed to run with Claude Code / Anthropic-backed sessions rather than purely local model hosting]':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'Can be run locally or on private infrastructure via frameworks/runtimes such as Hugging Face transformers, Ollama, and other containerized runtimes. Smaller sizes can run on single GPUs; larger sizes require multi-GPU or specialized inference setups.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Can run on-machine and integrate with local/self-hosted model providers via MCP-compatible bridges.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        cloud SaaS by default:
+          color: '#ffff00'
+          backgroundColor: 'hsl(270, 100%, 70%)'
+        'A self-hosted option is referenced by the vendor, but detailed on-prem / air-gapped support and offline capabilities are not publicly documented.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        'Primarily uses remote model providers, though configurations and gateways (e.g., LiteLLM/Ollama proxies) can enable local model endpoints in some setups':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        'Some components (for example PR-Agent) are available as open-source/self-hostable tools that can be run locally or in CI, but the full product and advanced model features are primarily cloud-based.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        (appears cloud-hosted; no documented offline/local inference option found):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Supports local model workflows (e.g. via Ollama/local LLMs) and headless/offline operation for air-gapped environments.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Runs as a cloud-hosted sandboxed agent rather than an offline/local-only product:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        'Supports running local LLM backends (Ollama, GPT4All, Llama.cpp, LMStudio, etc.) and a fully-local RAG setup via Chroma DB + embeddings.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Local-first architecture; code and context are kept on the developer's machine rather than sent to third-party servers for model training or storage:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        Runs locally or on private servers using Docker / docker-compose and nvidia-docker for GPU acceleration. Supports multi-GPU model sharding so larger models can be run across several cards.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        Firebase Studio is a cloud-hosted workspace; the environment and AI features run in Google-managed infrastructure.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        From021 is a hosted web service (cloud SaaS):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        'Any offline/local-only model hosting is not offered for the standard Copilot cloud service. Some organizations use enterprise features to limit data sharing; however, Copilot itself runs in GitHub/Microsoft cloud.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        All processing was cloud-hosted on GitHub's infrastructure; no documented offline/local model execution.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        Studio is a cloud-hosted web application; there is no known supported offline/self-hosted distribution of the Studio UI or Gemini models.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        Can be run locally or inside Docker; configurable to use local LLM endpoints or self-hosted inference where supported.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'Local model/server support (Ollama, LM Studio and any server compatible with OpenAI-style endpoints) enables offline workflows and on-device completions. JetBrains added expanded local model support in 2025, including connections to llama.cpp/LiteLLM-style hosts and code-tuned models (Qwen, DeepSeek-Coder, Mellum variants).':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        Jolt operates as a cloud service with IDE integrations; offline/local-only usage is not advertised.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        can be used with local model runtimes such as Ollama / LM Studio for offline or on-prem usage:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        'Any additional details: primary design emphasized on-device inference and privacy (local completions rather than cloud-only).':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        MarsX is primarily a cloud platform with a web-based IDE and Micro AppStore.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Supports air-gapped on-premises GPU deployment for fully offline operation:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'Enterprise / on-premises deployment options are reported, but the standard cloud offering is not a fully local/offline product.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        'Local-first MCP server: analysis runs on the user''s machine or infrastructure; code/context does not need to be uploaded to external APIs.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Ona supports private VPC and on-prem/private-hosted deployments for enterprises but is not a fully offline/local-only product.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Supports running with local model backends (e.g. Ollama) and Models.dev adapters.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Can be run locally via Docker; supports local LLM backends where available (may still require internet for some models).:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'PolyCoder can be run locally/self-hosted via the Hugging Face transformers ecosystem. Community quantized builds (GGUF/llama.cpp, WebUI) exist to reduce memory requirements for consumer GPUs.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Requires cloud access to LLMs; not designed for fully offline usage.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Self-hosted Docker deployment and on-prem options. Can be run without sending code to third-party services when configured to use local/private models and infrastructure.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        Can be configured to use local model runtimes via Ollama / LM Studio or other locally-hosted model endpoints (support and experience depends on provider and model compatibility). Fully offline workflows may be limited compared to cloud API usage.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        'Smol can be used with locally hosted/open-source LLMs in some setups, but most common usage relies on a cloud LLM (e.g., OpenAI GPT-4) which requires network access and an API key.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Self-hosted deployments support offline/private hosting and do not require sending code to Sourcegraph cloud. This is a common choice for enterprises with strict data residency or security requirements.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'Can be run locally via Hugging Face transformers, text-generation-inference, or containerized inference (GPU recommended). Community runtimes like Ollama/TGI simplify local hosting.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        'Can run fully offline/self-hosted (Docker, from-source). Supports connecting to local model servers such as ollama/llama.cpp backends or on-prem inference stacks.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Supports local model execution and private/on-prem deployments. Offers VPC and air-gapped installation options for organizations with strict data residency and compliance requirements.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        '[Any additional details like Ollama as an indented unordered list item]':
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        Theia can run locally as a desktop app or be self-hosted on-premise. Its AI integrations support local/offline models (where supported by the chosen model runtime) enabling air-gapped or privacy-sensitive deployments.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        Self-hostable via Docker and Kubernetes; can be run on-prem or in isolated/cloud VPCs.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        Trae runs cloud models and does not currently advertise a fully local/offline mode:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        v0 is a cloud service (web app and API). It does not run fully offline; model execution and generation happen on Vercel's servers.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        'Supports running local/open-source models via integrations (Ollama, LM Studio, local runners) so inference can remain on-device or on-prem.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'Note: Warp runs a local classifier to detect natural-language input, and some metadata/local processing happens on-device, but AI requests are typically proxied to selected LLM providers (OpenAI, Anthropic/Claude variants) unless explicitly configured via enterprise arrangements. There is no broadly-documented fully-offline LLM mode for the AI assistant as of the latest public releases.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        Windsurf is primarily a cloud-hosted agent; local/offline modes are limited compared with some local-first tools (though integrations and enterprise offerings may offer stronger controls).:
+          color: '#ffff00'
+          backgroundColor: 'hsl(270, 100%, 70%)'
+        Zed can be configured to use local LLMs (via Ollama or other OpenAI-compatible endpoints) so prompts and code can stay on-device. It also supports running Ollama on remote GPU hosts (SSH/port-forwarding) if needed.:
+          color: '#ffff00'
+          backgroundColor: 'hsl(270, 100%, 70%)'
+  - FreeTrial:
+      type: LABEL
+      values:
+        The tool itself is free/open-source (users pay the LLM provider they connect to):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        AWS offered a free tier for individual developers when CodeWhisperer reached general availability; enterprise/pricing details are governed under Amazon Q Developer offerings.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'Notes: AWS has offered free tiers or developer-friendly access for prior services (CodeWhisperer) and provides Builder ID sign-in options; enterprise pricing & feature bundles for Amazon Q are documented in AWS pricing/docs.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        Public/free tier available with usage limits; paid plans for advanced features may exist.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        '[The product is often described as using the user''s own OpenAI API key (BYOK) which enables usage without a separate paid tier from the vendor; however any model usage will consume the user''s OpenAI quota which may incur cost.]':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        Model code is open-source; weights are available for academic research. Commercial use of weights typically requires registration/approval per THUDM's model license terms.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        A free tier exists (unlimited completions for individual use); paid plans available for advanced features.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        The models and weights are available for download (open-source) for research and commercial use under Meta's license terms.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        Open-source and free to use; commercial offerings (if any) not required to run the core framework.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        Public site advertises a 14-day free trial (no credit card required in some offers):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'Free starter tier includes a small monthly quota (e.g., ~100 actions) so you can evaluate before upgrading':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'Availability depends on chosen model provider (OpenAI, Ollama, etc.)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        (marketing indicates a free account/trial is available; details not enumerated in public docs):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        A free/solo tier exists (open-source extensions + hub access for public/shared blocks). Paid team/enterprise tiers add governance and private deployment options.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        The project is open-source and free to run; commercial clouds/models used via BYOK may incur costs.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        The Community Edition provides a limited free tier (e.g. a small number of Methods Under Test per month).:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        Available during preview; typical Firebase usage quotas and billing apply once services are provisioned beyond free tier limits.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        The product advertises a free trial that does not require a credit card:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'Copilot has free tiers (e.g., Copilot Free for qualifying users) and trial/paid plans (Pro/Business/Enterprise) with different capabilities.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        Core prototyping and experimentation features of AI Studio are available without charge.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        The open/source-available GPT Pilot codebase is free to run; Pythagora also offers a commercial Pythagora Pro product with paid features.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        Core inline completions and many local workflows are free. Cloud-based features may use provider credits; JetBrains changed to a credit/quota model in 2025 for cloud usage visibility.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        Commercial product with demos / trials and enterprise sales channels.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        new users get onboarding credits via the platform (also can operate with your own keys):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'MarsX offers a usable free plan and the core Mars engine is available as open-source.]':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        Private beta availability; general availability and trial terms may vary:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        Free tier available with basic features and BYOK support; paid tiers unlock advanced features:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        New users get a limited number of free generations (commonly reported as ~10 free uses) and a short trial period to evaluate the service.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        The extension itself is free/open-source; model usage costs depend on the API keys/providers you supply.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        Limited beta access was offered during initial launch windows.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        Free tier/self-hosted free edition for small teams and public code; paid Business/Enterprise plans for larger teams and advanced features.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        Model weights and checkpoints are openly downloadable (subject to accepting the model card / license on Hugging Face).:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        Community edition is free & open-source; Team/Enterprise tiers exist commercially for additional features/support.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        'Any additional details: Tabnine sunset its free Basic plan in 2025; access is primarily through paid tiers or enterprise licensing. Trial or pilot options may still be available via sales.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        Theia is free/open-source (no trials); commercial services built on top of it may have separate licensing/pricing.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        Community Edition is free and open-source; paid plans offer additional features and hosted options.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        As of early 2025 Trae was distributed free with access to several premium models included:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        Freemium model / free tier available for evaluation:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        Core editor is free and open-source.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        Offers a free/beta tier with basic features and Wrapifai branding; paid tiers remove branding and add features.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        The editor and source are available openly; binaries are freely downloadable. (See "Notes" about binary EULA nuance.):
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+  - GitSupport:
+      type: LABEL
+      values:
+        Integrates with repository search and can surface examples and API usage from GitHub/open-source code; version-control integration is part of the IDE workflow.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(45, 100%, 70%)'
+        Works with common developer workflows and IDEs; suggestions can be used in repos but developers must verify licensing/security before committing.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        Works with repository workflows via IDE integrations; generated suggestions and transformations can be applied to local repos but require human review for correctness and licensing.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        Reads project context / Codespace-style integrations for richer suggestions:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        Import/export with GitHub and connect projects to repos for persistence and collaboration.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        Integrates via IDEs and supports workflows that work with Git-managed projects (no separate Git-hosted backend required).:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        Integrates with git workflows to read/write/commit/branch as part of automated tasks.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(45, 100%, 70%)'
+        'Native integrations for GitHub, GitLab, Azure DevOps; automatic PR monitoring and comments':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        Can produce commits and be used to prepare PRs (depends on workflow and config):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        Native integrations (MCP-style integrations) for GitHub and git workflows; automation via CLI for PR/comments/summaries.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(45, 100%, 70%)'
+        Integrates with project repositories and can perform Git operations as part of its workflows.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        'Integrates with GitHub workflows and can open/modify repositories, create branches and PRs':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        Integrates with local repositories and provides VS Code extension workflows:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        N/A:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(30, 100%, 70%)'
+        'Import from GitHub, GitLab, Bitbucket; code workspace exposes repo integration and basic Git operations.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        'Integrates with GitHub workflows: PR description generation, PR creation by the Copilot agent, and issue-to-PR workflows in enterprise features.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        Studio offers code export but does not act as a git host. Exported snippets are intended to be copied into developer repositories.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        'Assistive features for commit messages, PR descriptions, refactor-aware changes, and multi-file edits that can be staged/reviewed in the IDE.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        'Can produce git patches and integrate with repositories; IDE extensions apply changes directly]':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(45, 100%, 70%)'
+        'deep Git/GitHub integration patterns for generating commit messages, searching codebase, and automating repo tasks':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        Generates/clones GitHub repositories for created apps:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(45, 100%, 70%)'
+        'Integrates with repositories for retrieval-augmented generation, code search, and fine-tuning':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(45, 100%, 70%)'
+        Integrates with Git workflows; offers @diff referencing of branch changes and commit workflow helpers:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        RooCode can run terminal/cli actions and operate on workspace files; many users run git commands through the integrated terminal or via custom MCP servers.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        'The repo includes a "git repo mode" workflow that operates on a repository, enabling human-in-the-loop prototyping and iteration.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(45, 100%, 70%)'
+        Deep integrations with Git-based hosts and workflows; built to index and search Git repositories at scale.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        Integrates with IDEs and understands repository context; includes features that operate across the repo and work with recent edits:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        'Native Git support via extensions (benefits from VS Code extension ecosystem). Git tooling, source control views and integrations are commonly added through Open VSX extensions.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        GitSync / CI integrations for versioning (GitHub/GitLab supported in paid/enterprise tiers).:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        Integrates with GitHub and Vercel deployments for pushing generated projects and previewing sites:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        Git workflows are supported via the terminal and Warp's code/diff UX; the tool is used to author and review code diffs produced by agents.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        Integrates with Git workflows; project-aware features and diagnostics help with common VCS tasks.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+  - Languages:
+      type: LABEL
+      values:
+        JavaScript / TypeScript:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        C#:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Kotlin:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        (additional languages supported via integrations and multi-language context):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        JavaScript/TypeScript:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Python (limited support for server components):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        (Limited) Python:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        (can analyze and work with other languages via dependency decompilation / semantic indexing; used in demos with Python and mixed stacks):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        'Any (works across languages supported by VS Code; commonly used with JavaScript/TypeScript, Python, Java, Go, etc.)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        '20+ languages (examples): Python, JavaScript, Java, C/C++, Go, Rust, TypeScript, C#, PHP, Ruby, Kotlin, Swift, Shell, SQL, HTML/CSS, Lua, R':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        '70+ (wide language coverage; common web, backend, data-science, and scripting languages)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        (70+ total supported languages):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        CSS:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Shell:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Many other popular languages (multi-language training):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        Other common languages (multi-language support via static analysis and AST parsing):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        HTML:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        SQL (WP queries):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        Python (integrations / tooling):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        Shell scripting:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        'JavaScript / TypeScript (Next.js, React)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        Support for other backend languages via templates and runtime options (examples include Go and Java in templates):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        C/C++:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Swift:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Web UI:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        'Code export: Python, Node.js, Swift, Kotlin':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        C / C++:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        'YAML, JSON, Markdown, Text':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Scala:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        C# / .NET:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        HTML / CSS / SCSS / LESS:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        GraphQL:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Protocol Buffers:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Markdown / MDX:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Many others via editor plugins:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        React:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Node.js:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Vue:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        '80+ programming languages (notably: Python, JavaScript/TypeScript, Java, Go, C#, C/C++, Rust, Ruby, PHP, SQL, Shell)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        '(advertised: total support for 8 languages; TypeScript and Python are prominent)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        'TypeScript (primary), JavaScript, CSS/HTML for web UI':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        '12 programming languages (includes: C, C++, Python, JavaScript, Java, Go, PHP, Ruby, C#, and others)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        React (frontend):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        Node.js / Express (backend):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        'SQL (SQLite, PostgreSQL)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        (Supports 25+ languages):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        JavaScript / Node.js:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Python (tooling):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        JavaScript (target examples):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        Any (can generate code in many languages via the underlying LLM):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        'Any (heavy language support: JavaScript/TypeScript, Python, Java, Go, C/C++, C#, Ruby, PHP, Rust, SQL, Shell, etc.)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        '80+ programming languages (Python, JavaScript, Java, C/C++, Go, Ruby, Rust, TypeScript, PHP, Shell, SQL, etc.)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        Many other popular languages (wide IDE/language support):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        JSON:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        TypeScript / JavaScript:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        HTML / CSS:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        TypeScript / JavaScript (React):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        CSS (Tailwind):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        'Python, JavaScript/TypeScript, Go, Java, Ruby, C#, and most common programming languages (broad support via language-agnostic indexing)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        JavaScript / TypeScript (front-end embeds):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        Python (integrations / data uploads):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+  - Terminal:
+      type: LABEL
+      values:
+        'Primary surface is IDE integrations (VS Code, JetBrains family, Cloud9, etc.).':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        'Primary surface: IDE plugins and AWS Console chat. There is no official terminal-only interactive CLI assistant equivalent documented as the main surface.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        CLI and TUI available:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'In‑browser terminal via WebContainers that can run npm, Node.js servers, and CLI tooling.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        Neovim support indicates usability inside terminal-based editors.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        Provides a CLI for scripting and interactive control.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        no general-purpose CLI for offline reviews documented:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        The `cn` CLI provides an interactive TUI and a headless mode for scripted and CI uses.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        'Provides CLI and web UI components; integrates with local runtimes (Bun, Ollama) and shells for execution.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        Provides an interactive shell in its UI so the agent can run commands and manage environments:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        CLI access is available in paid/teams tiers for CI and automation use-cases.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        Server components are deployed and managed via Docker/docker-compose and expose REST/OpenAI-compatible APIs; setup and monitoring are typically done from the command line.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        'Full coding workspace includes terminal access for builds, package managers, and CLI workflows.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        'Copilot Chat is available in supported terminals (Windows Terminal Canary, GitHub CLI integrations) and can be used from the command line in supported environments.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        'Interaction is through the web UI (Playground, chat, multimodal inputs) and exported code; no integrated shell/terminal is advertised.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        CLI-driven project creation and workspace management are supported.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        AI Assistant is provided inside JetBrains IDE UIs; there is no native terminal-only assistant shipped as a separate TUI (some IDE features can be used alongside integrated terminals).:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        incorporates terminal/CLI execution capabilities (inherited from Cline-style tooling) for running commands and automations:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        Cloud IDE typically exposes developer tooling; advanced users can work with code directly.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        'Agentic capabilities can reason over terminal output, run commands, and propose diffs under configurable approval flows':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        CLI available to integrate local workflows with the MutableAI service:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        Provides an npm package and CLI for setup/configuration; integrates with developer workflows.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        Built on VSCode fork; includes integrated terminal and @terminal context command:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        Offers CLI commands (e.g. npx pythagora ...) to generate tests and scaffold code.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        'Agent can execute shell commands, interact with Docker, run tests and debuggers (e.g., pdb) when permitted by deployment configuration.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        Supports running terminal commands and automation as part of tasks and modes.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        Usable as a Python library and in repo-driven workflows; CLI/recipe-style usage patterns exist for iterative development.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        'CLI tooling (e.g., src CLI / developer tools) and integrations that allow scripted interactions and automation.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        Usable from terminal/CLI via TGI / transformers scripts or Docker images for batch/interactive use.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        Primary integrations are editor/IDE plugins; Supermaven also provides its own editor/IDE experience rather than a terminal-first tool:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        Server and agent provide CLI tools; Docker image and direct binary available for server usage.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        Integrated terminal available (desktop & web). AI features add inline assistance in terminals in recent AI-enabled builds.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        Supports JavaScript/Python snippets inside apps and provides a CLI for developers.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        Primary interface is web chat; platform/API can be integrated programmatically but there is no primary local CLI for generation:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        Built-in integrated terminal and task runner.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(30, 100%, 70%)'
+  - License:
+      type: LABEL
+      values:
+        Proprietary (AWS service):
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        Apache-2.0:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        Proprietary:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        GNU General Public License v3.0 (GPL-3.0):
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        Proprietary (Anthropic):
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        'Code: Apache-2.0':
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        'Model weights: released for academic research; commercial use requires application/approval (see repository for details)':
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        Proprietary / Closed-source:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        Meta / Code Llama license (permits research and commercial use — see repository for exact terms):
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        See repository for exact license:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        Proprietary (Google):
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        Proprietary (GitHub / Microsoft service terms):
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        'Functional Source License (FSL) / Fair Source (source-available, not MIT/Apache/GPL)':
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        Proprietary (JetBrains Service Terms / Product License):
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        Mixed / see repository:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        'Core engine: MIT (varies by individual micro-app)':
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        MIT (core open-source components):
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        BSD 3-Clause:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        Proprietary / Sourcegraph Enterprise (formerly Apache 2.0 for much of the codebase prior to relicensing):
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        BigCode-OpenRAIL / OpenRAIL-M (model card requires agreement on use):
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        Apache License 2.0:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        Eclipse Public License 2.0 (EPL-2.0):
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        GPL:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        'GPL-3.0 (core editor), AGPL for certain server/collab components; other crates/components may use Apache/MIT for specific parts':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+  - MCPSupport:
+      type: LABEL
+      values:
+        'Notes: Supports Model Context Protocol / MCP server connections to bring external context into conversations and agent workflows.':
+          color: '#ffff00'
+          backgroundColor: 'hsl(270, 100%, 70%)'
+        Built around and interoperable with the Model Context Protocol (MCP) for tool discovery and standardized tool RPC.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(135, 100%, 70%)'
+        'Integrates with Model Context Protocols for adding context providers (GitHub, Jira, etc.) and usable via the hub.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(135, 100%, 70%)'
+        supports MCP Server Marketplace (JSON-based tool integrations / extensions):
+          color: '#ffff00'
+          backgroundColor: 'hsl(270, 100%, 70%)'
+        Assuming continue.dev functionality is kept - doublecheck:
+          color: '#ffff00'
+          backgroundColor: 'hsl(270, 100%, 70%)'
+        Nuanced is explicitly implemented as an MCP server to deliver structured code context to LLM-based agents.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(135, 100%, 70%)'
+        'MCP servers extend RooCode beyond the editor to interact with Docker, databases, browsers and other external tooling.':
+          color: '#ffff00'
+          backgroundColor: 'hsl(270, 100%, 70%)'
+        'Cody and the AI integrations support bringing multi-repo and file-context into model prompts (context-enhanced chat); suitable for advanced, model-backed code assistance workflows.':
+          color: '#ffff00'
+          backgroundColor: 'hsl(270, 100%, 70%)'
+        Model Context Protocol support added in v1.3.0 to enable custom agents and richer context handling:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(135, 100%, 70%)'
+        Warp supports selecting/modeling different hosted LLM providers and includes enterprise features like zero-data-retention guarantees and proxying; it exposes autonomy controls for when agents may call MCP servers without human approval.:
+          color: '#ffff00'
+          backgroundColor: 'hsl(270, 100%, 70%)'
+        MCP servers are integrated similar to other extensions like e.g. theming:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(30, 100%, 70%)'
+  - BYOK:
+      type: LABEL
+      values:
+        Not publicly documented:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        Uses API keys for model providers; supports configuring different gateways:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        'You can configure and use your own API keys and model endpoints, and switch between local/remote models.':
+          color: '#ffff00'
+          backgroundColor: 'hsl(255, 100%, 70%)'
+        'Supports configuring API keys/endpoints for OpenAI, Claude, Gemini, Mistral, Groq, Bing/Google search, Ollama, etc.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        N/A:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        'Gemini API keys and AI resources are provisioned as part of the workspace flow; explicit BYOK for model keys is not a first-class, user-driven workflow in the initial preview.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        'No public, general-purpose "bring your own key" option for the cloud-hosted Copilot service. Enterprise plans provide data controls and policy management but do not expose a documented BYOK for model keys as of 2025-10-19.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        'Supports multiple LLM providers (OpenAI, Anthropic/Claude, Groq) via configuration — effectively a vendor-agnostic/BYOK model.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        supports connecting your own model/provider credentials when desired:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        Supports private deployments and enterprise key management practices through on-prem/air-gapped setups:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        'Users can supply their own API keys for models (BYOK), enabling use with different model providers and preserving control over credentials.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        Sourcegraph Cloud does not publicly advertise a generic BYOK feature; however self-hosted deployments give organizations full control over their infrastructure and encryption boundaries.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        'Theia AI and integrations follow a bring-your-own-key / bring-your-own-model philosophy: you can configure external LLM providers or self-hosted models (e.g., Ollama, LlamaFile, hosted Anthropic/OpenAI keys) depending on deployment and data-control needs.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        Users provide their own API keys for third-party services and LLMs when configuring integrations.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        'Zed supports OpenAI-compatible providers and can be configured to use local LLM hosts (e.g., Ollama) so you can run models with your own keys or entirely offline.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+  - Opensource:
+      type: LABEL
+      values:
+        'Several components and tools are published as open-source (PR-Agent and code examples), while the core hosted product and some models/features are proprietary.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(165, 100%, 70%)'
+        The project is open-source and community contributions are actively encouraged.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(165, 100%, 70%)'
+        Studio and Gemini are proprietary Google services; there are no public source repositories for the hosted Studio environment.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        The project is distributed under a Functional Source License (FSL) / "Fair Source" style license (source-available) rather than an OSI-approved open-source license.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(165, 100%, 70%)'
+        'source available on GitHub, community contributions encouraged':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Company published several repositories under the kiteco GitHub organization after winding down; some components and research artifacts are available for reuse.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Nuanced began as an open-source call-graph/context library; core components have been published for community use.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(165, 100%, 70%)'
+        Core Gitpod components remain open-source; some agent and enterprise-grade features are commercial/proprietary.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(165, 100%, 70%)'
+        'Holo-1 (the VLM) has open-source releases, but Runner H’s orchestration and hosted agent product is closed-source as of initial public information.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(165, 100%, 70%)'
+        'Historically Apache 2.0 (OSS) until 2023; in 2023–2024 Sourcegraph moved large portions of the project to an enterprise/proprietary license and in Aug 2024 made the core repository private. Some related projects (e.g., parts of Cody or community tooling) remain open source.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        The v0 product and its generation backend are proprietary; generated code is standard open-stack (React/Tailwind) that you can use in your own repos:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Core source available on GitHub:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
