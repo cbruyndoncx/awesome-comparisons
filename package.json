@@ -1,6 +1,6 @@
 {
-  "name": "ultimate-comparison",
-  "version": "2.0.0-alpha.32",
+  "name": "ultimate-comparison-v3",
+  "version": "3.0.0-alpha.32",
   "scripts": {
     "data:prepare": "node ./node_modules/gulp/bin/gulp.js default --gulpfile=./lib/gulp/gulpfile.js",
     "data:watch": "node ./node_modules/gulp/bin/gulp.js dev --gulpfile=./lib/gulp/gulpfile.js",
