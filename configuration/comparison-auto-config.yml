@@ -54,6 +54,9 @@ criteria:
         'Integrations (GitHub, VS Code, Slack) and plugin-like connectors for repos and CI/CD':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
+        'VS Code extension available (integrates chat, slash commands, inline quick edits)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
         'Integrations: Figma import (Builder.io plugin), GitHub/GitLab/Bitbucket import, template gallery':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -114,6 +117,9 @@ criteria:
         'Supports webhooks, custom data uploads and integration points for connecting external services':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
+        Extension registry available; growing ecosystem but smaller than VS Code's marketplace:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
   - LocalOffline:
       type: LABEL
       values:
@@ -150,6 +156,9 @@ criteria:
         Runs as a cloud-hosted sandboxed agent rather than an offline/local-only product:
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
+        Local-first architecture; code and context are kept on the developer's machine rather than sent to third-party servers for model training or storage:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
         Runs locally or on private servers using Docker / docker-compose and nvidia-docker for GPU acceleration. Supports multi-GPU model sharding so larger models can be run across several cards.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
@@ -186,6 +195,9 @@ criteria:
         Supports local model execution and private/on-prem deployments. Offers VPC and air-gapped installation options for organizations with strict data residency and compliance requirements.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
+        '[Any additional details like Ollama as an indented unordered list item]':
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
         Theia can run locally as a desktop app or be self-hosted on-premise. Its AI integrations support local/offline models (where supported by the chosen model runtime) enabling air-gapped or privacy-sensitive deployments.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
@@ -204,6 +216,9 @@ criteria:
         tools (though integrations and enterprise offerings may offer stronger controls).:
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
+        Zed can be configured to use local LLMs (via Ollama or other OpenAI-compatible endpoints) so prompts and code can stay on-device. It also supports running Ollama on remote GPU hosts (SSH/port-forwarding) if needed.:
+          color: '#ffff00'
+          backgroundColor: 'hsl(270, 100%, 70%)'
   - FreeTrial:
       type: LABEL
       values:
@@ -348,9 +363,6 @@ criteria:
         Shell scripting:
           color: '#0d0d0d'
           backgroundColor: 'hsl(330, 100%, 70%)'
-        'Multiple (Python, JavaScript, Java, Go, etc.)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
         'JavaScript / TypeScript (Next.js, React)':
           color: '#0d0d0d'
           backgroundColor: 'hsl(150, 100%, 70%)'
@@ -504,6 +516,9 @@ criteria:
         'Integrates with GitHub workflows and can open/modify repositories, create branches and PRs':
           color: '#0d0d0d'
           backgroundColor: 'hsl(180, 100%, 70%)'
+        Integrates with local repositories and provides VS Code extension workflows:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
         N/A:
           color: '#0d0d0d'
           backgroundColor: 'hsl(30, 100%, 70%)'
@@ -717,6 +732,9 @@ criteria:
         GPL:
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
+        'GPL-3.0 (core editor), AGPL for certain server/collab components; other crates/components may use Apache/MIT for specific parts':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
   - MCPSupport:
       type: LABEL
       values:
@@ -738,6 +756,9 @@ criteria:
         Warp supports selecting/modeling different hosted LLM providers and includes enterprise features like zero-data-retention guarantees and proxying; it exposes autonomy controls for when agents may call MCP servers without human approval.:
           color: '#ffff00'
           backgroundColor: 'hsl(270, 100%, 70%)'
+        MCP servers are integrated similar to other extensions like e.g. theming:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(30, 100%, 70%)'
   - BYOK:
       type: LABEL
       values:

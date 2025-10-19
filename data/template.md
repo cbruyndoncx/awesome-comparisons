@@ -1,10 +1,10 @@
 <!-- This template is used to capture the essence of ai coding tools and to allow for a comparison between the different tools available on the market. This covers closed as well as opensource.
 These sections and headers as well as bulleted lists need to be respected for the parser to create a comprehensive comparison table. 
-If presented with options, choose the most appropriate option. Any remarks you can add as an indented line.
+If presented with options, choose the most appropriate option. Any remarks you can add as an indented unordered list item.
 If you don't know the answer, remove the default options, so the section stays blank.
 -->
 # Template Example - http://www.example.com
-[ Provide short description here ]
+[Provide short description here]
 
 ## Version
 vX.X (yyyy-mm--dd)
@@ -14,7 +14,7 @@ vX.X (yyyy-mm--dd)
 - [4] Comment 5
   
 ## Repository
-- https://github.com/{owner}/{repo} [or empty]
+- https://github.com/{owner}/{repo} 
   
 ## Languages
 - Any
@@ -32,7 +32,7 @@ vX.X (yyyy-mm--dd)
   
 ## LocalOffline
 - Yes
-  [ Any additional details like Ollama]
+  - [Any additional details like Ollama as an indented unordered list item]
 - No
   
 ## FreeTrial

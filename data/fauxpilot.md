@@ -3,13 +3,14 @@
 ## Version
 
 ## Rating
+-
 
 ## Repository
 - https://github.com/fauxpilot/fauxpilot
 
 ## Languages
-- Multiple (Python, JavaScript, Java, Go, etc.)
-- 
+- Any
+
 ## Extensible
 - Yes
 

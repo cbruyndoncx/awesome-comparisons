@@ -73,7 +73,6 @@
                       [innerHtml]="prefixInternalLink(entry?.html | sanitizeHtml)"></span>
 
                 <span *ngIf="types[i] === 'RATING'" [innerHtml]="prefixInternalLink(entry?.html | sanitizeHtml)"></span>
-                <span *ngIf="types[i] === 'RATING' && (entry?.rating === undefined || entry?.rating === null)" class="missing-text">Missing</span>
             </div>
         </pcard>
     </ng-template>

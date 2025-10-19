@@ -74,7 +74,6 @@
                 <td *ngIf="types[i] === 'RATING'">
                     <iicon icon="star" *ngIf="entry?.rating !== undefined && entry?.rating !== null">{{entry.rating}}
                     </iicon>
-                    <span *ngIf="entry?.rating === undefined || entry?.rating === null">Missing</span>
                 </td>
             </ng-template>
             <td>
