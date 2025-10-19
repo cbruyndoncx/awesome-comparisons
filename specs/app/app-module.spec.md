@@ -19,6 +19,7 @@ Imports essential Angular and application modules:
 - ComparisonModule for comparison functionality
 - StoreModule configured with masterReducer for state management
 - StoreRouterConnectingModule for router-store integration
+- Runtime checks configured to disable strict immutability/serializability to support legacy reducers
 
 ### Configures Routing
 
@@ -58,7 +59,17 @@ import { CustomRouterStateSerializer } from './redux/custom-router-state-seriali
       ],
       { useHash: false }
     ),
-    StoreModule.forRoot({ state: masterReducer }),
+    StoreModule.forRoot(
+      { state: masterReducer },
+      {
+        runtimeChecks: {
+          strictStateImmutability: false,
+          strictActionImmutability: false,
+          strictStateSerializability: false,
+          strictActionSerializability: false
+        }
+      }
+    ),
     StoreRouterConnectingModule
   ],
   providers: [

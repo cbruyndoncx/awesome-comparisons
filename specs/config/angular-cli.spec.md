@@ -28,6 +28,13 @@ Provides production and development build configurations:
 - Development preserves source maps and vendor chunks
 - Bundle budgets for size monitoring
 
+### CommonJS Allowlist
+
+Allows specific dependencies to remain CommonJS without triggering build warnings.
+
+- Whitelists citation-js packages and supporting fetch utilities
+- Keeps build output clean while migration to ESM-ready alternatives remains in progress
+
 ### Development Server
 
 Configures dev-server target with build configuration options.
