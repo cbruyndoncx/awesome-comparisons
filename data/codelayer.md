@@ -31,7 +31,7 @@ CodeLayer is an open-source, keyboard-first IDE and orchestration layer for AI c
 
 ## LocalOffline
 - No
-  Primarily designed to run with Claude Code / Anthropic-backed sessions rather than purely local model hosting]
+  - Primarily designed to run with Claude Code / Anthropic-backed sessions rather than purely local model hosting]
 
 ## FreeTrial
 - No

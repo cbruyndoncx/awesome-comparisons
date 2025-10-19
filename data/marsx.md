@@ -29,18 +29,18 @@ MarsX is an open-source development platform and marketplace that combines AI as
 
 ## LocalOffline
 - No
-  MarsX is primarily a cloud platform with a web-based IDE and Micro AppStore.
+  - MarsX is primarily a cloud platform with a web-based IDE and Micro AppStore.
 
 ## FreeTrial
 - Yes
-  MarsX offers a usable free plan and the core Mars engine is available as open-source.]
+  - MarsX offers a usable free plan and the core Mars engine is available as open-source.]
 
 ## GitSupport
 - Yes
 
 ## Terminal
 - Yes
-  Cloud IDE typically exposes developer tooling; advanced users can work with code directly.
+  - Cloud IDE typically exposes developer tooling; advanced users can work with code directly.
 
 ## Opensource
 - Yes

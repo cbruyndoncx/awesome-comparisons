@@ -23,7 +23,7 @@ Amazon CodeWhisperer is AWS's ML-powered, in-IDE coding assistant that provides 
 - No
 ## LocalOffline
 - No
-  Any additional details: CodeWhisperer is a cloud service (runs on AWS infrastructure) and does not provide an official fully-local/offline model runtime for on-prem usage.
+  - Any additional details: CodeWhisperer is a cloud service (runs on AWS infrastructure) and does not provide an official fully-local/offline model runtime for on-prem usage.
 ## FreeTrial
 - Yes
   - AWS offered a free tier for individual developers when CodeWhisperer reached general availability; enterprise/pricing details are governed under Amazon Q Developer offerings.

@@ -29,7 +29,7 @@ Runner H (from H Company) is an "action-oriented" autonomous web agent designed 
 
 ## FreeTrial
 - Yes
-  Limited beta access was offered during initial launch windows.
+  - Limited beta access was offered during initial launch windows.
 
 ## GitSupport
 - No
@@ -39,7 +39,7 @@ Runner H (from H Company) is an "action-oriented" autonomous web agent designed 
   
 ## Opensource
 - No
-  Holo-1 (the VLM) has open-source releases, but Runner H’s orchestration and hosted agent product is closed-source as of initial public information.
+  - Holo-1 (the VLM) has open-source releases, but Runner H’s orchestration and hosted agent product is closed-source as of initial public information.
 
 ## License
 
@@ -53,4 +53,3 @@ Runner H (from H Company) is an "action-oriented" autonomous web agent designed 
 - Use cases: data extraction across sites, automated form filling and onboarding, multi-site workflows (e-commerce, lead enrichment), and automated testing scenarios that require visual validation.
 - Limitations: early-stage product with limited public SDK/repo; cloud-hosted—which may pose data residency or BYOK concerns for some organisations. Pricing and enterprise controls were evolving during early launches.
 - Related projects: H Company also released Tester H (an AI testing agent) and Holo-1 (open-source VLM) which are part of the same ecosystem.
-

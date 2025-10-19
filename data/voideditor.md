@@ -27,11 +27,11 @@ Void is an open-source, privacy-focused AI code editor that forks the Visual Stu
   
 ## LocalOffline
 - Yes
-  Supports running local/open-source models via integrations (Ollama, LM Studio, local runners) so inference can remain on-device or on-prem.
+  - Supports running local/open-source models via integrations (Ollama, LM Studio, local runners) so inference can remain on-device or on-prem.
   
 ## FreeTrial
 - Yes
-  Core editor is free and open-source.
+  - Core editor is free and open-source.
   
 ## GitSupport
 - Yes

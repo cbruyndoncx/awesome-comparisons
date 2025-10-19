@@ -25,7 +25,7 @@ DevoxxGenie is an IntelliJ IDEA plugin (100% Java-based) that provides an LLM-po
 
 ## LocalOffline
 - Yes
-  Supports running local LLM backends (Ollama, GPT4All, Llama.cpp, LMStudio, etc.) and a fully-local RAG setup via Chroma DB + embeddings.
+  - Supports running local LLM backends (Ollama, GPT4All, Llama.cpp, LMStudio, etc.) and a fully-local RAG setup via Chroma DB + embeddings.
 
 ## FreeTrial
 - Yes
@@ -54,4 +54,3 @@ DevoxxGenie is an IntelliJ IDEA plugin (100% Java-based) that provides an LLM-po
 - Requirements: Requires JDK 17+ and IntelliJ IDEA 2023.3.4+ (or compatible recent versions).
 - Use cases: Code explanation, unit-test generation, code review/suggestions, natural-language code search, debugging with screenshots, and project-aware Q&A.
 - Good fit for teams that need local/offline LLM execution or want flexible model selection inside IntelliJ.
-

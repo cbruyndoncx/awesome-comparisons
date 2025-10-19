@@ -22,7 +22,7 @@ Designed for Pro, Max, Team and Enterprise customers, Claude Desktop aims to mak
 
 ## LocalOffline
 - No
-  Any additional details like Ollama: Anthropic's desktop offering is primarily cloud-connected. Public documentation does not describe a fully local/offline model runtime. Enterprise/Team tooling (like Claude Code) can be configured to route through organization-managed endpoints; if BYOK/local hosting matters for your use case, contact Anthropic sales/support for enterprise deployment options.
+  - Any additional details like Ollama: Anthropic's desktop offering is primarily cloud-connected. Public documentation does not describe a fully local/offline model runtime. Enterprise/Team tooling (like Claude Code) can be configured to route through organization-managed endpoints; if BYOK/local hosting matters for your use case, contact Anthropic sales/support for enterprise deployment options.
 
 ## FreeTrial
 - No

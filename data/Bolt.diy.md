@@ -3,19 +3,19 @@ Bolt.diy is an AI-driven tool for automating repetitive coding tasks and improvi
  ## Languages      
  - Python      
  - JavaScript      
- ## Extensible      
+ - ## Extensible      
  - API      
- ## Description      
+ - ## Description      
  Bolt.diy helps developers automate common coding patterns and generate boilerplate code efficiently.      
  ## BYOK      
  - Yes      
- ## LocalOffline      
+ - ## LocalOffline      
  - No      
- ## FreeTrial      
+ - ## FreeTrial      
  - Yes      
- ## GitSupport      
+ - ## GitSupport      
  - Yes      
- ## Terminal      
+ - ## Terminal      
  - No      
- ## Opensource      
+ - ## Opensource      
  - No      

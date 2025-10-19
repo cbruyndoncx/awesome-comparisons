@@ -33,7 +33,7 @@ Marblism provides two complementary offerings: (1) a suite of role-specific "AI 
 
 ## GitSupport
 - Yes
-  Generates/clones GitHub repositories for created apps
+  - Generates/clones GitHub repositories for created apps
 
 ## Terminal
 - No
@@ -54,4 +54,3 @@ Marblism provides two complementary offerings: (1) a suite of role-specific "AI 
 - Pricing: positioned affordably (examples cited $39/month for unlimited AI Employees tasks); also offers tiered app-builder plans / free tier for limited use.
 - Strengths: very fast prototyping, simple onboarding (<30 minutes), GitHub repo output, useful for MVPs and solo founders.
 - Limitations: not enterprise-grade (compliance, on-premises), limited tech stack (React/Node), generated code usually needs manual review/hardening for production, documentation/support primarily community/Discord.
-

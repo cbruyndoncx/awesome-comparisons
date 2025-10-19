@@ -27,7 +27,7 @@ Nuanced is an MCP (Model Context Protocol) server and code-intelligence layer th
 
 ## LocalOffline
 - Yes
-  Local-first MCP server: analysis runs on the user's machine or infrastructure; code/context does not need to be uploaded to external APIs.
+  - Local-first MCP server: analysis runs on the user's machine or infrastructure; code/context does not need to be uploaded to external APIs.
 
 ## FreeTrial
 
@@ -36,18 +36,18 @@ Nuanced is an MCP (Model Context Protocol) server and code-intelligence layer th
 
 ## Terminal
 - Yes
-  Provides an npm package and CLI for setup/configuration; integrates with developer workflows.
+  - Provides an npm package and CLI for setup/configuration; integrates with developer workflows.
 
 ## Opensource
 - Yes
-  Nuanced began as an open-source call-graph/context library; core components have been published for community use.
+  - Nuanced began as an open-source call-graph/context library; core components have been published for community use.
 
 ## License
 
 
 ## MCPSupport
 - Yes
-  Nuanced is explicitly implemented as an MCP server to deliver structured code context to LLM-based agents.
+  - Nuanced is explicitly implemented as an MCP server to deliver structured code context to LLM-based agents.
 
 ## Notes
 - Built by former GitHub engineers experienced in large-scale code intelligence and search.
@@ -58,4 +58,3 @@ Nuanced is an MCP (Model Context Protocol) server and code-intelligence layer th
 - Deployment: installable via npm (npm package / CLI), configured as an MCP server; designed to run locally or on-prem for secure codebases.
 - Tradeoffs/Unknowns: full license details and exact language-by-language feature parity are not always documented in public materials; enterprise features and expanded language support may be gated under paid plans.
 - Good fit for: teams using LLMs to assist coding on large/complex repos, organizations requiring local analysis for security/privacy, and tooling vendors building LLM-powered code assistants.
-

@@ -28,7 +28,7 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 
 ## LocalOffline
 - Yes (self-hosted / Docker with local model providers like Ollama)
-  Indented note: Running locally with Ollama or other on-prem model hosts enables offline development.
+  - Indented note: Running locally with Ollama or other on-prem model hosts enables offline development.
 
 ## FreeTrial
 - Yes

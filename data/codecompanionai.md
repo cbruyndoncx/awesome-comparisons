@@ -24,11 +24,11 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 
 ## LocalOffline
 - No
-  [All user data (code, DBs, etc.) is described as being stored locally on the user's machine, but the assistant makes API calls to OpenAI for model inference — so it is not fully offline.]
+  - [All user data (code, DBs, etc.) is described as being stored locally on the user's machine, but the assistant makes API calls to OpenAI for model inference — so it is not fully offline.]
 
 ## FreeTrial
 - Yes
-  [The product is often described as using the user's own OpenAI API key (BYOK) which enables usage without a separate paid tier from the vendor; however any model usage will consume the user's OpenAI quota which may incur cost.]
+  - [The product is often described as using the user's own OpenAI API key (BYOK) which enables usage without a separate paid tier from the vendor; however any model usage will consume the user's OpenAI quota which may incur cost.]
 
 ## GitSupport
 - Yes

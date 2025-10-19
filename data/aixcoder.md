@@ -24,13 +24,13 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
 
 ## LocalOffline
 - Yes
-  AIXcoder emphasizes local/offline model operation so code and context can remain on-device. The product also offers cloud modes for extended functionality.
+  - AIXcoder emphasizes local/offline model operation so code and context can remain on-device. The product also offers cloud modes for extended functionality.
 
 ## FreeTrial
 
 ## GitSupport
 - Yes
-  Integrates with repository search and can surface examples and API usage from GitHub/open-source code; version-control integration is part of the IDE workflow.
+  - Integrates with repository search and can surface examples and API usage from GitHub/open-source code; version-control integration is part of the IDE workflow.
 
 ## Terminal
 
@@ -48,5 +48,3 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
 - Resource profile: Because the local model is quantized, vendors indicate it can run on modest hardware (4–8GB for very small setups, better experience with 8–16GB and/or modest GPUs), though exact requirements depend on the chosen deployment mode and model precision.
 - Enterprise options: There are team/enterprise offerings with custom intelligence, private deployment, and analytics for developer efficiency; details and pricing vary by vendor engagement.
 - Unclear / not publicly confirmed: specific license details for the model and tooling, BYOK (bring-your-own-key) support for cloud features, explicit terminal/CLI tooling support, and whether the project or models are fully open-source. If these are critical, verify with the vendor or product documentation before selecting the tool.
-
-

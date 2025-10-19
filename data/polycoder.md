@@ -19,7 +19,7 @@ PolyCoder was released in multiple sizes (160M, 405M and 2.7B parameters). The 2
 - No
 ## LocalOffline
 - Yes
-  PolyCoder can be run locally/self-hosted via the Hugging Face transformers ecosystem. Community quantized builds (GGUF/llama.cpp, WebUI) exist to reduce memory requirements for consumer GPUs.
+  - PolyCoder can be run locally/self-hosted via the Hugging Face transformers ecosystem. Community quantized builds (GGUF/llama.cpp, WebUI) exist to reduce memory requirements for consumer GPUs.
 ## FreeTrial
 
 ## GitSupport

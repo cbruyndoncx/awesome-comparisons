@@ -32,11 +32,11 @@ Trae is an AI-first IDE intended to act as a full software engineering partner r
 
 ## LocalOffline
 - No
-  Trae runs cloud models and does not currently advertise a fully local/offline mode
+  - Trae runs cloud models and does not currently advertise a fully local/offline mode
 
 ## FreeTrial
 - Yes
-  As of early 2025 Trae was distributed free with access to several premium models included
+  - As of early 2025 Trae was distributed free with access to several premium models included
 
 ## GitSupport
 - Yes
@@ -52,7 +52,7 @@ Trae is an AI-first IDE intended to act as a full software engineering partner r
 
 ## MCPSupport
 - Yes
-  Model Context Protocol support added in v1.3.0 to enable custom agents and richer context handling
+  - Model Context Protocol support added in v1.3.0 to enable custom agents and richer context handling
 
 ## Notes
 - Built on VS Code so migration is low-friction for users of VS Code or Cursor.
@@ -61,4 +61,3 @@ Trae is an AI-first IDE intended to act as a full software engineering partner r
 - Supports multimodal inputs (screenshots, design assets) to inform coding and debugging.
 - Privacy/Trust considerations: Proprietary product with cloud-hosted model usage — review organizational policy before use in sensitive codebases.
 - Competitive positioning: Targets Cursor and GitHub Copilot users but differentiates on zero-cost premium-model access, autonomous agent flows, and built-in deployment tooling.
-

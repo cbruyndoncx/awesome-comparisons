@@ -36,7 +36,7 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
 
 ## FreeTrial
 - No
-  Any additional details: Tabnine sunset its free Basic plan in 2025; access is primarily through paid tiers or enterprise licensing. Trial or pilot options may still be available via sales.
+  - Any additional details: Tabnine sunset its free Basic plan in 2025; access is primarily through paid tiers or enterprise licensing. Trial or pilot options may still be available via sales.
 
 ## GitSupport
 
@@ -55,4 +55,3 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
 - Strengths: strong privacy and governance features (SSO/SAML, SCIM, role-based access controls), flexible deployment (cloud, private cloud/VPC, on-prem, air-gapped), broad IDE support (VS Code, JetBrains IDEs, Visual Studio), and organization-aware completions that learn project patterns.
 - Limitations: free/basic tier availability was reduced in 2025; on-prem/self-hosted deployments require operational expertise (Kubernetes, infra); most public performance benchmarks are vendor-provided — evaluate with a pilot before enterprise-wide roll-out.
 - Ideal for: regulated industries (finance, healthcare, government, defense) and organizations that need data residency guarantees and enterprise governance.
-

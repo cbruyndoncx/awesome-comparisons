@@ -41,15 +41,15 @@ Jolt is a commercial AI coding assistant designed for large production codebases
 ## LocalOffline
 
 - No
-  Jolt operates as a cloud service with IDE integrations; offline/local-only usage is not advertised.
+  - Jolt operates as a cloud service with IDE integrations; offline/local-only usage is not advertised.
 
 ## FreeTrial
 - Yes
-  Commercial product with demos / trials and enterprise sales channels.
+  - Commercial product with demos / trials and enterprise sales channels.
 
 ## GitSupport
 - Yes
-  Can produce git patches and integrate with repositories; IDE extensions apply changes directly]
+  - Can produce git patches and integrate with repositories; IDE extensions apply changes directly]
 
 ## Terminal
 
@@ -73,4 +73,3 @@ Jolt is a commercial AI coding assistant designed for large production codebases
 - Useful links:
   - Main site: https://www.usejolt.ai
   - Docs / support: https://docs.usejolt.ai
-

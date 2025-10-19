@@ -32,7 +32,7 @@ Kite was an early AI-assisted coding tool (founded 2014) that provided context-a
 
 ## LocalOffline
 - Yes
-  Any additional details: primary design emphasized on-device inference and privacy (local completions rather than cloud-only).
+  - Any additional details: primary design emphasized on-device inference and privacy (local completions rather than cloud-only).
 
 ## FreeTrial
 - Yes

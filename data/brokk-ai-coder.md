@@ -26,7 +26,7 @@ v0.1 (2025-10-19)
 
 ## LocalOffline
 - Yes
-  [Brokk's client is open-source Java software; it ships with or can leverage Jlama for local/tiny-model inference and supports workflows that minimize cloud calls. Some advanced features may use hosted models depending on configuration.]
+  - [Brokk's client is open-source Java software; it ships with or can leverage Jlama for local/tiny-model inference and supports workflows that minimize cloud calls. Some advanced features may use hosted models depending on configuration.]
 
 ## FreeTrial
 

@@ -19,18 +19,18 @@ GPT Pilot (by Pythagora) is a source-available AI developer assistant designed t
   - Supports multiple LLM providers (OpenAI, Anthropic/Claude, Groq) via configuration — effectively a vendor-agnostic/BYOK model.
 ## LocalOffline
 - Yes
-  Can be run locally or inside Docker; configurable to use local LLM endpoints or self-hosted inference where supported.
+  - Can be run locally or inside Docker; configurable to use local LLM endpoints or self-hosted inference where supported.
 ## FreeTrial
 - Yes
-  The open/source-available GPT Pilot codebase is free to run; Pythagora also offers a commercial Pythagora Pro product with paid features.
+  - The open/source-available GPT Pilot codebase is free to run; Pythagora also offers a commercial Pythagora Pro product with paid features.
 ## GitSupport
 - Yes
 ## Terminal
 - Yes
-  CLI-driven project creation and workspace management are supported.
+  - CLI-driven project creation and workspace management are supported.
 ## Opensource
 - No
-  The project is distributed under a Functional Source License (FSL) / "Fair Source" style license (source-available) rather than an OSI-approved open-source license.
+  - The project is distributed under a Functional Source License (FSL) / "Fair Source" style license (source-available) rather than an OSI-approved open-source license.
 ## License
 - Functional Source License (FSL) / Fair Source (source-available, not MIT/Apache/GPL)
 ## MCPSupport

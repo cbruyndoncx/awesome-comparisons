@@ -17,27 +17,26 @@ Codename Goose is an open-source, on-machine AI agent framework created to autom
 - Yes
 ## LocalOffline
 - Yes
-  Can run on-machine and integrate with local/self-hosted model providers via MCP-compatible bridges.
+  - Can run on-machine and integrate with local/self-hosted model providers via MCP-compatible bridges.
 ## FreeTrial
 - Yes
-  Open-source and free to use; commercial offerings (if any) not required to run the core framework.
+  - Open-source and free to use; commercial offerings (if any) not required to run the core framework.
 ## GitSupport
 - Yes
-  Integrates with git workflows to read/write/commit/branch as part of automated tasks.
+  - Integrates with git workflows to read/write/commit/branch as part of automated tasks.
 ## Terminal
 - Yes
-  Provides a CLI for scripting and interactive control.
+  - Provides a CLI for scripting and interactive control.
 ## Opensource
 - Yes
 ## License
 
 ## MCPSupport
 - Yes
-  Built around and interoperable with the Model Context Protocol (MCP) for tool discovery and standardized tool RPC.
+  - Built around and interoperable with the Model Context Protocol (MCP) for tool discovery and standardized tool RPC.
 ## Notes
 - Key features: autonomous multi-step task execution, ".goosehints" project guidance, shareable and repeatable "Recipes" to capture workflows and make agentic behavior reproducible.
 - Operational modes: Auto (full autonomy), Approve (prompt before making changes), Chat (suggestions only).
 - Primary early use-cases: code generation & migrations, test generation, scaffolding, build/perf automation, and other developer productivity tasks.
 - Strong emphasis on extensibility and preventing vendor lock-in by supporting multiple LLM providers and MCP-based extensions.
 - Adoption and usefulness will depend on the growth of a healthy extension ecosystem (MCP servers) and high-quality recipes for common workflows.
-

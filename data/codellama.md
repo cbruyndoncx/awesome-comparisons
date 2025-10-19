@@ -26,10 +26,10 @@ Code Llama is Meta's open-source family of large language models optimized for c
 
 ## LocalOffline
 - Yes
-  Can be run locally or on private infrastructure via frameworks/runtimes such as Hugging Face transformers, Ollama, and other containerized runtimes. Smaller sizes can run on single GPUs; larger sizes require multi-GPU or specialized inference setups.
+  - Can be run locally or on private infrastructure via frameworks/runtimes such as Hugging Face transformers, Ollama, and other containerized runtimes. Smaller sizes can run on single GPUs; larger sizes require multi-GPU or specialized inference setups.
 ## FreeTrial
 - Yes
-  The models and weights are available for download (open-source) for research and commercial use under Meta's license terms.
+  - The models and weights are available for download (open-source) for research and commercial use under Meta's license terms.
 ## GitSupport
 - No
 
@@ -51,4 +51,3 @@ Code Llama is Meta's open-source family of large language models optimized for c
 - Deployment: Widely available through Hugging Face, community containers, and local runtimes (Ollama, private inference servers).
 - Strengths: open-source, good quality for code tasks, multiple sizes for trade-offs between latency and capability.
 - Limitations: still requires careful prompt engineering for complex multi-file project reasoning; ecosystem tooling (IDE/product integrations) is smaller than some commercial competitors but growing quickly.
-

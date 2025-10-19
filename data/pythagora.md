@@ -28,7 +28,7 @@ Pythagora is an AI-driven development assistant that can generate full-stack web
 
 ## LocalOffline
 - No
-  Requires cloud access to LLMs; not designed for fully offline usage.
+  - Requires cloud access to LLMs; not designed for fully offline usage.
 
 ## FreeTrial
 - Yes
@@ -38,7 +38,7 @@ Pythagora is an AI-driven development assistant that can generate full-stack web
 
 ## Terminal
 - Yes
-  Offers CLI commands (e.g. npx pythagora ...) to generate tests and scaffold code.
+  - Offers CLI commands (e.g. npx pythagora ...) to generate tests and scaffold code.
 
 ## Opensource
 - No

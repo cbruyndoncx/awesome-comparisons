@@ -19,7 +19,7 @@ Cline is designed to act as a development partner rather than a simple autocompl
 - Yes
 ## LocalOffline
 - Yes
-  Any additional details like Ollama: supports local model hosts (Ollama, LM Studio) as backends for offline/local use
+  - Any additional details like Ollama: supports local model hosts (Ollama, LM Studio) as backends for offline/local use
 ## FreeTrial
 - Yes
 ## GitSupport

@@ -27,7 +27,7 @@ Ona is the rebrand and strategic evolution of Gitpod into an AI-first software e
 
 ## LocalOffline
 - Yes
-  Ona supports private VPC and on-prem/private-hosted deployments for enterprises but is not a fully offline/local-only product.
+  - Ona supports private VPC and on-prem/private-hosted deployments for enterprises but is not a fully offline/local-only product.
 
 ## FreeTrial
 - Yes
@@ -40,7 +40,7 @@ Ona is the rebrand and strategic evolution of Gitpod into an AI-first software e
 
 ## Opensource
 - Yes
-  Core Gitpod components remain open-source; some agent and enterprise-grade features are commercial/proprietary.
+  - Core Gitpod components remain open-source; some agent and enterprise-grade features are commercial/proprietary.
 
 ## License
 - MIT (core open-source components)
@@ -56,4 +56,3 @@ Ona is the rebrand and strategic evolution of Gitpod into an AI-first software e
 - Good fit for teams that want to adopt AI-driven automation while retaining strict governance and compliance controls.
 - Limitations: true autonomous workflows require careful policy and guardrail configuration; smaller teams without enterprise needs may not need the full Ona stack.
 - Recommended evaluation steps: trial with a sandbox project, configure guardrails and VPC options, measure agent outputs against existing PR and review metrics, and validate audit/compliance reporting.
-

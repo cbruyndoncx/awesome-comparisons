@@ -26,7 +26,7 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
 
 ## LocalOffline
 - Yes
-  Supports running with local model backends (e.g. Ollama) and Models.dev adapters.
+  - Supports running with local model backends (e.g. Ollama) and Models.dev adapters.
 
 ## FreeTrial
 - Yes

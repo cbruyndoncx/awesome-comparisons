@@ -11,7 +11,7 @@ vN/A (2025-10-19)
 
 ## Repository
 - https://github.com/sourcegraph/sourcegraph-public-snapshot
-  note: core repo made private Aug 2024; public snapshot available historically)
+  - note: core repo made private Aug 2024; public snapshot available historically)
 
 ## Languages
 - Any (heavy language support: JavaScript/TypeScript, Python, Java, Go, C/C++, C#, Ruby, PHP, Rust, SQL, Shell, etc.)
@@ -29,7 +29,7 @@ Sourcegraph is a platform that provides precise, scalable code search and code n
 
 ## LocalOffline
 - Yes
-  Self-hosted deployments support offline/private hosting and do not require sending code to Sourcegraph cloud. This is a common choice for enterprises with strict data residency or security requirements.
+  - Self-hosted deployments support offline/private hosting and do not require sending code to Sourcegraph cloud. This is a common choice for enterprises with strict data residency or security requirements.
 
 ## FreeTrial
 - Yes
@@ -77,4 +77,3 @@ Sourcegraph is a platform that provides precise, scalable code search and code n
   - You need precise, enterprise-grade code search and cross-repo navigation across thousands of repositories and many languages.
   - You require large-scale automated code changes (Batch Changes) or engineering metrics (Code Insights).
   - You need an AI assistant that can reason across multiple repositories and provide actionable code suggestions (Cody), and you can accept the vendor/license model.
-

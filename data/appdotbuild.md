@@ -29,7 +29,7 @@ The default generated stacks commonly include React on the frontend and Fastify 
   
 ## LocalOffline
 - No
-  [app.build relies on remote LLMs and hosted infrastructure (Neon/Koyeb) for generation and deployment.]
+  - [app.build relies on remote LLMs and hosted infrastructure (Neon/Koyeb) for generation and deployment.]
 
 ## FreeTrial
 

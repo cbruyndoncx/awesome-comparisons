@@ -34,7 +34,7 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
   - No public, general-purpose "bring your own key" option for the cloud-hosted Copilot service. Enterprise plans provide data controls and policy management but do not expose a documented BYOK for model keys as of 2025-10-19.
 ## LocalOffline
 - No
-  Any offline/local-only model hosting is not offered for the standard Copilot cloud service. Some organizations use enterprise features to limit data sharing; however, Copilot itself runs in GitHub/Microsoft cloud.
+  - Any offline/local-only model hosting is not offered for the standard Copilot cloud service. Some organizations use enterprise features to limit data sharing; however, Copilot itself runs in GitHub/Microsoft cloud.
 ## FreeTrial
 - Yes
   - Copilot has free tiers (e.g., Copilot Free for qualifying users) and trial/paid plans (Pro/Business/Enterprise) with different capabilities.
@@ -55,4 +55,3 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
 - Copilot Chat supports multi-file edits from a single prompt and can incorporate repository context and organization knowledge bases in Enterprise.
 - The Copilot autonomous coding agent can be assigned GitHub issues and produce pull requests for review; this increases automation but requires careful review for correctness and security.
 - Privacy/data usage: Enterprise tiers offer stronger controls and indemnity options; evaluate data residency and IP policies if using Copilot on proprietary codebases.
-

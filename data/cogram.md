@@ -20,11 +20,11 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
 
 ## LocalOffline
 - No
-  (appears cloud-hosted; no documented offline/local inference option found)
+  - (appears cloud-hosted; no documented offline/local inference option found)
 
 ## FreeTrial
 - Yes
-  (marketing indicates a free account/trial is available; details not enumerated in public docs)
+  - (marketing indicates a free account/trial is available; details not enumerated in public docs)
 
 ## GitSupport
 

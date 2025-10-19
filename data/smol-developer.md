@@ -24,18 +24,18 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
 
 ## LocalOffline
 - Yes
-  Smol can be used with locally hosted/open-source LLMs in some setups, but most common usage relies on a cloud LLM (e.g., OpenAI GPT-4) which requires network access and an API key.
+  - Smol can be used with locally hosted/open-source LLMs in some setups, but most common usage relies on a cloud LLM (e.g., OpenAI GPT-4) which requires network access and an API key.
 
 ## FreeTrial
 - Yes
 
 ## GitSupport
 - Yes
-  The repo includes a "git repo mode" workflow that operates on a repository, enabling human-in-the-loop prototyping and iteration.
+  - The repo includes a "git repo mode" workflow that operates on a repository, enabling human-in-the-loop prototyping and iteration.
 
 ## Terminal
 - Yes
-  Usable as a Python library and in repo-driven workflows; CLI/recipe-style usage patterns exist for iterative development.
+  - Usable as a Python library and in repo-driven workflows; CLI/recipe-style usage patterns exist for iterative development.
 
 ## Opensource
 - Yes
@@ -53,5 +53,3 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
 - Prompting DSL: leans on Markdown as the canonical way to describe requirements and specs for the agent.
 - Good fit: rapid prototyping, scaffolding, learning how to implement features with unfamiliar APIs, and generating small demo apps or PoCs.
 - Limitations: quality and speed depend heavily on the chosen LLM (GPT-4 is common but slower/costly). The tool is experimental — outputs require human review, testing, and iteration. Not designed as a drop-in replacement for full IDE/code-review workflows.
-
-

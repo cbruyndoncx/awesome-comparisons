@@ -29,18 +29,18 @@ Tabby is a self-hosted, open-source AI coding assistant that provides code compl
 
 ## LocalOffline
 - Yes
-  Can run fully offline/self-hosted (Docker, from-source). Supports connecting to local model servers such as ollama/llama.cpp backends or on-prem inference stacks. 
+  - Can run fully offline/self-hosted (Docker, from-source). Supports connecting to local model servers such as ollama/llama.cpp backends or on-prem inference stacks. 
 
 ## FreeTrial
 - No
-  Community edition is free & open-source; Team/Enterprise tiers exist commercially for additional features/support.
+  - Community edition is free & open-source; Team/Enterprise tiers exist commercially for additional features/support.
 
 ## GitSupport
 - Yes
 
 ## Terminal
 - Yes
-  Server and agent provide CLI tools; Docker image and direct binary available for server usage.
+  - Server and agent provide CLI tools; Docker image and direct binary available for server usage.
 
 ## Opensource
 - Yes

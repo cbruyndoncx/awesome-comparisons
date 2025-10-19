@@ -28,19 +28,19 @@ Mistral Code is a packaged AI developer assistant designed for enterprise adopti
 
 ## LocalOffline
 - Yes
-  Supports air-gapped on-premises GPU deployment for fully offline operation
+  - Supports air-gapped on-premises GPU deployment for fully offline operation
 
 ## FreeTrial
 - Yes
-  Private beta availability; general availability and trial terms may vary
+  - Private beta availability; general availability and trial terms may vary
 
 ## GitSupport
 - Yes
-  Integrates with repositories for retrieval-augmented generation, code search, and fine-tuning
+  - Integrates with repositories for retrieval-augmented generation, code search, and fine-tuning
 
 ## Terminal
 - Yes
-  Agentic capabilities can reason over terminal output, run commands, and propose diffs under configurable approval flows
+  - Agentic capabilities can reason over terminal output, run commands, and propose diffs under configurable approval flows
 
 ## Opensource
 - No
@@ -59,4 +59,3 @@ Mistral Code is a packaged AI developer assistant designed for enterprise adopti
 - Adopted in production by organizations for hybrid/hardened deployments (examples reported: banks, large enterprises, system integrators).
 - Not a drop-in open-source model; organizations seeking fully open-source stacks should evaluate the underlying Mistral model releases and Continue separately.
 - Useful where governance, observability, and private-model customization are required for regulated codebases.
-

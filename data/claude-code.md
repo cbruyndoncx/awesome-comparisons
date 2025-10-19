@@ -20,7 +20,7 @@ The tool is focused on large-context reasoning, multi-file code transformations,
 - Yes
 ## LocalOffline
 - No
-  Any additional details like Ollama: Claude Code relies on remote model endpoints by default. Anthropic and enterprise customers can route requests through cloud provider-hosted model deployments, but a fully offline/local model runtime is not provided as a standard option.
+  - Any additional details like Ollama: Claude Code relies on remote model endpoints by default. Anthropic and enterprise customers can route requests through cloud provider-hosted model deployments, but a fully offline/local model runtime is not provided as a standard option.
 ## FreeTrial
 - Yes
 ## GitSupport

@@ -29,7 +29,7 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
 
 ## LocalOffline
 - No
-  Any additional details: Runs entirely in the browser using WebContainers; requires network access for AI features and many integrations.
+  - Any additional details: Runs entirely in the browser using WebContainers; requires network access for AI features and many integrations.
 
 ## FreeTrial
 - Yes

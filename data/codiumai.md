@@ -22,7 +22,7 @@ CodiumAI (rebranded to Qodo) is an AI-first code quality platform focused on aut
 
 ## LocalOffline
 - No
-  Some components (for example PR-Agent) are available as open-source/self-hostable tools that can be run locally or in CI, but the full product and advanced model features are primarily cloud-based.
+  - Some components (for example PR-Agent) are available as open-source/self-hostable tools that can be run locally or in CI, but the full product and advanced model features are primarily cloud-based.
 ## FreeTrial
 - Yes
 ## GitSupport
@@ -31,7 +31,7 @@ CodiumAI (rebranded to Qodo) is an AI-first code quality platform focused on aut
 - Yes
 ## Opensource
 - Yes
-  Several components and tools are published as open-source (PR-Agent and code examples), while the core hosted product and some models/features are proprietary.
+  - Several components and tools are published as open-source (PR-Agent and code examples), while the core hosted product and some models/features are proprietary.
 ## License
 
 ## MCPSupport

@@ -18,7 +18,7 @@ OpenDevin is an open-source project that implements an autonomous AI software en
 - Yes
 ## LocalOffline
 - Yes
-  Can be run locally via Docker; supports local LLM backends where available (may still require internet for some models).
+  - Can be run locally via Docker; supports local LLM backends where available (may still require internet for some models).
 ## FreeTrial
 - Yes
 ## GitSupport
@@ -36,4 +36,3 @@ OpenDevin is an open-source project that implements an autonomous AI software en
 - Primary deployment is Docker-based with a sandbox container for executing shell commands; workspace directories are mounted into the sandbox.
 - Requires modern Docker, Python 3.10+, and Node.js for full local UI builds and tooling. 
 - Current status: alpha — rapidly changing; default agents have limited capabilities but roadmap includes more robust agent types, evaluation pipelines, and improved UI.
-

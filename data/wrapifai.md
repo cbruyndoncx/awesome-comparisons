@@ -30,7 +30,7 @@ Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you c
 
 ## FreeTrial
 - Yes
-  Offers a free/beta tier with basic features and Wrapifai branding; paid tiers remove branding and add features.
+  - Offers a free/beta tier with basic features and Wrapifai branding; paid tiers remove branding and add features.
 
 ## GitSupport
 - No
@@ -54,5 +54,3 @@ Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you c
 - Pricing (reported in public materials during beta): starts at around $29/month for paid tier; tiering and limits apply.
 - Limitations: Not intended for building full web applications or heavily customized backend logic. Customization beyond the provided builder can be limited; vendor lock‑in for hosted tools.
 - Security: Platform claims encrypted transmission and secure storage for collected leads (standard for SaaS tools) — verify for specific compliance needs.
-
-

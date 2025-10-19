@@ -20,41 +20,41 @@ v (2025-10-19)
 
 ## Extensible
 - Yes
-  Continue is built to be extensible via blocks, MCP integrations and a hub for sharing assistants.
+  - Continue is built to be extensible via blocks, MCP integrations and a hub for sharing assistants.
 
 ## Description
 Continue is an open-source AI coding assistant and platform that brings AI capabilities into editors (VS Code, JetBrains), the terminal (CLI) and CI/CD workflows. It emphasizes developer control: choose models (cloud or local), customize prompts and agents, and run fully local/offline when required. The platform includes IDE extensions, a CLI (cn) with interactive and headless modes, and an optional Continue Hub for sharing and managing assistant building blocks.
 
 ## BYOK
 - Yes
-  You can configure and use your own API keys and model endpoints, and switch between local/remote models.
+  - You can configure and use your own API keys and model endpoints, and switch between local/remote models.
 
 ## LocalOffline
 - Yes
-  Supports local model workflows (e.g. via Ollama/local LLMs) and headless/offline operation for air-gapped environments.
+  - Supports local model workflows (e.g. via Ollama/local LLMs) and headless/offline operation for air-gapped environments.
 
 ## FreeTrial
 - Yes
-  A free/solo tier exists (open-source extensions + hub access for public/shared blocks). Paid team/enterprise tiers add governance and private deployment options.
+  - A free/solo tier exists (open-source extensions + hub access for public/shared blocks). Paid team/enterprise tiers add governance and private deployment options.
 
 ## GitSupport
 - Yes
-  Native integrations (MCP-style integrations) for GitHub and git workflows; automation via CLI for PR/comments/summaries.
+  - Native integrations (MCP-style integrations) for GitHub and git workflows; automation via CLI for PR/comments/summaries.
 
 ## Terminal
 - Yes
-  The `cn` CLI provides an interactive TUI and a headless mode for scripted and CI uses.
+  - The `cn` CLI provides an interactive TUI and a headless mode for scripted and CI uses.
 
 ## Opensource
 - Yes
-  The project is open-source and community contributions are actively encouraged.
+  - The project is open-source and community contributions are actively encouraged.
 
 ## License
 - Apache-2.0
 
 ## MCPSupport
 - Yes
-  Integrates with Model Context Protocols for adding context providers (GitHub, Jira, etc.) and usable via the hub.
+  - Integrates with Model Context Protocols for adding context providers (GitHub, Jira, etc.) and usable via the hub.
 
 ## Notes
 - Strengths:
@@ -79,4 +79,3 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
   - Official site / docs: https://continue.dev
   - Hub: https://hub.continue.dev
   - GitHub: https://github.com/continuedev/continue
-
