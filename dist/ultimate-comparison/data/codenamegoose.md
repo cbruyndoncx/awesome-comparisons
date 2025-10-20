@@ -31,7 +31,7 @@ Codename Goose is an open-source, on-machine AI agent framework created to autom
 - Yes
 ## License
 
-## MCPSupport
+## MCP-Client
 - Yes
   - Built around and interoperable with the Model Context Protocol (MCP) for tool discovery and standardized tool RPC.
 ## Notes

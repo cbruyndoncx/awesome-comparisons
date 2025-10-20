@@ -54,7 +54,7 @@ vX.X (yyyy-mm--dd)
 ## License
 - MIT
   
-## MCPSupport
+## MCP-Client
 - Yes
 - No
   

@@ -31,8 +31,8 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 ## Opensource
 - No
 ## License
--
-## MCPSupport
+- Proprietary
+## MCP-Client
 -
 ## Notes
 - Distinguishing features: autonomous multi-step planning and execution, long-horizon reasoning across thousands of micro-steps, ability to research (browse docs) and iteratively debug.

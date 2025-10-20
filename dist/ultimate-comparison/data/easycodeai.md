@@ -10,7 +10,6 @@ v1.0 (2025-10-19)
   - Tradeoff: deep integration and "finish-first" workflow vs flexibility
   
 ## Repository
-
 - 
 
 ## Languages
@@ -45,9 +44,9 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 - No
 
 ## License
+- Proprietary
 
-
-## MCPSupport
+## MCP-Client
 
 
 ## Notes

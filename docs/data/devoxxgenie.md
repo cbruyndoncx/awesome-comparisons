@@ -40,9 +40,9 @@ DevoxxGenie is an IntelliJ IDEA plugin (100% Java-based) that provides an LLM-po
 - Yes
 
 ## License
--
+- MIT
 
-## MCPSupport
+## MCP-Client
 - Yes
 
 ## Notes

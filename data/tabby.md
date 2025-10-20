@@ -4,6 +4,9 @@ An open-source, self-hosted AI coding assistant for local code completion and ch
 ## Version
 v0.x (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [4] Strong privacy and self-hosting features (good for sensitive codebases)
 - [4] Good IDE integration and model flexibility, still maturing UX compared to large commercial offerings
@@ -48,7 +51,7 @@ Tabby is a self-hosted, open-source AI coding assistant that provides code compl
 ## License
 - Apache License 2.0
 
-## MCPSupport
+## MCP-Client
 - Yes
 
 ## Notes

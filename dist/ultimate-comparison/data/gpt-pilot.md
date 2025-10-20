@@ -9,7 +9,8 @@ Open-source/Source-available AI developer companion that generates full-stack ap
 - https://github.com/Pythagora-io/gpt-pilot
 ## Languages
 - Python
-- JavaScript / TypeScript
+- JavaScript
+- TypeScript
 ## Extensible
 - Yes
 ## Description
@@ -32,8 +33,9 @@ GPT Pilot (by Pythagora) is a source-available AI developer assistant designed t
 - No
   - The project is distributed under a Functional Source License (FSL) / "Fair Source" style license (source-available) rather than an OSI-approved open-source license.
 ## License
-- Functional Source License (FSL) / Fair Source (source-available, not MIT/Apache/GPL)
-## MCPSupport
+- FSL
+  - Functional Source License (FSL) / Fair Source (source-available, not MIT/Apache/GPL)
+## MCP-Client
 - 
   
 ## Notes

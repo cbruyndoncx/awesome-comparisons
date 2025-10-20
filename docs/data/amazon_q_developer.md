@@ -14,14 +14,7 @@ vN/A (2025-10-19)
 - https://aws.amazon.com/q/ (service documentation)
 
 ## Languages
-- Python
-- JavaScript / TypeScript
-- Java
-- C#
-- C++
-- Go
-- Ruby
-
+- Any
 ## Extensible
 - Yes
   - Supports Model Context Protocol (MCP) connections and a plugin/alias system for third-party tooling (monitoring, security providers)
@@ -59,9 +52,9 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
 - No
 
 ## License
-- Proprietary (AWS service)
+- Proprietary
 
-## MCPSupport
+## MCP-Client
 - Yes
   - Notes: Supports Model Context Protocol / MCP server connections to bring external context into conversations and agent workflows.
 

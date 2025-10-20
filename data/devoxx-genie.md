@@ -4,6 +4,9 @@ An AI assistant plugin for IntelliJ IDEA that can use both local and cloud LLMs.
 ## Version
 v0.x (initial releases 2024)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [5] Strong support for local LLMs and RAG
 - [4] Very useful for Java/IDEA users; UI and workflows continue improving
@@ -40,9 +43,9 @@ DevoxxGenie is an IntelliJ IDEA plugin (100% Java-based) that provides an LLM-po
 - Yes
 
 ## License
--
+- MIT
 
-## MCPSupport
+## MCP-Client
 - Yes
 
 ## Notes

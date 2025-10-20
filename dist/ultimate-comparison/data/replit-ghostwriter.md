@@ -39,7 +39,7 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 
 ## License
 - Proprietary
-## MCPSupport
+## MCP-Client
 - No
 ## Notes
 - Key features: "Complete Code" (inline suggestions), "Explain Code" (natural-language explanations), "Transform Code" (refactors/rewrites), and "Generate Code" (from prompts).

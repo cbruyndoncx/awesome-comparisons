@@ -43,7 +43,7 @@ GitHub Copilot Workspace was an experimental "agentic" IDE hosted by GitHub that
 ## License
 - Proprietary
 
-## MCPSupport
+## MCP-Client
 - No
 
 ## Notes

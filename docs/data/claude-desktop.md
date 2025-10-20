@@ -37,9 +37,9 @@ Designed for Pro, Max, Team and Enterprise customers, Claude Desktop aims to mak
 - No
 
 ## License
-- Proprietary (Anthropic)
+- Proprietary
 
-## MCPSupport
+## MCP-Client
 - Yes
 
 ## Notes

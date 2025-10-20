@@ -11,8 +11,8 @@ details:
     labelRef: ""
     urlRef: id
   body:
-    title: Description
-    bodyRef: description
+    title: Short Description
+    bodyRef: ShortDescription
   tooltipAsText: false
 
 citation:
@@ -26,11 +26,13 @@ criteria:
       table: true
       detail: false
       type: name-url
-  - description:
+  - ShortDescription:
       name: Short Description
       search: false
       detail: false
-      type: text
+      table: true
+      order: '1'
+      type: markdown
   - default-id:
       ignore: true
       id: id

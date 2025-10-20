@@ -12,7 +12,7 @@ v1 (2025-06-04)
 - 
 
 ## Languages
-- 80+ programming languages (notably: Python, JavaScript/TypeScript, Java, Go, C#, C/C++, Rust, Ruby, PHP, SQL, Shell)
+- Any
 
 ## Extensible
 - Yes
@@ -48,7 +48,7 @@ Mistral Code is a packaged AI developer assistant designed for enterprise adopti
 ## License
 - Proprietary
 
-## MCPSupport
+## MCP-Client
 - Yes
   - Assuming continue.dev functionality is kept - doublecheck
 

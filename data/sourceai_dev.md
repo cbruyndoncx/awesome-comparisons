@@ -4,6 +4,9 @@
 ## Version
 v (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - 
   
@@ -38,8 +41,9 @@ SourceAI is a web-based AI code generation tool that accepts natural language re
 - No
   
 ## License
-
-## MCPSupport
+- Proprietary
+  
+## MCP-Client
 - 
 
 ## Notes

@@ -36,7 +36,7 @@ The platform is positioned for both individual developer workflows (autocomplete
 - No
 ## License
 - Proprietary
-## MCPSupport
+## MCP-Client
 -
 ## Notes
 - Key features: AI-generated living wiki, code chat / Q&A, architecture diagrams, code transforms/refactors, citations to code lines, notifications on code changes, editable AI docs, prompt-driven code edits, upcoming test-generation features reported.

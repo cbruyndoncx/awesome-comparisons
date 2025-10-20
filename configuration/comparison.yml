@@ -4,9 +4,9 @@ criteria:
       name: Version
       type: MARKDOWN
       search: false
-      table: true
+      table: false
       detail: true
-      description: ''
+      description: 'Latest version used for update'
       placeholder: ''
       order: '10'
       andSearch: false
@@ -18,8 +18,10 @@ criteria:
   - Rating:
       name: Rating
       search: false
-      table: true
-      detail: true
+      table: false
+      detail: false
+      description: 'Avg rating based on review comments'
+      placeholder: ''
       referencedHeader: Development
       type: RATING
       order: '94'
@@ -27,10 +29,12 @@ criteria:
   # (With type=repository) e.g. 'https://github.com/ultimate-comparisons/ultimate-comparison-BASE'
   # The npm start task will check the repository url (github repo url required) for the last commit and automatically
   # adds values for the 'referencedHeader' (in this case 'Development')
-  - Repository:
+  - RepositoryActive:
       search: false
-      table: true
-      detail: true
+      table: false
+      detail: false
+      description: 'BUG System maintained field looking up repo activity - NOT WORKING'
+      placeholder: ''
       type: REPOSITORY
       order: '95'
       values:
@@ -47,6 +51,41 @@ criteria:
           minAge: 1
           maxAge: 6
           class: label-warning
+  - Repository:
+      name: Repo
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: true
+      description: 'Associated Github repository'
+      placeholder: ''
+      order: '10'
+      andSearch: false
+      rangeSearch: false
+  - Classification:
+      name: Classification
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: &ref_0
+        template: 'AI Native Dev ainativedev.io {}'
+        variables:
+          - name
+      placeholder: &ref_1
+        template: 'Select {} ...'
+        variables:
+          - name
+      order: '15'
+      andSearch: true
+      rangeSearch: false
+      values:
+        AIE/Model
+        Code/Autonomous Agent
+        Code/Editor
+        Code/Spec Driven
+        Code/Terminal
+        Product/Prototyping
   - Languages:
       name: Languages
       type: LABEL
@@ -54,7 +93,7 @@ criteria:
       table: true
       detail: true
       description: &ref_0
-        template: 'Default description for {}'
+        template: 'Any or limited list of supported programming {}'
         variables:
           - name
       placeholder: &ref_1
@@ -89,9 +128,6 @@ criteria:
         JavaScript:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        C++:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         SQL:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -104,43 +140,57 @@ criteria:
         PHP:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        HTML/CSS:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         TypeScript:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        C:
+        C#:
           color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        HTML/CSS:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Shell:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Swift:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Kotlin:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        C/C++:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        Scala:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
+        GraphQL:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(330, 100%, 70%)'
   - Extensible:
       name: Extensible
       type: LABEL
       search: true
       table: true
       detail: true
-      description: *ref_0
-      placeholder: *ref_1
+      description: 'Is it possible to extend or customize the system in any way'
       order: '20'
       andSearch: false
       rangeSearch: false
       values:
-        'No':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        '':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
         'Yes':
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
+        'No':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
   - Description:
       name: Description
       type: MARKDOWN
       search: false
-      table: true
+      table: false
       detail: true
-      description: ''
+      description: 'Few paragraphs about the product'
       placeholder: ''
       order: '10'
       andSearch: false
@@ -151,7 +201,7 @@ criteria:
       search: true
       table: true
       detail: true
-      description: *ref_0
+      description: 'Bring Your Own LLM API Key supported'
       placeholder: *ref_1
       order: '50'
       andSearch: false
@@ -163,16 +213,13 @@ criteria:
         'No':
           color: '#0d0d0d'
           backgroundColor: 'hsl(150, 100%, 70%)'
-        '':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
   - LocalOffline:
       name: LocalOffline
       type: LABEL
       search: true
       table: true
       detail: true
-      description: *ref_0
+      description: 'Support for local on-site deployment or local offline use'
       placeholder: *ref_1
       order: '60'
       andSearch: false
@@ -184,16 +231,13 @@ criteria:
         'No':
           color: '#0d0d0d'
           backgroundColor: 'hsl(180, 100%, 70%)'
-        '':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
   - FreeTrial:
       name: FreeTrial
       type: LABEL
       search: true
       table: true
       detail: true
-      description: *ref_0
+      description: 'Free access (like opensource), or free (potentially limited) trial available'
       placeholder: *ref_1
       order: '95'
       andSearch: false
@@ -202,9 +246,6 @@ criteria:
         'Yes':
           color: '#0d0d0d'
           backgroundColor: 'hsl(120, 100%, 70%)'
-        '':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
         'No':
           color: '#0d0d0d'
           backgroundColor: 'hsl(210, 100%, 70%)'
@@ -214,7 +255,7 @@ criteria:
       search: true
       table: true
       detail: true
-      description: *ref_0
+      description: 'Coding tool is aware of GIT and can work/integrate with GIT repos'
       placeholder: *ref_1
       order: '20'
       andSearch: false
@@ -226,16 +267,13 @@ criteria:
         'No':
           color: '#ffff00'
           backgroundColor: 'hsl(240, 100%, 70%)'
-        '':
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-  - MCPSupport:
-      name: MCPSupport
+  - MCP-Client:
+      name: MCP-Client
       type: LABEL
       search: true
       table: true
       detail: true
-      description: ''
+      description: 'Coding tool has built-in MCP client so can connect to MCP servers'
       placeholder: ''
       order: '21'
       andSearch: false
@@ -247,16 +285,13 @@ criteria:
         'No':
           color: '#ffff00'
           backgroundColor: 'hsl(240, 100%, 70%)'
-        '':
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
   - Terminal:
       name: Terminal
       type: LABEL
       search: true
       table: true
       detail: true
-      description: *ref_0
+      description: 'Coding tool can operate in a terminal/cli environment'
       placeholder: *ref_1
       order: '20'
       andSearch: false
@@ -268,16 +303,13 @@ criteria:
         'No':
           color: '#ffff00'
           backgroundColor: 'hsl(270, 100%, 70%)'
-        '':
-          color: '#ffff00'
-          backgroundColor: 'hsl(270, 100%, 70%)'
   - Opensource:
       name: Opensource
       type: LABEL
       search: true
       table: true
       detail: true
-      description: *ref_0
+      description: 'Coding tool is released under opensource license'
       placeholder: *ref_1
       order: '90'
       andSearch: false
@@ -289,16 +321,13 @@ criteria:
         'No':
           color: '#0d0d0d'
           backgroundColor: 'hsl(300, 100%, 70%)'
-        '':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
   - License:
       name: License
       type: LABEL
       search: true
       table: true
       detail: true
-      description: *ref_0
+      description: 'Opensource specific license or Proprietary for other commercial licenses'
       placeholder: *ref_1
       order: '91'
       andSearch: false
@@ -307,6 +336,27 @@ criteria:
         MIT:
           color: '#0d0d0d'
           backgroundColor: 'hsl(120, 100%, 70%)'
+        Apache-2.0:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        Proprietary:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        FSL:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        BSD-3:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        Other:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        EPL-2.0:
+          color: '#ffff00'
+          backgroundColor: 'hsl(225, 100%, 70%)'
+        GPL-3.0:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
   - Notes:
       name: Notes
       type: MARKDOWN
@@ -322,10 +372,191 @@ criteria:
       name: Last Update
       type: MARKDOWN
       search: false
-      table: true
+      table: false
       detail: true
-      description: 'Date last updated'
-      placeholder: 'yyyy-mm-dd'
+      description: 'Note Date last updated'
+      placeholder: ''
       order: 'Z'
       andSearch: false
       rangeSearch: false
+
+  - ContextManagement:
+      name: ContextManagement
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Methods for managing and updating the context.'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'No':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+  - DirectFileReferences:
+      name: DirectFileReferences
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Can with @file or similar provide context.'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'No':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+  - Hooks:
+      name: Hooks
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Lifecycle events for the agent.'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'No':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+  - SlashCommands:
+      name: SlashCommands
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Re-usable commands that can be manually triggered by the user.'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'No':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+  - Subagents:
+      name: Subagents
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Define specialized AI subagents for task-specific workflows.'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'No':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+  - CustomModes:
+      name: CustomModes
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Create specialist modes that enable you to tailor the chat experience for specific tasks.'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'No':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+  - Plugins:
+      name: Plugins
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'A method of bundling together commands, agents and hooks (claude).'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'No':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+  - Checkpoints:
+      name: Checkpoints
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'A way to undo using checkpoints or if autocommitted git history'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'No':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+  - SpecDrivenDevelopment:
+      name: SpecDrivenDevelopment
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Has support for these Spec Driven Development methodologies:'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'BMAD':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'SpecKit':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'OpenSpec':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'Tessl':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'AgentOS':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'ClaudeFlow':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        'SPARC':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        'SuperClaude':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'

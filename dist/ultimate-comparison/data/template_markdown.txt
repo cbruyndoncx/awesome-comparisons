@@ -18,6 +18,7 @@ vX.X (yyyy-mm--dd)
   
 ## Languages
 - Any
+  - [Any if the language support is dependent on llm used, explicitly list programming languages supported if the LLM is provided asis and development experience and UX is cloud hosted outside of user control]
   
 ## Extensible
 - Yes
@@ -54,7 +55,7 @@ vX.X (yyyy-mm--dd)
 ## License
 - MIT
   
-## MCPSupport
+## MCP-Client
 - Yes
 - No
   

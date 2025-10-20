@@ -4,6 +4,9 @@ A deeply integrated AI assistant built into JetBrains IDEs (IntelliJ IDEA, PyCha
 ## Version
 v2025.2 (2025-08-25)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [5] Deep IDE integration and strong project-aware context
 - [4] Multiple model/provider support and improving local/offline options
@@ -15,9 +18,10 @@ v2025.2 (2025-08-25)
 ## Languages
 - Java
 - Kotlin
-- JavaScript / TypeScript
+- JavaScript
+- TypeScript
 - Python
-- C / C++
+- C/C++
 - Go
 - Rust
 - PHP
@@ -25,7 +29,8 @@ v2025.2 (2025-08-25)
 - C#
 - SQL
 - Shell
-- YAML, JSON, Markdown, Text
+- Other
+  - YAML, JSON, Markdown, Text
 
 ## Extensible
 - Yes
@@ -57,9 +62,9 @@ JetBrains AI Assistant embeds AI workflows directly inside JetBrains IDEs and le
 - No
 
 ## License
-- Proprietary (JetBrains Service Terms / Product License)
+- Proprietary
 
-## MCPSupport
+## MCP-Client
 -
 
 ## Notes

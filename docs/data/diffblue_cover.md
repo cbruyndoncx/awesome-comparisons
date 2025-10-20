@@ -32,7 +32,7 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
 - No
 ## License
 - Proprietary
-## MCPSupport
+## MCP-Client
 - 
 ## Notes
 - Editions: Community (free, limited Methods Under Test), Developer (paid tiers with higher MUT quotas), Teams and Enterprise (larger-scale, CLI/CI integration, analytics/dashboard and on-prem/enterprise deployment options).

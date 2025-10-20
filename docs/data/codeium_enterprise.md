@@ -9,13 +9,7 @@ n/a
 ## Repository
 - 
 ## Languages
-- JavaScript
-- Python
-- Java
-- C++
-- Go
-- Rust
-- (70+ total supported languages)
+- Any
 ## Extensible
 - Yes
 ## Description
@@ -35,7 +29,7 @@ Codeium Enterprise is the commercial, enterprise-oriented edition of Codeium tha
 - No
 ## License
 - Proprietary
-## MCPSupport
+## MCP-Client
 
 ## Notes
 - Deployments: Offers SaaS, self-hosted VPC, and fully air-gapped on-premises deployment models to meet strict data-sovereignty and compliance needs. Typical enterprise installations use containerized deployments (Helm/Kubernetes or Docker Compose) and can be run on infrastructure with GPU acceleration where required.

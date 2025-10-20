@@ -4,6 +4,9 @@ A modern AI-powered IDE and coding assistant ("The Real AI Engineer") focused on
 ## Version
 v1.3.0 (2025-04-xx)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [5] Strong end-to-end workflow and multimodel access
 - [4] Excellent web/dev tooling and deployment integration
@@ -13,13 +16,7 @@ v1.3.0 (2025-04-xx)
 - 
 
 ## Languages
-- TypeScript / JavaScript
-- Python
-- Go
-- Java
-- Rust
-- HTML / CSS
-- SQL
+- Any
 
 ## Extensible
 - Yes
@@ -50,7 +47,7 @@ Trae is an AI-first IDE intended to act as a full software engineering partner r
 ## License
 - Proprietary
 
-## MCPSupport
+## MCP-Client
 - Yes
   - Model Context Protocol support added in v1.3.0 to enable custom agents and richer context handling
 

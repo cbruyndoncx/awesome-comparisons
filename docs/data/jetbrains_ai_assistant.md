@@ -15,9 +15,10 @@ v2025.2 (2025-08-25)
 ## Languages
 - Java
 - Kotlin
-- JavaScript / TypeScript
+- JavaScript
+- TypeScript
 - Python
-- C / C++
+- C/C++
 - Go
 - Rust
 - PHP
@@ -25,7 +26,8 @@ v2025.2 (2025-08-25)
 - C#
 - SQL
 - Shell
-- YAML, JSON, Markdown, Text
+- Other
+  - YAML, JSON, Markdown, Text
 
 ## Extensible
 - Yes
@@ -57,9 +59,9 @@ JetBrains AI Assistant embeds AI workflows directly inside JetBrains IDEs and le
 - No
 
 ## License
-- Proprietary (JetBrains Service Terms / Product License)
+- Proprietary
 
-## MCPSupport
+## MCP-Client
 -
 
 ## Notes

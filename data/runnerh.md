@@ -4,6 +4,9 @@ A web-focused autonomous agent that executes multi-step tasks via natural langua
 ## Version
 v0.9 (2024-05)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [4] Strong web automation and visual robustness
 - [3] Early-stage platform; limited public tooling and ecosystem
@@ -13,7 +16,8 @@ v0.9 (2024-05)
   
 ## Languages
 - Python
-- JavaScript / Node.js
+- JavaScript
+  - Node.js
   
 ## Extensible
 - Yes
@@ -42,8 +46,8 @@ Runner H (from H Company) is an "action-oriented" autonomous web agent designed 
   - Holo-1 (the VLM) has open-source releases, but Runner H’s orchestration and hosted agent product is closed-source as of initial public information.
 
 ## License
-
-## MCPSupport
+- Proprietary
+## MCP-Client
 - No
 
 ## Notes

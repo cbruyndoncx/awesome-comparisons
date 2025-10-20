@@ -1,4 +1,4 @@
-# Devika AI - https://devikaai.org
+# Opcode (Devika AI) - https://opcode.sh
 An open-source agentic AI software engineer for end-to-end code generation, research, and project automation.
 ## Version
 v (2025-10-19)
@@ -10,7 +10,7 @@ v (2025-10-19)
 ## Languages
 - JavaScript / TypeScript
 - Python
-- Shell scripting
+- Shell
 ## Extensible
 - Yes
   - Modular architecture designed to add new model adapters, tools, and integrations
@@ -35,8 +35,8 @@ Key capabilities include automated planning (breaking objectives into actionable
 ## Opensource
 - Yes
 ## License
-- See repository for exact license
-## MCPSupport
+- MIT
+## MCP-Client
 - Yes
 ## Notes
 - Multi-model support: commonly used with Claude 3, GPT-4, Gemini, Mistral, Groq and local models via Ollama.

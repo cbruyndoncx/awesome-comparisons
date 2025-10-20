@@ -7,7 +7,7 @@ Open-source multilingual code generation model from Tsinghua University (THUDM).
 ## Repository
 - https://github.com/THUDM/CodeGeeX
 ## Languages
-- 20+ languages (examples): Python, JavaScript, Java, C/C++, Go, Rust, TypeScript, C#, PHP, Ruby, Kotlin, Swift, Shell, SQL, HTML/CSS, Lua, R
+- Any
 ## Extensible
 - Yes 
   - API / integrations / IDE extensions
@@ -30,7 +30,7 @@ CodeGeeX is a large-scale multilingual code generation model and toolkit develop
 ## License
 - Code: Apache-2.0
 - Model weights: released for academic research; commercial use requires application/approval (see repository for details)
-## MCPSupport
+## MCP-Client
 
 ## Notes
 - Trained at large scale (reported training on 850B+ tokens and large TPU/Ascend clusters in original publications) and evaluated with a multilingual HumanEval-X benchmark.

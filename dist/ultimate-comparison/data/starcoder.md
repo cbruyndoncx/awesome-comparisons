@@ -12,7 +12,8 @@ v1 / 15.5B (initial: 2023)
 - https://huggingface.co/bigcode/starcoder
 
 ## Languages
-- 80+ programming languages (Python, JavaScript, Java, C/C++, Go, Ruby, Rust, TypeScript, PHP, Shell, SQL, etc.)
+- Any
+  - 80+ programming languages (Python, JavaScript, Java, C/C++, Go, Ruby, Rust, TypeScript, PHP, Shell, SQL, etc.)
 
 ## Extensible
 - Yes
@@ -44,9 +45,10 @@ The project emphasizes responsible open-source release practices (dataset opt-ou
 - Yes
 
 ## License
-- BigCode-OpenRAIL / OpenRAIL-M (model card requires agreement on use)
+- Other
+  - BigCode-OpenRAIL / OpenRAIL-M (model card requires agreement on use)
 
-## MCPSupport
+## MCP-Client
 - 
 
 ## Notes

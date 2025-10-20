@@ -4,6 +4,9 @@ Open-source, low-code internal app builder with visual drag-and-drop authoring, 
 ## Version
 v (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [4] Strong for building internal dashboards and admin tools rapidly
 - [5] Active open-source community and increasingly capable AI features
@@ -12,7 +15,8 @@ v (2025-10-19)
 - https://github.com/ToolJet/ToolJet
 
 ## Languages
-- TypeScript / JavaScript
+- TypeScript
+- JavaScript
 - Python
 - SQL
 
@@ -49,7 +53,7 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
 ## License
 - Apache-2.0
 
-## MCPSupport
+## MCP-Client
 - No
 
 ## Notes

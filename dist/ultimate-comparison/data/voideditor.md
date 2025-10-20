@@ -12,9 +12,7 @@ v0.1 (2025-01 beta)
 - https://github.com/voideditor/void
   
 ## Languages
-- TypeScript
-- JavaScript
-- HTML/CSS
+- Any
   
 ## Extensible
 - Yes
@@ -45,7 +43,7 @@ Void is an open-source, privacy-focused AI code editor that forks the Visual Stu
 ## License
 - Apache-2.0
   
-## MCPSupport
+## MCP-Client
 - Yes
   
 ## Notes

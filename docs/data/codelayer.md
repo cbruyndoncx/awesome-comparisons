@@ -13,12 +13,7 @@ codelayer-0.1.0-20251003-140552-nightly (2025-10-03)
 - https://github.com/humanlayer/humanlayer
   
 ## Languages
-- TypeScript
-- Go
-- JavaScript
-- CSS
-- Rust
-- Shell
+- Any
 
 ## Extensible
 - Yes
@@ -48,7 +43,7 @@ CodeLayer is an open-source, keyboard-first IDE and orchestration layer for AI c
 ## License
 - Apache-2.0
 
-## MCPSupport
+## MCP-Client
 
 ## Notes
 - Focus: orchestration of AI agents rather than just code completion — useful for teams working on large, legacy, or complex systems.

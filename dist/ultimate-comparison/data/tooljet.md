@@ -12,7 +12,8 @@ v (2025-10-19)
 - https://github.com/ToolJet/ToolJet
 
 ## Languages
-- TypeScript / JavaScript
+- TypeScript
+- JavaScript
 - Python
 - SQL
 
@@ -49,7 +50,7 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
 ## License
 - Apache-2.0
 
-## MCPSupport
+## MCP-Client
 - No
 
 ## Notes

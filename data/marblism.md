@@ -4,6 +4,9 @@ AI platform offering role-specific "AI Employees" for business automation and an
 ## Version
 v (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [4] Strong for SMBs, solopreneurs and rapid prototyping
 - [3] Generated code often needs manual hardening for production
@@ -12,9 +15,8 @@ v (2025-10-19)
 - 
 
 ## Languages
-- JavaScript / TypeScript
-- React
-- Node.js
+- JavaScript
+- TypeScript
 
 ## Extensible
 - Yes
@@ -44,7 +46,7 @@ Marblism provides two complementary offerings: (1) a suite of role-specific "AI 
 ## License
 - Proprietary
 
-## MCPSupport
+## MCP-Client
 - No
 
 ## Notes

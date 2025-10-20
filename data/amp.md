@@ -46,7 +46,7 @@ Amp is designed as an "agentic" coding assistant that can autonomously reason th
 ## License
 
 
-## MCPSupport
+## MCP-Client
 - Yes
 
 ## Notes

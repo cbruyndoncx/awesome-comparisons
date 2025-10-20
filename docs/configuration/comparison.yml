@@ -229,8 +229,8 @@ criteria:
         '':
           color: '#ffff00'
           backgroundColor: 'hsl(240, 100%, 70%)'
-  - MCPSupport:
-      name: MCPSupport
+  - MCP-Client:
+      name: MCP-Client
       type: LABEL
       search: true
       table: true

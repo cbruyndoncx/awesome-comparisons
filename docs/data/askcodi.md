@@ -10,13 +10,7 @@
 ## Repository
 
 ## Languages
-- Python
-- JavaScript / TypeScript
-- Java
-- SQL
-- Rust
-- Ruby
-- Kotlin
+- Any
 ## Extensible
 - Yes
   - Plugin / "Codi Apps" modular tools model
@@ -38,7 +32,7 @@ AskCodi is an AI-powered coding assistant and OpenAI-compatible LLM gateway deve
 - No
 ## License
 Proprietary
-## MCPSupport
+## MCP-Client
 - No
 ## Notes
 - Company/platform: positioned as a developer-focused toolkit (modular "Codi Apps") and an OpenAI-compatible API gateway that supports multiple model providers.  

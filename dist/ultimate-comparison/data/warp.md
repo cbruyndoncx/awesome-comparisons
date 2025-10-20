@@ -12,8 +12,7 @@ v2.0 (2025-09-xx)
 - https://www.warp.dev
 
 ## Languages
-- Rust
-- TypeScript
+- Any
 
 ## Extensible
 - Yes
@@ -45,7 +44,7 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 ## License
 - Proprietary
 
-## MCPSupport
+## MCP-Client
 - Yes
   - Warp supports selecting/modeling different hosted LLM providers and includes enterprise features like zero-data-retention guarantees and proxying; it exposes autonomy controls for when agents may call MCP servers without human approval.
 

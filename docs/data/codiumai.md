@@ -34,7 +34,7 @@ CodiumAI (rebranded to Qodo) is an AI-first code quality platform focused on aut
   - Several components and tools are published as open-source (PR-Agent and code examples), while the core hosted product and some models/features are proprietary.
 ## License
 
-## MCPSupport
+## MCP-Client
 
 ## Notes
 - Rebranded to Qodo in 2024; platform and docs may be under either the Codium AI or Qodo name.

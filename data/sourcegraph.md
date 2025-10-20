@@ -4,6 +4,9 @@ A code intelligence platform for universal code search, navigation, large-scale 
 ## Version
 vN/A (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [5] Powerful multi-repo code search and navigation at scale
 - [4] Strong enterprise features (batch changes, code insights, self-hosting)
@@ -14,7 +17,7 @@ vN/A (2025-10-19)
   - note: core repo made private Aug 2024; public snapshot available historically)
 
 ## Languages
-- Any (heavy language support: JavaScript/TypeScript, Python, Java, Go, C/C++, C#, Ruby, PHP, Rust, SQL, Shell, etc.)
+- Any
 
 ## Extensible
 - Yes
@@ -48,9 +51,10 @@ Sourcegraph is a platform that provides precise, scalable code search and code n
   - Historically Apache 2.0 (OSS) until 2023; in 2023–2024 Sourcegraph moved large portions of the project to an enterprise/proprietary license and in Aug 2024 made the core repository private. Some related projects (e.g., parts of Cody or community tooling) remain open source.
 
 ## License
-- Proprietary / Sourcegraph Enterprise (formerly Apache 2.0 for much of the codebase prior to relicensing)
+- Proprietary
+  - Sourcegraph Enterprise (formerly Apache 2.0 for much of the codebase prior to relicensing)
 
-## MCPSupport
+## MCP-Client
 - Yes
   - Cody and the AI integrations support bringing multi-repo and file-context into model prompts (context-enhanced chat); suitable for advanced, model-backed code assistance workflows.
 

@@ -4,6 +4,9 @@ A cloud-hosted, agentic development environment experiment from GitHub (technica
 ## Version
 Archived v0.1 (2025-05-30)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [4] Innovative workflow and planning UX (spec + editable plan)
 - [3] Integration with Codespaces and VS Code is useful
@@ -43,7 +46,7 @@ GitHub Copilot Workspace was an experimental "agentic" IDE hosted by GitHub that
 ## License
 - Proprietary
 
-## MCPSupport
+## MCP-Client
 - No
 
 ## Notes

@@ -8,7 +8,16 @@ v2.7B (2022-03-01)
 ## Repository
 - https://github.com/VHellendoorn/Code-LMs
 ## Languages
-- 12 programming languages (includes: C, C++, Python, JavaScript, Java, Go, PHP, Ruby, C#, and others)
+- C/C++
+- Python
+- JavaScript
+- Java
+- Go
+- PHP
+- Ruby
+- C#
+- Other
+  - 12 in total
 ## Extensible
 - Yes
 ## Description
@@ -30,7 +39,7 @@ PolyCoder was released in multiple sizes (160M, 405M and 2.7B parameters). The 2
 - Yes
 ## License
 - MIT
-## MCPSupport
+## MCP-Client
 - No
 ## Notes
 - Trained on ~249GB of code; primary claim-to-fame is strong C-code performance compared to models available in 2022.

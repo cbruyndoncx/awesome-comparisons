@@ -2,15 +2,16 @@
 RooCode (formerly Roo Cline) is an AI-powered VS Code extension that acts as an autonomous coding assistant with customizable personas (modes), multi-model support, and project-level automation.
 ## Version
 v3.3 (2024-10-18)
+## Classification 
+- Code/Editor
+
 ## Rating
 - [4] Strong multi-mode assistant with deep VS Code integration
 - [3] Experimental parts (VS Code LLM API, some provider integrations) can be rough
 ## Repository
 - https://github.com/RooCodeInc/Roo-Code
 ## Languages
-- TypeScript
-- JavaScript
-- Python
+- Any
 ## Extensible
 - Yes
   - VS Code extension architecture, custom modes, MCP (Model Context Protocol) servers, and provider/plugin integrations
@@ -34,7 +35,7 @@ RooCode is designed to be more than an autocomplete plugin — it functions as a
 - Yes
 ## License
 - Apache-2.0 
-## MCPSupport
+## MCP-Client
 - Yes
   - MCP servers extend RooCode beyond the editor to interact with Docker, databases, browsers and other external tooling.
 ## Notes

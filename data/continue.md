@@ -4,6 +4,9 @@ Open-source AI coding assistant focused on developer control, model choice, and 
 ## Version
 v (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [4] Strong customization and model choice
 - [4] Good IDE & CLI coverage (VS Code, JetBrains, terminal)
@@ -13,10 +16,7 @@ v (2025-10-19)
 - https://github.com/continuedev/continue
 
 ## Languages
-- TypeScript
-- JavaScript
-- Shell
-- Python (integrations / tooling)
+- Any
 
 ## Extensible
 - Yes
@@ -52,7 +52,7 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
 ## License
 - Apache-2.0
 
-## MCPSupport
+## MCP-Client
 - Yes
   - Integrates with Model Context Protocols for adding context providers (GitHub, Jira, etc.) and usable via the hub.
 

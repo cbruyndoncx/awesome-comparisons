@@ -4,6 +4,9 @@ No-code platform to build embeddable AI-powered micro‑tools (calculators, gene
 ## Version
 v1.0 (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [4] Fast no-code builder for marketers and small teams
 - [3] Limited for advanced/custom full‑stack apps
@@ -44,7 +47,7 @@ Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you c
 ## License
 - Proprietary
 
-## MCPSupport
+## MCP-Client
 - No
 
 ## Notes

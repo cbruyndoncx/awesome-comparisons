@@ -4,6 +4,9 @@ AI-first code completion assistant focused on very large context windows, low-la
 ## Version
 v (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [5] Performance & speed (sub-300ms completion latency in reported benchmarks)
 - [4] Context awareness & long-range understanding (very large context window enables whole-repo reasoning)
@@ -44,7 +47,7 @@ Supermaven is an AI-powered code completion and developer-assistant platform bui
 ## License
 - Proprietary
 
-## MCPSupport
+## MCP-Client
 - No
 
 ## Notes

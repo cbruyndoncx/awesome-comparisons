@@ -9,11 +9,7 @@ vN/A (integrated into Amazon Q Developer on 2024-04-30)
 ## Repository
 - https://aws.amazon.com/codewhisperer/ [service, no public repo]
 ## Languages
-- Python
-- JavaScript / TypeScript
-- Java
-- C#
-- C++
+- Any
 ## Extensible
 - Yes
   - Via the AWS IDE Toolkit / IDE extensions and integrations
@@ -36,8 +32,8 @@ Amazon CodeWhisperer is AWS's ML-powered, in-IDE coding assistant that provides 
 ## Opensource
 - No
 ## License
-- Proprietary (AWS service)
-## MCPSupport
+- Proprietary
+## MCP-Client
 - No
 ## Notes
 - Reference tracking & license surfacing: when generated code closely matches training examples, CodeWhisperer surfaces links and license information so developers can make informed reuse decisions.

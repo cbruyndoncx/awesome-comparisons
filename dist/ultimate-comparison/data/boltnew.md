@@ -9,7 +9,7 @@ N/A (2025-10-19)
 - [3] Limited offline / local-only workflows
 
 ## Repository
-- 
+- N/A
 
 ## Languages
 - JavaScript
@@ -49,7 +49,7 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
 ## License
 - Proprietary
 
-## MCPSupport
+## MCP-Client
 - No
 
 ## Notes

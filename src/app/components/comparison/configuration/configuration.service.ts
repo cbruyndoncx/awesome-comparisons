@@ -154,8 +154,38 @@ export class ConfigurationService {
                 }
                 return criteria;
             });
+
+            const idCriteria = processedCriteria.find(criteria => criteria.id === 'id');
+            if (idCriteria) {
+                idCriteria.table = true;
+            }
+
+            const shortCriteria = processedCriteria.find(criteria => criteria.id === 'ShortDescription');
+            if (shortCriteria) {
+                shortCriteria.table = true;
+                if (isNullOrUndefined(shortCriteria.order) || shortCriteria.order === '') {
+                    shortCriteria.order = '1';
+                }
+                if (!shortCriteria.name || shortCriteria.name.trim().length === 0 || shortCriteria.name === 'ShortDescription') {
+                    shortCriteria.name = 'Short Description';
+                }
+            }
             this.configuration.criteria = ConfigurationService.sortCriteriaByOrder(processedCriteria);
-            this.tableColumns = this.configuration.criteria.filter(criteria => criteria.table).map(criteria => criteria.id);
+            const tableCriteria = this.configuration.criteria.filter(criteria => criteria.table);
+            const primaryColumns: Array<string> = [];
+            const remainingColumns: Array<string> = [];
+
+            tableCriteria.forEach(criteria => {
+                if (criteria.id === 'id') {
+                    primaryColumns[0] = criteria.id;
+                } else if (criteria.id === 'ShortDescription') {
+                    primaryColumns[1] = criteria.id;
+                } else {
+                    remainingColumns.push(criteria.id);
+                }
+            });
+
+            this.tableColumns = primaryColumns.filter(Boolean).concat(remainingColumns);
             this.criteria = this.configuration.criteria.filter(criteria => criteria.search);
             this.criteriaValues = this.criteria.map(criteria =>
                 Array.from(criteria.values).map(([key, value]) => {
@@ -176,10 +206,10 @@ export class ConfigurationService {
             ConfigurationService.data.dataElements = ConfigurationService.data.dataElements.map(dataElement => {
                     // Build html strings and labelArrays
                     dataElement.html = ConfigurationService.getHtml(
-                        this.citation, dataElement.description
+                        this.citation, dataElement.shortDescription
                     );
                     dataElement.latex = ConfigurationService.getLatex(
-                        dataElement.description
+                        dataElement.shortDescription
                     );
                     dataElement.criteriaData = Array.from(dataElement.criteriaData).map(([key, criteriaData]) => {
                         const criteria = this.configuration.getCriteria(criteriaData.name);

@@ -48,7 +48,7 @@ Tabby is a self-hosted, open-source AI coding assistant that provides code compl
 ## License
 - Apache License 2.0
 
-## MCPSupport
+## MCP-Client
 - Yes
 
 ## Notes

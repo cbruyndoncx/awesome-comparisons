@@ -8,8 +8,7 @@ Codex CLI is an open-source command-line interface for interacting with OpenAI's
 ## Repository
 - https://github.com/openai/codex
 ## Languages
-- Python
-- JavaScript
+- Any
 ## Extensible
 - Yes (via provider gateways and config)
 ## Description
@@ -32,7 +31,7 @@ Codex CLI provides a lightweight, terminal-first agent that lets developers read
 - Yes
 ## License
 - MIT
-## MCPSupport
+## MCP-Client
 - Yes
 ## Notes
 - Supports multiple model providers (OpenAI, OpenRouter, Gemini, Ollama, Mistral, DeepSeek, xAI, Groq and other OpenAI-compatible endpoints) via configuration and gateways.

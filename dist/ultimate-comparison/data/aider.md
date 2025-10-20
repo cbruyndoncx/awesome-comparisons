@@ -31,7 +31,7 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 - Yes
 ## License
 - MIT
-## MCPSupport
+## MCP-Client
 - No
 ## Notes
 - BYOK model: users supply API keys for whichever LLM provider they choose (OpenAI, Anthropic, DeepSeek, etc.), allowing control over costs and provider choice.

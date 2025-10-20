@@ -5,7 +5,7 @@
 ## Rating
 
 ## Repository
-- (no official public repository discovered for cogram.ai; community/test repos reference the package)
+-
 
 ## Languages
 - Python
@@ -36,7 +36,7 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
 
 ## License
 
-## MCPSupport
+## MCP-Client
 
 ## Notes
 - Two different Cogram products exist: cogram.ai (coding assistant) and cogram.com (construction / meeting docs). Make sure to confirm which product you mean.

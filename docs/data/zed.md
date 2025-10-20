@@ -49,7 +49,7 @@ Zed is a modern code editor engineered for low latency and smooth UX. It renders
 - GPL
   - GPL-3.0 (core editor), AGPL for certain server/collab components; other crates/components may use Apache/MIT for specific parts
   
-## MCPSupport
+## MCP-Client
 - Yes
   - MCP servers are integrated similar to other extensions like e.g. theming
   

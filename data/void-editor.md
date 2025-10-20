@@ -4,6 +4,9 @@ Open-source, privacy-first AI code editor built as a fork of Visual Studio Code 
 ## Version
 v0.1 (2025-01 beta)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [4] Strong privacy and model-flexibility design
 - [4] Rapidly evolving; Beta early UX rough edges
@@ -12,9 +15,7 @@ v0.1 (2025-01 beta)
 - https://github.com/voideditor/void
   
 ## Languages
-- TypeScript
-- JavaScript
-- HTML/CSS
+- Any
   
 ## Extensible
 - Yes
@@ -45,7 +46,7 @@ Void is an open-source, privacy-focused AI code editor that forks the Visual Stu
 ## License
 - Apache-2.0
   
-## MCPSupport
+## MCP-Client
 - Yes
   
 ## Notes

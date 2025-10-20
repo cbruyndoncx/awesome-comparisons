@@ -12,9 +12,8 @@ v (2025-10-19)
 - 
 
 ## Languages
-- JavaScript / TypeScript
-- React
-- Node.js
+- JavaScript
+- TypeScript
 
 ## Extensible
 - Yes
@@ -44,7 +43,7 @@ Marblism provides two complementary offerings: (1) a suite of role-specific "AI 
 ## License
 - Proprietary
 
-## MCPSupport
+## MCP-Client
 - No
 
 ## Notes

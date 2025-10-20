@@ -4,6 +4,9 @@ Eclipse Theia: a modular, extensible, open-source IDE framework for desktop and 
 ## Version
 v1.65 (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [5] Strong open-source, vendor-neutral alternative to proprietary IDEs
 - [4] Highly extensible and VS Code extension compatible (via Open VSX)
@@ -13,10 +16,7 @@ v1.65 (2025-10-19)
 - https://github.com/eclipse-theia/theia
 
 ## Languages
-- TypeScript
-- JavaScript
-- HTML/CSS
-- JSON
+- Any
 
 ## Extensible
 - Yes
@@ -49,9 +49,10 @@ Eclipse Theia is an open-source, modular IDE framework maintained under the Ecli
 - Yes
 
 ## License
-- Eclipse Public License 2.0 (EPL-2.0)
+- EPL-2.0
+  - Eclipse Public License 2.0 (EPL-2.0)
 
-## MCPSupport
+## MCP-Client
 - Yes
 
 ## Notes

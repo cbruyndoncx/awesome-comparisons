@@ -4,6 +4,9 @@ Amazon Q Developer (sometimes shortened to "Amazon Q") is AWS's developer-facing
 ## Version
 vN/A (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [4] IDE & AWS integration (deep integration with AWS services and IDE toolchains)
 - [4] Productivity (context-aware chat, inline suggestions, code actions, and docs generation)
@@ -14,14 +17,7 @@ vN/A (2025-10-19)
 - https://aws.amazon.com/q/ (service documentation)
 
 ## Languages
-- Python
-- JavaScript / TypeScript
-- Java
-- C#
-- C++
-- Go
-- Ruby
-
+- Any
 ## Extensible
 - Yes
   - Supports Model Context Protocol (MCP) connections and a plugin/alias system for third-party tooling (monitoring, security providers)
@@ -59,9 +55,9 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
 - No
 
 ## License
-- Proprietary (AWS service)
+- Proprietary
 
-## MCPSupport
+## MCP-Client
 - Yes
   - Notes: Supports Model Context Protocol / MCP server connections to bring external context into conversations and agent workflows.
 

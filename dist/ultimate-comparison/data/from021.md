@@ -44,7 +44,7 @@ The platform emphasizes a structured process (uses MoSCoW prioritization) and ta
 ## License
 - Proprietary
 
-## MCPSupport
+## MCP-Client
 - No
 
 ## Notes

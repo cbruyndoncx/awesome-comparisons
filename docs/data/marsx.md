@@ -9,15 +9,11 @@ v (2024)
 - [4] Active open-source presence but ecosystem maturity varies by microapp
   
 ## Repository
-- https://github.com/MarsX-dev
 - https://github.com/MarsX-dev/devhunt
 
 ## Languages
 - JavaScript
 - TypeScript
-- React
-- Vue
-- Node.js
 
 ## Extensible
 - Yes
@@ -46,9 +42,10 @@ MarsX is an open-source development platform and marketplace that combines AI as
 - Yes
 
 ## License
-- Core engine: MIT (varies by individual micro-app)
+- MIT
+  - Core engine: MIT (varies by individual micro-app)
 
-## MCPSupport
+## MCP-Client
 
 ## Notes
 - Core strengths: dramatic reduction in boilerplate (claims up to ~90% less code), modular micro-app composition, and an AI-assisted workflow that learns from micro-app usage.

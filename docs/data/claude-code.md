@@ -30,8 +30,8 @@ The tool is focused on large-context reasoning, multi-file code transformations,
 ## Opensource
 - No
 ## License
-- Proprietary (Anthropic)
-## MCPSupport
+- Proprietary
+## MCP-Client
 - Yes
 ## Notes
 - Models: Offers multiple model tiers (commonly referenced as Opus (highest capability), Sonnet (workhorse), and Haiku (cost-efficient)). Opus is aimed at deep reasoning and large refactors; Sonnet balances cost and capability; Haiku is optimized for high-volume, lower-complexity tasks.

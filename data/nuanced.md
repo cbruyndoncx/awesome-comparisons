@@ -4,6 +4,9 @@ Nuanced provides compiler-grade code intelligence (call graphs, symbols, types, 
 ## Version
 v— (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 
 
@@ -14,7 +17,8 @@ v— (2025-10-19)
 - TypeScript
 - JavaScript
 - Python
-- (advertised: total support for 8 languages; TypeScript and Python are prominent)
+- Other 
+  - advertised: total support for 8 languages; TypeScript and Python are prominent
 
 ## Extensible
 - Yes
@@ -45,7 +49,7 @@ Nuanced is an MCP (Model Context Protocol) server and code-intelligence layer th
 ## License
 
 
-## MCPSupport
+## MCP-Client
 - Yes
   - Nuanced is explicitly implemented as an MCP server to deliver structured code context to LLM-based agents.
 

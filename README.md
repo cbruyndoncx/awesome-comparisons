@@ -48,7 +48,7 @@ A `comparison.yml` has following attributes:
   ![Details header construction](https://cdn.rawgit.com/ultimate-comparisons/ultimate-comparison-BASE/85cc1e93/docs/images/detailsheader.png)
 - `body`: The body of the details page
     - `title`: The heading of the used field (1)
-    - `bodyRef`: The field to use as content of the body (2)
+    - `bodyRef`: The field to use as content of the body (2). The default configuration points to `ShortDescription`, which is populated from the first paragraph of each comparison entry.
   ![Details body construction](https://cdn.rawgit.com/ultimate-comparisons/ultimate-comparison-BASE/85cc1e93/docs/images/detailsbody.png)
 - `citation`: Configures the citation of sources
     - `csl`: The style of the citation as [bibtex](http://www.bibtex.org/) class. Example classes: https://github.com/citation-style-language/styles
@@ -72,6 +72,8 @@ A `comparison.yml` has following attributes:
     - `placeholder`: Text shown in the search bar if it is empty (4)
     - `rangeSearch`: Changes search to allow searching for number ranges. It allows searching for numbers and ranges of numbers. Only supports integers. (5)
     ![Various elements of criteria on the page](https://cdn.rawgit.com/ultimate-comparisons/ultimate-comparison-BASE/85cc1e93/docs/images/variouselements.png)
+
+The framework reserves the first table column for the `Name`/`id` field and always places `ShortDescription` as the second column. Remaining table columns follow their configured `order` values.
 
 ### Define comparison elements
 

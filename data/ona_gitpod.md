@@ -4,6 +4,9 @@ Cloud development environments reimagined as autonomous AI engineering platform.
 ## Version
 v1.0 (2025-09-01)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [4] Strong enterprise features and security posture
 - [5] Highly productive autonomous agents for routine engineering tasks
@@ -12,9 +15,7 @@ v1.0 (2025-09-01)
 - https://github.com/gitpod-io/gitpod
   
 ## Languages
-- TypeScript
-- Go
-- Shell
+- Any
 
 ## Extensible
 - Yes
@@ -43,9 +44,10 @@ Ona is the rebrand and strategic evolution of Gitpod into an AI-first software e
   - Core Gitpod components remain open-source; some agent and enterprise-grade features are commercial/proprietary.
 
 ## License
-- MIT (core open-source components)
+- MIT 
+  - core open-source components
 
-## MCPSupport
+## MCP-Client
 - Yes
 
 ## Notes

@@ -4,6 +4,9 @@ Mistral Code is an enterprise-focused AI coding assistant from Mistral AI that b
 ## Version
 v1 (2025-06-04)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [5] Strong enterprise focus with on-prem and air-gapped deployment options
 - [4] Broad language coverage (80+ languages) and multi-model architecture
@@ -12,7 +15,7 @@ v1 (2025-06-04)
 - 
 
 ## Languages
-- 80+ programming languages (notably: Python, JavaScript/TypeScript, Java, Go, C#, C/C++, Rust, Ruby, PHP, SQL, Shell)
+- Any
 
 ## Extensible
 - Yes
@@ -48,7 +51,7 @@ Mistral Code is a packaged AI developer assistant designed for enterprise adopti
 ## License
 - Proprietary
 
-## MCPSupport
+## MCP-Client
 - Yes
   - Assuming continue.dev functionality is kept - doublecheck
 

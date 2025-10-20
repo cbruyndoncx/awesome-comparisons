@@ -8,9 +8,7 @@ v3.3 (2024-10-18)
 ## Repository
 - https://github.com/RooCodeInc/Roo-Code
 ## Languages
-- TypeScript
-- JavaScript
-- Python
+- Any
 ## Extensible
 - Yes
   - VS Code extension architecture, custom modes, MCP (Model Context Protocol) servers, and provider/plugin integrations
@@ -34,7 +32,7 @@ RooCode is designed to be more than an autocomplete plugin — it functions as a
 - Yes
 ## License
 - Apache-2.0 
-## MCPSupport
+## MCP-Client
 - Yes
   - MCP servers extend RooCode beyond the editor to interact with Docker, databases, browsers and other external tooling.
 ## Notes

@@ -14,7 +14,7 @@ N/A (2025-10-19)
 - JavaScript
 - HTML
 - CSS
-- SQL (WP queries)
+- SQL
 ## Extensible
 - Yes
   - Offers specialized "modes" for plugins (ACF, Elementor, WooCommerce, Gravity Forms, etc.) and an API for integration
@@ -35,7 +35,7 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
 - No
 ## License
 - Proprietary
-## MCPSupport
+## MCP-Client
 - No
 ## Notes
 - Pricing tiers (public info at time of research):

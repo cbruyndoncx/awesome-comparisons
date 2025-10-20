@@ -9,12 +9,14 @@ unknown (2025-10-19)
 - (no public repository found)
 ## Languages
 - Python
-- JavaScript / TypeScript
+- JavaScript
+- TypeScript
 - Java
 - Go
 - C#
 - Ruby
-- Other common languages (multi-language support via static analysis and AST parsing)
+- Other
+  - Other common languages (multi-language support via static analysis and AST parsing)
 ## Extensible
 - Yes
   - Plugins / integrations for IDEs and VCS platforms
@@ -39,7 +41,7 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
 - No
 ## License
 - Proprietary
-## MCPSupport
+## MCP-Client
 - No
 ## Notes
 - Key features:

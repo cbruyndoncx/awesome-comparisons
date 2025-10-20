@@ -18,7 +18,8 @@ Archived (2022-12-31)
 - JavaScript / TypeScript
 - Java
 - Go
-- Many others via editor plugins
+- Other
+  - Many others via editor plugins
 
 ## Extensible
 - Yes
@@ -50,7 +51,7 @@ Kite was an early AI-assisted coding tool (founded 2014) that provided context-a
 ## License
 - Mixed / see repository
 
-## MCPSupport
+## MCP-Client
 - No
 
 ## Notes

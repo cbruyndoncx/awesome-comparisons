@@ -4,6 +4,9 @@ AI-powered code completion and developer assistant focused on privacy and enterp
 ## Version
 v(enterprise/cloud) (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [4] Strong for enterprises that require data privacy and on-prem deployment
 - [3] Good code-completion quality; real-world accuracy varies by codebase
@@ -13,14 +16,16 @@ v(enterprise/cloud) (2025-10-19)
 
 ## Languages
 - Python
-- JavaScript / TypeScript
+- JavaScript
+- TypeScript
 - Java
 - C#
 - Go
 - Rust
 - PHP
-- C / C++
-- Many other popular languages (wide IDE/language support)
+- C/C++
+- Other
+  - Many other popular languages (wide IDE/language support)
 
 ## Extensible
 - Yes
@@ -49,7 +54,7 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
 ## License
 - Proprietary
 
-## MCPSupport
+## MCP-Client
 
 ## Notes
 - Strengths: strong privacy and governance features (SSO/SAML, SCIM, role-based access controls), flexible deployment (cloud, private cloud/VPC, on-prem, air-gapped), broad IDE support (VS Code, JetBrains IDEs, Visual Studio), and organization-aware completions that learn project patterns.

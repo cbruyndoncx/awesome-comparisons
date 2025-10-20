@@ -4,6 +4,9 @@ An AI-powered product definition platform that helps teams convert ideas into im
 ## Version
 v (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [4] Strong for product managers and founders who need fast, structured PRDs
 - [3] May be less suitable for engineering-first teams that require deep technical customization
@@ -44,7 +47,7 @@ The platform emphasizes a structured process (uses MoSCoW prioritization) and ta
 ## License
 - Proprietary
 
-## MCPSupport
+## MCP-Client
 - No
 
 ## Notes

@@ -2,6 +2,9 @@
 Cline is an open-source AI coding assistant implemented as a Visual Studio Code extension that provides file editing, terminal execution, browser automation, and customizable tool integrations to help developers perform multi-step development tasks with a human-in-the-loop workflow.
 ## Version
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [5] Strong AI-assisted workflows and tool integrations
 - [4] Requires external model/API keys (BYOK) which gives flexibility but adds setup
@@ -9,7 +12,7 @@ Cline is an open-source AI coding assistant implemented as a Visual Studio Code 
 ## Repository
 - https://github.com/cline/cline
 ## Languages
-- Any (works across languages supported by VS Code; commonly used with JavaScript/TypeScript, Python, Java, Go, etc.)
+- Any 
 ## Extensible
 - Yes
   - VS Code extension plus MCP (Model Context Protocol) support for custom tools
@@ -30,7 +33,7 @@ Cline is designed to act as a development partner rather than a simple autocompl
 - Yes
 ## License
 - MIT
-## MCPSupport
+## MCP-Client
 - Yes
 ## Notes
 - Supports multiple model providers (Anthropic Claude, OpenAI, Google Gemini, AWS Bedrock, and local hosts via Ollama/LM Studio).

@@ -4,6 +4,9 @@
 ## Version
 v1.31.3 (2025-07-??)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [5] Excellent for rapid full-stack scaffolding and deployment
 - [4] Strong engineering UX; some limitations around custom model choices and enterprise integrations
@@ -45,7 +48,7 @@ The default generated stacks commonly include React on the frontend and Fastify 
 ## License
 - Apache-2.0
 
-## MCPSupport
+## MCP-Client
 
 ## Notes
 - Core workflow: user supplies a prompt (CLI or web UI) → agent generates full codebase → creates GitHub repository → provisions DB & auth → runs tests → deploys frontend and backend to live URL.

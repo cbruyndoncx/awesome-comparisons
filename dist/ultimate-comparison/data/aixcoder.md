@@ -38,7 +38,7 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
 
 ## License
 
-## MCPSupport
+## MCP-Client
 
 ## Notes
 - Offline/local-first: One of the product's main selling points is the ability to run a quantized model locally to avoid sending source code to the cloud — appealing for privacy-sensitive and regulated environments.

@@ -10,9 +10,8 @@ A lightweight open-source AI developer agent for generating small projects and p
 - https://github.com/smol-ai/developer
   
 ## Languages
-- Python (tooling)
-- JavaScript (target examples)
-- Any (can generate code in many languages via the underlying LLM)
+- Any
+  
 ## Extensible
 - Yes
 
@@ -42,7 +41,7 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
 
 ## License
 
-## MCPSupport
+## MCP-Client
 
 ## Notes
 - Core value: whole-program synthesis — Smol focuses on producing small, coherent applications from a single natural-language specification rather than only single-file completions.

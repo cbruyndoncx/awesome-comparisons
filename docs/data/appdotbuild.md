@@ -45,7 +45,7 @@ The default generated stacks commonly include React on the frontend and Fastify 
 ## License
 - Apache-2.0
 
-## MCPSupport
+## MCP-Client
 
 ## Notes
 - Core workflow: user supplies a prompt (CLI or web UI) → agent generates full codebase → creates GitHub repository → provisions DB & auth → runs tests → deploys frontend and backend to live URL.

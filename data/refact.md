@@ -3,6 +3,9 @@ An open-source autonomous AI coding assistant with RAG-powered completions and i
 ## Version
 (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [5] Excellent context-aware completions and agent capabilities
 - [4] Strong IDE integrations (VS Code, JetBrains, Neovim)
@@ -12,17 +15,7 @@ An open-source autonomous AI coding assistant with RAG-powered completions and i
 - https://github.com/smallcloudai/refact
   
 ## Languages
-- Python
-- JavaScript / TypeScript
-- Java
-- Go
-- Rust
-- C / C++
-- C#
-- PHP
-- Ruby
-- Swift
-- (Supports 25+ languages)
+- Any
   
 ## Extensible
 - Yes
@@ -51,9 +44,9 @@ Refact.ai is an open-source AI coding assistant and autonomous engineering agent
 - Yes
 
 ## License
-- BSD 3-Clause
+- BSD-3
 
-## MCPSupport
+## MCP-Client
 - 
 
 ## Notes

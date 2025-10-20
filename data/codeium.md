@@ -8,7 +8,7 @@ vN/A (2025-10-19)
 ## Repository
 - 
 ## Languages
-- 70+ (wide language coverage; common web, backend, data-science, and scripting languages)
+- Any
 ## Extensible
 - Yes
   - Extensible via IDE plugins and an AI-native IDE (Windsurf) with agent capabilities
@@ -32,7 +32,7 @@ Codeium is an AI coding assistant that provides context-aware autocomplete, a co
 - No
 ## License
 - Proprietary / Closed-source
-## MCPSupport
+## MCP-Client
 - No
 ## Notes
 - Windsurf IDE and the Cascade agent distinguish Codeium from many inline-only assistants by enabling multi-file planning and larger-scope refactors.

@@ -11,11 +11,7 @@ vN.N (yyyy-mm-dd)
 
 
 ## Languages
-- Python
-- JavaScript / TypeScript
-- Java
-- (additional languages supported via integrations and multi-language context)
-
+- Any
 ## Extensible
 - Yes
   - Plugins / IDE extensions (VS Code, JetBrains, Vim/Neovim)
@@ -47,7 +43,7 @@ Augment Code is an AI-first development platform built to help professional engi
 ## License
 - Proprietary
 
-## MCPSupport
+## MCP-Client
 - Yes
 
 ## Notes

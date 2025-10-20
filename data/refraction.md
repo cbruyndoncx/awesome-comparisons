@@ -4,6 +4,9 @@ A small, practical AI assistant for developers focused on refactoring, test gene
 ## Version
 (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [4] Code generation & refactoring quality
 - [4] Value for money (budget-friendly paid tier)
@@ -39,8 +42,9 @@ Refraction is a web-first AI development assistant (refraction.dev) which helps 
 - No
 
 ## License
-
-## MCPSupport
+- Proprietary
+  
+## MCP-Client
 
 ## Notes
 - Pricing: consumer/pro plan pricing reported in public materials at roughly $8/month for the Pro (unlimited generations) tier; Team and Enterprise tiers are available with additional collaboration, billing and SSO/SCIM/audit features.

@@ -40,7 +40,7 @@ FauxPilot is an open-source code-completion server designed to run on-premises o
 ## License
 - MIT
 
-## MCPSupport
+## MCP-Client
 - No
 
 ## Notes

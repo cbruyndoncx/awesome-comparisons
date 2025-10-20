@@ -44,7 +44,7 @@ Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you c
 ## License
 - Proprietary
 
-## MCPSupport
+## MCP-Client
 - No
 
 ## Notes

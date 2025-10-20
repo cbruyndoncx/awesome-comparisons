@@ -8,13 +8,7 @@ v1 (2023-08)
 ## Repository
 - https://github.com/facebookresearch/CodeLlama
 ## Languages
-- Python
-- JavaScript / TypeScript
-- C++
-- Java
-- Go
-- Rust
-- Many other popular languages (multi-language training)
+- Any
 ## Extensible
 - Yes
 
@@ -42,7 +36,7 @@ Code Llama is Meta's open-source family of large language models optimized for c
 ## License
 - Meta / Code Llama license (permits research and commercial use — see repository for exact terms)
 
-## MCPSupport
+## MCP-Client
 
 ## Notes
 - Variants: Code Llama-Instruct (better at following natural-language prompts) and Code Llama-Python (additional Python fine-tuning).

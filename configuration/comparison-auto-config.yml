@@ -1,5 +1,167 @@
 citations: []
 criteria:
+  - Languages:
+      type: LABEL
+      values:
+        '## Extensible':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        API:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        '## Description':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        (Limited) Python:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Other:
+          color: '#ffff00'
+          backgroundColor: 'hsl(285, 100%, 70%)'
+        Can analyze and work with other languages via dependency decompilation / semantic indexing; used in demos with Python and mixed stacks):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Other common languages (multi-language support via static analysis and AST parsing):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        HTML:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        CSS:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        JavaScript / TypeScript:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        JavaScript/TypeScript:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Support for other backend languages via templates and runtime options (examples include Go and Java in templates):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Web UI:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Node.js:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'YAML, JSON, Markdown, Text':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        C# / .NET:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Protocol Buffers:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Markdown / MDX:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        SCSS / LESS:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Many others via editor plugins:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'advertised: total support for 8 languages; TypeScript and Python are prominent':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        12 in total:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        React (frontend):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Node.js / Express (backend):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'SQLite, PostgreSQL':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        '80+ programming languages (Python, JavaScript, Java, C/C++, Go, Ruby, Rust, TypeScript, PHP, Shell, SQL, etc.)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Many other popular languages (wide IDE/language support):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        React:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Tailwind:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'Python, JavaScript/TypeScript, Go, Java, Ruby, C#, and most common programming languages (broad support via language-agnostic indexing)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        JavaScript / TypeScript (front-end embeds):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Python (integrations / data uploads):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+  - BYOK:
+      type: LABEL
+      values:
+        '## LocalOffline':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        '## FreeTrial':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        '## GitSupport':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(105, 100%, 70%)'
+        '## Terminal':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        '## Opensource':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(135, 100%, 70%)'
+        Not publicly documented:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        Uses API keys for model providers; supports configuring different gateways:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        'You can configure and use your own API keys and model endpoints, and switch between local/remote models.':
+          color: '#ffff00'
+          backgroundColor: 'hsl(255, 100%, 70%)'
+        'Supports configuring API keys/endpoints for OpenAI, Claude, Gemini, Mistral, Groq, Bing/Google search, Ollama, etc.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        N/A:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        'Gemini API keys and AI resources are provisioned as part of the workspace flow; explicit BYOK for model keys is not a first-class, user-driven workflow in the initial preview.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        'No public, general-purpose "bring your own key" option for the cloud-hosted Copilot service. Enterprise plans provide data controls and policy management but do not expose a documented BYOK for model keys as of 2025-10-19.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        'Supports multiple LLM providers (OpenAI, Anthropic/Claude, Groq) via configuration — effectively a vendor-agnostic/BYOK model.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        supports connecting your own model/provider credentials when desired:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        Supports private deployments and enterprise key management practices through on-prem/air-gapped setups:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        'Users can supply their own API keys for models (BYOK), enabling use with different model providers and preserving control over credentials.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        Sourcegraph Cloud does not publicly advertise a generic BYOK feature; however self-hosted deployments give organizations full control over their infrastructure and encryption boundaries.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        'Theia AI and integrations follow a bring-your-own-key / bring-your-own-model philosophy: you can configure external LLM providers or self-hosted models (e.g., Ollama, LlamaFile, hosted Anthropic/OpenAI keys) depending on deployment and data-control needs.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        Users provide their own API keys for third-party services and LLMs when configuring integrations.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        'Zed supports OpenAI-compatible providers and can be configured to use local LLM hosts (e.g., Ollama) so you can run models with your own keys or entirely offline.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
   - Extensible:
       type: LABEL
       values:
@@ -291,9 +453,6 @@ criteria:
         Supports local model execution and private/on-prem deployments. Offers VPC and air-gapped installation options for organizations with strict data residency and compliance requirements.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
-        '[Any additional details like Ollama as an indented unordered list item]':
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
         Theia can run locally as a desktop app or be self-hosted on-premise. Its AI integrations support local/offline models (where supported by the chosen model runtime) enabling air-gapped or privacy-sensitive deployments.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
@@ -543,192 +702,6 @@ criteria:
         Integrates with Git workflows; project-aware features and diagnostics help with common VCS tasks.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(300, 100%, 70%)'
-  - Languages:
-      type: LABEL
-      values:
-        JavaScript / TypeScript:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        C#:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        Kotlin:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        (additional languages supported via integrations and multi-language context):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        JavaScript/TypeScript:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        Python (limited support for server components):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        (Limited) Python:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        (can analyze and work with other languages via dependency decompilation / semantic indexing; used in demos with Python and mixed stacks):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        'Any (works across languages supported by VS Code; commonly used with JavaScript/TypeScript, Python, Java, Go, etc.)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        '20+ languages (examples): Python, JavaScript, Java, C/C++, Go, Rust, TypeScript, C#, PHP, Ruby, Kotlin, Swift, Shell, SQL, HTML/CSS, Lua, R':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        '70+ (wide language coverage; common web, backend, data-science, and scripting languages)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        (70+ total supported languages):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        CSS:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        Shell:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        Many other popular languages (multi-language training):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        Other common languages (multi-language support via static analysis and AST parsing):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        HTML:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        SQL (WP queries):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        Python (integrations / tooling):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        Shell scripting:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        'JavaScript / TypeScript (Next.js, React)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        Support for other backend languages via templates and runtime options (examples include Go and Java in templates):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        C/C++:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        Swift:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        Web UI:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        'Code export: Python, Node.js, Swift, Kotlin':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        C / C++:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        'YAML, JSON, Markdown, Text':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        Scala:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        C# / .NET:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        HTML / CSS / SCSS / LESS:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        GraphQL:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        Protocol Buffers:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        Markdown / MDX:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        Many others via editor plugins:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        React:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        Node.js:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        Vue:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        '80+ programming languages (notably: Python, JavaScript/TypeScript, Java, Go, C#, C/C++, Rust, Ruby, PHP, SQL, Shell)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        '(advertised: total support for 8 languages; TypeScript and Python are prominent)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        'TypeScript (primary), JavaScript, CSS/HTML for web UI':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        '12 programming languages (includes: C, C++, Python, JavaScript, Java, Go, PHP, Ruby, C#, and others)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        React (frontend):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        Node.js / Express (backend):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        'SQL (SQLite, PostgreSQL)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        (Supports 25+ languages):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        JavaScript / Node.js:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        Python (tooling):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        JavaScript (target examples):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        Any (can generate code in many languages via the underlying LLM):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        'Any (heavy language support: JavaScript/TypeScript, Python, Java, Go, C/C++, C#, Ruby, PHP, Rust, SQL, Shell, etc.)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        '80+ programming languages (Python, JavaScript, Java, C/C++, Go, Ruby, Rust, TypeScript, PHP, Shell, SQL, etc.)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        Many other popular languages (wide IDE/language support):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        JSON:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        TypeScript / JavaScript:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        HTML / CSS:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        TypeScript / JavaScript (React):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        CSS (Tailwind):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        'Python, JavaScript/TypeScript, Go, Java, Ruby, C#, and most common programming languages (broad support via language-agnostic indexing)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        JavaScript / TypeScript (front-end embeds):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        Python (integrations / data uploads):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
   - Terminal:
       type: LABEL
       values:
@@ -837,82 +810,7 @@ criteria:
         Built-in integrated terminal and task runner.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(30, 100%, 70%)'
-  - License:
-      type: LABEL
-      values:
-        Proprietary (AWS service):
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        Apache-2.0:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
-        Proprietary:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
-        GNU General Public License v3.0 (GPL-3.0):
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        Proprietary (Anthropic):
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        'Code: Apache-2.0':
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        'Model weights: released for academic research; commercial use requires application/approval (see repository for details)':
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        Proprietary / Closed-source:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
-        Meta / Code Llama license (permits research and commercial use — see repository for exact terms):
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        See repository for exact license:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
-        Proprietary (Google):
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        Proprietary (GitHub / Microsoft service terms):
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        'Functional Source License (FSL) / Fair Source (source-available, not MIT/Apache/GPL)':
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        Proprietary (JetBrains Service Terms / Product License):
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        Mixed / see repository:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
-        'Core engine: MIT (varies by individual micro-app)':
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        MIT (core open-source components):
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        BSD 3-Clause:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
-        Proprietary / Sourcegraph Enterprise (formerly Apache 2.0 for much of the codebase prior to relicensing):
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        BigCode-OpenRAIL / OpenRAIL-M (model card requires agreement on use):
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        Apache License 2.0:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
-        Eclipse Public License 2.0 (EPL-2.0):
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        GPL:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
-        'GPL-3.0 (core editor), AGPL for certain server/collab components; other crates/components may use Apache/MIT for specific parts':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-  - MCPSupport:
+  - MCP-Client:
       type: LABEL
       values:
         'Notes: Supports Model Context Protocol / MCP server connections to bring external context into conversations and agent workflows.':
@@ -948,54 +846,54 @@ criteria:
         MCP servers are integrated similar to other extensions like e.g. theming:
           color: '#0d0d0d'
           backgroundColor: 'hsl(30, 100%, 70%)'
-  - BYOK:
+  - License:
       type: LABEL
       values:
-        Not publicly documented:
+        GNU General Public License v3.0 (GPL-3.0):
           color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        Uses API keys for model providers; supports configuring different gateways:
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'Code: Apache-2.0':
           color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
-        'You can configure and use your own API keys and model endpoints, and switch between local/remote models.':
-          color: '#ffff00'
-          backgroundColor: 'hsl(255, 100%, 70%)'
-        'Supports configuring API keys/endpoints for OpenAI, Claude, Gemini, Mistral, Groq, Bing/Google search, Ollama, etc.':
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'Model weights: released for academic research; commercial use requires application/approval (see repository for details)':
           color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
-        N/A:
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Proprietary / Closed-source:
           color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        'Gemini API keys and AI resources are provisioned as part of the workspace flow; explicit BYOK for model keys is not a first-class, user-driven workflow in the initial preview.':
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Meta / Code Llama license (permits research and commercial use — see repository for exact terms):
           color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
-        'No public, general-purpose "bring your own key" option for the cloud-hosted Copilot service. Enterprise plans provide data controls and policy management but do not expose a documented BYOK for model keys as of 2025-10-19.':
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'Functional Source License (FSL) / Fair Source (source-available, not MIT/Apache/GPL)':
           color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
-        'Supports multiple LLM providers (OpenAI, Anthropic/Claude, Groq) via configuration — effectively a vendor-agnostic/BYOK model.':
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Mixed / see repository:
           color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
-        supports connecting your own model/provider credentials when desired:
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'Core engine: MIT (varies by individual micro-app)':
           color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
-        Supports private deployments and enterprise key management practices through on-prem/air-gapped setups:
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        core open-source components:
           color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
-        'Users can supply their own API keys for models (BYOK), enabling use with different model providers and preserving control over credentials.':
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Sourcegraph Enterprise (formerly Apache 2.0 for much of the codebase prior to relicensing):
           color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
-        Sourcegraph Cloud does not publicly advertise a generic BYOK feature; however self-hosted deployments give organizations full control over their infrastructure and encryption boundaries.:
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        BigCode-OpenRAIL / OpenRAIL-M (model card requires agreement on use):
           color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
-        'Theia AI and integrations follow a bring-your-own-key / bring-your-own-model philosophy: you can configure external LLM providers or self-hosted models (e.g., Ollama, LlamaFile, hosted Anthropic/OpenAI keys) depending on deployment and data-control needs.':
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Apache License 2.0:
           color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
-        Users provide their own API keys for third-party services and LLMs when configuring integrations.:
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        Eclipse Public License 2.0 (EPL-2.0):
           color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
-        'Zed supports OpenAI-compatible providers and can be configured to use local LLM hosts (e.g., Ollama) so you can run models with your own keys or entirely offline.':
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        GPL:
           color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
+          backgroundColor: 'hsl(315, 100%, 70%)'
+        'GPL-3.0 (core editor), AGPL for certain server/collab components; other crates/components may use Apache/MIT for specific parts':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
   - Opensource:
       type: LABEL
       values:

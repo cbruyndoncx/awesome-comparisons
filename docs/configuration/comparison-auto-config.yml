@@ -912,7 +912,7 @@ criteria:
         'GPL-3.0 (core editor), AGPL for certain server/collab components; other crates/components may use Apache/MIT for specific parts':
           color: '#0d0d0d'
           backgroundColor: 'hsl(330, 100%, 70%)'
-  - MCPSupport:
+  - MCP-Client:
       type: LABEL
       values:
         'Notes: Supports Model Context Protocol / MCP server connections to bring external context into conversations and agent workflows.':

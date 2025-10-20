@@ -47,8 +47,8 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
 ## Opensource
 - No
 ## License
-- Proprietary (GitHub / Microsoft service terms)
-## MCPSupport
+- Proprietary
+## MCP-Client
 - Yes
 ## Notes
 - Copilot provides model selection and multi-model access (e.g., GPT-4o, Claude variants) in certain plans; model availability varies by tier.

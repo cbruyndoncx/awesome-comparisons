@@ -4,6 +4,9 @@ A next-generation, high-performance code editor focused on speed, real-time coll
 ## Version
 vN/A (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [5] Exceptional performance and responsiveness (GPU-driven UI, Rust)
 - [4] Strong collaboration and AI integration, extension ecosystem still growing
@@ -49,7 +52,7 @@ Zed is a modern code editor engineered for low latency and smooth UX. It renders
 - GPL
   - GPL-3.0 (core editor), AGPL for certain server/collab components; other crates/components may use Apache/MIT for specific parts
   
-## MCPSupport
+## MCP-Client
 - Yes
   - MCP servers are integrated similar to other extensions like e.g. theming
   

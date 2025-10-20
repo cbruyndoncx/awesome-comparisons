@@ -4,6 +4,9 @@ A terminal-native, open-source AI coding assistant that brings LLM-powered code 
 ## Version
 v (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [5] Terminal-native, privacy-first design
 - [5] Broad LLM provider support (Models.dev)
@@ -43,7 +46,7 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
 ## License
 - MIT
 
-## MCPSupport
+## MCP-Client
 - Yes
 
 ## Notes

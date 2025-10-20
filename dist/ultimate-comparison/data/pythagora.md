@@ -12,10 +12,12 @@ A developer-focused AI platform that generates full-stack applications and autom
 - 
 
 ## Languages
-- JavaScript / TypeScript
-- React (frontend)
-- Node.js / Express (backend)
-- SQL (SQLite, PostgreSQL)
+- JavaScript
+- TypeScript
+  - React (frontend)
+  - Node.js / Express (backend)
+- SQL
+  - SQLite, PostgreSQL
 
 ## Extensible
 - Yes
@@ -46,7 +48,7 @@ Pythagora is an AI-driven development assistant that can generate full-stack web
 ## License
 - Proprietary
 
-## MCPSupport
+## MCP-Client
 - 
 
 ## Notes

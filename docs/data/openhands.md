@@ -8,8 +8,7 @@ v (2025-10-19)
 ## Repository
 - https://github.com/All-Hands-AI/OpenHands
 ## Languages
-- Python
-- JavaScript / TypeScript
+- Any
 ## Extensible
 - Yes
 ## Description
@@ -29,7 +28,7 @@ OpenDevin is an open-source project that implements an autonomous AI software en
 - Yes
 ## License
 
-## MCPSupport
+## MCP-Client
 
 ## Notes
 - Project rebranded / continued as "OpenHands" (All-Hands-AI/OpenHands); several mirrors/forks exist under the original OpenDevin name.

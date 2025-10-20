@@ -2,6 +2,9 @@
 [AI-powered coding assistant integrated into the Replit cloud IDE for real-time code completion, explanation, transformation and generation.]
 ## Version
 vN/A (2025-10-19)
+## Classification 
+- Code/Editor
+
 ## Rating
 - [4] Strong for fast prototyping, education and collaborative cloud IDE workflows
 - [3] Limited for privacy-sensitive or offline-first workflows due to cloud-only architecture
@@ -39,7 +42,7 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 
 ## License
 - Proprietary
-## MCPSupport
+## MCP-Client
 - No
 ## Notes
 - Key features: "Complete Code" (inline suggestions), "Explain Code" (natural-language explanations), "Transform Code" (refactors/rewrites), and "Generate Code" (from prompts).

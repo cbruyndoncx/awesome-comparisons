@@ -43,7 +43,7 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
 ## License
 - MIT
 
-## MCPSupport
+## MCP-Client
 - Yes
 
 ## Notes

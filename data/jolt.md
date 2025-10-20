@@ -5,6 +5,9 @@ AI assistant for making multi-file, large-codebase changes and code understandin
 ## Version
 (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [4] Strong for large, production codebases with multi-file edits and deep context
 
@@ -21,12 +24,14 @@ AI assistant for making multi-file, large-codebase changes and code understandin
 - Kotlin
 - Scala
 - C# / .NET
-- HTML / CSS / SCSS / LESS
+- HTML/CSS
 - GraphQL
 - Rust
 - PHP
-- Protocol Buffers
-- Markdown / MDX
+- Other
+  - Protocol Buffers
+  - Markdown / MDX
+  - SCSS / LESS
 
 ## Extensible
 - Yes
@@ -60,7 +65,7 @@ Jolt is a commercial AI coding assistant designed for large production codebases
 ## License
 - Proprietary
 
-## MCPSupport
+## MCP-Client
 
 
 ## Notes

@@ -39,8 +39,9 @@ Refraction is a web-first AI development assistant (refraction.dev) which helps 
 - No
 
 ## License
-
-## MCPSupport
+- Proprietary
+  
+## MCP-Client
 
 ## Notes
 - Pricing: consumer/pro plan pricing reported in public materials at roughly $8/month for the Pro (unlimited generations) tier; Team and Enterprise tiers are available with additional collaboration, billing and SSO/SCIM/audit features.

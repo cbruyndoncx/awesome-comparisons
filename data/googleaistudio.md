@@ -10,7 +10,10 @@ Browser-based development environment from Google for prototyping and experiment
 - 
 ## Languages
 - Web UI
-- Code export: Python, Node.js, Swift, Kotlin
+- Python
+- Node.js
+- Swift
+- Kotlin
 ## Extensible
 - Yes
   - Integrates with Vertex AI and supports function-calling/tool integrations
@@ -34,8 +37,8 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
 - No
   - Studio and Gemini are proprietary Google services; there are no public source repositories for the hosted Studio environment.
 ## License
-- Proprietary (Google)
-## MCPSupport
+- Proprietary
+## MCP-Client
 
 ## Notes
 - Multimodal strength: first-class support for text, images, voice, camera and screen-sharing makes Studio a powerful prototyping environment for rich interactions.

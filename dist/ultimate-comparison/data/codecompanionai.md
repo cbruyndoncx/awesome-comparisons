@@ -42,7 +42,7 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 ## License
 
 
-## MCPSupport
+## MCP-Client
 
 
 ## Notes

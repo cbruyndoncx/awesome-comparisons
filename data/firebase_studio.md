@@ -4,6 +4,9 @@ A cloud-first, AI-powered development environment from Google that combines prot
 ## Version
 v0.1 (2025-04-22 preview)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [5] Rapid prototyping and automated backend provisioning
 - [4] Deep Gemini integration for code assistance and UI generation
@@ -13,8 +16,12 @@ v0.1 (2025-04-22 preview)
 - 
 
 ## Languages
-- JavaScript / TypeScript (Next.js, React)
-- Support for other backend languages via templates and runtime options (examples include Go and Java in templates)
+- JavaScript
+- TypeScript
+- Go
+- Java
+- Other
+  - Support for other backend languages via templates and runtime options (examples include Go and Java in templates)
 
 ## Extensible
 - Yes
@@ -47,9 +54,9 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
 - No
 
 ## License
-- Proprietary (Google)
+- Proprietary
 
-## MCPSupport
+## MCP-Client
 - 
 
 

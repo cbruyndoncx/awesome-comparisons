@@ -1,5 +1,5 @@
 # PearAI - https://trypear.ai
-PearAI is an open-source AI-powered code editor that aims to be an all-in-one development environment integrating multiple AI tools and capabilities into a familiar VSCode-like experience.
+PearAI is an open-source AI-powered code editor that aims to be an all-in-one development environment integrating multiple AI tools and capabilities into a familiar VSCode-like experience. Much of the AI agent functionality is built upon RooCode and Cline.
 
 ## Version
 v1.x (active; releases during 2024-2025)
@@ -12,7 +12,7 @@ v1.x (active; releases during 2024-2025)
 - 
 
 ## Languages
-- TypeScript (primary), JavaScript, CSS/HTML for web UI
+- Any
 
 ## Extensible
 - Yes
@@ -46,7 +46,7 @@ PearAI provides a unified AI-first IDE experience by combining the familiarity o
 ## License
 - MIT
 
-## MCPSupport
+## MCP-Client
 - No
 
 ## Notes

@@ -12,8 +12,9 @@ v1.0 (2025-10-19)
 - https://github.com/stackblitz-labs/bolt.diy
 
 ## Languages
-- JavaScript/TypeScript
-- Python (limited support for server components)
+- TypeScript
+- JavaScript
+- HTML/CSS
 
 ## Extensible
 - Yes
@@ -44,7 +45,7 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 ## License
 - MIT
 
-## MCPSupport
+## MCP-Client
 - Yes
 
 ## Notes

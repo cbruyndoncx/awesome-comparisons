@@ -4,6 +4,9 @@
 ## Version
 v0.1 (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [4] Strong for large, statically-typed codebases (Java monorepos): excellent context management and static-analysis driven workflows
 - [3] Desktop-first UI and GPL-3.0 licensing may be tradeoffs for some teams
@@ -13,7 +16,8 @@ v0.1 (2025-10-19)
 
 ## Languages
 - Java
-- (can analyze and work with other languages via dependency decompilation / semantic indexing; used in demos with Python and mixed stacks)
+- Other
+  - Can analyze and work with other languages via dependency decompilation / semantic indexing; used in demos with Python and mixed stacks)
 
 ## Extensible
 - Yes
@@ -42,7 +46,7 @@ v0.1 (2025-10-19)
 ## License
 - GNU General Public License v3.0 (GPL-3.0)
 
-## MCPSupport
+## MCP-Client
 
 ## Notes
 [Additional details:]
