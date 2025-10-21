@@ -83,7 +83,7 @@ criteria:
         'AIE/Model':
           color: '#0d0d0d'
           backgroundColor: 'hsl(75, 100%, 70%)'
-        'Code/Autonomous agent.':
+        'Code/Autonomous agent':
           color: '#0d0d0d'
           backgroundColor: 'hsl(75, 100%, 70%)'
         'Code/Editor':
