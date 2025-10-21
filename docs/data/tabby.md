@@ -4,6 +4,9 @@ An open-source, self-hosted AI coding assistant for local code completion and ch
 ## Version
 v0.x (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [4] Strong privacy and self-hosting features (good for sensitive codebases)
 - [4] Good IDE integration and model flexibility, still maturing UX compared to large commercial offerings
@@ -58,3 +61,4 @@ Tabby is a self-hosted, open-source AI coding assistant that provides code compl
 - Quickstart via Docker for local GPU-enabled deployments; building from source requires Rust and native deps.
 - Community edition = Apache-2.0 licensed; Team/Enterprise editions add commercial capabilities.
 - Best experience with access to GPU-backed inference or fast local model runners; smaller models usable for lightweight setups.
+

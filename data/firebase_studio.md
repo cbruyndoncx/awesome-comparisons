@@ -70,3 +70,36 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
 - Privacy & security considerations: Workspaces may provision AI resources and API keys automatically; teams should evaluate data residency and key management requirements (enterprise BYOK and compliance workflows may be limited in the initial preview).
 - Best fit: Fast prototyping, startups and teams building Firebase-backed web/mobile apps, AI-enhanced frontends, and teams that prefer managed backend provisioning and tight Firebase integration.
 - Limitations: Cloud-only, proprietary, potential vendor lock-in to Firebase/GCP services; enterprises with strict BYOK or on-prem requirements should validate security/compliance.
+
+
+## ContextManagement
+- Yes
+  - Chat- and workspace-centered context: Gemini-in-Firebase chat + the Code OSS workspace provide the active context (open files, project settings, App Blueprints, Genkit configuration, and provisioned Firebase resources). Methods to update context include editing files in the IDE, committing to the integrated Git repo, changing project/settings in the workspace, re-running prototype prompts, and interacting with the in-IDE chat (Gemini) which reads workspace files to inform responses. There is no public programmatic "context API" documented in the preview — context is primarily managed via the workspace and chat.
+
+## DirectFileReferences
+- Yes
+  - Files can be directly referenced and accessed inside the workspace: open files in the Code OSS-based IDE, import repositories (GitHub/GitLab/Bitbucket), upload archives, and use plugins (e.g., Builder.io Figma import) to bring design files into the project. Gemini and the App Prototyping agent access the workspace files to provide contextual code generation and edits. There is no public external file-reference API documented beyond the workspace and VCS integration.
+
+## Hooks
+
+
+## SlashCommands
+
+
+## Subagents
+
+
+## CustomModes
+
+
+## Plugins
+- Yes
+  - Firebase Studio exposes integrations and plugin-like extensions in the preview (examples: Builder.io Figma import, Genkit integration, template gallery, and Git provider integrations). These are enabled/configured through the workspace UI (import plugin/integration or select templates) and by provisioning AI resources (Gemini/Genkit) into the workspace; developer-facing documentation for authoring third-party plugins or bundling commands/agents/hooks is not publicly detailed in the preview documentation.
+
+## Checkpoints
+- Yes
+  - Undo and rollback are handled primarily via standard version control (Git) integration: commits, branches, and repo history allow reverting agent-made changes. Workspace share URLs, preview deployments and published app versions provide additional reference points, but there is no documented first-class "agent checkpoint" system independent of source control in the preview.
+
+## SpecDrivenDevelopment
+- Other
+  - Firebase Studio does not advertise a named spec-driven development framework in public previews; its development patterns are centered on templates, App Blueprints, and the App Prototyping agent rather than a formal SDD framework like Tessl or SpecKit.

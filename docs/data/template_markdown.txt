@@ -9,6 +9,15 @@ If you don't know the answer, remove the default options, so the section stays b
 ## Version
 vX.X (yyyy-mm--dd)
 
+## Classification
+- AIE/Model
+- Code/Autonomous Agent
+- Code/Editor
+- Code/Spec Driven
+- Code/Terminal
+- Product/Prototyping
+  - [Choose only one of these options]
+
 ## Rating
 - [1] Comment 1
 - [4] Comment 5
@@ -61,3 +70,56 @@ vX.X (yyyy-mm--dd)
   
 ## Notes
 [Additional details that can make a difference in deciding which ai coding tool to use]
+
+<!-- NEW SECTION -->
+## ContextManagement
+- Yes
+  - [Explain avaiilable methods for managing and updating the context] 
+- No
+
+## DirectFileReferences
+- Yes
+  - [Explain how files can be directly referenced in context.]
+- No
+
+## Hooks
+- Yes
+  - [Are there any lifecycle events for the agent generated that can be attached to.]
+- No
+
+## SlashCommands
+- Yes
+  - [Is there support for re-usable commands that can be manually triggered by the user.]
+- No
+
+## Subagents
+- Yes
+  - [Is it possible to define specialized AI subagents for task-specific workflows ? If so, explain how.]
+- No
+
+## CustomModes
+- Yes
+  - [Can the user create specialist modes that enable you to tailor the chat experience for specific tasks.]
+- No
+
+## Plugins
+- Yes
+  - [Is there a method of bundling together commands, agents and hooks ? If so, explain how'
+- No
+
+## Checkpoints
+- Yes
+  - [Is it possible to undo actions taken by the agent by using checkpoints or if autocommitted to git, reversing the history ?]
+- No
+
+## SpecDrivenDevelopment
+- BMAD
+- SpecKit
+- OpenSpec
+- Tessl
+- AgentOS
+- ClaudeFlow
+- SPARC
+- SuperClaude
+- Other
+  - [List specific spec driven development method if not one of the above entries]

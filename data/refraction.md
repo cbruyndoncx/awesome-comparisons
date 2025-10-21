@@ -54,3 +54,39 @@ Refraction is a web-first AI development assistant (refraction.dev) which helps 
 - Use-cases: adding unit tests, documenting legacy code, refactoring for clarity or minor performance improvements, generating regexes and language-to-language snippet translations.
 
 
+
+## ContextManagement
+- No
+  - Refraction operates as a web-based code assistant that accepts pasted code snippets and natural-language prompts for discrete generations. There is no public documentation of persistent, project-level context management APIs or advanced context orchestration features.
+
+## DirectFileReferences
+- No
+  - The product provides an editor integration (Sublime Text extension) for in-editor usage, but there is no documentation indicating support for direct file path references, project-wide file indexing, or referencing files on disk via the web UI or an API.
+
+## Hooks
+- No
+  - No public documentation describes lifecycle events, webhooks, or attachable hooks for responding to Refraction events or generation lifecycle stages.
+
+## SlashCommands
+- No
+  - There is no documented support for user-triggered reusable slash-style commands or command palettes exposed by the product.
+
+## Subagents
+- No
+  - Refraction does not document any capability to define or orchestrate specialized AI subagents for task-specific workflows; its model is centered on discrete generation tasks (refactors, tests, docs) per request.
+
+## CustomModes
+- No
+  - There is no public information about creating persistent custom modes or specialist modes that alter the assistant's behavior across sessions. The product focuses on one-off, targeted generations rather than configurable modes.
+
+## Plugins
+- No
+  - While Refraction provides an editor integration (a Sublime Text extension) for more convenient in-editor flows, there is no evidence of a broader extensibility/plugin system for bundling commands, agents, and hooks as a platform-facing plugin framework.
+
+## Checkpoints
+- No
+  - There is no documented checkpoint or undo system for reverting actions; Refraction stores generation history for user review, but this is not presented as a versioned checkpoint/rollback mechanism.
+
+## SpecDrivenDevelopment
+- Other
+  - None — Refraction is a focused developer productivity assistant (refactors, tests, docs) and is not a spec-driven development framework

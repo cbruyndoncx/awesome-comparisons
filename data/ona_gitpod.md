@@ -58,3 +58,40 @@ Ona is the rebrand and strategic evolution of Gitpod into an AI-first software e
 - Good fit for teams that want to adopt AI-driven automation while retaining strict governance and compliance controls.
 - Limitations: true autonomous workflows require careful policy and guardrail configuration; smaller teams without enterprise needs may not need the full Ona stack.
 - Recommended evaluation steps: trial with a sandbox project, configure guardrails and VPC options, measure agent outputs against existing PR and review metrics, and validate audit/compliance reporting.
+
+## ContextManagement
+- Yes
+  - Ona provides explicit context management for its AI agents via a repository-level AGENTS.md that the agent loads at the start of a session. Additional context sources include workspace definitions (devcontainer.json), automation manifests (e.g. automations.yml / automation configs), environment variables and prebuild metadata, and repository files the agent can read on demand. These artifacts together let teams define project conventions, commands, and policies that are consistently applied by agents.
+
+## DirectFileReferences
+- Yes
+  - AGENTS.md is designed to reference other files in the repo; Ona agents will read files referenced there and can access repository files directly in the sandboxed workspace. This enables pointing to style guides, architecture docs, and specific source files rather than duplicating their contents in the main agent config.
+
+## Hooks
+- Yes
+  - Public docs for Gitpod historically exposed lifecycle hooks for workspaces (prebuilds, init/tasks) and Ona surface-level documentation references automation triggers; however, a clearly documented agent lifecycle hooks API (for attaching arbitrary external listeners to agent start/stop events) was not found in the available documentation. If you need explicit agent lifecycle hooks, verify in the Ona docs or with support for the latest agent API.
+
+## SlashCommands
+- Yes
+  - Ona agents support slash-command style interactions to trigger automations and common engineering tasks from chat or IDE integrations. These commands are intended to quickly invoke tests, CI-like automations, or agent behaviours and are integrated into the agent UX across browser and IDE clients.
+
+## Subagents
+- Yes
+  - Ona is explicitly positioned as "mission control for your personal team of software engineering agents," allowing multiple specialized agents (roles/agents) to be defined and orchestrated for different tasks — e.g., code-gen agents, review agents, release agents — under centralized governance.
+
+
+## CustomModes
+- Yes
+  - Agent behaviour and operating modes can be tailored via repository-level configuration (AGENTS.md), environment definitions, and automation manifests; teams can create specialized profiles/workspace configs that produce distinct agent behaviours or permissions for particular workflows.
+
+## Plugins
+- Yes
+  - Ona integrates with IDE extensions and editor platforms (e.g., VS Code, JetBrains, Cursor, Zed) and exposes automation/extension points; bundling commands and automation into reusable packages is done via workspace/automation configuration and editor extension packs rather than a single "plugin store" model.
+
+## Checkpoints
+- Yes
+  - Ona/Gitpod workflows provide workspace snapshots, prebuilds and the normal git history as mechanisms to revert or recover from agent actions. For enterprise users, Guardrails and audit trails further enable tracing and, where necessary, rolling back changes using standard VCS or snapshot workflows.
+
+## SpecDrivenDevelopment
+- Other
+  - There is no public indication that Ona (Gitpod/Ona) is built around or prescribes a specific external spec-driven development framework such as Tessl or the others listed. Ona provides environment and automation primitives but does not appear to mandate a particular spec-driven methodology.

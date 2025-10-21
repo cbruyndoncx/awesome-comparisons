@@ -78,3 +78,40 @@ Jolt is a commercial AI coding assistant designed for large production codebases
 - Useful links:
   - Main site: https://www.usejolt.ai
   - Docs / support: https://docs.usejolt.ai
+
+## ContextManagement
+- Yes
+  - HyperContext: Jolt's primary method is an automatic, global "HyperContext" index that discovers and maintains context across entire repositories (multi-repo support) so users do not need to manually select files. It runs in the web app and IDE extensions and keeps awareness of local, unsaved/changed files when used via IDE plugins.
+  - Automatic context discovery: Jolt identifies relevant files for a task (callsites, tests, configs, module boundaries) and surfaces them in chat and in the UI.
+  - Scope controls: In IDEs and the web app users can narrow workspace/repo scope (open folders, repo selection) so HyperContext focuses on a subset of files rather than the whole enterprise index.
+  - Use cases: code comprehension, multi-file feature work, cross-file refactors, root-cause analysis from logs.
+
+## DirectFileReferences
+- Yes
+  - Jolt can reference specific files and produce direct multi-file edits and git-style patches. Files are referenced in several ways:
+    - Automatic selection: HyperContext locates and highlights relevant files for a given request.
+    - Explicit selection in IDE extensions: users can open/pin files or select ranges to anchor changes.
+    - Chat references: users may refer to file paths or paste snippets in chat to anchor edits.
+    - Export/patch: edits can be exported or applied as patches (or applied directly via IDE integration) so changes map back to repository files.
+
+## Hooks
+- No
+
+## SlashCommands
+- No
+
+## Subagents
+- No
+
+## CustomModes
+- No
+
+## Plugins
+- No
+
+## Checkpoints
+- No
+  - No public documentation of built-in checkpoint/undo features. Jolt supports exporting patches and integrates with git/IDE workflows, so rollbacks are typically handled via VCS (branches, commits) or IDE undo rather than an internal checkpoint system.
+
+## SpecDrivenDevelopment
+

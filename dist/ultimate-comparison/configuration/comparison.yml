@@ -62,6 +62,42 @@ criteria:
       order: '10'
       andSearch: false
       rangeSearch: false
+  - Classification:
+      name: Classification
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: &ref_0
+        template: 'AI Native Dev ainativedev.io {}'
+        variables:
+          - name
+      placeholder: &ref_1
+        template: 'Select {} ...'
+        variables:
+          - name
+      order: '15'
+      andSearch: true
+      rangeSearch: false
+      values:
+        'AIE/Model':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        'Code/Autonomous agent.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        'Code/Editor':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        'Code/Spec Driven':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        'Code/Terminal':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        'Product/Prototyping':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
   - Languages:
       name: Languages
       type: LABEL

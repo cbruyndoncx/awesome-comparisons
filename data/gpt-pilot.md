@@ -53,3 +53,33 @@ GPT Pilot (by Pythagora) is a source-available AI developer assistant designed t
   - Repository: https://github.com/Pythagora-io/gpt-pilot
   - Project site: https://www.pythagora.ai
   - PyPI package: https://pypi.org/project/gpt-pilot/
+
+
+## ContextManagement
+- Yes
+  - GPT Pilot uses a multi-part context management strategy designed for large codebases: context-rewinding, recursive conversations, and TDD-driven checkpoints. It maintains a project file/folder tree with human-readable descriptions and generates pseudocode summaries for functions and files. Before implementing a step it: (1) presents the workspace tree + descriptions so the LLM can narrow relevant files, (2) supplies pseudocode summaries for candidate files so the LLM can identify relevant functions, then (3) fetches the actual code for the selected files into the implementation conversation. This selective fetching + pseudocode approach keeps the LLM prompt size bounded while preserving the necessary local context.
+
+## DirectFileReferences
+- Yes
+  - Files and folders are represented in the workspace with descriptions; GPT Pilot can present a project tree and selectively fetch files into the active conversation. It also stores generated code in a workspace (CLI-driven) and integrates with Git, VS Code, and a local workspace so the system can operate on real files, commit changes, and run tests. The pseudocode+file-description layer lets the system reference files at function-level granularity before pulling full source.
+
+## Hooks
+
+## SlashCommands
+
+## Subagents
+- Yes
+  - GPT Pilot implements a multi-agent/subagent architecture with specialized roles (Product Owner, Specification Writer, Software Architect, DevOps, Tech Lead, Developer, Code Monkey, Reviewer, Troubleshooter, Debugger, Technical Writer). These agents are orchestrated to break down requirements into tasks/steps, generate pseudocode, implement code, run tests, and request human review. The agent behaviours and orchestration are implemented in the codebase and can be inspected/extended by modifying the project's agent orchestration/configuration (i.e., adding or changing agent logic requires code/config edits).
+
+## CustomModes
+
+## Plugins
+
+## Checkpoints
+- Yes
+  - The workflow explicitly includes human review checkpoints and automated test generation at two granularities (unit tests after steps, integration/e2e tests after tasks). Work is persisted in a workspace with Git support and a CLI/VS Code integration, enabling manual rollbacks or inspection. The system's "95% automated / 5% human oversight" model makes checkpoints first-class (stop-and-review before progressing). 
+
+## SpecDrivenDevelopment
+
+- Other
+  - GPT Pilot does not advertise one of the named spec frameworks; instead it uses a task/spec decomposition model combined with TDD and multi-agent roles (product-owner/spec-writer → architect → task decomposition → implementation steps + programmatic test goals). The workflow is spec-like (clear programmatic goals, user_review_goals, and auto-test generation) but implemented within the project-specific agent/task framework rather than a published spec-driven framework listed above.

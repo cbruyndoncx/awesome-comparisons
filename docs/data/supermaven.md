@@ -4,6 +4,9 @@ AI-first code completion assistant focused on very large context windows, low-la
 ## Version
 v (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [5] Performance & speed (sub-300ms completion latency in reported benchmarks)
 - [4] Context awareness & long-range understanding (very large context window enables whole-repo reasoning)
@@ -55,3 +58,39 @@ Supermaven is an AI-powered code completion and developer-assistant platform bui
 - Best fit: developers and teams working on medium-to-large codebases who need fast, context-rich completions and cross-file reasoning (e.g., refactors, large feature work, legacy code maintenance).
 - Limitations/considerations: proprietary/cloud-hosted service (no confirmed fully offline/self-hosted option), potential privacy and compliance considerations for sensitive code — review enterprise offerings and data handling policies before adoption.
 
+
+## ContextManagement
+- Yes
+  - Supermaven manages and surfaces context via whole-repo indexing and a very large context window (marketing claims up to ~1,000,000 tokens). Available methods include: workspace/repository indexing, capturing recent edits and file diffs, chat session history (conversation context), and cross-file analysis ("next location"/file jump features) so completions are informed by project-wide state.
+
+## DirectFileReferences
+- Yes
+  - Supermaven can reference files directly: its IDE integrations allow jumping to files/lines, attaching files or diffs inside the assistant chat, and applying suggested edits as diffs. The system is explicitly designed to reason over repository files rather than single-file completions.
+
+## Hooks
+- No
+  - Public documentation does not describe a user-facing lifecycle hook API for attaching custom event handlers. Integration points are primarily IDE plugin entry points (actions, hotkeys) rather than a documented agent lifecycle hook system.
+
+## SlashCommands
+- No
+  - While the product exposes hotkeys and chat-driven actions (apply-change, show-diff, jump-to-file), there is no widely-documented generic "slash command" system for reusable, user-defined commands in the public docs — behavior is primarily via the chat UI and IDE command palette/hotkeys.
+
+## Subagents
+- No
+  - Supermaven provides multi-model chat and specialized behaviors (completion vs. chat) but does not document a facility for users to define autonomous subagents/workflows. There is no public API for composing persistent task-specific subagents.
+
+## CustomModes 
+- No
+  - There is no public indication that users can author custom assistant modes; available modes are product-provided (completion, chat, refactor suggestions). Customization is via settings and IDE integration rather than creating new assistant modes.
+
+## Plugins
+- No
+  - Supermaven ships as IDE plugins (VS Code, JetBrains, Neovim) but it does not advertise a plugin ecosystem for bundling agent behaviors, commands and hooks as user-installable extensions. Integration is through the official plugins rather than a third-party plugin marketplace.
+
+## Checkpoints
+- Yes
+  - Agent-driven changes are presented as diffs and edits that can be previewed before applying; once applied typical safety nets exist (IDE undo, local VCS/git history). For teams using CI or repo protection, any autocommit workflows would still be revertable through standard git history.
+
+## SpecDrivenDevelopment
+- Other
+  - Not applicable — Supermaven is a developer productivity/code-completion platform, not a spec-driven development framework. It does not advertise alignment with or tooling for the listed spec-driven development systems.

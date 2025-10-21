@@ -61,3 +61,4 @@ Tabby is a self-hosted, open-source AI coding assistant that provides code compl
 - Quickstart via Docker for local GPU-enabled deployments; building from source requires Rust and native deps.
 - Community edition = Apache-2.0 licensed; Team/Enterprise editions add commercial capabilities.
 - Best experience with access to GPU-backed inference or fast local model runners; smaller models usable for lightweight setups.
+

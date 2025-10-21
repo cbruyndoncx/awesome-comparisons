@@ -62,3 +62,41 @@ Mistral Code is a packaged AI developer assistant designed for enterprise adopti
 - Adopted in production by organizations for hybrid/hardened deployments (examples reported: banks, large enterprises, system integrators).
 - Not a drop-in open-source model; organizations seeking fully open-source stacks should evaluate the underlying Mistral model releases and Continue separately.
 - Useful where governance, observability, and private-model customization are required for regulated codebases.
+
+## ContextManagement
+- Yes
+  - RAG / semantic retrieval via Codestral Embed: Mistral Code indexes repositories and returns relevant snippets for prompt construction.
+  - IDE-based context aggregation: open-file buffers, git diffs, terminal history and static-analysis metadata are used by the plugin to build contextual prompts for completions and agent tasks.
+  - Agent session state for multi-step workflows (Devstral): agents persist task state across steps (scan → edit → test → PR) and Mistral Console exposes usage/acceptance metrics.
+  - Admin controls to configure which context sources are allowed (repo indexing, terminal, local files) in enterprise/on‑prem deployments.
+
+## DirectFileReferences
+- Yes
+  - Files can be directly referenced via the embedding index and semantic search (path-based results and file snippets returned to the assistant).
+  - IDE plugin and agentic workflows operate on explicit files: open/edit staged changes, create draft pull requests, and include file paths in diffs/commits.
+  - Private/on‑prem deployments keep repository indexing local so file references never leave the customer environment.
+
+## Hooks
+
+## SlashCommands
+
+## Subagents
+- Yes
+  - Devstral provides agentic workflows (specialized agents) that perform multi-step, multi-file engineering tasks: scanning a repo, making edits, running tests, and drafting PRs.
+  - Agents can be composed to chain retrieval → reasoning → edit → verification steps; enterprise flows include approval/authorization gates before applying changes.
+
+## CustomModes
+
+## Plugins
+- Yes
+  - Official IDE plugins for VS Code and JetBrains (private beta/GA progression) integrate completions, semantic search and one-click automations into the editor UI.
+  - Integration with Continue.dev and the plugin model enables embedding Mistral Code features into IDE/tooling workflows and connecting to enterprise infrastructure (SSO, audit logs).
+
+## Checkpoints
+- Yes
+  - Agentic edits are surfaced as draft changes / pull requests and pass through configurable approval workflows; audit logs record actions so changes can be reviewed and reversed via normal git history.
+  - On‑prem deployments and RBAC reduce risk of unwanted auto-commits; standard VCS workflows (branches, PRs) serve as checkpoints for undoing agent actions.
+
+## SpecDrivenDevelopment
+- Other
+  - Mistral Code is not tied to a single spec-driven development framework; it is designed to integrate with existing engineering workflows and can be used alongside SDD approaches (Tessl, SpecKit, etc.) via agentic automation and code generation, but it does not natively implement a particular SDD toolchain.

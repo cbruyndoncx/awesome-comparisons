@@ -4,6 +4,9 @@ AIXcoder (often styled aiXcoder or Aix Coder) is an AI-powered code-completion a
 ## Version
 (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 
 
@@ -48,3 +51,36 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
 - Resource profile: Because the local model is quantized, vendors indicate it can run on modest hardware (4–8GB for very small setups, better experience with 8–16GB and/or modest GPUs), though exact requirements depend on the chosen deployment mode and model precision.
 - Enterprise options: There are team/enterprise offerings with custom intelligence, private deployment, and analytics for developer efficiency; details and pricing vary by vendor engagement.
 - Unclear / not publicly confirmed: specific license details for the model and tooling, BYOK (bring-your-own-key) support for cloud features, explicit terminal/CLI tooling support, and whether the project or models are fully open-source. If these are critical, verify with the vendor or product documentation before selecting the tool.
+
+## ContextManagement
+- Yes
+  - AIXcoder supports multiple context management approaches: local on-device inference (keeps workspace/context local), context windowing in the IDE plugin (captures nearby file contents and project context for completions), and optional cloud mode where selected context may be sent for enhanced generation.
+  
+## DirectFileReferences
+- Yes
+  - The IDE integrations surface repository and file-level examples; agent can reference files from the open repo search features and local workspace context when running locally.
+
+## Hooks
+- Yes
+  - IDE plugin lifecycle hooks and model pinning enable attaching to lifecycle events (suggestion shown/accepted/rejected, telemetry emission). Enterprise/private deployments can be integrated into CI/CD to ensure deterministic suggestions.
+
+## SlashCommands
+- Yes
+  - Within supported IDEs, aiXcoder exposes quick actions and command palette entries (e.g., trigger generation, search) that act like reusable commands; exact support depends on the IDE plugin.
+  
+## Subagents
+- Yes
+  - aiXcoder supports specialized workflows (search, generation, repair) that behave like subagents; enterprise/custom models or fine-tuned variants can be deployed to handle task-specific flows (e.g., network automation script generation).
+  
+
+## CustomModes
+
+## Plugins
+- Yes
+  - aiXcoder bundles IDE plugins (VS Code, JetBrains, Eclipse) that package UI commands, context capture, and model inference; enterprise offerings include private bundles and integrations for internal tooling.
+
+## Checkpoints
+
+
+## SpecDrivenDevelopment
+

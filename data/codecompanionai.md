@@ -51,5 +51,4 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 - Pricing/details: I could not find an official pricing page or clear subscription tiers in the public third-party descriptions. The vendor appears to support BYOK (use your OpenAI API key), which means costs for model usage are borne by the user via their OpenAI account.
 - Open-source status: No authoritative indication that the desktop app is open source. There is an unrelated community project named codecompanion.nvim (a Neovim plugin) on GitHub; do not confuse the two.
 - Documentation: Public, authoritative documentation or an official product site with detailed specs/pricing was not discovered in the sources I reviewed. Recommend checking the vendor domain (https://codecompanion.ai) and any official docs or contact channels for the latest details before deployment or purchase.
-
-(Research summary based on multiple third-party write-ups and product summaries; authoritative vendor documentation and pricing were not found in the search results available.)
+- Research summary based on multiple third-party write-ups and product summaries; authoritative vendor documentation and pricing were not found in the search results available.

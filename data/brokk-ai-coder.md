@@ -60,3 +60,47 @@ v0.1 (2025-10-19)
 - Best fit: large enterprises and teams working on big Java monorepos or mixed-language monorepos where understanding cross-cutting references and history matters.
 - Licensing note: GPL-3.0 is copyleft — derivative works that incorporate Brokk's code must be released under the same license.
 - Not an IDE plugin: Brokk is a separate application (designed intentionally), though it can work alongside IDEs and version control workflows.]
+
+
+## ContextManagement
+- Yes
+  - Workspace-driven context: users curate a Workspace containing selected files, generated summaries, diffs and dependency artifacts so the LLM receives only the focused context it needs (editable vs read-only panes).
+  - Deep Scan: semantic, compiler-aware analysis recommends additional files and symbols to include based on the instruction and dataflow, reducing manual context selection.
+  - Dependency summaries/decompilation: third-party libraries can be imported, summarized or decompiled into the Workspace so the assistant understands external APIs.
+  - Build & history-aware context: Brokk infers build system details and can incorporate compiled artifacts and VCS history to provide richer, correct context for edits.
+
+## DirectFileReferences
+- Yes
+  - Files are referenced directly via the Workspace (explicit file inclusion), Agentic Search (symbol-aware file results and usages), and Deep Scan recommendations.
+  - Code mode applies edits to concrete files in the Workspace and produces diffs/patches that are surfaced to Git; Ask mode answers are scoped to the files present in the Workspace.
+  - Paths, symbols and call-graph locations are surfaced so prompts and agent actions can target precise files or symbols.
+
+## Hooks
+- No
+
+## SlashCommands
+- No
+
+## Subagents
+- Yes
+  - Brokk provides distinct agent roles (Ask, Code, Architect) that act like specialized subagents for question answering, direct code edits, and multi-step autonomous planning/execution.
+  - Architect enables multi-stage task planning and execution where the system composes sequences of agent actions and can iterate on results under human supervision.
+
+## CustomModes
+- Yes
+  - Interaction modes: Ask vs Code (different behavior and permissions for read-only exploration vs direct edits) and Architect (orchestration mode) let users tailor the level of automation.
+  - Model/config overrides: Brokk allows configuring default models per action and selecting overrides for specific tasks, enabling cost/quality tradeoffs and task-specific tuning.
+
+## Plugins
+- Yes
+  - Extensibility via the open-source client: Brokk's codebase and configuration enable integration points (model providers, build system adapters, dependency importers) and teams can extend behavior by modifying or contributing to the client.
+  - BYOK and configurable model/provider integrations let organizations plug in their preferred LLMs and key management approaches.
+
+## Checkpoints
+- Yes
+  - Edits are produced as diffs/patches and Brokk is Git-aware; users can review changes, commit, or revert using standard VCS workflows.
+  - The edit/build/test loop preserves build/test results and incremental revisions, allowing iterative rollback or refinement of agent-produced changes.
+
+## SpecDrivenDevelopment
+- Other
+  - Not directly applicable to Brokk; Brokk is an AI-native code-assistant and does not prescribe a specific spec-driven development framework.

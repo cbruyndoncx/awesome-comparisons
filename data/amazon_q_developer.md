@@ -72,3 +72,65 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
 - Limitations: cloud-hosted (no fully local/offline mode), generated code requires human review for correctness/security/licensing, enterprise controls and BYOK options are limited compared to self-hosted offerings.
 - Related: Amazon CodeWhisperer functionality was consolidated into Amazon Q Developer around April 2024; for legacy references check CodeWhisperer docs (https://aws.amazon.com/codewhisperer/).
 
+
+
+## ContextManagement
+- Yes
+  - Amazon Q provides multiple methods to manage and update context for IDE conversations and agentic workflows:
+    - Workspace context: the IDE plugin can analyze the open workspace (project files, dependency manifests, build files) to provide workspace-aware responses and code generation.
+    - File-level context: selecting a file or code range and invoking actions (Explain / Refactor / Fix / Send to Prompt / Inline Chat) passes that precise code as context for the assistant.
+    - Inline chat context: editor-integrated chat threads that retain recent messages and file references so follow-up prompts remain aware of prior discussion and selected files.
+    - MCP (Model Context Protocol) servers: external MCP connectors supply additional contextual sources (Jira, Figma, monitoring/security tools) which are merged into the assistant's context when configured via mcp.json and enabled in settings.
+    - Command-based context triggers: chat commands (e.g., /doc) initiate workspace-wide analyses that explicitly gather and use project context to produce artifacts (README, docs, etc.).
+
+## DirectFileReferences
+- Yes
+  - Files can be directly referenced and used as context by the IDE plugin:
+    - Select-and-action model: highlight code or open a file and invoke Amazon Q actions to send that file/range as direct context to the assistant.
+    - Workspace analysis: commands like /doc trigger automated scanning of repository structure and key files to generate documentation or summaries.
+    - Deep linking in IDE: generated edits and files are applied directly into the local repository (via standard editor apply/replace flows) so references are maintained in-place.
+
+## Hooks
+- No
+  - There is no public documentation describing a lifecycle-events/hooks API for attaching custom agent lifecycle callbacks inside Amazon Q Developer plugins. MCP enables external context providers and tool integrations, but explicit lifecycle hook APIs for agent-generated events (e.g., "onBeforeChange", "onAfterApply", or persistent event subscriptions") are not documented in the available sources.
+
+## SlashCommands
+- Yes
+  - Amazon Q exposes chat/command triggers in supported surfaces:
+    - /doc: workspace documentation generation (create README, component docs) by analyzing the project.
+    - Editor actions exposed via context menus and inline chat (these act like command triggers: Explain, Refactor, Fix, Optimize, Generate Tests, Send to Prompt).
+    - AWS Console plugin alias prefixing: in the AWS console chat, prefixing questions with a plugin alias triggers calls to third-party plugin APIs (CloudZero, Datadog, Wiz) and surfaces provider data inline.
+
+## Subagents
+- Yes
+  - Amazon Q supports agentic and multi-tool workflows that act like specialized subagents:
+    - Feature development agents: natural-language feature descriptions can spawn agentic workflows that modify multiple files across the workspace to implement that feature.
+    - MCP-enabled connectors: MCP servers act as specialized tool connectors (Jira, Figma, EKS server) that the assistant can query as part of an orchestrated workflow.
+    - Automated test/code-review agents: built-in units for generating tests and performing code reviews behave like task-specialist agents executed within the IDE.
+
+## CustomModes
+- Yes
+  - Customization and tailoring mechanisms include:
+    - IDE settings: toggles and preferences (e.g., enable MCP, plugin aliases) to adjust how Amazon Q behaves in the developer's environment.
+    - Project-scoped context: configuring MCP servers and workspace analysis yields domain-specific behavior for a particular repository.
+    - Plugin aliasing in the AWS Console: using different aliases effectively changes the plugin/toolset the assistant will consult, producing different response modes for queries.
+  - Note: there is no strong public documentation of a formal "mode authoring" UI for end-users to create persistent named personas; tailoring today is primarily achieved via configuration and MCP/plugin composition.
+
+## Plugins
+- Yes
+  - Amazon Q supports a plugin/alias system and MCP-based integrations:
+    - AWS Console plugin aliases: third-party providers (CloudZero, Datadog, Wiz) are configured as aliases; prefixing queries with an alias causes Amazon Q to call that provider's APIs and surface results with deep links.
+    - MCP servers: act as plugin-style connectors that expose structured context and actions to the assistant (e.g., Jira issues, Figma designs, cluster data from an EKS MCP server).
+    - Privacy model: plugin usage is designed to avoid sending chat transcripts to third-party providers during configuration and use (data flows are described in docs as provider API calls initiated by the Q service and surfaced to the user).
+    - Bundling: while there isn't a published "plugin SDK" in the same sense as browser extensions, MCP provides the protocol for bundling tool connectors, and the AWS Console aliasing provides the user-visible mechanism to call them.
+
+## Checkpoints
+- Yes
+  - Undo / rollback options in typical workflows include:
+    - Editor undo and local change staging: changes generated by Amazon Q are applied through the IDE, so standard undo/redo and editor history apply immediately after edits.
+    - Git / VCS: recommended rollback mechanism—users can commit or stash before applying changes and use git to revert unwanted modifications (no built-in Q checkpointing was documented).
+    - No documented built-in persistent "checkpoint" or automatic snapshot feature inside Amazon Q itself; rely on editor and VCS for safe rollback.
+
+## SpecDrivenDevelopment
+
+

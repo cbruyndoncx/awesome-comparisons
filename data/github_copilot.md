@@ -58,3 +58,62 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
 - Copilot Chat supports multi-file edits from a single prompt and can incorporate repository context and organization knowledge bases in Enterprise.
 - The Copilot autonomous coding agent can be assigned GitHub issues and produce pull requests for review; this increases automation but requires careful review for correctness and security.
 - Privacy/data usage: Enterprise tiers offer stronger controls and indemnity options; evaluate data residency and IP policies if using Copilot on proprietary codebases.
+
+
+## ContextManagement
+- Yes
+  - Methods available for managing and updating context:
+    - Editor-provided references: client.file (active file content) and client.selection (current selection) passed when the Copilot Editor Context permission is granted.
+    - GitHub references: github.current-url and github.repository to ground chat requests to a repository or page context.
+    - Copilot Spaces and Knowledge Bases: curated collections of Markdown/docs that can be attached as grounding context for Copilot Chat in organization/enterprise settings.
+    - Model Context Protocol (MCP) / extension APIs: allow explicit programmatic injection of context and integration with external systems.
+    - Chat variables and explicit file references: using chat commands/variables (e.g., #file, #editors or file anchors) to reference or include specific files in a conversation.
+    - User-controlled exclusions: context exclusion lists and per-file opt-outs to prevent sharing sensitive files.
+
+## DirectFileReferences
+- Yes
+  - How files can be directly referenced in context:
+    - client.file provides the full text of the active editor file to extensions when permitted.
+    - Chat-specific file anchors and #file-like references can be used to point Copilot Chat at particular repository files for multi-file edits and analysis.
+    - Copilot Chat in IDEs can operate on multiple open files (multi-file edits) when the chat prompt references them; in the web UI, github.current-url links a chat to the current page/PR/file view.
+    - Repository-level knowledge bases let you include specific documentation files as searchable context the assistant can consult.
+
+## Hooks
+- Yes
+  - Are there any lifecycle events for the agent generated that can be attached to:
+    - Agents/skillsets provide extension points for request handling and response generation (agent lifecycle handling for incoming chat requests, response formatting, and function-call style interactions).
+    - GitHub Apps and Copilot Extensions integrate via the Copilot Extensibility APIs which expose request/context arrival and response phases; developers implement handlers to process and respond to chat/agent requests.
+
+## SlashCommands
+- Yes
+  - Is there support for re-usable commands that can be manually triggered by the user:
+    - Copilot Chat supports conversational triggers and structured commands/inputs in the chat UI; extensions/agents can expose command-like actions that users invoke from the chat or editor context.
+    - In IDE integrations, extension commands (command palette, context menu, chat commands) let users trigger predefined behaviors or workflows.
+
+## Subagents
+- Yes
+  - Is it possible to define specialized AI subagents for task-specific workflows ? If so, explain how.
+    - Copilot's extensibility distinguishes lightweight skillsets (task-focused handlers) from full agents, enabling developers to build specialized capabilities that act as subagents for constrained workflows.
+    - Skillsets encapsulate routing, prompt templates, function evaluation and response shaping for focused tasks; agents provide custom logic and broader orchestration and may call other services or models.
+
+## CustomModes
+- Yes
+  - Can the user create specialist modes that enable you to tailor the chat experience for specific tasks.
+    - Custom instructions, persistent prompt files, Copilot Spaces, and workspace-level knowledge bases allow teams to define tailored modes and default context for chat sessions (for example: testing mode, security-aware suggestions, or style-guides).
+
+## Plugins
+- Yes
+  - Is there a method of bundling together commands, agents and hooks ? If so, explain how'
+    - Copilot Extensions / GitHub Apps act as bundles that package skillsets/agents, commands, and integration hooks; they are installed as apps or extensions in IDEs and on GitHub and include permission configuration (including Copilot Editor Context).
+    - Organization-managed Copilot Spaces and knowledge bases let admins distribute curated plugins/contexts across teams.
+
+## Checkpoints
+- Yes
+  - Is it possible to undo actions taken by the agent by using checkpoints or if autocommitted to git, reversing the history ?
+    - Editor undo and local history: any automatic edits suggested by Copilot must be accepted by the user in the editor, and typical editor undo/redo and local history remain available.
+    - PR/commit workflow: when Copilot creates commits or PRs (agent-driven), standard git workflows allow reverting commits, closing or reverting PRs, and using branch-based reviews to avoid autocommit risk.
+    - Preview and review steps: Copilot Chat multi-file edits are surfaced for review before commit in supported integrations; enterprise policies can enforce review gates.
+
+## SpecDrivenDevelopment
+
+

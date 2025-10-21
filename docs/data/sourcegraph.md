@@ -4,6 +4,9 @@ A code intelligence platform for universal code search, navigation, large-scale 
 ## Version
 vN/A (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 - [5] Powerful multi-repo code search and navigation at scale
 - [4] Strong enterprise features (batch changes, code insights, self-hosting)
@@ -78,3 +81,45 @@ Sourcegraph is a platform that provides precise, scalable code search and code n
   - You need precise, enterprise-grade code search and cross-repo navigation across thousands of repositories and many languages.
   - You require large-scale automated code changes (Batch Changes) or engineering metrics (Code Insights).
   - You need an AI assistant that can reason across multiple repositories and provide actionable code suggestions (Cody), and you can accept the vendor/license model.
+
+
+## ContextManagement
+- Yes
+  - Sourcegraph provides multiple methods for managing and updating context:
+    - Search contexts: user-defined or admin-defined named sets of repositories and revisions that limit and focus searches and context retrieval.
+    - Cody context retrieval: blends keyword search and embedding-based semantic search to select relevant files and snippets for prompts (local file context, open repository context, and remote codebase context via the indexed Sourcegraph instance).
+    - Indexing and re-indexing: Sourcegraph continuously indexes repositories; re-indexing keeps file-level and symbol-level context up to date for accurate retrieval.
+    - Repository-level configuration: external services and repository sync settings (repos, repositoryQuery, exclude, excludePersonalRepositories) influence what code is available for context.
+
+## DirectFileReferences
+- Yes
+  - Files can be directly referenced in context via Sourcegraph's code search URLs, search contexts, and repository path references. Cody can include specific files/snippets from the Sourcegraph index into prompts; users and integrations can pass file paths or results from search queries to the assistant.
+
+## Hooks
+- Yes
+  - Sourcegraph exposes lifecycle- and integration-related events via external service syncing and webhook mechanisms (note: the `webhooks` property on external service config has been deprecated in favor of dedicated webhook configuration docs). Webhooks enable event-driven updates for repository changes used by features like code monitoring, and Sourcegraph maintains observability for external HTTP requests.
+
+## SlashCommands
+- Yes
+  - Sourcegraph supports CLI tooling (the `src` CLI and other developer tools) and IDE/browser extension commands that can be triggered by users; while not "slash commands" in the chat app sense, integrations and the Cody assistant expose actionable commands and workflows inside IDEs and the web UI.
+- No
+
+## Subagents
+- Yes
+  - Sourcegraph/Cody architecture supports specialized retrieval and LLM components that act like subagents: semantic retrievers (embeddings), keyword search, and completion-tuned LLMs for chat, code action generation, and multi-repo reasoning. Enterprises can deploy dedicated Cody instances (e.g., self-hosted Cody Enterprise) for tailored workflows.
+
+## CustomModes
+- Yes
+  - Cody and Sourcegraph provide configurable behaviors via deployment choices (self-hosted vs cloud), search contexts, user-defined settings, and extension points. This enables tailoring the assistant's behavior and retrieval scope for specific teams or workflows.
+
+## Plugins
+- Yes
+  - Sourcegraph provides an extensions framework, IDE plugins, and integrations for IDEs (VS Code, JetBrains, Visual Studio) and code hosts (GitHub, GitLab, Bitbucket). These bundle commands, search capabilities, and code intelligence features that operate together with Cody and the platform.
+
+## Checkpoints
+- Yes
+  - Sourcegraph's Batch Changes and code change workflows are designed to be auditable and reversible through version control. Administrators can rely on Git history and repository state to revert changes; self-hosted deployments provide full control over commit histories. There is also support for observability and monitoring of external requests.
+
+## SpecDrivenDevelopment
+- Other
+  - ["Sourcegraph uses a combination of RAG, embeddings and long-context experiments rather than a single spec-driven tool."]

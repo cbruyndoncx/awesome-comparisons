@@ -4,6 +4,9 @@ Nuanced provides compiler-grade code intelligence (call graphs, symbols, types, 
 ## Version
 v— (2025-10-19)
 
+## Classification 
+- Code/Editor
+
 ## Rating
 
 
