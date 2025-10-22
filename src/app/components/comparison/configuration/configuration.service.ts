@@ -9,6 +9,7 @@ import { renderMarkdown, renderMarkdownToText } from '../../../shared/util/markd
 import { Store } from '@ngrx/store';
 import { IUCAppState } from '../../../redux/uc.app-state';
 import { UCDataUpdateAction } from '../../../redux/uc.action';
+import { FeatureGroupingService } from '../../output/feature-grouping.service';
 
 @Injectable()
 export class ConfigurationService {
@@ -96,7 +97,8 @@ export class ConfigurationService {
 
     constructor(public title: Title,
                 private http: HttpClient,
-                private store: Store<IUCAppState>) {
+                private store: Store<IUCAppState>,
+                private featureGroupingService: FeatureGroupingService) {
     }
 
     static getHtml(citation: Map<string, Citation>, markdown: string): string {
@@ -273,6 +275,11 @@ export class ConfigurationService {
                 this.citation,
                 String(result[2]));
 
+            const grouping = this.featureGroupingService.parseGroupedMarkdown({
+                configuration: this.configuration,
+                data: ConfigurationService.data
+            });
+
             // Dispatch redux store action
             this.store.dispatch(
                 new UCDataUpdateAction(
@@ -280,7 +287,8 @@ export class ConfigurationService {
                             map.set(obj.id, obj);
                             return map;
                         },
-                        new Map())
+                        new Map()),
+                    grouping
                 )
             );
             this.store.dispatch(

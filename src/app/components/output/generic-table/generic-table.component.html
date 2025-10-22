@@ -1,3 +1,25 @@
+<div class="group-controls" *ngIf="groups$ | async as groups">
+    <ng-container *ngIf="groups.length > 0">
+        <div class="group-controls__title">Grouping</div>
+        <div class="group-controls__list">
+            <button type="button"
+                    class="group-control"
+                    *ngFor="let group of groups; trackBy: trackGroup"
+                    [class.group-control--expanded]="group.isExpanded"
+                    [class.group-control--excluded]="group.isExcluded"
+                    [disabled]="group.isExcluded"
+                    [attr.aria-expanded]="group.isExpanded"
+                    (click)="toggleGroup(group)">
+                <span class="group-name">{{group.displayName}}</span>
+                <span class="group-indicator" aria-hidden="true">{{groupIndicator(group)}}</span>
+                <span class="sr-only">
+                    {{ group.isExcluded ? 'Unavailable' : (group.isExpanded ? 'Collapse' : 'Expand') }}
+                </span>
+            </button>
+        </div>
+    </ng-container>
+</div>
+
 <table class="table-hover">
     <thead style="background-color: white;">
     <tr>

@@ -1,4 +1,4 @@
-<div class="grid-container">
+<div class="grid-container" *ngIf="store | async as vm">
     <div class="grid-corner">
         <a href="{{configurationService.configuration?.repository}}" class="github-corner">
             <svg width="80" height="80" viewBox="0 0 250 250"
@@ -41,13 +41,13 @@
                                      [placeholder]="criteria.placeholder"
                                      [name]="criteria.name"
                                      [tag]="criteria.id"
-                                     [active]="getActive(store | async, criteria)"
+                                     [active]="getActive(vm, criteria)"
                                      (result)="criteriaChanged($event, criteria)">
                             </select2>
                             <number-input *ngIf="criteria.rangeSearch"
                                           [comparisonComponent]="this"
                                           [name]="criteria.name"
-                                          [active]="getActive(store | async, criteria)"
+                                          [active]="getActive(vm, criteria)"
                                           (result)="criteriaChanged($event, criteria)"
                                           [criteria]="criteria"
                                           [tag]="criteria.id">
@@ -62,15 +62,16 @@
     <div class="grid-large-content">
         <pcard [heading]="configurationService.configuration.tableTitle"
                [symbol]="true"
-               [expand]="(store | async).state.tableExpand"
+               [expand]="vm.state.tableExpand"
                (expandChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'TableExpand'}); deferredUpdate()">
-            <generictable [items]="(store | async).state.currentElements"
-                          [columns]="(store | async).state.currentColumnNames"
-                          [types]="(store | async).state.columnTypes"
-                          [index]="(store | async).state.rowIndexes"
-                          [order]="(store | async).state.columnOrder"
-                          [changeNum]="configurationService.tableColumns.length + (store | async).state.currentColumnNames.length + (settingsOpen? 0: 1) + changed"
-                          [labelColorsEnabled]="(store | async).state.labelColorsEnabled"
+            <generictable [items]="vm.state.currentElements"
+                          [columns]="vm.state.currentColumnNames"
+                          [columnKeys]="vm.state.currentColumns"
+                          [types]="vm.state.columnTypes"
+                          [index]="vm.state.rowIndexes"
+                          [order]="vm.state.columnOrder"
+                          [changeNum]="configurationService.tableColumns.length + vm.state.currentColumnNames.length + (settingsOpen ? 0 : 1) + changed"
+                          [labelColorsEnabled]="vm.state.labelColorsEnabled"
                           (settingsCallback)="settingsOpen = true"
                           (showDetails)="showDetails($event)"
                           (orderChange)="changeOrder($event)"
@@ -84,21 +85,21 @@
         </pcard>
     </div>
 
-    <latextable class="grid-content-latex" *ngIf="(store|async).state.latexDisplayTable || settingsOpen"
+    <latextable class="grid-content-latex" *ngIf="vm.state.latexDisplayTable || settingsOpen"
                 [hidden]="settingsOpen"
-                [items]="(store | async).state.currentElements"
-                [columns]="(store | async).state.currentColumnNames"
-                [types]="(store | async).state.columnTypes"
-                [index]="(store | async).state.rowIndexes"
-                [showTableTooltips]="(store | async).state.latexEnableTooltips"
-                [tableTooltipsAsFootnotes]="(store | async).state.latexTooltipsAsFootnotes"
+                [items]="vm.state.currentElements"
+                [columns]="vm.state.currentColumnNames"
+                [types]="vm.state.columnTypes"
+                [index]="vm.state.rowIndexes"
+                [showTableTooltips]="vm.state.latexEnableTooltips"
+                [tableTooltipsAsFootnotes]="vm.state.latexTooltipsAsFootnotes"
                 #latexTable></latextable>
 
-    <pdialog [opened]="(store | async).state.detailsOpen" *ngIf="(store | async).state.detailsOpen"
+    <pdialog [opened]="vm.state.detailsOpen" *ngIf="vm.state.detailsOpen"
              (openedChange)="closeDetails()">
-        <comparison-details [data]="(store | async).state.detailsData"
-                            [tooltipAsText]="(store | async).state.detailsDisplayTooltips"
-                            [labelColorsEnabled]="(store | async).state.labelColorsEnabled"></comparison-details>
+        <comparison-details [data]="vm.state.detailsData"
+                            [tooltipAsText]="vm.state.detailsDisplayTooltips"
+                            [labelColorsEnabled]="vm.state.labelColorsEnabled"></comparison-details>
     </pdialog>
 
     <pdialog *ngIf="settingsOpen"
@@ -106,17 +107,20 @@
              (openedChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'SettingsOpenChange'}); settingsOpen = !settingsOpen"
              [heading]="'Table Settings'">
         <comparison-settings
-            [columnDisplayAll]="(store | async).state.columnDisplayAll"
-            [columnNames]="(store | async).state.columnNames"
-            [columnsEnabled]="(store | async).state.columnsEnabled"
-            [elementDisplayAll]="(store | async).state.elementDisplayAll"
-            [elementNames]="(store | async).state.elementNames"
-            [elementsEnabled]="(store | async).state.elementsEnabled"
-            [latexDisplayTable]="(store | async).state.latexDisplayTable"
-            [latexEnableTooltips]="(store | async).state.latexEnableTooltips"
-            [latexTooltipsAsFootnotes]="(store | async).state.latexTooltipsAsFootnotes"
-            [detailsDisplayTooltips]="(store | async).state.detailsDisplayTooltips"
-            [labelColorsEnabled]="(store | async).state.labelColorsEnabled"
+            [columnDisplayAll]="vm.state.columnDisplayAll"
+            [columnNames]="vm.state.columnNames"
+            [columnKeys]="vm.state.columnKeys"
+            [columnsEnabled]="vm.state.columnsEnabled"
+            [featureGroups]="vm.state.featureGroups"
+            [groupColumnLookup]="vm.state.groupColumnLookup"
+            [elementDisplayAll]="vm.state.elementDisplayAll"
+            [elementNames]="vm.state.elementNames"
+            [elementsEnabled]="vm.state.elementsEnabled"
+            [latexDisplayTable]="vm.state.latexDisplayTable"
+            [latexEnableTooltips]="vm.state.latexEnableTooltips"
+            [latexTooltipsAsFootnotes]="vm.state.latexTooltipsAsFootnotes"
+            [detailsDisplayTooltips]="vm.state.detailsDisplayTooltips"
+            [labelColorsEnabled]="vm.state.labelColorsEnabled"
             (columnsDisplayAllChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'ColumnDisplayAll'})"
             (columnChange)="store.dispatch({type: 'UPDATE_SETTINGS', value: $event, operation: 'ColumnChange'})"
             (elementsDisplayAllChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'ElementDisplayAll'})"

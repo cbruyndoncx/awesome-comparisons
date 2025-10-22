@@ -3,6 +3,7 @@ import {
     CLICK_ACTION,
     NEW_STATE_ACTION,
     TOGGLE_DETAILS_ACTION,
+    TOGGLE_GROUP,
     UPDATE_DATA,
     UPDATE_ORDER,
     UPDATE_SEARCH,
@@ -10,6 +11,7 @@ import {
 } from './uc.reducers';
 import { IUCAppState } from './uc.app-state';
 import { Criteria, DataElement } from '../../../lib/gulp/model/model.module';
+import { GroupedCriteriaStructure } from '../models/feature-grouping.model';
 
 export class UCAction implements Action {
     type!: string;
@@ -23,7 +25,7 @@ export class UCRouterAction extends UCAction {
 export class UCDataUpdateAction extends UCAction {
     override type = UPDATE_DATA;
 
-    constructor(public criterias: Map<string, Criteria>) {
+    constructor(public criterias: Map<string, Criteria>, public grouping?: GroupedCriteriaStructure) {
         super();
     }
 }
@@ -72,6 +74,14 @@ export class UCDetailsAction extends UCAction {
     override type = TOGGLE_DETAILS_ACTION;
 
     constructor(public data: DataElement) {
+        super();
+    }
+}
+
+export class UCToggleGroupAction extends UCAction {
+    override type = TOGGLE_GROUP;
+
+    constructor(public groupKey: string, public expanded: boolean) {
         super();
     }
 }

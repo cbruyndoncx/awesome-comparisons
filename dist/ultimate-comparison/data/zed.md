@@ -55,6 +55,15 @@ Zed is a modern code editor engineered for low latency and smooth UX. It renders
 ## MCP-Client
 - Yes
   - MCP servers are integrated similar to other extensions like e.g. theming
+
+### Prompts
+- No
+
+### Tools
+- Yes
+
+### Resources
+- No
   
 ## Notes
 - Performance: Uses a GPU-first rendering approach (handcrafted shaders) and is implemented in Rust — developers report substantially lower typing latency and better handling of very large files compared with many existing editors.

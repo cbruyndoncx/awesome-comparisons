@@ -1,5 +1,84 @@
 citations: []
 criteria:
+  - General:
+      name: General Info
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      order: '10'
+      children:
+          - Classification
+          - Version
+          - Repository
+          - Rating
+          - ShortDescription
+          - Description
+          - Languages
+  - Licensing:
+      name: Licensing
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      order: '90'
+      children:
+          - Opensource
+          - License
+          - FreeTrial
+  - Deployment:
+      name: Deployment
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      order: '50'
+      children:
+          - BYOK
+          - LocalOffline
+          - OperatingSystem
+          - VSCodeExt
+          - JetBrainsExt
+          - DownloadableApplication
+          - HostedSaas
+          - MobileVersion   
+  - DeveloperExperience:
+      name: Developer Experience
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      order: '30'
+      children:
+          - ContextManagement
+          - DirectFileReferences
+          - Checkpoints
+          - GitSupport
+  - Extensible:
+      name: Extensible
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Is it possible to extend or customize the system in any way'
+      order: '20'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        'No':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+      children:
+          - Plugins
+          - Hooks
+          - SlashCommands
+          - CustomModes
+          - Subagents
+          - RemoteAgents
+ 
   - Version:
       name: Version
       type: MARKDOWN
@@ -179,23 +258,7 @@ criteria:
         GraphQL:
           color: '#0d0d0d'
           backgroundColor: 'hsl(330, 100%, 70%)'
-  - Extensible:
-      name: Extensible
-      type: LABEL
-      search: true
-      table: true
-      detail: true
-      description: 'Is it possible to extend or customize the system in any way'
-      order: '20'
-      andSearch: false
-      rangeSearch: false
-      values:
-        'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
-        'No':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
+
   - Description:
       name: Description
       type: MARKDOWN
@@ -287,6 +350,70 @@ criteria:
       detail: true
       description: 'Coding tool has built-in MCP client so can connect to MCP servers'
       placeholder: ''
+      order: '21'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'No':
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+      children:
+          - Prompts
+          - Tools
+          - Resources
+  - Prompts:
+      name: Prompts
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: &ref_0
+        template: 'Default description for {}'
+        variables:
+          - name
+      placeholder: &ref_1
+        template: 'Select {} ...'
+        variables:
+          - name
+      order: '21'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'No':
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+  - Tools:
+      name: Tools
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: *ref_0
+      placeholder: *ref_1
+      order: '21'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'No':
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+  - Resources:
+      name: Resources
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: *ref_0
+      placeholder: *ref_1
       order: '21'
       andSearch: false
       rangeSearch: false

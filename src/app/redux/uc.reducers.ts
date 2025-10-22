@@ -8,12 +8,14 @@ import {
     UCRouterAction,
     UCSearchUpdateAction,
     UCSettingsUpdateAction,
-    UCTableOrderAction
+    UCTableOrderAction,
+    UCToggleGroupAction
 } from './uc.action';
 import { isNullOrUndefined } from '../shared/util/null-check';
 import { ConfigurationService } from '../components/comparison/configuration/configuration.service';
 import { ROUTER_NAVIGATION } from '@ngrx/router-store';
 import { Criteria, CriteriaData, CriteriaTypes, DataElement, Label } from '../../../lib/gulp/model/model.module';
+import { FeatureGroupView, GroupedCriteriaStructure } from '../models/feature-grouping.model';
 
 export const UPDATE_SEARCH = 'UPDATE_SEARCH';
 export const UPDATE_MODAL = 'UPDATE_MODAL';
@@ -25,9 +27,10 @@ const UPDATE_ROUTE = 'ROUTER_NAVIGATION';
 export const CLICK_ACTION = 'CLICK_ACTION';
 export const NEW_STATE_ACTION = 'NEW_STATE_ACTION';
 export const TOGGLE_DETAILS_ACTION = 'TOGGLE_DETAILS_ACTION';
+export const TOGGLE_GROUP = 'TOGGLE_GROUP';
 
 const update_actions =
-    [UPDATE_SEARCH, UPDATE_MODAL, UPDATE_FILTER, UPDATE_DATA, UPDATE_ORDER, UPDATE_SETTINGS, CLICK_ACTION, UPDATE_ROUTE];
+    [UPDATE_SEARCH, UPDATE_MODAL, UPDATE_FILTER, UPDATE_DATA, UPDATE_ORDER, UPDATE_SETTINGS, CLICK_ACTION, UPDATE_ROUTE, TOGGLE_GROUP];
 
 let reloadedState = false;
 
@@ -52,12 +55,15 @@ export function masterReducer(state: IUCAppState = new UcAppState(), action: UCA
         case UPDATE_ROUTE:
             state = routeReducer(state, <UCRouterAction>action);
             break;
-        case UPDATE_DATA:
-            state.criterias = (<UCDataUpdateAction>action).criterias;
+        case UPDATE_DATA: {
+            const dataAction = <UCDataUpdateAction>action;
+            state.criterias = dataAction.criterias;
             state = initSettings(state);
+            state = applyGrouping(state, dataAction.grouping);
             state = filterColumns(state);
             state = setDetails(state);
             break;
+        }
         case UPDATE_ORDER:
             state = changeOrder(state, <UCTableOrderAction>action);
             state = sortElements(state);
@@ -114,6 +120,10 @@ export function masterReducer(state: IUCAppState = new UcAppState(), action: UCA
                     state.labelColorsEnabled = act.enable;
                     break;
             }
+            break;
+        case TOGGLE_GROUP:
+            state = toggleGroup(state, <UCToggleGroupAction>action);
+            state = filterColumns(state);
             break;
         case NEW_STATE_ACTION:
             if (!isNullOrUndefined((<UCNewStateAction>action).newState)) {
@@ -271,6 +281,55 @@ function initColumn(state: IUCAppState): IUCAppState {
     return state;
 }
 
+function applyGrouping(state: IUCAppState, grouping?: GroupedCriteriaStructure): IUCAppState {
+    if (isNullOrUndefined(grouping)) {
+        state.featureGroups = [];
+        state.groupColumnLookup = {};
+        state.groupExpanded = {};
+        return state;
+    }
+
+    const existingExpanded = state.groupExpanded || {};
+    const nextExpanded: { [key: string]: boolean } = {};
+    grouping.groups.forEach(group => {
+        const isExpanded = !group.isExcluded && existingExpanded[group.key] === true;
+        nextExpanded[group.key] = isExpanded;
+    });
+
+    state.groupExpanded = nextExpanded;
+    state.groupColumnLookup = grouping.columnGroupMap ? {...grouping.columnGroupMap} : {};
+    state.featureGroups = grouping.groups.map(group => ({
+        ...group,
+        children: group.children ? [...group.children] : [],
+        isExpanded: !group.isExcluded && nextExpanded[group.key] === true
+    }));
+
+    return state;
+}
+
+function toggleGroup(state: IUCAppState, action: UCToggleGroupAction): IUCAppState {
+    if (isNullOrUndefined(state.groupExpanded)) {
+        state.groupExpanded = {};
+    }
+    const group = (state.featureGroups || []).find(g => g.key === action.groupKey);
+    if (isNullOrUndefined(group) || group.isExcluded) {
+        return state;
+    }
+
+    state.groupExpanded[action.groupKey] = action.expanded;
+    state.featureGroups = state.featureGroups.map(existing => {
+        if (existing.key !== action.groupKey) {
+            return existing;
+        }
+        return {
+            ...existing,
+            isExpanded: action.expanded
+        };
+    });
+    state.currentChanged = true;
+    return state;
+}
+
 function putStateIntoURL(state: IUCAppState) {
     let query = '';
     if (state.currentSearch.size > 0) {
@@ -332,6 +391,17 @@ function putStateIntoURL(state: IUCAppState) {
         }
         query = query.substr(0, query.length - 1);
     }
+    const expandedGroups = Object.keys(state.groupExpanded || {}).filter(key => state.groupExpanded[key]);
+    if (expandedGroups.length > 0) {
+        if (query.length > 0) {
+            query += '&';
+        }
+        query += 'groups=';
+        expandedGroups.forEach(groupKey => {
+            query += `${encodeURIComponent(groupKey)},`;
+        });
+        query = query.substr(0, query.length - 1);
+    }
     if (state.detailsOpen && !isNullOrUndefined(state.detailsData)) {
         if (query.length > 0) {
             query += '&';
@@ -353,11 +423,30 @@ function filterColumns(state: IUCAppState, columns: Map<string, boolean> = new M
         return state;
     }
 
-    const currentColumns = [];
-    state.columnKeys.forEach((value, index) => {
-        if (state.columnsEnabled[index]) {
-            currentColumns.push(value);
+    const currentColumns: Array<string> = [];
+    const groupLookup = state.groupColumnLookup || {};
+    const expandedState = state.groupExpanded || {};
+    const excludedGroups = new Set<string>();
+
+    (state.featureGroups || []).forEach(group => {
+        if (group.isExcluded) {
+            excludedGroups.add(group.key);
         }
+    });
+
+    state.columnKeys.forEach((value, index) => {
+        if (!state.columnsEnabled[index]) {
+            return;
+        }
+        const groupKey = groupLookup[value];
+        if (!isNullOrUndefined(groupKey)) {
+            const isExcluded = excludedGroups.has(groupKey);
+            const isExpanded = expandedState[groupKey] === true;
+            if (isExcluded || !isExpanded) {
+                return;
+            }
+        }
+        currentColumns.push(value);
     });
     state.currentColumns = currentColumns;
 
@@ -694,6 +783,7 @@ function routeReducer(state: IUCAppState = new UcAppState(), action: UCRouterAct
     const columns = params.columns || '';
     const maximized = params.hasOwnProperty('maximized') || params.hasOwnProperty('?maximized');
     const order = decodeURIComponent(params.order || params['?order'] || '+id');
+    const groupsParam = decodeURIComponent(params.groups || params['?groups'] || '');
     state.internalLink = params.sectionLink;
 
     search.split(';').map(x => x.trim()).forEach(x => {
@@ -718,6 +808,11 @@ function routeReducer(state: IUCAppState = new UcAppState(), action: UCRouterAct
             crit = values.next().value;
         }
     }
+    state.groupExpanded = {};
+    groupsParam.split(',')
+        .map(x => x.trim())
+        .filter(x => x.length > 0)
+        .forEach(key => state.groupExpanded[key] = true);
     if (!isNullOrUndefined(indices)) {
         for (let i = 0; i < state.elementsEnabled.length; i++) {
             state.loadedElementsEnabled[i] = false;

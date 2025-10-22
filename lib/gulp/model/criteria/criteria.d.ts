@@ -14,6 +14,7 @@ export class Criteria {
   public rangeSearch: boolean;
   public values: Map<string, CriteriaValue>;
   public lock: Map<string, string>;
+  public children: Array<string>;
 
   constructor(id: string,
               type: CriteriaTypes,
@@ -28,6 +29,7 @@ export class Criteria {
               rangeSearch?: boolean,
               values?: Map<string, CriteriaValue>,
               lock?: Map<string, string>,
+              children?: Array<string>,
               useDefaults?: boolean);
 
   public static copy(id: string, name: string, criteria: Criteria);

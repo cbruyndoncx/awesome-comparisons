@@ -6,12 +6,48 @@
                            (checkedChange)="columnsDisplayAllChange.emit($event)"
                            [label]="'All'"></pcheckbox>
             </pitem>
-            <ng-template ngFor let-name [ngForOf]="columnNames" let-i="index">
-                <pitem>
-                    <pcheckbox [checked]="columnsEnabled[i]"
-                               (checkedChange)="columnChange.emit(i)"
-                               [label]="name"></pcheckbox>
-                </pitem>
+            <ng-container *ngIf="groupedColumns.length; else flatColumnList">
+                <div class="group-settings" *ngFor="let row of groupedColumns">
+                    <button type="button"
+                            class="group-settings__header"
+                            [class.group-settings__header--expanded]="row.group.isExpanded"
+                            [class.group-settings__header--excluded]="row.group.isExcluded"
+                            [disabled]="row.group.isExcluded"
+                            (click)="toggleGroup(row.group)">
+                        <span class="group-settings__name">{{row.group.displayName}}</span>
+                        <span class="group-settings__indicator" aria-hidden="true">{{groupIndicator(row.group)}}</span>
+                        <span class="sr-only">{{ row.group.isExcluded ? 'Unavailable' : (row.group.isExpanded ? 'Collapse' : 'Expand') }}</span>
+                    </button>
+                    <div class="group-settings__columns">
+                        <pitem *ngFor="let column of row.columns">
+                            <pcheckbox [checked]="columnsEnabled[column.index]"
+                                       [disabled]="row.group.isExcluded"
+                                       (checkedChange)="columnChange.emit(column.index)"
+                                       [label]="column.name"></pcheckbox>
+                        </pitem>
+                    </div>
+                </div>
+                <div class="group-settings group-settings--ungrouped" *ngIf="ungroupedColumns.length">
+                    <div class="group-settings__header">
+                        <span class="group-settings__name">Other Columns</span>
+                    </div>
+                    <div class="group-settings__columns">
+                        <pitem *ngFor="let column of ungroupedColumns">
+                            <pcheckbox [checked]="columnsEnabled[column.index]"
+                                       (checkedChange)="columnChange.emit(column.index)"
+                                       [label]="column.name"></pcheckbox>
+                        </pitem>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-template #flatColumnList>
+                <ng-template ngFor let-name [ngForOf]="columnNames" let-i="index">
+                    <pitem>
+                        <pcheckbox [checked]="columnsEnabled[i]"
+                                   (checkedChange)="columnChange.emit(i)"
+                                   [label]="name"></pcheckbox>
+                    </pitem>
+                </ng-template>
             </ng-template>
         </div>
     </pcard>

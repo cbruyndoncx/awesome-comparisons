@@ -1,4 +1,5 @@
 import { Criteria, CriteriaData, CriteriaTypes, DataElement } from '../../../lib/gulp/model/model.module';
+import { FeatureGroupView } from '../models/feature-grouping.model';
 
 export interface IUCAppState {
     /**
@@ -84,6 +85,9 @@ export interface IUCAppState {
     columnsEnabled: Array<boolean>;
     columnsEnabledCache: Array<boolean>;
     columnDisplayAll: boolean;
+    featureGroups: Array<FeatureGroupView>;
+    groupExpanded: { [key: string]: boolean };
+    groupColumnLookup: { [columnId: string]: string };
 
     latexDisplayTable: boolean;
     latexEnableTooltips: boolean;
@@ -113,6 +117,9 @@ export class UcAppState implements IUCAppState {
     columnsEnabled: Array<boolean> = [];
     columnsEnabledCache: Array<boolean> = [];
     columnDisplayAll = false;
+    featureGroups: Array<FeatureGroupView> = [];
+    groupExpanded: { [key: string]: boolean } = {};
+    groupColumnLookup: { [columnId: string]: string } = {};
 
     latexDisplayTable = false;
     latexEnableTooltips = false;

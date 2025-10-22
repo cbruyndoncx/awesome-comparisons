@@ -1,6 +1,9 @@
 import { AfterViewChecked, ChangeDetectionStrategy, Component, EventEmitter, Inject, Input, OnChanges, Output } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { Observable } from 'rxjs';
 import { CriteriaData, Label } from '../../../../../lib/gulp/model/model.module';
+import { FeatureGroupingService } from '../feature-grouping.service';
+import { FeatureGroupView } from '../../../models/feature-grouping.model';
 
 @Component({
     selector: 'generictable',
@@ -17,16 +20,23 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
     @Output() orderChange: EventEmitter<any> = new EventEmitter();
 
     @Input() columns: Array<string> = [];
+    @Input() columnKeys: Array<string> = [];
     @Input() types: Array<string> = [];
     @Input() items: Array<Array<CriteriaData>> = [];
     @Input() index: Array<number> = [];
     @Input() order: Array<number> = [];
     @Input() labelColorsEnabled: boolean = true;
 
+    public groups$: Observable<FeatureGroupView[]>;
+    public columnGroupMap$: Observable<Record<string, string>>;
+
     private table;
     private anchorsInitialised = false;
 
-    constructor(@Inject(DOCUMENT) private document: Document) {
+    constructor(@Inject(DOCUMENT) private document: Document,
+                private featureGroupingService: FeatureGroupingService) {
+        this.groups$ = this.featureGroupingService.getGroups();
+        this.columnGroupMap$ = this.featureGroupingService.getColumnGroupMap();
     }
 
     public labelClick(event: MouseEvent, key: Label, index: number) {
@@ -35,6 +45,24 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
 
     public orderClick(e: MouseEvent, value: number) {
         this.orderChange.emit({index: value, ctrl: e.ctrlKey});
+    }
+
+    public toggleGroup(group: FeatureGroupView) {
+        if (group.isExcluded) {
+            return;
+        }
+        this.featureGroupingService.toggleGroup(group.key, !group.isExpanded);
+    }
+
+    public trackGroup(index: number, group: FeatureGroupView) {
+        return group.key;
+    }
+
+    public groupIndicator(group: FeatureGroupView): string {
+        if (group.isExcluded) {
+            return '×';
+        }
+        return group.isExpanded ? '−' : '+';
     }
 
     ngAfterViewChecked(): void {
