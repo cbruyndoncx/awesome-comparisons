@@ -1,7 +1,22 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { ConfigurationService } from '../configuration/configuration.service';
 import { SafeHtml } from '@angular/platform-browser';
-import { Criteria, CriteriaData, CriteriaTypes, DataElement, Label } from '../../../../../lib/gulp/model/model.module';
+import { Criteria, CriteriaData, DataElement, Label } from '../../../../../lib/gulp/model/model.module';
+
+interface DetailSection {
+    criteria: Criteria;
+    data: CriteriaData;
+    type: string;
+}
+
+interface DetailGroup {
+    key: string;
+    name: string;
+    labelText: string;
+    labelTooltip?: string;
+    excluded: boolean;
+    sections: DetailSection[];
+}
 
 @Component({
     selector: 'comparison-details',
@@ -17,12 +32,14 @@ export class ComparisonDetailsComponent implements OnChanges {
 
     @Input() bodyTitle: string = ''
 
-    @Input() tags: Array<CriteriaData> = [];
-    @Input() types: Array<CriteriaTypes>;
-    @Input() headers: Array<string> = [];
     //@Input() ratings: Array<number> = [];
     @Input() tooltipAsText: boolean = true;
     @Input() labelColorsEnabled: boolean = true;
+
+    public groupedSections: DetailGroup[] = [];
+    public ungroupedSections: DetailSection[] = [];
+
+    private static readonly EXCLUDED_LABELS = new Set(['no', 'none', 'n/a']);
 
     constructor(public configurationService: ConfigurationService) {
     }
@@ -47,31 +64,88 @@ export class ComparisonDetailsComponent implements OnChanges {
             this.descriptionCriteria = configuration.getCriteria(body.bodyRef);
 
 
-            // Set tags (remaining criteriaData)
-            const tags: Array<CriteriaData> = [];
-            const types: Array<CriteriaTypes> = [];
-            const headers: Array<string> = [];
+            const groupedOrder: DetailGroup[] = [];
+            const assignedIds: Set<string> = new Set<string>();
 
             configuration.criteria.forEach(criteria => {
+                if (!Array.isArray(criteria.children) || criteria.children.length === 0) {
+                    return;
+                }
+                const sections: DetailSection[] = [];
+                criteria.children.forEach(childId => {
+                    const childCriteria = configuration.getCriteria(childId);
+                    if (!childCriteria || !childCriteria.detail) {
+                        return;
+                    }
+                    const childData = criteriaDataMap.get(childCriteria.name) || criteriaDataMap.get(childCriteria.id);
+                    if (!childData) {
+                        return;
+                    }
+                    sections.push({
+                        criteria: childCriteria,
+                        data: childData,
+                        type: (childCriteria.type || '').toUpperCase()
+                    });
+                    assignedIds.add(childCriteria.id);
+                });
+                if (sections.length === 0) {
+                    return;
+                }
+                const parentData = criteriaDataMap.get(criteria.name) || criteriaDataMap.get(criteria.id);
+                const meta = this.extractGroupLabel(parentData);
+                groupedOrder.push({
+                    key: criteria.id,
+                    name: criteria.name || criteria.id,
+                    labelText: meta.text,
+                    labelTooltip: meta.tooltip,
+                    excluded: meta.excluded,
+                    sections
+                });
+                assignedIds.add(criteria.id);
+            });
+
+            const ungrouped: DetailSection[] = [];
+            configuration.criteria.forEach(criteria => {
                 if (!criteria.detail || criteria.id === body.bodyRef) {
+                    return;
+                }
+                if (assignedIds.has(criteria.id)) {
                     return;
                 }
                 const criteriaData = criteriaDataMap.get(criteria.name) || criteriaDataMap.get(criteria.id);
                 if (!criteriaData) {
                     return;
                 }
-                tags.push(criteriaData);
-                types.push(criteria.type);
-                if (criteriaData.type !== CriteriaTypes.RATING) {
-                    headers.push(criteria.name && criteria.name.length > 0 ? criteria.name : criteria.id);
-                } else {
-                    headers.push(criteria.name && criteria.name.length > 0 ? criteria.name : criteria.id);
-                }
+                ungrouped.push({
+                    criteria,
+                    data: criteriaData,
+                    type: (criteria.type || '').toUpperCase()
+                });
             });
-            this.tags = tags;
-            this.types = types;
-            this.headers = headers;
+
+            this.groupedSections = groupedOrder;
+            this.ungroupedSections = ungrouped;
         }
+    }
+
+    private extractGroupLabel(labelData?: CriteriaData) {
+        let text = '';
+        let tooltip: string | undefined;
+        if (labelData) {
+            if (labelData.labels && labelData.labels.size > 0) {
+                const firstLabel = labelData.labels.values().next().value as Label;
+                if (firstLabel) {
+                    text = firstLabel.name || '';
+                    tooltip = firstLabel.tooltip?.text || firstLabel.tooltip?.plain || undefined;
+                }
+            }
+            if (!text) {
+                text = labelData.tableText || labelData.summaryText || labelData.text || '';
+            }
+        }
+        const normalized = (text || '').trim().toLowerCase();
+        const excluded = ComparisonDetailsComponent.EXCLUDED_LABELS.has(normalized);
+        return { text, tooltip, excluded };
     }
 
     public prefixInternalLink(safeHtml: SafeHtml): SafeHtml {

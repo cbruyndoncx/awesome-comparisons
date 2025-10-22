@@ -47,7 +47,7 @@ export class FeatureGroupingService {
 
                 children.forEach(child => columnGroupMap[child.id] = criteria.id);
 
-                const summary = groupSummaries.get(criteria.id);
+                const summary = groupSummaries.get(criteria.id) || groupSummaries.get(criteria.name);
                 const labelValues = summary?.labels ? Array.from(summary.labels) : [];
                 const firstLabel = this.findFirstLabel(dataElements, criteria.id);
                 const label = this.buildLabelMetadata(criteria, firstLabel, labelValues);
@@ -87,7 +87,7 @@ export class FeatureGroupingService {
                 }
             });
 
-            const criteria = criteriaIndex.get(groupKey);
+            const criteria = criteriaIndex.get(groupKey) || Array.from(criteriaIndex.values()).find(item => item.name === groupKey);
             const labelValues = summary.labels ? Array.from(summary.labels) : [];
             const firstLabel = this.findFirstLabel(dataElements, groupKey);
             const label = this.buildLabelMetadata(criteria, firstLabel, labelValues);

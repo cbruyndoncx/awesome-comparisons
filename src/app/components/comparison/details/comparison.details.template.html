@@ -26,56 +26,76 @@
              class="description"></div>
     </pcard>
 
-    <ng-template ngFor let-entry [ngForOf]="tags" let-i="index">
-        <pcard heading="{{headers[i]}}">
-            <div class="card-content">
-                <a *ngIf="types[i] === 'url'" class="anchored"
-                   href="{{entry.link}}"
-                   target="_blank">{{entry.text}}</a>
-                <ng-container *ngIf="types[i] === 'LABEL' || types[i] === 'REPOSITORY'">
-                    <ng-container *ngIf="entry?.labelArray?.length; else missingDetailLabel">
-                        <ng-container *ngFor="let label of entry?.labelArray">
-                            <ptooltip *ngIf="!tooltipAsText"
-                                      [tooltip]="label.tooltip.text"
-                                      [tooltipHtml]="prefixInternalLink(label.tooltip.html)" [position]="'n'">
-                                <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
-                                     [style.color]="labelColorsEnabled ? label.color : null"
-                                     [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
-                                    {{label.name}}
-                                </div>
-                            </ptooltip>
-                            <div *ngIf="tooltipAsText" class="tt-container">
+    <ng-template #sectionContent let-section>
+        <div class="card-content">
+            <a *ngIf="section.type === 'NAME_URL' || section.type === 'URL'" class="anchored"
+               href="{{section.data.link}}"
+               target="_blank">{{section.data.text}}</a>
+
+            <ng-container *ngIf="section.type === 'LABEL' || section.type === 'REPOSITORY'">
+                <ng-container *ngIf="section.data?.labelArray?.length; else missingDetailLabel">
+                    <ng-container *ngFor="let label of section.data?.labelArray">
+                        <ptooltip *ngIf="!tooltipAsText"
+                                  [tooltip]="label.tooltip.text"
+                                  [tooltipHtml]="prefixInternalLink(label.tooltip.html)" [position]="'n'">
+                            <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
+                                 [style.color]="labelColorsEnabled ? label.color : null"
+                                 [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
+                                {{label.name}}
+                            </div>
+                        </ptooltip>
+                        <div *ngIf="tooltipAsText" class="tt-container">
                                 <span class="label mylabel {{label.clazz}} tt-label" [class.label--plain]="!labelColorsEnabled"
                                       [style.color]="labelColorsEnabled ? label.color : null"
                                       [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
-                                {{label.name}}
+                                    {{label.name}}
                                 </span>
-                                <span class="tooltip-text tt-tooltip" [innerHtml]="label.tooltip.text|sanitizeHtml"></span>
-                                <br *ngIf="label.tooltip.text && label.tooltip.html">
-                                <span class="tooltip-text tt-tooltip" [innerHtml]="prefixInternalLink(label.tooltip.html|sanitizeHtml)"></span>
-                            </div>
-                        </ng-container>
+                            <span class="tooltip-text tt-tooltip" [innerHtml]="label.tooltip.text|sanitizeHtml"></span>
+                            <br *ngIf="label.tooltip.text && label.tooltip.html">
+                            <span class="tooltip-text tt-tooltip" [innerHtml]="prefixInternalLink(label.tooltip.html|sanitizeHtml)"></span>
+                        </div>
                     </ng-container>
-                    <ul *ngIf="entry?.detailLabels?.length" class="detail-list">
-                        <li *ngFor="let detail of entry.detailLabels">{{detail.name}}</li>
-                    </ul>
-                    <div class="repository-links" *ngIf="entry?.type === 'REPOSITORY' && entry?.urlList?.length">
-                        <a *ngFor="let link of entry.urlList" [href]="link" target="_blank" rel="noopener noreferrer">{{link}}</a>
-                    </div>
                 </ng-container>
-                <ng-template #missingDetailLabel>
-                    <div class="label mylabel label--missing">Missing</div>
-                </ng-template>
+                <ul *ngIf="section.data?.detailLabels?.length" class="detail-list">
+                    <li *ngFor="let detail of section.data.detailLabels">{{detail.name}}</li>
+                </ul>
+                <div class="repository-links" *ngIf="section.data?.type === 'REPOSITORY' && section.data?.urlList?.length">
+                    <a *ngFor="let link of section.data.urlList" [href]="link" target="_blank" rel="noopener noreferrer">{{link}}</a>
+                </div>
+            </ng-container>
 
-                <span *ngIf="types[i] === 'TEXT'">{{entry.content}}</span>
+            <span *ngIf="section.type === 'TEXT'">{{section.data.content}}</span>
 
-                <span *ngIf="types[i] === 'MARKDOWN'"
-                      [innerHtml]="prefixInternalLink(entry?.html | sanitizeHtml)"></span>
+            <span *ngIf="section.type === 'MARKDOWN'"
+                  [innerHtml]="prefixInternalLink(section.data?.html | sanitizeHtml)"></span>
 
-                <span *ngIf="types[i] === 'RATING'" [innerHtml]="prefixInternalLink(entry?.html | sanitizeHtml)"></span>
+            <span *ngIf="section.type === 'RATING'" [innerHtml]="prefixInternalLink(section.data?.html | sanitizeHtml)"></span>
+        </div>
+    </ng-template>
+
+    <ng-template #missingDetailLabel>
+        <div class="label mylabel label--missing">Missing</div>
+    </ng-template>
+
+    <div class="grouped-sections" *ngIf="groupedSections.length">
+        <pcard class="group-card" *ngFor="let group of groupedSections" [heading]="group.name">
+            <div class="group-card__header" *ngIf="group.labelText">
+                <span class="group-card__label" [attr.title]="group.labelTooltip || null">{{group.labelText}}</span>
+            </div>
+            <div class="group-card__sections">
+                <div class="group-card__section" *ngFor="let section of group.sections">
+                    <h4 class="group-card__section-title">{{section.criteria.name || section.criteria.id}}</h4>
+                    <ng-container *ngTemplateOutlet="sectionContent; context: {$implicit: section}"></ng-container>
+                </div>
             </div>
         </pcard>
-    </ng-template>
+    </div>
+
+    <ng-container *ngFor="let section of ungroupedSections">
+        <pcard [heading]="section.criteria.name || section.criteria.id">
+            <ng-container *ngTemplateOutlet="sectionContent; context: {$implicit: section}"></ng-container>
+        </pcard>
+    </ng-container>
 
     <pcard heading="References" *ngIf="configurationService.configuration.citation?.length" class="description">
         <referencestable [changeNum]="configurationService.configuration.citation.length"

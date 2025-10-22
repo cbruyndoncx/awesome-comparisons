@@ -76,20 +76,54 @@
 
 .grid-content {
     display: grid;
-    grid-template-columns: auto;
-    grid-column-gap: 10px;
+    grid-template-columns: 1fr;
     grid-row-gap: 10px;
     grid-auto-flow: row;
 }
 
-@media only screen and (min-width: 400px) {
-    .description {
-        grid-column: span 2;
-    }
+.grouped-sections {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
 
-    .grid-content {
-        grid-template-columns: 1fr 1fr;
-    }
+.group-card__header {
+    margin-bottom: 8px;
+}
+
+.group-card__label {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background-color: #e0e0e0;
+    color: #424242;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.group-card__sections {
+    display: grid;
+    gap: 12px;
+}
+
+.group-card__section {
+    border-top: 1px solid #e6e6e6;
+    padding-top: 8px;
+}
+
+.group-card__section:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.group-card__section-title {
+    margin: 0 0 6px 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 400px) {
 }
 
 .tt-container {
