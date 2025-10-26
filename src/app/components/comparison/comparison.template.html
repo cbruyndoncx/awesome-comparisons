@@ -214,10 +214,6 @@
         </pcard>
     </div>
     <div class="grid-content-end">
-        <pcard heading="References" *ngIf="configurationService.configuration.citation?.length">
-            <referencestable [changeNum]="configurationService.configuration.citation.length"
-                             [citationMap]="configurationService.configuration.citation"></referencestable>
-        </pcard>
     </div>
 
     <latextable class="grid-content-latex" *ngIf="vm.state.latexDisplayTable || settingsOpen"

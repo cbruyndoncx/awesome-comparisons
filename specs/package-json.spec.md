@@ -62,7 +62,6 @@ Runtime Babel packages required for gulp to transpile ES modules during data pro
 Runtime dependencies for data processing and content export functionality.
 
 - Gulp build system (gulp, gulp-exec, gulp-rename)
-- Citation processing with citation-js
 - Date handling with moment
 - Markdown processing via in-house helper (no external dependency)
 - Utility functions with lodash

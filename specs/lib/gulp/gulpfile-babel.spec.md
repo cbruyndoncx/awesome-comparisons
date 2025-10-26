@@ -71,9 +71,8 @@ Provides file watching capabilities for development workflow.
 - Watches configuration files and triggers config rebuild [@test](./tests/watch-tasks.spec.js)
 - Watches description files and triggers description rebuild [@test](./tests/watch-tasks.spec.js)
 - Watches style files and triggers asset rebuild [@test](./tests/watch-tasks.spec.js)
-- Watches citation files and triggers citation rebuild [@test](./tests/watch-tasks.spec.js)
 - Uses glob patterns to watch files in nested directories [@test](./tests/watch-tasks.spec.js)
-- Monitors multiple file types including .md, .yml, .css, .bib, and .csl [@test](./tests/watch-tasks.spec.js)
+- Monitors multiple file types including .md, .yml, and .css [@test](./tests/watch-tasks.spec.js)
 
 ### Task Orchestration
 
@@ -114,7 +113,6 @@ gulp.task('update-data', function () { /* watch markdown files */ });
 gulp.task('update-config', function () { /* watch config files */ });
 gulp.task('update-description', function () { /* watch description files */ });
 gulp.task('update-style', function () { /* watch style files */ });
-gulp.task('update-citation', function () { /* watch citation files */ });
 gulp.task('update', gulp.parallel(/* all update tasks */));
 gulp.task('dev', gulp.series(copyDist, 'default', 'update'));
 

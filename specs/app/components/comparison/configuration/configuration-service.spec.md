@@ -1,6 +1,6 @@
 # Configuration Service
 
-Angular service responsible for loading and processing comparison configuration data, including markdown content handling with citation support and data transformation for the comparison interface.
+Angular service responsible for loading and processing comparison configuration data, including markdown content handling and data transformation for the comparison interface.
 
 ## Target
 
@@ -18,15 +18,12 @@ Loads configuration, data, and description files from HTTP endpoints and process
 - Processes all files concurrently using Promise.all [@test](./configuration-service.test.ts)
 - Triggers change detection after loading completes [@test](./configuration-service.test.ts)
 
-### Process markdown content with citations
+### Process markdown content
 
-Converts markdown content to HTML and LaTeX formats while handling citation references.
+Converts markdown content to HTML and plain text formats for UI and export consumption.
 
 - Converts markdown to HTML using the markdown helper [@test](./configuration-service.test.ts)
-- Replaces [@citation] patterns with HTML citation links [@test](./configuration-service.test.ts)
-- Converts markdown to plain text for LaTeX output [@test](./configuration-service.test.ts)
-- Replaces [@citation] patterns with LaTeX \cite{} commands [@test](./configuration-service.test.ts)
-- Handles missing citations with error messages [@test](./configuration-service.test.ts)
+- Converts markdown to plain text for LaTeX/export output [@test](./configuration-service.test.ts)
 - Returns empty string for null or undefined input [@test](./configuration-service.test.ts)
 
 ### Transform data elements
@@ -62,7 +59,6 @@ export class ConfigurationService {
     public description: string;
     public criteria: Array<Criteria>;
     public configuration: Configuration;
-    public citation: Map<string, Citation>;
     public tableColumns: Array<string>;
     public criteriaValues: Array<Array<{ id: string, text: string, criteriaValue: CriteriaValue }>>;
 
@@ -72,7 +68,7 @@ export class ConfigurationService {
         private store: Store<IUCAppState>
     );
 
-    static getHtml(citation: Map<string, Citation>, markdown: string): string;
+    static getHtml(markdown: string): string;
     static getLatex(text: string): string;
     
     public loadComparison(cd: ChangeDetectorRef): void;

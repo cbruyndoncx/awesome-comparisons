@@ -50,9 +50,6 @@ A `comparison.yml` has following attributes:
     - `title`: The heading of the used field (1)
     - `bodyRef`: The field to use as content of the body (2). The default configuration points to `ShortDescription`, which is populated from the first paragraph of each comparison entry.
   ![Details body construction](https://cdn.rawgit.com/ultimate-comparisons/ultimate-comparison-BASE/85cc1e93/docs/images/detailsbody.png)
-- `citation`: Configures the citation of sources
-    - `csl`: The style of the citation as [bibtex](http://www.bibtex.org/) class. Example classes: https://github.com/citation-style-language/styles
-    - `bib`: The file containing the used sources in [bibtex](http://www.bibtex.org/) style
 - `criteria`: List of fields that all comparison elements use. The attributes for each criteria are:
     - `name`: The display name of the criteria. Type: `string` (1)
     - `search`: Whether a text box should be added to the search form. Allowed values: `true` (1), `false`

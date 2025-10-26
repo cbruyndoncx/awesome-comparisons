@@ -97,8 +97,4 @@
         </pcard>
     </ng-container>
 
-    <pcard heading="References" *ngIf="configurationService.configuration.citation?.length" class="description">
-        <referencestable [changeNum]="configurationService.configuration.citation.length"
-                         [citationMap]="configurationService.configuration.citation" [prefix]="'details-'"></referencestable>
-    </pcard>
 </div>

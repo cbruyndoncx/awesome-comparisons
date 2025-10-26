@@ -14,11 +14,6 @@ details:
     title: Short Description
     bodyRef: ShortDescription
   tooltipAsText: false
-
-citation:
-  csl: acm-siggraph.csl
-  bib: literature.bib
-
 criteria:
   - id:
       name: Name

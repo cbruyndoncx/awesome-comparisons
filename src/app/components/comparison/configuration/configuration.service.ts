@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 
-import { Citation, Configuration, Criteria, CriteriaTypes, CriteriaValue, Data, Label } from '../../../../../lib/gulp/model/model.module';
+import { Configuration, Criteria, CriteriaTypes, CriteriaValue, Data, Label } from '../../../../../lib/gulp/model/model.module';
 
 import { isNullOrUndefined } from '../../../shared/util/null-check';
 import { renderMarkdown, renderMarkdownToText } from '../../../shared/util/markdown';
@@ -17,7 +17,6 @@ export class ConfigurationService {
     public description = '';
     public criteria: Array<Criteria> = [];
     public configuration: Configuration = Configuration.empty();
-    public citation: Map<string, Citation> = new Map();
 
     public tableColumns: Array<string> = [];
     public criteriaValues: Array<Array<{ id: string, text: string, criteriaValue: CriteriaValue }>>;
@@ -101,28 +100,18 @@ export class ConfigurationService {
                 private featureGroupingService: FeatureGroupingService) {
     }
 
-    static getHtml(citation: Map<string, Citation>, markdown: string): string {
+    static getHtml(markdown: string): string {
         if (isNullOrUndefined(markdown)) {
             return '';
         }
-        const html = renderMarkdown(markdown.toString());
-        return html.replace(/(?:\[@)([^\]]*)(?:\])/g, (match, dec) => {
-            if (citation.has(dec)) {
-                return '<a class="cite-link" href="#' + dec + '">[' + citation.get(dec).index + ']</a>';
-            } else {
-                return '<a class="cite-link">[Missing Reference for "' + match + '"]</a>';
-            }
-        });
+        return renderMarkdown(markdown.toString());
     }
 
     static getLatex(text: string): string {
         if (isNullOrUndefined(text)) {
             return null;
         }
-        const plainText = renderMarkdownToText(text.toString());
-        return plainText.replace(/(?:\[@)([^\]]*)(?:\])/g, (match, dec) => {
-            return '\\cite{' + dec + '}';
-        });
+        return renderMarkdownToText(text.toString());
     }
 
     public loadComparison(cd: ChangeDetectorRef) {
@@ -198,17 +187,12 @@ export class ConfigurationService {
                     };
                 })
             );
-            this.citation = this.configuration.citation.reduce((map, obj) => {
-                map.set(obj.key, obj);
-                return map;
-            }, new Map());
-
             // Set data model
             ConfigurationService.data = Data.loadJson(result[1], this.configuration);
             ConfigurationService.data.dataElements = ConfigurationService.data.dataElements.map(dataElement => {
                     // Build html strings and labelArrays
                     dataElement.html = ConfigurationService.getHtml(
-                        this.citation, dataElement.shortDescription
+                        dataElement.shortDescription
                     );
                     dataElement.latex = ConfigurationService.getLatex(
                         dataElement.shortDescription
@@ -219,7 +203,6 @@ export class ConfigurationService {
                             case CriteriaTypes.MARKDOWN:
                             case CriteriaTypes.RATING:
                                 criteriaData.html = ConfigurationService.getHtml(
-                                    this.citation,
                                     criteriaData.text
                                 );
                                 criteriaData.latex = ConfigurationService.getLatex(
@@ -238,7 +221,6 @@ export class ConfigurationService {
                                 const detailLabels: Array<Label> = [];
                                 criteriaData.labels.forEach((label, key) => {
                                     label.tooltip.html = ConfigurationService.getHtml(
-                                        this.citation,
                                         label.tooltip.plain
                                     );
                                     const recognized = !!criteria && !!criteria.values && criteria.values.has(key);
@@ -272,7 +254,6 @@ export class ConfigurationService {
 
             // Set description
             this.description = ConfigurationService.getHtml(
-                this.citation,
                 String(result[2]));
 
             const grouping = this.featureGroupingService.parseGroupedMarkdown({
