@@ -33,7 +33,7 @@ export class UCDataUpdateAction extends UCAction {
 export class UCSearchUpdateAction extends UCAction {
     override type = UPDATE_SEARCH;
 
-    constructor(public criterias: Map<string, string>) {
+    constructor(public criterias: Map<string, string | null>) {
         super();
     }
 }

@@ -20,6 +20,9 @@ export class ComparisonComponent {
     static instance;
 
     public repository: string;
+    public collapsedFilterGroups: { [groupKey: string]: boolean } = {};
+    public ungroupedCollapsed: boolean = false;
+    public filtersCollapsed: boolean = false;
 
     @ViewChild(LatexTableComponent) latexTable: LatexTableComponent;
     @ViewChild('genericTableHeader') genericTableHeader: PaperCardComponent;
@@ -46,7 +49,7 @@ export class ComparisonComponent {
     }
 
     public criteriaChanged(value: string, crit: Criteria) {
-        const map = new Map<string, string>();
+        const map = new Map<string, string | null>();
         map.set(crit.id, value || null);
         this.store.dispatch(new UCSearchUpdateAction(map));
         this.cd.markForCheck();
@@ -151,5 +154,95 @@ export class ComparisonComponent {
             return '';
         }
         return criteria.rangeSearch ? (criteria.placeholder || '') : '';
+    }
+
+    public toggleGroupCollapse(group: FeatureGroupView): void {
+        if (!group) {
+            return;
+        }
+        const nextState = !this.isGroupCollapsed(group);
+        this.collapsedFilterGroups = {
+            ...this.collapsedFilterGroups,
+            [group.key]: nextState
+        };
+    }
+
+    public isGroupCollapsed(group: FeatureGroupView): boolean {
+        if (!group || !group.key) {
+            return false;
+        }
+        return this.collapsedFilterGroups[group.key] === true;
+    }
+
+    public toggleUngroupedCollapse(): void {
+        this.ungroupedCollapsed = !this.ungroupedCollapsed;
+    }
+
+    public isUngroupedCollapsed(): boolean {
+        return this.ungroupedCollapsed;
+    }
+
+    public collapseIndicator(collapsed: boolean): string {
+        return collapsed ? '+' : '\u2212';
+    }
+
+    public toggleFiltersCollapsed(): void {
+        this.filtersCollapsed = !this.filtersCollapsed;
+    }
+
+    public resetCriteriaSelections(): void {
+        const clearMap = new Map<string, string | null>();
+        (this.configurationService.criteria || [])
+            .filter(criteria => criteria.search)
+            .forEach(criteria => clearMap.set(criteria.id, null));
+        if (clearMap.size === 0) {
+            return;
+        }
+        this.store.dispatch(new UCSearchUpdateAction(clearMap));
+        this.cd.markForCheck();
+    }
+
+    public hasActiveFilters(searchState: Map<string, Set<string>>): boolean {
+        if (!searchState) {
+            return false;
+        }
+        for (const [, values] of searchState.entries()) {
+            if (values && values.size > 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public setAllGroupCollapse(groups: FeatureGroupView[] = [], collapse: boolean = false): void {
+        const nextState = {...this.collapsedFilterGroups};
+        this.relevantFilterGroups(groups).forEach(group => {
+            nextState[group.key] = collapse;
+        });
+        this.collapsedFilterGroups = nextState;
+
+        if (this.getUngroupedCriteria(groups).length > 0) {
+            this.ungroupedCollapsed = collapse;
+        }
+    }
+
+    public areAllFilterGroupsCollapsed(groups: FeatureGroupView[]): boolean {
+        const relevantGroups = this.relevantFilterGroups(groups);
+        const hasUngrouped = this.getUngroupedCriteria(groups).length > 0;
+        const groupsCollapsed = relevantGroups.length === 0 || relevantGroups.every(group => this.isGroupCollapsed(group));
+        const otherCollapsed = !hasUngrouped || this.isUngroupedCollapsed();
+        return groupsCollapsed && otherCollapsed;
+    }
+
+    public areAllFilterGroupsExpanded(groups: FeatureGroupView[]): boolean {
+        const relevantGroups = this.relevantFilterGroups(groups);
+        const hasUngrouped = this.getUngroupedCriteria(groups).length > 0;
+        const groupsExpanded = relevantGroups.length === 0 || relevantGroups.every(group => !this.isGroupCollapsed(group));
+        const otherExpanded = !hasUngrouped || !this.isUngroupedCollapsed();
+        return groupsExpanded && otherExpanded;
+    }
+
+    private relevantFilterGroups(groups: FeatureGroupView[] = []): FeatureGroupView[] {
+        return (groups || []).filter(group => !!group && !group.isExcluded && this.groupHasSearchableChildren(group));
     }
 }

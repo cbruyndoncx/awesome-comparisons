@@ -859,22 +859,33 @@ function detailsReducer(state: IUCAppState = new UcAppState(), action: UCAction)
 function searchReducer(state: IUCAppState = new UcAppState(), action: UCSearchUpdateAction) {
     for (const [key, value] of action.criterias) {
         const elements = state.currentSearch.get(key) || new Set<string>();
-        if (state.criterias.get(key).rangeSearch) {
-            if (isNullOrUndefined(value) || value.length === 0) {
+        const criteria = state.criterias.get(key);
+        if (isNullOrUndefined(criteria)) {
+            continue;
+        }
+
+        if (value === null) {
+            state.currentSearch.delete(key);
+            continue;
+        }
+
+        if (criteria.rangeSearch) {
+            if (value.length === 0) {
                 state.currentSearch.delete(key);
             } else {
                 state.currentSearch.set(key, new Set([value]));
             }
+            continue;
+        }
+
+        if (elements.has(value)) {
+            elements.delete(value);
         } else {
-            if (value !== null && elements.has(value)) {
-                elements.delete(value);
-            } else if (value !== null) {
-                const elements = state.currentSearch.get(key);
-                if (isNullOrUndefined(elements)) {
-                    state.currentSearch.set(key, new Set([value]));
-                } else {
-                    elements.add(value);
-                }
+            const existing = state.currentSearch.get(key);
+            if (isNullOrUndefined(existing)) {
+                state.currentSearch.set(key, new Set([value]));
+            } else {
+                existing.add(value);
             }
         }
     }
