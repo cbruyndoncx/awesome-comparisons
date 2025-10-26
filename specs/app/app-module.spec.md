@@ -24,7 +24,7 @@ Imports essential Angular and application modules:
 ### Configures Routing
 
 Sets up application routing with default route configuration:
-- Default empty path ('') renders ComparisonComponent
+- Default empty path ('') renders DatasetShellComponent so the wrapper can manage dataset selection before showing the comparison UI
 - Integrates router state with ngrx store
 
 ### Provides Application Configuration
@@ -45,7 +45,7 @@ import { StoreRouterConnectingModule, RouterStateSerializer } from '@ngrx/router
 
 import { AppComponent } from './app.component';
 import { ComparisonModule } from './components/comparison/comparison.module';
-import { ComparisonComponent } from './components/comparison/comparison.component';
+import { DatasetShellComponent } from './components/datasets/dataset-shell.component';
 import { masterReducer } from './redux/uc.reducers';
 import { CustomRouterStateSerializer } from './redux/custom-router-state-serializer';
 
@@ -55,7 +55,7 @@ import { CustomRouterStateSerializer } from './redux/custom-router-state-seriali
     ComparisonModule,
     RouterModule.forRoot(
       [
-        { path: '', component: ComparisonComponent }
+        { path: '', component: DatasetShellComponent }
       ],
       { useHash: false }
     ),
@@ -82,7 +82,10 @@ import { CustomRouterStateSerializer } from './redux/custom-router-state-seriali
       useClass: CustomRouterStateSerializer
     }
   ],
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    DatasetShellComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
@@ -98,9 +101,9 @@ Application root component that serves as the bootstrap component.
 Feature module containing comparison functionality and components.  
 [@use](./components/comparison/comparison.module)
 
-### ComparisonComponent  
-Component rendered for the default route.  
-[@use](./components/comparison/comparison.component)
+### DatasetShellComponent  
+Wrapper component that manages dataset selection and renders the ComparisonComponent.  
+[@use](./components/datasets/dataset-shell.component.ts)
 
 ### Master Reducer  
 Root reducer for the application state management.  
@@ -109,3 +112,15 @@ Root reducer for the application state management.
 ### Custom Router State Serializer  
 Custom serializer for router state integration with ngrx store.  
 [@use](./redux/custom-router-state-serializer)
+
+### Angular Core & Router  
+Framework modules required for bootstrapping and routing.  
+[@use](../../package.json#@angular/core)  
+[@use](../../package.json#@angular/platform-browser)  
+[@use](../../package.json#@angular/router)  
+[@use](../../package.json#@angular/common)
+
+### NgRx Store  
+State management modules used by the application.  
+[@use](../../package.json#@ngrx/store)  
+[@use](../../package.json#@ngrx/router-store)

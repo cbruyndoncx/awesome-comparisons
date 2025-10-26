@@ -10,6 +10,9 @@ import { Store } from '@ngrx/store';
 import { IUCAppState } from '../../../redux/uc.app-state';
 import { UCDataUpdateAction } from '../../../redux/uc.action';
 import { FeatureGroupingService } from '../../output/feature-grouping.service';
+import { DatasetManifestService, DatasetManifestEntry } from '../../datasets/dataset-manifest.service';
+import { Subscription } from 'rxjs';
+import { distinctUntilChanged } from 'rxjs/operators';
 
 @Injectable()
 export class ConfigurationService {
@@ -20,6 +23,10 @@ export class ConfigurationService {
 
     public tableColumns: Array<string> = [];
     public criteriaValues: Array<Array<{ id: string, text: string, criteriaValue: CriteriaValue }>>;
+
+    private datasetSubscription: Subscription | null = null;
+    private latestChangeDetector: ChangeDetectorRef | null = null;
+    private currentDatasetId: string | null = null;
 
     private static resolveTemplateValue(value: any, context: Record<string, any>): string {
         if (isNullOrUndefined(value)) {
@@ -97,7 +104,8 @@ export class ConfigurationService {
     constructor(public title: Title,
                 private http: HttpClient,
                 private store: Store<IUCAppState>,
-                private featureGroupingService: FeatureGroupingService) {
+                private featureGroupingService: FeatureGroupingService,
+                private datasetManifestService: DatasetManifestService) {
     }
 
     static getHtml(markdown: string): string {
@@ -115,172 +123,196 @@ export class ConfigurationService {
     }
 
     public loadComparison(cd: ChangeDetectorRef) {
-        Promise.all(
-            [
-                this.http.get('assets/generated/comparison.json'),
-                this.http.get('assets/generated/data.json'),
-                this.http.get('assets/generated/description.md', {responseType: 'text'})
-            ].map(res => res.toPromise())
-        ).then((result) => {
-            // Set configuration model
-            this.configuration = Configuration.load(result[0]);
-            const processedCriteria = this.configuration.criteria.map(criteria => {
-                const context: Record<string, any> = {
-                    id: criteria.id,
-                    name: typeof criteria.name === 'string' ? criteria.name : criteria.id,
-                    type: criteria.type
-                };
-                const resolvedName = ConfigurationService.resolveTemplateValue(criteria.name, context);
-                if (resolvedName.length > 0) {
-                    context.name = resolvedName;
-                    criteria.name = resolvedName;
-                }
-                const placeholder = ConfigurationService.resolveTemplateValue(criteria.placeholder, context);
-                if (placeholder.length > 0) {
-                    criteria.placeholder = placeholder;
-                }
-                const description = ConfigurationService.resolveTemplateValue(criteria.description, context);
-                if (description.length > 0) {
-                    criteria.description = description;
-                }
-                return criteria;
-            });
+        this.latestChangeDetector = cd;
+        if (!this.datasetSubscription) {
+            this.datasetSubscription = this.datasetManifestService.getActiveDataset()
+                .pipe(distinctUntilChanged((prev, next) => (prev?.id === next?.id)))
+                .subscribe(dataset => this.loadDatasetAssets(dataset));
+        }
+    }
 
-            const idCriteria = processedCriteria.find(criteria => criteria.id === 'id');
-            if (idCriteria) {
-                idCriteria.table = true;
+    private loadDatasetAssets(dataset: DatasetManifestEntry): void {
+        const requests = [
+            this.http.get(this.buildDatasetAssetUrl(dataset, 'comparison.json')),
+            this.http.get(this.buildDatasetAssetUrl(dataset, 'data.json')),
+            this.http.get(this.buildDatasetAssetUrl(dataset, 'description.md'), {responseType: 'text'})
+        ];
+        Promise.all(requests.map(res => res.toPromise()))
+            .then(result => {
+                this.currentDatasetId = dataset.id;
+                this.hydrateConfigurationPayload(result);
+            })
+            .catch(error => {
+                console.error(`Failed to load dataset ${dataset.id}:`, error);
+            });
+    }
+
+    private buildDatasetAssetUrl(dataset: DatasetManifestEntry, fileName: string): string {
+        const base = (dataset.assetDirectory || 'assets/generated').replace(/\/+$/, '');
+        return `${base}/${fileName}`;
+    }
+
+    private hydrateConfigurationPayload(result: any[]): void {
+        // Set configuration model
+        this.configuration = Configuration.load(result[0]);
+        const processedCriteria = this.configuration.criteria.map(criteria => {
+            const context: Record<string, any> = {
+                id: criteria.id,
+                name: typeof criteria.name === 'string' ? criteria.name : criteria.id,
+                type: criteria.type
+            };
+            const resolvedName = ConfigurationService.resolveTemplateValue(criteria.name, context);
+            if (resolvedName.length > 0) {
+                context.name = resolvedName;
+                criteria.name = resolvedName;
             }
-
-            const shortCriteria = processedCriteria.find(criteria => criteria.id === 'ShortDescription');
-            if (shortCriteria) {
-                shortCriteria.table = true;
-                if (isNullOrUndefined(shortCriteria.order) || shortCriteria.order === '') {
-                    shortCriteria.order = '1';
-                }
-                if (!shortCriteria.name || shortCriteria.name.trim().length === 0 || shortCriteria.name === 'ShortDescription') {
-                    shortCriteria.name = 'Short Description';
-                }
+            const placeholder = ConfigurationService.resolveTemplateValue(criteria.placeholder, context);
+            if (placeholder.length > 0) {
+                criteria.placeholder = placeholder;
             }
-            this.configuration.criteria = ConfigurationService.sortCriteriaByOrder(processedCriteria);
-            const tableCriteria = this.configuration.criteria.filter(criteria => criteria.table);
-            const primaryColumns: Array<string> = [];
-            const remainingColumns: Array<string> = [];
-
-            tableCriteria.forEach(criteria => {
-                if (criteria.id === 'id') {
-                    primaryColumns[0] = criteria.id;
-                } else if (criteria.id === 'ShortDescription') {
-                    primaryColumns[1] = criteria.id;
-                } else {
-                    remainingColumns.push(criteria.id);
-                }
-            });
-
-            this.tableColumns = primaryColumns.filter(Boolean).concat(remainingColumns);
-            this.criteria = this.configuration.criteria.filter(criteria => criteria.search);
-            this.criteriaValues = this.criteria.map(criteria =>
-                Array.from(criteria.values).map(([key, value]) => {
-                    return {
-                        id: value.name,
-                        text: value.name,
-                        criteriaValue: value
-                    };
-                })
-            );
-            // Set data model
-            ConfigurationService.data = Data.loadJson(result[1], this.configuration);
-            ConfigurationService.data.dataElements = ConfigurationService.data.dataElements.map(dataElement => {
-                    // Build html strings and labelArrays
-                    dataElement.html = ConfigurationService.getHtml(
-                        dataElement.shortDescription
-                    );
-                    dataElement.latex = ConfigurationService.getLatex(
-                        dataElement.shortDescription
-                    );
-                    dataElement.criteriaData = Array.from(dataElement.criteriaData).map(([key, criteriaData]) => {
-                        const criteria = this.configuration.getCriteria(criteriaData.name);
-                        switch (criteriaData.type) {
-                            case CriteriaTypes.MARKDOWN:
-                            case CriteriaTypes.RATING:
-                                criteriaData.html = ConfigurationService.getHtml(
-                                    criteriaData.text
-                                );
-                                criteriaData.latex = ConfigurationService.getLatex(
-                                    criteriaData.text
-                                );
-                                const markdownSummary = ConfigurationService.buildSummary(criteriaData.text);
-                                const markdownFallback = renderMarkdownToText(criteriaData.text || '').split('\n').map(line => line.trim()).filter(line => line.length > 0);
-                                criteriaData.summaryText = markdownSummary;
-                                criteriaData.tableText = markdownSummary.length > 0
-                                    ? markdownSummary
-                                    : (markdownFallback.length > 0 ? markdownFallback[0] : (criteriaData.text || ''));
-                                break;
-                            case CriteriaTypes.LABEL:
-                            case CriteriaTypes.REPOSITORY:
-                                const recognizedLabels: Array<Label> = [];
-                                const detailLabels: Array<Label> = [];
-                                criteriaData.labels.forEach((label, key) => {
-                                    label.tooltip.html = ConfigurationService.getHtml(
-                                        label.tooltip.plain
-                                    );
-                                    const recognized = !!criteria && !!criteria.values && criteria.values.has(key);
-                                    label.isDetail = !recognized;
-                                    (recognized ? recognizedLabels : detailLabels).push(label);
-                                });
-                                criteriaData.labelArray = recognizedLabels;
-                                criteriaData.detailLabels = detailLabels;
-                                if (criteriaData.type === CriteriaTypes.REPOSITORY) {
-                                    const urls = (criteriaData.url || '')
-                                        .split('\n')
-                                        .map(url => url.trim())
-                                        .filter(url => url.length > 0);
-                                    criteriaData.urlList = Array.from(new Set(urls));
-                                }
-                                break;
-                        }
-                        if (criteriaData.type === CriteriaTypes.TEXT) {
-                            const summary = ConfigurationService.buildSummary(criteriaData.text);
-                            criteriaData.summaryText = summary;
-                            criteriaData.tableText = summary.length > 0 ? summary : (criteriaData.text || '');
-                        }
-                        return criteriaData;
-                    }).reduce((map, obj) => {
-                        map.set(obj.name, obj);
-                        return map;
-                    }, new Map());
-                    return dataElement;
-                }
-            );
-
-            // Set description
-            this.description = ConfigurationService.getHtml(
-                String(result[2]));
-
-            const grouping = this.featureGroupingService.parseGroupedMarkdown({
-                configuration: this.configuration,
-                data: ConfigurationService.data
-            });
-
-            // Dispatch redux store action
-            this.store.dispatch(
-                new UCDataUpdateAction(
-                    this.configuration.criteria.reduce((map, obj) => {
-                            map.set(obj.id, obj);
-                            return map;
-                        },
-                        new Map()),
-                    grouping
-                )
-            );
-            this.store.dispatch(
-                {
-                    type: 'UPDATE_SETTINGS',
-                    enable: this.configuration.details.tooltipAsText,
-                    operation: 'DetailsDisplayTooltips'
-                }
-            );
-
-            cd.detectChanges();
+            const description = ConfigurationService.resolveTemplateValue(criteria.description, context);
+            if (description.length > 0) {
+                criteria.description = description;
+            }
+            return criteria;
         });
+
+        const idCriteria = processedCriteria.find(criteria => criteria.id === 'id');
+        if (idCriteria) {
+            idCriteria.table = true;
+        }
+
+        const shortCriteria = processedCriteria.find(criteria => criteria.id === 'ShortDescription');
+        if (shortCriteria) {
+            shortCriteria.table = true;
+            if (isNullOrUndefined(shortCriteria.order) || shortCriteria.order === '') {
+                shortCriteria.order = '1';
+            }
+            if (!shortCriteria.name || shortCriteria.name.trim().length === 0 || shortCriteria.name === 'ShortDescription') {
+                shortCriteria.name = 'Short Description';
+            }
+        }
+        this.configuration.criteria = ConfigurationService.sortCriteriaByOrder(processedCriteria);
+        const tableCriteria = this.configuration.criteria.filter(criteria => criteria.table);
+        const primaryColumns: Array<string> = [];
+        const remainingColumns: Array<string> = [];
+
+        tableCriteria.forEach(criteria => {
+            if (criteria.id === 'id') {
+                primaryColumns[0] = criteria.id;
+            } else if (criteria.id === 'ShortDescription') {
+                primaryColumns[1] = criteria.id;
+            } else {
+                remainingColumns.push(criteria.id);
+            }
+        });
+
+        this.tableColumns = primaryColumns.filter(Boolean).concat(remainingColumns);
+        this.criteria = this.configuration.criteria.filter(criteria => criteria.search);
+        this.criteriaValues = this.criteria.map(criteria =>
+            Array.from(criteria.values).map(([key, value]) => {
+                return {
+                    id: value.name,
+                    text: value.name,
+                    criteriaValue: value
+                };
+            })
+        );
+        // Set data model
+        ConfigurationService.data = Data.loadJson(result[1], this.configuration);
+        ConfigurationService.data.dataElements = ConfigurationService.data.dataElements.map(dataElement => {
+                // Build html strings and labelArrays
+                dataElement.html = ConfigurationService.getHtml(
+                    dataElement.shortDescription
+                );
+                dataElement.latex = ConfigurationService.getLatex(
+                    dataElement.shortDescription
+                );
+                dataElement.criteriaData = Array.from(dataElement.criteriaData).map(([key, criteriaData]) => {
+                    const criteria = this.configuration.getCriteria(criteriaData.name);
+                    switch (criteriaData.type) {
+                        case CriteriaTypes.MARKDOWN:
+                        case CriteriaTypes.RATING:
+                            criteriaData.html = ConfigurationService.getHtml(
+                                criteriaData.text
+                            );
+                            criteriaData.latex = ConfigurationService.getLatex(
+                                criteriaData.text
+                            );
+                            const markdownSummary = ConfigurationService.buildSummary(criteriaData.text);
+                            const markdownFallback = renderMarkdownToText(criteriaData.text || '').split('\n').map(line => line.trim()).filter(line => line.length > 0);
+                            criteriaData.summaryText = markdownSummary;
+                            criteriaData.tableText = markdownSummary.length > 0
+                                ? markdownSummary
+                                : (markdownFallback.length > 0 ? markdownFallback[0] : (criteriaData.text || ''));
+                            break;
+                        case CriteriaTypes.LABEL:
+                        case CriteriaTypes.REPOSITORY:
+                            const recognizedLabels: Array<Label> = [];
+                            const detailLabels: Array<Label> = [];
+                            criteriaData.labels.forEach((label, key) => {
+                                label.tooltip.html = ConfigurationService.getHtml(
+                                    label.tooltip.plain
+                                );
+                                const recognized = !!criteria && !!criteria.values && criteria.values.has(key);
+                                label.isDetail = !recognized;
+                                (recognized ? recognizedLabels : detailLabels).push(label);
+                            });
+                            criteriaData.labelArray = recognizedLabels;
+                            criteriaData.detailLabels = detailLabels;
+                            if (criteriaData.type === CriteriaTypes.REPOSITORY) {
+                                const urls = (criteriaData.url || '')
+                                    .split('\n')
+                                    .map(url => url.trim())
+                                    .filter(url => url.length > 0);
+                                criteriaData.urlList = Array.from(new Set(urls));
+                            }
+                            break;
+                    }
+                    if (criteriaData.type === CriteriaTypes.TEXT) {
+                        const summary = ConfigurationService.buildSummary(criteriaData.text);
+                        criteriaData.summaryText = summary;
+                        criteriaData.tableText = summary.length > 0 ? summary : (criteriaData.text || '');
+                    }
+                    return criteriaData;
+                }).reduce((map, obj) => {
+                    map.set(obj.name, obj);
+                    return map;
+                }, new Map());
+                return dataElement;
+            }
+        );
+
+        // Set description
+        this.description = ConfigurationService.getHtml(
+            String(result[2]));
+
+        const grouping = this.featureGroupingService.parseGroupedMarkdown({
+            configuration: this.configuration,
+            data: ConfigurationService.data
+        });
+
+        // Dispatch redux store action
+        this.store.dispatch(
+            new UCDataUpdateAction(
+                this.configuration.criteria.reduce((map, obj) => {
+                        map.set(obj.id, obj);
+                        return map;
+                    },
+                    new Map()),
+                grouping
+            )
+        );
+        this.store.dispatch(
+            {
+                type: 'UPDATE_SETTINGS',
+                enable: this.configuration.details.tooltipAsText,
+                operation: 'DetailsDisplayTooltips'
+            }
+        );
+
+        if (this.latestChangeDetector) {
+            this.latestChangeDetector.detectChanges();
+        }
     }
 }

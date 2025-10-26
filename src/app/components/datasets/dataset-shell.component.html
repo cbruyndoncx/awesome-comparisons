@@ -1,0 +1,61 @@
+<!-- GENERATED FROM SPEC - DO NOT EDIT -->
+<!-- @generated with Tessl v0.28.0 from ../../../../specs/app/components/datasets/dataset-shell-template.spec.md -->
+<!-- (spec:f1d87f7d) (code:ffefc8b4) -->
+
+<div class="dataset-shell">
+  <!-- Selector region -->
+  <section class="dataset-shell__selector" *ngIf="(datasets$ | async) as datasets; else datasetLoading">
+    <label class="dataset-shell__label" for="datasetSelect">Select Dataset</label>
+    <select id="datasetSelect" class="dataset-shell__select" *ngIf="(activeDataset$ | async) as active"
+            (change)="onDatasetSelected($any($event.target).value)">
+      <option *ngFor="let dataset of datasets" 
+              [value]="dataset.id" 
+              [selected]="dataset.id === active?.id">
+        {{dataset.displayLabel}}
+      </option>
+    </select>
+    
+    <div class="dataset-card-list" role="list">
+      <button *ngFor="let dataset of datasets" class="dataset-card"
+              type="button" 
+              role="listitem"
+              [class.is-active]="dataset.id === (activeDataset$ | async)?.id"
+              [disabled]="dataset.id === (activeDataset$ | async)?.id"
+              (click)="onDatasetSelected(dataset.id)">
+        <div class="dataset-card__title">
+          <span class="dataset-card__accent" *ngIf="dataset.accentColor" [style.backgroundColor]="dataset.accentColor"></span>
+          {{dataset.displayLabel}}
+        </div>
+        <div class="dataset-card__summary">{{dataset.shortDescription || (dataset.description | slice:0:140)}}</div>
+        <span class="dataset-card__icon" *ngIf="dataset.icon" aria-hidden="true">{{dataset.icon}}</span>
+      </button>
+    </div>
+  </section>
+  <ng-template #datasetLoading>
+    <p class="dataset-empty" aria-live="polite">Loading datasets…</p>
+  </ng-template>
+  
+  <!-- Dataset details region -->
+  <section class="dataset-details" *ngIf="(activeDataset$ | async) as activeDataset">
+    <h2>{{activeDataset.displayLabel}}</h2>
+    <span class="dataset-details__badge" *ngIf="activeDataset.accentColor"
+          [style.backgroundColor]="activeDataset.accentColor">
+      {{activeDataset.shortDescription || 'Active'}}
+    </span>
+    <p>{{activeDataset.description || 'No description available'}}</p>
+  </section>
+  
+  <!-- Content region -->
+  <section *ngIf="(activeDataset$ | async) as active; else errorState" class="dataset-content">
+    <comparison></comparison>
+    <p class="dataset-status" aria-live="polite">
+      Showing dataset: {{active.displayLabel}}
+    </p>
+  </section>
+  
+  <ng-template #errorState>
+    <div class="dataset-error" role="alert">
+      No dataset available. Please check configuration/datasets.manifest.json.
+    </div>
+  </ng-template>
+</div>

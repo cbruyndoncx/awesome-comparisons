@@ -1,42 +1,57 @@
+// GENERATED FROM SPEC - DO NOT EDIT
+// @generated with Tessl v0.28.0 from ../../specs/app/app-module.spec.md
+// (spec:b6fe0086) (code:3437064e)
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common';
+import { StoreModule } from '@ngrx/store';
+import { StoreRouterConnectingModule, RouterStateSerializer } from '@ngrx/router-store';
+
 import { AppComponent } from './app.component';
 import { ComparisonModule } from './components/comparison/comparison.module';
-import { StoreModule } from '@ngrx/store';
+import { DatasetShellComponent } from './components/datasets/dataset-shell.component';
 import { masterReducer } from './redux/uc.reducers';
-import { RouterModule } from '@angular/router';
-import { ComparisonComponent } from './components/comparison/comparison.component';
-import { RouterStateSerializer, StoreRouterConnectingModule } from '@ngrx/router-store';
-import { APP_BASE_HREF } from '@angular/common';
 import { CustomRouterStateSerializer } from './redux/custom-router-state-serializer';
 
 @NgModule({
-    imports: [
-        BrowserModule,
-        ComparisonModule,
-        StoreModule.forRoot({
-            state: masterReducer
-        }, {
-            runtimeChecks: {
-                strictStateImmutability: false,
-                strictActionImmutability: false,
-                strictStateSerializability: false,
-                strictActionSerializability: false
-            }
-        }),
-        RouterModule.forRoot([{
-            path: '', component: ComparisonComponent
-        }], {useHash: false}),
-        StoreRouterConnectingModule
-    ],
-    declarations: [
-        AppComponent,
-    ],
-    providers: [
-        {provide: APP_BASE_HREF, useValue: window['_app_base'] || '/'},
-        {provide: RouterStateSerializer, useClass: CustomRouterStateSerializer}
-    ],
-    bootstrap: [AppComponent]
+  imports: [
+    BrowserModule,
+    ComparisonModule,
+    RouterModule.forRoot(
+      [
+        { path: '', component: DatasetShellComponent }
+      ],
+      { useHash: false }
+    ),
+    StoreModule.forRoot(
+      { state: masterReducer },
+      {
+        runtimeChecks: {
+          strictStateImmutability: false,
+          strictActionImmutability: false,
+          strictStateSerializability: false,
+          strictActionSerializability: false
+        }
+      }
+    ),
+    StoreRouterConnectingModule
+  ],
+  providers: [
+    {
+      provide: APP_BASE_HREF,
+      useValue: window['_app_base'] || '/'
+    },
+    {
+      provide: RouterStateSerializer,
+      useClass: CustomRouterStateSerializer
+    }
+  ],
+  declarations: [
+    AppComponent,
+    DatasetShellComponent
+  ],
+  bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }

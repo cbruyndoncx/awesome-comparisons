@@ -1,0 +1,36 @@
+{
+  "datasets": [
+    {
+      "id": "default",
+      "displayLabel": "Default Dataset",
+      "shortDescription": "Primary comparison dataset",
+      "description": "The main comparison dataset built from the production markdown files.",
+      "assetDirectory": "assets/generated/default/",
+      "accentColor": "#007bff",
+      "icon": "default-icon.svg",
+      "isDefault": true,
+      "sources": {
+        "dataDir": "data",
+        "config": "configuration/comparison.yml",
+        "description": "configuration/description.md",
+        "style": "configuration/style.css"
+      }
+    },
+    {
+      "id": "example",
+      "displayLabel": "Example Dataset",
+      "shortDescription": "Lightweight sample dataset",
+      "description": "A starter dataset rendered from data_example/ using the shared comparison-default.yml configuration.",
+      "assetDirectory": "assets/generated/example/",
+      "accentColor": "#28a745",
+      "icon": "experimental-icon.svg",
+      "isDefault": false,
+      "sources": {
+        "dataDir": "data_example",
+        "config": "configuration/comparison-default.yml",
+        "description": "configuration/description.md",
+        "style": "configuration/style.css"
+      }
+    }
+  ]
+}

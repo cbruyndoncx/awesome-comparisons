@@ -1,0 +1,162 @@
+.dataset-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+
+.dataset-shell__selector {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.dataset-shell__label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.dataset-shell select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: white;
+}
+
+.dataset-shell select:focus {
+  outline: 2px solid var(--uc-accent, #0066cc);
+  outline-offset: 2px;
+}
+
+.dataset-card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.dataset-card {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-top: 3px solid var(--uc-accent, #0066cc);
+  border-radius: 4px;
+  background-color: white;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dataset-card:hover {
+  background-color: #f8f9fa;
+  border-color: #ccc;
+}
+
+.dataset-card:active {
+  background-color: #e9ecef;
+}
+
+.dataset-card.is-active {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.dataset-card.is-active .dataset-card__title {
+  font-weight: bold;
+}
+
+.dataset-card__title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.dataset-card__summary {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.dataset-card__icon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.dataset-card__accent {
+  display: inline-block;
+  padding: 0.2rem 0.4rem;
+  background-color: var(--uc-accent, #0066cc);
+  color: white;
+  font-size: 0.75rem;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.dataset-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.dataset-details__badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
+}
+
+.dataset-details p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.dataset-content {
+  margin-top: 2rem;
+}
+
+.dataset-empty,
+.dataset-error {
+  padding: 2rem;
+  border: 2px dashed #ddd;
+  border-radius: 4px;
+  text-align: center;
+  color: #666;
+  background-color: white;
+}
+
+.dataset-status {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .dataset-shell__selector {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .dataset-shell select {
+    flex-shrink: 0;
+    min-width: 200px;
+  }
+  
+  .dataset-card-list {
+    gap: 1.5rem;
+  }
+  
+  .dataset-details {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+}

@@ -10,13 +10,14 @@ Angular service responsible for loading and processing comparison configuration 
 
 ### Load comparison configuration data
 
-Loads configuration, data, and description files from HTTP endpoints and processes them into usable models.
+Loads configuration, data, and description files from HTTP endpoints and processes them into usable models. Fetches all assets relative to the active dataset returned by DatasetManifestService, reloading automatically whenever the dataset selection changes.
 
 - Loads comparison.json configuration file [@test](./configuration-service.test.ts)
 - Loads data.json data file [@test](./configuration-service.test.ts)
 - Loads description.md markdown file [@test](./configuration-service.test.ts)
 - Processes all files concurrently using Promise.all [@test](./configuration-service.test.ts)
 - Triggers change detection after loading completes [@test](./configuration-service.test.ts)
+- Subscribes to DatasetManifestService active dataset stream and refetches assets when the dataset changes
 
 ### Process markdown content
 
@@ -65,7 +66,8 @@ export class ConfigurationService {
     constructor(
         public title: Title,
         private http: HttpClient,
-        private store: Store<IUCAppState>
+    private store: Store<IUCAppState>,
+    private datasetManifestService: DatasetManifestService
     );
 
     static getHtml(markdown: string): string;
@@ -109,3 +111,13 @@ Helper functions for null checking and validation.
 
 Helper functions for converting markdown to HTML and plain text.
 [@use](../../../shared/util/markdown)
+
+### Dataset Manifest Service
+
+Resolves active dataset metadata and asset paths for configuration loading.
+[@use](../../datasets/dataset-manifest.service.ts)
+
+### RxJS Utilities
+
+Observables and operators for reacting to dataset selection changes.
+[@use](../../../package.json#rxjs)

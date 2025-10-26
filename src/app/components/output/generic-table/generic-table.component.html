@@ -46,9 +46,13 @@
     <ng-template ngFor let-item [ngForOf]="items" let-itemIndex="index">
         <tr>
             <ng-template ngFor let-entry [ngForOf]="item" let-i="index">
-                <td *ngIf="types[i] === 'NAME_URL'"><a class="anchored"
-                                                       href="{{entry.link}}"
-                                                       target="_blank">{{entry.text}}</a>
+                <td *ngIf="types[i] === 'NAME_URL'">
+                    <a class="anchored"
+                       [href]="entry?.link || entry?.url || '#'"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        {{entry?.text || '—'}}
+                    </a>
                 </td>
                 <td *ngIf="types[i] === 'TEXT'">
                     {{entry?.tableText || entry?.summaryText || entry?.text || entry?.content}}

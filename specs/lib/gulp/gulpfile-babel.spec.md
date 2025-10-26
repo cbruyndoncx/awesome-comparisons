@@ -51,6 +51,18 @@ Copies static assets and configuration files to distribution directory.
 - Skips copying when source and destination directories are identical [@test](./tests/asset-management.spec.js)
 - Copies all files from node module dist to root dist when directories differ [@test](./tests/asset-management.spec.js)
 
+### Dataset Manifest Orchestration
+
+Expands the build to support multiple datasets defined in configuration/datasets.manifest.json.
+
+- Loads and validates the manifest file; fails the build when manifest is missing or empty
+- Iterates each dataset definition, resolving dataset-specific source directories (markdown, configuration, description, style) via the `sources` metadata
+- Runs the markdown conversion, criteria enrichment, development column enrichment, and config merging per dataset using isolated tmp/dist destinations
+- Copies comparison.json, data.json, description.md, and style.css into `src/assets/generated/<datasetId>/` and `dist/ultimate-comparison/assets/generated/<datasetId>/`
+- Copies the manifest itself to `src/assets/configuration/datasets.manifest.json` so the Angular app can request it at runtime
+- Validates that required files exist for every dataset and throws descriptive errors when inputs or generated outputs are missing
+- Maintains backwards compatibility by keeping the default dataset outputs at `dist/data.json` and `src/assets/generated/` root while still mirroring them under their dataset subdirectory
+
 ### Release Management
 
 Updates version information for package releases.
@@ -73,6 +85,7 @@ Provides file watching capabilities for development workflow.
 - Watches style files and triggers asset rebuild [@test](./tests/watch-tasks.spec.js)
 - Uses glob patterns to watch files in nested directories [@test](./tests/watch-tasks.spec.js)
 - Monitors multiple file types including .md, .yml, and .css [@test](./tests/watch-tasks.spec.js)
+- Includes manifest-provided markdown directories so every dataset rebuilds when its data changes
 
 ### Task Orchestration
 
