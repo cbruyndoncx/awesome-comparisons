@@ -1,4 +1,3 @@
-This is a comparison of available THINGs.
-- Bibkey example 1 [@Adi:2004:ASM:988145.988150]
-- Bibkey example 2 [@Dayal:1988:ROT:60295.60304]
-- [Link example](http://example.com).
+This is a comparison of AI Coding Tools
+- Work in progress, source in Feature Grouping branch
+- Includes Code/Editor category from [AI Native Dev](http://ainativedev.io).

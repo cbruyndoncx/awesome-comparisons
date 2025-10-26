@@ -9,6 +9,7 @@ import { UCClickAction, UCDetailsAction, UCNewStateAction, UCSearchUpdateAction,
 import { isNullOrUndefined } from '../../shared/util/null-check';
 
 import { Criteria, DataElement, Label } from '../../../../lib/gulp/model/model.module';
+import { FeatureGroupView } from '../../models/feature-grouping.model';
 
 @Component({
     selector: 'comparison',
@@ -110,5 +111,33 @@ export class ComparisonComponent {
 
     public closeDetails() {
         this.store.dispatch(new UCDetailsAction(null));
+    }
+
+    public groupHasSearchableChildren(group: FeatureGroupView): boolean {
+        return Array.isArray(group.children) && group.children.some(child => child.search);
+    }
+
+    public getCriteriaValues(criteria: Criteria) {
+        const index = this.configurationService.criteria.findIndex(item => item.id === criteria.id);
+        return index !== -1 ? this.configurationService.criteriaValues[index] : [];
+    }
+
+    public getUngroupedCriteria(groups: FeatureGroupView[]): Criteria[] {
+        const groupedIds = new Set<string>();
+        (groups || []).forEach(group => {
+            (group.children || []).forEach(child => groupedIds.add(child.id));
+        });
+        return this.configurationService.criteria.filter(criteria => criteria.search && !groupedIds.has(criteria.id));
+    }
+
+    public groupLabelText(group: FeatureGroupView): string {
+        return group.label?.value || '';
+    }
+
+    public getPlaceholder(criteria: Criteria): string {
+        if (!criteria) {
+            return '';
+        }
+        return criteria.rangeSearch ? (criteria.placeholder || '') : '';
     }
 }

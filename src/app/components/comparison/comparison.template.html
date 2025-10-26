@@ -26,35 +26,78 @@
 
         <pcard [heading]="configurationService.configuration?.selectTitle">
             <div class="select-grid">
-                <ng-template ngFor let-criteria let-i="index" [ngForOf]="configurationService.criteria">
-                    <div>
-                        <div class="form-group">
-                            <ptooltip [tooltip]="criteria.description">
-                                <label>
-                                    {{criteria.name}}
-                                    <span class="search-indicator">({{criteria.andSearch ? 'match all' : criteria.rangeSearch ? 'match range' : 'match one'}})</span>
-                                </label>
-                            </ptooltip>
-                            <br>
-                            <select2 *ngIf="!criteria.rangeSearch"
-                                     [options]="configurationService.criteriaValues[i]"
-                                     [placeholder]="criteria.placeholder"
-                                     [name]="criteria.name"
-                                     [tag]="criteria.id"
-                                     [active]="getActive(vm, criteria)"
-                                     (result)="criteriaChanged($event, criteria)">
-                            </select2>
-                            <number-input *ngIf="criteria.rangeSearch"
-                                          [comparisonComponent]="this"
-                                          [name]="criteria.name"
-                                          [active]="getActive(vm, criteria)"
-                                          (result)="criteriaChanged($event, criteria)"
-                                          [criteria]="criteria"
-                                          [tag]="criteria.id">
-                            </number-input>
+                <ng-container *ngFor="let group of vm.state.featureGroups">
+                    <ng-container *ngIf="groupHasSearchableChildren(group)">
+                        <div class="search-group" [class.search-group--excluded]="group.isExcluded">
+                            <div class="search-group__header">
+                                <span class="search-group__title">{{group.displayName}}</span>
+                                <span class="search-group__label" *ngIf="groupLabelText(group)">{{groupLabelText(group)}}</span>
+                            </div>
+                            <div class="search-group__controls">
+                                <div class="form-group" *ngFor="let child of group.children" [hidden]="!child.search">
+                                    <ptooltip [tooltip]="child.description">
+                                        <label>
+                                            {{child.name}}
+                                            <span class="search-indicator">({{child.andSearch ? 'match all' : child.rangeSearch ? 'match range' : 'match one'}})</span>
+                                        </label>
+                                    </ptooltip>
+                                    <br>
+                                    <select2 *ngIf="!child.rangeSearch"
+                                             [options]="getCriteriaValues(child)"
+                                             [placeholder]="getPlaceholder(child)"
+                                             [name]="child.name"
+                                             [tag]="child.id"
+                                             [active]="getActive(vm, child)"
+                                             (result)="criteriaChanged($event, child)">
+                                    </select2>
+                                    <number-input *ngIf="child.rangeSearch"
+                                                  [comparisonComponent]="this"
+                                                  [name]="child.name"
+                                                  [active]="getActive(vm, child)"
+                                                  (result)="criteriaChanged($event, child)"
+                                                  [criteria]="child"
+                                                  [tag]="child.id">
+                                    </number-input>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </ng-container>
+
+                <ng-container *ngIf="getUngroupedCriteria(vm.state.featureGroups) as ungrouped">
+                    <div class="search-group" *ngIf="ungrouped.length">
+                        <div class="search-group__header">
+                            <span class="search-group__title">Other</span>
+                        </div>
+                        <div class="search-group__controls">
+                            <div class="form-group" *ngFor="let criteria of ungrouped">
+                                <ptooltip [tooltip]="criteria.description">
+                                    <label>
+                                        {{criteria.name}}
+                                        <span class="search-indicator">({{criteria.andSearch ? 'match all' : criteria.rangeSearch ? 'match range' : 'match one'}})</span>
+                                    </label>
+                                </ptooltip>
+                                <br>
+                                <select2 *ngIf="!criteria.rangeSearch"
+                                         [options]="getCriteriaValues(criteria)"
+                                         [placeholder]="getPlaceholder(criteria)"
+                                         [name]="criteria.name"
+                                         [tag]="criteria.id"
+                                         [active]="getActive(vm, criteria)"
+                                         (result)="criteriaChanged($event, criteria)">
+                                </select2>
+                                <number-input *ngIf="criteria.rangeSearch"
+                                              [comparisonComponent]="this"
+                                              [name]="criteria.name"
+                                              [active]="getActive(vm, criteria)"
+                                              (result)="criteriaChanged($event, criteria)"
+                                              [criteria]="criteria"
+                                              [tag]="criteria.id">
+                                </number-input>
+                            </div>
                         </div>
                     </div>
-                </ng-template>
+                </ng-container>
             </div>
         </pcard>
     </div>

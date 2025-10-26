@@ -21,10 +21,17 @@ afterEach(() => {
   getTestBed().resetTestingModule();
 });
 
-// Dynamically discover and load all .spec.ts files using Vite-style imports
-const specModules = import.meta.glob('./**/*.spec.ts', { eager: true });
+declare const require: {
+  context(
+    directory: string,
+    useSubdirectories?: boolean,
+    regExp?: RegExp
+  ): {
+    keys(): string[];
+    <T>(id: string): T;
+  };
+};
 
-// Import each spec module to register its tests
-Object.values(specModules).forEach((module) => {
-  // Modules are loaded eagerly, side effects register tests
-});
+// Dynamically discover and load all .spec.ts files using Webpack's require.context
+const context = (require as any).context('./', true, /\.spec\.ts$/);
+context.keys().forEach(context);
