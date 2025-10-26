@@ -145,8 +145,27 @@ pdialog {
     flex-wrap: wrap;
 }
 
+.select-toolbar__side--primary {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .select-toolbar__side--actions {
     justify-content: flex-end;
+}
+
+.select-toolbar__row {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.select-toolbar__subactions {
+    display: inline-flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 4px;
 }
 
 .select-toolbar__button {

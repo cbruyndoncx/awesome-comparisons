@@ -292,7 +292,10 @@ function applyGrouping(state: IUCAppState, grouping?: GroupedCriteriaStructure):
     const existingExpanded = state.groupExpanded || {};
     const nextExpanded: { [key: string]: boolean } = {};
     grouping.groups.forEach(group => {
-        const isExpanded = !group.isExcluded && existingExpanded[group.key] === true;
+        const hasPersistedValue = Object.prototype.hasOwnProperty.call(existingExpanded, group.key);
+        const persistedExpanded = hasPersistedValue && existingExpanded[group.key] === true;
+        const defaultExpanded = group.defaultExpanded === true;
+        const isExpanded = !group.isExcluded && (hasPersistedValue ? persistedExpanded : defaultExpanded);
         nextExpanded[group.key] = isExpanded;
     });
 

@@ -27,15 +27,31 @@
         <pcard [heading]="configurationService.configuration?.selectTitle">
             <div class="select-toolbar">
                 <div class="select-toolbar__side select-toolbar__side--primary">
-                    <button type="button"
-                            class="select-toolbar__button select-toolbar__button--toggle"
-                            (click)="toggleFiltersCollapsed()"
-                            [attr.aria-expanded]="!filtersCollapsed">
-                        {{filtersCollapsed ? 'Show filters' : 'Hide filters'}}
-                    </button>
-                    <span class="filters-collapsed-hint" *ngIf="filtersCollapsed">
+                    <div class="select-toolbar__row">
+                        <button type="button"
+                                class="select-toolbar__button select-toolbar__button--toggle"
+                                (click)="toggleFiltersCollapsed()"
+                                [attr.aria-expanded]="!filtersCollapsed">
+                            {{filtersCollapsed ? 'Show filters' : 'Hide filters'}}
+                        </button>
+                        <span class="filters-collapsed-hint" *ngIf="filtersCollapsed">
                         Filters hidden – use “Show filters” to edit criteria.
                     </span>
+                    </div>
+                    <div class="select-toolbar__subactions">
+                        <button type="button"
+                                class="select-toolbar__button"
+                                (click)="setAllGroupCollapse(vm.state.featureGroups, true)"
+                                [disabled]="areAllFilterGroupsCollapsed(vm.state.featureGroups)">
+                            Collapse all
+                        </button>
+                        <button type="button"
+                                class="select-toolbar__button"
+                                (click)="setAllGroupCollapse(vm.state.featureGroups, false)"
+                                [disabled]="areAllFilterGroupsExpanded(vm.state.featureGroups)">
+                            Expand all
+                        </button>
+                    </div>
                 </div>
                 <div class="select-toolbar__side select-toolbar__side--actions">
                     <button type="button"
@@ -43,18 +59,6 @@
                             (click)="resetCriteriaSelections()"
                             [disabled]="!hasActiveFilters(vm.state.currentSearch)">
                         Reset selections
-                    </button>
-                    <button type="button"
-                            class="select-toolbar__button"
-                            (click)="setAllGroupCollapse(vm.state.featureGroups, true)"
-                            [disabled]="areAllFilterGroupsCollapsed(vm.state.featureGroups)">
-                        Collapse all
-                    </button>
-                    <button type="button"
-                            class="select-toolbar__button"
-                            (click)="setAllGroupCollapse(vm.state.featureGroups, false)"
-                            [disabled]="areAllFilterGroupsExpanded(vm.state.featureGroups)">
-                        Expand all
                     </button>
                 </div>
             </div>

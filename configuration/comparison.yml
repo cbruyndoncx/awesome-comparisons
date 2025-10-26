@@ -15,6 +15,7 @@ criteria:
           - ShortDescription
           - Description
           - Languages
+      defaultExpanded: true
   - Licensing:
       name: Licensing
       type: MARKDOWN
@@ -54,6 +55,7 @@ criteria:
           - DirectFileReferences
           - Checkpoints
           - GitSupport
+      defaultExpanded: true
   - Extensible:
       name: Extensible
       type: LABEL
@@ -78,6 +80,7 @@ criteria:
           - CustomModes
           - Subagents
           - RemoteAgents
+      defaultExpanded: true
  
   - Version:
       name: Version

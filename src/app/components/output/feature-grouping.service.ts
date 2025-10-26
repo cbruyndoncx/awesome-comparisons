@@ -75,7 +75,8 @@ export class FeatureGroupingService {
                     label,
                     children,
                     isExcluded,
-                    isExpanded: false,
+                    isExpanded: !isExcluded && criteria?.defaultExpanded === true,
+                    defaultExpanded: criteria?.defaultExpanded === true,
                     primaryCriteria: primaryCriteria || null
                 });
                 seenGroups.add(criteria.id);
@@ -130,7 +131,8 @@ export class FeatureGroupingService {
                 label,
                 children,
                 isExcluded,
-                isExpanded: false,
+                isExpanded: !isExcluded && criteria?.defaultExpanded === true,
+                defaultExpanded: criteria?.defaultExpanded === true,
                 primaryCriteria: primaryCriteria || null
             });
             seenGroups.add(groupKey);

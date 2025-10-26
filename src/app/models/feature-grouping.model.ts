@@ -17,6 +17,7 @@ export interface FeatureGroupView {
     children: Criteria[];
     isExcluded: boolean;
     isExpanded: boolean;
+    defaultExpanded?: boolean;
     primaryCriteria?: Criteria | null;
 }
 

@@ -15,6 +15,7 @@ export class Criteria {
   public values: Map<string, CriteriaValue>;
   public lock: Map<string, string>;
   public children: Array<string>;
+  public defaultExpanded: boolean;
 
   constructor(id: string,
               type: CriteriaTypes,
@@ -30,6 +31,7 @@ export class Criteria {
               values?: Map<string, CriteriaValue>,
               lock?: Map<string, string>,
               children?: Array<string>,
+              defaultExpanded?: boolean,
               useDefaults?: boolean);
 
   public static copy(id: string, name: string, criteria: Criteria);
