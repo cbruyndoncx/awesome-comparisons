@@ -30,7 +30,7 @@ setup () {
   sed -i "s/##description/${DESC}/" ${CWD}/package.json
   sed -i "s/##version/${VERS}/" ${CWD}/package.json
   npm install
-  npm i ultimate-comparison@next
+  npm i github:cbruyndoncx/ultimate-comparison-framework#feature-grouping
 }
 
 start () {
