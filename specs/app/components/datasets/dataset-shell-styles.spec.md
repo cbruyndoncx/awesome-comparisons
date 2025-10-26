@@ -1,6 +1,6 @@
 # DatasetShellComponent Stylesheet
 
-Stylesheet for the DatasetShellComponent providing responsive layout, dataset selector interface, card grid display, and visual feedback states.
+Stylesheet for the DatasetShellComponent providing responsive layout, tabbed dataset selector, and visual feedback states.
 
 ## Target
 
@@ -14,19 +14,11 @@ Provides main container with responsive spacing, max-width constraint, centered 
 
 ### Dataset Selector Layout
 
-Arranges the select element and card list vertically on narrow screens and side-by-side on wide screens using flexible layout patterns. Provides `.dataset-shell__label` typography rules to keep the label aligned with the select field.
+Creates a compact tab strip via `.dataset-tabs` flex container with horizontal scrolling on narrow screens and equal-height tabs on wide screens. Tabs stay sticky to the top of the shell while leaving room for content below.
 
-### Select Element Styling
+### Dataset Tab Styling
 
-Styles the `<select>` element with padding, border radius, and focus outline that matches the accent color token `var(--uc-accent, #0066cc)`.
-
-### Dataset Card Grid
-
-Uses CSS grid with auto-fit columns (minimum 240px) and appropriate gap spacing for responsive card layout.
-
-### Dataset Card Styling
-
-Each `.dataset-card` button has subtle border, background hover/active states, accent color top border, and `.is-active` state that elevates the card and bolds the title. Adds `.dataset-card__title`, `.dataset-card__summary`, `.dataset-card__icon`, and `.dataset-card__accent` helpers for typography, icon alignment, and accent chips.
+Defines `.dataset-tab` buttons with subtle borders, hover states, and accent focus outlines (`var(--uc-accent, #0066cc)`). `.is-active` tabs get a solid accent indicator, bolder text, and elevated background. `.dataset-tab__label`, `.dataset-tab__summary`, and `.dataset-tab__accent` manage typography, truncated summaries, and optional accent dots.
 
 ### Dataset Details Display
 
@@ -42,7 +34,7 @@ Adds top margin to `.dataset-content` so the embedded comparison component fills
 
 ### Media Query Responsive Behavior
 
-At 768px breakpoint, aligns selector layout in two columns, enlarges card grid gap, and sets `.dataset-details` to horizontal layout.
+At 768px breakpoint, increases tab spacing, centers the tab strip, and displays dataset details horizontally for better use of widescreen layouts.
 
 ### Accessibility Support
 
@@ -52,16 +44,13 @@ Provides utility classes for `aria-live` region (`.dataset-status`) to ensure te
 
 ```css { .api }
 .dataset-shell { /* Responsive container with max-width, centering, and neutral background */ }
-.dataset-shell__selector { /* Flexible layout for select and card list */ }
-.dataset-shell__label { /* Label alignment and spacing */ }
-.dataset-shell select { /* Select styling with accent color focus */ }
-.dataset-card-list { /* CSS grid with auto-fit columns and gap */ }
-.dataset-card { /* Button styling with borders and hover states */ }
-.dataset-card__title,
-.dataset-card__summary,
-.dataset-card__icon,
-.dataset-card__accent { /* Typography and accent visuals within cards */ }
-.dataset-card.is-active { /* Active card elevation and bold title */ }
+.dataset-shell__selector { /* Wrapper for the tab strip and status */ }
+.dataset-tabs { /* Horizontal flex tab list */ }
+.dataset-tab { /* Individual tab button */ }
+.dataset-tab.is-active { /* Active tab state */ }
+.dataset-tab__label,
+.dataset-tab__summary,
+.dataset-tab__accent { /* Typography and accent visuals within tabs */ }
 .dataset-details { /* Flex layout for dataset information */ }
 .dataset-details__badge { /* Colored pill badge styling */ }
 .dataset-content { /* Top margin for embedded content */ }
@@ -69,7 +58,8 @@ Provides utility classes for `aria-live` region (`.dataset-status`) to ensure te
 .dataset-status { /* Accessibility utility for aria-live regions */ }
 
 @media (min-width: 768px) {
-  /* Responsive adjustments for wider screens */
+  .dataset-tabs { /* Wider spacing and centered alignment on desktop */ }
+  .dataset-details { /* Horizontal layout for details */ }
 }
 ```
 

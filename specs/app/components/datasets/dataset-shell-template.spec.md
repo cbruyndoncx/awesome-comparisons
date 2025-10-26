@@ -14,11 +14,9 @@ Wraps entire UI in a `.dataset-shell` container that shows a selector region, da
 
 ### Selector region
 
-Uses `*ngIf="(datasets$ | async) as datasets"` to render only when datasets are available and wraps the selector controls in `.dataset-shell__selector`. Provides a labeled `<select>` element with id `datasetSelect` that lists datasets as `<option>` values, binding `[value]="dataset.id"` and marking the currently active dataset as `selected` by comparing to `(activeDataset$ | async)?.id` captured via `ngIf as active`. The select emits `(change)` events that call `onDatasetSelected($event.target.value)` so keyboard users can switch datasets without using the cards.
+Uses `*ngIf="(datasets$ | async) as datasets"` to render only when datasets are available and wraps the selector controls in `.dataset-shell__selector`. Replaces the select+card stack with a compact tab strip: a `<nav class="dataset-tabs" role="tablist">` containing buttons (`role="tab"`) for each dataset. Tabs expose `[attr.aria-selected]`, `[attr.aria-controls]`, and stable `id` values (`dataset-tab-<id>`) so assistive tech can track the active panel. Clicking (or pressing Enter/Space) triggers `onDatasetSelected(dataset.id)`; the tab’s `aria-selected` and `.is-active` class update automatically.
 
-Below the select, renders a `.dataset-card-list` (`role="list"`) of dataset cards using buttons (`type="button"`, `role="listitem"`) that show dataset displayLabel, shortDescription snippet, and optional icon/accent color indicator. Applies `.is-active` class when dataset is active and includes child elements with `.dataset-card__title` and `.dataset-card__summary`.
-
-Buttons call `onDatasetSelected(dataset.id)` on click and disable themselves while that dataset is already active.
+Each tab shows the dataset `displayLabel`, optional accent dot, and a one-line short description via `.dataset-tab__summary`. A subtle status line with `aria-live="polite"` acknowledges the current selection for screen readers.
 
 ### Dataset details region
 
@@ -50,38 +48,37 @@ Keeps template free of presentational logic beyond simple truncation via `datase
 <div class="dataset-shell">
   <!-- Selector region -->
   <section class="dataset-shell__selector" *ngIf="(datasets$ | async) as datasets; else datasetLoading">
-    <label class="dataset-shell__label" for="datasetSelect">Select Dataset</label>
-    <select id="datasetSelect" class="dataset-shell__select" *ngIf="(activeDataset$ | async) as active"
-            (change)="onDatasetSelected($any($event.target).value)">
-      <option *ngFor="let dataset of datasets" 
-              [value]="dataset.id" 
-              [selected]="dataset.id === active?.id">
-        {{dataset.displayLabel}}
-      </option>
-    </select>
-    
-    <div class="dataset-card-list" role="list">
-      <button *ngFor="let dataset of datasets" class="dataset-card"
-              type="button" 
-              role="listitem"
-              [class.is-active]="dataset.id === (activeDataset$ | async)?.id"
-              [disabled]="dataset.id === (activeDataset$ | async)?.id"
+    <nav class="dataset-tabs" role="tablist" aria-label="Dataset selection" *ngIf="(activeDataset$ | async) as active">
+      <button *ngFor="let dataset of datasets"
+              type="button"
+              class="dataset-tab"
+              role="tab"
+              [attr.id]="'dataset-tab-' + dataset.id"
+              [attr.aria-controls]="'dataset-panel-' + dataset.id"
+              [attr.aria-selected]="dataset.id === active?.id"
+              [class.is-active]="dataset.id === active?.id"
               (click)="onDatasetSelected(dataset.id)">
-        <div class="dataset-card__title">
-          <span class="dataset-card__accent" *ngIf="dataset.accentColor" [style.backgroundColor]="dataset.accentColor"></span>
+        <span class="dataset-tab__label">
+          <span class="dataset-tab__accent" *ngIf="dataset.accentColor" [style.backgroundColor]="dataset.accentColor"></span>
           {{dataset.displayLabel}}
-        </div>
-        <div class="dataset-card__summary">{{dataset.shortDescription || (dataset.description | slice:0:140)}}</div>
-        <span class="dataset-card__icon" *ngIf="dataset.icon" aria-hidden="true">{{dataset.icon}}</span>
+        </span>
+        <span class="dataset-tab__summary">{{dataset.shortDescription || (dataset.description | slice:0:90)}}</span>
       </button>
-    </div>
+    </nav>
+    <p class="dataset-status" aria-live="polite">
+      Showing dataset: {{active?.displayLabel || 'Loading…'}}
+    </p>
   </section>
   <ng-template #datasetLoading>
     <p class="dataset-empty" aria-live="polite">Loading datasets…</p>
   </ng-template>
   
   <!-- Dataset details region -->
-  <section class="dataset-details" *ngIf="(activeDataset$ | async) as activeDataset">
+  <section class="dataset-details"
+           *ngIf="(activeDataset$ | async) as activeDataset"
+           role="tabpanel"
+           [attr.id]="'dataset-panel-' + activeDataset.id"
+           [attr.aria-labelledby]="'dataset-tab-' + activeDataset.id">
     <h2>{{activeDataset.displayLabel}}</h2>
     <span class="dataset-details__badge" *ngIf="activeDataset.accentColor"
           [style.backgroundColor]="activeDataset.accentColor">
@@ -105,3 +102,11 @@ Keeps template free of presentational logic beyond simple truncation via `datase
   </ng-template>
 </div>
 ```
+
+## Dependencies
+
+### Angular Template Directives
+
+Leverages Angular structural directives (`*ngIf`, `*ngFor`) and common bindings for accessibility metadata.
+[@use](../../../../package.json#@angular/core)
+[@use](../../../../package.json#@angular/common)
