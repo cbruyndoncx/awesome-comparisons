@@ -41,11 +41,27 @@ export class FeatureGroupingService {
 
         (payload.configuration?.criteria || []).forEach(criteria => {
             if (Array.isArray(criteria.children) && criteria.children.length > 0) {
-                const children: Criteria[] = criteria.children
-                    .map(childId => criteriaIndex.get(childId))
-                    .filter((child): child is Criteria => !!child);
+                const childSet = new Set<string>();
+                const children: Criteria[] = [];
+                let primaryCriteria: Criteria | undefined;
 
-                children.forEach(child => columnGroupMap[child.id] = criteria.id);
+                if (criteria.search) {
+                    primaryCriteria = criteria;
+                    children.push(criteria);
+                    childSet.add(criteria.id);
+                    columnGroupMap[criteria.id] = criteria.id;
+                }
+
+                criteria.children
+                    .map(childId => criteriaIndex.get(childId))
+                    .filter((child): child is Criteria => !!child)
+                    .forEach(child => {
+                        if (!childSet.has(child.id)) {
+                            children.push(child);
+                            childSet.add(child.id);
+                        }
+                        columnGroupMap[child.id] = criteria.id;
+                    });
 
                 const summary = groupSummaries.get(criteria.id) || groupSummaries.get(criteria.name);
                 const labelValues = summary?.labels ? Array.from(summary.labels) : [];
@@ -59,7 +75,8 @@ export class FeatureGroupingService {
                     label,
                     children,
                     isExcluded,
-                    isExpanded: false
+                    isExpanded: false,
+                    primaryCriteria: primaryCriteria || null
                 });
                 seenGroups.add(criteria.id);
             } else {
@@ -75,19 +92,33 @@ export class FeatureGroupingService {
             if (childIds.length === 0) {
                 return;
             }
-            const children: Criteria[] = childIds
+            const childSet = new Set<string>();
+            const children: Criteria[] = [];
+
+            const criteria = criteriaIndex.get(groupKey) || Array.from(criteriaIndex.values()).find(item => item.name === groupKey);
+            let primaryCriteria: Criteria | undefined;
+            if (criteria && criteria.search) {
+                primaryCriteria = criteria;
+                children.push(criteria);
+                childSet.add(criteria.id);
+                columnGroupMap[criteria.id] = groupKey;
+            }
+
+            childIds
                 .map(childId => criteriaIndex.get(childId))
-                .filter((child): child is Criteria => !!child);
+                .filter((child): child is Criteria => !!child)
+                .forEach(child => {
+                    if (!childSet.has(child.id)) {
+                        children.push(child);
+                        childSet.add(child.id);
+                    }
+                    if (!columnGroupMap[child.id]) {
+                        columnGroupMap[child.id] = groupKey;
+                    }
+                });
             if (children.length === 0) {
                 return;
             }
-            children.forEach(child => {
-                if (!columnGroupMap[child.id]) {
-                    columnGroupMap[child.id] = groupKey;
-                }
-            });
-
-            const criteria = criteriaIndex.get(groupKey) || Array.from(criteriaIndex.values()).find(item => item.name === groupKey);
             const labelValues = summary.labels ? Array.from(summary.labels) : [];
             const firstLabel = this.findFirstLabel(dataElements, groupKey);
             const label = this.buildLabelMetadata(criteria, firstLabel, labelValues);
@@ -99,7 +130,8 @@ export class FeatureGroupingService {
                 label,
                 children,
                 isExcluded,
-                isExpanded: false
+                isExpanded: false,
+                primaryCriteria: primaryCriteria || null
             });
             seenGroups.add(groupKey);
         });

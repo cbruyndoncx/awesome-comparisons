@@ -31,10 +31,37 @@
                         <div class="search-group" [class.search-group--excluded]="group.isExcluded">
                             <div class="search-group__header">
                                 <span class="search-group__title">{{group.displayName}}</span>
-                                <span class="search-group__label" *ngIf="groupLabelText(group)">{{groupLabelText(group)}}</span>
+                                <ng-container *ngIf="groupHasPrimaryControl(group); else showGroupLabel">
+                                    <div class="form-group form-group--inline" *ngIf="getPrimaryCriteria(group) as primary">
+                                        <ptooltip [tooltip]="primary.description">
+                                            <label>
+                                                <span class="sr-only">{{primary.name}}</span>
+                                            </label>
+                                        </ptooltip>
+                                        <select2 *ngIf="!primary.rangeSearch"
+                                                 [options]="getCriteriaValues(primary)"
+                                                 [placeholder]="getPlaceholder(primary)"
+                                                 [name]="primary.name"
+                                                 [tag]="primary.id"
+                                                 [active]="getActive(vm, primary)"
+                                                 (result)="criteriaChanged($event, primary)">
+                                        </select2>
+                                        <number-input *ngIf="primary.rangeSearch"
+                                                      [comparisonComponent]="this"
+                                                      [name]="primary.name"
+                                                      [active]="getActive(vm, primary)"
+                                                      (result)="criteriaChanged($event, primary)"
+                                                      [criteria]="primary"
+                                                      [tag]="primary.id">
+                                        </number-input>
+                                    </div>
+                                </ng-container>
+                                <ng-template #showGroupLabel>
+                                    <span class="search-group__label" *ngIf="groupLabelText(group)">{{groupLabelText(group)}}</span>
+                                </ng-template>
                             </div>
-                            <div class="search-group__controls">
-                                <div class="form-group" *ngFor="let child of group.children" [hidden]="!child.search">
+                            <div class="search-group__controls" [class.search-group__controls--with-primary]="groupHasPrimaryControl(group)">
+                                <div class="form-group" *ngFor="let child of group.children" [hidden]="!child.search || (groupHasPrimaryControl(group) && group.primaryCriteria?.id === child.id)">
                                     <ptooltip [tooltip]="child.description">
                                         <label>
                                             {{child.name}}

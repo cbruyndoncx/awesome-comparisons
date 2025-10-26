@@ -117,6 +117,14 @@ export class ComparisonComponent {
         return Array.isArray(group.children) && group.children.some(child => child.search);
     }
 
+    public groupHasPrimaryControl(group: FeatureGroupView): boolean {
+        return !!this.getPrimaryCriteria(group);
+    }
+
+    public getPrimaryCriteria(group: FeatureGroupView) {
+        return group?.primaryCriteria || null;
+    }
+
     public getCriteriaValues(criteria: Criteria) {
         const index = this.configurationService.criteria.findIndex(item => item.id === criteria.id);
         return index !== -1 ? this.configurationService.criteriaValues[index] : [];
@@ -131,7 +139,11 @@ export class ComparisonComponent {
     }
 
     public groupLabelText(group: FeatureGroupView): string {
-        return group.label?.value || '';
+        const labelText = group?.label?.value || '';
+        if (this.groupHasPrimaryControl(group) || (labelText && labelText.trim() === (group?.displayName || '').trim())) {
+            return '';
+        }
+        return labelText;
     }
 
     public getPlaceholder(criteria: Criteria): string {

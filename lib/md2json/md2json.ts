@@ -120,12 +120,47 @@ export class Md2Json {
         };
         currentIndex++;
 
-        // Buffers for main criterion
         const mainContent: string[] = [];
-        const mainListItems: string[] = [];
+        let mainList: string[] = [];
         let inMainList = false;
 
-        // Inner loop: until next ## or new # header
+        const flushMainText = () => {
+          if (mainContent.length === 0) {
+            return;
+          }
+          const textContent = mainContent.join('\n').trim();
+          if (textContent) {
+            criterionHeader.children.push({
+              type: "text",
+              content: textContent
+            });
+          }
+          mainContent.length = 0;
+        };
+
+        const flushMainList = () => {
+          if (!inMainList || mainList.length === 0) {
+            return;
+          }
+          const listChildren: ListItemNode[] = mainList
+            .filter(item => item.trim().length > 0)
+            .map(item => ({
+              type: "item",
+              level: 2,
+              content: item,
+              plainChildren: ""
+            }));
+          if (listChildren.length > 0) {
+            criterionHeader.children.push({
+              type: "list",
+              level: 2,
+              children: listChildren
+            });
+          }
+          mainList = [];
+          inMainList = false;
+        };
+
         while (currentIndex < lines.length) {
           const line = lines[currentIndex];
           const t = line.trim();
@@ -134,94 +169,49 @@ export class Md2Json {
             break;
           }
 
-          // Handle sub-criteria (###)
           if (t.startsWith('### ')) {
-            // Flush any pending main list
-            if (inMainList && mainListItems.length > 0) {
-              const listChildren: ListItemNode[] = mainListItems.map(item => ({
-                type: "item",
-                level: 2,
-                content: item,
-                plainChildren: ""
-              }));
-              if (listChildren.length > 0) {
-                criterionHeader.children.push({
-                  type: "list",
-                  level: 2,
-                  children: listChildren
-                });
-              }
-            }
-            // Flush any pending main text
-            if (!inMainList && mainContent.length > 0) {
-              const textContent = mainContent.join('\n').trim();
-              if (textContent) {
-                criterionHeader.children.push({
-                  type: "text",
-                  content: textContent
-                });
-              }
-            }
-            mainListItems.length = 0;
-            inMainList = false;
-            mainContent.length = 0;
+            flushMainList();
+            flushMainText();
 
-            // Create sub-header
             const subTitle = t.substring(4).trim();
+            currentIndex++;
             const subHeader: HeaderNode = {
               type: "header",
               level: 3,
               content: subTitle,
               children: []
             };
-            currentIndex++;
 
-            // Buffers for sub-header content and lists
-            const subContentLines: string[] = [];
-            const subListItems: string[] = [];
+            const subContent: string[] = [];
+            let subList: string[] = [];
+            let inSubList = false;
 
-            // Collect sub-header content
-            while (currentIndex < lines.length) {
-              const subLine = lines[currentIndex];
-              const st = subLine.trim();
-              if (st.startsWith('### ') || st.startsWith('## ') || (st.startsWith('#') && !st.startsWith('##'))) {
-                break;
+            const flushSubText = () => {
+              if (subContent.length === 0) {
+                return;
               }
-              if (st.startsWith('- ')) {
-                subListItems.push(st.substring(2).trim());
-              } else if (subListItems.length > 0) {
-                // Flush pending sub-list
-                const listChildren: ListItemNode[] = subListItems.map(item => ({
+              const textContent = subContent.join('\n').trim();
+              if (textContent) {
+                subHeader.children.push({
+                  type: "text",
+                  content: textContent
+                });
+              }
+              subContent.length = 0;
+            };
+
+            const flushSubList = () => {
+              if (!inSubList || subList.length === 0) {
+                return;
+              }
+              const listChildren: ListItemNode[] = subList
+                .filter(item => item.trim().length > 0)
+                .map(item => ({
                   type: "item",
                   level: 3,
                   content: item,
                   plainChildren: ""
                 }));
-                if (listChildren.length > 0) {
-                  subHeader.children.push({
-                    type: "list",
-                    level: 3,
-                    children: listChildren
-                  });
-                }
-                subListItems.length = 0;
-                if (st !== '') {
-                  subContentLines.push(subLine);
-                }
-              } else {
-                subContentLines.push(subLine);
-              }
-              currentIndex++;
-            }
-
-            // Flush remaining sub-list
-            if (subListItems.length > 0) {
-              const listChildren: ListItemNode[] = subListItems.map(item => ({
-                type: "item",
-                level: 3,
-                content: item,
-                plainChildren: ""
-              }));
               if (listChildren.length > 0) {
                 subHeader.children.push({
                   type: "list",
@@ -229,43 +219,45 @@ export class Md2Json {
                   children: listChildren
                 });
               }
-            }
-            // Flush remaining sub-text
-            if (subContentLines.length > 0) {
-              const textContent = subContentLines.join('\n').trim();
-              if (textContent) {
-                subHeader.children.push({
-                  type: "text",
-                  content: textContent
-                });
+              subList = [];
+              inSubList = false;
+            };
+
+            while (currentIndex < lines.length) {
+              const subLine = lines[currentIndex];
+              const st = subLine.trim();
+              if (st.startsWith('### ') ||
+                  st.startsWith('## ') ||
+                  (st.startsWith('#') && !st.startsWith('##'))) {
+                break;
               }
+              if (st.startsWith('- ')) {
+                inSubList = true;
+                subList.push(st.substring(2).trim());
+              } else if (inSubList && st === '') {
+                // keep list open
+              } else if (inSubList && !st.startsWith('- ')) {
+                flushSubList();
+                subContent.push(subLine);
+              } else {
+                subContent.push(subLine);
+              }
+              currentIndex++;
             }
 
+            flushSubList();
+            flushSubText();
             criterionHeader.children.push(subHeader);
             continue;
           }
 
-          // Handle list items in main criterion
           if (t.startsWith('- ')) {
-            mainListItems.push(t.substring(2).trim());
             inMainList = true;
-          } else if (inMainList && mainListItems.length > 0 && t !== '' && !t.startsWith('- ')) {
-            // End of list: flush it
-            const listChildren: ListItemNode[] = mainListItems.map(item => ({
-              type: "item",
-              level: 2,
-              content: item,
-              plainChildren: ""
-            }));
-            if (listChildren.length > 0) {
-              criterionHeader.children.push({
-                type: "list",
-                level: 2,
-                children: listChildren
-              });
-            }
-            mainListItems.length = 0;
-            inMainList = false;
+            mainList.push(t.substring(2).trim());
+          } else if (inMainList && t === '') {
+            // keep list open across blank lines
+          } else if (inMainList && !t.startsWith('- ')) {
+            flushMainList();
             mainContent.push(line);
           } else {
             mainContent.push(line);
@@ -273,32 +265,8 @@ export class Md2Json {
           currentIndex++;
         }
 
-        // Flush any remaining main list items
-        if (inMainList && mainListItems.length > 0) {
-          const listChildren: ListItemNode[] = mainListItems.map(item => ({
-            type: "item",
-            level: 2,
-            content: item,
-            plainChildren: ""
-          }));
-          if (listChildren.length > 0) {
-            criterionHeader.children.push({
-              type: "list",
-              level: 2,
-              children: listChildren
-            });
-          }
-        }
-        // Flush any remaining main text
-        if (!inMainList && mainContent.length > 0) {
-          const textContent = mainContent.join('\n').trim();
-          if (textContent) {
-            criterionHeader.children.push({
-              type: "text",
-              content: textContent
-            });
-          }
-        }
+        flushMainList();
+        flushMainText();
 
         children.push(criterionHeader);
         continue;
