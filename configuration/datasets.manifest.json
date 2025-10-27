@@ -1,19 +1,19 @@
 {
   "datasets": [
     {
-      "id": "default",
-      "displayLabel": "Default Dataset",
-      "shortDescription": "Primary comparison dataset",
-      "description": "The main comparison dataset built from the production markdown files.",
-      "assetDirectory": "assets/generated/default/",
+      "id": "code-editor",
+      "displayLabel": "AI Code Editors",
+      "shortDescription": "AI Native Dev Code Editor category",
+      "description": "AI Code Editors GUIs - either as standalone IDE or extension to vscode, jetbrains etc",
+      "assetDirectory": "assets/generated/code-editor/",
       "accentColor": "#007bff",
       "icon": "default-icon.svg",
       "preferredTheme": "light",
       "isDefault": true,
       "sources": {
-        "dataDir": "data",
-        "config": "configuration/comparison.yml",
-        "description": "configuration/description.md",
+        "dataDir": "datasets/code-editor/data",
+        "config": "datasets/code-editor/config/comparison.yml",
+        "description": "datasets/code-editor/config/description.md",
         "style": "configuration/style.css"
       }
     },
@@ -21,16 +21,16 @@
       "id": "example",
       "displayLabel": "Example Dataset",
       "shortDescription": "Lightweight sample dataset",
-      "description": "A starter dataset rendered from data_example/ using the shared comparison-default.yml configuration.",
+      "description": "A starter dataset rendered from ucf example, using the shared comparison-default.yml configuration.",
       "assetDirectory": "assets/generated/example/",
       "accentColor": "#28a745",
       "icon": "experimental-icon.svg",
       "preferredTheme": "dark",
       "isDefault": false,
       "sources": {
-        "dataDir": "data_example",
-        "config": "configuration/comparison-default.yml",
-        "description": "configuration/description.md",
+        "dataDir": "datasets/example/data",
+        "config": "datasets/example/config/comparison-default.yml",
+        "description": "datasets/example/config/description.md",
         "style": "configuration/style.css"
       }
     }

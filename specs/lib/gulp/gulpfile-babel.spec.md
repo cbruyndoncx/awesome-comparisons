@@ -59,9 +59,9 @@ Expands the build to support multiple datasets defined in configuration/datasets
 - Iterates each dataset definition, resolving dataset-specific source directories (markdown, configuration, description, style) via the `sources` metadata
 - Runs the markdown conversion, criteria enrichment, development column enrichment, and config merging per dataset using isolated tmp/dist destinations
 - Copies comparison.json, data.json, description.md, and style.css into `src/assets/generated/<datasetId>/` and `dist/ultimate-comparison/assets/generated/<datasetId>/`
+- Ensures generated files exist only beneath their dataset-specific directories (no legacy root mirrors)
 - Copies the manifest itself to `src/assets/configuration/datasets.manifest.json` so the Angular app can request it at runtime
 - Validates that required files exist for every dataset and throws descriptive errors when inputs or generated outputs are missing
-- Maintains backwards compatibility by keeping the default dataset outputs at `dist/data.json` and `src/assets/generated/` root while still mirroring them under their dataset subdirectory
 
 ### Release Management
 
