@@ -5,35 +5,35 @@
 .select2-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    padding: 0.25rem 0;
-    border-bottom: 1px solid #aaa;
+    gap: 0.25rem;
+    padding: 0;
     min-height: 2rem;
 }
 
 .select2-placeholder {
-    color: #777;
+    color: var(--text-secondary, #64748b);
     font-style: italic;
 }
 
 .select2-option {
-    background-color: #f1f1f1;
-    border: 1px solid #d4d4d4;
-    border-radius: 4px;
-    color: #333;
+    background-color: rgba(37, 99, 235, 0.08);
+    border: 1px solid var(--border-color, rgba(15, 23, 42, 0.12));
+    border-radius: 10px;
+    color: var(--text-color, #0f172a);
     cursor: pointer;
     font-size: 0.875rem;
     line-height: 1.5;
-    padding: 0.25rem 0.75rem;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    padding: 0.25rem 0.65rem;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .select2-option:hover {
-    background-color: #e0e0e0;
+    background-color: rgba(37, 99, 235, 0.16);
+    border-color: var(--uc-accent, #2563eb);
 }
 
 .select2-option--active {
-    background-color: #777;
-    border-color: #555;
-    color: #fff;
+    background-color: var(--uc-accent, #2563eb);
+    border-color: var(--uc-accent, #2563eb);
+    color: var(--uc-accent-contrast, #f8fafc);
 }

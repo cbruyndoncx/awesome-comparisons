@@ -38,6 +38,7 @@
               }
             ],
             "styles": [
+              "src/styles/fonts.css",
               "src/styles.css",
               "src/styles/theme.scss"
             ],

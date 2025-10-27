@@ -5,17 +5,119 @@
 @use '@angular/material' as mat;
 @use 'sass:map';
 
-// Define the typography
-$typography: mat.define-typography-config();
+// Typography tuned to ThirdBrain visual identity
+$typography: mat.define-typography-config(
+  $font-family: 'Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+);
 
-// Define color palettes
-$light-primary: mat.define-palette(mat.$blue-palette);
-$light-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-$light-warn: mat.define-palette(mat.$red-palette);
+// Tailwind-inspired palette mapped for Angular Material theming
+$thirdbrain-blue-palette: (
+  50: #eff6ff,
+  100: #dbeafe,
+  200: #bfdbfe,
+  300: #93c5fd,
+  400: #60a5fa,
+  500: #3b82f6,
+  600: #2563eb,
+  700: #1d4ed8,
+  800: #1e40af,
+  900: #1e3a8a,
+  A100: #bfdbfe,
+  A200: #60a5fa,
+  A400: #2563eb,
+  A700: #1d4ed8,
+  contrast: (
+    50: #0f172a,
+    100: #0f172a,
+    200: #0f172a,
+    300: #0f172a,
+    400: #0f172a,
+    500: #f8fafc,
+    600: #f8fafc,
+    700: #f8fafc,
+    800: #f8fafc,
+    900: #f8fafc,
+    A100: #0f172a,
+    A200: #0f172a,
+    A400: #f8fafc,
+    A700: #f8fafc,
+  ),
+);
 
-$dark-primary: mat.define-palette(mat.$blue-palette);
-$dark-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-$dark-warn: mat.define-palette(mat.$red-palette);
+$thirdbrain-violet-palette: (
+  50: #f5f3ff,
+  100: #ede9fe,
+  200: #ddd6fe,
+  300: #c4b5fd,
+  400: #a78bfa,
+  500: #8b5cf6,
+  600: #7c3aed,
+  700: #6d28d9,
+  800: #5b21b6,
+  900: #4c1d95,
+  A100: #ddd6fe,
+  A200: #c4b5fd,
+  A400: #a78bfa,
+  A700: #6d28d9,
+  contrast: (
+    50: #2e1065,
+    100: #2e1065,
+    200: #2e1065,
+    300: #2e1065,
+    400: #2e1065,
+    500: #fdf4ff,
+    600: #fdf4ff,
+    700: #fdf4ff,
+    800: #fdf4ff,
+    900: #fdf4ff,
+    A100: #2e1065,
+    A200: #2e1065,
+    A400: #fdf4ff,
+    A700: #fdf4ff,
+  ),
+);
+
+$thirdbrain-amber-palette: (
+  50: #fffbeb,
+  100: #fef3c7,
+  200: #fde68a,
+  300: #fcd34d,
+  400: #fbbf24,
+  500: #f59e0b,
+  600: #d97706,
+  700: #b45309,
+  800: #92400e,
+  900: #78350f,
+  A100: #fde68a,
+  A200: #fbbf24,
+  A400: #f59e0b,
+  A700: #d97706,
+  contrast: (
+    50: #78350f,
+    100: #78350f,
+    200: #78350f,
+    300: #4c1d06,
+    400: #422006,
+    500: #0f172a,
+    600: #fefce8,
+    700: #fefce8,
+    800: #fefce8,
+    900: #fefce8,
+    A100: #78350f,
+    A200: #422006,
+    A400: #0f172a,
+    A700: #fefce8,
+  ),
+);
+
+// Define color palettes aligned with the ThirdBrain look
+$light-primary: mat.define-palette($thirdbrain-blue-palette, 600, 400, 800);
+$light-accent: mat.define-palette($thirdbrain-violet-palette, 600, 400, 800);
+$light-warn: mat.define-palette($thirdbrain-amber-palette, 500, 400, 700);
+
+$dark-primary: mat.define-palette($thirdbrain-blue-palette, 500, 300, 700);
+$dark-accent: mat.define-palette($thirdbrain-violet-palette, 500, 300, 700);
+$dark-warn: mat.define-palette($thirdbrain-amber-palette, 500, 300, 700);
 
 // Create light theme
 $light-theme: mat.define-light-theme((
@@ -48,32 +150,52 @@ $dark-theme: mat.define-dark-theme((
 // Light theme styles
 .uc-light-theme {
   @include mat.all-component-colors($light-theme);
-  
+
   // Custom light theme variables
-  --background-color: #ffffff;
-  --text-color: #212121;
-  --text-secondary: #757575;
-  --border-color: #e0e0e0;
-  --hover-color: #f5f5f5;
+  --font-body: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --bodyFont: var(--font-body);
+  --headerFont: var(--font-heading);
+  --titleFont: var(--font-heading);
+  --codeFont: var(--font-mono);
+  --background-color: #f8fafc;
+  --surface-muted: #e2e8f0;
+  --text-color: #0f172a;
+  --text-secondary: #475569;
+  --border-color: rgba(15, 23, 42, 0.08);
+  --border-strong: rgba(15, 23, 42, 0.16);
+  --hover-color: rgba(37, 99, 235, 0.08);
   --card-background: #ffffff;
-  --header-background: #fafafa;
+  --header-background: #f1f5f9;
+  --light: #fefefe;
+  --lightgray: #f1f5f9;
+  --gray: #64748b;
+  --darkgray: #1e293b;
+  --dark: #0f172a;
+  --secondary: #{mat.get-color-from-palette($light-primary, 600)};
+  --tertiary: #{mat.get-color-from-palette($light-accent, 600)};
+  --highlight: #2563eb14;
+  --text-highlight: #fbbf24;
   --uc-accent: #{mat.get-color-from-palette($light-primary, 600)};
   --uc-accent-contrast: #{mat.get-contrast-color-from-palette($light-primary, 600)};
   --accent-surface: #{rgba(mat.get-color-from-palette($light-primary, 600), 0.12)};
-  --accent-surface-strong: #{rgba(mat.get-color-from-palette($light-primary, 600), 0.2)};
+  --accent-surface-strong: #{rgba(mat.get-color-from-palette($light-primary, 600), 0.18)};
   --link-color: #{mat.get-color-from-palette($light-primary, 600)};
-  --warn-color: #{mat.get-color-from-palette($light-warn, 600)};
-  --warn-contrast: #{mat.get-contrast-color-from-palette($light-warn, 600)};
-  --warn-surface: #{rgba(mat.get-color-from-palette($light-warn, 600), 0.18)};
-  
+  --warn-color: #{mat.get-color-from-palette($light-warn, 500)};
+  --warn-contrast: #{mat.get-contrast-color-from-palette($light-warn, 500)};
+  --warn-surface: #{rgba(mat.get-color-from-palette($light-warn, 400), 0.18)};
+  --shadow-color: rgba(15, 23, 42, 0.08);
+
   background-color: var(--background-color);
   color: var(--text-color);
-  
+  font-family: var(--font-body);
+
   // Ensure Material components use light theme
   .mat-drawer-container {
     background-color: var(--background-color);
   }
-  
+
   .mat-toolbar {
     background-color: var(--header-background);
     color: var(--text-color);
@@ -83,32 +205,52 @@ $dark-theme: mat.define-dark-theme((
 // Dark theme styles
 .uc-dark-theme {
   @include mat.all-component-colors($dark-theme);
-  
+
   // Custom dark theme variables
-  --background-color: #121212;
-  --text-color: #ffffff;
-  --text-secondary: #b3b3b3;
-  --border-color: #424242;
-  --hover-color: #2c2c2c;
-  --card-background: #1e1e1e;
-  --header-background: #1f1f1f;
-  --uc-accent: #{mat.get-color-from-palette($dark-primary, 200)};
-  --uc-accent-contrast: #{mat.get-contrast-color-from-palette($dark-primary, 200)};
-  --accent-surface: #{rgba(mat.get-color-from-palette($dark-primary, 200), 0.24)};
-  --accent-surface-strong: #{rgba(mat.get-color-from-palette($dark-primary, 200), 0.32)};
-  --link-color: #{mat.get-color-from-palette($dark-primary, 200)};
-  --warn-color: #{mat.get-color-from-palette($dark-warn, 300)};
-  --warn-contrast: #{mat.get-contrast-color-from-palette($dark-warn, 300)};
+  --font-body: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --bodyFont: var(--font-body);
+  --headerFont: var(--font-heading);
+  --titleFont: var(--font-heading);
+  --codeFont: var(--font-mono);
+  --background-color: #0a0a0b;
+  --surface-muted: #1f2937;
+  --text-color: #f9fafb;
+  --text-secondary: #cbd5f5;
+  --border-color: rgba(148, 163, 184, 0.24);
+  --border-strong: rgba(148, 163, 184, 0.32);
+  --hover-color: rgba(59, 130, 246, 0.18);
+  --card-background: #111827;
+  --header-background: #0f1824;
+  --light: #0a0a0b;
+  --lightgray: #1a1a1c;
+  --gray: #71717a;
+  --darkgray: #d1d5db;
+  --dark: #f9fafb;
+  --secondary: #{mat.get-color-from-palette($dark-primary, 500)};
+  --tertiary: #{mat.get-color-from-palette($dark-accent, 500)};
+  --highlight: #3b82f61f;
+  --text-highlight: #f59e0b;
+  --uc-accent: #{mat.get-color-from-palette($dark-primary, 500)};
+  --uc-accent-contrast: #{mat.get-contrast-color-from-palette($dark-primary, 500)};
+  --accent-surface: #{rgba(mat.get-color-from-palette($dark-primary, 500), 0.24)};
+  --accent-surface-strong: #{rgba(mat.get-color-from-palette($dark-primary, 500), 0.32)};
+  --link-color: #{mat.get-color-from-palette($dark-primary, 300)};
+  --warn-color: #{mat.get-color-from-palette($dark-warn, 400)};
+  --warn-contrast: #{mat.get-contrast-color-from-palette($dark-warn, 400)};
   --warn-surface: #{rgba(mat.get-color-from-palette($dark-warn, 300), 0.28)};
-  
+  --shadow-color: rgba(8, 11, 19, 0.6);
+
   background-color: var(--background-color);
   color: var(--text-color);
-  
+  font-family: var(--font-body);
+
   // Ensure Material components use dark theme
   .mat-drawer-container {
     background-color: var(--background-color);
   }
-  
+
   .mat-toolbar {
     background-color: var(--header-background);
     color: var(--text-color);
@@ -118,13 +260,13 @@ $dark-theme: mat.define-dark-theme((
 // High contrast support
 @media (prefers-contrast: high) {
   .uc-light-theme {
-    --border-color: #000000;
-    --text-secondary: #000000;
+    --border-color: #0f172a;
+    --text-secondary: #1e293b;
   }
-  
+
   .uc-dark-theme {
-    --border-color: #ffffff;
-    --text-secondary: #ffffff;
+    --border-color: #f9fafb;
+    --text-secondary: #f9fafb;
   }
 }
 
@@ -142,23 +284,26 @@ $dark-theme: mat.define-dark-theme((
     outline: 2px solid currentColor;
     outline-offset: 2px;
   }
-  
+
   // Improve visibility of form controls
   .mat-form-field {
     .mat-form-field-underline {
       background-color: var(--border-color);
     }
-    
+
     .mat-form-field-label {
       color: var(--text-secondary);
     }
   }
 }
 
-// Theme transition animations
+// Theme transition animations and global typography
 html,
 body {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  font-family: var(--bodyFont, 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif);
+  background-color: var(--background-color, #f8fafc);
+  color: var(--text-color, #0f172a);
 }
 
 // Status announcement for accessibility
