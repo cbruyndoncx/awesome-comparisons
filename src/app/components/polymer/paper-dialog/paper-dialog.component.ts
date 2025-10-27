@@ -1,4 +1,4 @@
-import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
+import { Component, EventEmitter, HostBinding, HostListener, Input, Output } from '@angular/core';
 
 @Component({
     selector: 'pdialog',
@@ -11,6 +11,10 @@ export class PaperDialogComponent {
 
     @Output() openedChange: EventEmitter<boolean> = new EventEmitter();
 
+    @HostBinding('style.display') get displayStyle(): string {
+        return this.opened ? 'grid' : 'none';
+    }
+
     @HostListener('click', ['$event.target']) onClick(target) {
         if (target.localName === 'pdialog') {
             this.close();
@@ -19,7 +23,7 @@ export class PaperDialogComponent {
 
     public close() {
         this.opened = false;
-        this.openedChange.emit();
+        this.openedChange.emit(false);
     }
 
     @HostListener('window:keydown', ['$event']) onKeydown(event) {

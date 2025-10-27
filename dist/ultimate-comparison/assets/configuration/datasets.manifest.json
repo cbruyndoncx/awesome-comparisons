@@ -8,6 +8,7 @@
       "assetDirectory": "assets/generated/default/",
       "accentColor": "#007bff",
       "icon": "default-icon.svg",
+      "preferredTheme": "light",
       "isDefault": true,
       "sources": {
         "dataDir": "data",
@@ -24,6 +25,7 @@
       "assetDirectory": "assets/generated/example/",
       "accentColor": "#28a745",
       "icon": "experimental-icon.svg",
+      "preferredTheme": "dark",
       "isDefault": false,
       "sources": {
         "dataDir": "data_example",

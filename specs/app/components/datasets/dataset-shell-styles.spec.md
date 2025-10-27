@@ -14,11 +14,15 @@ Provides main container with responsive spacing, max-width constraint, centered 
 
 ### Dataset Selector Layout
 
-Creates a compact tab strip via `.dataset-tabs` flex container with horizontal scrolling on narrow screens and equal-height tabs on wide screens. Tabs stay sticky to the top of the shell while leaving room for content below.
+Creates a compact tab strip via `.dataset-tabs` flex container with horizontal scrolling on narrow screens and equal-height tabs on wide screens. Tabs stay sticky to the top of the shell while leaving room for content below, and `.dataset-shell__header` aligns the tab list with the theme toggle controls.
 
 ### Dataset Tab Styling
 
 Defines `.dataset-tab` buttons with subtle borders, hover states, and accent focus outlines (`var(--uc-accent, #0066cc)`). `.is-active` tabs get a solid accent indicator, bolder text, and elevated background. `.dataset-tab__label`, `.dataset-tab__summary`, and `.dataset-tab__accent` manage typography, truncated summaries, and optional accent dots.
+
+### Theme Toggle Styling
+
+`.dataset-theme-toggle` renders compact icon buttons with visible focus states and `.is-active` modifiers tied to the current theme. Buttons inherit accent colors, while `.sr-only` text keeps announcements accessible.
 
 ### Dataset Details Display
 
@@ -44,13 +48,16 @@ Provides utility classes for `aria-live` region (`.dataset-status`) to ensure te
 
 ```css { .api }
 .dataset-shell { /* Responsive container with max-width, centering, and neutral background */ }
-.dataset-shell__selector { /* Wrapper for the tab strip and status */ }
+.dataset-shell__selector { /* Wrapper for the tab strip, toggle, and status */ }
+.dataset-shell__header { /* Flex layout for tabs + toggle */ }
 .dataset-tabs { /* Horizontal flex tab list */ }
 .dataset-tab { /* Individual tab button */ }
 .dataset-tab.is-active { /* Active tab state */ }
 .dataset-tab__label,
 .dataset-tab__summary,
 .dataset-tab__accent { /* Typography and accent visuals within tabs */ }
+.dataset-theme-toggle,
+.dataset-theme-toggle__button { /* Theme toggle group + button states */ }
 .dataset-details { /* Flex layout for dataset information */ }
 .dataset-details__badge { /* Colored pill badge styling */ }
 .dataset-content { /* Top margin for embedded content */ }
@@ -58,6 +65,7 @@ Provides utility classes for `aria-live` region (`.dataset-status`) to ensure te
 .dataset-status { /* Accessibility utility for aria-live regions */ }
 
 @media (min-width: 768px) {
+  .dataset-shell__header { /* Align tabs and toggle horizontally */ }
   .dataset-tabs { /* Wider spacing and centered alignment on desktop */ }
   .dataset-details { /* Horizontal layout for details */ }
 }

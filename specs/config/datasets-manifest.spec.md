@@ -10,7 +10,7 @@ Configuration file that enumerates all datasets supported by the comparison site
 
 ### Dataset enumeration
 
-Provides a structured list of available datasets with their metadata including display names, descriptions, asset directories, and visual styling options. Each entry also specifies the source markdown/configuration/asset files used during the build so tooling can regenerate every dataset consistently.
+Provides a structured list of available datasets with their metadata including display names, descriptions, asset directories, visual styling options, and optional theme preferences. Each entry also specifies the source markdown/configuration/asset files used during the build so tooling can regenerate every dataset consistently.
 
 ### Default dataset specification
 
@@ -41,6 +41,7 @@ Includes a `sources` object per dataset listing the markdown directory plus conf
       "assetDirectory": "assets/generated/default/",
       "accentColor": "#007bff",
       "icon": "default-icon.svg",
+      "preferredTheme": "light",
       "isDefault": true,
       "sources": {
         "dataDir": "data",
@@ -57,6 +58,7 @@ Includes a `sources` object per dataset listing the markdown directory plus conf
       "assetDirectory": "assets/generated/example/",
       "accentColor": "#28a745",
       "icon": "experimental-icon.svg",
+      "preferredTheme": "dark",
       "isDefault": false,
       "sources": {
         "dataDir": "data_example",

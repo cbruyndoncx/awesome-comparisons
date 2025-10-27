@@ -84,6 +84,9 @@ export class ComparisonComponent {
     }
 
     public latexDownload() {
+        if (!this.latexTable || !this.latexTable.element) {
+            return;
+        }
         let content: string = this.latexTable.element.nativeElement.textContent;
         content = content.substring(content.indexOf('%'));
         const blob: Blob = new Blob([content], {type: 'text/plain'});

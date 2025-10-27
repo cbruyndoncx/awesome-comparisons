@@ -66,6 +66,7 @@ export interface DatasetManifestEntry {
   assetDirectory: string;
   accentColor?: string;
   icon?: string;
+  preferredTheme?: 'light' | 'dark';
   isDefault?: boolean;
   sources?: {
     dataDir?: string;

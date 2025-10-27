@@ -1,6 +1,6 @@
 // GENERATED FROM SPEC - DO NOT EDIT
 // @generated with Tessl v0.28.0 from ../../../../specs/app/components/datasets/dataset-manifest-service.spec.md
-// (spec:461044fe) (code:62c96ce8)
+// (spec:1180367f) (code:78c7ec8a)
 
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -17,6 +17,7 @@ export interface DatasetManifestEntry {
   assetDirectory: string;
   accentColor?: string;
   icon?: string;
+  preferredTheme?: 'light' | 'dark';
   isDefault?: boolean;
   sources?: {
     dataDir?: string;
@@ -104,6 +105,7 @@ export class DatasetManifestService {
             assetDirectory: entry.assetDirectory,
             accentColor: entry.accentColor,
             icon: entry.icon,
+            preferredTheme: entry.preferredTheme,
             isDefault: entry.isDefault,
             sources: entry.sources
           }))

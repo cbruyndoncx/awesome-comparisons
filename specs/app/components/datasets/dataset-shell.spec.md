@@ -30,10 +30,18 @@ Manages the active dataset selection based on multiple input sources with proper
 
 Provides an intuitive interface for users to browse and select between available datasets.
 
-- Renders dataset list as cards or dropdown showing display labels and descriptions
-- Displays dataset accent colors and icons when provided in manifest
+- Renders dataset list as tab buttons showing display labels, descriptions, and accent colors
 - Handles dataset activation through the manifest service
-- Shows loading states during dataset transitions
+- Shows loading/empty states during dataset transitions
+
+### Theme Toggle Integration
+
+Adds ThemeService-powered controls next to the dataset selector.
+
+- Subscribes to ThemeService observables to reflect current/resolved themes
+- Renders icon buttons with aria-pressed states and tooltips for light/dark/system
+- Announces theme changes via aria-live status text
+- Calls `syncWithDataset` whenever the active dataset changes to respect `preferredTheme`
 
 ### Configuration Service Integration
 
@@ -64,10 +72,14 @@ Ensures build-time validation and generation of multi-dataset assets.
 export class DatasetShellComponent implements OnInit {
   datasets$: Observable<DatasetManifestEntry[]>;
   activeDataset$: Observable<DatasetManifestEntry>;
+  currentTheme$: Observable<Theme>;
+  resolvedTheme$: Observable<'light' | 'dark'>;
   
-  constructor(private manifestService: DatasetManifestService) {}
+  constructor(private manifestService: DatasetManifestService,
+              private themeService: ThemeService) {}
   
   onDatasetSelected(datasetId: string): void;
+  onThemeSelected(theme: Theme): void;
 }
 
 interface DatasetManifestEntry {
@@ -77,6 +89,7 @@ interface DatasetManifestEntry {
   accentColor?: string;
   icon?: string;
   assetDirectory: string;
+  preferredTheme?: 'light' | 'dark';
   isDefault?: boolean;
 }
 ```
@@ -102,6 +115,11 @@ Existing comparison UI component that will be wrapped by the dataset shell.
 
 Service that loads comparison data and will be enhanced for dataset-aware asset loading.
 [@use](../../../../src/app/components/comparison/configuration/configuration.service.ts)
+
+### Theme Service
+
+Service responsible for managing light/dark/system themes and announcing changes.
+[@use](../../../../src/app/theme/theme.service.ts)
 
 ### Angular Core
 

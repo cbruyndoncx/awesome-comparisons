@@ -15,4 +15,5 @@
     height: 26px;
 
     box-sizing: border-box !important;
+    color: var(--text-color, #424242);
 }

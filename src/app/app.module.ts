@@ -4,6 +4,8 @@
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTabsModule } from '@angular/material/tabs';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
@@ -18,7 +20,9 @@ import { CustomRouterStateSerializer } from './redux/custom-router-state-seriali
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ComparisonModule,
+    MatTabsModule,
     RouterModule.forRoot(
       [
         { path: '', component: DatasetShellComponent }

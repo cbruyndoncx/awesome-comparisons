@@ -26,15 +26,15 @@
 }
 
 .label--plain {
-    background-color: #f5f5f5 !important;
-    color: #333 !important;
-    border: 1px solid #dddddd;
+    background-color: var(--hover-color, #f5f5f5) !important;
+    color: var(--text-color, #333) !important;
+    border: 1px solid var(--border-color, #dddddd);
 }
 
 .label--missing {
-    background-color: #ffe0b2 !important;
-    color: #bf360c !important;
-    border: 1px solid #ffcc80;
+    background-color: var(--warn-surface, #ffe0b2) !important;
+    color: var(--warn-color, #bf360c) !important;
+    border: 1px solid var(--warn-color, #ffcc80);
 }
 
 .repository-links {
@@ -45,7 +45,7 @@
 }
 
 .repository-links a {
-    color: #1565c0;
+    color: var(--link-color, #1565c0);
     text-decoration: underline;
     word-break: break-all;
 }
@@ -53,7 +53,7 @@
 .missing-text {
     display: block;
     margin-top: 4px;
-    color: #757575;
+    color: var(--text-secondary, #757575);
     font-style: italic;
 }
 
@@ -95,8 +95,8 @@
     display: inline-block;
     padding: 2px 8px;
     border-radius: 12px;
-    background-color: #e0e0e0;
-    color: #424242;
+    background-color: var(--hover-color, #e0e0e0);
+    color: var(--text-color, #424242);
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
@@ -108,7 +108,7 @@
 }
 
 .group-card__section {
-    border-top: 1px solid #e6e6e6;
+    border-top: 1px solid var(--border-color, #e6e6e6);
     padding-top: 8px;
 }
 

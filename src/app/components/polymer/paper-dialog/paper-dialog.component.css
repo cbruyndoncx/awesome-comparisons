@@ -6,7 +6,6 @@
     right: 0;
     left: 0;
     bottom: 0;
-    display: none;
     z-index: 2000;
     background: rgba(0, 0, 0, 0.5);
     grid-template-columns: minmax(10px, 1fr) auto minmax(10px, 1fr);
@@ -21,15 +20,17 @@
     border-radius: 5px;
     box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.4);
     grid-template-areas: "header" "content" "buttons";
-    background-color: #fff;
+    background-color: var(--card-background, #ffffff);
+    color: var(--text-color, #424242);
     max-width: 1000px;
     margin: auto;
+    border: 1px solid var(--border-color, rgba(0, 0, 0, 0.12));
 }
 
 .buttons {
     grid-area: buttons;
     display: grid;
-    color: #3f51b5;
+    color: var(--uc-accent, #3f51b5);
     justify-content: flex-end;
 }
 
@@ -38,6 +39,7 @@
     font-size: 24px;
     font-weight: 400;
     padding: 0 0 10px 0;
+    color: var(--text-color, #424242);
 }
 
 .paper-content {

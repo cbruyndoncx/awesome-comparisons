@@ -1,0 +1,171 @@
+// GENERATED FROM SPEC - DO NOT EDIT
+// @generated with Tessl v0.28.0 from ../../app/theme/theme-service.spec.md
+// (spec:5d15bf74) (code:3e85556b)
+
+@use '@angular/material' as mat;
+@use 'sass:map';
+
+// Define the typography
+$typography: mat.define-typography-config();
+
+// Define color palettes
+$light-primary: mat.define-palette(mat.$blue-palette);
+$light-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$light-warn: mat.define-palette(mat.$red-palette);
+
+$dark-primary: mat.define-palette(mat.$blue-palette);
+$dark-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$dark-warn: mat.define-palette(mat.$red-palette);
+
+// Create light theme
+$light-theme: mat.define-light-theme((
+  color: (
+    primary: $light-primary,
+    accent: $light-accent,
+    warn: $light-warn,
+  ),
+  typography: $typography,
+  density: 0,
+));
+
+// Create dark theme
+$dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-primary,
+    accent: $dark-accent,
+    warn: $dark-warn,
+  ),
+  typography: $typography,
+  density: 0,
+));
+
+// Include core styles
+@include mat.core();
+
+// Base styles for both themes
+@include mat.all-component-themes($light-theme);
+
+// Light theme styles
+.uc-light-theme {
+  @include mat.all-component-colors($light-theme);
+  
+  // Custom light theme variables
+  --background-color: #ffffff;
+  --text-color: #212121;
+  --text-secondary: #757575;
+  --border-color: #e0e0e0;
+  --hover-color: #f5f5f5;
+  --card-background: #ffffff;
+  --header-background: #fafafa;
+  --uc-accent: #{mat.get-color-from-palette($light-primary, 600)};
+  --uc-accent-contrast: #{mat.get-contrast-color-from-palette($light-primary, 600)};
+  --accent-surface: #{rgba(mat.get-color-from-palette($light-primary, 600), 0.12)};
+  --accent-surface-strong: #{rgba(mat.get-color-from-palette($light-primary, 600), 0.2)};
+  --link-color: #{mat.get-color-from-palette($light-primary, 600)};
+  --warn-color: #{mat.get-color-from-palette($light-warn, 600)};
+  --warn-contrast: #{mat.get-contrast-color-from-palette($light-warn, 600)};
+  --warn-surface: #{rgba(mat.get-color-from-palette($light-warn, 600), 0.18)};
+  
+  background-color: var(--background-color);
+  color: var(--text-color);
+  
+  // Ensure Material components use light theme
+  .mat-drawer-container {
+    background-color: var(--background-color);
+  }
+  
+  .mat-toolbar {
+    background-color: var(--header-background);
+    color: var(--text-color);
+  }
+}
+
+// Dark theme styles
+.uc-dark-theme {
+  @include mat.all-component-colors($dark-theme);
+  
+  // Custom dark theme variables
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --text-secondary: #b3b3b3;
+  --border-color: #424242;
+  --hover-color: #2c2c2c;
+  --card-background: #1e1e1e;
+  --header-background: #1f1f1f;
+  --uc-accent: #{mat.get-color-from-palette($dark-primary, 200)};
+  --uc-accent-contrast: #{mat.get-contrast-color-from-palette($dark-primary, 200)};
+  --accent-surface: #{rgba(mat.get-color-from-palette($dark-primary, 200), 0.24)};
+  --accent-surface-strong: #{rgba(mat.get-color-from-palette($dark-primary, 200), 0.32)};
+  --link-color: #{mat.get-color-from-palette($dark-primary, 200)};
+  --warn-color: #{mat.get-color-from-palette($dark-warn, 300)};
+  --warn-contrast: #{mat.get-contrast-color-from-palette($dark-warn, 300)};
+  --warn-surface: #{rgba(mat.get-color-from-palette($dark-warn, 300), 0.28)};
+  
+  background-color: var(--background-color);
+  color: var(--text-color);
+  
+  // Ensure Material components use dark theme
+  .mat-drawer-container {
+    background-color: var(--background-color);
+  }
+  
+  .mat-toolbar {
+    background-color: var(--header-background);
+    color: var(--text-color);
+  }
+}
+
+// High contrast support
+@media (prefers-contrast: high) {
+  .uc-light-theme {
+    --border-color: #000000;
+    --text-secondary: #000000;
+  }
+  
+  .uc-dark-theme {
+    --border-color: #ffffff;
+    --text-secondary: #ffffff;
+  }
+}
+
+// Accessibility improvements
+.uc-light-theme,
+.uc-dark-theme {
+  // Ensure focus indicators are visible
+  .mat-button:focus,
+  .mat-raised-button:focus,
+  .mat-flat-button:focus,
+  .mat-stroked-button:focus,
+  .mat-icon-button:focus,
+  .mat-fab:focus,
+  .mat-mini-fab:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+  
+  // Improve visibility of form controls
+  .mat-form-field {
+    .mat-form-field-underline {
+      background-color: var(--border-color);
+    }
+    
+    .mat-form-field-label {
+      color: var(--text-secondary);
+    }
+  }
+}
+
+// Theme transition animations
+html,
+body {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+// Status announcement for accessibility
+.theme-status {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
