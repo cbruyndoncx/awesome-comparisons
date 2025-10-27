@@ -127,37 +127,6 @@
   border: 0;
 }
 
-.dataset-details {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  margin: 0 0 0.6rem;
-  font-family: inherit;
-  padding-inline: clamp(0.75rem, 2.4vw, 1.5rem);
-}
-
-.dataset-details__summary {
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--text-secondary, #666666);
-}
-
-.dataset-details__badge {
-  display: inline-block;
-  padding: 0.2rem 0.45rem;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: #ffffff;
-  background-color: var(--uc-accent, #0066cc);
-}
-
-.dataset-details__description {
-  margin: 0;
-  line-height: 1.4;
-  font-size: 0.95rem;
-}
-
 .dataset-content {
   margin-top: 0.6rem;
   padding-inline: clamp(0.75rem, 2.4vw, 1.5rem);
@@ -191,11 +160,5 @@
 
   .dataset-tabs-group ::ng-deep .mat-mdc-tab-list {
     justify-content: flex-start;
-  }
-
-  .dataset-details {
-    flex-direction: row;
-    align-items: center;
-    gap: 0.75rem;
   }
 }

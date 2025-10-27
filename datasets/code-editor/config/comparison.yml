@@ -1,3 +1,10 @@
+title: AI Code Editors
+subtitle: feature-comparison
+selectTitle: Filter Criteria
+tableTitle: Comparison of AI Code Editors
+repository:
+  template: "https://github.com/cbruyndoncx/{}.git"
+  variables: ["subtitle"]
 criteria:
   - General:
       name: General Info

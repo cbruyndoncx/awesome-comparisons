@@ -10,7 +10,7 @@ The dataset shell component template provides the main UI layout for dataset sel
 
 ### Container structure
 
-Wraps entire UI in a `.dataset-shell` container that shows a selector region, dataset details, and the embedded comparison view.
+Wraps entire UI in a `.dataset-shell` container that shows a selector region and the embedded comparison view.
 
 ### Selector region
 
@@ -21,12 +21,6 @@ Each tab shows the dataset `displayLabel`, optional accent dot, and a one-line s
 ### Theme toggle control
 
 Adds a `.dataset-theme-toggle` button group containing three icon buttons (light, dark, system) with `aria-pressed` states and tooltips. Buttons call `onThemeSelected(theme)` to invoke ThemeService. Includes a visually hidden status element (`aria-live="polite"`) to announce theme changes and reflect ThemeService output.
-
-### Dataset details region
-
-Uses another `*ngIf="(activeDataset$ | async) as activeDataset"` to show heading inside `.dataset-details`, full description, and optional icon/accent badge (`.dataset-details__badge`) colorized via `[style.backgroundColor]` binding when manifest provides `accentColor`.
-
-Renders dataset description as plain text inside a paragraph and includes fallback text when missing.
 
 ### Content region
 
@@ -110,20 +104,6 @@ Keeps template free of presentational logic beyond simple truncation via `datase
   <ng-template #datasetLoading>
     <p class="dataset-empty" aria-live="polite">Loading datasets…</p>
   </ng-template>
-  
-  <!-- Dataset details region -->
-  <section class="dataset-details"
-           *ngIf="(activeDataset$ | async) as activeDataset"
-           role="tabpanel"
-           [attr.id]="'dataset-panel-' + activeDataset.id"
-           [attr.aria-labelledby]="'dataset-tab-' + activeDataset.id">
-    <h2>{{activeDataset.displayLabel}}</h2>
-    <span class="dataset-details__badge" *ngIf="activeDataset.accentColor"
-          [style.backgroundColor]="activeDataset.accentColor">
-      {{activeDataset.shortDescription || 'Active'}}
-    </span>
-    <p>{{activeDataset.description || 'No description available'}}</p>
-  </section>
   
   <!-- Content region -->
   <section *ngIf="(activeDataset$ | async) as active; else errorState" class="dataset-content">

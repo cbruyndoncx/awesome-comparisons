@@ -61,25 +61,6 @@
     <p class="dataset-empty" aria-live="polite">Loading datasets…</p>
   </ng-template>
   
-  <!-- Dataset details region -->
-  <section class="dataset-details"
-           *ngIf="(activeDataset$ | async) as activeDataset"
-           role="region"
-           [attr.aria-labelledby]="'dataset-panel-' + activeDataset.id + '-title'">
-    <h2 class="sr-only" [attr.id]="'dataset-panel-' + activeDataset.id + '-title'">
-      {{activeDataset.displayLabel}}
-    </h2>
-    <p class="dataset-details__summary" *ngIf="activeDataset.shortDescription">
-      {{activeDataset.shortDescription}}
-    </p>
-    <span class="dataset-details__badge" *ngIf="activeDataset.accentColor">
-      Active
-    </span>
-    <p class="dataset-details__description" *ngIf="activeDataset.description">
-      {{activeDataset.description}}
-    </p>
-  </section>
-  
   <!-- Content region -->
   <section *ngIf="(activeDataset$ | async) as active; else errorState" class="dataset-content">
     <comparison></comparison>

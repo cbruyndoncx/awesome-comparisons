@@ -24,10 +24,6 @@ Defines `.dataset-tab` buttons with subtle borders, hover states, and accent foc
 
 `.dataset-theme-toggle` renders compact icon buttons with visible focus states and `.is-active` modifiers tied to the current theme. Buttons inherit accent colors, while `.sr-only` text keeps announcements accessible.
 
-### Dataset Details Display
-
-Displays selected dataset information with flex alignment, optional `.dataset-details__badge` colored pill driven by inline style, and paragraph typography adjustments.
-
 ### Dataset Content Layout
 
 Adds top margin to `.dataset-content` so the embedded comparison component fills full width properly.
@@ -58,8 +54,6 @@ Provides utility classes for `aria-live` region (`.dataset-status`) to ensure te
 .dataset-tab__accent { /* Typography and accent visuals within tabs */ }
 .dataset-theme-toggle,
 .dataset-theme-toggle__button { /* Theme toggle group + button states */ }
-.dataset-details { /* Flex layout for dataset information */ }
-.dataset-details__badge { /* Colored pill badge styling */ }
 .dataset-content { /* Top margin for embedded content */ }
 .dataset-empty, .dataset-error { /* Shared styling for feedback states */ }
 .dataset-status { /* Accessibility utility for aria-live regions */ }
@@ -67,7 +61,6 @@ Provides utility classes for `aria-live` region (`.dataset-status`) to ensure te
 @media (min-width: 768px) {
   .dataset-shell__header { /* Align tabs and toggle horizontally */ }
   .dataset-tabs { /* Wider spacing and centered alignment on desktop */ }
-  .dataset-details { /* Horizontal layout for details */ }
 }
 ```
 

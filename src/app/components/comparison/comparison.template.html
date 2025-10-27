@@ -23,7 +23,7 @@
                         Filters hidden – use “Show filters” to edit criteria.
                     </span>
                     </div>
-                    <div class="select-toolbar__subactions">
+                    <div class="select-toolbar__subactions" *ngIf="!filtersCollapsed">
                         <button type="button"
                                 class="select-toolbar__button"
                                 (click)="setAllGroupCollapse(vm.state.featureGroups, true)"
@@ -219,28 +219,21 @@
             [elementDisplayAll]="vm.state.elementDisplayAll"
             [elementNames]="vm.state.elementNames"
             [elementsEnabled]="vm.state.elementsEnabled"
-            [latexDisplayTable]="vm.state.latexDisplayTable"
-            [latexEnableTooltips]="vm.state.latexEnableTooltips"
-            [latexTooltipsAsFootnotes]="vm.state.latexTooltipsAsFootnotes"
             [detailsDisplayTooltips]="vm.state.detailsDisplayTooltips"
             [labelColorsEnabled]="vm.state.labelColorsEnabled"
             (columnsDisplayAllChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'ColumnDisplayAll'})"
             (columnChange)="store.dispatch({type: 'UPDATE_SETTINGS', value: $event, operation: 'ColumnChange'})"
             (elementsDisplayAllChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'ElementDisplayAll'})"
             (elementChange)="store.dispatch({type: 'UPDATE_SETTINGS', value: $event, operation: 'ElementChange'})"
-            (latexDisplayTableChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'LatexDisplayTable'})"
-            (latexEnableTooltipsChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'LatexEnableTooltips'})"
-            (latexTooltipsAsFootnotesChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'LatexTooltipsAsFootnotes'})"
             (detailsDisplayTooltipsChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'DetailsDisplayTooltips'})"
             (labelColorsEnabledChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'LabelColorsEnabled'})"
-            (latexDownload)="latexDownload()"
         ></comparison-settings>
     </pdialog>
 
 
     <div class="grid-footer">
         <div class="container">
-            This is an <a href="http://ultimate-comparisons.github.io/">Ultimate Comparison</a> | content licensed under
+            This is an <a href="https://cbruyndoncx.github.io/feature-comparison/">Feature Comparison</a> | content licensed under
             <a
                 rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img
                 alt="Creative Commons License CC-BY-SA 4.0" style="border-width:0"
