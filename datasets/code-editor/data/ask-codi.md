@@ -1,5 +1,5 @@
 # AskCodi - https://www.askcodi.com
-[AI-assisted coding assistant and unified LLM gateway for developers]
+AI-assisted coding assistant and unified LLM gateway for developers
 ## Version
 (2025-10-18)
 ## Classification 
