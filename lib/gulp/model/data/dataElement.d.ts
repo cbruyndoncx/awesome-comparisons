@@ -14,6 +14,8 @@ export class DataElement {
   public criteriaGroup: Map<string, string>;
   public html: string;
   public latex: string;
+  public sourcePath?: string | null;
+  public editLink?: string | null;
 
   constructor(
     name: string,
@@ -24,7 +26,8 @@ export class DataElement {
     html?: string,
     latex?: string,
     groupData?: Map<string, CriteriaGroupData>,
-    criteriaGroup?: Map<string, string>
+    criteriaGroup?: Map<string, string>,
+    sourcePath?: string
   );
 
   public static loadJson(json, configuration): DataElement;

@@ -36,6 +36,7 @@ Processes loaded data elements to include HTML and LaTeX representations of thei
 - Processes criteria data based on type (MARKDOWN, RATING, LABEL, REPOSITORY) [@test](./configuration-service.test.ts)
 - Converts label tooltips to HTML format [@test](./configuration-service.test.ts)
 - Creates labelArray from label maps [@test](./configuration-service.test.ts)
+- Carries forward the markdown `sourcePath` emitted in `data.json` and derives a public `editLink` for each `DataElement` by joining the dataset's `sources.dataDir` with that filename against a configurable base URL. Defaults to the repository URL declared in package.json (converted to the GitHub `blob/main/` viewer) when dataset or runtime overrides are absent.
 
 ### Manage application state
 

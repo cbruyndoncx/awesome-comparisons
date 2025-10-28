@@ -1,7 +1,7 @@
 import { AfterViewChecked, ChangeDetectionStrategy, Component, EventEmitter, Inject, Input, OnChanges, Output } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Observable } from 'rxjs';
-import { CriteriaData, Label } from '../../../../../lib/gulp/model/model.module';
+import { CriteriaData, DataElement, Label } from '../../../../../lib/gulp/model/model.module';
 import { FeatureGroupingService } from '../feature-grouping.service';
 import { FeatureGroupView } from '../../../models/feature-grouping.model';
 
@@ -26,6 +26,7 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
     @Input() index: Array<number> = [];
     @Input() order: Array<number> = [];
     @Input() labelColorsEnabled: boolean = true;
+    @Input() dataElements: Array<DataElement> = [];
 
     public groups$: Observable<FeatureGroupView[]>;
     public columnGroupMap$: Observable<Record<string, string>>;
@@ -63,6 +64,20 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
             return '×';
         }
         return group.isExpanded ? '−' : '+';
+    }
+
+    public resolveEditLink(rowIndex: number): string | null {
+        if (rowIndex === null || rowIndex === undefined) {
+            return null;
+        }
+        if (!Array.isArray(this.dataElements) || rowIndex < 0 || rowIndex >= this.dataElements.length) {
+            return null;
+        }
+        const element = this.dataElements[rowIndex];
+        if (!element || !element.editLink) {
+            return null;
+        }
+        return element.editLink;
     }
 
     ngAfterViewChecked(): void {

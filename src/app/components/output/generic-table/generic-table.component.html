@@ -102,7 +102,16 @@
                     </iicon>
                 </td>
             </ng-template>
-            <td>
+            <td class="row-actions">
+                <a *ngIf="resolveEditLink(index[itemIndex]) as editLink"
+                   class="row-actions__link"
+                   [href]="editLink"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   title="Edit source"
+                   aria-label="Edit source">
+                    <picon-button icon="edit" [showTooltip]="false"></picon-button>
+                </a>
                 <picon-button icon="info" [showTooltip]="false" title="Details"
                               (click)="showDetails.emit(index[itemIndex])"></picon-button>
             </td>

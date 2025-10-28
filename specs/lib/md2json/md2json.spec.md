@@ -32,6 +32,7 @@ Creates both individual JSON files and aggregated output files.
 - Ensures tmp directories exist before writing (recursive create)
 - Aggregates all successfully parsed entries into a single JSON array at the output path
 - Honors `--pretty` flag for pretty-printing tmp files and the aggregated output; default output is minified
+- Adds a `sourcePath` field to each aggregated entry containing the markdown filename relative to the input directory so downstream tooling can link back to the source document
 - Persists the `--level` parameter on the Md2Json instance even if unused, ensuring parity with scripts that expect the property
 - Verified by [@test](../../../tests/lib/md2json/md2json.converter.spec.ts)
 
@@ -67,6 +68,7 @@ export interface HeaderNode extends BaseNode {
   type: "header";
   level: number;
   content: string;
+  sourcePath?: string;
   children: Array<TextNode | ListNode | HeaderNode>;
 }
 

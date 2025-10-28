@@ -2,7 +2,8 @@ import { ChangeDetectorRef, Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 
-import { Configuration, Criteria, CriteriaTypes, CriteriaValue, Data, Label } from '../../../../../lib/gulp/model/model.module';
+import { Configuration, Criteria, CriteriaTypes, CriteriaValue, Data, DataElement, Label } from '../../../../../lib/gulp/model/model.module';
+import packageInfo from '../../../../../package.json';
 
 import { isNullOrUndefined } from '../../../shared/util/null-check';
 import { renderMarkdown, renderMarkdownToText } from '../../../shared/util/markdown';
@@ -23,10 +24,15 @@ export class ConfigurationService {
 
     public tableColumns: Array<string> = [];
     public criteriaValues: Array<Array<{ id: string, text: string, criteriaValue: CriteriaValue }>>;
+    public dataElements: Array<DataElement> = [];
 
     private datasetSubscription: Subscription | null = null;
     private latestChangeDetector: ChangeDetectorRef | null = null;
     private currentDatasetId: string | null = null;
+    private currentDataset: DatasetManifestEntry | null = null;
+
+    private static readonly DEFAULT_EDIT_LINK_BASE = ConfigurationService.buildDefaultEditLinkBase();
+    private static readonly EDIT_LINK_WINDOW_KEY = 'UC_EDIT_LINK_BASE_URL';
 
     private static resolveTemplateValue(value: any, context: Record<string, any>): string {
         if (isNullOrUndefined(value)) {
@@ -137,6 +143,7 @@ export class ConfigurationService {
             this.http.get(this.buildDatasetAssetUrl(dataset, 'data.json')),
             this.http.get(this.buildDatasetAssetUrl(dataset, 'description.md'), {responseType: 'text'})
         ];
+        this.currentDataset = dataset;
         Promise.all(requests.map(res => res.toPromise()))
             .then(result => {
                 this.currentDatasetId = dataset.id;
@@ -220,6 +227,9 @@ export class ConfigurationService {
         );
         // Set data model
         ConfigurationService.data = Data.loadJson(result[1], this.configuration);
+        const activeDataset = this.currentDataset;
+        const editLinkBase = this.resolveEditLinkBase(activeDataset);
+        const datasetSegments = ConfigurationService.splitPath(activeDataset?.sources?.dataDir || '');
         ConfigurationService.data.dataElements = ConfigurationService.data.dataElements.map(dataElement => {
                 // Build html strings and labelArrays
                 dataElement.html = ConfigurationService.getHtml(
@@ -279,9 +289,11 @@ export class ConfigurationService {
                     map.set(obj.name, obj);
                     return map;
                 }, new Map());
+                dataElement.editLink = this.buildEditLink(dataElement, datasetSegments, editLinkBase);
                 return dataElement;
             }
         );
+        this.dataElements = ConfigurationService.data.dataElements;
 
         // Set description
         this.description = ConfigurationService.getHtml(
@@ -314,5 +326,115 @@ export class ConfigurationService {
         if (this.latestChangeDetector) {
             this.latestChangeDetector.detectChanges();
         }
+    }
+
+    private static buildDefaultEditLinkBase(): string {
+        const fallback = 'https://github.com/ultimate-comparisons/ultimate-comparison-framework/blob/main/';
+        const repository: any = (packageInfo as any)?.repository;
+        const repoUrl = typeof repository === 'string'
+            ? repository
+            : (repository && typeof repository.url === 'string' ? repository.url : '');
+        const derived = ConfigurationService.deriveGithubBlobBase(repoUrl);
+        return derived ?? fallback;
+    }
+
+    private static deriveGithubBlobBase(repoUrl: string): string | null {
+        if (isNullOrUndefined(repoUrl)) {
+            return null;
+        }
+        let url = repoUrl.trim();
+        if (url.length === 0) {
+            return null;
+        }
+        url = url.replace(/^git\+/, '');
+        if (url.startsWith('git@')) {
+            const sshMatch = url.match(/^git@([^:]+):(.+)$/);
+            if (!sshMatch) {
+                return null;
+            }
+            const host = sshMatch[1];
+            const path = ConfigurationService.trimGitSuffix(sshMatch[2]);
+            if (!/github\.com$/i.test(host) || path.length === 0) {
+                return null;
+            }
+            const base = `https://${host}/${path}`;
+            return ConfigurationService.ensureTrailingSlash(base) + 'blob/main/';
+        }
+
+        const normalized = url.startsWith('git://') ? `https://${url.substring(6)}` : url.replace(/^git:/, 'https:');
+        try {
+            const parsed = new URL(normalized);
+            const host = parsed.host;
+            const path = ConfigurationService.trimGitSuffix(parsed.pathname || '');
+            if (!/github\.com$/i.test(host) || path.length === 0) {
+                return null;
+            }
+            const base = `https://${host}/${path}`;
+            return ConfigurationService.ensureTrailingSlash(base) + 'blob/main/';
+        } catch (error) {
+            return null;
+        }
+    }
+
+    private static trimGitSuffix(path: string): string {
+        if (isNullOrUndefined(path)) {
+            return '';
+        }
+        let normalized = path.trim().replace(/^\/+/, '');
+        if (normalized.toLowerCase().endsWith('.git')) {
+            normalized = normalized.substring(0, normalized.length - 4);
+        }
+        normalized = normalized.replace(/\/+/g, '/');
+        return normalized;
+    }
+
+    private buildEditLink(dataElement: DataElement, datasetSegments: string[], editLinkBase: string): string | null {
+        if (isNullOrUndefined(dataElement) || isNullOrUndefined(dataElement.sourcePath) || dataElement.sourcePath === '') {
+            return null;
+        }
+        const encodedSegments = [
+            ...datasetSegments,
+            ...ConfigurationService.splitPath(dataElement.sourcePath)
+        ].map(segment => encodeURIComponent(segment));
+        if (encodedSegments.length === 0) {
+            return null;
+        }
+        return `${editLinkBase}${encodedSegments.join('/')}`;
+    }
+
+    private resolveEditLinkBase(dataset: DatasetManifestEntry | null): string {
+        const datasetBaseRaw = dataset?.sources?.editBaseUrl;
+        const datasetBase = typeof datasetBaseRaw === 'string' ? datasetBaseRaw : '';
+        const windowBase = ConfigurationService.getWindowEditBaseOverride();
+        const candidate = datasetBase.trim().length > 0
+            ? datasetBase
+            : (windowBase ?? ConfigurationService.DEFAULT_EDIT_LINK_BASE);
+        return ConfigurationService.ensureTrailingSlash(candidate);
+    }
+
+    private static getWindowEditBaseOverride(): string | null {
+        if (typeof window === 'undefined') {
+            return null;
+        }
+        const globalWindow = window as unknown as Record<string, unknown>;
+        const candidate = globalWindow[ConfigurationService.EDIT_LINK_WINDOW_KEY];
+        if (typeof candidate === 'string' && candidate.trim().length > 0) {
+            return candidate.trim();
+        }
+        return null;
+    }
+
+    private static ensureTrailingSlash(value: string): string {
+        return value.replace(/\/+$/, '') + '/';
+    }
+
+    private static splitPath(path: string): string[] {
+        if (isNullOrUndefined(path)) {
+            return [];
+        }
+        return path
+            .split('/')
+            .map(segment => segment.trim())
+            .filter(segment => segment.length > 0 && segment !== '.');
     }
 }

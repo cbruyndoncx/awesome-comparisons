@@ -86,6 +86,17 @@ table {
     color: var(--text-color, #333333);
 }
 
+.row-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.row-actions__link {
+    display: inline-flex;
+    align-items: center;
+}
+
 .group-controls {
     display: flex;
     flex-direction: column;

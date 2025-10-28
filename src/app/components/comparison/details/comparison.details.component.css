@@ -50,6 +50,26 @@
     word-break: break-all;
 }
 
+.details-links {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 8px;
+    font-size: 0.85em;
+    vertical-align: middle;
+}
+
+.details-links__primary {
+    color: var(--link-color, #1565c0);
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+.details-links__edit {
+    display: inline-flex;
+    align-items: center;
+}
+
 .missing-text {
     display: block;
     margin-top: 4px;

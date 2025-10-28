@@ -15,7 +15,24 @@
         <ng-template #missingHeaderLabel>
             <div class="label mylabel label--missing">Missing</div>
         </ng-template>
-        <small><a href="{{data.url}}" target="_blank">{{data.url}}</a></small>
+        <small class="details-links">
+            <a *ngIf="data?.url"
+               class="details-links__primary"
+               [href]="data.url"
+               target="_blank"
+               rel="noopener noreferrer">
+                {{data.url}}
+            </a>
+            <a *ngIf="data?.editLink"
+               class="details-links__edit"
+               [href]="data.editLink"
+               target="_blank"
+               rel="noopener noreferrer"
+               title="Edit source"
+               aria-label="Edit source">
+                <picon-button icon="edit" [showTooltip]="false"></picon-button>
+            </a>
+        </small>
     </h2>
 </div>
 <div class="grid-content">

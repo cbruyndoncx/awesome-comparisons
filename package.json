@@ -27,7 +27,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ultimate-comparisons/ultimate-comparison-BASE.git"
+    "url": "git@github.com:cbruyndoncx/ultimate-comparison-framework.git"
   },
   "babel": {
     "presets": [

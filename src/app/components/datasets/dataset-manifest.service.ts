@@ -24,6 +24,7 @@ export interface DatasetManifestEntry {
     config?: string;
     description?: string;
     style?: string;
+    editBaseUrl?: string;
   };
 }
 

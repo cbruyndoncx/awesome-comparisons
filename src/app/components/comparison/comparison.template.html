@@ -192,6 +192,7 @@
                           [order]="vm.state.columnOrder"
                           [changeNum]="configurationService.tableColumns.length + vm.state.currentColumnNames.length + (settingsOpen ? 0 : 1) + changed"
                           [labelColorsEnabled]="vm.state.labelColorsEnabled"
+                          [dataElements]="configurationService.dataElements"
                           (settingsCallback)="settingsOpen = true"
                           (showDetails)="showDetails($event)"
                           (orderChange)="changeOrder($event)"

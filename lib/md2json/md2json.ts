@@ -1,6 +1,6 @@
 // GENERATED FROM SPEC - DO NOT EDIT
 // @generated with Tessl v0.28.0 from ../../specs/lib/md2json/md2json.spec.md
-// (spec:3878cdb8) (code:174d81c8)
+// (spec:b5537801) (code:d584890d)
 // (spec:76566e08) (code:updated)
 
 import * as fs from 'fs';
@@ -17,6 +17,7 @@ export interface HeaderNode extends BaseNode {
   type: "header";
   level: number;
   content: string;
+  sourcePath?: string;
   children: Array<TextNode | ListNode | HeaderNode>;
 }
 
@@ -318,6 +319,12 @@ export class Md2Json {
           const jsonData = this.convertMarkdownToJson(content);
 
           if (jsonData) {
+            // Add sourcePath field for aggregated output
+            const entryWithSourcePath = {
+              ...jsonData,
+              sourcePath: file
+            };
+
             // Write each converted entry as JSON to tmp directory
             const jsonFileName = file.replace('.md', '.json');
             const jsonFilePath = path.join(tmpDir, jsonFileName);
@@ -326,7 +333,7 @@ export class Md2Json {
               : JSON.stringify(jsonData);
 
             fs.writeFileSync(jsonFilePath, jsonString);
-            allEntries.push(jsonData);
+            allEntries.push(entryWithSourcePath);
           } else {
             console.warn(`Warning: Skipping ${file} - no title found`);
           }
