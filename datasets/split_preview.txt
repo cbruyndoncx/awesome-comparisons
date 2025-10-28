@@ -1,0 +1,72 @@
+Total source markdown files: 75
+Files to split (not Code/Editor classification): 33
+  Terminal: 20
+    T: aider.md
+    T: amp.md
+    T: bolt-diy.md
+    T: boltnew.md
+    T: claude-code.md
+    T: codecompanionai.md
+    T: codeium.md
+    T: codenamegoose.md
+    T: codex-cli.md
+    T: codiumai.md
+    T: devika-ai.md
+    T: devin.md
+    T: diffblue_cover.md
+    T: fauxpilot.md
+    T: kilocode.md
+    T: mutableai.md
+    T: openhands.md
+    T: smol-developer.md
+    T: starcoder.md
+    T: warp.md
+  Other: 13
+    O: amazon_codewhisperer.md
+    O: claude-desktop.md
+    O: codegeex.md
+    O: codeium_enterprise.md
+    O: codellama.md
+    O: coderabbit.md
+    O: codewp.md
+    O: cogram.md
+    O: easycodeai.md
+    O: googleaistudio.md
+    O: kite.md
+    O: polycoder.md
+    O: v0.md
+
+Details (filename | classification | terminal)
+aider.md | (none) | Yes
+amazon_codewhisperer.md | (none) | No Primary surface is IDE integrations (VS Code, JetBrains family, Cloud9, etc.).
+amp.md | (none) | Yes
+bolt-diy.md | (none) | Yes
+boltnew.md | (none) | Yes In‑browser terminal via WebContainers that can run npm, Node.js servers, and CLI tooling.
+claude-code.md | (none) | Yes
+claude-desktop.md | (none) | No
+codecompanionai.md | (none) | Yes
+codegeex.md | (none) | No
+codeium.md | (none) | Yes Neovim support indicates usability inside terminal-based editors.
+codeium_enterprise.md | (none) | No
+codellama.md | (none) | No
+codenamegoose.md | (none) | Yes Provides a CLI for scripting and interactive control.
+coderabbit.md | (none) | No no general-purpose CLI for offline reviews documented
+codewp.md | (none) | No
+codex-cli.md | (none) | Yes
+codiumai.md | (none) | Yes
+cogram.md | (none) | No
+devika-ai.md | (none) | Yes Provides CLI and web UI components; integrates with local runtimes (Bun, Ollama) and shells for execution.
+devin.md | (none) | Yes Provides an interactive shell in its UI so the agent can run commands and manage environments
+diffblue_cover.md | (none) | Yes CLI access is available in paid/teams tiers for CI and automation use-cases.
+easycodeai.md | (none) | (none)
+fauxpilot.md | (none) | Yes Server components are deployed and managed via Docker/docker-compose and expose REST/OpenAI-compatible APIs; setup and monitoring are typically done from the command line.
+googleaistudio.md | (none) | No Interaction is through the web UI (Playground, chat, multimodal inputs) and exported code; no integrated shell/terminal is advertised.
+kilocode.md | (none) | Yes incorporates terminal/CLI execution capabilities (inherited from Cline-style tooling) for running commands and automations
+kite.md | (none) | No
+mutableai.md | (none) | Yes CLI available to integrate local workflows with the MutableAI service
+openhands.md | (none) | Yes
+polycoder.md | (none) | (none)
+smol-developer.md | (none) | Yes Usable as a Python library and in repo-driven workflows; CLI/recipe-style usage patterns exist for iterative development.
+starcoder.md | (none) | Yes Usable from terminal/CLI via TGI / transformers scripts or Docker images for batch/interactive use.
+v0.md | (none) | No Primary interface is web chat; platform/API can be integrated programmatically but there is no primary local CLI for generation
+warp.md | (none) | Yes

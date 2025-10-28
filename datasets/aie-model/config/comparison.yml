@@ -1,0 +1,185 @@
+title: AIE Models
+subtitle: feature-comparison
+selectTitle: Filter Criteria
+tableTitle: Comparison of AIE Models
+repository:
+  template: "https://github.com/cbruyndoncx/{}.git"
+  variables: ["subtitle"]
+criteria:
+  - General:
+      name: General Info
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      order: '10'
+      children:
+          - Classification
+          - Version
+          - Repository
+          - Rating
+          - ShortDescription
+          - Description
+          - Languages
+      defaultExpanded: true
+  - Licensing:
+      name: Licensing
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      order: '90'
+      children:
+          - Opensource
+          - License
+          - FreeTrial
+  - Version:
+      name: Version
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: true
+      description: 'Latest version used for update'
+      placeholder: ''
+      order: '10'
+      andSearch: false
+      rangeSearch: false
+  # Rating references the second level header 'Rating'
+  # (With type=rating) e.g. '## Rating\n - [1] Comment 1\n - [3] Comment 2'
+  #   => Column value for Rating (average): 2 stars
+  #   => Details Rating section: '- 1 star Comment 1\n 3 stars Comment 2'
+  - Rating:
+      name: Rating
+      search: false
+      table: false
+      detail: false
+      description: 'Avg rating based on review comments'
+      placeholder: ''
+      referencedHeader: Development
+      type: RATING
+      order: '94'
+  - Classification:
+      name: Classification
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: &ref_0
+        template: 'AI Native Dev ainativedev.io {}'
+        variables:
+          - name
+      placeholder: &ref_1
+        template: 'Select {} ...'
+        variables:
+          - name
+      order: '15'
+      andSearch: true
+      rangeSearch: false
+      values:
+        'AIE/Model':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        'Code/Autonomous agent':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        'Code/Editor':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        'Code/Spec Driven':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        'Code/Terminal':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+        'Product/Prototyping':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
+
+  - Description:
+      name: Description
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: true
+      description: 'Few paragraphs about the product'
+      placeholder: ''
+      order: '10'
+      andSearch: false
+      rangeSearch: false
+
+  - Opensource:
+      name: Opensource
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Coding tool is released under opensource license'
+      placeholder: *ref_1
+      order: '90'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'No':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+  - License:
+      name: License
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Opensource specific license or Proprietary for other commercial licenses'
+      placeholder: *ref_1
+      order: '91'
+      andSearch: false
+      rangeSearch: false
+      values:
+        MIT:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        Apache-2.0:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+        Proprietary:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(300, 100%, 70%)'
+        FSL:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        BSD-3:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        Other:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(210, 100%, 70%)'
+        EPL-2.0:
+          color: '#ffff00'
+          backgroundColor: 'hsl(225, 100%, 70%)'
+        GPL-3.0:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(90, 100%, 70%)'
+  - Notes:
+      name: Notes
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: true
+      description: ''
+      placeholder: ''
+      order: 'Y'
+      andSearch: false
+      rangeSearch: false
+  - LastUpdated:
+      name: Last Update
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: true
+      description: 'Note Date last updated'
+      placeholder: ''
+      order: 'Z'
+      andSearch: false
+      rangeSearch: false

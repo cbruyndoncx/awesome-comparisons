@@ -33,6 +33,91 @@
         "description": "datasets/example/config/description.md",
         "style": "configuration/style.css"
       }
+    },
+    {
+      "id": "terminal",
+      "displayLabel": "Terminal-focused Editors",
+      "shortDescription": "Editors and tools with integrated terminal/CLI features",
+      "description": "Code editors and tools that expose integrated terminal or CLI-first workflows",
+      "assetDirectory": "assets/generated/terminal/",
+      "accentColor": "#17a2b8",
+      "icon": "terminal-icon.svg",
+      "preferredTheme": "dark",
+      "isDefault": false,
+      "sources": {
+        "dataDir": "datasets/terminal/data",
+        "config": "datasets/terminal/config/comparison.yml",
+        "description": "datasets/terminal/config/description.md",
+        "style": "configuration/style.css"
+      }
+    },
+    {
+      "id": "other",
+      "displayLabel": "Other Code Editing Tools",
+      "shortDescription": "Miscellaneous code editing tools and interfaces",
+      "description": "Tools related to code editing that don't match primary classifications",
+      "assetDirectory": "assets/generated/other/",
+      "accentColor": "#6f42c1",
+      "icon": "other-icon.svg",
+      "preferredTheme": "light",
+      "isDefault": false,
+      "sources": {
+        "dataDir": "datasets/other/data",
+        "config": "datasets/other/config/comparison.yml",
+        "description": "datasets/other/config/description.md",
+        "style": "configuration/style.css"
+      }
+    },
+    {
+      "id": "aie-model",
+      "displayLabel": "AI/Model",
+      "shortDescription": "AI Models and model tooling",
+      "description": "AI Models and model tooling",
+      "assetDirectory": "assets/generated/aie-model/",
+      "accentColor": "#007bff",
+      "icon": "default-icon.svg",
+      "preferredTheme": "light",
+      "isDefault": false,
+      "sources": {
+        "dataDir": "datasets/aie-model/data",
+        "config": "datasets/aie-model/config/comparison.yml",
+        "description": "datasets/aie-model/config/description.md",
+        "style": "configuration/style.css"
+      }
+    },
+    {
+      "id": "code-agent",
+      "displayLabel": "Code/Autonomous agent",
+      "shortDescription": "Autonomous code agents and agent frameworks",
+      "description": "Autonomous code agents and agent frameworks",
+      "assetDirectory": "assets/generated/code-agent/",
+      "accentColor": "#007bff",
+      "icon": "default-icon.svg",
+      "preferredTheme": "light",
+      "isDefault": false,
+      "sources": {
+        "dataDir": "datasets/code-agent/data",
+        "config": "datasets/code-agent/config/comparison.yml",
+        "description": "datasets/code-agent/config/description.md",
+        "style": "configuration/style.css"
+      }
+    },
+    {
+      "id": "product-prototyping",
+      "displayLabel": "Product/Prototyping",
+      "shortDescription": "Prototyping and product-focused coding tools",
+      "description": "Prototyping and product-focused coding tools",
+      "assetDirectory": "assets/generated/product-prototyping/",
+      "accentColor": "#007bff",
+      "icon": "default-icon.svg",
+      "preferredTheme": "light",
+      "isDefault": false,
+      "sources": {
+        "dataDir": "datasets/product-prototyping/data",
+        "config": "datasets/product-prototyping/config/comparison.yml",
+        "description": "datasets/product-prototyping/config/description.md",
+        "style": "configuration/style.css"
+      }
     }
   ]
 }

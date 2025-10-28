@@ -1,217 +1,28 @@
 criteria:
-  - Extensible:
-      type: LABEL
-      values:
-        Supports multiple LLM backends and local model adapters; configurable via model adapters and API-key settings:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        Via the AWS IDE Toolkit / IDE extensions and integrations:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Supports Model Context Protocol (MCP) connections and a plugin/alias system for third-party tooling (monitoring, security providers)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        Plugin / "Codi Apps" modular tools model:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Plugins / IDE extensions (VS Code, JetBrains, Vim/Neovim)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Integrations with GitHub, Jira, Confluence, Notion, Linear':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        Supports npm packages and integrations (can install libraries and use third-party APIs):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        VS Code extension plus MCP (Model Context Protocol) support for custom tools:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        API / integrations / IDE extensions:
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        Extensible via IDE plugins and an AI-native IDE (Windsurf) with agent capabilities:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        Plugins / integrations for IDEs and VCS platforms:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Offers specialized "modes" for plugins (ACF, Elementor, WooCommerce, Gravity Forms, etc.) and an API for integration':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        Yes (via provider gateways and config):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        Plugins / Jupyter extension:
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        'Continue is built to be extensible via blocks, MCP integrations and a hub for sharing assistants.':
-          color: '#ffff00'
-          backgroundColor: 'hsl(285, 100%, 70%)'
-        'Modular architecture designed to add new model adapters, tools, and integrations':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Integrations (GitHub, VS Code, Slack) and plugin-like connectors for repos and CI/CD':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'VS Code extension available (integrates chat, slash commands, inline quick edits)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        'Integrations: Figma import (Builder.io plugin), GitHub/GitLab/Bitbucket import, template gallery':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Editor and IDE integrations (VS Code, Visual Studio, JetBrains, Xcode, Vim/Neovim, Eclipse), GitHub Marketplace extensions and CLI/Terminal integrations':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        Integrates with Vertex AI and supports function-calling/tool integrations:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        IDE plugin surface for different JetBrains products:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Integrates with IDEs (VS Code, Cursor), web app and desktop client; supports multi-repo context and external LLMs':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        MCP (Model Context Protocol) Server Marketplace for custom tools and integrations:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Editor plugins and integrations (VS Code, Sublime, Atom, JetBrains IDEs)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        Fine-tuning / post-training on private repos:
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        Integration via plugins and Continue.dev:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'API, CLI, and integrations (VS Code, GitHub, Jupyter reported)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        Fork of VSCode + modular submodules for AI features; supports plugins and integrations:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        Editor extensions are available on paid tiers (editor plugins/support mentioned in product features):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'VS Code extension architecture, custom modes, MCP (Model Context Protocol) servers, and provider/plugin integrations':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Integrations: IDE plugins (VS Code, JetBrains, Visual Studio, Eclipse), browser extensions, code host integrations (GitHub, GitLab, Bitbucket), API and webhooks, app/extensions framework':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Integrates with major IDEs (VS Code, JetBrains, Neovim) and offers chat integrations; product roadmap and integrations may expand':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        Modular architecture designed for composing custom IDEs and integrating extensions (supports VS Code extensions via Open VSX):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Custom connectors, plugins, and ability to import React components; CLI for extensions':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        Platform API available for integrations and automation:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Support for Workflows, Notebooks, Drive-based sharing and agent configuration':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Supports webhooks, custom data uploads and integration points for connecting external services':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        Extension registry available; growing ecosystem but smaller than VS Code's marketplace:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
   - LocalOffline:
       type: LABEL
       values:
-        Supports local model usage via adapters (community integrations exist for local runtimes such as Ollama and other self-hosted LLMs):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
         AIXcoder emphasizes local/offline model operation so code and context can remain on-device. The product also offers cloud modes for extended functionality.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        'Any additional details: CodeWhisperer is a cloud service (runs on AWS infrastructure) and does not provide an official fully-local/offline model runtime for on-prem usage.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        Supports MCP servers which can point to local or self-hosted model/context providers:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
-        '[app.build relies on remote LLMs and hosted infrastructure (Neon/Koyeb) for generation and deployment.]':
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
         Cloud-first product; local/in-IDE operations likely use cloud model/augmentation:
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
-        Self-hosted / Docker with local model providers like Ollama:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        Running locally with Ollama or other on-prem model hosts enables offline development.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(165, 100%, 70%)'
-        'Any additional details: Runs entirely in the browser using WebContainers; requires network access for AI features and many integrations.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
         '[Brokk''s client is open-source Java software; it ships with or can leverage Jlama for local/tiny-model inference and supports workflows that minimize cloud calls. Some advanced features may use hosted models depending on configuration.]':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        'Any additional details like Ollama: Claude Code relies on remote model endpoints by default. Anthropic and enterprise customers can route requests through cloud provider-hosted model deployments, but a fully offline/local model runtime is not provided as a standard option.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        'Any additional details like Ollama: Anthropic''s desktop offering is primarily cloud-connected. Public documentation does not describe a fully local/offline model runtime. Enterprise/Team tooling (like Claude Code) can be configured to route through organization-managed endpoints; if BYOK/local hosting matters for your use case, contact Anthropic sales/support for enterprise deployment options.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
         'Any additional details like Ollama: supports local model hosts (Ollama, LM Studio) as backends for offline/local use':
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
-        '[All user data (code, DBs, etc.) is described as being stored locally on the user''s machine, but the assistant makes API calls to OpenAI for model inference — so it is not fully offline.]':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        Model can be run locally for research/inference with appropriate GPU hardware; supports NVIDIA GPUs and Huawei Ascend platforms (weights are large and require significant memory).:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
-        Codeium is primarily a cloud service; there is no widely documented offline/local model deployment for consumer users. Enterprise options are described at a high level but BYOK/local-hosted details are not publicly documented.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
-        Supports fully air-gapped / on-premises deployments that do not require external network connectivity.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
         'Primarily designed to run with Claude Code / Anthropic-backed sessions rather than purely local model hosting]':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        'Can be run locally or on private infrastructure via frameworks/runtimes such as Hugging Face transformers, Ollama, and other containerized runtimes. Smaller sizes can run on single GPUs; larger sizes require multi-GPU or specialized inference setups.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        Can run on-machine and integrate with local/self-hosted model providers via MCP-compatible bridges.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        cloud SaaS by default:
-          color: '#ffff00'
-          backgroundColor: 'hsl(270, 100%, 70%)'
-        'A self-hosted option is referenced by the vendor, but detailed on-prem / air-gapped support and offline capabilities are not publicly documented.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
-        'Primarily uses remote model providers, though configurations and gateways (e.g., LiteLLM/Ollama proxies) can enable local model endpoints in some setups':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
-        'Some components (for example PR-Agent) are available as open-source/self-hostable tools that can be run locally or in CI, but the full product and advanced model features are primarily cloud-based.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        (appears cloud-hosted; no documented offline/local inference option found):
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
         Supports local model workflows (e.g. via Ollama/local LLMs) and headless/offline operation for air-gapped environments.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
-        Runs as a cloud-hosted sandboxed agent rather than an offline/local-only product:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
         'Supports running local LLM backends (Ollama, GPT4All, Llama.cpp, LMStudio, etc.) and a fully-local RAG setup via Chroma DB + embeddings.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
-        Local-first architecture; code and context are kept on the developer's machine rather than sent to third-party servers for model training or storage:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
-        Runs locally or on private servers using Docker / docker-compose and nvidia-docker for GPU acceleration. Supports multi-GPU model sharding so larger models can be run across several cards.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
         Firebase Studio is a cloud-hosted workspace; the environment and AI features run in Google-managed infrastructure.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
@@ -222,9 +33,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
         All processing was cloud-hosted on GitHub's infrastructure; no documented offline/local model execution.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
-        Studio is a cloud-hosted web application; there is no known supported offline/self-hosted distribution of the Studio UI or Gemini models.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
         Can be run locally or inside Docker; configurable to use local LLM endpoints or self-hosted inference where supported.:
@@ -239,31 +47,16 @@ criteria:
         can be used with local model runtimes such as Ollama / LM Studio for offline or on-prem usage:
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
-        'Any additional details: primary design emphasized on-device inference and privacy (local completions rather than cloud-only).':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
         MarsX is primarily a cloud platform with a web-based IDE and Micro AppStore.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
         Supports air-gapped on-premises GPU deployment for fully offline operation:
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
-        'Enterprise / on-premises deployment options are reported, but the standard cloud offering is not a fully local/offline product.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
         'Local-first MCP server: analysis runs on the user''s machine or infrastructure; code/context does not need to be uploaded to external APIs.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
         Ona supports private VPC and on-prem/private-hosted deployments for enterprises but is not a fully offline/local-only product.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        Supports running with local model backends (e.g. Ollama) and Models.dev adapters.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        Can be run locally via Docker; supports local LLM backends where available (may still require internet for some models).:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        'PolyCoder can be run locally/self-hosted via the Hugging Face transformers ecosystem. Community quantized builds (GGUF/llama.cpp, WebUI) exist to reduce memory requirements for consumer GPUs.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
         Requires cloud access to LLMs; not designed for fully offline usage.:
@@ -275,15 +68,9 @@ criteria:
         Can be configured to use local model runtimes via Ollama / LM Studio or other locally-hosted model endpoints (support and experience depends on provider and model compatibility). Fully offline workflows may be limited compared to cloud API usage.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
-        'Smol can be used with locally hosted/open-source LLMs in some setups, but most common usage relies on a cloud LLM (e.g., OpenAI GPT-4) which requires network access and an API key.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
         Self-hosted deployments support offline/private hosting and do not require sending code to Sourcegraph cloud. This is a common choice for enterprises with strict data residency or security requirements.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
-        'Can be run locally via Hugging Face transformers, text-generation-inference, or containerized inference (GPU recommended). Community runtimes like Ollama/TGI simplify local hosting.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
         'Can run fully offline/self-hosted (Docker, from-source). Supports connecting to local model servers such as ollama/llama.cpp backends or on-prem inference stacks.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
@@ -293,205 +80,37 @@ criteria:
         Theia can run locally as a desktop app or be self-hosted on-premise. Its AI integrations support local/offline models (where supported by the chosen model runtime) enabling air-gapped or privacy-sensitive deployments.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
-        Self-hostable via Docker and Kubernetes; can be run on-prem or in isolated/cloud VPCs.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
         Trae runs cloud models and does not currently advertise a fully local/offline mode:
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
-        v0 is a cloud service (web app and API). It does not run fully offline; model execution and generation happen on Vercel's servers.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
         'Supports running local/open-source models via integrations (Ollama, LM Studio, local runners) so inference can remain on-device or on-prem.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
-        'Note: Warp runs a local classifier to detect natural-language input, and some metadata/local processing happens on-device, but AI requests are typically proxied to selected LLM providers (OpenAI, Anthropic/Claude variants) unless explicitly configured via enterprise arrangements. There is no broadly-documented fully-offline LLM mode for the AI assistant as of the latest public releases.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
         Windsurf is primarily a cloud-hosted agent; local/offline modes are limited compared with some local-first tools (though integrations and enterprise offerings may offer stronger controls).:
           color: '#ffff00'
           backgroundColor: 'hsl(270, 100%, 70%)'
         Zed can be configured to use local LLMs (via Ollama or other OpenAI-compatible endpoints) so prompts and code can stay on-device. It also supports running Ollama on remote GPU hosts (SSH/port-forwarding) if needed.:
           color: '#ffff00'
           backgroundColor: 'hsl(270, 100%, 70%)'
-  - FreeTrial:
-      type: LABEL
-      values:
-        The tool itself is free/open-source (users pay the LLM provider they connect to):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        AWS offered a free tier for individual developers when CodeWhisperer reached general availability; enterprise/pricing details are governed under Amazon Q Developer offerings.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        'Notes: AWS has offered free tiers or developer-friendly access for prior services (CodeWhisperer) and provides Builder ID sign-in options; enterprise pricing & feature bundles for Amazon Q are documented in AWS pricing/docs.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        Public/free tier available with usage limits; paid plans for advanced features may exist.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        '[The product is often described as using the user''s own OpenAI API key (BYOK) which enables usage without a separate paid tier from the vendor; however any model usage will consume the user''s OpenAI quota which may incur cost.]':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(15, 100%, 70%)'
-        Model code is open-source; weights are available for academic research. Commercial use of weights typically requires registration/approval per THUDM's model license terms.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        A free tier exists (unlimited completions for individual use); paid plans available for advanced features.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        The models and weights are available for download (open-source) for research and commercial use under Meta's license terms.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(15, 100%, 70%)'
-        Open-source and free to use; commercial offerings (if any) not required to run the core framework.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(15, 100%, 70%)'
-        Public site advertises a 14-day free trial (no credit card required in some offers):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        'Free starter tier includes a small monthly quota (e.g., ~100 actions) so you can evaluate before upgrading':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        'Availability depends on chosen model provider (OpenAI, Ollama, etc.)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        (marketing indicates a free account/trial is available; details not enumerated in public docs):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(15, 100%, 70%)'
-        A free/solo tier exists (open-source extensions + hub access for public/shared blocks). Paid team/enterprise tiers add governance and private deployment options.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(15, 100%, 70%)'
-        The project is open-source and free to run; commercial clouds/models used via BYOK may incur costs.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        The Community Edition provides a limited free tier (e.g. a small number of Methods Under Test per month).:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        Available during preview; typical Firebase usage quotas and billing apply once services are provisioned beyond free tier limits.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        The product advertises a free trial that does not require a credit card:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        'Copilot has free tiers (e.g., Copilot Free for qualifying users) and trial/paid plans (Pro/Business/Enterprise) with different capabilities.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        Core prototyping and experimentation features of AI Studio are available without charge.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        The open/source-available GPT Pilot codebase is free to run; Pythagora also offers a commercial Pythagora Pro product with paid features.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(15, 100%, 70%)'
-        Core inline completions and many local workflows are free. Cloud-based features may use provider credits; JetBrains changed to a credit/quota model in 2025 for cloud usage visibility.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        Commercial product with demos / trials and enterprise sales channels.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(15, 100%, 70%)'
-        new users get onboarding credits via the platform (also can operate with your own keys):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        'MarsX offers a usable free plan and the core Mars engine is available as open-source.]':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(15, 100%, 70%)'
-        Private beta availability; general availability and trial terms may vary:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(15, 100%, 70%)'
-        Free tier available with basic features and BYOK support; paid tiers unlock advanced features:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        New users get a limited number of free generations (commonly reported as ~10 free uses) and a short trial period to evaluate the service.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        The extension itself is free/open-source; model usage costs depend on the API keys/providers you supply.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        Limited beta access was offered during initial launch windows.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(15, 100%, 70%)'
-        Free tier/self-hosted free edition for small teams and public code; paid Business/Enterprise plans for larger teams and advanced features.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        Model weights and checkpoints are openly downloadable (subject to accepting the model card / license on Hugging Face).:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        Community edition is free & open-source; Team/Enterprise tiers exist commercially for additional features/support.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(15, 100%, 70%)'
-        'Any additional details: Tabnine sunset its free Basic plan in 2025; access is primarily through paid tiers or enterprise licensing. Trial or pilot options may still be available via sales.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(15, 100%, 70%)'
-        Theia is free/open-source (no trials); commercial services built on top of it may have separate licensing/pricing.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        Community Edition is free and open-source; paid plans offer additional features and hosted options.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        As of early 2025 Trae was distributed free with access to several premium models included:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(15, 100%, 70%)'
-        Freemium model / free tier available for evaluation:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        Core editor is free and open-source.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(15, 100%, 70%)'
-        Offers a free/beta tier with basic features and Wrapifai branding; paid tiers remove branding and add features.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(15, 100%, 70%)'
-        The editor and source are available openly; binaries are freely downloadable. (See "Notes" about binary EULA nuance.):
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
   - GitSupport:
       type: LABEL
       values:
         Integrates with repository search and can surface examples and API usage from GitHub/open-source code; version-control integration is part of the IDE workflow.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(45, 100%, 70%)'
-        Works with common developer workflows and IDEs; suggestions can be used in repos but developers must verify licensing/security before committing.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
         Works with repository workflows via IDE integrations; generated suggestions and transformations can be applied to local repos but require human review for correctness and licensing.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(180, 100%, 70%)'
         Reads project context / Codespace-style integrations for richer suggestions:
           color: '#0d0d0d'
           backgroundColor: 'hsl(180, 100%, 70%)'
-        Import/export with GitHub and connect projects to repos for persistence and collaboration.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
-        Integrates via IDEs and supports workflows that work with Git-managed projects (no separate Git-hosted backend required).:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
-        Integrates with git workflows to read/write/commit/branch as part of automated tasks.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(45, 100%, 70%)'
-        'Native integrations for GitHub, GitLab, Azure DevOps; automatic PR monitoring and comments':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
-        Can produce commits and be used to prepare PRs (depends on workflow and config):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
         Native integrations (MCP-style integrations) for GitHub and git workflows; automation via CLI for PR/comments/summaries.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(45, 100%, 70%)'
-        Integrates with project repositories and can perform Git operations as part of its workflows.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
-        'Integrates with GitHub workflows and can open/modify repositories, create branches and PRs':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
-        Integrates with local repositories and provides VS Code extension workflows:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
-        N/A:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(30, 100%, 70%)'
         'Import from GitHub, GitLab, Bitbucket; code workspace exposes repo integration and basic Git operations.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(180, 100%, 70%)'
         'Integrates with GitHub workflows: PR description generation, PR creation by the Copilot agent, and issue-to-PR workflows in enterprise features.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
-        Studio offers code export but does not act as a git host. Exported snippets are intended to be copied into developer repositories.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(180, 100%, 70%)'
         'Assistive features for commit messages, PR descriptions, refactor-aware changes, and multi-file edits that can be staged/reviewed in the IDE.':
@@ -502,7 +121,7 @@ criteria:
           backgroundColor: 'hsl(45, 100%, 70%)'
         'deep Git/GitHub integration patterns for generating commit messages, searching codebase, and automating repo tasks':
           color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
+          backgroundColor: 'hsl(120, 100%, 70%)'
         Generates/clones GitHub repositories for created apps:
           color: '#0d0d0d'
           backgroundColor: 'hsl(45, 100%, 70%)'
@@ -515,9 +134,6 @@ criteria:
         RooCode can run terminal/cli actions and operate on workspace files; many users run git commands through the integrated terminal or via custom MCP servers.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(180, 100%, 70%)'
-        'The repo includes a "git repo mode" workflow that operates on a repository, enabling human-in-the-loop prototyping and iteration.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(45, 100%, 70%)'
         Deep integrations with Git-based hosts and workflows; built to index and search Git repositories at scale.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(180, 100%, 70%)'
@@ -525,15 +141,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(180, 100%, 70%)'
         'Native Git support via extensions (benefits from VS Code extension ecosystem). Git tooling, source control views and integrations are commonly added through Open VSX extensions.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
-        GitSync / CI integrations for versioning (GitHub/GitLab supported in paid/enterprise tiers).:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
-        Integrates with GitHub and Vercel deployments for pushing generated projects and previewing sites:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
-        Git workflows are supported via the terminal and Warp's code/diff UX; the tool is used to author and review code diffs produced by agents.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(180, 100%, 70%)'
         Integrates with Git workflows; project-aware features and diagnostics help with common VCS tasks.:
@@ -561,9 +168,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Command-based context triggers: chat commands (e.g., /doc) initiate workspace-wide analyses that explicitly gather and use project context to produce artifacts (README, docs, etc.).':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'app.build implements structured context management through an FSM-driven workflow and an error-analysis feedback loop. The agent performs incremental context enrichment (data model → ORM/tests → handlers), validates generated artifacts at each stage, and uses validation failures as feedback to adjust subsequent generation steps. The FSM provides guarded state transitions and guiding events (rather than fully imperative commands) so the system can maintain coherent context while allowing targeted intervention.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Codespaces: full-project upload/workspace that provides the model with repository-wide context (files, deps, project structure) for more accurate, consistent suggestions.':
@@ -746,9 +350,6 @@ criteria:
         'Ona provides explicit context management for its AI agents via a repository-level AGENTS.md that the agent loads at the start of a session. Additional context sources include workspace definitions (devcontainer.json), automation manifests (e.g. automations.yml / automation configs), environment variables and prebuild metadata, and repository files the agent can read on demand. These artifacts together let teams define project conventions, commands, and policies that are consistently applied by agents.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(300, 100%, 70%)'
-        'OpenCode builds and maintains repository-aware context by scanning and indexing the project (repository analysis via `/init`) and persisting session state and conversation history in SQLite. It exposes project-scoped sessions, keeps file associations, and uses LSP and file-system reads to surface relevant snippets when answering questions or generating changes. See: https://github.com/sst/opencode and https://opencode.ai/docs':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         'PearAI provides multiple methods for managing and updating context: project-aware @commands (e.g. @codebase, @code, @filename, @foldername, @docs, @terminal, @diff, @problems), a local codebase index for retrieving relevant snippets, inline selection-to-chat flows (CMD+L / CTRL+L), and a memory layer (Mem0) for persisting conversational or developer-specific context. Users can also add documentation manually to the chat context and supply local files for the assistant to reference.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -780,9 +381,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Refraction operates as a web-based code assistant that accepts pasted code snippets and natural-language prompts for discrete generations. There is no public documentation of persistent, project-level context management APIs or advanced context orchestration features.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Ghostwriter uses code context awareness: it inspects open files and surrounding code to generate contextually relevant completions, transformations, and explanations. It also powers Ghostwriter Chat, where the assistant leverages project context to answer questions and generate code snippets.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'RooCode provides multiple context-management methods: semantic workspace indexing (configurable embedding providers and vector DBs), explicit file/selection mentions (using `@` to include files, ranges or terminal output), automatic context condensing when length limits are reached, configurable context limits per mode, and a persistent Memory Bank for long-lived project facts. The extension also supports MCP-based context extensions so external systems can contribute contextual data.':
@@ -833,9 +431,6 @@ criteria:
         'Theia provides multiple, well-defined mechanisms for managing and updating context: workspace scopes (user/workspace/folder) for preferences; a WorkspaceService and WorkspaceState for persisting extension-specific data; context keys and keybinding/menu "when" expressions to gate UI and commands; editor/selection/active widget context propagated by the frontend; and programmatic APIs (e.g. ContextKeyService, PreferenceService, WorkspaceService) that extensions use to observe and update context.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        'ToolJet exposes multiple ways to manage and surface runtime/contextual data to apps: the built-in globals object (globals.currentUser, globals.groups, globals.theme, globals.urlparams, globals.environment, globals.modes), component bindings and template expressions (eg. {{components.myInput.value}}, {{queryName.data}}), URL parameters, environment identifiers, and the Inspector panel in the app builder that shows available context paths. ToolJet also supports external context integrations via the MCP (Model Context Protocol) bridge for AI assistants and programmatic access to users/workspaces/apps.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         '[Trae maintains and updates context using a combination of codebase indexing, persistent project "rules" files, and Model Context Protocol (MCP) sessions. The IDE indexes repository files and open buffers to provide file-level and project-level context to agents; rules/metadata files persist project conventions and preferences so the agent remembers them across sessions; MCP enables explicit context objects to be attached to agent calls (scoped contexts for tasks, file lists, or external resources). The Builder/ SOLO flows present "execution previews" before changes are applied so users can review and refine context or constraints.]':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -863,21 +458,6 @@ criteria:
         'Memories & AI Rules: Persistent user-defined rules and automatically generated memories let you keep long-lived project preferences, API choices, and style constraints for future sessions.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        '[Explain avaiilable methods for managing and updating the context]':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Upload custom datasets (CSV, JSON, TXT/PDF) into a tool project to provide contextual data':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        Configure prompt templates and variables via the visual builder; edit prompts in the dashboard to change behavior:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Connect external data sources (APIs, databases, webhooks) so the tool can pull updated context at runtime':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        Use webhooks or the platform API to push updates or new documents to a tool’s dataset:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         'Zed exposes the entire AI request/interaction as an editable text buffer in the Assistant/Agent Panel, allowing you to manage and mutate context directly (edit prior messages, remove sections, fork conversations by copying buffers) [zed.dev docs].':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -903,9 +483,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Deep linking in IDE: generated edits and files are applied directly into the local repository (via standard editor apply/replace flows) so references are maintained in-place.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'The platform is file-centric: app.build generates a complete, editable codebase and commits it to a user GitHub repository. The CLI/control plane operate on a filesystem/repo model (create files, run tests, push commits), which means files are directly created, written, and referenced as primary artifacts. While there is no publicly documented "in-repo file reference API" for ad-hoc file injection in prompts, the agent''s workflow inherently reads/writes repo files and uses them as the single source of truth for the generated application.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         IDE extensions and Codespaces allow the assistant to reference files by path and read project files — open-file context in editors and uploaded workspace content in Codespaces enable targeted file-level operations.:
@@ -1049,9 +626,6 @@ criteria:
         'AGENTS.md is designed to reference other files in the repo; Ona agents will read files referenced there and can access repository files directly in the sandboxed workspace. This enables pointing to style guides, architecture docs, and specific source files rather than duplicating their contents in the main agent config.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(330, 100%, 70%)'
-        'Files can be directly referenced and manipulated via the CLI/TUI: file explorer panels, explicit read/view/edit actions, patch/apply operations, and path-based prompts. The assistant can open specific files, show diffs, write changes, and apply/revert patches programmatically.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         'PearAI supports directly referencing files and folders in prompts and chats via commands like @filename and @foldername, attaching files/docs to chats, and including selected code from open editor tabs. The @diff and @code commands enable referencing specific changes and functions across the repo.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -1077,9 +651,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'The product provides an editor integration (Sublime Text extension) for in-editor usage, but there is no documentation indicating support for direct file path references, project-wide file indexing, or referencing files on disk via the web UI or an API.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Ghostwriter is integrated into the Replit IDE and can read the files in the current Replit project/workspace to provide suggestions and transformations. Developers can ask Ghostwriter to operate on specific files opened in the editor, and the assistant uses the open-file buffer and project files as context.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Files and specific ranges can be referenced directly in prompts (via the editor UI and `@` mentions). RooCode can read/write workspace files, present diffs for review, and include terminal output or file snippets inline into the conversation for targeted edits or reasoning.':
@@ -1112,9 +683,6 @@ criteria:
         'Theia exposes direct file and URI APIs for referencing and manipulating files: FileSystem/FileSystemProvider (backend), URI objects, WorkspaceService for workspace roots, and EditorManager/EditorOpener for opening files. Extensions typically use these services to resolve file paths, create/open editors (EditorManager.open(uri)), and watch file changes (FileSystem.watch). Theia also interoperates with VS Code-style URIs when using VS Code plugins.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        'ToolJet apps do not provide arbitrary direct filesystem path access inside the app runtime. Files are handled via file-upload / file-picker components, storage connectors (S3, Google Cloud Storage, etc.), the ToolJet Database or external APIs; assets and uploaded files are referenced by URL or connector-managed storage rather than local filesystem paths.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         '[Files can be directly referenced via the editor and agent commands: the Builder/agent can accept file paths or scoped file selections, the chat supports inline file references and #Context-like selectors, and the system indexes files so agents can open, diff, and patch specific files. Editor integration also permits selecting an open file or range to provide explicit context to the agent.]':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -1139,15 +707,6 @@ criteria:
         'File uploads and images: Files and screenshots can be attached/uploaded into Cascade for the agent to inspect and generate corresponding code or changes.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        '[Explain how files can be directly referenced in context.]':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        Files can be uploaded and associated with a specific tool (document ingestion). Uploaded files are used as source context for prompts and can be referenced by the tool’s prompt templates or data bindings:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        External URLs or API-driven data sources can be referenced so the tool pulls content on demand:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         'Files and whole directory trees can be inserted into the assistant panel using the /file command (or /tab for open tabs). Inserted content appears as folded blocks containing the file text; directory trees are inserted recursively as nested folds so you can include precise file-level context in prompts [zed.dev docs].':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -1161,9 +720,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'There is no public documentation describing a lifecycle-events/hooks API for attaching custom agent lifecycle callbacks inside Amazon Q Developer plugins. MCP enables external context providers and tool integrations, but explicit lifecycle hook APIs for agent-generated events (e.g., "onBeforeChange", "onAfterApply", or persistent event subscriptions") are not documented in the available sources.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'app.build exposes a lifecycle composed of discrete pipeline stages (generation → DB provisioning → testing → deployment) via its control plane and deployment pipeline. These stages surface natural integration points (e.g., generated repo + CI, GitHub Actions triggers, deployment hooks to Koyeb/Neon). There is no documented first-class plugin hook API in the public README, but the architecture and use of Git/CICD provide pragmatic hook points (pre/post-generation, CI checks, and GitHub webhooks) for integrations.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'No public documentation found describing lifecycle hooks (webhooks, pre/post-generation hooks, or plugin lifecycle events) for AskCodi; if required for automation, confirm with AskCodi support or enterprise docs.':
@@ -1238,9 +794,6 @@ criteria:
         'Public docs for Gitpod historically exposed lifecycle hooks for workspaces (prebuilds, init/tasks) and Ona surface-level documentation references automation triggers; however, a clearly documented agent lifecycle hooks API (for attaching arbitrary external listeners to agent start/stop events) was not found in the available documentation. If you need explicit agent lifecycle hooks, verify in the Ona docs or with support for the latest agent API.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(30, 100%, 70%)'
-        There are no widely-documented lifecycle "hook" events for agent-generated actions similar to webhooks or lifecycle callbacks. Extensibility is provided via custom actions/skills and command extensions rather than a formal lifecycle hook system (see actions/skills and custom commands in the docs/repo).:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         'There are no widely documented, first-class "agent lifecycle" hook events (e.g., onRequest, onResponse, onApplyPatch) exposed in PearAI''s public docs. Extensibility via the VSCode-like extension/plugin model may permit custom integrations that observe editor events, but explicit agent lifecycle hook APIs are not documented.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -1248,9 +801,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'No public documentation describes lifecycle events, webhooks, or attachable hooks for responding to Refraction events or generation lifecycle stages.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'The public documentation does not expose a formal plugin hook system for third-party integrations within Ghostwriter itself. However, Replit''s platform-level features (like webhooks for deploys and the Replit API) can be combined with Ghostwriter workflows in the IDE. The Agent product offers richer lifecycle controls and automation hooks (plans, builds, deploys) which are distinct from Ghostwriter.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'RooCode exposes lifecycle-like behaviors via its modes and MCP integrations: custom modes can define pre/post actions and permission rules; MCP servers allow external tooling to register endpoints and respond to agent events; checkpointing and auto-approve flows provide hook points where the user can intercept or allow automated actions. Additionally, VS Code command palette integration and tasks provide natural hook points for automation.':
@@ -1271,9 +821,6 @@ criteria:
         'Theia provides lifecycle and contribution hooks via well-known contribution interfaces: FrontendApplicationContribution (initialize, onStart, onStop), BackendApplicationContribution, CommandContribution, MenuContribution, KeybindingContribution, and LanguageClient contributions. Extensions register disposables and use activation events (commands, file types, workspace events) to run code at specific lifecycle points. There are also workspace events (onDidChangeWorkspace, onWillSaveTextDocument, onDidChangeTextDocument) and backend/frontend RPC lifecycle hooks.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        'ToolJet provides event hooks and lifecycle triggers you can attach to: component events (onClick, onChange, onRowClick, etc.), query lifecycle hooks (onSuccess, onError, onFinally), page load / on-load actions, and server-side / automation workflows. These hooks are configured in the UI and can run JS/Python snippets, trigger queries, or call server-side actions.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         '[Trae exposes lifecycle checkpoints in its planning+execution model: planning / preview ("think-before-doing"), execution (apply changes), deploy, and error/rollback. Through MCP-custom agents and the Builder API, users can attach pre-plan constraints, intercept previews, validate planned modifications, and trigger post-execution actions (e.g., run tests or create commits). While exact hook names/SDK methods depend on Trae''s MCP client implementation, these lifecycle attachment points are available conceptually and via custom agents.]':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -1281,15 +828,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Terminal/command approval hooks: Before executing terminal commands or making repo changes, Cascade prompts for confirmation and displays diffs, enabling an attachable checkpoint/approval step.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        '[Are there any lifecycle events for the agent generated that can be attached to.]':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Webhooks are available for form submissions, lead capture events and conversion/interaction events so external systems can be notified in real-time':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        Integrations (email/webhook) enable downstream automation when users submit data or interact with the tool:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Public documentation does not describe a documented lifecycle "hooks" API (e.g., editor lifecycle events exposed as hook callbacks) for third-party integrations. Zed does provide extension points (WebAssembly-based extensions, MCP servers) but explicit hook-style lifecycle events are not clearly documented in the available sources.':
@@ -1311,9 +849,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'AWS Console plugin alias prefixing: in the AWS console chat, prefixing questions with a plugin alias triggers calls to third-party plugin APIs (CloudZero, Datadog, Wiz) and surfaces provider data inline.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'No evidence of a slash-command or chat-style command interface (e.g., in Slack/Discord) is documented in public materials; interaction is via CLI and web UI.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'There is no clear, public reference to a Slack-style or chat-slash-command system in AskCodi''s public docs. IDE integrations do expose commands via editor command palettes, but an explicit "slash command" interface in the chat is not documented.':
@@ -1391,9 +926,6 @@ criteria:
         'Ona agents support slash-command style interactions to trigger automations and common engineering tasks from chat or IDE integrations. These commands are intended to quickly invoke tests, CI-like automations, or agent behaviours and are integrated into the agent UX across browser and IDE clients.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        'OpenCode provides slash-style commands for common workflows (examples include `/init` to analyze a repo, `/undo` and `/redo` to revert or restore changes). Users can create custom commands/prompts to speed repetitive interactions.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         'PearAI includes reusable slash/command-style actions (examples in product docs include /edit and other command triggers), keyboard shortcuts (CMD/CTRL+I, CMD/CTRL+L, CMD/CTRL+SHIFT+L) and an @-command system to invoke contextual behaviors. These can be reused across chats and workflows to trigger editing, context injection, diffs and more.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -1415,9 +947,6 @@ criteria:
         There is no documented support for user-triggered reusable slash-style commands or command palettes exposed by the product.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        'Within the Replit IDE chat/command palette, Ghostwriter supports in-editor chat interactions and may accept slash-like quick commands in the chat UI for common tasks (e.g., refactor, explain, generate). Public docs do not provide a formal, documented slash-command syntax; behavior is primarily UI-driven rather than command-driven.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         'RooCode integrates with VS Code commands and provides re-usable actions through custom modes and task templates. Users can invoke RooCode functionality from the command palette, configure auto-approve command flows, and reuse mode-specific commands and personas for repeated workflows.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -1436,9 +965,6 @@ criteria:
         'Theia has a first-class commands system. Extensions declare commands via CommandContribution and register handlers with CommandRegistry; commands appear in the Command Palette and can be bound to keybindings or menus. Users can manually trigger commands from the palette, context menus, or keybindings. Commands can be enabled/disabled via context expressions and can execute either frontend logic or delegate work to the backend/container.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        There is no built-in "slash command" palette feature documented as a first-class capability. Developers can implement their own command-like UI (input + event handlers) to emulate slash-commands or quick actions within an app.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         '[Trae supports natural-language command syntax and special inline/directives (examples reported: @Agent, #Context) and provides chat/command surfaces (sidebar/inline). These act like reusable, user-invoked commands and can be used to scope agent behavior, request specific actions, or switch modes (e.g., invoking Builder or SOLO).]':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -1446,9 +972,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Command palette & inline commands: Windsurf provides contextual command suggestions (including terminal commands) and an inline/command-palette style interface for invoking reusable commands or code transformations.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        '[Is there support for re-usable commands that can be manually triggered by the user.]':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Zed supports a set of slash commands in the Assistant/Agent Panel for context injection:':
@@ -1488,9 +1011,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Automated test/code-review agents: built-in units for generating tests and performing code reviews behave like task-specialist agents executed within the IDE.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'The project architecture explicitly describes specialized "actors" and a parallel tree-search driven orchestration. These actors behave like subagents with narrow responsibilities (data modelling, ORM generation, test/handler creation). The FSM + parallel tree search coordinates multiple actor traces and enables exploration and selection of candidate solutions, effectively implementing a subagent-based workflow.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Codi Apps: modular, task-oriented tools (code generation, test generation, SQL/regex builders, explainers) act like specialized agents for distinct developer tasks and can be selected per workflow.':
@@ -1589,9 +1109,6 @@ criteria:
         'Ona is explicitly positioned as "mission control for your personal team of software engineering agents," allowing multiple specialized agents (roles/agents) to be defined and orchestrated for different tasks — e.g., code-gen agents, review agents, release agents — under centralized governance.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
-        The architecture supports hierarchical agents and the spawning of sub-agents (subtasks/skills) for decomposing complex work into smaller steps; custom actions/skills can act as specialized subagents for domain tasks.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         'PearAI surfaces agent-like automation features (PearAI Agent is listed as planned/early) and routes tasks to specialized models or toolsets (Aider, Supermaven, Continue, Perplexity, Mem0). Users can achieve subagent-like workflows by combining model routing, tool integrations, and scripted command sequences; PearAI''s router automatically selects the best-performing model for each task.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -1608,9 +1125,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Refraction does not document any capability to define or orchestrate specialized AI subagents for task-specific workflows; its model is centered on discrete generation tasks (refactors, tests, docs) per request.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Ghostwriter is complemented by Replit Agent, which provides multi-step planning, execution, and autonomous behaviors. While Ghostwriter itself is primarily an assistant for inline edits and chat, Agent can be considered a higher-level subagent for orchestrating builds, checkpoints and deployment workflows. There is no public API for defining custom subagents within Ghostwriter as of available documentation.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'RooCode supports composing multi-step workflows (Boomerang tasks) and persona-driven sub-workflows that act like subagents. MCP servers and custom modes can delegate specific responsibilities (running tests, managing containers, calling external APIs), enabling specialized subagent-like behavior for task-specific automation.':
@@ -1631,9 +1145,6 @@ criteria:
         'While Theia does not mandate a specific "AI subagent" framework, it fully supports implementing specialized subagents via extensions: backend services or microservices (HTTP/WebSocket/RPC) that host LLMs or agent orchestration, frontend contributions that present agent UIs (views, webviews, quick-open), and integration points for multi-agent workflows (task APIs, terminals, debug adapters). Projects like Theia AI (and other community extensions) demonstrate how to implement multi-agent assistants and orchestrate them from Theia extensions.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        'ToolJet provides AI/automation capabilities (Agent Builder / automation workflows in enterprise editions) that act like specialized subagents: they can orchestrate queries, connectors, and LLM calls to automate tasks or respond to prompts. Additionally, integrations with LLMs and MCP enable external AI assistants to interact with ToolJet programmatically.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         '[Trae enables specialized subagents via the MCP client and custom agent definitions (SOLO, Builder, and user-defined agents). Users can create task-specific agents (e.g., testing agent, refactor agent, deploy agent) that encapsulate particular workflows and tool access scopes; these subagents can be invoked from the main Builder flow or chat.]':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -1647,15 +1158,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Autonomous vs. assistant modes: Write Mode runs more autonomously (multi-step execution), effectively letting a sub-flow perform a sequence of edits and terminal actions under supervision.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        '[Is it possible to define specialized AI subagents for task-specific workflows ? If so, explain how.]':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'While Wrapifai does not expose a formal "subagent" authoring UI, you can implement task-specific flows by creating multiple focused tools, chaining calls via webhooks/APIs, and building multi-step prompt flows (conditional prompts, separate prompt templates per step)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Use webhooks or external functions to orchestrate multiple tools or processing stages, effectively enabling specialized agent-like workflows':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'There is no explicit public documentation describing named "subagents" you can define and register. Zed does provide an Agent Panel with tool calling, profiles that restrict or grant tool access, and MCP server integration for custom tools — these enable agentic workflows, but the term "subagent" (as separately definable autonomous agents) is not documented in the sources used.':
@@ -1680,9 +1182,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Bundling: while there isn''t a published "plugin SDK" in the same sense as browser extensions, MCP provides the protocol for bundling tool connectors, and the AWS Console aliasing provides the user-visible mechanism to call them.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'The public repository/README documents extensibility (open-source, configurable stacks, BYOK) but does not describe a formal plugin system or plugin packaging API. Integrations appear to be achieved via generated repos, CI/CD, and infrastructure connectors rather than a runtime plugin marketplace.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Codi Apps: an internal modular plugin-like system of specialized tools that provide focused capabilities (refactors, test generation, SQL/regex builders, explainers).':
@@ -1775,9 +1274,6 @@ criteria:
         'Ona integrates with IDE extensions and editor platforms (e.g., VS Code, JetBrains, Cursor, Zed) and exposes automation/extension points; bundling commands and automation into reusable packages is done via workspace/automation configuration and editor extension packs rather than a single "plugin store" model.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(120, 100%, 70%)'
-        'Extensible via actions/skills, model adapters, and custom commands. Developers can add new "skills" or adapters (e.g., Ollama, Models.dev connectors) and script bespoke tool integrations. There is no single centralized marketplace documented; extensibility is file- and config-driven in the repo.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         'PearAI is extensible and built on a VSCode-like architecture; it supports plugins/integrations that can bundle commands, tooling, and integrations. Developers can extend behavior by adding integrations (model providers via BYOK, documentation sources, or custom tooling) and packaging those as extensions/plugins compatible with the environment.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -1794,9 +1290,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'While Refraction provides an editor integration (a Sublime Text extension) for more convenient in-editor flows, there is no evidence of a broader extensibility/plugin system for bundling commands, agents, and hooks as a platform-facing plugin framework.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'There is no public plugin SDK for Ghostwriter documented in user-facing materials. Replit''s broader platform supports integrations and third-party apps at the workspace level (e.g., packages, APIs). For extensibility beyond the IDE, Replit''s platform and Agent provide more appropriate integration points.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'RooCode supports extension via MCP plugins/providers and integrates with multiple model providers. Teams can bundle together provider configurations, MCP servers, and custom modes to produce reusable plugin-like setups that encapsulate commands, tools, and integrations.':
@@ -1817,9 +1310,6 @@ criteria:
         'Theia bundles commands, contributions, and lifecycle hooks via the extension/package model. An extension is packaged with frontend and optional backend parts and declares contribution points (commands, menus, views, preferences) in its package.json. Theia also supports VS Code-style plugins (via the plugin extension) and Open VSX packaging to reuse existing VS Code extensions.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        'ToolJet is extensible: it supports custom connectors, plugins, importing React components, server-side actions, and a CLI for building extensions. Connectors let you add new data sources or SaaS integrations; custom components let you extend the UI beyond the built-in components.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         '[Trae supports extensions and plugin-like integration via its VS Code ancestry (VS Code extensions compatibility) and by exposing MCP for bundling agent behaviors and tool integrations. Developers can package commands, agents, and hook logic in extension form or via MCP client modules to compose reusable feature bundles.]':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -1832,64 +1322,160 @@ criteria:
         'AI rules + extensions: Windsurf''s AI rules and Cascade flows can be combined with extensions to create reusable bundles of behavior (commands + hooks + rules).':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        '[Is there a method of bundling together commands, agents and hooks ? If so, explain how''':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'No formal plugin bundling system is publicly documented; integrations are handled via webhooks, embed code and API/endpoints per tool':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         'Zed has an extension system and a growing registry; extensions can add functionality and integrate with editor workflows. Extension development leverages WebAssembly and platform extension points, and MCP servers can provide additional tool capabilities to the Agent Panel.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         The ecosystem is younger and smaller than VS Code's marketplace but is expanding; community and first-party extensions are distributed via the registry.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
+  - Extensible:
+      type: LABEL
+      values:
+        'Supports Model Context Protocol (MCP) connections and a plugin/alias system for third-party tooling (monitoring, security providers)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Plugin / "Codi Apps" modular tools model:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Plugins / IDE extensions (VS Code, JetBrains, Vim/Neovim)':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Integrations with GitHub, Jira, Confluence, Notion, Linear':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        VS Code extension plus MCP (Model Context Protocol) support for custom tools:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Continue is built to be extensible via blocks, MCP integrations and a hub for sharing assistants.':
+          color: '#ffff00'
+          backgroundColor: 'hsl(285, 100%, 70%)'
+        'Integrations: Figma import (Builder.io plugin), GitHub/GitLab/Bitbucket import, template gallery':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Editor and IDE integrations (VS Code, Visual Studio, JetBrains, Xcode, Vim/Neovim, Eclipse), GitHub Marketplace extensions and CLI/Terminal integrations':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        IDE plugin surface for different JetBrains products:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Integrates with IDEs (VS Code, Cursor), web app and desktop client; supports multi-repo context and external LLMs':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        MCP (Model Context Protocol) Server Marketplace for custom tools and integrations:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(150, 100%, 70%)'
+        Fine-tuning / post-training on private repos:
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
+        Integration via plugins and Continue.dev:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Fork of VSCode + modular submodules for AI features; supports plugins and integrations:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Editor extensions are available on paid tiers (editor plugins/support mentioned in product features):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'VS Code extension architecture, custom modes, MCP (Model Context Protocol) servers, and provider/plugin integrations':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Integrations: IDE plugins (VS Code, JetBrains, Visual Studio, Eclipse), browser extensions, code host integrations (GitHub, GitLab, Bitbucket), API and webhooks, app/extensions framework':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        'Integrates with major IDEs (VS Code, JetBrains, Neovim) and offers chat integrations; product roadmap and integrations may expand':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Modular architecture designed for composing custom IDEs and integrating extensions (supports VS Code extensions via Open VSX):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
+        Extension registry available; growing ecosystem but smaller than VS Code's marketplace:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+  - FreeTrial:
+      type: LABEL
+      values:
+        'Notes: AWS has offered free tiers or developer-friendly access for prior services (CodeWhisperer) and provides Builder ID sign-in options; enterprise pricing & feature bundles for Amazon Q are documented in AWS pricing/docs.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        A free/solo tier exists (open-source extensions + hub access for public/shared blocks). Paid team/enterprise tiers add governance and private deployment options.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        Available during preview; typical Firebase usage quotas and billing apply once services are provisioned beyond free tier limits.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        The product advertises a free trial that does not require a credit card:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        'Copilot has free tiers (e.g., Copilot Free for qualifying users) and trial/paid plans (Pro/Business/Enterprise) with different capabilities.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        The open/source-available GPT Pilot codebase is free to run; Pythagora also offers a commercial Pythagora Pro product with paid features.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        Core inline completions and many local workflows are free. Cloud-based features may use provider credits; JetBrains changed to a credit/quota model in 2025 for cloud usage visibility.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        Commercial product with demos / trials and enterprise sales channels.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        new users get onboarding credits via the platform (also can operate with your own keys):
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(180, 100%, 70%)'
+        'MarsX offers a usable free plan and the core Mars engine is available as open-source.]':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        Private beta availability; general availability and trial terms may vary:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        Free tier available with basic features and BYOK support; paid tiers unlock advanced features:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        New users get a limited number of free generations (commonly reported as ~10 free uses) and a short trial period to evaluate the service.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        The extension itself is free/open-source; model usage costs depend on the API keys/providers you supply.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        Limited beta access was offered during initial launch windows.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        Free tier/self-hosted free edition for small teams and public code; paid Business/Enterprise plans for larger teams and advanced features.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        Community edition is free & open-source; Team/Enterprise tiers exist commercially for additional features/support.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        'Any additional details: Tabnine sunset its free Basic plan in 2025; access is primarily through paid tiers or enterprise licensing. Trial or pilot options may still be available via sales.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        Theia is free/open-source (no trials); commercial services built on top of it may have separate licensing/pricing.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(120, 100%, 70%)'
+        As of early 2025 Trae was distributed free with access to several premium models included:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        Core editor is free and open-source.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        The editor and source are available openly; binaries are freely downloadable. (See "Notes" about binary EULA nuance.):
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
   - Terminal:
       type: LABEL
       values:
-        'Primary surface is IDE integrations (VS Code, JetBrains family, Cloud9, etc.).':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
         'Primary surface: IDE plugins and AWS Console chat. There is no official terminal-only interactive CLI assistant equivalent documented as the main surface.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(210, 100%, 70%)'
         CLI and TUI available:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        'In‑browser terminal via WebContainers that can run npm, Node.js servers, and CLI tooling.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
-        Neovim support indicates usability inside terminal-based editors.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
-        Provides a CLI for scripting and interactive control.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(75, 100%, 70%)'
-        no general-purpose CLI for offline reviews documented:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
         The `cn` CLI provides an interactive TUI and a headless mode for scripted and CI uses.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(75, 100%, 70%)'
-        'Provides CLI and web UI components; integrates with local runtimes (Bun, Ollama) and shells for execution.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
-        Provides an interactive shell in its UI so the agent can run commands and manage environments:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
-        CLI access is available in paid/teams tiers for CI and automation use-cases.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
-        Server components are deployed and managed via Docker/docker-compose and expose REST/OpenAI-compatible APIs; setup and monitoring are typically done from the command line.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
         'Full coding workspace includes terminal access for builds, package managers, and CLI workflows.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(210, 100%, 70%)'
         'Copilot Chat is available in supported terminals (Windows Terminal Canary, GitHub CLI integrations) and can be used from the command line in supported environments.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
-        'Interaction is through the web UI (Playground, chat, multimodal inputs) and exported code; no integrated shell/terminal is advertised.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(210, 100%, 70%)'
         CLI-driven project creation and workspace management are supported.:
@@ -1907,9 +1493,6 @@ criteria:
         'Agentic capabilities can reason over terminal output, run commands, and propose diffs under configurable approval flows':
           color: '#0d0d0d'
           backgroundColor: 'hsl(75, 100%, 70%)'
-        CLI available to integrate local workflows with the MutableAI service:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
         Provides an npm package and CLI for setup/configuration; integrates with developer workflows.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(75, 100%, 70%)'
@@ -1925,13 +1508,7 @@ criteria:
         Supports running terminal commands and automation as part of tasks and modes.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(210, 100%, 70%)'
-        Usable as a Python library and in repo-driven workflows; CLI/recipe-style usage patterns exist for iterative development.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(75, 100%, 70%)'
         'CLI tooling (e.g., src CLI / developer tools) and integrations that allow scripted interactions and automation.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
-        Usable from terminal/CLI via TGI / transformers scripts or Docker images for batch/interactive use.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(210, 100%, 70%)'
         Primary integrations are editor/IDE plugins; Supermaven also provides its own editor/IDE experience rather than a terminal-first tool:
@@ -1943,12 +1520,6 @@ criteria:
         Integrated terminal available (desktop & web). AI features add inline assistance in terminals in recent AI-enabled builds.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(210, 100%, 70%)'
-        Supports JavaScript/Python snippets inside apps and provides a CLI for developers.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
-        Primary interface is web chat; platform/API can be integrated programmatically but there is no primary local CLI for generation:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
         Built-in integrated terminal and task runner.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(30, 100%, 70%)'
@@ -1958,15 +1529,12 @@ criteria:
         'Notes: Supports Model Context Protocol / MCP server connections to bring external context into conversations and agent workflows.':
           color: '#ffff00'
           backgroundColor: 'hsl(270, 100%, 70%)'
-        Built around and interoperable with the Model Context Protocol (MCP) for tool discovery and standardized tool RPC.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(135, 100%, 70%)'
         'Integrates with Model Context Protocols for adding context providers (GitHub, Jira, etc.) and usable via the hub.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(135, 100%, 70%)'
         supports MCP Server Marketplace (JSON-based tool integrations / extensions):
           color: '#ffff00'
-          backgroundColor: 'hsl(270, 100%, 70%)'
+          backgroundColor: 'hsl(240, 100%, 70%)'
         Assuming continue.dev functionality is kept - doublecheck:
           color: '#ffff00'
           backgroundColor: 'hsl(270, 100%, 70%)'
@@ -1982,9 +1550,6 @@ criteria:
         Model Context Protocol support added in v1.3.0 to enable custom agents and richer context handling:
           color: '#0d0d0d'
           backgroundColor: 'hsl(135, 100%, 70%)'
-        Warp supports selecting/modeling different hosted LLM providers and includes enterprise features like zero-data-retention guarantees and proxying; it exposes autonomy controls for when agents may call MCP servers without human approval.:
-          color: '#ffff00'
-          backgroundColor: 'hsl(270, 100%, 70%)'
         MCP servers are integrated similar to other extensions like e.g. theming:
           color: '#0d0d0d'
           backgroundColor: 'hsl(30, 100%, 70%)'
@@ -2004,9 +1569,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Note: there is no strong public documentation of a formal "mode authoring" UI for end-users to create persistent named personas; tailoring today is primarily achieved via configuration and MCP/plugin composition.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'There is no public documentation describing a user-facing "custom modes" feature that lets users define persistent specialist modes for the agent. Configurable stack choices and BYOK options exist, but no documented mechanism to create custom conversational/behavioral modes for the agent was found.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Model selection and per-project settings let teams select different LLMs or presets for specific workflows (e.g., choose Claude vs. GPT for particular task types), effectively creating tailored modes.':
@@ -2087,9 +1649,6 @@ criteria:
         'Agent behaviour and operating modes can be tailored via repository-level configuration (AGENTS.md), environment definitions, and automation manifests; teams can create specialized profiles/workspace configs that produce distinct agent behaviours or permissions for particular workflows.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(150, 100%, 70%)'
-        'OpenCode provides at least two explicit modes: Plan Mode (read-only design/planning) and Build Mode (apply edits). Modes can be toggled in the TUI (Tab key), enabling different agent behaviours (e.g., generate a plan vs. make changes).':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         'Users can create tailored workflows by configuring model routing, toggling built-in tools, supplying BYOK keys, and using custom command sequences. Because PearAI is a VSCode fork and supports extensions/plugins, teams can implement specialist modes (e.g., a Web3 mode that loads specific docs, models, and snippets) through configuration and extensions.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -2115,9 +1674,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'There is no public information about creating persistent custom modes or specialist modes that alter the assistant''s behavior across sessions. The product focuses on one-off, targeted generations rather than configurable modes.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'Ghostwriter exposes different usage modes in the UI (e.g., Chat vs. Inline Completion vs. Explain/Transform). Replit Agent offers explicit Plan vs Build modes for more autonomous workflows. Public docs do not document a user-facing API for creating new custom modes beyond UI options and Agent''s planning features.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Users can create specialist modes (personas) with custom instructions, file restrictions, model selections, and permission boundaries. Modes are configurable and can be tied to specific models or providers, allowing tailoring of the assistant for tasks like architecture review, QA, or refactoring.':
@@ -2153,9 +1709,6 @@ criteria:
         'Theia supports custom "modes" through language/monaco registrations, custom editors, themes, keymaps, and preference scopes. Extensions can register language contributions (syntax, tokens, language IDs), Monaco editor modes, and view/editor behavior, enabling specialist modes tailored for tasks (e.g., embedded development, data science notebooks, AI copilots).':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        'ToolJet includes built-in modes (edit, preview, view) surfaced via globals.modes and the Inspector. While there isn''t a single "custom modes" API, developers can emulate custom modes and alternate UX states using URL parameters (globals.urlparams), environment identifiers (globals.environment), conditional rendering and logic driven by globals or app-level variables.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         '[Trae provides multiple specialist modes out-of-the-box (Builder Mode, SOLO Mode, SOLO Builder) and supports creating tailored workflows via custom agents and MCP-driven sessions. Modes change how the agent plans, previews, and executes changes (manual-review vs autonomous execution), and can be switched by command or configuration.]':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -2172,12 +1725,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Persistence: Memories and project-level rules make these custom modes repeatable across sessions.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        '[Can the user create specialist modes that enable you to tailor the chat experience for specific tasks.]':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'The visual builder supports custom prompt templates, configurable inputs and styling, and duplicating/adapting tools to create alternate modes (e.g., "SEO mode", "Lead capture mode")':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Zed supports configurable Assistant profiles (assistant.profiles in settings.json) which let you create custom agent/tool configurations (e.g., Read-only, Write-enabled, Minimal) governing what the assistant can access and do. Profiles can be created and edited via the UI or by modifying settings.json directly.':
@@ -2199,9 +1746,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         No documented built-in persistent "checkpoint" or automatic snapshot feature inside Amazon Q itself; rely on editor and VCS for safe rollback.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'app.build uses Git (creating a full GitHub repository for each generated app) and CI/CD as implicit checkpoints. Each generation step produces commits and pipeline artifacts, giving users a natural rollback and audit trail. Additionally, the FSM/graph architecture enables targeted re-generation or intervention at intermediate states (avoiding a full restart) — effectively behaving like internal checkpoints during the generation process.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         AskCodi does not publicly document a built-in "checkpoint/undo" feature for generated changes; typical recovery/rollback would be handled via VCS (git) in the uploaded Codespace or local editor. Confirm enterprise/backups features with AskCodi sales/support for advanced checkpointing.:
@@ -2303,9 +1847,6 @@ criteria:
         'Ona/Gitpod workflows provide workspace snapshots, prebuilds and the normal git history as mechanisms to revert or recover from agent actions. For enterprise users, Guardrails and audit trails further enable tracing and, where necessary, rolling back changes using standard VCS or snapshot workflows.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(180, 100%, 70%)'
-        'OpenCode supports undo/redo for edits, persistent session history (SQLite), and shows diffs/patches to review before applying. It also integrates with Git workflows so developers can rely on VCS history as an additional checkpoint mechanism.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         'PearAI presents diffs for inline edits before applying changes, supports local undo in the editor, and integrates with Git so changes can be committed and reverted. The @diff workflow and preview/accept model provide checkpoints prior to committing AI-generated edits; standard Git operations (revert/reset) and editor undo serve as recovery mechanisms.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -2327,9 +1868,6 @@ criteria:
         'There is no documented checkpoint or undo system for reverting actions; Refraction stores generation history for user review, but this is not presented as a versioned checkpoint/rollback mechanism.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        'Checkpoints/rollback functionality is part of Replit Agent (project history, diffs, and rollback to previous checkpoints). Replit''s general workspace history (snapshots, version history) and Agent both provide mechanisms to revert or inspect prior states. Ghostwriter''s generated edits can be undone via standard editor undo and Replit''s version history.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         'RooCode implements checkpointing and diffs: it records change checkpoints (and ties into VS Code timeline/git workflows), shows diffs for review before applying edits, and allows reverting to previous states. Auto-approve settings can be gated with explicit checkpoints to prevent unwanted changes.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -2346,9 +1884,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Theia provides several mechanisms that function as checkpoints or enable recovery: workspace state persistence (open editors, layout), crash/restart recovery, cloud/workspace snapshots in managed deployments, and extensible local-history or snapshot extensions. For source-controlled checkpoints, Theia integrates with Git extensions (commit/branch/rollback) so users can revert changes via standard VCS workflows. For richer checkpoint semantics, authors typically add an extension (local history, snapshotting service, or backend snapshot API).':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        ToolJet supports versioning and rollback patterns via GitSync / CI integrations (GitHub/GitLab) and app versioning features (enterprise/hosted features). For self-hosted deployments you can also rely on database backups and container snapshots to restore state. Note that the availability and convenience of these checkpointing/rollback features depend on the edition (community vs. enterprise) and how you configure persistence/versioning.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         '[Trae provides undo and checkpointing through several mechanisms: execution previews (inspect changes before apply), native Git/VCS integration (stage/commit/checkout to revert), and the Builder''s planned-change workflow which can be canceled or rolled back. These combined affordances let teams undo agent actions or restore prior states.]':
@@ -2372,12 +1907,6 @@ criteria:
         'VCS integration: Because it operates inside a code editor and integrates with terminals, standard git workflows (commit, branch, revert) can be used to undo or roll back changes.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        '[Is it possible to undo actions taken by the agent by using checkpoints or if autocommitted to git, reversing the history ?]':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'No public evidence of a git-like commit history or automatic checkpointing; tool edits are managed through the dashboard and may have basic version controls, but no documented full rollback/commit workflow':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         'When the AI agent makes edits, Zed creates a restore checkpoint for the pre-edit state and surfaces a "Restore Checkpoint" action on the message so you can revert the workspace to the state before the AI change. Checkpoints appear even if an edit was interrupted mid-change, offering a safety net for agentic editing workflows.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -2385,9 +1914,6 @@ criteria:
       type: LABEL
       values:
         Other:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        'app.build follows an "FSM-driven generation" approach rather than one of the named spec-driven frameworks listed. The platform uses a finite-state-machine + parallel tree-search + specialized-actors pattern to encode generation specs and orchestrate synthesis, validation, and repair of generated code.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Not applicable / no direct mapping: AskCodi is a developer tooling platform and LLM gateway rather than a spec-driven development framework; it does not advertise built-in support for any of the above SDD frameworks in public documentation.':
@@ -2447,9 +1973,6 @@ criteria:
         There is no public indication that Ona (Gitpod/Ona) is built around or prescribes a specific external spec-driven development framework such as Tessl or the others listed. Ona provides environment and automation primitives but does not appear to mandate a particular spec-driven methodology.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(210, 100%, 70%)'
-        'OpenCode is not bundled with or tied to specific spec-driven frameworks (BMAD, SpecKit, OpenSpec, Tessl, AgentOS, ClaudeFlow, SPARC, SuperClaude). It can, however, support spec-driven workflows through Plan Mode and scripted skills—developers would integrate their preferred SDD tooling themselves rather than rely on a built-in spec framework.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         'PearAI does not appear to target or natively implement a specific spec-driven development framework. It is an AI-first IDE focused on contextual coding assistance, model routing, and extensibility rather than a spec-driven code-generation lifecycle. If teams use PearAI in a spec-driven workflow, they typically map their own specs/docs into the workspace via the @docs and project context features.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -2462,9 +1985,6 @@ criteria:
         'None — Refraction is a focused developer productivity assistant (refactors, tests, docs) and is not a spec-driven development framework':
           color: '#ffff00'
           backgroundColor: 'hsl(270, 100%, 70%)'
-        'Replit does not advertise a specific spec-driven development framework in its public Ghostwriter documentation. Replit Agent and workspace features can be used to implement spec-driven workflows, but no branded SDD method is documented.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         'RooCode is an AI coding assistant/IDE extension rather than a spec-driven development framework. It does not ship with a native SDD framework, though it can be used alongside any spec-driven workflow (including Tessl or custom spec tools) by operating on the same workspace files and automating edits based on spec requirements.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -2486,9 +2006,6 @@ criteria:
         'Theia itself is an IDE framework and does not enforce a particular spec-driven development tool, but it is compatible with SDD workflows. In projects that use Tessl (like this repo), Theia can be extended to surface Tessl specs, run Tessl tools via tasks/terminals, and provide editor integrations (syntax highlighting, quick actions) for Tessl-managed specs.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
-        'ToolJet does not natively implement a specific spec-driven development framework. It can be used as the execution/runtime layer for apps produced by spec-driven workflows, and can integrate with CI/Git-based workflows; but there is no built-in, opinionated Spec-DSL like Tessl listed above. Teams can adopt Tessl, OpenSpec or other SDD tools alongside ToolJet to manage specs, then implement/generate apps that run in ToolJet.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         '[Trae is not tied to a specific spec-driven development framework. It integrates with project rules/metadata and MCP-driven agents so it can be used alongside spec-driven workflows (including Tessl or other frameworks) but does not formally implement or require one of the listed SDD frameworks.]':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -2504,37 +2021,13 @@ criteria:
   - Languages:
       type: LABEL
       values:
-        (Limited) Python:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
         Other:
           color: '#ffff00'
           backgroundColor: 'hsl(285, 100%, 70%)'
         Can analyze and work with other languages via dependency decompilation / semantic indexing; used in demos with Python and mixed stacks):
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
-        Other common languages (multi-language support via static analysis and AST parsing):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        HTML:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        CSS:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        JavaScript / TypeScript:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        JavaScript/TypeScript:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
         Support for other backend languages via templates and runtime options (examples include Go and Java in templates):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        Web UI:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        Node.js:
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
         'YAML, JSON, Markdown, Text':
@@ -2552,13 +2045,7 @@ criteria:
         SCSS / LESS:
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
-        Many others via editor plugins:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
         'advertised: total support for 8 languages; TypeScript and Python are prominent':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        12 in total:
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
         React (frontend):
@@ -2570,25 +2057,13 @@ criteria:
         'SQLite, PostgreSQL':
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
-        '80+ programming languages (Python, JavaScript, Java, C/C++, Go, Ruby, Rust, TypeScript, PHP, Shell, SQL, etc.)':
+        Node.js:
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
         Many other popular languages (wide IDE/language support):
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
-        React:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        Tailwind:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
         'Python, JavaScript/TypeScript, Go, Java, Ruby, C#, and most common programming languages (broad support via language-agnostic indexing)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        JavaScript / TypeScript (front-end embeds):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        Python (integrations / data uploads):
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
   - License:
@@ -2597,22 +2072,7 @@ criteria:
         GNU General Public License v3.0 (GPL-3.0):
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
-        'Code: Apache-2.0':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        'Model weights: released for academic research; commercial use requires application/approval (see repository for details)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        Proprietary / Closed-source:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        Meta / Code Llama license (permits research and commercial use — see repository for exact terms):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
         'Functional Source License (FSL) / Fair Source (source-available, not MIT/Apache/GPL)':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        Mixed / see repository:
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
         'Core engine: MIT (varies by individual micro-app)':
@@ -2622,9 +2082,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
         Sourcegraph Enterprise (formerly Apache 2.0 for much of the codebase prior to relicensing):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        BigCode-OpenRAIL / OpenRAIL-M (model card requires agreement on use):
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
         Apache License 2.0:
@@ -2642,21 +2099,9 @@ criteria:
   - BYOK:
       type: LABEL
       values:
-        Not publicly documented:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        Uses API keys for model providers; supports configuring different gateways:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
         'You can configure and use your own API keys and model endpoints, and switch between local/remote models.':
           color: '#ffff00'
           backgroundColor: 'hsl(255, 100%, 70%)'
-        'Supports configuring API keys/endpoints for OpenAI, Claude, Gemini, Mistral, Groq, Bing/Google search, Ollama, etc.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
-        N/A:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
         'Gemini API keys and AI resources are provisioned as part of the workspace flow; explicit BYOK for model keys is not a first-class, user-driven workflow in the initial preview.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(300, 100%, 70%)'
@@ -2667,8 +2112,8 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(300, 100%, 70%)'
         supports connecting your own model/provider credentials when desired:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
+          color: '#ffff00'
+          backgroundColor: 'hsl(270, 100%, 70%)'
         Supports private deployments and enterprise key management practices through on-prem/air-gapped setups:
           color: '#0d0d0d'
           backgroundColor: 'hsl(300, 100%, 70%)'
@@ -2681,33 +2126,21 @@ criteria:
         'Theia AI and integrations follow a bring-your-own-key / bring-your-own-model philosophy: you can configure external LLM providers or self-hosted models (e.g., Ollama, LlamaFile, hosted Anthropic/OpenAI keys) depending on deployment and data-control needs.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(300, 100%, 70%)'
-        Users provide their own API keys for third-party services and LLMs when configuring integrations.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
         'Zed supports OpenAI-compatible providers and can be configured to use local LLM hosts (e.g., Ollama) so you can run models with your own keys or entirely offline.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(180, 100%, 70%)'
   - Opensource:
       type: LABEL
       values:
-        'Several components and tools are published as open-source (PR-Agent and code examples), while the core hosted product and some models/features are proprietary.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(165, 100%, 70%)'
         The project is open-source and community contributions are actively encouraged.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(165, 100%, 70%)'
-        Studio and Gemini are proprietary Google services; there are no public source repositories for the hosted Studio environment.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
         The project is distributed under a Functional Source License (FSL) / "Fair Source" style license (source-available) rather than an OSI-approved open-source license.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(165, 100%, 70%)'
         'source available on GitHub, community contributions encouraged':
           color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        Company published several repositories under the kiteco GitHub organization after winding down; some components and research artifacts are available for reuse.:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
+          backgroundColor: 'hsl(300, 100%, 70%)'
         Nuanced began as an open-source call-graph/context library; core components have been published for community use.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(165, 100%, 70%)'
@@ -2718,9 +2151,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(165, 100%, 70%)'
         'Historically Apache 2.0 (OSS) until 2023; in 2023–2024 Sourcegraph moved large portions of the project to an enterprise/proprietary license and in Aug 2024 made the core repository private. Some related projects (e.g., parts of Cody or community tooling) remain open source.':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
-        The v0 product and its generation backend are proprietary; generated code is standard open-stack (React/Tailwind) that you can use in your own repos:
           color: '#0d0d0d'
           backgroundColor: 'hsl(330, 100%, 70%)'
         Core source available on GitHub:
