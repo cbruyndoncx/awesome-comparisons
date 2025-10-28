@@ -1,12 +1,7 @@
 title: AI Code Editors
-subtitle: feature-comparison
-introduction: |
-  Comparison of AI Integrated Development Environments (IDE) a.o. listed AINativeDev Code/Editor category.
+subtitle: Comparison of AI Integrated Development Environments (IDE) a.o. listed AINativeDev Code/Editor category.
 selectTitle: Filter Criteria
 tableTitle: Comparison of AI Code Editors
-repository:
-  template: "https://github.com/cbruyndoncx/{}.git"
-  variables: ["subtitle"]
 criteria:
   - General:
       name: General Info

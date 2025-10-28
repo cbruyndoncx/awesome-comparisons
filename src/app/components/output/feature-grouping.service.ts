@@ -18,6 +18,9 @@ import {
 })
 export class FeatureGroupingService {
     private static readonly EXCLUDED_LABELS = new Set(['no', 'none', 'n/a']);
+    private static readonly OTHER_COLUMN_GROUP_KEY = '__other-columns__';
+    private static readonly OTHER_COLUMN_GROUP_NAME = 'Other Columns';
+    private static readonly ID_COLUMN_KEY = 'id';
 
     constructor(private store: Store<IUCAppState>) {
     }
@@ -137,6 +140,34 @@ export class FeatureGroupingService {
             });
             seenGroups.add(groupKey);
         });
+
+        const groupedColumnKeys = new Set(Object.keys(columnGroupMap));
+        const tableColumns = (payload.configuration?.criteria || [])
+            .filter(criteria =>
+                criteria.table === true &&
+                criteria.id !== FeatureGroupingService.ID_COLUMN_KEY &&
+                !groupedColumnKeys.has(criteria.id)
+            );
+
+        if (tableColumns.length > 0 && !groups.some(group => group.key === FeatureGroupingService.OTHER_COLUMN_GROUP_KEY)) {
+            tableColumns
+                .filter(criteria => criteria.id !== FeatureGroupingService.ID_COLUMN_KEY)
+                .forEach(criteria => {
+                    if (!columnGroupMap[criteria.id]) {
+                        columnGroupMap[criteria.id] = FeatureGroupingService.OTHER_COLUMN_GROUP_KEY;
+                    }
+                });
+            groups.push({
+                key: FeatureGroupingService.OTHER_COLUMN_GROUP_KEY,
+                displayName: FeatureGroupingService.OTHER_COLUMN_GROUP_NAME,
+                label: { value: FeatureGroupingService.OTHER_COLUMN_GROUP_NAME },
+                children: [],
+                isExcluded: false,
+                isExpanded: false,
+                defaultExpanded: false,
+                primaryCriteria: null
+            });
+        }
 
         return {
             groups,

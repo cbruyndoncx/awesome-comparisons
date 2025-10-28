@@ -1,12 +1,7 @@
 title: AIE Models
-subtitle: feature-comparison
-introduction: |
-  Comparison of AIE Models and model tooling a.o. listed AINativeDev AIE/Model category.
+subtitle: Comparison of AIE Models and model tooling a.o. listed AINativeDev AIE/Model category.
 selectTitle: Filter Criteria
 tableTitle: Comparison of AIE Models
-repository:
-  template: "https://github.com/cbruyndoncx/{}.git"
-  variables: ["subtitle"]
 criteria:
   - General:
       name: General Info

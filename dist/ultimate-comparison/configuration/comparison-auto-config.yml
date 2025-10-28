@@ -23,6 +23,9 @@ criteria:
         'Supports running local LLM backends (Ollama, GPT4All, Llama.cpp, LMStudio, etc.) and a fully-local RAG setup via Chroma DB + embeddings.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
+        Local-first architecture; code and context are kept on the developer's machine rather than sent to third-party servers for model training or storage:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(135, 100%, 70%)'
         Firebase Studio is a cloud-hosted workspace; the environment and AI features run in Google-managed infrastructure.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
@@ -35,6 +38,9 @@ criteria:
         All processing was cloud-hosted on GitHub's infrastructure; no documented offline/local model execution.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(90, 100%, 70%)'
+        Studio is a cloud-hosted web application; there is no known supported offline/self-hosted distribution of the Studio UI or Gemini models.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(165, 100%, 70%)'
         Can be run locally or inside Docker; configurable to use local LLM endpoints or self-hosted inference where supported.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
@@ -107,12 +113,18 @@ criteria:
         Native integrations (MCP-style integrations) for GitHub and git workflows; automation via CLI for PR/comments/summaries.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(45, 100%, 70%)'
+        Integrates with local repositories and provides VS Code extension workflows:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(195, 100%, 70%)'
         'Import from GitHub, GitLab, Bitbucket; code workspace exposes repo integration and basic Git operations.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(180, 100%, 70%)'
         'Integrates with GitHub workflows: PR description generation, PR creation by the Copilot agent, and issue-to-PR workflows in enterprise features.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(180, 100%, 70%)'
+        Studio offers code export but does not act as a git host. Exported snippets are intended to be copied into developer repositories.:
+          color: '#ffff00'
+          backgroundColor: 'hsl(225, 100%, 70%)'
         'Assistive features for commit messages, PR descriptions, refactor-aware changes, and multi-file edits that can be staged/reviewed in the IDE.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(180, 100%, 70%)'
@@ -1349,12 +1361,18 @@ criteria:
         'Continue is built to be extensible via blocks, MCP integrations and a hub for sharing assistants.':
           color: '#ffff00'
           backgroundColor: 'hsl(285, 100%, 70%)'
+        'VS Code extension available (integrates chat, slash commands, inline quick edits)':
+          color: '#ffff00'
+          backgroundColor: 'hsl(255, 100%, 70%)'
         'Integrations: Figma import (Builder.io plugin), GitHub/GitLab/Bitbucket import, template gallery':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
         'Editor and IDE integrations (VS Code, Visual Studio, JetBrains, Xcode, Vim/Neovim, Eclipse), GitHub Marketplace extensions and CLI/Terminal integrations':
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
+        Integrates with Vertex AI and supports function-calling/tool integrations:
+          color: '#ffff00'
+          backgroundColor: 'hsl(285, 100%, 70%)'
         IDE plugin surface for different JetBrains products:
           color: '#0d0d0d'
           backgroundColor: 'hsl(60, 100%, 70%)'
@@ -1409,6 +1427,9 @@ criteria:
         'Copilot has free tiers (e.g., Copilot Free for qualifying users) and trial/paid plans (Pro/Business/Enterprise) with different capabilities.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(120, 100%, 70%)'
+        Core prototyping and experimentation features of AI Studio are available without charge.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
         The open/source-available GPT Pilot codebase is free to run; Pythagora also offers a commercial Pythagora Pro product with paid features.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(15, 100%, 70%)'
@@ -1478,6 +1499,9 @@ criteria:
         'Copilot Chat is available in supported terminals (Windows Terminal Canary, GitHub CLI integrations) and can be used from the command line in supported environments.':
           color: '#0d0d0d'
           backgroundColor: 'hsl(210, 100%, 70%)'
+        'Interaction is through the web UI (Playground, chat, multimodal inputs) and exported code; no integrated shell/terminal is advertised.':
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
         CLI-driven project creation and workspace management are supported.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(75, 100%, 70%)'
@@ -2030,6 +2054,12 @@ criteria:
         Support for other backend languages via templates and runtime options (examples include Go and Java in templates):
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
+        Web UI:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(45, 100%, 70%)'
+        Node.js:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(315, 100%, 70%)'
         'YAML, JSON, Markdown, Text':
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
@@ -2055,9 +2085,6 @@ criteria:
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
         'SQLite, PostgreSQL':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        Node.js:
           color: '#0d0d0d'
           backgroundColor: 'hsl(315, 100%, 70%)'
         Many other popular languages (wide IDE/language support):
@@ -2135,6 +2162,9 @@ criteria:
         The project is open-source and community contributions are actively encouraged.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(165, 100%, 70%)'
+        Studio and Gemini are proprietary Google services; there are no public source repositories for the hosted Studio environment.:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(75, 100%, 70%)'
         The project is distributed under a Functional Source License (FSL) / "Fair Source" style license (source-available) rather than an OSI-approved open-source license.:
           color: '#0d0d0d'
           backgroundColor: 'hsl(165, 100%, 70%)'

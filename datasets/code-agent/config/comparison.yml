@@ -1,12 +1,7 @@
-title: AI Code Editors
-subtitle: feature-comparison
-introduction: |
-  Comparison of AI Autonomous Agents a.o. listed AINativeDev Code/Autonomous Agents category.
+title: AI Autonomous Coding Agents
+subtitle: Comparison of AI Autonomous Agents a.o. listed AINativeDev Code/Autonomous Agents category.
 selectTitle: Filter Criteria
-tableTitle: Comparison of AI Code Editors
-repository:
-  template: "https://github.com/cbruyndoncx/{}.git"
-  variables: ["subtitle"]
+tableTitle: Comparison of AI Autonomous Coding Agents
 criteria:
   - General:
       name: General Info

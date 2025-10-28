@@ -39,6 +39,7 @@ Updates table components to render group headers with expand/collapse controls.
 - Show accessible expand/collapse controls with keyboard navigation support
 - Recalculate column widths when groups expand or collapse
 - When a group is marked excluded ("No", "None", "N/A"), display a non-interactive header that explains the group is not available and keep all child columns hidden
+- Automatically create an “Other Columns” group for table criteria without an assigned grouping so they can collapse together by default
 
 ### Settings and configuration
 

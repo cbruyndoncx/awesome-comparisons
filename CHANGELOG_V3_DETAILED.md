@@ -11,7 +11,7 @@ Highlights
 - Converted md2json tooling to a TypeScript-based converter (no Java required).
 - Updated demo/docs layout to publish into docs/ for GitHub Pages and moved dist copy steps accordingly.
 - Added grouping and filtering UI improvements, theming (light/dark), and styling tweaks.
-- Added many content updates and new dataset content (feature-comparison, editors, code categories).
+- Added many content updates and new dataset content (awesome-comparison, editors, code categories).
 - CI/build-related changes: dist rebuilds, sass loader fixes, removed outdated dependencies (citation.js), packaging prep.
 
 Grouped summary of notable changes (by area)
@@ -22,7 +22,7 @@ Grouped summary of notable changes (by area)
 
 - Multi-dataset & UI
   - Working with datasets, added a tab strip, dataset selection UI, dataset grouping and basic light/dark theming in Material styling.
-  - Reorganized directories and renamed sections to feature-comparison, and kept datasets-only structure.
+  - Reorganized directories and renamed sections to awesome-comparison, and kept datasets-only structure.
   - Grouping in tables and on details pages, grouping selection tweaks, show/hide filters, and expand/collapse filter groups.
 
 - Content & Categories
@@ -73,8 +73,8 @@ db66d1e 2025-10-26  Carine Bruyndoncx  prep for package install from this github
 a308d8c 2025-10-26  Carine Bruyndoncx  kinda with a tab strip
 d538642 2025-10-27  Carine Bruyndoncx  datasets and basic light/dark theming in material styling
 4177df1 2025-10-27  Carine Bruyndoncx  rebuild and copied to docs for ghpages
-7fb89f1 2025-10-27  Carine Bruyndoncx  reorg dir, only keep datasets and rename to feature-comparison
-37efd59 2025-10-27  Carine Bruyndoncx  reorg dir, only keep datasets and rename to feature-comparison
+7fb89f1 2025-10-27  Carine Bruyndoncx  reorg dir, only keep datasets and rename to awesome-comparison
+37efd59 2025-10-27  Carine Bruyndoncx  reorg dir, only keep datasets and rename to awesome-comparison
 78b225d 2025-10-27  Carine Bruyndoncx  tweaks to feature comparison
 6372388 2025-10-27  Carine Bruyndoncx  update gh pages docs
 8581168 2025-10-28  Carine Bruyndoncx  improved styling

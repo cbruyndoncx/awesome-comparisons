@@ -1,10 +1,10 @@
-title: Ultimate-X-Comparison
-subtitle: Ultimate X comparison framework
+title: Example Awesome Comparison
+subtitle: |
+  This is a comparison of AI Coding Tools
+  - Work in progress, source in Feature Grouping branch
+  - Includes Code/Editor category from [AI Native Dev](http://ainativedev.io).
 selectTitle: Criteria
 tableTitle: Comparison of ...
-repository:
-  template: "https://github.com/ultimate-comparisons/{}.git"
-  variables: ["title"]
 details:
   header:
     nameRef: id

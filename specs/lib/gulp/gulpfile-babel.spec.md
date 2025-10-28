@@ -46,7 +46,7 @@ Merges user configuration with auto-generated configuration and outputs final JS
 
 Copies static assets and configuration files to distribution directory.
 
-- Copies description.md and style.css to dist directory [@test](./tests/asset-management.spec.js)
+- Copies style.css to dist directory [@test](./tests/asset-management.spec.js)
 - Handles dist directory copying between root and node_modules locations [@test](./tests/asset-management.spec.js)
 - Skips copying when source and destination directories are identical [@test](./tests/asset-management.spec.js)
 - Copies all files from node module dist to root dist when directories differ [@test](./tests/asset-management.spec.js)
@@ -56,9 +56,9 @@ Copies static assets and configuration files to distribution directory.
 Expands the build to support multiple datasets defined in configuration/datasets.manifest.json.
 
 - Loads and validates the manifest file; fails the build when manifest is missing or empty
-- Iterates each dataset definition, resolving dataset-specific source directories (markdown, configuration, description, style) via the `sources` metadata
+- Iterates each dataset definition, resolving dataset-specific source directories (markdown, configuration, style) via the `sources` metadata
 - Runs the markdown conversion, criteria enrichment, development column enrichment, and config merging per dataset using isolated tmp/dist destinations
-- Copies comparison.json, data.json, description.md, and style.css into `src/assets/generated/<datasetId>/` and `dist/ultimate-comparison/assets/generated/<datasetId>/`
+- Copies comparison.json, data.json, and style.css into `src/assets/generated/<datasetId>/` and `dist/ultimate-comparison/assets/generated/<datasetId>/`
 - Ensures generated files exist only beneath their dataset-specific directories (no legacy root mirrors)
 - Copies the manifest itself to `src/assets/configuration/datasets.manifest.json` so the Angular app can request it at runtime
 - Validates that required files exist for every dataset and throws descriptive errors when inputs or generated outputs are missing
@@ -81,7 +81,6 @@ Provides file watching capabilities for development workflow.
 
 - Watches markdown files and triggers full rebuild [@test](./tests/watch-tasks.spec.js)
 - Watches configuration files and triggers config rebuild [@test](./tests/watch-tasks.spec.js)
-- Watches description files and triggers description rebuild [@test](./tests/watch-tasks.spec.js)
 - Watches style files and triggers asset rebuild [@test](./tests/watch-tasks.spec.js)
 - Uses glob patterns to watch files in nested directories [@test](./tests/watch-tasks.spec.js)
 - Monitors multiple file types including .md, .yml, and .css [@test](./tests/watch-tasks.spec.js)
@@ -124,7 +123,6 @@ gulp.task('release', function () { /* version management */ });
 gulp.task('development-column', function (done) { /* development column processing */ });
 gulp.task('update-data', function () { /* watch markdown files */ });
 gulp.task('update-config', function () { /* watch config files */ });
-gulp.task('update-description', function () { /* watch description files */ });
 gulp.task('update-style', function () { /* watch style files */ });
 gulp.task('update', gulp.parallel(/* all update tasks */));
 gulp.task('dev', gulp.series(copyDist, 'default', 'update'));

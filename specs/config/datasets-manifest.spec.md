@@ -18,7 +18,7 @@ Identifies which dataset should be used as the default when no specific dataset 
 
 ### Asset directory mapping
 
-Maps each dataset to its corresponding asset directory containing the required data files (comparison.json, data.json, description.md, style.css) and the input sources needed to build them.
+Maps each dataset to its corresponding asset directory containing the required data files (comparison.json, data.json, style.css) and the input sources needed to build them.
 
 ### Visual customization support
 
@@ -26,7 +26,7 @@ Allows datasets to specify optional accent colors and icons for visual different
 
 ### Build metadata for tooling
 
-Includes a `sources` object per dataset listing the markdown directory plus configuration, description, and style files so the gulp pipeline can iterate through every dataset definition.
+Includes a `sources` object per dataset listing the markdown directory plus configuration and style files so the gulp pipeline can iterate through every dataset definition.
 
 ## API
 
@@ -46,7 +46,6 @@ Includes a `sources` object per dataset listing the markdown directory plus conf
       "sources": {
         "dataDir": "data",
         "config": "configuration/comparison.yml",
-        "description": "configuration/description.md",
         "style": "configuration/style.css"
       }
     },
@@ -63,7 +62,6 @@ Includes a `sources` object per dataset listing the markdown directory plus conf
       "sources": {
         "dataDir": "data_example",
         "config": "configuration/comparison-default.yml",
-        "description": "configuration/description.md",
         "style": "configuration/style.css"
       }
     }
@@ -75,7 +73,7 @@ Includes a `sources` object per dataset listing the markdown directory plus conf
 
 ### Build tooling integration
 
-Build processes must iterate over this manifest to ensure each dataset has the required files (comparison.json, data.json, description.md) emitted inside its assetDirectory.
+Build processes must iterate over this manifest to ensure each dataset has the required files (comparison.json, data.json) emitted inside its assetDirectory.
 
 ### Angular assets pipeline
 

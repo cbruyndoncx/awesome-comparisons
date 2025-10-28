@@ -13,7 +13,6 @@
       "sources": {
         "dataDir": "datasets/code-editor/data",
         "config": "datasets/code-editor/config/comparison.yml",
-        "description": "datasets/code-editor/config/description.md",
         "style": "configuration/style.css"
       }
     },
@@ -30,7 +29,6 @@
       "sources": {
         "dataDir": "datasets/example/data",
         "config": "datasets/example/config/comparison-default.yml",
-        "description": "datasets/example/config/description.md",
         "style": "configuration/style.css"
       }
     },
@@ -47,7 +45,6 @@
       "sources": {
         "dataDir": "datasets/terminal/data",
         "config": "datasets/terminal/config/comparison.yml",
-        "description": "datasets/terminal/config/description.md",
         "style": "configuration/style.css"
       }
     },
@@ -64,7 +61,6 @@
       "sources": {
         "dataDir": "datasets/other/data",
         "config": "datasets/other/config/comparison.yml",
-        "description": "datasets/other/config/description.md",
         "style": "configuration/style.css"
       }
     },
@@ -81,7 +77,6 @@
       "sources": {
         "dataDir": "datasets/aie-model/data",
         "config": "datasets/aie-model/config/comparison.yml",
-        "description": "datasets/aie-model/config/description.md",
         "style": "configuration/style.css"
       }
     },
@@ -98,7 +93,6 @@
       "sources": {
         "dataDir": "datasets/code-agent/data",
         "config": "datasets/code-agent/config/comparison.yml",
-        "description": "datasets/code-agent/config/description.md",
         "style": "configuration/style.css"
       }
     },
@@ -115,7 +109,6 @@
       "sources": {
         "dataDir": "datasets/product-prototyping/data",
         "config": "datasets/product-prototyping/config/comparison.yml",
-        "description": "datasets/product-prototyping/config/description.md",
         "style": "configuration/style.css"
       }
     }

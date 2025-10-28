@@ -18,7 +18,6 @@ import { distinctUntilChanged } from 'rxjs/operators';
 @Injectable()
 export class ConfigurationService {
     public static data: Data = new Data([]);
-    public description = '';
     public criteria: Array<Criteria> = [];
     public configuration: Configuration = Configuration.empty();
 
@@ -140,14 +139,13 @@ export class ConfigurationService {
     private loadDatasetAssets(dataset: DatasetManifestEntry): void {
         const requests = [
             this.http.get(this.buildDatasetAssetUrl(dataset, 'comparison.json')),
-            this.http.get(this.buildDatasetAssetUrl(dataset, 'data.json')),
-            this.http.get(this.buildDatasetAssetUrl(dataset, 'description.md'), {responseType: 'text'})
+            this.http.get(this.buildDatasetAssetUrl(dataset, 'data.json'))
         ];
         this.currentDataset = dataset;
         Promise.all(requests.map(res => res.toPromise()))
-            .then(result => {
+            .then(([configurationSource, dataSource]) => {
                 this.currentDatasetId = dataset.id;
-                this.hydrateConfigurationPayload(result);
+                this.hydrateConfigurationPayload(configurationSource, dataSource);
             })
             .catch(error => {
                 console.error(`Failed to load dataset ${dataset.id}:`, error);
@@ -159,9 +157,9 @@ export class ConfigurationService {
         return `${base}/${fileName}`;
     }
 
-    private hydrateConfigurationPayload(result: any[]): void {
+    private hydrateConfigurationPayload(configurationSource: any, dataSource: any): void {
         // Set configuration model
-        this.configuration = Configuration.load(result[0]);
+        this.configuration = Configuration.load(configurationSource);
         const processedCriteria = this.configuration.criteria.map(criteria => {
             const context: Record<string, any> = {
                 id: criteria.id,
@@ -226,7 +224,7 @@ export class ConfigurationService {
             })
         );
         // Set data model
-        ConfigurationService.data = Data.loadJson(result[1], this.configuration);
+        ConfigurationService.data = Data.loadJson(dataSource, this.configuration);
         const activeDataset = this.currentDataset;
         const editLinkBase = this.resolveEditLinkBase(activeDataset);
         const datasetSegments = ConfigurationService.splitPath(activeDataset?.sources?.dataDir || '');
@@ -294,10 +292,6 @@ export class ConfigurationService {
             }
         );
         this.dataElements = ConfigurationService.data.dataElements;
-
-        // Set description
-        this.description = ConfigurationService.getHtml(
-            String(result[2]));
 
         const grouping = this.featureGroupingService.parseGroupedMarkdown({
             configuration: this.configuration,

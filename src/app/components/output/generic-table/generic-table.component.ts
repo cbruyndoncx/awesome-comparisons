@@ -90,6 +90,36 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
         this.update();
     }
 
+    public hasLabelFill(entry: CriteriaData | null | undefined): boolean {
+        if (!this.labelColorsEnabled) {
+            return false;
+        }
+        const labels = this.extractLabels(entry);
+        return labels.some(label => !!label?.backgroundColor);
+    }
+
+    public resolveLabelCellFill(entry: CriteriaData | null | undefined): string | null {
+        if (!this.hasLabelFill(entry)) {
+            return null;
+        }
+        const labels = this.extractLabels(entry).filter(
+            (label): label is Label & {backgroundColor: string} => !!label?.backgroundColor
+        );
+        if (!labels.length) {
+            return null;
+        }
+        if (labels.length === 1) {
+            return labels[0].backgroundColor;
+        }
+        const stopSize = 100 / labels.length;
+        const segments = labels.map((label, index) => {
+            const start = (stopSize * index).toFixed(2);
+            const end = (stopSize * (index + 1)).toFixed(2);
+            return `${label.backgroundColor} ${start}% ${end}%`;
+        });
+        return `linear-gradient(90deg, ${segments.join(', ')})`;
+    }
+
     public update(): void {
         if (this.table != null) {
             this.table.trigger('reflow');
@@ -107,5 +137,16 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
             }
         });
         this.anchorsInitialised = true;
+    }
+
+    private extractLabels(entry: CriteriaData | null | undefined): Label[] {
+        if (!entry) {
+            return [];
+        }
+        const labelArray = (entry as unknown as {labelArray?: Array<Label | null | undefined>}).labelArray;
+        if (!Array.isArray(labelArray)) {
+            return [];
+        }
+        return labelArray.filter((label): label is Label => !!label);
     }
 }

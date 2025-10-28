@@ -10,11 +10,10 @@ Angular service responsible for loading and processing comparison configuration 
 
 ### Load comparison configuration data
 
-Loads configuration, data, and description files from HTTP endpoints and processes them into usable models. Fetches all assets relative to the active dataset returned by DatasetManifestService, reloading automatically whenever the dataset selection changes.
+Loads configuration and data files from HTTP endpoints and processes them into usable models. Fetches all assets relative to the active dataset returned by DatasetManifestService, reloading automatically whenever the dataset selection changes.
 
 - Loads comparison.json configuration file [@test](./configuration-service.test.ts)
 - Loads data.json data file [@test](./configuration-service.test.ts)
-- Loads description.md markdown file [@test](./configuration-service.test.ts)
 - Processes all files concurrently using Promise.all [@test](./configuration-service.test.ts)
 - Triggers change detection after loading completes [@test](./configuration-service.test.ts)
 - Subscribes to DatasetManifestService active dataset stream and refetches assets when the dataset changes
@@ -58,7 +57,6 @@ Processes configuration criteria for search and display purposes.
 @Injectable()
 export class ConfigurationService {
     public static data: Data;
-    public description: string;
     public criteria: Array<Criteria>;
     public configuration: Configuration;
     public tableColumns: Array<string>;

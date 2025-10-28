@@ -5,10 +5,6 @@
         </h1>
     </div>
     <div class="grid-content">
-        <pcard>
-            <div [innerHTML]="configurationService.description | sanitizeHtml" class="description"></div>
-        </pcard>
-
         <pcard [heading]="configurationService.configuration?.selectTitle">
             <div class="select-toolbar">
                 <div class="select-toolbar__side select-toolbar__side--primary">
@@ -46,135 +42,136 @@
                         Reset selections
                     </button>
                 </div>
-            </div>
-            <div class="select-grid" *ngIf="!filtersCollapsed">
-                <ng-container *ngFor="let group of vm.state.featureGroups">
-                    <ng-container *ngIf="groupHasSearchableChildren(group)">
-                        <div class="search-group"
-                             [class.search-group--excluded]="group.isExcluded"
-                             [class.search-group--collapsed]="isGroupCollapsed(group)">
+            
+                <div class="select-grid" *ngIf="!filtersCollapsed">
+                    <ng-container *ngFor="let group of vm.state.featureGroups">
+                        <ng-container *ngIf="groupHasSearchableChildren(group)">
+                            <div class="search-group"
+                                [class.search-group--excluded]="group.isExcluded"
+                                [class.search-group--collapsed]="isGroupCollapsed(group)">
+                                <div class="search-group__header">
+                                    <button type="button"
+                                            class="search-group__toggle"
+                                            (click)="toggleGroupCollapse(group)"
+                                            [disabled]="group.isExcluded"
+                                            [attr.aria-expanded]="!isGroupCollapsed(group)"
+                                            [attr.aria-controls]="'group-controls-' + group.key">
+                                        <span aria-hidden="true">{{collapseIndicator(isGroupCollapsed(group))}}</span>
+                                        <span class="sr-only">
+                                            {{ isGroupCollapsed(group) ? 'Expand group filters' : 'Collapse group filters' }}
+                                        </span>
+                                    </button>
+                                    <span class="search-group__title">{{group.displayName}}</span>
+                                    <ng-container *ngIf="groupHasPrimaryControl(group); else showGroupLabel">
+                                        <div class="form-group form-group--inline" *ngIf="getPrimaryCriteria(group) as primary">
+                                            <ptooltip [tooltip]="primary.description">
+                                                <label>
+                                                    <span class="sr-only">{{primary.name}}</span>
+                                                </label>
+                                            </ptooltip>
+                                            <select2 *ngIf="!primary.rangeSearch"
+                                                    [options]="getCriteriaValues(primary)"
+                                                    [placeholder]="getPlaceholder(primary)"
+                                                    [name]="primary.name"
+                                                    [tag]="primary.id"
+                                                    [active]="getActive(vm, primary)"
+                                                    (result)="criteriaChanged($event, primary)">
+                                            </select2>
+                                            <number-input *ngIf="primary.rangeSearch"
+                                                        [comparisonComponent]="this"
+                                                        [name]="primary.name"
+                                                        [active]="getActive(vm, primary)"
+                                                        (result)="criteriaChanged($event, primary)"
+                                                        [criteria]="primary"
+                                                        [tag]="primary.id">
+                                            </number-input>
+                                        </div>
+                                    </ng-container>
+                                    <ng-template #showGroupLabel>
+                                        <span class="search-group__label" *ngIf="groupLabelText(group)">{{groupLabelText(group)}}</span>
+                                    </ng-template>
+                                </div>
+                                <div class="search-group__controls"
+                                    *ngIf="!isGroupCollapsed(group)"
+                                    [class.search-group__controls--with-primary]="groupHasPrimaryControl(group)"
+                                    [attr.id]="'group-controls-' + group.key">
+                                    <div class="form-group" *ngFor="let child of group.children" [hidden]="!child.search || (groupHasPrimaryControl(group) && group.primaryCriteria?.id === child.id)">
+                                        <ptooltip [tooltip]="child.description">
+                                            <label>
+                                                {{child.name}}
+                                                <span class="search-indicator">({{child.andSearch ? 'match all' : child.rangeSearch ? 'match range' : 'match one'}})</span>
+                                            </label>
+                                        </ptooltip>
+                                        <br>
+                                        <select2 *ngIf="!child.rangeSearch"
+                                                [options]="getCriteriaValues(child)"
+                                                [placeholder]="getPlaceholder(child)"
+                                                [name]="child.name"
+                                                [tag]="child.id"
+                                                [active]="getActive(vm, child)"
+                                                (result)="criteriaChanged($event, child)">
+                                        </select2>
+                                        <number-input *ngIf="child.rangeSearch"
+                                                    [comparisonComponent]="this"
+                                                    [name]="child.name"
+                                                    [active]="getActive(vm, child)"
+                                                    (result)="criteriaChanged($event, child)"
+                                                    [criteria]="child"
+                                                    [tag]="child.id">
+                                        </number-input>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-container>
+                    </ng-container>
+
+                    <ng-container *ngIf="getUngroupedCriteria(vm.state.featureGroups) as ungrouped">
+                        <div class="search-group" *ngIf="ungrouped.length">
                             <div class="search-group__header">
                                 <button type="button"
                                         class="search-group__toggle"
-                                        (click)="toggleGroupCollapse(group)"
-                                        [disabled]="group.isExcluded"
-                                        [attr.aria-expanded]="!isGroupCollapsed(group)"
-                                        [attr.aria-controls]="'group-controls-' + group.key">
-                                    <span aria-hidden="true">{{collapseIndicator(isGroupCollapsed(group))}}</span>
+                                        (click)="toggleUngroupedCollapse()"
+                                        [attr.aria-expanded]="!isUngroupedCollapsed()"
+                                        aria-controls="group-controls-ungrouped">
+                                    <span aria-hidden="true">{{collapseIndicator(isUngroupedCollapsed())}}</span>
                                     <span class="sr-only">
-                                        {{ isGroupCollapsed(group) ? 'Expand group filters' : 'Collapse group filters' }}
+                                        {{ isUngroupedCollapsed() ? 'Expand other filters' : 'Collapse other filters' }}
                                     </span>
                                 </button>
-                                <span class="search-group__title">{{group.displayName}}</span>
-                                <ng-container *ngIf="groupHasPrimaryControl(group); else showGroupLabel">
-                                    <div class="form-group form-group--inline" *ngIf="getPrimaryCriteria(group) as primary">
-                                        <ptooltip [tooltip]="primary.description">
-                                            <label>
-                                                <span class="sr-only">{{primary.name}}</span>
-                                            </label>
-                                        </ptooltip>
-                                        <select2 *ngIf="!primary.rangeSearch"
-                                                 [options]="getCriteriaValues(primary)"
-                                                 [placeholder]="getPlaceholder(primary)"
-                                                 [name]="primary.name"
-                                                 [tag]="primary.id"
-                                                 [active]="getActive(vm, primary)"
-                                                 (result)="criteriaChanged($event, primary)">
-                                        </select2>
-                                        <number-input *ngIf="primary.rangeSearch"
-                                                      [comparisonComponent]="this"
-                                                      [name]="primary.name"
-                                                      [active]="getActive(vm, primary)"
-                                                      (result)="criteriaChanged($event, primary)"
-                                                      [criteria]="primary"
-                                                      [tag]="primary.id">
-                                        </number-input>
-                                    </div>
-                                </ng-container>
-                                <ng-template #showGroupLabel>
-                                    <span class="search-group__label" *ngIf="groupLabelText(group)">{{groupLabelText(group)}}</span>
-                                </ng-template>
+                                <span class="search-group__title">Other</span>
                             </div>
                             <div class="search-group__controls"
-                                 *ngIf="!isGroupCollapsed(group)"
-                                 [class.search-group__controls--with-primary]="groupHasPrimaryControl(group)"
-                                 [attr.id]="'group-controls-' + group.key">
-                                <div class="form-group" *ngFor="let child of group.children" [hidden]="!child.search || (groupHasPrimaryControl(group) && group.primaryCriteria?.id === child.id)">
-                                    <ptooltip [tooltip]="child.description">
+                                *ngIf="!isUngroupedCollapsed()"
+                                id="group-controls-ungrouped">
+                                <div class="form-group" *ngFor="let criteria of ungrouped">
+                                    <ptooltip [tooltip]="criteria.description">
                                         <label>
-                                            {{child.name}}
-                                            <span class="search-indicator">({{child.andSearch ? 'match all' : child.rangeSearch ? 'match range' : 'match one'}})</span>
+                                            {{criteria.name}}
+                                            <span class="search-indicator">({{criteria.andSearch ? 'match all' : criteria.rangeSearch ? 'match range' : 'match one'}})</span>
                                         </label>
                                     </ptooltip>
                                     <br>
-                                    <select2 *ngIf="!child.rangeSearch"
-                                             [options]="getCriteriaValues(child)"
-                                             [placeholder]="getPlaceholder(child)"
-                                             [name]="child.name"
-                                             [tag]="child.id"
-                                             [active]="getActive(vm, child)"
-                                             (result)="criteriaChanged($event, child)">
+                                    <select2 *ngIf="!criteria.rangeSearch"
+                                            [options]="getCriteriaValues(criteria)"
+                                            [placeholder]="getPlaceholder(criteria)"
+                                            [name]="criteria.name"
+                                            [tag]="criteria.id"
+                                            [active]="getActive(vm, criteria)"
+                                            (result)="criteriaChanged($event, criteria)">
                                     </select2>
-                                    <number-input *ngIf="child.rangeSearch"
-                                                  [comparisonComponent]="this"
-                                                  [name]="child.name"
-                                                  [active]="getActive(vm, child)"
-                                                  (result)="criteriaChanged($event, child)"
-                                                  [criteria]="child"
-                                                  [tag]="child.id">
+                                    <number-input *ngIf="criteria.rangeSearch"
+                                                [comparisonComponent]="this"
+                                                [name]="criteria.name"
+                                                [active]="getActive(vm, criteria)"
+                                                (result)="criteriaChanged($event, criteria)"
+                                                [criteria]="criteria"
+                                                [tag]="criteria.id">
                                     </number-input>
                                 </div>
                             </div>
                         </div>
                     </ng-container>
-                </ng-container>
-
-                <ng-container *ngIf="getUngroupedCriteria(vm.state.featureGroups) as ungrouped">
-                    <div class="search-group" *ngIf="ungrouped.length">
-                        <div class="search-group__header">
-                            <button type="button"
-                                    class="search-group__toggle"
-                                    (click)="toggleUngroupedCollapse()"
-                                    [attr.aria-expanded]="!isUngroupedCollapsed()"
-                                    aria-controls="group-controls-ungrouped">
-                                <span aria-hidden="true">{{collapseIndicator(isUngroupedCollapsed())}}</span>
-                                <span class="sr-only">
-                                    {{ isUngroupedCollapsed() ? 'Expand other filters' : 'Collapse other filters' }}
-                                </span>
-                            </button>
-                            <span class="search-group__title">Other</span>
-                        </div>
-                        <div class="search-group__controls"
-                             *ngIf="!isUngroupedCollapsed()"
-                             id="group-controls-ungrouped">
-                            <div class="form-group" *ngFor="let criteria of ungrouped">
-                                <ptooltip [tooltip]="criteria.description">
-                                    <label>
-                                        {{criteria.name}}
-                                        <span class="search-indicator">({{criteria.andSearch ? 'match all' : criteria.rangeSearch ? 'match range' : 'match one'}})</span>
-                                    </label>
-                                </ptooltip>
-                                <br>
-                                <select2 *ngIf="!criteria.rangeSearch"
-                                         [options]="getCriteriaValues(criteria)"
-                                         [placeholder]="getPlaceholder(criteria)"
-                                         [name]="criteria.name"
-                                         [tag]="criteria.id"
-                                         [active]="getActive(vm, criteria)"
-                                         (result)="criteriaChanged($event, criteria)">
-                                </select2>
-                                <number-input *ngIf="criteria.rangeSearch"
-                                              [comparisonComponent]="this"
-                                              [name]="criteria.name"
-                                              [active]="getActive(vm, criteria)"
-                                              (result)="criteriaChanged($event, criteria)"
-                                              [criteria]="criteria"
-                                              [tag]="criteria.id">
-                                </number-input>
-                            </div>
-                        </div>
-                    </div>
-                </ng-container>
+                </div>
             </div>
         </pcard>
     </div>
@@ -234,7 +231,7 @@
 
     <div class="grid-footer">
         <div class="container">
-            This is an <a href="https://cbruyndoncx.github.io/feature-comparison/">Feature Comparison</a> | content licensed under
+            This is an <a href="https://cbruyndoncx.github.io/awesome-comparison/">Feature Comparison</a> | content licensed under
             <a
                 rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img
                 alt="Creative Commons License CC-BY-SA 4.0" style="border-width:0"

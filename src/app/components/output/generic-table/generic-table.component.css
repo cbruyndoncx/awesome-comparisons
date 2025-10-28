@@ -45,13 +45,13 @@
 }
 
 th {
-    padding: 0 2px 2px 4px;
+    padding: 0 2px 2px 2px;
     vertical-align: bottom;
     color: var(--text-color, #333333);
 }
 
 td {
-    padding: 2px 2px 0 4px;
+    padding: 2px;
     vertical-align: top;
     border-top: 1px solid var(--border-color, #dddddd);
     color: var(--text-color, #333333);
@@ -61,7 +61,7 @@ th > button {
     border: none;
     padding: 0;
     outline: none;
-    background-color: var(--card-background, #ffffff);
+    background-color: transparent;
     position: sticky;
     position: -webkit-sticky;
     top: 0; /* required */
@@ -71,9 +71,10 @@ th > button {
 table th {
     position: sticky;
     top: 0px;
-    background: var(--card-background, #ffffff);
-    color: var(--text-color, #333333);
+    background: var(--grouping-expanded-foreground);
+    color: var(--grouping-expanded-header-text);
     z-index: 4998;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.28);
 }
 
 table tr {
@@ -97,15 +98,49 @@ table {
     align-items: center;
 }
 
+.group-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--border-color, #dedede);
+    border-radius: 12px;
+    background: var(--card-background, #fdfdfd);
+    box-shadow: 0 16px 32px -28px var(--shadow-color, rgba(15, 23, 42, 0.18));
+    --grouping-button-color: var(--text-color, #424242);
+    --grouping-button-background: var(--card-background, #f9f9f9);
+    --grouping-expanded-foreground: var(--uc-accent, #1e88e5);
+    --grouping-expanded-background: var(--accent-surface-strong, #e3f2fd);
+    --grouping-expanded-header-text: #fdfcff;
+}
+
+@media (prefers-color-scheme: dark) {
+    .group-panel {
+        --grouping-button-color: var(--text-color, #e2e8f0);
+        --grouping-button-background: var(--card-background, #111827);
+        --grouping-expanded-foreground: var(--uc-accent, #60a5fa);
+        --grouping-expanded-background: var(--accent-surface-strong, rgba(148, 163, 184, 0.22));
+        --grouping-expanded-header-text: #0f172a;
+    }
+}
+
 .group-controls {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin-bottom: 12px;
-    padding: 10px 12px;
-    border: 1px solid var(--border-color, #dedede);
-    border-radius: 8px;
-    background: var(--card-background, #fdfdfd);
+}
+
+.group-panel__table {
+    border-radius: 10px;
+    background: var(--card-background, #ffffff);
+    padding: 8px 10px;
+    overflow-x: auto;
+    box-shadow: 0 12px 28px -24px var(--shadow-color, rgba(15, 23, 42, 0.18));
+}
+
+.group-panel__table table {
+    width: 100%;
 }
 
 .group-controls__title {
@@ -123,9 +158,25 @@ table {
     align-items: stretch;
 }
 
+.label-cell {
+    padding: 2px 4px;
+    border-radius: 4px;
+    background-clip: padding-box;
+    transition: background-color 0.2s ease;
+}
+
+.label-cell--colored {
+    border-top-color: transparent;
+}
+
+.label-cell--colored .mylabel {
+    background-color: transparent !important;
+    border-color: transparent;
+}
+
 .group-control {
     border: 1px solid var(--border-color, #d0d0d0);
-    background: var(--card-background, #f9f9f9);
+    background: var(--grouping-button-background);
     border-radius: 24px;
     padding: 6px 14px;
     display: flex;
@@ -134,7 +185,7 @@ table {
     cursor: pointer;
     font-size: 13px;
     font-weight: 600;
-    color: var(--text-color, #424242);
+    color: var(--grouping-button-color);
     transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
@@ -149,9 +200,9 @@ table {
 }
 
 .group-control--expanded {
-    background-color: var(--accent-surface-strong, #e3f2fd);
+    background-color: var(--grouping-expanded-background);
     border-color: var(--uc-accent, #90caf9);
-    color: var(--uc-accent, #1e88e5);
+    color: var(--grouping-expanded-foreground);
 }
 
 .group-control--excluded {

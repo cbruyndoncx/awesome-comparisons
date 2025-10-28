@@ -62,9 +62,10 @@ export class ComparisonSettingsComponent {
             (group.children || []).forEach(child => groupedKeys.add(child.id));
         });
         const groupKeys = new Set(this.featureGroups.map(group => group.key));
+        const groupedLookup = this.groupColumnLookup || {};
         return this.columnKeys
             .map((key, index) => ({ key, name: this.columnNames[index], index }))
-            .filter(column => !groupedKeys.has(column.key) && !groupKeys.has(column.key));
+            .filter(column => !groupedKeys.has(column.key) && !groupKeys.has(column.key) && !groupedLookup[column.key]);
     }
 
     public toggleGroup(groupRow: FeatureGroupView) {

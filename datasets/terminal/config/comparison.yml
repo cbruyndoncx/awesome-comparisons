@@ -1,12 +1,7 @@
 title: AI Code Terminals
-subtitle: feature-comparison
-introduction: |
-  Comparison of AI Code Terminals a.o. listed AINativeDev Code/Terminal category.
+subtitle: Comparison of AI Code Terminals a.o. listed AINativeDev Code/Terminal category.
 selectTitle: Filter Criteria
 tableTitle: Comparison of AI Code Editors
-repository:
-  template: "https://github.com/cbruyndoncx/{}.git"
-  variables: ["subtitle"]
 criteria:
   - General:
       name: General Info
