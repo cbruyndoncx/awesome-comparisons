@@ -29,18 +29,25 @@ Windsurf is an AI-powered, agentic development environment (IDE-like) designed t
 ## LocalOffline
 - No
   - Windsurf is primarily a cloud-hosted agent; local/offline modes are limited compared with some local-first tools (though integrations and enterprise offerings may offer stronger controls).
+
 ## FreeTrial
 - Yes
+
 ## GitSupport
 - Yes
+
 ## Terminal
-- Yes
+- No
+
 ## Opensource
 - No
+
 ## License
 - Proprietary
+
 ## MCP-Client
 - Yes
+
 ## Notes
 - Core features: Cascade (agentic flows with Write Mode and Chat Mode) with MCP support, Supercomplete (intent-aware completions across files), memory for team/project preferences, deep indexing for semantic repo understanding, multi-file edits, and terminal integration.
 - Workflow: Windsurf indexes the repository to build a semantic map, then offers both targeted inline edits and larger multi-file changes through planned flows that can ask for confirmations and iteratively validate results.
@@ -49,8 +56,6 @@ Windsurf is an AI-powered, agentic development environment (IDE-like) designed t
 - Privacy & controls: offers enterprise features (including BYOK) to help with key management; however, as a proprietary cloud service it may not meet all offline/local security needs.
 - Background: built on advances in code-level LLM tooling; product messaging highlights agentic behavior (planning, execution, checkpoints) rather than only completion.
 - Community artifacts: there are community-driven helper files and rules (e.g., .windsurfrules) circulated to help guide AI assistants on code style and project rules; these can be found in various GitHub repos but the main product is not open-source.
-
-
 
 ## ContextManagement
 - Yes
