@@ -1345,70 +1345,70 @@ criteria:
       values:
         'Supports Model Context Protocol (MCP) connections and a plugin/alias system for third-party tooling (monitoring, security providers)':
           color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
+          backgroundColor: 'hsl(300, 100%, 70%)'
         Plugin / "Codi Apps" modular tools model:
           color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
+          backgroundColor: 'hsl(315, 100%, 70%)'
         'Plugins / IDE extensions (VS Code, JetBrains, Vim/Neovim)':
           color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
+          backgroundColor: 'hsl(330, 100%, 70%)'
         'Integrations with GitHub, Jira, Confluence, Notion, Linear':
           color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
+          backgroundColor: 'hsl(15, 100%, 70%)'
         VS Code extension plus MCP (Model Context Protocol) support for custom tools:
           color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
+          backgroundColor: 'hsl(30, 100%, 70%)'
         'Continue is built to be extensible via blocks, MCP integrations and a hub for sharing assistants.':
-          color: '#ffff00'
-          backgroundColor: 'hsl(285, 100%, 70%)'
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(45, 100%, 70%)'
         'VS Code extension available (integrates chat, slash commands, inline quick edits)':
-          color: '#ffff00'
-          backgroundColor: 'hsl(255, 100%, 70%)'
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(60, 100%, 70%)'
         'Integrations: Figma import (Builder.io plugin), GitHub/GitLab/Bitbucket import, template gallery':
           color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
+          backgroundColor: 'hsl(75, 100%, 70%)'
         'Editor and IDE integrations (VS Code, Visual Studio, JetBrains, Xcode, Vim/Neovim, Eclipse), GitHub Marketplace extensions and CLI/Terminal integrations':
           color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
+          backgroundColor: 'hsl(90, 100%, 70%)'
         Integrates with Vertex AI and supports function-calling/tool integrations:
-          color: '#ffff00'
-          backgroundColor: 'hsl(285, 100%, 70%)'
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(105, 100%, 70%)'
         IDE plugin surface for different JetBrains products:
           color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
+          backgroundColor: 'hsl(120, 100%, 70%)'
         'Integrates with IDEs (VS Code, Cursor), web app and desktop client; supports multi-repo context and external LLMs':
           color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
+          backgroundColor: 'hsl(135, 100%, 70%)'
         MCP (Model Context Protocol) Server Marketplace for custom tools and integrations:
           color: '#0d0d0d'
           backgroundColor: 'hsl(150, 100%, 70%)'
         Fine-tuning / post-training on private repos:
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(165, 100%, 70%)'
         Integration via plugins and Continue.dev:
           color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
+          backgroundColor: 'hsl(180, 100%, 70%)'
         Fork of VSCode + modular submodules for AI features; supports plugins and integrations:
           color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
+          backgroundColor: 'hsl(195, 100%, 70%)'
         Editor extensions are available on paid tiers (editor plugins/support mentioned in product features):
           color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
+          backgroundColor: 'hsl(210, 100%, 70%)'
         'VS Code extension architecture, custom modes, MCP (Model Context Protocol) servers, and provider/plugin integrations':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
+          color: '#ffff00'
+          backgroundColor: 'hsl(225, 100%, 70%)'
         'Integrations: IDE plugins (VS Code, JetBrains, Visual Studio, Eclipse), browser extensions, code host integrations (GitHub, GitLab, Bitbucket), API and webhooks, app/extensions framework':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
+          color: '#ffff00'
+          backgroundColor: 'hsl(240, 100%, 70%)'
         'Integrates with major IDEs (VS Code, JetBrains, Neovim) and offers chat integrations; product roadmap and integrations may expand':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
+          color: '#ffff00'
+          backgroundColor: 'hsl(255, 100%, 70%)'
         Modular architecture designed for composing custom IDEs and integrating extensions (supports VS Code extensions via Open VSX):
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
+          color: '#ffff00'
+          backgroundColor: 'hsl(270, 100%, 70%)'
         Extension registry available; growing ecosystem but smaller than VS Code's marketplace:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
+          color: '#ffff00'
+          backgroundColor: 'hsl(285, 100%, 70%)'
   - FreeTrial:
       type: LABEL
       values:

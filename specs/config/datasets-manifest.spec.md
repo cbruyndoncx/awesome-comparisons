@@ -26,7 +26,11 @@ Allows datasets to specify optional accent colors and icons for visual different
 
 ### Build metadata for tooling
 
-Includes a `sources` object per dataset listing the markdown directory plus configuration and style files so the gulp pipeline can iterate through every dataset definition.
+Includes a `sources` object per dataset listing the markdown directory plus configuration, optional reusable configuration defaults, and style files so the gulp pipeline can iterate through every dataset definition.
+
+### Shared configuration bundles
+
+Datasets can reference one or more shared configuration YAML files through `sources.configDefaults`, enabling central maintenance of criteria groups or other configuration fragments.
 
 ## API
 
@@ -46,7 +50,12 @@ Includes a `sources` object per dataset listing the markdown directory plus conf
       "sources": {
         "dataDir": "data",
         "config": "configuration/comparison.yml",
-        "style": "configuration/style.css"
+        "style": "configuration/style.css",
+        "configDefaults": [
+          "configuration/comparison-default.yml",
+          "configuration/defaults/groups.yml",
+          "configuration/defaults/groups-advanced.yml"
+        ]
       }
     },
     {
@@ -62,7 +71,11 @@ Includes a `sources` object per dataset listing the markdown directory plus conf
       "sources": {
         "dataDir": "data_example",
         "config": "configuration/comparison-default.yml",
-        "style": "configuration/style.css"
+        "style": "configuration/style.css",
+        "configDefaults": [
+          "configuration/comparison-default.yml",
+          "configuration/defaults/groups.yml"
+        ]
       }
     }
   ]

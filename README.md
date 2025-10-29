@@ -72,6 +72,8 @@ A `comparison.yml` has following attributes:
 
 The framework reserves the first table column for the `Name`/`id` field and always places `ShortDescription` as the second column. Remaining table columns follow their configured `order` values.
 
+Datasets declared in `configuration/datasets.manifest.json` can now reuse shared configuration fragments by specifying `sources.configDefaults`. Provide one or more YAML paths (e.g. `["configuration/comparison-default.yml", "configuration/defaults/groups.yml", "configuration/defaults/groups-advanced.yml"]`) to pull in centrally maintained criteria groups or other defaults ahead of each dataset's local `comparison.yml`.
+
 ### Define comparison elements
 
 For each thing, create a markdown file in `data`.

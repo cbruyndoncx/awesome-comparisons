@@ -5,7 +5,7 @@
 
 :host .ptooltiptext {
     visibility: hidden;
-    min-width: 60px;
+    min-width: 200px;
     background-color: black;
     color: #fff;
     padding: 10px;
@@ -19,8 +19,9 @@
     grid-template-columns: auto;
     grid-column-gap: 10px;
     grid-auto-flow: row;
-    width: 180px;
-
+    max-width: 420px;
+    width: max-content;
+    text-align: left;
     word-break: break-word; /* works for chromium and google chrome*/
 }
 
@@ -100,4 +101,3 @@
     margin-top: -5px;
     border-color: transparent transparent transparent black;
 }
-

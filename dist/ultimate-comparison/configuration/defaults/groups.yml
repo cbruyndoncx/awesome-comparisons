@@ -1,0 +1,28 @@
+criteria:
+  - General:
+      name: General Info
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      order: '10'
+      children:
+        - Classification
+        - Version
+        - Repository
+        - Rating
+        - ShortDescription
+        - Description
+        - Languages
+      defaultExpanded: true
+  - Licensing:
+      name: Licensing
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      order: '90'
+      children:
+        - Opensource
+        - License
+        - FreeTrial
