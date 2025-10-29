@@ -38,8 +38,8 @@ criteria:
         Local-first architecture; code and context are kept on the developer's machine rather than sent to third-party servers for model training or storage: {}
         Firebase Studio is a cloud-hosted workspace; the environment and AI features run in Google-managed infrastructure.: {}
         From021 is a hosted web service (cloud SaaS): {}
-        'Any offline/local-only model hosting is not offered for the standard Copilot cloud service. Some organizations use enterprise features to limit data sharing; however, Copilot itself runs in GitHub/Microsoft cloud.': {}
         All processing was cloud-hosted on GitHub's infrastructure; no documented offline/local model execution.: {}
+        'Any offline/local-only model hosting is not offered for the standard Copilot cloud service. Some organizations use enterprise features to limit data sharing; however, Copilot itself runs in GitHub/Microsoft cloud.': {}
         Studio is a cloud-hosted web application; there is no known supported offline/self-hosted distribution of the Studio UI or Gemini models.: {}
         Can be run locally or inside Docker; configurable to use local LLM endpoints or self-hosted inference where supported.: {}
         'Local model/server support (Ollama, LM Studio and any server compatible with OpenAI-style endpoints) enables offline workflows and on-device completions. JetBrains added expanded local model support in 2025, including connections to llama.cpp/LiteLLM-style hosts and code-tuned models (Qwen, DeepSeek-Coder, Mellum variants).': {}
@@ -129,6 +129,10 @@ criteria:
         MoSCoW prioritization controls to manage feature importance within the project context.: {}
         'Editable PRDs, user journeys and wireframes in the web UI; outputs can be revised and re-generated.': {}
         'Export capabilities (PRDs, user stories, AI prompts, tickets) to external tools to persist context outside the platform.': {}
+        'Editable two-stage steering: Specification (current vs desired state) and concrete Plan that can be edited to change downstream code generation.': {}
+        'Session context versioning and history: Copilot Workspace tracked the session and allowed regeneration after spec/plan edits.': {}
+        'Regenerate/undo workflow: Edits to spec or plan trigger regeneration of downstream steps; generated diffs are editable and can be reverted or revised.': {}
+        'Codespaces / VS Code continuity: Context (file references, diffs, session) could be opened in a Codespace or VS Code extension to continue working locally.': {}
         'Methods available for managing and updating context:': {}
         'Editor-provided references: client.file (active file content) and client.selection (current selection) passed when the Copilot Editor Context permission is granted.': {}
         'GitHub references: github.current-url and github.repository to ground chat requests to a repository or page context.': {}
@@ -136,10 +140,6 @@ criteria:
         'Model Context Protocol (MCP) / extension APIs: allow explicit programmatic injection of context and integration with external systems.': {}
         'Chat variables and explicit file references: using chat commands/variables (e.g., #file, #editors or file anchors) to reference or include specific files in a conversation.': {}
         'User-controlled exclusions: context exclusion lists and per-file opt-outs to prevent sharing sensitive files.': {}
-        'Editable two-stage steering: Specification (current vs desired state) and concrete Plan that can be edited to change downstream code generation.': {}
-        'Session context versioning and history: Copilot Workspace tracked the session and allowed regeneration after spec/plan edits.': {}
-        'Regenerate/undo workflow: Edits to spec or plan trigger regeneration of downstream steps; generated diffs are editable and can be reverted or revised.': {}
-        'Codespaces / VS Code continuity: Context (file references, diffs, session) could be opened in a Codespace or VS Code extension to continue working locally.': {}
         'GPT Pilot uses a multi-part context management strategy designed for large codebases: context-rewinding, recursive conversations, and TDD-driven checkpoints. It maintains a project file/folder tree with human-readable descriptions and generates pseudocode summaries for functions and files. Before implementing a step it: (1) presents the workspace tree + descriptions so the LLM can narrow relevant files, (2) supplies pseudocode summaries for candidate files so the LLM can identify relevant functions, then (3) fetches the actual code for the selected files into the implementation conversation. This selective fetching + pseudocode approach keeps the LLM prompt size bounded while preserving the necessary local context.': {}
         'JetBrains AI Assistant supports project-aware context management. In "Codebase" mode it automatically gathers context from the open project (open files, project tree, symbols, recent commits, and selected files). Users can also manually add context items (files, folders, images, symbols, commits) via the "Add context" UI in the chat, or reference specific files/symbols using in-chat @ references. Automatic context gathering can be disabled to restrict the assistant''s view.': {}
         'HyperContext: Jolt''s primary method is an automatic, global "HyperContext" index that discovers and maintains context across entire repositories (multi-repo support) so users do not need to manually select files. It runs in the web app and IDE extensions and keeps awareness of local, unsaved/changed files when used via IDE plugins.': {}
@@ -229,14 +229,14 @@ criteria:
         Copy/paste code snippets into the prompt; responses preserve syntax highlighting and can reference exact file paths when applicable.: {}
         'Files can be directly referenced and accessed inside the workspace: open files in the Code OSS-based IDE, import repositories (GitHub/GitLab/Bitbucket), upload archives, and use plugins (e.g., Builder.io Figma import) to bring design files into the project. Gemini and the App Prototyping agent access the workspace files to provide contextual code generation and edits. There is no public external file-reference API documented beyond the workspace and VCS integration.': {}
         No public feature documented for directly referencing repository files or attaching arbitrary external files as "live" references in the product context; inputs are primarily web-form/text-driven with export connectors.: {}
+        'Plans explicitly list repository files that will be created, modified, or deleted; generated outputs are presented as file-level diffs.': {}
+        Generated diffs and the plan allow direct navigation to and editing of specific files by path within the workspace UI (and via Codespaces/VS Code).: {}
+        'The system operates on the repository itself, so file paths in the plan map directly to repo files and can be applied as commits/PRs.': {}
         'How files can be directly referenced in context:': {}
         client.file provides the full text of the active editor file to extensions when permitted.: {}
         'Chat-specific file anchors and #file-like references can be used to point Copilot Chat at particular repository files for multi-file edits and analysis.': {}
         'Copilot Chat in IDEs can operate on multiple open files (multi-file edits) when the chat prompt references them; in the web UI, github.current-url links a chat to the current page/PR/file view.': {}
         Repository-level knowledge bases let you include specific documentation files as searchable context the assistant can consult.: {}
-        'Plans explicitly list repository files that will be created, modified, or deleted; generated outputs are presented as file-level diffs.': {}
-        Generated diffs and the plan allow direct navigation to and editing of specific files by path within the workspace UI (and via Codespaces/VS Code).: {}
-        'The system operates on the repository itself, so file paths in the plan map directly to repo files and can be applied as commits/PRs.': {}
         'Files and folders are represented in the workspace with descriptions; GPT Pilot can present a project tree and selectively fetch files into the active conversation. It also stores generated code in a workspace (CLI-driven) and integrates with Git, VS Code, and a local workspace so the system can operate on real files, commit changes, and run tests. The pseudocode+file-description layer lets the system reference files at function-level granularity before pulling full source.': {}
         'The assistant can reference and include specific files and folders as explicit context for a chat or agent action. Users may add files/folders to the context panel or mention them with @-style references in chat to ensure the model uses that file content. In agent mode, multi-file edits are previewed and can be applied to the working tree.': {}
         'Jolt can reference specific files and produce direct multi-file edits and git-style patches. Files are referenced in several ways:': {}
@@ -303,10 +303,10 @@ criteria:
         dynamic_task__create_task and subagent__execute_task tool descriptions: {}
         The plugin does not expose a documented lifecycle hook system for third‑party attachments; integrations are done via MCP servers or by extending the plugin source (JetBrains plugin APIs).: {}
         No public developer hooks or lifecycle event attachments are documented for From021.: {}
+        No public lifecycle hook API was documented for attaching custom code to Workspace events. Automation and sequencing were handled internally by built-in agents and the follow-up system rather than user-attachable hooks.: {}
         'Are there any lifecycle events for the agent generated that can be attached to:': {}
         'Agents/skillsets provide extension points for request handling and response generation (agent lifecycle handling for incoming chat requests, response formatting, and function-call style interactions).': {}
         GitHub Apps and Copilot Extensions integrate via the Copilot Extensibility APIs which expose request/context arrival and response phases; developers implement handlers to process and respond to chat/agent requests.: {}
-        No public lifecycle hook API was documented for attaching custom code to Workspace events. Automation and sequencing were handled internally by built-in agents and the follow-up system rather than user-attachable hooks.: {}
         'No public, documented lifecycle "hooks" specific to the AI Assistant (e.g., webhooks or plugin lifecycle events tied to assistant actions) are exposed in JetBrains'' public AI Assistant documentation. However, JetBrains IDEs provide a plugin SDK with listener and extension points for IDE events, so plugin authors can hook into IDE lifecycle events and potentially integrate with or extend AI workflows via the general plugin API.': {}
         'Integrations (GitHub repository creation/push, mail integrations, S3 uploads, and external account connections) imply event-driven interactions and integration endpoints that can function like hooks for automation. The product surface indicates output/actions (repo push, deployed app artifacts) that external systems can react to. There is no explicit public reference to a user-facing "webhooks management" UI or exhaustive lifecycle hook API in the available product notes.': {}
         Unknown: {}
@@ -351,10 +351,10 @@ criteria:
         Supports prompt-style slash commands from the input field (notably `/init` to create a DEVOXXGENIE.md project descriptor).: {}
         'Commands and shortcuts are entered directly in the chat input and can be combined with context selections (files, images, project scanner options).': {}
         There is no documentation of slash-commands or user-triggered reusable commands; interactions are performed through the web UI.: {}
+        'Interaction model was natural-language driven (tasks, specs, plans) rather than a slash-command interface documented for user-triggered commands.': {}
         'Is there support for re-usable commands that can be manually triggered by the user:': {}
         Copilot Chat supports conversational triggers and structured commands/inputs in the chat UI; extensions/agents can expose command-like actions that users invoke from the chat or editor context.: {}
         'In IDE integrations, extension commands (command palette, context menu, chat commands) let users trigger predefined behaviors or workflows.': {}
-        'Interaction model was natural-language driven (tasks, specs, plans) rather than a slash-command interface documented for user-triggered commands.': {}
         'There is no widely-documented, global "slash command" mechanic inside JetBrains AI Chat analogous to chat-platform slash commands. Users invoke functionality through the chat UI, mode selection (Chat vs Agent), context buttons, and model/option menus rather than typed slash commands. Some quick actions (e.g., apply suggestion, accept completion, run tests) are exposed as UI controls rather than textual slash commands.': {}
         'The platform exposes reusable role-driven actions via its AI Employees (pre-built role behaviours that can be triggered to perform tasks like inbox triage, social scheduling, outreach). While not literally described as "slash commands," these role actions act as repeatable, triggerable automation primitives in the product. There is no public mention of a chat-style slash-command syntax for end users.': {}
         Unknown: {}
@@ -411,12 +411,12 @@ criteria:
         RAG and embedding pipelines function as retrieval subagents (local embedding provider + Chroma DB) to augment generation.: {}
         The architecture (Langchain4J + Java) enables integration with external model servers and agent-like workflows.: {}
         From021 does not document the ability to define specialized AI subagents or task-specific agent workflows; AI appears to be built-in to the product flows.: {}
-        'Is it possible to define specialized AI subagents for task-specific workflows ? If so, explain how.': {}
-        'Copilot''s extensibility distinguishes lightweight skillsets (task-focused handlers) from full agents, enabling developers to build specialized capabilities that act as subagents for constrained workflows.': {}
-        'Skillsets encapsulate routing, prompt templates, function evaluation and response shaping for focused tasks; agents provide custom logic and broader orchestration and may call other services or models.': {}
         'Copilot Workspace used specialized built-in agents (e.g., brainstorm agent, plan agent, repair agent, follow-up) to handle different stages of the Task→Spec→Plan→Code workflow.': {}
         'These agents coordinated to propose specs, generate concrete plans, produce code diffs, run tests, and attempt repairs when failures occurred.': {}
         There was no public surface documented for users to author or register their own custom agents; the agent set and behavior were provided by the Workspace service.: {}
+        'Is it possible to define specialized AI subagents for task-specific workflows ? If so, explain how.': {}
+        'Copilot''s extensibility distinguishes lightweight skillsets (task-focused handlers) from full agents, enabling developers to build specialized capabilities that act as subagents for constrained workflows.': {}
+        'Skillsets encapsulate routing, prompt templates, function evaluation and response shaping for focused tasks; agents provide custom logic and broader orchestration and may call other services or models.': {}
         'GPT Pilot implements a multi-agent/subagent architecture with specialized roles (Product Owner, Specification Writer, Software Architect, DevOps, Tech Lead, Developer, Code Monkey, Reviewer, Troubleshooter, Debugger, Technical Writer). These agents are orchestrated to break down requirements into tasks/steps, generate pseudocode, implement code, run tests, and request human review. The agent behaviours and orchestration are implemented in the codebase and can be inspected/extended by modifying the project''s agent orchestration/configuration (i.e., adding or changing agent logic requires code/config edits).': {}
         'JetBrains provides an autonomous "agent" capability (often referenced as Junie or Agent mode) that can plan and execute multistep tasks: run tests or terminal commands, make multi-file edits, and report progress. This functions as a specialized subagent for complex workflows where the assistant performs a sequence of actions with user review points.': {}
         'Marblism''s "AI Employees" are functionally specialized subagents tailored to distinct business roles (e.g., inbox/calendar assistant, SEO/blog writer, sales outreach, customer support). Users pick and configure these agents for task-specific workflows; the app builder similarly scaffolds role-specific modules and endpoints for generated apps. The platform therefore supports the concept of specialized subagents, though details about exposing developer-level subagent creation or a public SDK are not documented.': {}
@@ -474,10 +474,10 @@ criteria:
         'Prompts, MCP connectors and embedding/RAG pipelines are the primary extensibility points exposed to users and integrators.': {}
         'Firebase Studio exposes integrations and plugin-like extensions in the preview (examples: Builder.io Figma import, Genkit integration, template gallery, and Git provider integrations). These are enabled/configured through the workspace UI (import plugin/integration or select templates) and by provisioning AI resources (Gemini/Genkit) into the workspace; developer-facing documentation for authoring third-party plugins or bundling commands/agents/hooks is not publicly detailed in the preview documentation.': {}
         'From021 does not expose a plugin system for bundling commands/agents/hooks. Integrations are provided as export connectors (examples: Trello, JIRA, v0, Lovable, Cursor) rather than a plugin marketplace or SDK.': {}
+        'While the Workspace integrated with developer tooling (Codespaces, VS Code extension) and could open sessions in those environments, there was no documented plugin system for bundling custom commands, agents, and hooks inside Workspace itself.': {}
         'Is there a method of bundling together commands, agents and hooks ? If so, explain how''': {}
         'Copilot Extensions / GitHub Apps act as bundles that package skillsets/agents, commands, and integration hooks; they are installed as apps or extensions in IDEs and on GitHub and include permission configuration (including Copilot Editor Context).': {}
         Organization-managed Copilot Spaces and knowledge bases let admins distribute curated plugins/contexts across teams.: {}
-        'While the Workspace integrated with developer tooling (Codespaces, VS Code extension) and could open sessions in those environments, there was no documented plugin system for bundling custom commands, agents, and hooks inside Workspace itself.': {}
         'JetBrains IDEs support a rich plugin ecosystem. AI Assistant itself is delivered as IDE-integrated functionality and can interoperate with other plugins. Plugin authors can use the IntelliJ Platform plugin SDK to extend IDE behavior, integrate model endpoints, or build complementary tooling that works alongside the AI Assistant.': {}
         'MarsX provides a Micro‑App marketplace that acts like a plugin system: Micro‑Apps are bundled units containing UI, backend logic, DB schemas, admin panels and metadata which can be installed into projects to add functionality.': {}
         'Micro‑Apps function as self-contained extensions that can be shared, versioned, monetized (free/premium) and composed together, similar to a plugin ecosystem for full‑stack features.': {}
@@ -598,9 +598,9 @@ criteria:
         'Per-model settings: choose different LLM providers, model parameters, memory sizes and token cost constraints to create tailored working modes.': {}
         'UI options (RAG on/off, project scanner scope, AST context inclusion) act as mode configuration switches.': {}
         There is no public support documented for creating persistent custom "modes" that change agent behavior; users can adjust inputs and settings per project to influence generated outputs.: {}
+        There was no documented feature for users to create specialist modes that change the overall chat/agent behavior beyond editing specs/plans and choosing when to regenerate.: {}
         Can the user create specialist modes that enable you to tailor the chat experience for specific tasks.: {}
         'Custom instructions, persistent prompt files, Copilot Spaces, and workspace-level knowledge bases allow teams to define tailored modes and default context for chat sessions (for example: testing mode, security-aware suggestions, or style-guides).': {}
-        There was no documented feature for users to create specialist modes that change the overall chat/agent behavior beyond editing specs/plans and choosing when to regenerate.: {}
         'The product exposes distinct interaction modes (Chat mode and Agent/Autonomous mode) and allows selecting different model providers and configurations (cloud vs local models). However, there is no publicly-documented facility for end-users to create arbitrary custom "modes" beyond the provided chat/agent workflows and model/configuration choices.': {}
         'Users can customize how the AI Employees operate via onboarding choices, role selection, and prompt/configuration templates used by the app builder. This allows creation of specialist operational modes (e.g., a Penny configuration for SEO-focused output versus a Stan configuration for sales outreach). There is no public documentation describing an exposed "custom mode" editor or marketplace; customization appears to be driven through role settings and prompt inputs.': {}
         Unknown: {}
@@ -661,12 +661,12 @@ criteria:
         Chat history stored locally allows re-opening prior conversations and re-applying previously used prompts/contexts.: {}
         'Undo and rollback are handled primarily via standard version control (Git) integration: commits, branches, and repo history allow reverting agent-made changes. Workspace share URLs, preview deployments and published app versions provide additional reference points, but there is no documented first-class "agent checkpoint" system independent of source control in the preview.': {}
         'No explicit checkpoint/undo/versioning mechanism is documented publicly; inquire with the vendor for data retention, revision history, or rollback capabilities.': {}
+        'Workspace tracked session state and maintained a history of edits; generated changes were presented as diffs and could be revised, undone, or committed as PRs.': {}
+        'While not marketed as a "checkpoint" API, the combination of session versioning, editable specs/plans, and Git-backed commits/PRs provided checkpoint-like rollback and recovery mechanisms.': {}
         'Is it possible to undo actions taken by the agent by using checkpoints or if autocommitted to git, reversing the history ?': {}
         'Editor undo and local history: any automatic edits suggested by Copilot must be accepted by the user in the editor, and typical editor undo/redo and local history remain available.': {}
         'PR/commit workflow: when Copilot creates commits or PRs (agent-driven), standard git workflows allow reverting commits, closing or reverting PRs, and using branch-based reviews to avoid autocommit risk.': {}
         'Preview and review steps: Copilot Chat multi-file edits are surfaced for review before commit in supported integrations; enterprise policies can enforce review gates.': {}
-        'Workspace tracked session state and maintained a history of edits; generated changes were presented as diffs and could be revised, undone, or committed as PRs.': {}
-        'While not marketed as a "checkpoint" API, the combination of session versioning, editable specs/plans, and Git-backed commits/PRs provided checkpoint-like rollback and recovery mechanisms.': {}
         'The workflow explicitly includes human review checkpoints and automated test generation at two granularities (unit tests after steps, integration/e2e tests after tasks). Work is persisted in a workspace with Git support and a CLI/VS Code integration, enabling manual rollbacks or inspection. The system''s "95% automated / 5% human oversight" model makes checkpoints first-class (stop-and-review before progressing).': {}
         'The assistant supports review-before-apply for generated edits (preview diffs). Users can accept or reject changes. Additionally, JetBrains IDEs provide VCS integration (Git) and Local History, enabling undo/revert of applied changes even if the assistant makes edits. These mechanisms together act as checkpoints for recovery.': {}
         'No public documentation of built-in checkpoint/undo features. Jolt supports exporting patches and integrates with git/IDE workflows, so rollbacks are typically handled via VCS (branches, commits) or IDE undo rather than an internal checkpoint system.': {}

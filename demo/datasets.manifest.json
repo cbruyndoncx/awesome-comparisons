@@ -1,0 +1,27 @@
+{
+  "datasets": [
+
+    {
+      "id": "example",
+      "displayLabel": "Example Dataset",
+      "shortDescription": "Lightweight sample dataset",
+      "description": "A starter dataset rendered from ucf example, using the shared comparison-default.yml configuration.",
+      "assetDirectory": "assets/generated/example/",
+      "accentColor": "#28a745",
+      "icon": "experimental-icon.svg",
+      "preferredTheme": "dark",
+      "isDefault": false,
+      "sources": {
+        "dataDir": "datasets/example/data",
+        "config": "datasets/example/config/comparison-default.yml",
+        "style": "configuration/style.css",
+        "configDefaults": [
+          "configuration/comparison-default.yml",
+          "configuration/defaults/groups.yml",
+          "configuration/defaults/groups-advanced.yml",
+          "configuration/defaults/value-displays.yml"
+        ]
+      }
+    }
+  ]
+}

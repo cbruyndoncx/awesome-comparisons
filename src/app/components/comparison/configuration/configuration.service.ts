@@ -227,7 +227,6 @@ export class ConfigurationService {
         ConfigurationService.data = Data.loadJson(dataSource, this.configuration);
         const activeDataset = this.currentDataset;
         const editLinkBase = this.resolveEditLinkBase(activeDataset);
-        const datasetSegments = ConfigurationService.splitPath(activeDataset?.sources?.dataDir || '');
         ConfigurationService.data.dataElements = ConfigurationService.data.dataElements.map(dataElement => {
                 // Build html strings and labelArrays
                 dataElement.html = ConfigurationService.getHtml(
@@ -287,7 +286,7 @@ export class ConfigurationService {
                     map.set(obj.name, obj);
                     return map;
                 }, new Map());
-                dataElement.editLink = this.buildEditLink(dataElement, datasetSegments, editLinkBase);
+                dataElement.editLink = this.buildEditLink(dataElement, activeDataset, editLinkBase);
                 return dataElement;
             }
         );
@@ -382,18 +381,81 @@ export class ConfigurationService {
         return normalized;
     }
 
-    private buildEditLink(dataElement: DataElement, datasetSegments: string[], editLinkBase: string): string | null {
+    private buildEditLink(dataElement: DataElement, dataset: DatasetManifestEntry | null, editLinkBase: string): string | null {
         if (isNullOrUndefined(dataElement) || isNullOrUndefined(dataElement.sourcePath) || dataElement.sourcePath === '') {
             return null;
         }
-        const encodedSegments = [
-            ...datasetSegments,
-            ...ConfigurationService.splitPath(dataElement.sourcePath)
-        ].map(segment => encodeURIComponent(segment));
+        const sourceSegments = ConfigurationService.splitPath(dataElement.sourcePath);
+        if (sourceSegments.length === 0) {
+            return null;
+        }
+        const canonicalSegments = this.resolveSourceSegmentsForDataset(dataset, sourceSegments);
+        if (!canonicalSegments || canonicalSegments.length === 0) {
+            return null;
+        }
+        const encodedSegments = canonicalSegments.map(segment => encodeURIComponent(segment));
         if (encodedSegments.length === 0) {
             return null;
         }
         return `${editLinkBase}${encodedSegments.join('/')}`;
+    }
+
+    private resolveSourceSegmentsForDataset(dataset: DatasetManifestEntry | null, sourceSegments: string[]): string[] | null {
+        if (!Array.isArray(sourceSegments) || sourceSegments.length === 0) {
+            return null;
+        }
+        const leading = sourceSegments[0];
+        if (typeof leading === 'string' && leading.toLowerCase() === 'datasets') {
+            return sourceSegments;
+        }
+        const descriptors = ConfigurationService.describeDatasetDirectories(dataset);
+        if (descriptors.length === 0) {
+            return sourceSegments;
+        }
+        if (descriptors.length === 1) {
+            return descriptors[0].segments.concat(sourceSegments);
+        }
+        const matched = descriptors.find(descriptor => !!descriptor.key && descriptor.key === leading);
+        if (matched) {
+            return matched.segments.concat(sourceSegments.slice(1));
+        }
+        return descriptors[0].segments.concat(sourceSegments);
+    }
+
+    private static describeDatasetDirectories(dataset: DatasetManifestEntry | null): Array<{ key: string | null, segments: string[] }> {
+        if (!dataset || !dataset.sources) {
+            return [];
+        }
+        const rawDirectories = Array.isArray(dataset.sources.dataDirs) && dataset.sources.dataDirs.length > 0
+            ? dataset.sources.dataDirs
+            : (dataset.sources.dataDir ? [dataset.sources.dataDir] : []);
+        return rawDirectories
+            .map(entry => {
+                const segments = ConfigurationService.splitPath(entry);
+                const key = ConfigurationService.deriveDatasetKeyFromSegments(segments);
+                return {
+                    key,
+                    segments
+                };
+            })
+            .filter(descriptor => descriptor.segments.length > 0);
+    }
+
+    private static deriveDatasetKeyFromSegments(segments: string[]): string | null {
+        if (!Array.isArray(segments) || segments.length === 0) {
+            return null;
+        }
+        const datasetsIndex = segments.findIndex(segment => segment.toLowerCase() === 'datasets');
+        if (datasetsIndex >= 0 && datasetsIndex + 1 < segments.length) {
+            return segments[datasetsIndex + 1];
+        }
+        if (segments.length >= 2) {
+            const last = segments[segments.length - 1].toLowerCase();
+            if (last === 'data' || last === 'dataset') {
+                return segments[segments.length - 2];
+            }
+        }
+        return segments[segments.length - 1];
     }
 
     private resolveEditLinkBase(dataset: DatasetManifestEntry | null): string {

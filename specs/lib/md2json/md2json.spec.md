@@ -10,7 +10,7 @@ TypeScript implementation of markdown-to-JSON converter for the Ultimate Compari
 
 ### Convert markdown files to JSON format
 
-Walks the input directory and converts markdown files to the legacy header/list JSON structure expected by gulp.
+ Walks the input directory (recursively) and converts markdown files to the legacy header/list JSON structure expected by gulp.
 
 - Sorts `*.md` files alphabetically before processing
 - Extracts the first line beginning with `#` (space optional) as the entry title; files without one are skipped with a warning
@@ -28,11 +28,11 @@ Walks the input directory and converts markdown files to the legacy header/list 
 
 Creates both individual JSON files and aggregated output files.
 
-- Writes each converted entry as JSON to the tmp directory mirroring the markdown filename (`foo.md` → `tmp/foo.json`)
+- Writes each converted entry as JSON to the tmp directory mirroring the markdown file’s relative path (`foo.md` → `tmp/foo.json`, `nested/bar.md` → `tmp/nested/bar.json`)
 - Ensures tmp directories exist before writing (recursive create)
 - Aggregates all successfully parsed entries into a single JSON array at the output path
 - Honors `--pretty` flag for pretty-printing tmp files and the aggregated output; default output is minified
-- Adds a `sourcePath` field to each aggregated entry containing the markdown filename relative to the input directory so downstream tooling can link back to the source document
+- Adds a `sourcePath` field to each aggregated entry containing the markdown filename relative to the input directory (including nested folder segments, normalized with forward slashes) so downstream tooling can link back to the source document
 - Persists the `--level` parameter on the Md2Json instance even if unused, ensuring parity with scripts that expect the property
 - Verified by [@test](../../../tests/lib/md2json/md2json.converter.spec.ts)
 

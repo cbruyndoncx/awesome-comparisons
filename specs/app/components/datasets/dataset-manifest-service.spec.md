@@ -10,7 +10,7 @@ Service that manages dataset configurations for the multi-dataset shell, handlin
 
 ### Load and validate dataset manifest
 
-Loads configuration/datasets.manifest.json (copied to `assets/configuration/datasets.manifest.json`) via HttpClient once and caches the result. Manifest JSON is an object with a `datasets` array, so the service unwraps that collection, validates each entry (id, displayLabel, description, assetDirectory), and sorts results by displayLabel. Passes through optional `sources` metadata (dataDir, config, description, style, editBaseUrl) so downstream services can discover dataset-specific overrides without blocking validation.
+Loads configuration/datasets.manifest.json (copied to `assets/configuration/datasets.manifest.json`) via HttpClient once and caches the result. Manifest JSON is an object with a `datasets` array, so the service unwraps that collection, validates each entry (id, displayLabel, description, assetDirectory), and sorts results by displayLabel. Passes through optional `sources` metadata (dataDir, dataDirs, config, configDefaults, description, style, editBaseUrl) so downstream services can discover dataset-specific overrides without blocking validation.
 
 - Throws descriptive error on network failures
 - Throws descriptive error when manifest is empty
@@ -70,7 +70,9 @@ export interface DatasetManifestEntry {
   isDefault?: boolean;
   sources?: {
     dataDir?: string;
+    dataDirs?: string[];
     config?: string;
+    configDefaults?: string[];
     description?: string;
     style?: string;
     editBaseUrl?: string;

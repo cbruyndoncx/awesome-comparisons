@@ -1,6 +1,6 @@
 {
-  "name": "ultimate-comparison-v3",
-  "version": "3.0.0-alpha.32",
+  "name": "awesome-comparisons-v3",
+  "version": "3.0.0-251029",
   "scripts": {
     "md2json:compile": "tsc -p ./lib/md2json/tsconfig.json",
     "md2json:run": "node ./lib/md2json/dist/cli.js",
@@ -9,6 +9,8 @@
     "data:watch": "npm run md2json:compile && node ./node_modules/gulp/bin/gulp.js dev --gulpfile=./lib/gulp/gulpfile.js",
     "start": "npm run data:prepare && ng serve",
     "dev": "concurrently \"npm run data:watch\" \"ng serve\"",
+    "prebuild": "rm -f tmp/*/comparison-auto-config.yml",
+    "prebuild:prod": "npm run prebuild",
     "build": "npm run data:prepare && ng build",
     "build:prod": "npm run data:prepare && ng build --configuration production",
     "test": "ng test",
@@ -27,7 +29,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:cbruyndoncx/ultimate-comparison-framework.git"
+    "url": "git@github.com:cbruyndoncx/awesome-comparisons.git"
   },
   "babel": {
     "presets": [

@@ -21,7 +21,9 @@ export interface DatasetManifestEntry {
   isDefault?: boolean;
   sources?: {
     dataDir?: string;
+    dataDirs?: string[];
     config?: string;
+    configDefaults?: string[];
     description?: string;
     style?: string;
     editBaseUrl?: string;

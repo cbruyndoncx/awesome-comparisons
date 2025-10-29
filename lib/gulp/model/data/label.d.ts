@@ -13,8 +13,18 @@ export class Label {
 
   public stars: number;
   public comment: string;
+  public display?: string;
+  public displayHtml?: string;
 
-  constructor(name: string, tooltip?: string, clazz?: string, color?: string, backgroundColor?: string, stars?: number, comment?: string);
+  constructor(name: string,
+              tooltip?: string,
+              clazz?: string,
+              color?: string,
+              backgroundColor?: string,
+              stars?: number,
+              comment?: string,
+              display?: string,
+              displayHtml?: string);
 
   public static loadJson(json, criteria: Criteria): Label;
 

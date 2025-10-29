@@ -45,6 +45,36 @@
       }
     },
     {
+      "id": "all",
+      "displayLabel": "All Datasets",
+      "shortDescription": "Unified view across all datasets",
+      "description": "Aggregates every dataset in a single comparison for global analysis.",
+      "assetDirectory": "assets/generated/all/",
+      "accentColor": "#ff8c00",
+      "icon": "default-icon.svg",
+      "preferredTheme": "light",
+      "isDefault": false,
+      "sources": {
+        "dataDir": "datasets/code-editor/data",
+        "dataDirs": [
+          "datasets/code-editor/data",
+          "datasets/terminal/data",
+          "datasets/other/data",
+          "datasets/aie-model/data",
+          "datasets/code-agent/data",
+          "datasets/product-prototyping/data"
+        ],
+        "config": "configuration/comparison-default.yml",
+        "style": "configuration/style.css",
+        "configDefaults": [
+          "configuration/comparison-default.yml",
+          "configuration/defaults/groups.yml",
+          "configuration/defaults/groups-advanced.yml",
+          "configuration/defaults/value-displays.yml"
+        ]
+      }
+    },
+    {
       "id": "terminal",
       "displayLabel": "Terminal-focused Editors",
       "shortDescription": "Editors and tools with integrated terminal/CLI features",

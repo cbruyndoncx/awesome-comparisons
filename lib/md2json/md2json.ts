@@ -304,17 +304,32 @@ export class Md2Json {
         fs.mkdirSync(outputDir, { recursive: true });
       }
 
-      // Read all .md files and sort them alphabetically
-      const files = fs.readdirSync(inputDir)
-        .filter(file => file.endsWith('.md'))
-        .sort();
+      const collectMarkdownFiles = (dir: string): string[] => {
+        const entries = fs.readdirSync(dir, { withFileTypes: true });
+        const results: string[] = [];
+        entries.forEach(entry => {
+          const entryPath = path.join(dir, entry.name);
+          if (entry.isDirectory()) {
+            results.push(...collectMarkdownFiles(entryPath));
+          } else if (entry.isFile() && entry.name.toLowerCase().endsWith('.md')) {
+            results.push(entryPath);
+          }
+        });
+        return results;
+      };
+
+      const files = collectMarkdownFiles(inputDir)
+        .map(filePath => ({
+          absolute: filePath,
+          relative: path.relative(inputDir, filePath).replace(/\\/g, '/')
+        }))
+        .sort((a, b) => a.relative.localeCompare(b.relative, undefined, { sensitivity: 'base' }));
 
       const allEntries: HeaderNode[] = [];
 
       for (const file of files) {
         try {
-          const filePath = path.join(inputDir, file);
-          const content = fs.readFileSync(filePath, 'utf-8');
+          const content = fs.readFileSync(file.absolute, 'utf-8');
 
           const jsonData = this.convertMarkdownToJson(content);
 
@@ -322,12 +337,16 @@ export class Md2Json {
             // Add sourcePath field for aggregated output
             const entryWithSourcePath = {
               ...jsonData,
-              sourcePath: file
+              sourcePath: file.relative
             };
 
             // Write each converted entry as JSON to tmp directory
-            const jsonFileName = file.replace('.md', '.json');
+            const jsonFileName = file.relative.replace(/\.md$/i, '.json');
             const jsonFilePath = path.join(tmpDir, jsonFileName);
+            const jsonDir = path.dirname(jsonFilePath);
+            if (!fs.existsSync(jsonDir)) {
+              fs.mkdirSync(jsonDir, { recursive: true });
+            }
             const jsonString = this.pretty
               ? JSON.stringify(jsonData, null, 2)
               : JSON.stringify(jsonData);
@@ -335,10 +354,10 @@ export class Md2Json {
             fs.writeFileSync(jsonFilePath, jsonString);
             allEntries.push(entryWithSourcePath);
           } else {
-            console.warn(`Warning: Skipping ${file} - no title found`);
+            console.warn(`Warning: Skipping ${file.relative} - no title found`);
           }
         } catch (error) {
-          const errorMsg = `Error processing ${file}: ${error instanceof Error ? error.message : String(error)}`;
+          const errorMsg = `Error processing ${file.relative}: ${error instanceof Error ? error.message : String(error)}`;
           console.error(errorMsg);
           throw new Error(errorMsg);
         }

@@ -2,7 +2,7 @@
   "datasets": [
     {
       "id": "code-editor",
-      "displayLabel": "AI Code Editors",
+      "displayLabel": "Code/Editors",
       "shortDescription": "AI Native Dev Code Editor category",
       "description": "AI Code Editors GUIs - either as standalone IDE or extension to vscode, jetbrains etc",
       "assetDirectory": "assets/generated/code-editor/",
@@ -17,34 +17,43 @@
         "configDefaults": [
           "configuration/comparison-default.yml",
           "configuration/defaults/groups.yml",
-          "configuration/defaults/groups-advanced.yml"
+          "configuration/defaults/groups-advanced.yml",
+          "configuration/defaults/value-displays.yml"
         ]
       }
     },
     {
-      "id": "example",
-      "displayLabel": "Example Dataset",
-      "shortDescription": "Lightweight sample dataset",
-      "description": "A starter dataset rendered from ucf example, using the shared comparison-default.yml configuration.",
-      "assetDirectory": "assets/generated/example/",
-      "accentColor": "#28a745",
-      "icon": "experimental-icon.svg",
-      "preferredTheme": "dark",
+      "id": "all",
+      "displayLabel": "All",
+      "shortDescription": "Unified view across all comparisons",
+      "description": "Aggregates every dataset in a single comparison for global analysis.",
+      "assetDirectory": "assets/generated/all/",
+      "accentColor": "#ff8c00",
+      "icon": "default-icon.svg",
+      "preferredTheme": "light",
       "isDefault": false,
       "sources": {
-        "dataDir": "datasets/example/data",
-        "config": "datasets/example/config/comparison-default.yml",
+        "dataDirs": [
+          "datasets/code-editor/data",
+          "datasets/terminal/data",
+          "datasets/other/data",
+          "datasets/aie-model/data",
+          "datasets/code-agent/data",
+          "datasets/product-prototyping/data"
+        ],
+        "config": "configuration/comparison-default.yml",
         "style": "configuration/style.css",
         "configDefaults": [
           "configuration/comparison-default.yml",
           "configuration/defaults/groups.yml",
-          "configuration/defaults/groups-advanced.yml"
+          "configuration/defaults/groups-advanced.yml",
+          "configuration/defaults/value-displays.yml"
         ]
       }
     },
     {
       "id": "terminal",
-      "displayLabel": "Terminal-focused Editors",
+      "displayLabel": "Terminal CLI",
       "shortDescription": "Editors and tools with integrated terminal/CLI features",
       "description": "Code editors and tools that expose integrated terminal or CLI-first workflows",
       "assetDirectory": "assets/generated/terminal/",
@@ -59,7 +68,8 @@
         "configDefaults": [
           "configuration/comparison-default.yml",
           "configuration/defaults/groups.yml",
-          "configuration/defaults/groups-advanced.yml"
+          "configuration/defaults/groups-advanced.yml",
+          "configuration/defaults/value-displays.yml"
         ]
       }
     },
@@ -80,13 +90,14 @@
         "configDefaults": [
           "configuration/comparison-default.yml",
           "configuration/defaults/groups.yml",
-          "configuration/defaults/groups-advanced.yml"
+          "configuration/defaults/groups-advanced.yml",
+          "configuration/defaults/value-displays.yml"
         ]
       }
     },
     {
       "id": "aie-model",
-      "displayLabel": "AI/Model",
+      "displayLabel": "Code Models",
       "shortDescription": "AI Models and model tooling",
       "description": "AI Models and model tooling",
       "assetDirectory": "assets/generated/aie-model/",
@@ -100,13 +111,14 @@
         "style": "configuration/style.css",
         "configDefaults": [
           "configuration/comparison-default.yml",
-          "configuration/defaults/groups.yml"
+          "configuration/defaults/groups.yml",
+          "configuration/defaults/value-displays.yml"
         ]
       }
     },
     {
       "id": "code-agent",
-      "displayLabel": "Code/Autonomous agent",
+      "displayLabel": "Code Agent",
       "shortDescription": "Autonomous code agents and agent frameworks",
       "description": "Autonomous code agents and agent frameworks",
       "assetDirectory": "assets/generated/code-agent/",
@@ -121,13 +133,14 @@
         "configDefaults": [
           "configuration/comparison-default.yml",
           "configuration/defaults/groups.yml",
-          "configuration/defaults/groups-advanced.yml"
+          "configuration/defaults/groups-advanced.yml",
+          "configuration/defaults/value-displays.yml"
         ]
       }
     },
     {
       "id": "product-prototyping",
-      "displayLabel": "Product/Prototyping",
+      "displayLabel": "Prototyping",
       "shortDescription": "Prototyping and product-focused coding tools",
       "description": "Prototyping and product-focused coding tools",
       "assetDirectory": "assets/generated/product-prototyping/",
@@ -142,7 +155,8 @@
         "configDefaults": [
           "configuration/comparison-default.yml",
           "configuration/defaults/groups.yml",
-          "configuration/defaults/groups-advanced.yml"
+          "configuration/defaults/groups-advanced.yml",
+          "configuration/defaults/value-displays.yml"
         ]
       }
     }

@@ -62,6 +62,8 @@ A `comparison.yml` has following attributes:
         - `class`: CSS-class of the label. Type: `string` (label-only)
         - `backgroundColor`: The background color of the label. Applies only if no class is given. Type: `string` (label-only)
         - `color`: The text color of the label. Applies only if no class is given. Type: `string` (label-only)
+        - `display`: Optional alternate text/emoji to render inside the grid/detail chips (falls back to the value name).
+        - `displayHtml`: Optional inline HTML snippet (sanitized at runtime) for custom visuals such as SVG icons or checkmarks.
         - `minAge`: The minimum age of the last commit to apply this value. Type: `number` (repository-only)
         - `minAgeUnit`: The unit to apply to the minAge attribute. Allowed values: https://momentjs.com/docs/#/durations/as-iso-string/ (repository-only)
         - `maxAge`: The maximum age of the last commit to apply this value. Type: `number` (repository-only)
@@ -72,7 +74,7 @@ A `comparison.yml` has following attributes:
 
 The framework reserves the first table column for the `Name`/`id` field and always places `ShortDescription` as the second column. Remaining table columns follow their configured `order` values.
 
-Datasets declared in `configuration/datasets.manifest.json` can now reuse shared configuration fragments by specifying `sources.configDefaults`. Provide one or more YAML paths (e.g. `["configuration/comparison-default.yml", "configuration/defaults/groups.yml", "configuration/defaults/groups-advanced.yml"]`) to pull in centrally maintained criteria groups or other defaults ahead of each dataset's local `comparison.yml`.
+Datasets declared in `configuration/datasets.manifest.json` can now reuse shared configuration fragments by specifying `sources.configDefaults`. Provide one or more YAML paths (e.g. `["configuration/comparison-default.yml", "configuration/defaults/groups.yml", "configuration/defaults/groups-advanced.yml", "configuration/defaults/value-displays.yml"]`) to pull in centrally maintained criteria groups or other defaults ahead of each dataset's local `comparison.yml`.
 
 ### Define comparison elements
 

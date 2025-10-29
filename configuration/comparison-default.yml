@@ -1,10 +1,11 @@
-title: Ultimate-X-Comparison
-subtitle: Ultimate X comparison framework
-selectTitle: Criteria
-tableTitle: Comparison of ...
+title: Awesome Comparisons
+subtitle: born out of the Ultimate Comparison Framework
+repoowner: cbruyndoncx
+selectTitle: ''
+tableTitle: ''
 repository:
-  template: "https://github.com/ultimate-comparisons/{}.git"
-  variables: ["title"]
+  template: "https://github.com/{repoowner}/awesome-comparisons.git"
+  variables: ["repoowner"]
 details:
   header:
     nameRef: id
@@ -107,6 +108,11 @@ criteria:
       andSearch: false
       rangeSearch: false
       type: label
+      values:
+        'Yes':
+          display: '✅'
+        'No':
+          displayHtml: '<span class="status status-no">✖</span>'
   - default-markdown: # Used for defining missing criteria (without labels)
       ignore: true
       id: Markdown-Criteria
@@ -152,72 +158,13 @@ criteria:
       andSearch: false
       rangeSearch: false
       type: repository
-  - default-color: # Used for coloring labels
+  - default-colorxxx: # Used for coloring labels
       ignore: true
       values:
-        1:
+        99:
           color: '#0d0d0d'
           backgroundColor: 'hsl(15, 100%, 70%)'
-        2:
+        999:
           color: '#0d0d0d'
           backgroundColor: 'hsl(30, 100%, 70%)'
-        3:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(45, 100%, 70%)'
-        4:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
-        5:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(75, 100%, 70%)'
-        6:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
-        7:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(105, 100%, 70%)'
-        8:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
-        9:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(135, 100%, 70%)'
-        10:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
-        11:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(165, 100%, 70%)'
-        12:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
-        13:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(195, 100%, 70%)'
-        14:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
-        15:
-          color: '#ffff00'
-          backgroundColor: 'hsl(225, 100%, 70%)'
-        16:
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
-        17:
-          color: '#ffff00'
-          backgroundColor: 'hsl(255, 100%, 70%)'
-        18:
-          color: '#ffff00'
-          backgroundColor: 'hsl(270, 100%, 70%)'
-        19:
-          color: '#ffff00'
-          backgroundColor: 'hsl(285, 100%, 70%)'
-        20:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
-        21:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(315, 100%, 70%)'
-        22:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
+

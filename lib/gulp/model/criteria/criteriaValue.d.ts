@@ -10,6 +10,8 @@ export class CriteriaValue {
   public maxAge: number;
   public minAgeUnit: string;
   public maxAgeUnit: string;
+  public display?: string;
+  public displayHtml?: string;
 
   constructor(criteriaName: string,
               name: string,
@@ -21,7 +23,9 @@ export class CriteriaValue {
               minAge?: number,
               maxAge?: number,
               minAgeUnit?: string,
-              maxAgeUnit?: string);
+              maxAgeUnit?: string,
+              display?: string,
+              displayHtml?: string);
 
   public static loadJson(criteriaName, name, json);
 

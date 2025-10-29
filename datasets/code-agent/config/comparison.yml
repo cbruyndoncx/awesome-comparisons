@@ -84,23 +84,11 @@ criteria:
       rangeSearch: false
       values:
         'AIE/Model':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(75, 100%, 70%)'
         'Code/Autonomous agent':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(75, 100%, 70%)'
         'Code/Editor':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(75, 100%, 70%)'
         'Code/Spec Driven':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(75, 100%, 70%)'
         'Code/Terminal':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(75, 100%, 70%)'
         'Product/Prototyping':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(75, 100%, 70%)'
   - Languages:
       name: Languages
       type: LABEL
@@ -120,68 +108,26 @@ criteria:
       rangeSearch: false
       values:
         Any:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(75, 100%, 70%)'
         Java:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         Bash:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         XML:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         Python:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         Ruby:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         Groovy:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         JavaScript:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         SQL:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         Go:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         Rust:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         PHP:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         TypeScript:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(60, 100%, 70%)'
         C#:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
         HTML/CSS:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
         Shell:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
         Swift:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
         Kotlin:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
         C/C++:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
         Scala:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
         GraphQL:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(330, 100%, 70%)'
 
   - Description:
       name: Description
@@ -207,11 +153,7 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
   - LocalOffline:
       name: LocalOffline
       type: LABEL
@@ -225,11 +167,7 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
   - FreeTrial:
       name: FreeTrial
       type: LABEL
@@ -243,11 +181,7 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
   - GitSupport:
       name: GitSupport
       type: LABEL
@@ -261,11 +195,7 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
   - MCP-Client:
       name: MCP-Client
       type: LABEL
@@ -279,11 +209,7 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
       children:
           - Prompts
           - Tools
@@ -307,11 +233,7 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
   - Tools:
       name: Tools
       type: LABEL
@@ -325,11 +247,7 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
   - Resources:
       name: Resources
       type: LABEL
@@ -343,11 +261,7 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
-          color: '#ffff00'
-          backgroundColor: 'hsl(240, 100%, 70%)'
   - Terminal:
       name: Terminal
       type: LABEL
@@ -361,11 +275,7 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
-          color: '#ffff00'
-          backgroundColor: 'hsl(270, 100%, 70%)'
   - Opensource:
       name: Opensource
       type: LABEL
@@ -379,11 +289,7 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
   - License:
       name: License
       type: LABEL
@@ -397,29 +303,13 @@ criteria:
       rangeSearch: false
       values:
         MIT:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         Apache-2.0:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
         Proprietary:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
         FSL:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(150, 100%, 70%)'
         BSD-3:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(180, 100%, 70%)'
         Other:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(210, 100%, 70%)'
         EPL-2.0:
-          color: '#ffff00'
-          backgroundColor: 'hsl(225, 100%, 70%)'
         GPL-3.0:
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
   - Notes:
       name: Notes
       type: MARKDOWN
@@ -456,11 +346,7 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
   - DirectFileReferences:
       name: DirectFileReferences
       type: LABEL
@@ -474,11 +360,7 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
   - Hooks:
       name: Hooks
       type: LABEL
@@ -492,11 +374,7 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
   - SlashCommands:
       name: SlashCommands
       type: LABEL
@@ -510,11 +388,7 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
   - Subagents:
       name: Subagents
       type: LABEL
@@ -528,11 +402,7 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
   - CustomModes:
       name: CustomModes
       type: LABEL
@@ -546,11 +416,7 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
   - Plugins:
       name: Plugins
       type: LABEL
@@ -564,11 +430,7 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
   - Checkpoints:
       name: Checkpoints
       type: LABEL
@@ -582,11 +444,7 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'No':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
   - SpecDrivenDevelopment:
       name: SpecDrivenDevelopment
       type: LABEL
@@ -600,26 +458,10 @@ criteria:
       rangeSearch: false
       values:
         'BMAD':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'SpecKit':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'OpenSpec':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'Tessl':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'AgentOS':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
         'ClaudeFlow':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
         'SPARC':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
         'SuperClaude':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(300, 100%, 70%)'
