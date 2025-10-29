@@ -27,6 +27,9 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
     @Input() order: Array<number> = [];
     @Input() labelColorsEnabled: boolean = true;
     @Input() dataElements: Array<DataElement> = [];
+    @Input() tableExpanded: boolean = false;
+
+    @Output() toggleExpand: EventEmitter<boolean> = new EventEmitter<boolean>();
 
     public groups$: Observable<FeatureGroupView[]>;
     public columnGroupMap$: Observable<Record<string, string>>;
@@ -118,6 +121,13 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
             return `${label.backgroundColor} ${start}% ${end}%`;
         });
         return `linear-gradient(90deg, ${segments.join(', ')})`;
+    }
+
+    public labelDisplay(label: Label): string {
+        if (!label) {
+            return '';
+        }
+        return (label as unknown as { display?: string }).display || label.name || '';
     }
 
     public update(): void {

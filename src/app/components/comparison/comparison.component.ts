@@ -22,7 +22,7 @@ export class ComparisonComponent {
     public repository: string;
     public collapsedFilterGroups: { [groupKey: string]: boolean } = {};
     public ungroupedCollapsed: boolean = false;
-    public filtersCollapsed: boolean = false;
+    public filtersCollapsed: boolean = true;
 
     @ViewChild(LatexTableComponent) latexTable: LatexTableComponent;
     @ViewChild('genericTableHeader') genericTableHeader: PaperCardComponent;
@@ -215,6 +215,41 @@ export class ComparisonComponent {
             }
         }
         return false;
+    }
+
+    public getActiveFilters(searchState: Map<string, Set<string>>): Array<{ id: string; label: string; values: string[] }> {
+        if (!searchState) {
+            return [];
+        }
+        const results: Array<{ id: string; label: string; values: string[] }> = [];
+        searchState.forEach((values, key) => {
+            if (values && values.size > 0) {
+                const criteria = this.configurationService.configuration?.getCriteria(key);
+                const label = criteria?.name || key;
+                results.push({
+                    id: key,
+                    label,
+                    values: Array.from(values)
+                });
+            }
+        });
+        results.sort((a, b) => a.label.localeCompare(b.label));
+        return results;
+    }
+
+    public removeFilter(criteriaId: string, value: string): void {
+        if (!criteriaId || !value) {
+            return;
+        }
+        const update = new Map<string, string | null>();
+        update.set(criteriaId, value);
+        this.store.dispatch(new UCSearchUpdateAction(update));
+        this.cd.markForCheck();
+    }
+
+    public toggleTableExpand(next: boolean): void {
+        this.store.dispatch({type: 'UPDATE_SETTINGS', enable: next, operation: 'TableExpand'});
+        this.deferredUpdate();
     }
 
     public setAllGroupCollapse(groups: FeatureGroupView[] = [], collapse: boolean = false): void {

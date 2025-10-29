@@ -7,7 +7,12 @@
                     <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
                          [style.color]="labelColorsEnabled ? label.color : null"
                          [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
-                        {{label.name}}
+                        <ng-container *ngIf="label.displayHtml; else headerLabelDisplay">
+                            <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
+                        </ng-container>
+                        <ng-template #headerLabelDisplay>
+                            {{label.display || label.name}}
+                        </ng-template>
                     </div>
                 </ptooltip>
             </ng-container>
@@ -58,14 +63,24 @@
                             <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
                                  [style.color]="labelColorsEnabled ? label.color : null"
                                  [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
-                                {{label.name}}
+                                <ng-container *ngIf="label.displayHtml; else detailLabelDisplayTextTooltip">
+                                    <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
+                                </ng-container>
+                                <ng-template #detailLabelDisplayTextTooltip>
+                                    {{label.display || label.name}}
+                                </ng-template>
                             </div>
                         </ptooltip>
                         <div *ngIf="tooltipAsText" class="tt-container">
                                 <span class="label mylabel {{label.clazz}} tt-label" [class.label--plain]="!labelColorsEnabled"
                                       [style.color]="labelColorsEnabled ? label.color : null"
                                       [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
-                                    {{label.name}}
+                                    <ng-container *ngIf="label.displayHtml; else detailLabelDisplayTextPlain">
+                                        <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
+                                    </ng-container>
+                                    <ng-template #detailLabelDisplayTextPlain>
+                                        {{label.display || label.name}}
+                                    </ng-template>
                                 </span>
                             <span class="tooltip-text tt-tooltip" [innerHtml]="label.tooltip.text|sanitizeHtml"></span>
                             <br *ngIf="label.tooltip.text && label.tooltip.html">
@@ -74,7 +89,12 @@
                     </ng-container>
                 </ng-container>
                 <ul *ngIf="section.data?.detailLabels?.length" class="detail-list">
-                    <li *ngFor="let detail of section.data.detailLabels">{{detail.name}}</li>
+                    <li *ngFor="let detail of section.data.detailLabels">
+                        <ng-container *ngIf="detail.displayHtml; else detailListText">
+                            <span [innerHtml]="detail.displayHtml | sanitizeHtml"></span>
+                        </ng-container>
+                        <ng-template #detailListText>{{detail.display || detail.name}}</ng-template>
+                    </li>
                 </ul>
                 <div class="repository-links" *ngIf="section.data?.type === 'REPOSITORY' && section.data?.urlList?.length">
                     <a *ngFor="let link of section.data.urlList" [href]="link" target="_blank" rel="noopener noreferrer">{{link}}</a>

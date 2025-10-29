@@ -229,8 +229,9 @@ export class FeatureGroupingService {
 
     private buildLabelMetadata(criteria: Criteria | undefined, label: Label | null, labelValues: Array<string>): FeatureGroupLabel {
         const baseValue = label?.name || this.resolveLabelValueFallback(labelValues);
+        const displayOverride = (label as unknown as { display?: string })?.display;
         const metadata: FeatureGroupLabel = {
-            value: baseValue
+            value: displayOverride || baseValue
         };
 
         if (label?.tooltip) {

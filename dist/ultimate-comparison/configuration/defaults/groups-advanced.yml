@@ -38,13 +38,6 @@ criteria:
       order: '20'
       andSearch: false
       rangeSearch: false
-      values:
-        'Yes':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(90, 100%, 70%)'
-        'No':
-          color: '#0d0d0d'
-          backgroundColor: 'hsl(120, 100%, 70%)'
       children:
         - Plugins
         - Hooks

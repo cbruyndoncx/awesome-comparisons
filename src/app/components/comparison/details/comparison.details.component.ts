@@ -135,7 +135,7 @@ export class ComparisonDetailsComponent implements OnChanges {
             if (labelData.labels && labelData.labels.size > 0) {
                 const firstLabel = labelData.labels.values().next().value as Label;
                 if (firstLabel) {
-                    text = firstLabel.name || '';
+                    text = (firstLabel as unknown as {display?: string}).display || firstLabel.name || '';
                     tooltip = firstLabel.tooltip?.text || firstLabel.tooltip?.plain || undefined;
                 }
             }

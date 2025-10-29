@@ -17,7 +17,8 @@
         "configDefaults": [
           "configuration/comparison-default.yml",
           "configuration/defaults/groups.yml",
-          "configuration/defaults/groups-advanced.yml"
+          "configuration/defaults/groups-advanced.yml",
+          "configuration/defaults/value-displays.yml"
         ]
       }
     },
@@ -38,7 +39,8 @@
         "configDefaults": [
           "configuration/comparison-default.yml",
           "configuration/defaults/groups.yml",
-          "configuration/defaults/groups-advanced.yml"
+          "configuration/defaults/groups-advanced.yml",
+          "configuration/defaults/value-displays.yml"
         ]
       }
     },
@@ -59,7 +61,8 @@
         "configDefaults": [
           "configuration/comparison-default.yml",
           "configuration/defaults/groups.yml",
-          "configuration/defaults/groups-advanced.yml"
+          "configuration/defaults/groups-advanced.yml",
+          "configuration/defaults/value-displays.yml"
         ]
       }
     },
@@ -80,7 +83,8 @@
         "configDefaults": [
           "configuration/comparison-default.yml",
           "configuration/defaults/groups.yml",
-          "configuration/defaults/groups-advanced.yml"
+          "configuration/defaults/groups-advanced.yml",
+          "configuration/defaults/value-displays.yml"
         ]
       }
     },
@@ -100,7 +104,8 @@
         "style": "configuration/style.css",
         "configDefaults": [
           "configuration/comparison-default.yml",
-          "configuration/defaults/groups.yml"
+          "configuration/defaults/groups.yml",
+          "configuration/defaults/value-displays.yml"
         ]
       }
     },
@@ -121,7 +126,8 @@
         "configDefaults": [
           "configuration/comparison-default.yml",
           "configuration/defaults/groups.yml",
-          "configuration/defaults/groups-advanced.yml"
+          "configuration/defaults/groups-advanced.yml",
+          "configuration/defaults/value-displays.yml"
         ]
       }
     },
@@ -142,7 +148,8 @@
         "configDefaults": [
           "configuration/comparison-default.yml",
           "configuration/defaults/groups.yml",
-          "configuration/defaults/groups-advanced.yml"
+          "configuration/defaults/groups-advanced.yml",
+          "configuration/defaults/value-displays.yml"
         ]
       }
     }

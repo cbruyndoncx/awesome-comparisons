@@ -131,6 +131,13 @@ table {
     gap: 8px;
 }
 
+.group-controls__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
 .group-panel__table {
     border-radius: 10px;
     background: var(--card-background, #ffffff);
@@ -149,6 +156,23 @@ table {
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: var(--text-secondary, #616161);
+}
+
+.group-controls__toggle {
+    border: 1px solid var(--border-color, rgba(15, 23, 42, 0.12));
+    border-radius: 999px;
+    background: var(--card-background, #ffffff);
+    padding: 4px 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.group-controls__toggle:hover,
+.group-controls__toggle:focus-visible {
+    background: rgba(37, 99, 235, 0.12);
 }
 
 .group-controls__list {
