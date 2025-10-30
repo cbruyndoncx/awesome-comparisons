@@ -16,7 +16,7 @@ Defines core package information including name, version, license, repository de
 - Version follows semantic versioning
 - MIT license is specified
 - Repository points to ultimate-comparison-BASE GitHub repo
-- Exposes "uc" command through bin configuration pointing to ./lib/uc/uc
+- Exposes "awcmp-cli" command through bin configuration pointing to ./lib/awcmp-cli/awcmp-cli
 
 ### Published Files
 

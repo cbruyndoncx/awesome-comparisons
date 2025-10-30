@@ -13,7 +13,7 @@
 >
 ## Create your own ultimate comparison (v3)
 
-v3 does not provide the legacy `uc` CLI or a global npm package installer. Instead, to create and run a comparison you work with dataset directories and the repository's npm scripts.
+v3 provides a repository helper CLI called `awcmp-cli` (replacing the older `uc` helper). Use `awcmp-cli` to scaffold datasets non-interactively or use the repository npm scripts (data:prepare, dev, build) directly. Note: the v2 `uc` command is deprecated — use `awcmp-cli` or the npm scripts instead.
 
 Quick steps to create and run a comparison:
 
