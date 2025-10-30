@@ -1,22 +1,47 @@
-# Ultimate Comparison Framework ![Checks](https://github.com/ultimate-comparisons/ultimate-comparison-framework/workflows/Checks/badge.svg)
+# Ultimate Comparisons — v3 (multi-dataset)
+
+![Checks](https://github.com/ultimate-comparisons/ultimate-comparison-framework/workflows/Checks/badge.svg)
+
+> This repository is a v3 fork of the Ultimate Comparison Framework. v3 adds multi-dataset support, dataset-aware tooling, and updated build/publish workflows.
+
+
 
 > This is the ultimate comparison framework written in [Angular](https://angular.io/).
-> It is released on npm as [ultimate-comparison](https://www.npmjs.com/package/ultimate-comparison).
+> This repository is a v3 fork; the original package is published as [ultimate-comparison](https://www.npmjs.com/package/ultimate-comparison).
+>
+> Scientifically interested? - Read on at our paper [The Ultimate Comparison Framework](http://ceur-ws.org/Vol-2575/paper9.pdf).
+>
+## Create your own ultimate comparison (v3)
 
-Scientifically interested? - Read on at our paper [The Ultimate Comparison Framework](http://ceur-ws.org/Vol-2575/paper9.pdf).
+v3 does not provide the legacy `uc` CLI or a global npm package installer. Instead, to create and run a comparison you work with dataset directories and the repository's npm scripts.
 
-## Create your own ultimate comparison
+Quick steps to create and run a comparison:
 
-1. Install the **ultimate-comparison** package globally on your system using `npm install --global ultimate-comparison`
-2. Create the directory which should contain the comparison and change into it, e. g. with `mkdir MY_COMPARISON && cd MY_COMPARISON`
-3. Set up your comparison with `uc setup`
-    1. Enter the name of your comparison and press <kbd>Enter</kbd>
-    2. Enter the [semantic version](https://semver.org/) of your comparison and press <kbd>Enter</kbd>
-    3. Enter a short description of your comparison and press <kbd>Enter</kbd> (not required)
-4. Make sure a `node_modules` directory exists as sub directory.
-    - If it doesn't exist look at the error message and run `npm install` afterwards
-    - The error is most likely a malformed name or version of your comparison
-5. Run `uc start` to start the comparison.
+1. Create a dataset directory (for example `datasets/my-comparison`) and add the required files (description.md, comparison.yml, and your entry markdown files).
+
+```bash
+mkdir -p datasets/my-comparison
+# add description.md, comparison.yml and your markdown data files
+```
+
+2. Add a dataset descriptor (dataset.yaml or dataset.json) with at least `id` and `path` and add it to the top-level `datasets:` configuration if applicable.
+
+3. Install dependencies and prepare data (the data preparation step compiles and runs the md->JSON converter):
+
+```bash
+npm install
+npm run data:prepare -- --dataset my-comparison
+```
+
+4. Start the demo locally or build for production using the repository scripts:
+
+```bash
+npm run dev -- --dataset my-comparison
+# or
+npm run build -- --dataset my-comparison
+```
+
+See `docs/uc-v3/` for examples, configuration details and migration guidance from v2.
 
 ### Configuration
 

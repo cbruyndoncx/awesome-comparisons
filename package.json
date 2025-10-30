@@ -24,7 +24,7 @@
     "lib"
   ],
   "bin": {
-    "uc": "./lib/uc/uc"
+    "awcmp-cli": "./lib/awcmp-cli/awcmp-cli"
   },
   "license": "MIT",
   "repository": {

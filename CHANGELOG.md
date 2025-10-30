@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+### v3 (draft)
+
+- Forked to v3 to add multi-dataset support, dataset-aware tooling, and a TypeScript md2json converter (no Java dependency).
+- Updated demo & docs publishing to support dataset-scoped pages under `docs/` or `public/`.
+- Breaking changes: build outputs and internal APIs are dataset-aware. See `CHANGELOG_V3.md` and `RELEASE_NOTES_V3.md` for migration guidance.
+
+
 ### Removed
 
 - Java/Gradle md-to-json pipeline retired in favor of the MD_TO_JSON_COMMAND-driven Python workflow.
