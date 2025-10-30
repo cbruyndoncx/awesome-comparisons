@@ -6,7 +6,7 @@ DIR="$(dirname "$(readlink -f "$0")")"
 
 print_usage() {
   cat <<'USAGE'
-Usage: uc <command> [options]
+Usage: awcmp-cli <command> [options]
 
 Commands:
   setup            Scaffold a new v3 dataset non-interactively
@@ -24,9 +24,9 @@ setup options:
   -h, --help               Show this help
 
 Examples:
-  uc setup --dataset-id my-comparison --dataset-path datasets/my-comparison --name "My Comparison"
-  uc start
-  uc dev
+  awcmp-cli setup --dataset-id my-comparison --dataset-path datasets/my-comparison --name "My Comparison"
+  awcmp-cli start
+  awcmp-cli dev
 USAGE
 }
 
