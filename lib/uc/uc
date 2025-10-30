@@ -1,48 +1,229 @@
-#! /bin/bash
+#!/bin/bash
+set -euo pipefail
 
 CWD=$(pwd)
 DIR="$(dirname "$(readlink -f "$0")")"
 
-setup () {
-  cp -r ${DIR}/../../data ${CWD}/
-  cp -r ${DIR}/../../configuration ${CWD}/
+print_usage() {
+  cat <<'USAGE'
+Usage: uc <command> [options]
 
-  cp ${DIR}/LICENSE ${CWD}/
-  cp ${DIR}/.editorconfig ${CWD}/
-  cp ${DIR}/.travis.yml ${CWD}/
-  cp ${DIR}/gitignore.template ${CWD}/.gitignore
-  cp ${DIR}/package.json ${CWD}/package.json
-  cp ${DIR}/README.md ${CWD}/
+Commands:
+  setup            Scaffold a new v3 dataset non-interactively
+  start            Run npm start in the current directory (data prepare + serve)
+  dev              Run the dev workflow (watch data + serve)
 
-  echo "What is the name of your comparison?"
-  read -e NAME
-  if [[ ${NAME} == "" ]]; then
-      NAME="ultimate-comparison-project"
-  fi
-  echo "What is the version of your comparison?"
-  read -e VERS
-  if [[ ${VERS} == "" ]]; then
-      VERS="0.0.0"
-  fi
-  echo "How would you describe your comparison?"
-  read -e DESC
-  sed -i "s/##name/${NAME}/" ${CWD}/package.json
-  sed -i "s/##description/${DESC}/" ${CWD}/package.json
-  sed -i "s/##version/${VERS}/" ${CWD}/package.json
-  npm install
-  npm i github:cbruyndoncx/ultimate-comparison-framework#feature-grouping
+setup options:
+  --name NAME              Project name (defaults: ultimate-comparison-project)
+  --version VERSION        Project version (defaults: 0.0.0)
+  --description DESC       Project description (optional)
+  --dataset-id ID          Dataset id (defaults: default)
+  --dataset-path PATH      Dataset path relative to repo root (defaults: datasets/default)
+  --force                  Overwrite existing files/directories where applicable
+  --with-feature-grouping  Install optional feature-grouping dependency from GitHub (off by default)
+  -h, --help               Show this help
+
+Examples:
+  uc setup --dataset-id my-comparison --dataset-path datasets/my-comparison --name "My Comparison"
+  uc start
+  uc dev
+USAGE
 }
 
-start () {
+# Defaults
+CMD=""
+NAME="ultimate-comparison-project"
+VERS="0.0.0"
+DESC=""
+DATASET_ID="default"
+DATASET_PATH="datasets/default"
+FORCE=0
+WITH_FEATURE=0
+
+if [ $# -eq 0 ]; then
+  print_usage
+  exit 0
+fi
+
+# Accept first token as command if it is setup/start/dev otherwise parse flags
+case "$1" in
+  setup|start|dev)
+    CMD="$1"
+    shift
+    ;;
+  -h|--help)
+    print_usage
+    exit 0
+    ;;
+  *)
+    echo "Unknown or missing command: $1"
+    print_usage
+    exit 1
+    ;;
+esac
+
+# parse remaining args (only for setup)
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --name)
+      NAME="$2"; shift 2;;
+    --version)
+      VERS="$2"; shift 2;;
+    --description)
+      DESC="$2"; shift 2;;
+    --dataset-id)
+      DATASET_ID="$2"; shift 2;;
+    --dataset-path)
+      DATASET_PATH="$2"; shift 2;;
+    --force)
+      FORCE=1; shift;;
+    --with-feature-grouping)
+      WITH_FEATURE=1; shift;;
+    -h|--help)
+      print_usage; exit 0;;
+    *)
+      echo "Unknown option: $1"; print_usage; exit 1;;
+  esac
+done
+
+setup() {
+  echo "Scaffolding dataset '$DATASET_ID' at path '$DATASET_PATH'"
+
+  TARGET_DIR="$CWD/$DATASET_PATH"
+  TARGET_DATA_DIR="$TARGET_DIR/data"
+  TARGET_CONFIG_DIR="$TARGET_DIR/configuration"
+
+  if [ -e "$TARGET_DIR" ] && [ $FORCE -ne 1 ]; then
+    echo "Target dataset path already exists: $TARGET_DIR"
+    echo "Use --force to overwrite or choose a different --dataset-path"
+    exit 1
+  fi
+
+  mkdir -p "$TARGET_DATA_DIR"
+  mkdir -p "$TARGET_CONFIG_DIR"
+
+  # Copy sample data files into dataset data directory (if available)
+  if [ -d "${DIR}/../../data" ]; then
+    echo "Copying template data into $TARGET_DATA_DIR"
+    cp -r ${DIR}/../../data/* "$TARGET_DATA_DIR/" 2>/dev/null || true
+  fi
+
+  # Copy a dataset-local configuration if present
+  if [ -f "${DIR}/../../configuration/comparison-default.yml" ]; then
+    echo "Copying comparison-default.yml into $TARGET_CONFIG_DIR"
+    cp ${DIR}/../../configuration/comparison-default.yml "$TARGET_CONFIG_DIR/" || true
+  fi
+
+  # Copy a description template into the dataset root if available
+  if [ -f "${DIR}/../../dist/description.md" ]; then
+    echo "Copying description.md into $TARGET_DIR"
+    cp ${DIR}/../../dist/description.md "$TARGET_DIR/description.md" || true
+  fi
+
+  # Create dataset descriptor
+  DESCRIPTOR_FILE="$TARGET_DIR/dataset.yaml"
+  if [ -e "$DESCRIPTOR_FILE" ] && [ $FORCE -ne 1 ]; then
+    echo "Descriptor already exists at $DESCRIPTOR_FILE"
+  else
+    cat > "$DESCRIPTOR_FILE" <<EOF
+name: ${NAME}
+id: ${DATASET_ID}
+path: ${DATASET_PATH}
+title: "${NAME}"
+EOF
+    echo "Wrote dataset descriptor: $DESCRIPTOR_FILE"
+  fi
+
+  # Copy root-level helper files into CWD (only if missing or --force)
+  copy_if_missing() {
+    src="$1"
+    dest="$2"
+    if [ -z "$src" ] || [ ! -e "$src" ]; then
+      return
+    fi
+    if [ -e "$dest" ] && [ $FORCE -ne 1 ]; then
+      echo "Skipping existing $dest"
+    else
+      echo "Copying $src -> $dest"
+      cp -r "$src" "$dest"
+    fi
+  }
+
+  copy_if_missing "${DIR}/../../LICENSE" "$CWD/LICENSE"
+  copy_if_missing "${DIR}/../../.editorconfig" "$CWD/.editorconfig"
+  copy_if_missing "${DIR}/../../.travis.yml" "$CWD/.travis.yml"
+  # gitignore.template -> .gitignore if .gitignore missing
+  if [ -e "${DIR}/../../gitignore.template" ]; then
+    if [ -e "$CWD/.gitignore" ] && [ $FORCE -ne 1 ]; then
+      echo "Skipping existing .gitignore"
+    else
+      echo "Installing .gitignore from template"
+      cp "${DIR}/../../gitignore.template" "$CWD/.gitignore"
+    fi
+  fi
+
+  # Copy package.json and README.md only if not present (or force)
+  if [ -e "$CWD/package.json" ] && [ $FORCE -ne 1 ]; then
+    echo "package.json already exists in current directory; skipping overwrite"
+  else
+    if [ -f "${DIR}/../../package.json" ]; then
+      echo "Copying package.json into $CWD"
+      cp "${DIR}/../../package.json" "$CWD/package.json"
+      # Replace placeholder values if present
+      sed -i "s/##name/${NAME}/g" "$CWD/package.json" || true
+      sed -i "s/##description/${DESC}/g" "$CWD/package.json" || true
+      sed -i "s/##version/${VERS}/g" "$CWD/package.json" || true
+    fi
+  fi
+
+  if [ -e "$CWD/README.md" ] && [ $FORCE -ne 1 ]; then
+    echo "README.md already exists; skipping"
+  else
+    if [ -f "${DIR}/../../README.md" ]; then
+      echo "Copying README.md into $CWD"
+      cp "${DIR}/../../README.md" "$CWD/README.md"
+    fi
+  fi
+
+  # Run npm install to populate node_modules in the project root
+  if [ -f "$CWD/package.json" ]; then
+    echo "Running npm install in $CWD (this may take a while)"
+    (cd "$CWD" && npm install)
+    if [ $WITH_FEATURE -eq 1 ]; then
+      echo "Installing optional feature-grouping dependency from GitHub"
+      (cd "$CWD" && npm i github:cbruyndoncx/ultimate-comparison-framework#feature-grouping)
+    fi
+  else
+    echo "No package.json found in $CWD; skipping npm install"
+  fi
+
+  echo "Setup finished. Dataset '$DATASET_ID' created at: $TARGET_DIR"
+  echo "To prepare data and run the app locally:"
+  echo "  npm run data:prepare -- --dataset ${DATASET_ID}"
+  echo "  npm run dev -- --dataset ${DATASET_ID}  # or npm run build -- --dataset ${DATASET_ID}"
+}
+
+start() {
   npm start
 }
 
-dev () {
+dev() {
   npm run dev
 }
 
-if [[ "$1" != "setup" ]] &&  [[ "$1" != "start" ]] &&  [[ "$1" != "dev" ]]; then
-    echo "Invalid command, please use 'uc setup' or 'uc start' or 'uc dev"
-else
-    eval ${1}
-fi
+case "$CMD" in
+  setup)
+    setup
+    ;;
+  start)
+    start
+    ;;
+  dev)
+    dev
+    ;;
+  *)
+    echo "Unknown command: $CMD"
+    print_usage
+    exit 1
+    ;;
+esac
