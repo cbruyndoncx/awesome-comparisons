@@ -12,11 +12,10 @@ export class CriteriaData {
   public urlList: Array<string>;
   public rating: number;
   public html: string;
-  public latex: string;
   public summaryText: string;
   public tableText: string;
 
-  constructor(name: string, text: string, labels: Map<string, Label>, type?: CriteriaTypes, url?: string, html?: string, latex?: string);
+  constructor(name: string, text: string, labels: Map<string, Label>, type?: CriteriaTypes, url?: string, html?: string);
 
   public static loadJson(json, criteria: Criteria): CriteriaData;
 

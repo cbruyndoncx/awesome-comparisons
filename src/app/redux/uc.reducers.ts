@@ -99,15 +99,8 @@ export function masterReducer(state: IUCAppState = new UcAppState(), action: UCA
                     break;
             }
             switch (act.operation) {
-                case 'LatexDisplayTable':
-                    state.latexDisplayTable = act.enable;
-                    break;
-                case 'LatexEnableTooltips':
-                    state.latexEnableTooltips = act.enable;
-                    break;
-                case 'LatexTooltipsAsFootnotes':
-                    state.latexTooltipsAsFootnotes = act.enable;
-                    break;
+                // Latex-related settings removed in v3
+
                 case 'SettingsOpenChange':
                     if (!act.enable && !state.columnDisplayAll) {
                         state.columnsEnabledCache = state.columnsEnabled;

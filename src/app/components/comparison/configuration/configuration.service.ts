@@ -120,12 +120,6 @@ export class ConfigurationService {
         return renderMarkdown(markdown.toString());
     }
 
-    static getLatex(text: string): string {
-        if (isNullOrUndefined(text)) {
-            return null;
-        }
-        return renderMarkdownToText(text.toString());
-    }
 
     public loadComparison(cd: ChangeDetectorRef) {
         this.latestChangeDetector = cd;
@@ -232,9 +226,7 @@ export class ConfigurationService {
                 dataElement.html = ConfigurationService.getHtml(
                     dataElement.shortDescription
                 );
-                dataElement.latex = ConfigurationService.getLatex(
-                    dataElement.shortDescription
-                );
+
                 dataElement.criteriaData = Array.from(dataElement.criteriaData).map(([key, criteriaData]) => {
                     const criteria = this.configuration.getCriteria(criteriaData.name);
                     switch (criteriaData.type) {
@@ -243,9 +235,7 @@ export class ConfigurationService {
                             criteriaData.html = ConfigurationService.getHtml(
                                 criteriaData.text
                             );
-                            criteriaData.latex = ConfigurationService.getLatex(
-                                criteriaData.text
-                            );
+
                             const markdownSummary = ConfigurationService.buildSummary(criteriaData.text);
                             const markdownFallback = renderMarkdownToText(criteriaData.text || '').split('\n').map(line => line.trim()).filter(line => line.length > 0);
                             criteriaData.summaryText = markdownSummary;
