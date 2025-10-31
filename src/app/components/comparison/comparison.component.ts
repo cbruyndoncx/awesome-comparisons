@@ -24,7 +24,6 @@ export class ComparisonComponent {
     public filtersCollapsed: boolean = true;
 
     @ViewChild('genericTableHeader') genericTableHeader: PaperCardComponent;
-    public downloadXlsx = this.downloadXlsx.bind(this);
     public activeRow: DataElement = new DataElement('placeholder', '', '', new Map());
 
     public detailsOpen: boolean = false;
@@ -116,7 +115,7 @@ export class ComparisonComponent {
             rows.push(row);
         }
         // Use dynamic import to avoid loading xlsx for every user if not used
-        import('xlsx').then(XLSX => {
+        import('xlsx').then((XLSX: any) => {
             const ws = XLSX.utils.aoa_to_sheet(rows);
             const wb = XLSX.utils.book_new();
             XLSX.utils.book_append_sheet(wb, ws, 'Comparisons');
@@ -293,4 +292,9 @@ export class ComparisonComponent {
         this.collapsedFilterGroups = nextState;
 
     // rest omitted for brevity
+
+    private relevantFilterGroups(groups: FeatureGroupView[] = []): FeatureGroupView[] {
+        return (groups || []).filter(group => !!group && !group.isExcluded && this.groupHasSearchableChildren(group));
+    }
 }
+

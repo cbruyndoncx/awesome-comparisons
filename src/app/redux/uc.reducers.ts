@@ -246,10 +246,7 @@ function initSettings(state: IUCAppState): IUCAppState {
     // Set column settings
     state = initColumn(state);
 
-    // Set latex settings
-    state.latexDisplayTable = false;
-    state.latexEnableTooltips = false;
-    state.latexTooltipsAsFootnotes = false;
+    // LaTeX settings removed in v3 (kept for historical reference)
 
     return state;
 }
