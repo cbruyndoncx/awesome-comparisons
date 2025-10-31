@@ -23,6 +23,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 6px;
+    color: inherit;
 }
 
 :host(.row-actions__icon):hover,
