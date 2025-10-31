@@ -3,7 +3,6 @@ import { BrowserModule } from "@angular/platform-browser";
 import { PipesModule } from "./../pipes/pipes.module";
 import { PolymerModule } from "./../polymer/polymer.module";
 import { GenericTableComponent } from "./generic-table/generic-table.component";
-import { LatexTableComponent } from './latex-table/latex-table.component';
 import { FootnoteComponent } from "./footnote/footnote.component";
 
 @NgModule({
@@ -14,13 +13,11 @@ import { FootnoteComponent } from "./footnote/footnote.component";
     ],
     exports: [
         GenericTableComponent,
-        PolymerModule,
-        LatexTableComponent
+        PolymerModule
     ],
     declarations: [
         FootnoteComponent,
-        GenericTableComponent,
-        LatexTableComponent
+        GenericTableComponent
     ],
     providers: []
 })

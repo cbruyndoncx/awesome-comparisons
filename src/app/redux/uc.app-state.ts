@@ -89,10 +89,6 @@ export interface IUCAppState {
     groupExpanded: { [key: string]: boolean };
     groupColumnLookup: { [columnId: string]: string };
 
-    latexDisplayTable: boolean;
-    latexEnableTooltips: boolean;
-    latexTooltipsAsFootnotes: boolean;
-
     detailsOpen: boolean;
     detailsData: DataElement;
 
@@ -120,10 +116,6 @@ export class UcAppState implements IUCAppState {
     featureGroups: Array<FeatureGroupView> = [];
     groupExpanded: { [key: string]: boolean } = {};
     groupColumnLookup: { [columnId: string]: string } = {};
-
-    latexDisplayTable = false;
-    latexEnableTooltips = false;
-    latexTooltipsAsFootnotes = false;
 
     detailsOpen = false;
     detailsData = null;
