@@ -1,1 +1,0 @@
-Terminal CLI only coding tools

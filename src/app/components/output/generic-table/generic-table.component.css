@@ -102,10 +102,6 @@ table tr {
     background: rgba(0,0,0,0.04);
 }
 
-    white-space: normal;
-    line-height: 1em;
-}
-
 table {
     width: auto;
     color: var(--text-color, #333333);
@@ -120,6 +116,10 @@ table {
 .row-actions__link {
     display: inline-flex;
     align-items: center;
+}
+
+.row-actions__icon, .row-actions__icon-button {
+    color: var(--grouping-expanded-header-text) !important;
 }
 
 .group-panel {
