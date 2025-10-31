@@ -12,6 +12,7 @@ import { FeatureGroupView } from '../../../models/feature-grouping.model';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GenericTableComponent implements AfterViewChecked, OnChanges {
+    @Output() xlsxDownload: EventEmitter<any> = new EventEmitter();
     @Input() changeNum = 0;
 
     @Output() settingsCallback: EventEmitter<any> = new EventEmitter();
@@ -41,6 +42,8 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
                 private featureGroupingService: FeatureGroupingService) {
         this.groups$ = this.featureGroupingService.getGroups();
         this.columnGroupMap$ = this.featureGroupingService.getColumnGroupMap();
+        // Wire generic table XLSX event to a local handler that emits to parent
+        this.xlsxDownload = new EventEmitter();
     }
 
     public labelClick(event: MouseEvent, key: Label, index: number) {
@@ -77,10 +80,49 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
             return null;
         }
         const element = this.dataElements[rowIndex];
-        if (!element || !element.editLink) {
+        if (!element) {
             return null;
         }
-        return element.editLink;
+        // Prefer the canonical editLink if present
+        if (element.editLink) {
+            return element.editLink;
+        }
+        // If a debug source path was exposed by the configuration service, build a best-effort link
+        const debugPath = (element as any)._debug_sourcePath || (element as any).sourcePath;
+        if (typeof debugPath === 'string' && debugPath.trim().length > 0) {
+            const base = (typeof window !== 'undefined' && (window as any)['UC_EDIT_LINK_BASE_URL'])
+                ? String((window as any)['UC_EDIT_LINK_BASE_URL'])
+                : 'https://github.com/ultimate-comparisons/ultimate-comparison-framework/blob/main/';
+            const segments = String(debugPath).split('/').map(s => s.trim()).filter(s => s && s !== '.');
+            if (segments.length === 0) {
+                return null;
+            }
+            const encoded = segments.map(seg => encodeURIComponent(seg)).join('/');
+            return base.replace(/\/+$|(?<!\/)$/, '') + (base.endsWith('/') ? '' : '/') + encoded;
+        }
+        return null;
+    }
+
+    public getEditLinkForRow(itemIndex: number): { link: string | null, debug: string | null, rowIndex: number } {
+        const rowIndex = this.getRowIndex(itemIndex);
+        const el = Array.isArray(this.dataElements) ? this.dataElements[rowIndex] : null;
+        const link = this.resolveEditLink(rowIndex);
+        let rawDebug: any = el ? (el.editLink || (el as any)._debug_sourcePath || (el as any).sourcePath || null) : null;
+        let debug: string | null = null;
+        if (rawDebug == null) {
+            debug = null;
+        } else if (typeof rawDebug === 'string') {
+            debug = rawDebug;
+        } else if (rawDebug instanceof Map) {
+            try { debug = Array.from(rawDebug.values()).join('/'); } catch (e) { debug = JSON.stringify(Array.from(rawDebug.entries())); }
+        } else if (Array.isArray(rawDebug)) {
+            debug = rawDebug.join('/');
+        } else if (typeof rawDebug === 'object') {
+            try { debug = JSON.stringify(rawDebug); } catch (e) { debug = String(rawDebug); }
+        } else {
+            debug = String(rawDebug);
+        }
+        return {link, debug, rowIndex};
     }
 
     ngAfterViewChecked(): void {
@@ -91,6 +133,16 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
 
     ngOnChanges(changes): void {
         this.update();
+    }
+
+    public getRowIndex(itemIndex: number): number {
+        if (!Array.isArray(this.index)) {
+            return itemIndex;
+        }
+        if (typeof itemIndex !== 'number') {
+            return itemIndex as any as number;
+        }
+        return (itemIndex >= 0 && itemIndex < this.index.length) ? this.index[itemIndex] : itemIndex;
     }
 
     public hasLabelFill(entry: CriteriaData | null | undefined): boolean {
@@ -149,14 +201,82 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
         this.anchorsInitialised = true;
     }
 
+    public openEdit(itemIndex: number) {
+        const rowIndex = this.getRowIndex(itemIndex);
+        const el = Array.isArray(this.dataElements) ? this.dataElements[rowIndex] : null;
+        const details = this.getEditLinkForRow(itemIndex);
+        console.log('openEdit: rowIndex=', details.rowIndex, 'link=', details.link, 'debug=', details.debug, 'element.sourcePath=', el ? (el as any).sourcePath : null);
+        // if we have a link open it
+        if (details.link) {
+            window.open(details.link, '_blank');
+            return;
+        }
+        // otherwise try to expose debug path or raw sourcePath
+        let raw = details.debug as any;
+        if (!raw && el) {
+            raw = (el as any)._debug_sourcePath || (el as any).sourcePath || null;
+        }
+        const serialized = this.serializeSourcePath(raw);
+        if (serialized) {
+            try {
+                navigator.clipboard.writeText(serialized);
+                alert('Edit source path copied to clipboard: ' + serialized);
+            } catch (e) {
+                // fallback: show prompt with the value
+                // eslint-disable-next-line no-undef
+                window.prompt('Edit source path (copy manually):', serialized);
+            }
+            return;
+        }
+        alert('No edit link or sourcePath available for this row.');
+    }
+
+    private serializeSourcePath(raw: any): string | null {
+        if (raw == null) return null;
+        if (typeof raw === 'string') return raw;
+        if (raw instanceof Map) {
+            try {
+                // prefer values joined
+                const vals = Array.from(raw.values()).map(v => String(v));
+                if (vals.length > 0) return vals.join('/');
+                // fallback to entries
+                return JSON.stringify(Array.from(raw.entries()));
+            } catch (e) {
+                return String(raw);
+            }
+        }
+        if (Array.isArray(raw)) {
+            return raw.map(r => (typeof r === 'string' ? r : JSON.stringify(r))).join('/');
+        }
+        if (typeof raw === 'object') {
+            // common shape: { segments: [...] }
+            if (Array.isArray((raw as any).segments)) {
+                return (raw as any).segments.map((s: any) => String(s)).join('/');
+            }
+            try { return JSON.stringify(raw); } catch (e) { return String(raw); }
+        }
+        return String(raw);
+    }
+
     private extractLabels(entry: CriteriaData | null | undefined): Label[] {
         if (!entry) {
             return [];
         }
-        const labelArray = (entry as unknown as {labelArray?: Array<Label | null | undefined>}).labelArray;
-        if (!Array.isArray(labelArray)) {
+        const labelArray = (entry as unknown as {labelArray?: Array<Label | null | undefined>}).labelArray || (entry as unknown as {labels?: any}).labels;
+        if (!labelArray) {
             return [];
         }
-        return labelArray.filter((label): label is Label => !!label);
+        if (Array.isArray(labelArray)) {
+            return labelArray.filter((l): l is Label => !!l);
+        }
+        // Map-like
+        if (typeof labelArray === 'object' && typeof (labelArray as any).values === 'function') {
+            return Array.from((labelArray as any).values()).filter((l): l is Label => !!l);
+        }
+        // plain object
+        if (typeof labelArray === 'object') {
+            return Object.values(labelArray).filter((l): l is Label => !!l);
+        }
+        return [];
     }
 }

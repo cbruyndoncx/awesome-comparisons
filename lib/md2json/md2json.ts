@@ -334,22 +334,22 @@ export class Md2Json {
           const jsonData = this.convertMarkdownToJson(content);
 
           if (jsonData) {
-            // Add sourcePath field for aggregated output
+            // Add sourcePath field for aggregated output (normalize to string)
             const entryWithSourcePath = {
               ...jsonData,
-              sourcePath: file.relative
+              sourcePath: (typeof file.relative === 'string' ? file.relative : String(file.relative))
             };
 
-            // Write each converted entry as JSON to tmp directory
-            const jsonFileName = file.relative.replace(/\.md$/i, '.json');
+            // Write each converted entry as JSON to tmp directory (write the normalized entry)
+            const jsonFileName = (typeof file.relative === 'string' ? file.relative : String(file.relative)).replace(/\.md$/i, '.json');
             const jsonFilePath = path.join(tmpDir, jsonFileName);
             const jsonDir = path.dirname(jsonFilePath);
             if (!fs.existsSync(jsonDir)) {
               fs.mkdirSync(jsonDir, { recursive: true });
             }
             const jsonString = this.pretty
-              ? JSON.stringify(jsonData, null, 2)
-              : JSON.stringify(jsonData);
+              ? JSON.stringify(entryWithSourcePath, null, 2)
+              : JSON.stringify(entryWithSourcePath);
 
             fs.writeFileSync(jsonFilePath, jsonString);
             allEntries.push(entryWithSourcePath);

@@ -47,9 +47,13 @@
                         </button>
                     </th>
                 </ng-template>
-                <th name="details" width="30px">
-                    <picon-button icon="settings" [showTooltip]="false" title="Settings"
-                                  (click)="settingsCallback.emit()"></picon-button>
+                <th name="details" width="60px">
+                    <div class="row-actions__header">
+                        <picon-button class="row-actions__icon" icon="file_download" [showTooltip]="false" title="Download XLSX" aria-label="Download XLSX"
+                                      (click)="xlsxDownload.emit({ columns: columns, columnKeys: columnKeys, items: items, index: index, types: types, dataElements: dataElements })"></picon-button>
+                        <picon-button class="row-actions__icon" icon="settings" [showTooltip]="false" title="Settings" aria-label="Settings"
+                                      (click)="settingsCallback.emit()"></picon-button>
+                    </div>
                 </th>
             </tr>
             </thead>
@@ -127,15 +131,19 @@
                         </td>
                     </ng-template>
                     <td class="row-actions">
-                        <a *ngIf="resolveEditLink(index[itemIndex]) as editLink"
-                           class="row-actions__link"
-                           [href]="editLink"
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           title="Edit source"
-                           aria-label="Edit source">
-                            <picon-button icon="edit" [showTooltip]="false"></picon-button>
-                        </a>
+                        <ng-container *ngIf="resolveEditLink(getRowIndex(itemIndex)) as editLink; else noEdit">
+                            <a class="row-actions__link"
+                               [href]="editLink"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               title="Edit source"
+                               aria-label="Edit source">
+                                <picon-button icon="edit" [showTooltip]="false"></picon-button>
+                            </a>
+                        </ng-container>
+                        <ng-template #noEdit>
+                            <picon-button icon="edit" [showTooltip]="false" title="Edit source" (click)="openEdit(itemIndex)"></picon-button>
+                        </ng-template>
                         <picon-button icon="info" [showTooltip]="false" title="Details"
                                       (click)="showDetails.emit(index[itemIndex])"></picon-button>
                     </td>

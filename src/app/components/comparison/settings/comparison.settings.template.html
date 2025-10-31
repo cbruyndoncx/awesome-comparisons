@@ -70,18 +70,6 @@
     </pcard>
 
     <pcard [heading]="'Other'">
-        <h5>Export</h5>
-        <pitem>
-            <pbutton (click)="xlsxDownload.emit($event)">
-                <div class="icon">
-                    <svg viewBox="0 0 24 24" width="14" height="14">
-                        <path fill="#fff" d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18h14v2H5z"/>
-                    </svg>
-                </div>
-                <span>Download XLSX</span>
-            </pbutton>
-        </pitem>
-
         <h5>Labels</h5>
         <pitem>
             <pcheckbox [checked]="labelColorsEnabled"

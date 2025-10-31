@@ -138,6 +138,13 @@ table {
     gap: 12px;
 }
 
+.row-actions__header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: flex-end;
+}
+
 .group-panel__table {
     border-radius: 10px;
     background: var(--card-background, #ffffff);

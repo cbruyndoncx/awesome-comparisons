@@ -23,7 +23,7 @@
                     <button type="button"
                             class="select-toolbar__button"
                             (click)="setAllGroupCollapse(vm.state.featureGroups, true)"
-                            [disabled]="areAllFilterGroupsCollapsed(vm.state.featureGroups)">
+                            [disabled]="safeAreAllGroupsCollapsed(vm.state.featureGroups)">
                         Collapse all
                     </button>
                     <button type="button"
@@ -168,7 +168,8 @@
                       (settingsCallback)="settingsOpen = true"
                       (showDetails)="showDetails($event)"
                       (orderChange)="changeOrder($event)"
-                      (searchFor)="criteriaClicked($event)"></generictable>
+                      (searchFor)="criteriaClicked($event)"
+                      (xlsxDownload)="downloadXlsxFromTable($event)"></generictable>
     </div>
     <pdialog [opened]="vm.state.detailsOpen" *ngIf="vm.state.detailsOpen"
              (openedChange)="closeDetails()">
@@ -199,6 +200,7 @@
             (elementChange)="store.dispatch({type: 'UPDATE_SETTINGS', value: $event, operation: 'ElementChange'})"
             (detailsDisplayTooltipsChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'DetailsDisplayTooltips'})"
             (labelColorsEnabledChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'LabelColorsEnabled'})"
+            (xlsxDownload)="downloadXlsx()"
         ></comparison-settings>
     </pdialog>
 

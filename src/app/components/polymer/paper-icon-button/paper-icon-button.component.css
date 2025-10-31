@@ -17,3 +17,15 @@
     box-sizing: border-box !important;
     color: var(--text-color, #424242);
 }
+
+:host(.row-actions__icon) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+:host(.row-actions__icon):hover,
+:host(.row-actions__icon):focus {
+    background: rgba(0,0,0,0.04);
+}

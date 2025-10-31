@@ -221,6 +221,19 @@ export class ConfigurationService {
         ConfigurationService.data = Data.loadJson(dataSource, this.configuration);
         const activeDataset = this.currentDataset;
         const editLinkBase = this.resolveEditLinkBase(activeDataset);
+        // Debug: inspect sourcePath types for first elements to catch malformed values
+        try {
+            ConfigurationService.data.dataElements.slice(0, 10).forEach((de, idx) => {
+                try {
+                    console.debug(`hydrate: dataElement[${idx}] sourcePath type=`, Object.prototype.toString.call(de.sourcePath), 'raw=', de.sourcePath);
+                } catch (e) {
+                    console.debug(`hydrate: dataElement[${idx}] sourcePath inspect failed`, e);
+                }
+            });
+        } catch (e) {
+            // ignore
+        }
+
         ConfigurationService.data.dataElements = ConfigurationService.data.dataElements.map(dataElement => {
                 // Build html strings and labelArrays
                 dataElement.html = ConfigurationService.getHtml(
@@ -277,6 +290,25 @@ export class ConfigurationService {
                     return map;
                 }, new Map());
                 dataElement.editLink = this.buildEditLink(dataElement, activeDataset, editLinkBase);
+                if (!dataElement.editLink) {
+                    // debug: expose normalized sourcePath so we can inspect missing edit links in the UI during dev
+                    const sp: any = dataElement.sourcePath;
+                    let debugValue: string | null = null;
+                    if (typeof sp === 'string') {
+                        debugValue = sp;
+                    } else if (Array.isArray(sp)) {
+                        debugValue = sp.join('/');
+                    } else if (sp instanceof Map) {
+                        try { debugValue = Array.from(sp.values()).join('/'); } catch(e) { debugValue = JSON.stringify(Array.from(sp.entries())); }
+                    } else if (sp && typeof sp === 'object') {
+                        if (Array.isArray((sp as any).segments)) {
+                            debugValue = (sp as any).segments.join('/');
+                        } else {
+                            try { debugValue = JSON.stringify(sp); } catch(e) { debugValue = String(sp); }
+                        }
+                    }
+                    (dataElement as any)._debug_sourcePath = debugValue;
+                }
                 return dataElement;
             }
         );
@@ -375,19 +407,48 @@ export class ConfigurationService {
         if (isNullOrUndefined(dataElement) || isNullOrUndefined(dataElement.sourcePath) || dataElement.sourcePath === '') {
             return null;
         }
-        const sourceSegments = ConfigurationService.splitPath(dataElement.sourcePath);
+        // Normalize sourcePath to a string when it's not already
+        let rawPath: any = dataElement.sourcePath;
+        let sourcePathStr: string | null = null;
+        if (typeof rawPath === 'string') {
+            sourcePathStr = rawPath;
+        } else if (Array.isArray(rawPath)) {
+            sourcePathStr = rawPath.join('/');
+        } else if (rawPath instanceof Map) {
+            try { sourcePathStr = Array.from(rawPath.values()).join('/'); } catch (e) { sourcePathStr = JSON.stringify(Array.from(rawPath.entries())); }
+        } else if (rawPath && typeof rawPath === 'object') {
+            if (Array.isArray((rawPath as any).segments)) {
+                sourcePathStr = (rawPath as any).segments.join('/');
+            } else {
+                try { sourcePathStr = JSON.stringify(rawPath); } catch (e) { sourcePathStr = String(rawPath); }
+            }
+        } else {
+            sourcePathStr = String(rawPath);
+        }
+
+        if (!sourcePathStr) {
+            return null;
+        }
+
+        const sourceSegments = ConfigurationService.splitPath(sourcePathStr);
         if (sourceSegments.length === 0) {
             return null;
         }
         const canonicalSegments = this.resolveSourceSegmentsForDataset(dataset, sourceSegments);
         if (!canonicalSegments || canonicalSegments.length === 0) {
-            return null;
+            // Fallback: if we couldn't resolve canonical segments, attempt a best-effort URL using normalized string
+            const fallbackSegments = ConfigurationService.splitPath(sourcePathStr);
+            if (fallbackSegments.length === 0) {
+                return null;
+            }
+            const encodedFallback = fallbackSegments.map(segment => encodeURIComponent(segment));
+            return `${ConfigurationService.ensureTrailingSlash(editLinkBase)}${encodedFallback.join('/')}`;
         }
         const encodedSegments = canonicalSegments.map(segment => encodeURIComponent(segment));
         if (encodedSegments.length === 0) {
             return null;
         }
-        return `${editLinkBase}${encodedSegments.join('/')}`;
+        return `${ConfigurationService.ensureTrailingSlash(editLinkBase)}${encodedSegments.join('/')}`;
     }
 
     private resolveSourceSegmentsForDataset(dataset: DatasetManifestEntry | null, sourceSegments: string[]): string[] | null {
@@ -474,11 +535,11 @@ export class ConfigurationService {
         return value.replace(/\/+$/, '') + '/';
     }
 
-    private static splitPath(path: string): string[] {
-        if (isNullOrUndefined(path)) {
+    private static splitPath(p: any): string[] {
+        if (isNullOrUndefined(p) || typeof p !== 'string') {
             return [];
         }
-        return path
+        return p
             .split('/')
             .map(segment => segment.trim())
             .filter(segment => segment.length > 0 && segment !== '.');

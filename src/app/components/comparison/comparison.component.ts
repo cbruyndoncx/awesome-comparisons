@@ -81,6 +81,101 @@ export class ComparisonComponent {
         }, 100);
     }
 
+    public downloadXlsxFromTable(payload: { columns?: string[]; columnKeys?: string[]; items?: any[]; index?: number[]; types?: string[]; dataElements?: any[] }) {
+        const baseColumns = payload?.columns || this.configurationService.tableColumns;
+        const items = payload?.items || [];
+        const types = payload?.types || [];
+        const indexMap = payload?.index || [];
+        const dataElements = payload?.dataElements || [];
+
+        // prepend element name/url so the spreadsheet includes element context
+        const columns = ['Element Name', 'Element URL', ...baseColumns];
+        const rows: any[] = [];
+        // header
+        rows.push(columns);
+
+        for (let ri = 0; ri < items.length; ri++) {
+            const item = items[ri] || [];
+            const rowIndex = (Array.isArray(indexMap) && typeof indexMap[ri] === 'number') ? indexMap[ri] : ri;
+            const element = dataElements && dataElements[rowIndex] ? dataElements[rowIndex] : null;
+            const row: any[] = [];
+            row.push(element ? (element.name || '') : '');
+            row.push(element ? (element.url || '') : '');
+
+            const columnKeys = payload?.columnKeys || [];
+        for (let ci = 0; ci < baseColumns.length; ci++) {
+            const entry = item[ci];
+            if (!entry) {
+                row.push('');
+                continue;
+            }
+            // Determine type using columnKeys -> configuration, or fallback to provided types
+            let t: string | undefined = undefined;
+            const key = columnKeys[ci];
+            if (key && this.configurationService.configuration) {
+                const crit = this.configurationService.configuration.getCriteria(key);
+                t = crit ? crit.type : undefined;
+            }
+            if (!t) {
+                t = (types && types[ci]) || (entry && (entry.type || entry.contentType));
+            }
+
+            if (t === 'LABEL') {
+                const labelsRaw = entry?.labelArray || entry?.labels || null;
+                let labels: any[] = [];
+                if (Array.isArray(labelsRaw)) {
+                    labels = labelsRaw;
+                } else if (labelsRaw && typeof labelsRaw === 'object' && typeof labelsRaw.entries === 'function') {
+                    // Map-like
+                    labels = Array.from(labelsRaw.values());
+                } else if (labelsRaw && typeof labelsRaw === 'object') {
+                    // plain object
+                    labels = Object.values(labelsRaw);
+                }
+                const text = labels.map((l: any) => (l && (l.display || l.name) ? (l.display || l.name) : '')).filter(Boolean).join('; ');
+                row.push(text);
+                continue;
+            }
+            if (t === 'REPOSITORY') {
+                if (Array.isArray(entry?.urlList) && entry.urlList.length > 0) {
+                    row.push(entry.urlList.join('; '));
+                    continue;
+                }
+            }
+            // prefer tableText, then summaryText, then text/content
+            const cell = entry?.tableText || entry?.summaryText || entry?.text || entry?.content || '';
+            row.push(cell);
+        }
+            rows.push(row);
+        }
+
+        import('xlsx').then((mod: any) => {
+            const XLSX = (mod && (mod.default || mod)) || mod;
+            console.debug('downloadXlsxFromTable: columns=', columns?.length, 'rows=', rows.length, 'moduleHasUtils=', !!(XLSX && XLSX.utils));
+            if (!XLSX || !XLSX.utils) {
+                console.error('downloadXlsxFromTable: xlsx module missing utils, module:', XLSX);
+                return;
+            }
+            try {
+                const ws = XLSX.utils.aoa_to_sheet(rows);
+                const wb = XLSX.utils.book_new();
+                XLSX.utils.book_append_sheet(wb, ws, 'Comparisons');
+                const wbout = XLSX.write(wb, {bookType: 'xlsx', type: 'array'});
+                const blob = new Blob([wbout], {type: 'application/octet-stream'});
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'comparisons.xlsx';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            } catch (err) {
+                console.error('Failed to create XLSX from table payload:', err);
+            }
+        }).catch(err => console.error('Failed to import xlsx module:', err));
+    }
+
     public downloadXlsx() {
         // Build a simple XLSX file from current table data using SheetJS (xlsx)
         const columns = this.configurationService.tableColumns;
@@ -115,19 +210,32 @@ export class ComparisonComponent {
             rows.push(row);
         }
         // Use dynamic import to avoid loading xlsx for every user if not used
-        import('xlsx').then((XLSX: any) => {
-            const ws = XLSX.utils.aoa_to_sheet(rows);
-            const wb = XLSX.utils.book_new();
-            XLSX.utils.book_append_sheet(wb, ws, 'Comparisons');
-            const wbout = XLSX.write(wb, {bookType: 'xlsx', type: 'array'});
-            const blob = new Blob([wbout], {type: 'application/octet-stream'});
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'comparisons.xlsx';
-            a.click();
-            window.URL.revokeObjectURL(url);
-        }).catch(err => console.error('Failed to create XLSX:', err));
+        import('xlsx').then((mod: any) => {
+            const XLSX = (mod && (mod.default || mod)) || mod;
+            console.debug('downloadXlsx: columns=', columns?.length, 'dataElements=', (items || []).length, 'moduleHasUtils=', !!(XLSX && XLSX.utils));
+            if (!XLSX || !XLSX.utils) {
+                console.error('downloadXlsx: xlsx module missing utils, module:', XLSX);
+                return;
+            }
+            try {
+                const ws = XLSX.utils.aoa_to_sheet(rows);
+                const wb = XLSX.utils.book_new();
+                XLSX.utils.book_append_sheet(wb, ws, 'Comparisons');
+                const wbout = XLSX.write(wb, {bookType: 'xlsx', type: 'array'});
+                const blob = new Blob([wbout], {type: 'application/octet-stream'});
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'comparisons.xlsx';
+                // append to body to increase chance the click works in all browsers
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            } catch (err) {
+                console.error('Failed to create XLSX:', err);
+            }
+        }).catch(err => console.error('Failed to import xlsx module:', err));
     }
 
     /**
@@ -237,6 +345,53 @@ export class ComparisonComponent {
         this.cd.markForCheck();
     }
 
+    public areAllFilterGroupsCollapsed(groups: FeatureGroupView[]): boolean {
+        const relevantGroups = this.relevantFilterGroups(groups);
+        const hasUngrouped = this.getUngroupedCriteria(groups).length > 0;
+        const groupsCollapsed = relevantGroups.length === 0 || relevantGroups.every(group => this.isGroupCollapsed(group));
+        const otherCollapsed = !hasUngrouped || this.isUngroupedCollapsed();
+        return groupsCollapsed && otherCollapsed;
+    }
+
+    // Backwards-compatible alias: some templates/components still call areAllGroupsCollapsed
+    public areAllGroupsCollapsed(groups: FeatureGroupView[]): boolean {
+        return this.areAllFilterGroupsCollapsed(groups);
+    }
+
+    // Safe wrappers for templates: some compiled templates or other code may have overwritten
+    // the identifier 'areAllGroupsCollapsed' with a non-function value at runtime. Use these
+    // wrappers in templates to avoid "is not a function" runtime errors.
+    public safeAreAllGroupsCollapsed(groups: FeatureGroupView[]): boolean {
+        const candidate: any = (this as any).areAllGroupsCollapsed;
+        if (typeof candidate === 'function') {
+            try { return candidate.call(this, groups); } catch (e) { return this.areAllFilterGroupsCollapsed(groups); }
+        }
+        if (typeof candidate === 'boolean') {
+            return candidate;
+        }
+        return this.areAllFilterGroupsCollapsed(groups);
+    }
+
+    public safeAreAllFilterGroupsExpanded(groups: FeatureGroupView[]): boolean {
+        const candidate: any = (this as any).areAllFilterGroupsExpanded;
+        if (typeof candidate === 'function') {
+            try { return candidate.call(this, groups); } catch (e) { return this.areAllFilterGroupsExpanded(groups); }
+        }
+        if (typeof candidate === 'boolean') {
+            return candidate;
+        }
+        return this.areAllFilterGroupsExpanded(groups);
+    }
+
+    public areAllFilterGroupsExpanded(groups: FeatureGroupView[]): boolean {
+        const relevantGroups = this.relevantFilterGroups(groups);
+        const hasUngrouped = this.getUngroupedCriteria(groups).length > 0;
+        const groupsExpanded = relevantGroups.length === 0 || relevantGroups.every(group => !this.isGroupCollapsed(group));
+        const otherExpanded = !hasUngrouped || !this.isUngroupedCollapsed();
+        return groupsExpanded && otherExpanded;
+    }
+
+
     public hasActiveFilters(searchState: Map<string, Set<string>>): boolean {
         if (!searchState) {
             return false;
@@ -291,10 +446,9 @@ export class ComparisonComponent {
         });
         this.collapsedFilterGroups = nextState;
 
-    // rest omitted for brevity
+    }
 
     private relevantFilterGroups(groups: FeatureGroupView[] = []): FeatureGroupView[] {
         return (groups || []).filter(group => !!group && !group.isExcluded && this.groupHasSearchableChildren(group));
     }
 }
-
