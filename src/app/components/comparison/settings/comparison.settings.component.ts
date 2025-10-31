@@ -19,10 +19,6 @@ export class ComparisonSettingsComponent {
     @Input() elementNames: Array<string> = [];
     @Input() elementsEnabled: Array<boolean> = [];
 
-    @Input() latexDisplayTable: boolean = false;
-    @Input() latexEnableTooltips: boolean = false;
-    @Input() latexTooltipsAsFootnotes: boolean = false;
-
     @Input() detailsDisplayTooltips: boolean = false;
     @Input() labelColorsEnabled: boolean = true;
 
@@ -32,10 +28,7 @@ export class ComparisonSettingsComponent {
     @Output() elementsDisplayAllChange: EventEmitter<boolean> = new EventEmitter<boolean>();
     @Output() elementChange: EventEmitter<number> = new EventEmitter<number>();
 
-    @Output() latexDisplayTableChange: EventEmitter<boolean> = new EventEmitter<boolean>();
-    @Output() latexEnableTooltipsChange: EventEmitter<boolean> = new EventEmitter<boolean>();
-    @Output() latexTooltipsAsFootnotesChange: EventEmitter<boolean> = new EventEmitter<boolean>();
-    @Output() latexDownload: EventEmitter<any> = new EventEmitter();
+    @Output() xlsxDownload: EventEmitter<any> = new EventEmitter();
 
     @Output() detailsDisplayTooltipsChange: EventEmitter<boolean> = new EventEmitter<boolean>();
     @Output() labelColorsEnabledChange: EventEmitter<boolean> = new EventEmitter<boolean>();
