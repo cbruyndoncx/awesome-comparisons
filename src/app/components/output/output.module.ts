@@ -23,3 +23,4 @@ import { FootnoteComponent } from "./footnote/footnote.component";
 })
 export class OutputModule {
 }
+
