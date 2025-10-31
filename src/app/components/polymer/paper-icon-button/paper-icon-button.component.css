@@ -15,7 +15,7 @@
     height: 26px;
 
     box-sizing: border-box !important;
-    color: var(--text-color, #424242);
+    color: inherit;
 }
 
 :host(.row-actions__icon) {
