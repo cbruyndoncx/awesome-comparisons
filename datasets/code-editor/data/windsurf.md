@@ -15,7 +15,8 @@ v1.0 (2025-10-19)
 - https://windsurf.ai
 
 ## Languages
-- Python, JavaScript/TypeScript, Go, Java, Ruby, C#, and most common programming languages (broad support via language-agnostic indexing)
+- Any
+  - Python, JavaScript/TypeScript, Go, Java, Ruby, C#, and most common programming languages (broad support via language-agnostic indexing)
 
 ## Extensible
 - Yes
