@@ -77,4 +77,5 @@
 
 # goose run --recipe research_aicoder_recipe.yaml --params topic="CodeCompanion.ai" # no more opensource 7.0.45 (Jun 1, 2025)
 
-goose run --recipe research_aicoder_recipe.yaml --params topic="EasyCode.ai" 
+#goose run --recipe research_aicoder_recipe.yaml --params topic="EasyCode.ai" 
+goose run --recipe research_aicoder_recipe.yaml --params topic="DeepAgent by Abacus.ai" 

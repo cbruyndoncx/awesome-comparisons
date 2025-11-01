@@ -21,6 +21,7 @@ export class ComparisonSettingsComponent {
 
     @Input() detailsDisplayTooltips: boolean = false;
     @Input() labelColorsEnabled: boolean = true;
+    @Input() templateDownloadDisabled: boolean = true;
 
     @Output() columnsDisplayAllChange: EventEmitter<boolean> = new EventEmitter<boolean>();
     @Output() columnChange: EventEmitter<number> = new EventEmitter<number>();
@@ -32,6 +33,7 @@ export class ComparisonSettingsComponent {
 
     @Output() detailsDisplayTooltipsChange: EventEmitter<boolean> = new EventEmitter<boolean>();
     @Output() labelColorsEnabledChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+    @Output() templateDownload: EventEmitter<void> = new EventEmitter<void>();
 
     constructor(private featureGroupingService: FeatureGroupingService) {
     }
@@ -73,6 +75,13 @@ export class ComparisonSettingsComponent {
             return '×';
         }
         return group.isExpanded ? '−' : '+';
+    }
+
+    public requestTemplateDownload(): void {
+        if (this.templateDownloadDisabled) {
+            return;
+        }
+        this.templateDownload.emit();
     }
 
 }

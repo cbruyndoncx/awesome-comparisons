@@ -33,29 +33,48 @@
     <div class="group-panel__table">
         <table class="table-hover">
             <thead>
-            <tr>
-                <ng-template ngFor let-column [ngForOf]="columns" let-i="index">
-                    <th>
-                        <button (click)="orderClick($event, i)">
-                            <iicon icon="keyboard-arrow-up" *ngIf="order[i]===-1; else elseif1">{{column}}</iicon>
-                            <ng-template #elseif1>
-                                <iicon icon="keyboard-arrow-down" *ngIf="order[i]===1; else elseif2">{{column}}</iicon>
+            <ng-container *ngIf="visibleCriteriaMap$ | async as visibleCriteria">
+                <tr>
+                    <ng-template ngFor let-column [ngForOf]="columns" let-i="index">
+                        <th>
+                            <ng-container *ngIf="getColumnDescription(visibleCriteria, getColumnKey(i)) as columnDescription; else plainHeaderButton">
+                                <ptooltip class="table-header-tooltip"
+                                          [tooltip]="columnDescription"
+                                          [position]="'s'">
+                                    <button (click)="orderClick($event, i)">
+                                        <iicon icon="keyboard-arrow-up" *ngIf="order[i]===-1; else elseif1">{{column}}</iicon>
+                                        <ng-template #elseif1>
+                                            <iicon icon="keyboard-arrow-down" *ngIf="order[i]===1; else elseif2">{{column}}</iicon>
+                                        </ng-template>
+                                        <ng-template #elseif2>
+                                            <iicon>{{column}}</iicon>
+                                        </ng-template>
+                                    </button>
+                                </ptooltip>
+                            </ng-container>
+                            <ng-template #plainHeaderButton>
+                                <button (click)="orderClick($event, i)">
+                                    <iicon icon="keyboard-arrow-up" *ngIf="order[i]===-1; else elseif1">{{column}}</iicon>
+                                    <ng-template #elseif1>
+                                        <iicon icon="keyboard-arrow-down" *ngIf="order[i]===1; else elseif2">{{column}}</iicon>
+                                    </ng-template>
+                                    <ng-template #elseif2>
+                                        <iicon>{{column}}</iicon>
+                                    </ng-template>
+                                </button>
                             </ng-template>
-                            <ng-template #elseif2>
-                                <iicon>{{column}}</iicon>
-                            </ng-template>
-                        </button>
+                        </th>
+                    </ng-template>
+                    <th name="details" width="60px">
+                        <div class="row-actions__header">
+                            <picon-button class="row-actions__icon" icon="file_download" [showTooltip]="false" title="Download XLSX" aria-label="Download XLSX"
+                                          (click)="xlsxDownload.emit({ columns: columns, columnKeys: columnKeys, items: items, index: index, types: types, dataElements: dataElements })"></picon-button>
+                            <picon-button class="row-actions__icon" icon="settings" [showTooltip]="false" title="Settings" aria-label="Settings"
+                                          (click)="settingsCallback.emit()"></picon-button>
+                        </div>
                     </th>
-                </ng-template>
-                <th name="details" width="60px">
-                    <div class="row-actions__header">
-                        <picon-button class="row-actions__icon" icon="file_download" [showTooltip]="false" title="Download XLSX" aria-label="Download XLSX"
-                                      (click)="xlsxDownload.emit({ columns: columns, columnKeys: columnKeys, items: items, index: index, types: types, dataElements: dataElements })"></picon-button>
-                        <picon-button class="row-actions__icon" icon="settings" [showTooltip]="false" title="Settings" aria-label="Settings"
-                                      (click)="settingsCallback.emit()"></picon-button>
-                    </div>
-                </th>
-            </tr>
+                </tr>
+            </ng-container>
             </thead>
             <tbody>
             <ng-template ngFor let-item [ngForOf]="items" let-itemIndex="index">

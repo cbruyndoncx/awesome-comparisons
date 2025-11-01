@@ -37,6 +37,7 @@ Defines npm scripts for the modern Angular 17 development workflow with gulp dat
 - "build:prod" script prepares data then builds production configuration
 - "test" script runs Angular CLI test command
 - "release" script builds production version
+- "templates:export" script invokes the bulk template CLI to regenerate Markdown templates for every dataset
 
 ### Angular 17 and NgRx Runtime Dependencies
 

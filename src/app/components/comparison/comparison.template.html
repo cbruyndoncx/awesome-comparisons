@@ -194,6 +194,7 @@
             [elementsEnabled]="vm.state.elementsEnabled"
             [detailsDisplayTooltips]="vm.state.detailsDisplayTooltips"
             [labelColorsEnabled]="vm.state.labelColorsEnabled"
+            [templateDownloadDisabled]="isComparisonTemplateDownloadDisabled()"
             (columnsDisplayAllChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'ColumnDisplayAll'})"
             (columnChange)="store.dispatch({type: 'UPDATE_SETTINGS', value: $event, operation: 'ColumnChange'})"
             (elementsDisplayAllChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'ElementDisplayAll'})"
@@ -201,13 +202,14 @@
             (detailsDisplayTooltipsChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'DetailsDisplayTooltips'})"
             (labelColorsEnabledChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'LabelColorsEnabled'})"
             (xlsxDownload)="downloadXlsx()"
+            (templateDownload)="downloadComparisonTemplate()"
         ></comparison-settings>
     </pdialog>
 
 
     <div class="grid-footer">
         <div class="container">
-            This is an <a href="https://cbruyndoncx.github.io/awesome-comparison/">Feature Comparison</a> | content licensed under
+            This site is build with <a href="https://github.com/cbruyndoncx/awesome-comparisons/">Awesome Comparisons</a> | content licensed under
             <a
                 rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img
                 alt="Creative Commons License CC-BY-SA 4.0" style="border-width:0"

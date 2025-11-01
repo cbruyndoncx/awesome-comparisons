@@ -9,6 +9,7 @@ import { isNullOrUndefined } from '../../shared/util/null-check';
 
 import { Criteria, DataElement, Label } from '../../../../lib/gulp/model/model.module';
 import { FeatureGroupView } from '../../models/feature-grouping.model';
+import { ComparisonTemplateExportService } from './settings/comparison-template-export.service';
 
 @Component({
     selector: 'comparison',
@@ -32,7 +33,10 @@ export class ComparisonComponent {
     public changed = 0;
     private versionInformation: VersionInformation = new VersionInformation();
 
+    private templateDownloadInProgress = false;
+
     constructor(public configurationService: ConfigurationService,
+                private templateExportService: ComparisonTemplateExportService,
                 private cd: ChangeDetectorRef,
                 public store: Store<IUCAppState>) {
         if (isNullOrUndefined(ComparisonComponent.instance)) {
@@ -236,6 +240,26 @@ export class ComparisonComponent {
                 console.error('Failed to create XLSX:', err);
             }
         }).catch(err => console.error('Failed to import xlsx module:', err));
+    }
+
+    public isComparisonTemplateDownloadDisabled(): boolean {
+
+        const criteriaReady = Array.isArray(this.configurationService?.criteria) &&
+            this.configurationService.criteria.length > 0;
+        return this.templateDownloadInProgress || !criteriaReady;
+    }
+
+    public downloadComparisonTemplate(): void {
+        if (this.isComparisonTemplateDownloadDisabled()) {
+            return;
+        }
+        this.templateDownloadInProgress = true;
+        this.templateExportService.downloadTemplate()
+            .catch(err => console.error('Failed to download comparison template:', err))
+            .finally(() => {
+                this.templateDownloadInProgress = false;
+                this.cd.markForCheck();
+            });
     }
 
     /**

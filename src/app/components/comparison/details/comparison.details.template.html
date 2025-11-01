@@ -2,19 +2,45 @@
     <h2>{{data.name}}
         <ng-template ngFor let-label [ngForOf]="headerLabels">
             <ng-container *ngIf="label; else missingHeaderLabel">
-                <ptooltip [tooltip]="label.tooltip.text"
-                          [tooltipHtml]="prefixInternalLink(label.tooltip.html)" [position]="'s'">
-                    <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
-                         [style.color]="labelColorsEnabled ? label.color : null"
-                         [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
-                        <ng-container *ngIf="label.displayHtml; else headerLabelDisplay">
-                            <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
-                        </ng-container>
-                        <ng-template #headerLabelDisplay>
-                            {{label.display || label.name}}
-                        </ng-template>
+                <ng-container *ngIf="tooltipAsText; else headerTooltipPopover">
+                    <div class="tt-container">
+                        <span class="label mylabel {{label.clazz}} tt-label" [class.label--plain]="!labelColorsEnabled"
+                              [style.color]="labelColorsEnabled ? label.color : null"
+                              [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
+                            <ng-container *ngIf="label.displayHtml; else headerLabelDisplayText">
+                                <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
+                            </ng-container>
+                            <ng-template #headerLabelDisplayText>
+                                {{label.display || label.name}}
+                            </ng-template>
+                        </span>
+                        <span class="tooltip-text tt-tooltip"
+                              *ngIf="label.tooltip.text"
+                              [innerHtml]="label.tooltip.text | sanitizeHtml"></span>
+                        <span class="tooltip-text tt-tooltip"
+                              *ngIf="!label.tooltip.text && label.tooltip.html"
+                              [innerHtml]="prefixInternalLink(label.tooltip.html | sanitizeHtml)"></span>
+                        <span class="tooltip-text tt-tooltip"
+                              *ngIf="!label.tooltip.text && !label.tooltip.html && label.tooltip.plain">
+                            {{label.tooltip.plain}}
+                        </span>
                     </div>
-                </ptooltip>
+                </ng-container>
+                <ng-template #headerTooltipPopover>
+                    <ptooltip [tooltip]="label.tooltip.text"
+                              [tooltipHtml]="prefixInternalLink(label.tooltip.html)" [position]="'s'">
+                        <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
+                             [style.color]="labelColorsEnabled ? label.color : null"
+                             [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
+                            <ng-container *ngIf="label.displayHtml; else headerLabelDisplay">
+                                <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
+                            </ng-container>
+                            <ng-template #headerLabelDisplay>
+                                {{label.display || label.name}}
+                            </ng-template>
+                        </div>
+                    </ptooltip>
+                </ng-template>
             </ng-container>
         </ng-template>
         <ng-template #missingHeaderLabel>
@@ -72,19 +98,26 @@
                             </div>
                         </ptooltip>
                         <div *ngIf="tooltipAsText" class="tt-container">
-                                <span class="label mylabel {{label.clazz}} tt-label" [class.label--plain]="!labelColorsEnabled"
-                                      [style.color]="labelColorsEnabled ? label.color : null"
-                                      [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
-                                    <ng-container *ngIf="label.displayHtml; else detailLabelDisplayTextPlain">
-                                        <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
-                                    </ng-container>
-                                    <ng-template #detailLabelDisplayTextPlain>
-                                        {{label.display || label.name}}
-                                    </ng-template>
-                                </span>
-                            <span class="tooltip-text tt-tooltip" [innerHtml]="label.tooltip.text|sanitizeHtml"></span>
-                            <br *ngIf="label.tooltip.text && label.tooltip.html">
-                            <span class="tooltip-text tt-tooltip" [innerHtml]="prefixInternalLink(label.tooltip.html|sanitizeHtml)"></span>
+                            <span class="label mylabel {{label.clazz}} tt-label" [class.label--plain]="!labelColorsEnabled"
+                                  [style.color]="labelColorsEnabled ? label.color : null"
+                                  [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
+                                <ng-container *ngIf="label.displayHtml; else detailLabelDisplayTextPlain">
+                                    <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
+                                </ng-container>
+                                <ng-template #detailLabelDisplayTextPlain>
+                                    {{label.display || label.name}}
+                                </ng-template>
+                            </span>
+                            <span class="tooltip-text tt-tooltip"
+                                  *ngIf="label.tooltip.text"
+                                  [innerHtml]="label.tooltip.text | sanitizeHtml"></span>
+                            <span class="tooltip-text tt-tooltip"
+                                  *ngIf="!label.tooltip.text && label.tooltip.html"
+                                  [innerHtml]="prefixInternalLink(label.tooltip.html | sanitizeHtml)"></span>
+                            <span class="tooltip-text tt-tooltip"
+                                  *ngIf="!label.tooltip.text && !label.tooltip.html && label.tooltip.plain">
+                                {{label.tooltip.plain}}
+                            </span>
                         </div>
                     </ng-container>
                 </ng-container>

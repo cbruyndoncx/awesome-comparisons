@@ -83,5 +83,18 @@
                        (checkedChange)="detailsDisplayTooltipsChange.emit($event)"
                        [label]="'Display tooltips next to labels'"></pcheckbox>
         </pitem>
+
+        <h5>Exports</h5>
+        <pitem class="settings-export">
+            <ptooltip [tooltip]="'Download a Markdown template populated with all grouped criteria'" [position]="'s'">
+                <button type="button"
+                        class="settings-export__button"
+                        [disabled]="templateDownloadDisabled"
+                        (click)="requestTemplateDownload()"
+                        aria-label="Download dataset comparison template">
+                    Download Template
+                </button>
+            </ptooltip>
+        </pitem>
     </pcard>
 </div>

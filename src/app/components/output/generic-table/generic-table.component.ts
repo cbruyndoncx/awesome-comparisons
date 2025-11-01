@@ -1,7 +1,8 @@
 import { AfterViewChecked, ChangeDetectionStrategy, Component, EventEmitter, Inject, Input, OnChanges, Output } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Observable } from 'rxjs';
-import { CriteriaData, DataElement, Label } from '../../../../../lib/gulp/model/model.module';
+import { map, startWith } from 'rxjs/operators';
+import { Criteria, CriteriaData, DataElement, Label } from '../../../../../lib/gulp/model/model.module';
 import { FeatureGroupingService } from '../feature-grouping.service';
 import { FeatureGroupView } from '../../../models/feature-grouping.model';
 
@@ -34,6 +35,7 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
 
     public groups$: Observable<FeatureGroupView[]>;
     public columnGroupMap$: Observable<Record<string, string>>;
+    public visibleCriteriaMap$: Observable<Record<string, Criteria>>;
 
     private table;
     private anchorsInitialised = false;
@@ -42,6 +44,15 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
                 private featureGroupingService: FeatureGroupingService) {
         this.groups$ = this.featureGroupingService.getGroups();
         this.columnGroupMap$ = this.featureGroupingService.getColumnGroupMap();
+        this.visibleCriteriaMap$ = this.featureGroupingService.getVisibleCriteria().pipe(
+            map(criteriaList => criteriaList.reduce((acc, criteria) => {
+                if (criteria?.id) {
+                    acc[criteria.id] = criteria;
+                }
+                return acc;
+            }, {} as Record<string, Criteria>)),
+            startWith({} as Record<string, Criteria>)
+        );
         // Wire generic table XLSX event to a local handler that emits to parent
         this.xlsxDownload = new EventEmitter();
     }
@@ -70,6 +81,25 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
             return '×';
         }
         return group.isExpanded ? '−' : '+';
+    }
+
+    public getColumnKey(index: number): string | null {
+        if (!Array.isArray(this.columnKeys) || index < 0 || index >= this.columnKeys.length) {
+            return null;
+        }
+        return this.columnKeys[index];
+    }
+
+    public getColumnDescription(criteriaMap: Record<string, Criteria>, columnKey: string | null): string {
+        if (!columnKey) {
+            return '';
+        }
+        const criteria = criteriaMap ? criteriaMap[columnKey] : undefined;
+        if (!criteria) {
+            return '';
+        }
+        const description = typeof criteria.description === 'string' ? criteria.description.trim() : '';
+        return description;
     }
 
     public resolveEditLink(rowIndex: number): string | null {
