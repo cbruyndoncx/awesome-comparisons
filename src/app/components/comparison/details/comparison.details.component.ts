@@ -35,6 +35,7 @@ export class ComparisonDetailsComponent implements OnChanges {
     //@Input() ratings: Array<number> = [];
     @Input() tooltipAsText: boolean = true;
     @Input() labelColorsEnabled: boolean = true;
+    @Input() showMissingIndicators: boolean = false;
 
     public groupedSections: DetailGroup[] = [];
     public ungroupedSections: DetailSection[] = [];
@@ -157,5 +158,35 @@ export class ComparisonDetailsComponent implements OnChanges {
                 safeHtml['changingThisBreaksApplicationSecurity'].replace(match[1], 'details-' + match[1])
         }
         return safeHtml;
+    }
+
+    public getCriteriaDescription(criteria?: Criteria | null): string {
+        if (!criteria) {
+            return '';
+        }
+        const description: any = (criteria as any).description;
+        if (typeof description === 'string') {
+            return description.trim();
+        }
+        if (description && typeof description === 'object') {
+            if (typeof description.text === 'string') {
+                return description.text.trim();
+            }
+            if (typeof description.html === 'string') {
+                return description.html.trim();
+            }
+            if (typeof description.plain === 'string') {
+                return description.plain.trim();
+            }
+        }
+        return '';
+    }
+
+    public resolveCriteriaDescription(criteria?: Criteria | null): string | null {
+        const description = this.getCriteriaDescription(criteria);
+        if (!description) {
+            return null;
+        }
+        return description.length > 0 ? description : null;
     }
 }

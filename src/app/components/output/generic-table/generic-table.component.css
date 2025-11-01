@@ -305,3 +305,59 @@ table {
     background-color: var(--hover-color, lightgray);
     color: var(--text-color, white);
 }
+
+.label-cell {
+    text-align: left;
+}
+
+.label-cell--label {
+    text-align: center;
+}
+
+.label-cell--label .label {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.label-cell--label .tt-container {
+    justify-content: center;
+    text-align: center;
+}
+
+.label-cell--repository {
+    text-align: left;
+}
+
+.markdown-cell {
+    position: relative;
+    min-width: 0;
+    word-break: break-word;
+}
+
+.markdown-cell__content {
+    white-space: normal;
+    overflow: hidden;
+}
+
+.markdown-cell__content--clamped {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+.markdown-cell__toggle {
+    margin-top: 4px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: var(--link-color, #1565c0);
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.markdown-cell__toggle:hover,
+.markdown-cell__toggle:focus {
+    text-decoration: underline;
+}

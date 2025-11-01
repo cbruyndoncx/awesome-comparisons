@@ -112,6 +112,9 @@ export function masterReducer(state: IUCAppState = new UcAppState(), action: UCA
                 case 'LabelColorsEnabled':
                     state.labelColorsEnabled = act.enable;
                     break;
+                case 'ShowMissingIndicators':
+                    state.showMissingIndicators = act.enable;
+                    break;
             }
             break;
         case TOGGLE_GROUP:

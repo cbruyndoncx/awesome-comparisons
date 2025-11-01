@@ -1,4 +1,4 @@
-import { AfterViewChecked, ChangeDetectionStrategy, Component, EventEmitter, Inject, Input, OnChanges, Output } from '@angular/core';
+import { AfterViewChecked, ChangeDetectionStrategy, Component, EventEmitter, Inject, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
@@ -28,6 +28,7 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
     @Input() index: Array<number> = [];
     @Input() order: Array<number> = [];
     @Input() labelColorsEnabled: boolean = true;
+    @Input() showMissingIndicators: boolean = false;
     @Input() dataElements: Array<DataElement> = [];
     @Input() tableExpanded: boolean = false;
 
@@ -39,6 +40,7 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
 
     private table;
     private anchorsInitialised = false;
+    private expandedMarkdownCells = new Set<string>();
 
     constructor(@Inject(DOCUMENT) private document: Document,
                 private featureGroupingService: FeatureGroupingService) {
@@ -161,8 +163,11 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
         }
     }
 
-    ngOnChanges(changes): void {
+    ngOnChanges(changes: SimpleChanges): void {
         this.update();
+        if (changes?.items || changes?.index || changes?.columnKeys) {
+            this.expandedMarkdownCells.clear();
+        }
     }
 
     public getRowIndex(itemIndex: number): number {
@@ -181,6 +186,42 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
         }
         const labels = this.extractLabels(entry);
         return labels.some(label => !!label?.backgroundColor);
+    }
+
+    public shouldTruncateMarkdown(entry: CriteriaData | null | undefined): boolean {
+        const text = this.getMarkdownPlainText(entry);
+        if (!text) {
+            return false;
+        }
+        const lineBreakCount = text.split(/\r?\n/).filter(segment => segment.trim().length > 0).length;
+        const normalized = text.replace(/\s+/g, ' ').trim();
+        if (!normalized) {
+            return false;
+        }
+        if (lineBreakCount > 3) {
+            return true;
+        }
+        return normalized.length > 240;
+    }
+
+    public isMarkdownExpanded(itemIndex: number, columnIndex: number): boolean {
+        const key = this.buildMarkdownCellId(itemIndex, columnIndex);
+        if (!key) {
+            return false;
+        }
+        return this.expandedMarkdownCells.has(key);
+    }
+
+    public toggleMarkdownExpansion(itemIndex: number, columnIndex: number): void {
+        const key = this.buildMarkdownCellId(itemIndex, columnIndex);
+        if (!key) {
+            return;
+        }
+        if (this.expandedMarkdownCells.has(key)) {
+            this.expandedMarkdownCells.delete(key);
+        } else {
+            this.expandedMarkdownCells.add(key);
+        }
     }
 
     public resolveLabelCellFill(entry: CriteriaData | null | undefined): string | null {
@@ -308,5 +349,41 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
             return Object.values(labelArray).filter((l): l is Label => !!l);
         }
         return [];
+    }
+
+    private buildMarkdownCellId(itemIndex: number, columnIndex: number): string | null {
+        const rowIndex = this.getRowIndex(itemIndex);
+        if (rowIndex === null || rowIndex === undefined) {
+            return null;
+        }
+        const columnKey = this.getColumnKey(columnIndex);
+        const safeColumnKey = columnKey && columnKey.trim().length > 0 ? columnKey : `__index_${columnIndex}`;
+        return `${rowIndex}::${safeColumnKey}`;
+    }
+
+    private getMarkdownPlainText(entry: CriteriaData | null | undefined): string {
+        if (!entry) {
+            return '';
+        }
+        const plaintextCandidates = [
+            (entry as unknown as { tableText?: string }).tableText,
+            (entry as unknown as { summaryText?: string }).summaryText,
+            (entry as unknown as { text?: string }).text
+        ];
+        for (const candidate of plaintextCandidates) {
+            if (typeof candidate === 'string' && candidate.trim().length > 0) {
+                return candidate.trim();
+            }
+        }
+        const html = (entry as unknown as { html?: string }).html;
+        if (typeof html === 'string' && html.trim().length > 0) {
+            if (this.document) {
+                const container = this.document.createElement('div');
+                container.innerHTML = html;
+                return container.textContent ? container.textContent.trim() : '';
+            }
+            return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+        }
+        return '';
     }
 }

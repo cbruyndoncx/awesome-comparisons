@@ -22,6 +22,7 @@ export class ComparisonSettingsComponent {
     @Input() detailsDisplayTooltips: boolean = false;
     @Input() labelColorsEnabled: boolean = true;
     @Input() templateDownloadDisabled: boolean = true;
+    @Input() showMissingIndicators: boolean = false;
 
     @Output() columnsDisplayAllChange: EventEmitter<boolean> = new EventEmitter<boolean>();
     @Output() columnChange: EventEmitter<number> = new EventEmitter<number>();
@@ -33,10 +34,13 @@ export class ComparisonSettingsComponent {
 
     @Output() detailsDisplayTooltipsChange: EventEmitter<boolean> = new EventEmitter<boolean>();
     @Output() labelColorsEnabledChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+    @Output() showMissingIndicatorsChange: EventEmitter<boolean> = new EventEmitter<boolean>();
     @Output() templateDownload: EventEmitter<void> = new EventEmitter<void>();
 
     constructor(private featureGroupingService: FeatureGroupingService) {
     }
+
+    public readonly missingPlaceholderLabel: string = 'Show "Missing" placeholders';
 
     public get groupedColumns() {
         if (!this.featureGroups || this.featureGroups.length === 0) {

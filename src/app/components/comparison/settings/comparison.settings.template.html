@@ -76,6 +76,11 @@
                        (checkedChange)="labelColorsEnabledChange.emit($event)"
                        [label]="'Show label colors'"></pcheckbox>
         </pitem>
+        <pitem>
+            <pcheckbox [checked]="showMissingIndicators"
+                       (checkedChange)="showMissingIndicatorsChange.emit($event)"
+                       [label]="missingPlaceholderLabel"></pcheckbox>
+        </pitem>
 
         <h5>Details</h5>
         <pitem>

@@ -44,7 +44,7 @@
             </ng-container>
         </ng-template>
         <ng-template #missingHeaderLabel>
-            <div class="label mylabel label--missing">Missing</div>
+            <div *ngIf="showMissingIndicators" class="label mylabel label--missing">Missing</div>
         </ng-template>
         <small class="details-links">
             <a *ngIf="data?.url"
@@ -76,6 +76,10 @@
 
     <ng-template #sectionContent let-section>
         <div class="card-content">
+            <p *ngIf="(tooltipAsText && resolveCriteriaDescription(section.criteria)) as criteriaDescription"
+               class="criteria-description">
+                <em [innerHtml]="criteriaDescription | sanitizeHtml"></em>
+            </p>
             <a *ngIf="section.type === 'NAME_URL' || section.type === 'URL'" class="anchored"
                href="{{section.data.link}}"
                target="_blank">{{section.data.text}}</a>
@@ -144,7 +148,7 @@
     </ng-template>
 
     <ng-template #missingDetailLabel>
-        <div class="label mylabel label--missing">Missing</div>
+        <div *ngIf="showMissingIndicators" class="label mylabel label--missing">Missing</div>
     </ng-template>
 
     <div class="grouped-sections" *ngIf="groupedSections.length">

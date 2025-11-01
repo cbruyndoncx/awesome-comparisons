@@ -93,6 +93,8 @@
                         </td>
                         <td *ngIf="types[i] ===  'LABEL' || types[i] === 'REPOSITORY'"
                             class="label-cell"
+                            [class.label-cell--label]="types[i] === 'LABEL'"
+                            [class.label-cell--repository]="types[i] === 'REPOSITORY'"
                             [class.label-cell--colored]="types[i] === 'LABEL' && hasLabelFill(entry)"
                             [style.background]="types[i] === 'LABEL' ? resolveLabelCellFill(entry) : null">
                             <ng-container *ngIf="entry?.labelArray?.length; else missingLabelBlock">
@@ -129,17 +131,31 @@
                                 </ng-container>
                             </ng-container>
                             <ng-template #missingLabelBlock>
-                                <div class="label mylabel label--missing">Missing</div>
+                                <div *ngIf="showMissingIndicators" class="label mylabel label--missing">Missing</div>
                             </ng-template>
                             <div class="repository-links" *ngIf="entry?.type === 'REPOSITORY' && entry?.urlList?.length">
                                 <a *ngFor="let link of entry.urlList" [href]="link" target="_blank" rel="noopener noreferrer">{{link}}</a>
                             </div>
                         </td>
 
-                        <td *ngIf="types[i] === 'MARKDOWN'">
-                            <ng-container *ngIf="entry?.tableText; else markdownHtml">
-                                {{entry?.tableText}}
-                            </ng-container>
+                        <td *ngIf="types[i] === 'MARKDOWN'" class="markdown-cell"
+                            [class.markdown-cell--expanded]="isMarkdownExpanded(itemIndex, i)">
+                            <ng-template #markdownContent>
+                                <ng-container *ngIf="entry?.tableText; else markdownHtml">
+                                    {{entry?.tableText}}
+                                </ng-container>
+                            </ng-template>
+                            <div class="markdown-cell__content"
+                                 [class.markdown-cell__content--clamped]="shouldTruncateMarkdown(entry) && !isMarkdownExpanded(itemIndex, i)">
+                                <ng-container *ngTemplateOutlet="markdownContent"></ng-container>
+                            </div>
+                            <button type="button"
+                                    class="markdown-cell__toggle"
+                                    *ngIf="shouldTruncateMarkdown(entry)"
+                                    (click)="toggleMarkdownExpansion(itemIndex, i)"
+                                    [attr.aria-expanded]="isMarkdownExpanded(itemIndex, i)">
+                                {{isMarkdownExpanded(itemIndex, i) ? 'Show less' : 'Show more'}}
+                            </button>
                             <ng-template #markdownHtml>
                                 <div [innerHtml]="entry?.html | sanitizeHtml"></div>
                             </ng-template>

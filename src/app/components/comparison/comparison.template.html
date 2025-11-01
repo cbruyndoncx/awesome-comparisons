@@ -162,6 +162,7 @@
                       [order]="vm.state.columnOrder"
                       [changeNum]="configurationService.tableColumns.length + vm.state.currentColumnNames.length + (settingsOpen ? 0 : 1) + changed"
                       [labelColorsEnabled]="vm.state.labelColorsEnabled"
+                      [showMissingIndicators]="vm.state.showMissingIndicators"
                       [dataElements]="configurationService.dataElements"
                       [tableExpanded]="vm.state.tableExpand"
                       (toggleExpand)="toggleTableExpand($event)"
@@ -175,7 +176,8 @@
              (openedChange)="closeDetails()">
         <comparison-details [data]="vm.state.detailsData"
                             [tooltipAsText]="vm.state.detailsDisplayTooltips"
-                            [labelColorsEnabled]="vm.state.labelColorsEnabled"></comparison-details>
+                            [labelColorsEnabled]="vm.state.labelColorsEnabled"
+                            [showMissingIndicators]="vm.state.showMissingIndicators"></comparison-details>
     </pdialog>
 
     <pdialog *ngIf="settingsOpen"
@@ -194,6 +196,7 @@
             [elementsEnabled]="vm.state.elementsEnabled"
             [detailsDisplayTooltips]="vm.state.detailsDisplayTooltips"
             [labelColorsEnabled]="vm.state.labelColorsEnabled"
+            [showMissingIndicators]="vm.state.showMissingIndicators"
             [templateDownloadDisabled]="isComparisonTemplateDownloadDisabled()"
             (columnsDisplayAllChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'ColumnDisplayAll'})"
             (columnChange)="store.dispatch({type: 'UPDATE_SETTINGS', value: $event, operation: 'ColumnChange'})"
@@ -201,6 +204,7 @@
             (elementChange)="store.dispatch({type: 'UPDATE_SETTINGS', value: $event, operation: 'ElementChange'})"
             (detailsDisplayTooltipsChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'DetailsDisplayTooltips'})"
             (labelColorsEnabledChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'LabelColorsEnabled'})"
+            (showMissingIndicatorsChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'ShowMissingIndicators'})"
             (xlsxDownload)="downloadXlsx()"
             (templateDownload)="downloadComparisonTemplate()"
         ></comparison-settings>

@@ -94,6 +94,7 @@ export interface IUCAppState {
 
     detailsDisplayTooltips: boolean;
     labelColorsEnabled: boolean;
+    showMissingIndicators: boolean;
 
     tableExpand: boolean;
     currentSaved: boolean;
@@ -122,6 +123,7 @@ export class UcAppState implements IUCAppState {
 
     detailsDisplayTooltips = false;
     labelColorsEnabled = true;
+    showMissingIndicators = false;
 
     tableExpand = false;
 
