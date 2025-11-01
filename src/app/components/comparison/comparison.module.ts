@@ -9,6 +9,7 @@ import { InputModule } from '../input/input.module';
 import { OutputModule } from '../output/output.module';
 import { ConfigurationService } from './configuration/configuration.service';
 import { ComparisonSettingsComponent } from './settings/comparison.settings.component';
+import { FocusedComparisonSheetComponent } from './sheet/focused-comparison-sheet.component';
 
 @NgModule({
     imports: [
@@ -24,7 +25,8 @@ import { ComparisonSettingsComponent } from './settings/comparison.settings.comp
     declarations: [
         ComparisonComponent,
         ComparisonDetailsComponent,
-        ComparisonSettingsComponent
+        ComparisonSettingsComponent,
+        FocusedComparisonSheetComponent
     ],
     providers: [
         ConfigurationService,

@@ -95,11 +95,18 @@ export interface IUCAppState {
     detailsDisplayTooltips: boolean;
     labelColorsEnabled: boolean;
     showMissingIndicators: boolean;
+    viewMode: 'table' | 'sheet';
 
     tableExpand: boolean;
     currentSaved: boolean;
 
     internalLink: string;
+    groupExpandedFromRoute: boolean;
+    hydratingFromRoute: boolean;
+    loadedColumnsFromRoute: Array<string>;
+    routeColumnsPending: Array<string> | null;
+    routeElementsPending: Array<number> | null;
+    routeGroupsPending: Record<string, boolean> | null;
 }
 
 export class UcAppState implements IUCAppState {
@@ -124,6 +131,7 @@ export class UcAppState implements IUCAppState {
     detailsDisplayTooltips = false;
     labelColorsEnabled = true;
     showMissingIndicators = false;
+    viewMode: 'table' | 'sheet' = 'table';
 
     tableExpand = false;
 
@@ -142,4 +150,10 @@ export class UcAppState implements IUCAppState {
     currentChanged = false;
 
     internalLink = '';
+    groupExpandedFromRoute = false;
+    hydratingFromRoute = false;
+    loadedColumnsFromRoute: Array<string> = [];
+    routeColumnsPending: Array<string> | null = null;
+    routeElementsPending: Array<number> | null = null;
+    routeGroupsPending: Record<string, boolean> | null = null;
 }

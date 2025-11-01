@@ -10,34 +10,17 @@ export interface RouterStateUrl {
 export class CustomRouterStateSerializer implements RouterStateSerializer<RouterStateUrl> {
     serialize(routerState: RouterStateSnapshot): RouterStateUrl {
         let { url } = routerState;
-        const queryParams = {};
         let route = routerState.root;
 
         while (route.firstChild) {
             route = route.firstChild;
         }
-        if (url.startsWith('/')) {
-            url = url.substr(1);
-        }
-        if (url.startsWith('#')) {
-            url = url.substr(1);
-        }
-        let sectionLink: string = null;
 
-        for (const u of url.split('&')) {
-            const regex = /\??(.+)=(.*)/.exec(u);
-            if (regex === null) {
-                continue;
-            }
-            const key = regex[1];
-            let value = regex[2];
+        // Use Angular's built-in query parameter parsing instead of manual regex parsing
+        const queryParams = route.queryParams || {};
 
-            if (value.indexOf('#') > -1) {
-                [value, sectionLink] = value.split('#');
-            }
-
-            queryParams[key] = value;
-        }
+        // Extract section link from fragment
+        const sectionLink = route.fragment || null;
 
         return { url, queryParams, sectionLink };
     }

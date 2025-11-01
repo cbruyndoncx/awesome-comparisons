@@ -37,6 +37,12 @@
             <div class="select-toolbar__side select-toolbar__side--actions">
                 <button type="button"
                         class="select-toolbar__button"
+                        (click)="setViewMode(vm.state.viewMode === 'sheet' ? 'table' : 'sheet')"
+                        [attr.aria-pressed]="vm.state.viewMode === 'sheet'">
+                    {{vm.state.viewMode === 'sheet' ? 'Standard view' : 'Focused sheet view'}}
+                </button>
+                <button type="button"
+                        class="select-toolbar__button"
                         (click)="resetCriteriaSelections()"
                         [disabled]="!hasActiveFilters(vm.state.currentSearch)">
                     Reset selections
@@ -154,23 +160,35 @@
     </div>
 
     <div class="grid-large-content" [class.grid-large-content--expanded]="vm.state.tableExpand">
-        <generictable [items]="vm.state.currentElements"
-                      [columns]="vm.state.currentColumnNames"
-                      [columnKeys]="vm.state.currentColumns"
-                      [types]="vm.state.columnTypes"
-                      [index]="vm.state.rowIndexes"
-                      [order]="vm.state.columnOrder"
-                      [changeNum]="configurationService.tableColumns.length + vm.state.currentColumnNames.length + (settingsOpen ? 0 : 1) + changed"
-                      [labelColorsEnabled]="vm.state.labelColorsEnabled"
-                      [showMissingIndicators]="vm.state.showMissingIndicators"
-                      [dataElements]="configurationService.dataElements"
-                      [tableExpanded]="vm.state.tableExpand"
-                      (toggleExpand)="toggleTableExpand($event)"
-                      (settingsCallback)="settingsOpen = true"
-                      (showDetails)="showDetails($event)"
-                      (orderChange)="changeOrder($event)"
-                      (searchFor)="criteriaClicked($event)"
-                      (xlsxDownload)="downloadXlsxFromTable($event)"></generictable>
+        <ng-container [ngSwitch]="vm.state.viewMode">
+            <generictable *ngSwitchCase="'table'"
+                          [items]="vm.state.currentElements"
+                          [columns]="vm.state.currentColumnNames"
+                          [columnKeys]="vm.state.currentColumns"
+                          [types]="vm.state.columnTypes"
+                          [index]="vm.state.rowIndexes"
+                          [order]="vm.state.columnOrder"
+                          [changeNum]="configurationService.tableColumns.length + vm.state.currentColumnNames.length + (settingsOpen ? 0 : 1) + changed"
+                          [labelColorsEnabled]="vm.state.labelColorsEnabled"
+                          [showMissingIndicators]="vm.state.showMissingIndicators"
+                          [dataElements]="configurationService.dataElements"
+                          [tableExpanded]="vm.state.tableExpand"
+                          (toggleExpand)="toggleTableExpand($event)"
+                          (settingsCallback)="settingsOpen = true"
+                          (showDetails)="showDetails($event)"
+                          (orderChange)="changeOrder($event)"
+                          (searchFor)="criteriaClicked($event)"
+                          (xlsxDownload)="downloadXlsxFromTable($event)"></generictable>
+            <focused-comparison-sheet *ngSwitchCase="'sheet'"
+                                      [criteriaNames]="vm.state.currentColumnNames"
+                                      [criteriaKeys]="vm.state.currentColumns"
+                                      [criteriaTypes]="vm.state.columnTypes"
+                                      [items]="vm.state.currentElements"
+                                      [rowIndexes]="vm.state.rowIndexes"
+                                      [elementData]="configurationService.dataElements"
+                                      [labelColorsEnabled]="vm.state.labelColorsEnabled"
+                                      [showMissingIndicators]="vm.state.showMissingIndicators"></focused-comparison-sheet>
+        </ng-container>
     </div>
     <pdialog [opened]="vm.state.detailsOpen" *ngIf="vm.state.detailsOpen"
              (openedChange)="closeDetails()">

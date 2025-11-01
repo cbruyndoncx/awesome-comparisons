@@ -85,6 +85,10 @@ export class ComparisonComponent {
         }, 100);
     }
 
+    public setViewMode(mode: 'table' | 'sheet') {
+        this.store.dispatch({type: 'UPDATE_SETTINGS', operation: 'ViewMode', mode});
+    }
+
     public downloadXlsxFromTable(payload: { columns?: string[]; columnKeys?: string[]; items?: any[]; index?: number[]; types?: string[]; dataElements?: any[] }) {
         const baseColumns = payload?.columns || this.configurationService.tableColumns;
         const items = payload?.items || [];

@@ -23,7 +23,7 @@ export const UPDATE_FILTER = 'UPDATE_FILTER';
 export const UPDATE_DATA = 'UPDATE_DATA';
 export const UPDATE_ORDER = 'UPDATE_ORDER';
 export const UPDATE_SETTINGS = 'UPDATE_SETTINGS';
-const UPDATE_ROUTE = 'ROUTER_NAVIGATION';
+const UPDATE_ROUTE = ROUTER_NAVIGATION;
 export const CLICK_ACTION = 'CLICK_ACTION';
 export const NEW_STATE_ACTION = 'NEW_STATE_ACTION';
 export const TOGGLE_DETAILS_ACTION = 'TOGGLE_DETAILS_ACTION';
@@ -82,10 +82,12 @@ export function masterReducer(state: IUCAppState = new UcAppState(), action: UCA
                 case 'ElementDisplayAll':
                     state.elementsEnabled = state.elementsEnabled.map(() => act.enable);
                     state.elementDisplayAll = act.enable;
+                    state.currentChanged = true;
                     break;
                 case 'ElementChange':
                     state.elementsEnabled[act.value] = !state.elementsEnabled[act.value];
                     state.elementDisplayAll = state.elementsEnabled.filter(value => value).length === state.elementNames.length;
+                    state.currentChanged = true;
                     break;
                 case 'TableExpand':
                     if (act.enable) {
@@ -114,6 +116,11 @@ export function masterReducer(state: IUCAppState = new UcAppState(), action: UCA
                     break;
                 case 'ShowMissingIndicators':
                     state.showMissingIndicators = act.enable;
+                    break;
+                case 'ViewMode':
+                    const mode = (act as any).mode;
+                    state.viewMode = mode === 'sheet' ? 'sheet' : 'table';
+                    state.currentChanged = true;
                     break;
             }
             break;
@@ -221,6 +228,12 @@ function changeOrder(state: IUCAppState, action: UCTableOrderAction): IUCAppStat
 }
 
 function updateElements(state: IUCAppState): IUCAppState {
+    if (state.hydratingFromRoute) {
+        state.hydratingFromRoute = false;
+        state.currentSaved = true;
+        state.currentChanged = false;
+        return state;
+    }
     if (state.currentChanged || !state.currentSaved) {
         putStateIntoURL(state);
         state.currentSaved = true;
@@ -246,6 +259,26 @@ function initSettings(state: IUCAppState): IUCAppState {
     state.elementsEnabled = elementsEnabled;
     state.elementDisplayAll = false;
 
+    const pendingElements = state.routeElementsPending && state.routeElementsPending.length > 0
+        ? state.routeElementsPending
+        : Object.keys(state.loadedElementsEnabled).length > 0
+            ? Object.entries(state.loadedElementsEnabled)
+                .filter(([, enabled]) => enabled === true)
+                .map(([idx]) => Number.parseInt(idx, 10))
+                .filter(idx => !Number.isNaN(idx) && idx >= 0)
+            : [];
+    if (pendingElements.length > 0) {
+        const allowed = new Set(pendingElements);
+        state.elementsEnabled = state.elementsEnabled.map((_, idx) => allowed.has(idx));
+        state.elementDisplayAll = allowed.size === state.elementsEnabled.length && state.elementsEnabled.length > 0;
+        state.currentChanged = true;
+        state.routeElementsPending = null;
+        state.loadedElementsEnabled = [];
+    } else if (state.loadedElementsEnabled.length > 0) {
+        state.currentChanged = true;
+        state.loadedElementsEnabled = [];
+    }
+
     // Set column settings
     state = initColumn(state);
 
@@ -270,7 +303,29 @@ function initColumn(state: IUCAppState): IUCAppState {
     state.columnNames = columnNames;
     state.columnsEnabled = columnsEnabled;
     state.columnsEnabledCache = columnsEnabledCache;
-    state.columnDisplayAll = columnsEnabled.filter(value => value).length === columnNames.length;
+    const pendingColumns = state.routeColumnsPending && state.routeColumnsPending.length > 0
+        ? state.routeColumnsPending
+        : state.loadedColumnsFromRoute;
+    if (Array.isArray(pendingColumns) && pendingColumns.length > 0) {
+        const allowed = new Set(pendingColumns);
+        let anyMatched = false;
+        state.columnKeys.forEach((key, index) => {
+            const enabled = allowed.has(key);
+            state.columnsEnabled[index] = enabled;
+            state.columnsEnabledCache[index] = enabled;
+            if (enabled) {
+                anyMatched = true;
+            }
+        });
+        if (!anyMatched) {
+            state.columnsEnabled = columnsEnabled;
+            state.columnsEnabledCache = columnsEnabledCache;
+        }
+        state.loadedColumnsFromRoute = [];
+        state.routeColumnsPending = null;
+        state.currentChanged = true;
+    }
+    state.columnDisplayAll = state.columnsEnabled.filter(value => value).length === columnNames.length;
     return state;
 }
 
@@ -283,12 +338,18 @@ function applyGrouping(state: IUCAppState, grouping?: GroupedCriteriaStructure):
     }
 
     const existingExpanded = state.groupExpanded || {};
+    const overrideExpanded = state.groupExpandedFromRoute === true;
     const nextExpanded: { [key: string]: boolean } = {};
     grouping.groups.forEach(group => {
-        const hasPersistedValue = Object.prototype.hasOwnProperty.call(existingExpanded, group.key);
-        const persistedExpanded = hasPersistedValue && existingExpanded[group.key] === true;
-        const defaultExpanded = group.defaultExpanded === true;
-        const isExpanded = !group.isExcluded && (hasPersistedValue ? persistedExpanded : defaultExpanded);
+        let isExpanded: boolean;
+        if (overrideExpanded) {
+            isExpanded = !group.isExcluded && existingExpanded[group.key] === true;
+        } else {
+            const hasPersistedValue = Object.prototype.hasOwnProperty.call(existingExpanded, group.key);
+            const persistedExpanded = hasPersistedValue && existingExpanded[group.key] === true;
+            const defaultExpanded = group.defaultExpanded === true;
+            isExpanded = !group.isExcluded && (hasPersistedValue ? persistedExpanded : defaultExpanded);
+        }
         nextExpanded[group.key] = isExpanded;
     });
 
@@ -299,6 +360,8 @@ function applyGrouping(state: IUCAppState, grouping?: GroupedCriteriaStructure):
         children: group.children ? [...group.children] : [],
         isExpanded: !group.isExcluded && nextExpanded[group.key] === true
     }));
+    state.routeGroupsPending = null;
+    state.groupExpandedFromRoute = false;
 
     return state;
 }
@@ -339,17 +402,20 @@ function putStateIntoURL(state: IUCAppState) {
         }
         query = query.substr(0, query.length - 1);
     }
-    if (state.currentElements.length > 0) {
-        if (query.length > 0) {
-            query += '&';
-        }
-        query += 'elements=';
-        for (let index = 0; index < ConfigurationService.data.dataElements.length; index++) {
+    const totalElements = ConfigurationService.data?.dataElements?.length || state.elementsEnabled.length;
+    if (totalElements > 0) {
+        const enabledIndices: number[] = [];
+        for (let index = 0; index < totalElements; index++) {
             if (state.elementsEnabled[index]) {
-                query += `${index};`;
+                enabledIndices.push(index);
             }
         }
-        query = query.substr(0, query.length - 1);
+        if (enabledIndices.length > 0 && enabledIndices.length < totalElements) {
+            if (query.length > 0) {
+                query += '&';
+            }
+            query += 'elements=' + enabledIndices.join(';');
+        }
     }
     if (state.currentFilter.length > 0) {
         if (query.length > 0) {
@@ -397,6 +463,12 @@ function putStateIntoURL(state: IUCAppState) {
             query += `${encodeURIComponent(groupKey)},`;
         });
         query = query.substr(0, query.length - 1);
+    }
+    if (state.viewMode === 'sheet') {
+        if (query.length > 0) {
+            query += '&';
+        }
+        query += 'view=sheet';
     }
     if (state.detailsOpen && !isNullOrUndefined(state.detailsData)) {
         if (query.length > 0) {
@@ -780,6 +852,7 @@ function routeReducer(state: IUCAppState = new UcAppState(), action: UCRouterAct
     const maximized = params.hasOwnProperty('maximized') || params.hasOwnProperty('?maximized');
     const order = decodeURIComponent(params.order || params['?order'] || '+id');
     const groupsParam = decodeURIComponent(params.groups || params['?groups'] || '');
+    const viewParam = (params.view || params['?view'] || '').toString().toLowerCase();
     state.internalLink = params.sectionLink;
 
     search.split(';').map(x => x.trim()).forEach(x => {
@@ -796,6 +869,30 @@ function routeReducer(state: IUCAppState = new UcAppState(), action: UCRouterAct
         .map(x => Number.parseInt(x.trim()));
     state.currentColumns = columns.split(',')
         .filter(x => x.trim().length > 0);
+    state.routeColumnsPending = state.currentColumns.length > 0 ? [...state.currentColumns] : null;
+    state.routeElementsPending = null;
+    state.routeGroupsPending = null;
+    if (Array.isArray(state.columnKeys) && state.columnKeys.length > 0 && state.columnsEnabled.length === state.columnKeys.length && state.currentColumns.length > 0) {
+        const allowedColumns = new Set(state.currentColumns);
+        let anyMatched = false;
+        state.columnKeys.forEach((key, index) => {
+            const enabled = allowedColumns.has(key);
+            state.columnsEnabled[index] = enabled;
+            state.columnsEnabledCache[index] = enabled;
+            if (enabled) {
+                anyMatched = true;
+            }
+        });
+        if (anyMatched) {
+            state.columnDisplayAll = state.columnsEnabled.filter(value => value).length === state.columnNames.length;
+            state.currentChanged = true;
+            state.loadedColumnsFromRoute = [];
+        } else {
+            state.loadedColumnsFromRoute = [...state.currentColumns];
+        }
+    } else {
+        state.loadedColumnsFromRoute = [...state.currentColumns];
+    }
     if (state.currentColumns.length === 0 && state.criterias) {
         const values = state.criterias.values();
         let crit = values.next().value;
@@ -805,17 +902,44 @@ function routeReducer(state: IUCAppState = new UcAppState(), action: UCRouterAct
         }
     }
     state.groupExpanded = {};
-    groupsParam.split(',')
+    const expandedGroupTokens = groupsParam.split(',')
         .map(x => x.trim())
-        .filter(x => x.length > 0)
-        .forEach(key => state.groupExpanded[key] = true);
-    if (!isNullOrUndefined(indices)) {
-        for (let i = 0; i < state.elementsEnabled.length; i++) {
-            state.loadedElementsEnabled[i] = false;
+        .filter(x => x.length > 0);
+    expandedGroupTokens.forEach(key => state.groupExpanded[key] = true);
+    if ((state.featureGroups || []).length > 0) {
+        state.featureGroups = state.featureGroups.map(group => ({
+            ...group,
+            isExpanded: state.groupExpanded[group.key] === true && !group.isExcluded
+        }));
+    } else {
+        state.groupExpandedFromRoute = true;
+        state.routeGroupsPending = {...state.groupExpanded};
+    }
+    state.hydratingFromRoute = true;
+
+    const elementTokens = (indices || '')
+        .split(';')
+        .map(token => token.trim())
+        .filter(token => token.length > 0 && token.toLowerCase() !== 'none');
+    if (state.elementsEnabled.length > 0) {
+        const enabledSet = new Set(elementTokens.map(token => Number.parseInt(token, 10)).filter(idx => !Number.isNaN(idx) && idx >= 0));
+        if (enabledSet.size > 0) {
+            for (let i = 0; i < state.elementsEnabled.length; i++) {
+                state.elementsEnabled[i] = enabledSet.has(i);
+            }
+            state.elementDisplayAll = enabledSet.size === state.elementsEnabled.length;
+            state.currentChanged = true;
         }
-        indices.split(';').forEach(i => {
-            state.loadedElementsEnabled[i] = true;
+        state.routeElementsPending = enabledSet.size > 0 ? Array.from(enabledSet) : null;
+    } else {
+        state.loadedElementsEnabled = [];
+        elementTokens.forEach(token => {
+            const parsed = Number.parseInt(token, 10);
+            if (!Number.isNaN(parsed) && parsed >= 0) {
+                state.loadedElementsEnabled[parsed] = true;
+            }
         });
+        state.routeElementsPending = elementTokens.map(token => Number.parseInt(token, 10)).filter(idx => !Number.isNaN(idx) && idx >= 0);
     }
     if (params.details) {
         const detailsKey = decodeURIComponent(params.details);
@@ -830,6 +954,7 @@ function routeReducer(state: IUCAppState = new UcAppState(), action: UCRouterAct
         }
     }
 
+    state.viewMode = viewParam === 'sheet' ? 'sheet' : 'table';
     state.currentlyMaximized = maximized;
     state.currentOrder = order.split(',');
     return state;

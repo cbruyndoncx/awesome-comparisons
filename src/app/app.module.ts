@@ -40,7 +40,7 @@ import { CustomRouterStateSerializer } from './redux/custom-router-state-seriali
         }
       }
     ),
-    StoreRouterConnectingModule
+    StoreRouterConnectingModule.forRoot()
   ],
   providers: [
     {

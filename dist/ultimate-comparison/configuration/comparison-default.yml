@@ -1,0 +1,170 @@
+title: Awesome Comparisons
+subtitle: born out of the Ultimate Comparison Framework
+repoowner: cbruyndoncx
+selectTitle: ''
+tableTitle: ''
+repository:
+  template: "https://github.com/{repoowner}/awesome-comparisons.git"
+  variables: ["repoowner"]
+details:
+  header:
+    nameRef: id
+    labelRef: ""
+    urlRef: id
+  body:
+    title: Short Description
+    bodyRef: ShortDescription
+  tooltipAsText: false
+criteria:
+  - id:
+      name: Name
+      search: false
+      table: true
+      detail: false
+      type: name-url
+  - ShortDescription:
+      name: Short Description
+      search: false
+      detail: false
+      table: true
+      order: '1'
+      type: markdown
+  - default-id:
+      ignore: true
+      id: id
+      name: Name
+      search: false
+      table: true
+      description: ""
+      placeholder: ""
+      order: ""
+      andSearch: false
+      rangeSearch: false
+      type: name-url
+      lock:
+        id: true
+        type: true
+        detail: true
+  - default-description:
+      ignore: true
+      id: description
+      name: Description
+      search: false
+      table: false
+      detail: false
+      description: ""
+      placeholder: ""
+      order: ""
+      andSearch: false
+      rangeSearch: false
+      type: markdown
+      lock:
+        id: true
+        type: true
+  - default-text:
+      ignore: true
+      id: Text-Criteria
+      name:
+        template: "{}"
+        variables: ["id"]
+      search: false
+      table: true
+      detail: true
+      description: ""
+      placeholder: ""
+      order: ""
+      andSearch: false
+      rangeSearch: false
+      type: text
+  - default-rating:
+      ignore: true
+      id: Rating-Criteria
+      name: ""
+      search: false
+      table: false
+      detail: false
+      description: ""
+      placeholder: ""
+      order: ""
+      andSearch: false
+      rangeSearch: false
+      type: rating
+  - default-label: # Used for defining missing criteria (with labels)
+      ignore: true
+      id: Label-Criteria
+      name:
+        template: "{}"
+        variables: ["id"]
+      search: true
+      table: true
+      detail: true
+      description:
+        template: "Default description for {}"
+        variables: ["name"]
+      placeholder:
+        template: "Select {} ..."
+        variables: ["name"]
+      order: ""
+      andSearch: false
+      rangeSearch: false
+      type: label
+      values:
+        'Yes':
+          display: '✅'
+        'No':
+          displayHtml: '<span class="status status-no">✖</span>'
+  - default-markdown: # Used for defining missing criteria (without labels)
+      ignore: true
+      id: Markdown-Criteria
+      name:
+        template: "{}"
+        variables: ["id"]
+      search: false
+      table: true
+      detail: true
+      description: ""
+      placeholder: ""
+      order: ""
+      andSearch: false
+      rangeSearch: false
+      type: markdown
+  - default-name-url:
+      ignore: true
+      id: Name-Url-Criteria
+      name:
+        template: "{}"
+        variables: ["id"]
+      search: false
+      table: true
+      detail: false
+      description: ""
+      placeholder: ""
+      order: ""
+      andSearch: false
+      rangeSearch: false
+      type: name-url
+  - default-repository:
+      ignore: true
+      id: Repository-Criteria
+      name:
+        template: "{}"
+        variables: ["id"]
+      search: false
+      table: false
+      detail: false
+      description: ""
+      placeholder: "Select development status..."
+      order: ""
+      andSearch: false
+      rangeSearch: false
+      type: repository
+  - default-colorxxx: # Used for coloring labels
+      ignore: true
+      values:
+        99:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(15, 100%, 70%)'
+        999:
+          color: '#0d0d0d'
+          backgroundColor: 'hsl(30, 100%, 70%)'
+

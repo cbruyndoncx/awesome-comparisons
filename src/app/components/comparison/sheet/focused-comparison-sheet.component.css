@@ -1,0 +1,142 @@
+:host {
+    display: block;
+    color: var(--text-color, #0f172a);
+}
+
+.focused-sheet {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.focused-sheet__controls {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.focused-sheet__print {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid var(--border-color, rgba(15, 23, 42, 0.12));
+    border-radius: 6px;
+    background: var(--card-background, #ffffff);
+    color: var(--text-color, #1f2937);
+    cursor: pointer;
+}
+
+.focused-sheet__print:hover,
+.focused-sheet__print:focus {
+    border-color: var(--uc-accent, #1e88e5);
+    color: var(--uc-accent, #1e88e5);
+}
+
+.focused-sheet__table-wrapper {
+    overflow-x: auto;
+}
+
+.focused-sheet__table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-background, #ffffff);
+    box-shadow: 0 12px 30px -25px var(--shadow-color, rgba(15, 23, 42, 0.28));
+}
+
+.focused-sheet__table th,
+.focused-sheet__table td {
+    border: 1px solid var(--border-color, rgba(148, 163, 184, 0.3));
+    padding: 10px;
+    vertical-align: top;
+}
+
+.focused-sheet__criteria-heading {
+    width: 220px;
+    background: var(--hover-color, rgba(148, 163, 184, 0.14));
+    color: var(--text-color, #0f172a);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 12px;
+}
+
+.focused-sheet__element-heading {
+    min-width: 220px;
+    text-align: center;
+    background: var(--hover-color, rgba(148, 163, 184, 0.12));
+    color: var(--text-color, #0f172a);
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.focused-sheet__element-name {
+    margin-bottom: 4px;
+}
+
+.focused-sheet__element-description {
+    font-size: 12px;
+    color: var(--text-secondary, #6b7280);
+    margin-bottom: 4px;
+}
+
+.focused-sheet__criteria {
+    font-weight: 600;
+    background: var(--hover-color, rgba(148, 163, 184, 0.08));
+    color: var(--text-color, #0f172a);
+}
+
+.focused-sheet__value {
+    text-align: left;
+    color: var(--text-color, #0f172a);
+}
+
+.focused-sheet__value--label {
+    text-align: center;
+}
+
+.focused-sheet__value--markdown {
+    max-width: 320px;
+}
+
+.focused-sheet__value .label {
+    display: inline-flex;
+    margin: 2px;
+}
+
+.repository-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.repository-links a {
+    color: var(--link-color, #1e88e5);
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+.focused-sheet__value--dash {
+    color: var(--text-secondary, #94a3b8);
+}
+
+@media print {
+    :host,
+    .focused-sheet {
+        box-shadow: none;
+    }
+
+    .focused-sheet__controls {
+        display: none;
+    }
+
+    .focused-sheet__table {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+
+    .focused-sheet__table th,
+    .focused-sheet__table td {
+        border: 1px solid #000;
+        padding: 8px;
+    }
+}
