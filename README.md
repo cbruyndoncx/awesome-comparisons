@@ -117,6 +117,15 @@ If one column depends on a repository (repo-attribute in `comparison.yml` true),
 To update the ultimate comparison framework that your comparison uses, just run `npm update` in the directory that contains your comparison.
 It installs the latest version with the same major version number (ie. `2.x.x`).
 
+## Release process
+
+Refer to [docs/release-workflow.md](docs/release-workflow.md) for the full checklist. In short:
+
+- Update changelogs and bump the npm version if needed.
+- Run `npm run release` to build the site and stamp the compact `vX.Y.Z.yymmdd` label.
+- Tag the release using the generated label and publish it through GitHub releases (`gh release create <label>` is recommended).
+- Debug builds (`npm run dev`, `npm run build`) never modify the stamped footer, so you can iterate locally without touching release metadata.
+
 ## Development hints
 
 When developing on the framework itself, these might be helpful hints:

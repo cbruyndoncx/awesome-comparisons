@@ -13,9 +13,11 @@
     "prebuild:prod": "npm run prebuild",
     "build": "npm run data:prepare && ng build",
     "build:prod": "npm run data:prepare && ng build --configuration production",
+    "release:stamp": "node ./node_modules/gulp/bin/gulp.js release --gulpfile=./lib/gulp/gulpfile.js",
+    "release:prepare": "npm run build:prod && npm run release:stamp",
     "templates:export": "node ./lib/comparison-template/export-all-templates.js",
     "test": "ng test",
-    "release": "npm run build:prod"
+    "release": "npm run release:prepare"
   },
   "files": [
     "dist",

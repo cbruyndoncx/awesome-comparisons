@@ -65,15 +65,12 @@ Expands the build to support multiple datasets defined in configuration/datasets
 
 ### Release Management
 
-Updates version information for package releases.
+Maintains footer metadata for official releases.
 
-- Requires version tag via --tag command line argument [@test](./tests/release-management.spec.js)
-- Throws error when version tag is undefined [@test](./tests/release-management.spec.js)
-- Updates version tag in VersionInformation.ts using sed commands [@test](./tests/release-management.spec.js)
-- Updates tag date with current date in YYYY-MM-DD format [@test](./tests/release-management.spec.js)
-- Updates tag link URL with new version [@test](./tests/release-management.spec.js)
-- Generates current date using moment().format("YYYY-MM-DD") [@test](./tests/release-management.spec.js)
-- Uses sed with backup file creation for safe file modifications [@test](./tests/release-management.spec.js)
+- Writes `VersionInformation.ts` during release stamping, deriving the build label from `--build`, `--label`, `--tag`, or defaulting to `v<semver core>.<yymmdd>` when none are provided [@test](./tests/release-management.spec.js)
+- Copies the package version from `package.json` into `VersionInformation.version` [@test](./tests/release-management.spec.js)
+- Sets `tagDate` using `moment().format('YYYY-MM-DD')` for deterministic ISO dates [@test](./tests/release-management.spec.js)
+- Builds the release link using the repository base (`https://github.com/cbruyndoncx/awesome-comparisons` by default) or overrides supplied via `--repo`/`--tag-link` [@test](./tests/release-management.spec.js)
 
 ### Development Watch Tasks
 

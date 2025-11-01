@@ -214,8 +214,10 @@
                 rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img
                 alt="Creative Commons License CC-BY-SA 4.0" style="border-width:0"
                 src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/></a> | <a
-            [href]="getVersionInformation()?.tagLink">{{getVersionInformation()?.tag + " (" +
-            (getVersionInformation()?.tagDate | date: ("yyyy-MM-dd")) + ")"}}</a>
+                [href]="getVersionInformation()?.tagLink"
+                [title]="'Built on ' + (getVersionInformation()?.tagDate | date: ('yyyy-MM-dd'))">
+                {{getVersionInformation()?.tag}}
+            </a>
         </div>
     </div>
 </div>
