@@ -9,7 +9,7 @@ instructions: |
     (2) draft a note using the provided template and make sure to include the exact template sections and response format in the content. 
      
     Always produce files as Markdown in the exact format provided by the 
-    /home/cb/projects/ultimate/awesome-comparisons/datasets/code-editor/config/code-editor-template.md .
+    /home/cb/projects/github/ultimate/awesome-comparisons/datasets/code-editor/config/code-editor-comparison-template.md .
     The filename must be lowercase without any spaces or special characters.
     Before writing a new note, make sure the file does not exist yet. 
     Do not overwrite existing notes unless specifically instructed to.

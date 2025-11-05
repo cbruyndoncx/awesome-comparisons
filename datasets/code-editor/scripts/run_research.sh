@@ -15,7 +15,6 @@
 # goose run --recipe research_aicoder_recipe.yaml --params topic="Codex CLI"
 # goose run --recipe research_aicoder_recipe.yaml --params topic="CodiumAI"
 # goose run --recipe research_aicoder_recipe.yaml --params topic="Cogram"
-# goose run --recipe research_aicoder_recipe.yaml --params topic="Cursor"
 # goose run --recipe research_aicoder_recipe.yaml --params topic="DeepCode"
 # goose run --recipe research_aicoder_recipe.yaml --params topic="Devika AI"
 # goose run --recipe research_aicoder_recipe.yaml --params topic="Devin"
@@ -77,5 +76,8 @@
 
 # goose run --recipe research_aicoder_recipe.yaml --params topic="CodeCompanion.ai" # no more opensource 7.0.45 (Jun 1, 2025)
 
-#goose run --recipe research_aicoder_recipe.yaml --params topic="EasyCode.ai" 
-goose run --recipe research_aicoder_recipe.yaml --params topic="DeepAgent by Abacus.ai" 
+# goose run --recipe research_aicoder_recipe.yaml --params topic="EasyCode.ai" 
+# goose run --recipe research_aicoder_recipe.yaml --params topic="DeepAgent by Abacus.ai" 
+# goose run --recipe research_aicoder_recipe.yaml --params topic="Cursor"
+goose run --recipe research_aicoder_recipe.yaml --params topic="Verdent Desk"
+goose run --recipe research_aicoder_recipe.yaml --params topic="Verdent vscode extension"
