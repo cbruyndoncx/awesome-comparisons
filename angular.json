@@ -53,6 +53,7 @@
                 }
               ],
               "optimization": true,
+              "inlineFonts": false,
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
@@ -75,6 +76,7 @@
             },
             "development": {
               "optimization": false,
+              "inlineFonts": false,
               "sourceMap": true,
               "vendorChunk": true
             }

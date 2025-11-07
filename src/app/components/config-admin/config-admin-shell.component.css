@@ -94,6 +94,44 @@
   align-items: center;
 }
 
+.config-admin-shell__actions button[mat-icon-button] {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--primary-100, #c5cae9);
+  background: #fff;
+  color: var(--primary-600, #3949ab);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 120ms ease, background 120ms ease, box-shadow 120ms ease, color 120ms ease;
+}
+
+.config-admin-shell__actions button[mat-icon-button] mat-icon {
+  font-family: 'Material Icons Round', 'Material Icons', sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  color: currentColor;
+}
+
+.config-admin-shell__actions button[mat-icon-button]:not([disabled]):hover {
+  border-color: var(--primary-color, #3f51b5);
+  background: var(--surface-card, #fff);
+  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.15);
+}
+
+.config-admin-shell__actions button[mat-icon-button]:not([disabled]):focus-visible {
+  outline: none;
+  border-color: var(--primary-color, #3f51b5);
+  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.25);
+}
+
+.config-admin-shell__actions button[mat-icon-button][disabled] {
+  opacity: 0.4;
+  border-style: dashed;
+  box-shadow: none;
+}
+
 .config-admin-shell__summary {
   position: sticky;
   top: 0;

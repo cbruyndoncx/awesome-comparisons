@@ -787,11 +787,28 @@ export class ConfigWorkspaceService {
     const valueDisplayOverrides = new Map<string, ValueDisplayModel[]>();
     const extraProperties: Record<string, any> = {};
     
-    // Extract criteria groups
-    if (response.parsedDocument?.criteria) {
-      Object.entries(response.parsedDocument.criteria).forEach(([name, rawGroup]: [string, any]) => {
+    const rawCriteria = response.parsedDocument?.criteria;
+    if (Array.isArray(rawCriteria)) {
+      rawCriteria.forEach((entry: any) => {
+        if (!entry || typeof entry !== 'object') {
+          return;
+        }
+        Object.entries(entry).forEach(([name, rawGroup]: [string, any]) => {
+          if (!rawGroup || typeof rawGroup !== 'object') {
+            return;
+          }
+          criteriaGroups.push(this.toCriteriaGroupModel({
+            name,
+            ...rawGroup
+          }));
+        });
+      });
+    } else if (rawCriteria && typeof rawCriteria === 'object') {
+      Object.entries(rawCriteria).forEach(([name, rawGroup]: [string, any]) => {
+        if (!rawGroup || typeof rawGroup !== 'object') {
+          return;
+        }
         criteriaGroups.push(this.toCriteriaGroupModel({
-          id: this.generateId(),
           name,
           ...rawGroup
         }));

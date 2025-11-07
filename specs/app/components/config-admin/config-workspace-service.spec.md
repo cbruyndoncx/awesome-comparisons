@@ -21,7 +21,7 @@ Fetches configuration catalog via `GET /api/config/catalog` and maintains cached
 
 Loads configuration documents via `GET /api/config/:encodedPath` and maintains active document state.
 
-- Transforms API responses into strongly typed `ConfigDocumentModel` instances
+- Transforms API responses into strongly typed `ConfigDocumentModel` instances, normalizing both object and legacy array-based `criteria` definitions so group names show up correctly in the editor
 - Preserves unrecognized YAML keys for round-trip persistence
 - Maintains `activeDocument$` observable for currently selected document
 - Tracks loading states with `isLoading$` and `saveStatus$` observables

@@ -24,13 +24,13 @@ Provides consistent styling for layout panels with material design principles.
 - `.config-admin-shell__catalog`, `.config-admin-shell__editor`, `.config-admin-shell__preview` specific panel variants
 - Uses background cards (`var(--surface-card, #fff)`), rounded corners, and box-shadow
 
-### Sticky Toolbar
+### Sticky Toolbar & Action Buttons
 
 Creates a persistent toolbar at the top of the interface with action button support.
 
 - `.config-admin-shell__toolbar` with `position: sticky`, `z-index: 2`, and subtle shadow on scroll
 - Includes `.toolbar-spacer` flex filler and `.toolbar-actions` for grouped buttons
-- Proper spacing for action buttons
+- `.config-admin-shell__actions button[mat-icon-button]` now receives a white pill treatment outlined in the primary palette, uses inline-flex centering, and forces icons to inherit the brand color so glyphs are always visible at rest; hover/focus halos remain, and disabled states dim with dashed borders for clarity.
 
 ### State Classes
 
