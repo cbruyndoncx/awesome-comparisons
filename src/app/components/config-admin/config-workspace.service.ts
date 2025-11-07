@@ -18,6 +18,10 @@ import {
   SaveResult,
   ValidationError
 } from '../../models/config-document.model';
+import { parseStructuredText } from './template-field.util';
+
+const OTHER_CRITERIA_GROUP_ID = '__other__';
+const OTHER_CRITERIA_GROUP_NAME = 'Other Criteria';
 
 type CatalogFilters = {
   datasetIds: string[];
@@ -124,6 +128,9 @@ export class ConfigWorkspaceService {
               fallbackExisting?.children?.[childIndex] ??
               null;
 
+            const placeholderValue = this.parseStructuredField(entryForm.placeholder);
+            const descriptionValue = this.parseStructuredField(entryForm.description);
+
             return {
               id: entryForm.id || existingEntry?.id || this.generateId(),
               name: entryForm.name || existingEntry?.name || '',
@@ -135,8 +142,8 @@ export class ConfigWorkspaceService {
                 typeof entryForm.order === 'number'
                   ? entryForm.order
                   : childIndex,
-              placeholder: entryForm.placeholder ?? existingEntry?.placeholder,
-              description: entryForm.description ?? existingEntry?.description,
+              placeholder: placeholderValue,
+              description: descriptionValue,
               parentId: groupId
             };
           }
@@ -787,33 +794,9 @@ export class ConfigWorkspaceService {
     const valueDisplayOverrides = new Map<string, ValueDisplayModel[]>();
     const extraProperties: Record<string, any> = {};
     
-    const rawCriteria = response.parsedDocument?.criteria;
-    if (Array.isArray(rawCriteria)) {
-      rawCriteria.forEach((entry: any) => {
-        if (!entry || typeof entry !== 'object') {
-          return;
-        }
-        Object.entries(entry).forEach(([name, rawGroup]: [string, any]) => {
-          if (!rawGroup || typeof rawGroup !== 'object') {
-            return;
-          }
-          criteriaGroups.push(this.toCriteriaGroupModel({
-            name,
-            ...rawGroup
-          }));
-        });
-      });
-    } else if (rawCriteria && typeof rawCriteria === 'object') {
-      Object.entries(rawCriteria).forEach(([name, rawGroup]: [string, any]) => {
-        if (!rawGroup || typeof rawGroup !== 'object') {
-          return;
-        }
-        criteriaGroups.push(this.toCriteriaGroupModel({
-          name,
-          ...rawGroup
-        }));
-      });
-    }
+    criteriaGroups.push(
+      ...this.buildCriteriaGroups(response.parsedDocument?.criteria)
+    );
     
     // Extract value display overrides
     if (response.parsedDocument?.valueDisplay) {
@@ -854,11 +837,185 @@ export class ConfigWorkspaceService {
     };
   }
 
+  private buildCriteriaGroups(rawCriteria: any): CriteriaGroupModel[] {
+    const definitions = this.flattenCriteriaDefinitions(rawCriteria);
+    if (definitions.size === 0) {
+      return [{
+        id: OTHER_CRITERIA_GROUP_ID,
+        name: OTHER_CRITERIA_GROUP_NAME,
+        type: 'group',
+        search: false,
+        table: false,
+        detail: false,
+        order: 0,
+        children: []
+      }];
+    }
+
+    const assignedChildren = new Set<string>();
+    const groupDefinitionKeys = new Set<string>();
+    const groups: CriteriaGroupModel[] = [];
+
+    definitions.forEach((definition, key) => {
+      if (!Array.isArray(definition.children) || definition.children.length === 0) {
+        return;
+      }
+      const groupId = definition.id || key || this.generateId();
+      const children = this.resolveGroupChildren(groupId, definition.children, definitions, assignedChildren);
+      groups.push({
+        id: groupId,
+        name: definition.name || key,
+        type: definition.type || 'group',
+        search: Boolean(definition.search),
+        table: Boolean(definition.table),
+        detail: Boolean(definition.detail),
+        order: Number(definition.order) || groups.length,
+        children
+      });
+      groupDefinitionKeys.add(key);
+    });
+
+    const ungroupedEntries: CriteriaEntryModel[] = [];
+    definitions.forEach((definition, key) => {
+      if (assignedChildren.has(key) || groupDefinitionKeys.has(key)) {
+        return;
+      }
+      ungroupedEntries.push(
+        this.toCriteriaEntryModel(key, definition, OTHER_CRITERIA_GROUP_ID)
+      );
+    });
+
+    if (ungroupedEntries.length > 0 || groups.length === 0) {
+      const maxOrder = groups.reduce((max, group) => Math.max(max, group.order), 0);
+      groups.push({
+        id: OTHER_CRITERIA_GROUP_ID,
+        name: OTHER_CRITERIA_GROUP_NAME,
+        type: 'group',
+        search: false,
+        table: false,
+        detail: false,
+        order: maxOrder + 1,
+        children: ungroupedEntries
+      });
+    }
+
+    return groups.sort((a, b) => a.order - b.order);
+  }
+
+  private flattenCriteriaDefinitions(rawCriteria: any): Map<string, any> {
+    const definitions = new Map<string, any>();
+    const register = (key: string, value: any) => {
+      if (!key || !value || typeof value !== 'object') {
+        return;
+      }
+      definitions.set(key, { ...value });
+    };
+
+    if (Array.isArray(rawCriteria)) {
+      rawCriteria.forEach(entry => {
+        if (!entry || typeof entry !== 'object') {
+          return;
+        }
+        Object.entries(entry).forEach(([key, value]) => register(key, value));
+      });
+    } else if (rawCriteria && typeof rawCriteria === 'object') {
+      Object.entries(rawCriteria).forEach(([key, value]) => register(key, value));
+    }
+
+    return definitions;
+  }
+
+  private resolveGroupChildren(
+    parentId: string,
+    childRefs: any[],
+    definitions: Map<string, any>,
+    assignedChildren: Set<string>
+  ): CriteriaEntryModel[] {
+    const children: CriteriaEntryModel[] = [];
+
+    childRefs.forEach(ref => {
+      const resolved = this.resolveChildReference(ref, definitions);
+      if (!resolved) {
+        return;
+      }
+      assignedChildren.add(resolved.key);
+      children.push(this.toCriteriaEntryModel(resolved.key, resolved.definition, parentId));
+    });
+
+    return children;
+  }
+
+  private resolveChildReference(
+    ref: any,
+    definitions: Map<string, any>
+  ): { key: string; definition: any } | null {
+    const possibleKeys: string[] = [];
+    if (typeof ref === 'string') {
+      possibleKeys.push(ref);
+    } else if (ref && typeof ref === 'object') {
+      if (ref.id) {
+        possibleKeys.push(ref.id);
+      }
+      if (ref.key) {
+        possibleKeys.push(ref.key);
+      }
+      if (ref.name) {
+        possibleKeys.push(ref.name);
+      }
+    }
+
+    for (const key of possibleKeys) {
+      if (definitions.has(key)) {
+        return { key, definition: definitions.get(key) };
+      }
+    }
+
+    if (possibleKeys.length > 0) {
+      const fallbackName = possibleKeys[possibleKeys.length - 1];
+      for (const [key, definition] of definitions) {
+        if ((definition.name || '').toLowerCase() === String(fallbackName).toLowerCase()) {
+          return { key, definition };
+        }
+      }
+    }
+
+    return null;
+  }
+
+  private toCriteriaEntryModel(
+    key: string,
+    definition: any,
+    parentId: string
+  ): CriteriaEntryModel {
+    return {
+      id: definition.id || key || this.generateId(),
+      name: definition.name || key,
+      type: definition.type || 'string',
+      search: Boolean(definition.search),
+      table: Boolean(definition.table),
+      detail: Boolean(definition.detail),
+      order: Number(definition.order) || 0,
+      placeholder: this.parseStructuredField(definition.placeholder || ''),
+      description: this.parseStructuredField(definition.description || ''),
+      parentId
+    };
+  }
+
   private findCatalogItem(encodedPath: string): ConfigCatalogItem | undefined {
     return this.rawCatalog.find(item => item.encodedPath === encodedPath);
   }
 
   private generateId(): string {
     return Math.random().toString(36).substring(2) + Date.now().toString(36);
+  }
+
+  private parseStructuredField(value: any): any {
+    if (value == null || value === '') {
+      return '';
+    }
+    if (typeof value === 'string') {
+      return parseStructuredText(value);
+    }
+    return value;
   }
 }

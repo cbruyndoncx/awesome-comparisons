@@ -17,13 +17,14 @@ Consumes `ConfigDocumentModel` instances and projects them into nested reactive 
 - Maintains form control references to preserve focus during live updates
 - Rebuilds forms when new documents are supplied while preserving existing control state
 - Handles large documents with graceful degradation for small lists
+- Injects an automatic “Other Criteria” group so any unassigned criteria stay visible/editable and can be dragged into a named group later
 
 ### Criteria Groups Management
 
 Renders per-group accordions with comprehensive editing controls.
 
 - Name input with validation for required field
-- Type select dropdown limited to allowed values from configuration
+- Type select dropdown limited to allowed values from configuration (plus a dedicated `group` sentinel so purely organizational groups can be represented)
 - Boolean toggles for search/table/detail flags using Material slide-toggle
 - Numeric order input with non-negative validation
 - Action buttons for add, clone, reorder (drag-and-drop), and delete operations
@@ -37,7 +38,7 @@ Renders criteria entry cards within each group with full metadata editing.
 - Editable fields: id, name, type, flags, order, placeholder, description
 - Parent-child relationship maintenance within group context  
 - Individual entry validation with inline error display
-- Clone and reorder support for entries within groups
+- Clone support plus CDK drag-drop reordering both within a group and across connected groups (including the fallback bucket) so admins can reorganize criteria exactly like the public settings dialog
 - Unique criteria ID validation across entire document
 - Card-based layout with Material form-field components
 

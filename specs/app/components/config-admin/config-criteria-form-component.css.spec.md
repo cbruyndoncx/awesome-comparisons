@@ -25,7 +25,7 @@ Style the action bar with sticky positioning at the top of the container.
 Style the accordion interface using Material Design tokens.
 
 - Set `.config-criteria__group` margins for proper spacing
-- Provide `.config-criteria__group-header` with flex alignment between titles and actions
+- Provide `.criteria-group-header` as the branded header surface with bold titles, pill meta text, and a dedicated `.group-toggle` icon button so every group (including “Other Criteria”) exposes the expand/collapse affordance
 - Highlight dirty groups via `.is-dirty` class with colored left border
 
 ### Drag handle styling
@@ -41,6 +41,8 @@ Style criteria entry cards with responsive grid layout.
 - Use `.config-criteria__entry` with `display: grid`
 - Two-column layout on desktop, single column below 960px
 - Provide spacing between form fields with `gap: 12px`
+- `.entry-toggles` flex container keeps per-entry search/table/detail toggles aligned with consistent spacing
+- `.entry-summary` and `.entry-flag` styles keep collapsed cards readable, bolding enabled flags until the user clicks “Edit”
 
 ### Value override table styling
 
@@ -89,7 +91,10 @@ Use Material Design CSS variables for consistent theming.
 
 /* Accordion styling */
 .config-criteria__group { }
-.config-criteria__group-header { }
+.criteria-group-header { }
+.criteria-group-header .group-title { }
+.criteria-group-header .group-meta { }
+.criteria-group-header .group-toggle { }
 .config-criteria__group.is-dirty { }
 
 /* Drag handle */
@@ -97,6 +102,7 @@ Use Material Design CSS variables for consistent theming.
 
 /* Criteria entry cards */
 .config-criteria__entry { }
+.entry-toggles { }
 
 /* Value override table */
 .config-criteria__overrides { }

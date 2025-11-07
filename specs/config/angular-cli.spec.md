@@ -20,7 +20,6 @@ Configures build target with proper entry points and asset handling:
 - TypeScript configuration at src/tsconfig.app.json
 - Output directory at dist/ultimate-comparison
 - Assets include favicon, assets, fonts directories and configuration/data content
-- Disables Angular CLI font inlining (`inlineFonts: false`) so external icon fonts can be loaded at runtime without requiring network access during builds
 
 ### Environment-Specific Builds
 

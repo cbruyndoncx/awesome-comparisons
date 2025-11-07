@@ -34,6 +34,7 @@ import {
   ValueDisplayModel
 } from '../../models/config-document.model';
 import { ValidationError } from '../../models/validation-error.model';
+import { serializeStructuredText } from './template-field.util';
 
 @Component({
   selector: 'uc-config-criteria-form',
@@ -48,6 +49,7 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
   documentForm!: FormGroup;
   criteriaGroupsArray!: FormArray;
   valueDisplayOverridesForm!: FormGroup;
+  groupTypeOptions: string[] = ['group'];
 
   isDirty = false;
   validationErrors: ValidationError[] = [];
@@ -90,10 +92,13 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
 
   private subscriptions: Subscription[] = [];
   private formChangeSubject = new Subject<void>();
+  private expandedEntries = new Set<string>();
 
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
+    this.syncGroupTypeOptions();
+    this.expandedEntries.clear();
     this.documentForm = this.fb.group({
       criteriaGroups: this.fb.array([]),
       valueDisplayOverrides: this.fb.group({})
@@ -127,6 +132,9 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    if (changes['allowedTypes']) {
+      this.syncGroupTypeOptions();
+    }
     if (changes['document'] && this.documentForm) {
       if (this.document) {
         this.initializeForm(this.document);
@@ -149,6 +157,7 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
     this.rebuildValueDisplayOverrides(
       document.valueDisplayOverrides || new Map()
     );
+    this.expandedEntries.clear();
     this.isDirty = false;
     this.dirtyChange.emit(this.isDirty);
   }
@@ -278,6 +287,7 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
       description: ''
     };
     entries.push(this.createEntryGroup(newEntry));
+    this.setEntryExpansion(groupIndex, entries.length - 1, true);
     this.onFormValueChange();
   }
 
@@ -305,9 +315,29 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
   }
 
   reorderCriteriaEntries(groupIndex: number, event: CdkDragDrop<any>): void {
-    const entries = this.getCriteriaEntriesArray(groupIndex);
-    moveItemInArray(entries.controls, event.previousIndex, event.currentIndex);
-    entries.updateValueAndValidity();
+    const destinationArray = this.getCriteriaEntriesArray(groupIndex);
+
+    if (event.previousContainer === event.container) {
+      moveItemInArray(destinationArray.controls, event.previousIndex, event.currentIndex);
+      destinationArray.updateValueAndValidity();
+      this.onFormValueChange();
+      return;
+    }
+
+    const sourceGroupIndex = event.previousContainer.data as number;
+    if (typeof sourceGroupIndex !== 'number') {
+      return;
+    }
+    const sourceArray = this.getCriteriaEntriesArray(sourceGroupIndex);
+    const movedControl = sourceArray.at(event.previousIndex);
+
+    sourceArray.removeAt(event.previousIndex);
+    destinationArray.insert(event.currentIndex, movedControl);
+    this.setEntryExpansion(sourceGroupIndex, event.previousIndex, false);
+    this.setEntryExpansion(groupIndex, event.currentIndex, true);
+
+    sourceArray.updateValueAndValidity();
+    destinationArray.updateValueAndValidity();
     this.onFormValueChange();
   }
 
@@ -599,8 +629,59 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
       table: [!!e.table],
       detail: [!!e.detail],
       order: [e.order, [Validators.required, Validators.min(0)]],
-      placeholder: [e.placeholder || ''],
-      description: [e.description || '']
+      placeholder: [serializeStructuredText(e.placeholder)],
+      description: [serializeStructuredText(e.description)]
     });
+  }
+
+  private syncGroupTypeOptions(): void {
+    const normalized = this.allowedTypes || [];
+    this.groupTypeOptions = Array.from(new Set(['group', ...normalized]));
+  }
+
+  isEntryExpanded(groupIndex: number, entryIndex: number): boolean {
+    const key = this.getEntryKey(groupIndex, entryIndex);
+    return this.expandedEntries.has(key);
+  }
+
+  toggleEntryExpansion(groupIndex: number, entryIndex: number): void {
+    const key = this.getEntryKey(groupIndex, entryIndex);
+    if (this.expandedEntries.has(key)) {
+      this.expandedEntries.delete(key);
+    } else {
+      this.expandedEntries.add(key);
+    }
+  }
+
+  private setEntryExpansion(groupIndex: number, entryIndex: number, expanded: boolean): void {
+    const key = this.getEntryKey(groupIndex, entryIndex);
+    if (!key) {
+      return;
+    }
+    if (expanded) {
+      this.expandedEntries.add(key);
+    } else {
+      this.expandedEntries.delete(key);
+    }
+  }
+
+  private getEntryKey(groupIndex: number, entryIndex: number): string {
+    const control = this.getCriteriaEntriesArray(groupIndex)?.at(entryIndex);
+    const id = control?.get('id')?.value;
+    return id ? String(id) : `${groupIndex}:${entryIndex}`;
+  }
+
+  getDropListId(index: number): string {
+    return `criteria-entries-${index}`;
+  }
+
+  getConnectedDropListIds(currentIndex: number): string[] {
+    if (!this.criteriaGroupsArray || this.criteriaGroupsArray.length === 0) {
+      return [];
+    }
+    const currentId = this.getDropListId(currentIndex);
+    return this.criteriaGroupsArray.controls
+      .map((_, idx) => this.getDropListId(idx))
+      .filter(id => id !== currentId);
   }
 }

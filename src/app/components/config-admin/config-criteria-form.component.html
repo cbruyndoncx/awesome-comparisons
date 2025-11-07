@@ -51,22 +51,37 @@
   <div *ngIf="document; else emptyState" [formGroup]="documentForm">
     
     <!-- Criteria groups accordion -->
-    <mat-accordion formArrayName="criteriaGroups" cdkDropList (cdkDropListDropped)="reorderCriteriaGroups($event)">
+    <mat-accordion
+      formArrayName="criteriaGroups"
+      cdkDropList
+      cdkDropListGroup
+      (cdkDropListDropped)="reorderCriteriaGroups($event)">
       
-      <mat-expansion-panel *ngFor="let group of criteriaGroupsArray.controls; let i = index" 
-                          [formGroupName]="i" cdkDrag>
+      <mat-expansion-panel *ngFor="let group of criteriaGroupsArray.controls; let i = index"
+                           [formGroupName]="i"
+                           cdkDrag
+                           hideToggle="true"
+                           #panel="matExpansionPanel">
         
         <!-- Group header -->
-        <mat-expansion-panel-header [attr.aria-expanded]="false">
-          <mat-panel-title>
+        <mat-expansion-panel-header class="criteria-group-header" [attr.aria-expanded]="panel.expanded">
+          <mat-panel-title class="group-title">
             <span cdkDragHandle class="drag-handle">
               <mat-icon>drag_indicator</mat-icon>
             </span>
             {{ group.get('name')?.value || 'Unnamed Group' }}
           </mat-panel-title>
-          <mat-panel-description>
+          <mat-panel-description class="group-meta">
             Type: {{ group.get('type')?.value || 'N/A' }} | Order: {{ group.get('order')?.value || 0 }}
           </mat-panel-description>
+          <button
+            type="button"
+            mat-icon-button
+            class="group-toggle"
+            (click)="panel.toggle(); $event.stopPropagation()"
+            [attr.aria-label]="panel.expanded ? 'Collapse group' : 'Expand group'">
+            <mat-icon>{{ panel.expanded ? 'expand_less' : 'expand_more' }}</mat-icon>
+          </button>
         </mat-expansion-panel-header>
 
         <!-- Group content -->
@@ -85,10 +100,9 @@
             <mat-form-field appearance="outline">
               <mat-label>Type</mat-label>
               <mat-select formControlName="type">
-                <mat-option value="text">Text</mat-option>
-                <mat-option value="number">Number</mat-option>
-                <mat-option value="date">Date</mat-option>
-                <mat-option value="select">Select</mat-option>
+                <mat-option *ngFor="let type of groupTypeOptions" [value]="type">
+                  {{ type }}
+                </mat-option>
               </mat-select>
             </mat-form-field>
 
@@ -116,22 +130,42 @@
           </div>
 
           <!-- Criteria entries -->
-          <div formArrayName="entries" cdkDropList (cdkDropListDropped)="reorderCriteriaEntries(i, $event)">
+          <div
+            formArrayName="entries"
+            cdkDropList
+            [id]="getDropListId(i)"
+            [cdkDropListData]="i"
+            [cdkDropListConnectedTo]="getConnectedDropListIds(i)"
+            (cdkDropListDropped)="reorderCriteriaEntries(i, $event)">
             
             <mat-card *ngFor="let entry of getCriteriaEntriesArray(i).controls; let j = index" 
                       [formGroupName]="j" class="criteria-entry" tabindex="0" cdkDrag>
               
-              <mat-card-header>
-                <mat-card-title>
+              <mat-card-header class="entry-header" [class.entry-header--collapsed]="!isEntryExpanded(i, j)">
+                <div class="entry-header__left">
                   <span cdkDragHandle class="drag-handle">
                     <mat-icon>drag_indicator</mat-icon>
                   </span>
-                  {{ entry.get('name')?.value || 'Unnamed Entry' }}
-                </mat-card-title>
-                <mat-card-subtitle>{{ entry.get('type')?.value || 'N/A' }}</mat-card-subtitle>
+                  <div class="entry-name">
+                    {{ entry.get('name')?.value || 'Unnamed Entry' }}
+                  </div>
+                  <div class="entry-type">
+                    Type: {{ entry.get('type')?.value || 'N/A' }}
+                  </div>
+                  <div class="entry-flags">
+                    <span class="entry-flag" [class.entry-flag--active]="entry.get('search')?.value">Search</span>
+                    <span class="entry-flag" [class.entry-flag--active]="entry.get('table')?.value">Table</span>
+                    <span class="entry-flag" [class.entry-flag--active]="entry.get('detail')?.value">Detail</span>
+                  </div>
+                </div>
+                <div class="entry-header__actions">
+                  <button mat-stroked-button color="primary" (click)="toggleEntryExpansion(i, j)">
+                    {{ isEntryExpanded(i, j) ? 'Collapse' : 'Edit' }}
+                  </button>
+                </div>
               </mat-card-header>
 
-              <mat-card-content>
+              <mat-card-content *ngIf="isEntryExpanded(i, j)">
                 <div class="entry-fields">
                   <mat-form-field appearance="outline">
                     <mat-label>ID</mat-label>
@@ -152,10 +186,9 @@
                   <mat-form-field appearance="outline">
                     <mat-label>Type</mat-label>
                     <mat-select formControlName="type">
-                      <mat-option value="text">Text</mat-option>
-                      <mat-option value="number">Number</mat-option>
-                      <mat-option value="date">Date</mat-option>
-                      <mat-option value="select">Select</mat-option>
+                      <mat-option *ngFor="let type of allowedTypes" [value]="type">
+                        {{ type }}
+                      </mat-option>
                     </mat-select>
                   </mat-form-field>
 
@@ -175,16 +208,15 @@
                   </mat-form-field>
                 </div>
 
-                <!-- Entry toggles -->
                 <div class="entry-toggles">
-                  <mat-slide-toggle formControlName="required">Required</mat-slide-toggle>
-                  <mat-slide-toggle formControlName="searchable">Searchable</mat-slide-toggle>
-                  <mat-slide-toggle formControlName="sortable">Sortable</mat-slide-toggle>
-                  <mat-slide-toggle formControlName="filterable">Filterable</mat-slide-toggle>
+                  <mat-slide-toggle formControlName="search">Search</mat-slide-toggle>
+                  <mat-slide-toggle formControlName="table">Table</mat-slide-toggle>
+                  <mat-slide-toggle formControlName="detail">Detail</mat-slide-toggle>
                 </div>
+
               </mat-card-content>
 
-              <mat-card-actions>
+              <mat-card-actions *ngIf="isEntryExpanded(i, j)">
                 <button mat-icon-button (click)="cloneCriteriaEntry(i, j)" matTooltip="Clone entry">
                   <mat-icon>content_copy</mat-icon>
                 </button>

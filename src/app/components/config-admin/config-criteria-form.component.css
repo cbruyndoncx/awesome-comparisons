@@ -30,14 +30,6 @@
   background: var(--mat-sys-surface);
 }
 
-.config-criteria__group-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px;
-  background: var(--mat-sys-surface-container);
-}
-
 .config-criteria__group.is-dirty {
   border-left: 4px solid var(--mat-sys-primary);
 }
@@ -61,6 +53,33 @@
   cursor: grabbing;
 }
 
+.criteria-group-header {
+  background: var(--surface-highlight, #f0f4ff);
+  border-left: 4px solid var(--primary-color, #3f51b5);
+  border-radius: 6px;
+  gap: 12px;
+}
+
+.criteria-group-header .group-title {
+  font-weight: 600;
+  color: var(--text-strong, #1f2933);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.criteria-group-header .group-meta {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted, #5f6c80);
+}
+
+.criteria-group-header .group-toggle {
+  margin-left: auto;
+  color: var(--primary-color, #3f51b5);
+}
+
 /* Criteria entry card layout */
 .config-criteria__entry {
   display: grid;
@@ -71,6 +90,72 @@
   border-radius: 8px;
   background: var(--mat-sys-surface);
   margin-bottom: 16px;
+}
+
+.entry-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px 0 16px;
+  gap: 16px;
+  flex-wrap: nowrap;
+}
+
+.entry-header__left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
+}
+
+.entry-name {
+  font-weight: 600;
+  color: var(--text-strong, #1f2933);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 0 0 200px;
+}
+
+.entry-type {
+  font-size: 12px;
+  color: var(--text-muted, #5f6c80);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  min-width: 135px;
+  white-space: nowrap;
+}
+
+.entry-flags {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.entry-flag {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted, #5f6c80);
+}
+
+.entry-flag--active {
+  font-weight: 600;
+  color: var(--primary-color, #3f51b5);
+}
+
+.entry-header__actions button {
+  flex-shrink: 0;
+}
+
+.entry-toggles {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  flex-wrap: wrap;
 }
 
 /* Value override table styling */
