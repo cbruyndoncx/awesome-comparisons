@@ -1,0 +1,276 @@
+<!-- GENERATED FROM SPEC - DO NOT EDIT -->
+<!-- @generated with Tessl v0.28.0 from ../../../../specs/app/components/config-admin/config-criteria-form-component.html.spec.md -->
+<!-- (spec:1ef4e0f8) (code:161b1765) -->
+
+<section class="config-criteria" role="region" aria-label="Configuration editor">
+  
+  <!-- Sticky action bar -->
+  <div class="config-criteria__actions">
+    <button mat-raised-button color="primary" (click)="addCriteriaGroup()" matTooltip="Add new criteria group">
+      <mat-icon>add</mat-icon>
+      Add Group
+    </button>
+    
+    <button mat-raised-button color="accent" (click)="saveRequested.emit()" [disabled]="!isDirty" 
+            matTooltip="Save changes (Ctrl+S)">
+      <mat-icon>save</mat-icon>
+      Save
+    </button>
+    
+    <button mat-raised-button (click)="revertRequested.emit()" [disabled]="!isDirty" 
+            matTooltip="Revert changes (Ctrl+Z)">
+      <mat-icon>undo</mat-icon>
+      Revert
+    </button>
+    
+    <button mat-raised-button (click)="formatRequested.emit()" matTooltip="Format YAML (Ctrl+F)">
+      <mat-icon>format_align_left</mat-icon>
+      Format YAML
+    </button>
+    
+    <div class="config-criteria__status">
+      <span class="totals">Groups: {{ document?.criteriaGroups?.length || 0 }}</span>
+      <span *ngIf="isDirty" class="dirty-indicator">●</span>
+    </div>
+  </div>
+
+  <!-- Validation errors alert -->
+  <mat-expansion-panel *ngIf="validationErrors && validationErrors.length > 0" class="validation-errors">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <mat-icon color="warn">error</mat-icon>
+        Validation Errors ({{ validationErrors.length }})
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <ul>
+      <li *ngFor="let error of validationErrors">{{ error }}</li>
+    </ul>
+  </mat-expansion-panel>
+
+  <!-- Main form content -->
+  <div *ngIf="document; else emptyState" [formGroup]="documentForm">
+    
+    <!-- Criteria groups accordion -->
+    <mat-accordion formArrayName="criteriaGroups" cdkDropList (cdkDropListDropped)="reorderCriteriaGroups($event)">
+      
+      <mat-expansion-panel *ngFor="let group of criteriaGroupsArray.controls; let i = index" 
+                          [formGroupName]="i" cdkDrag>
+        
+        <!-- Group header -->
+        <mat-expansion-panel-header [attr.aria-expanded]="false">
+          <mat-panel-title>
+            <span cdkDragHandle class="drag-handle">
+              <mat-icon>drag_indicator</mat-icon>
+            </span>
+            {{ group.get('name')?.value || 'Unnamed Group' }}
+          </mat-panel-title>
+          <mat-panel-description>
+            Type: {{ group.get('type')?.value || 'N/A' }} | Order: {{ group.get('order')?.value || 0 }}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <!-- Group content -->
+        <div class="criteria-group-content">
+          
+          <!-- Group form fields -->
+          <div class="group-fields">
+            <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="name" placeholder="Group name">
+              <mat-error *ngIf="group.get('name')?.invalid && group.get('name')?.touched">
+                Name is required
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Type</mat-label>
+              <mat-select formControlName="type">
+                <mat-option value="text">Text</mat-option>
+                <mat-option value="number">Number</mat-option>
+                <mat-option value="date">Date</mat-option>
+                <mat-option value="select">Select</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Order</mat-label>
+              <input matInput type="number" formControlName="order" placeholder="0">
+            </mat-form-field>
+          </div>
+
+          <!-- Group toggles -->
+          <div class="group-toggles">
+            <mat-slide-toggle formControlName="search">Search</mat-slide-toggle>
+            <mat-slide-toggle formControlName="table">Table</mat-slide-toggle>
+            <mat-slide-toggle formControlName="detail">Detail</mat-slide-toggle>
+          </div>
+
+          <!-- Group actions -->
+          <div class="group-actions">
+            <button mat-icon-button (click)="cloneCriteriaGroup(i)" matTooltip="Clone group">
+              <mat-icon>content_copy</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="removeCriteriaGroup(i)" matTooltip="Delete group">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+
+          <!-- Criteria entries -->
+          <div formArrayName="entries" cdkDropList (cdkDropListDropped)="reorderCriteriaEntries(i, $event)">
+            
+            <mat-card *ngFor="let entry of getCriteriaEntriesArray(i).controls; let j = index" 
+                      [formGroupName]="j" class="criteria-entry" tabindex="0" cdkDrag>
+              
+              <mat-card-header>
+                <mat-card-title>
+                  <span cdkDragHandle class="drag-handle">
+                    <mat-icon>drag_indicator</mat-icon>
+                  </span>
+                  {{ entry.get('name')?.value || 'Unnamed Entry' }}
+                </mat-card-title>
+                <mat-card-subtitle>{{ entry.get('type')?.value || 'N/A' }}</mat-card-subtitle>
+              </mat-card-header>
+
+              <mat-card-content>
+                <div class="entry-fields">
+                  <mat-form-field appearance="outline">
+                    <mat-label>ID</mat-label>
+                    <input matInput formControlName="id" placeholder="Entry ID">
+                    <mat-error *ngIf="entry.get('id')?.invalid && entry.get('id')?.touched">
+                      ID is required
+                    </mat-error>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name" placeholder="Entry name">
+                    <mat-error *ngIf="entry.get('name')?.invalid && entry.get('name')?.touched">
+                      Name is required
+                    </mat-error>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="outline">
+                    <mat-label>Type</mat-label>
+                    <mat-select formControlName="type">
+                      <mat-option value="text">Text</mat-option>
+                      <mat-option value="number">Number</mat-option>
+                      <mat-option value="date">Date</mat-option>
+                      <mat-option value="select">Select</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="outline">
+                    <mat-label>Order</mat-label>
+                    <input matInput type="number" formControlName="order" placeholder="0">
+                  </mat-form-field>
+
+                  <mat-form-field appearance="outline">
+                    <mat-label>Placeholder</mat-label>
+                    <input matInput formControlName="placeholder" placeholder="Placeholder text">
+                  </mat-form-field>
+
+                  <mat-form-field appearance="outline">
+                    <mat-label>Description</mat-label>
+                    <textarea matInput formControlName="description" placeholder="Entry description" rows="3"></textarea>
+                  </mat-form-field>
+                </div>
+
+                <!-- Entry toggles -->
+                <div class="entry-toggles">
+                  <mat-slide-toggle formControlName="required">Required</mat-slide-toggle>
+                  <mat-slide-toggle formControlName="searchable">Searchable</mat-slide-toggle>
+                  <mat-slide-toggle formControlName="sortable">Sortable</mat-slide-toggle>
+                  <mat-slide-toggle formControlName="filterable">Filterable</mat-slide-toggle>
+                </div>
+              </mat-card-content>
+
+              <mat-card-actions>
+                <button mat-icon-button (click)="cloneCriteriaEntry(i, j)" matTooltip="Clone entry">
+                  <mat-icon>content_copy</mat-icon>
+                </button>
+                <button mat-icon-button color="warn" (click)="removeCriteriaEntry(i, j)" matTooltip="Delete entry">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </mat-card-actions>
+
+            </mat-card>
+
+            <!-- Add criteria entry button -->
+            <button mat-raised-button (click)="addCriteriaEntry(i)" class="add-entry-btn">
+              <mat-icon>add</mat-icon>
+              Add Criteria Entry
+            </button>
+
+          </div>
+
+          <!-- Value display overrides -->
+          <div class="value-display-overrides" *ngIf="group.get('id')?.value">
+            <h4>Value Display Overrides</h4>
+            
+            <table mat-table [dataSource]="getValueDisplayOverrides(group.get('id')?.value)" class="overrides-table">
+              
+              <ng-container matColumnDef="value">
+                <th mat-header-cell *matHeaderCellDef>Value</th>
+                <td mat-cell *matCellDef="let override">{{ override.valueKey }}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="emoji">
+                <th mat-header-cell *matHeaderCellDef>Emoji</th>
+                <td mat-cell *matCellDef="let override">
+                  <input matInput [(ngModel)]="override.emoji" placeholder="🔥">
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="displayText">
+                <th mat-header-cell *matHeaderCellDef>Display Text</th>
+                <td mat-cell *matCellDef="let override">
+                  <input matInput [(ngModel)]="override.displayText" placeholder="Display text">
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef>Actions</th>
+                <td mat-cell *matCellDef="let override">
+                  <button
+                    mat-icon-button
+                    (click)="updateValueDisplayOverride(group.get('id')?.value || '', override.valueKey, override.emoji, override.displayText)">
+                    <mat-icon>save</mat-icon>
+                  </button>
+                  <button
+                    mat-icon-button
+                    color="warn"
+                    (click)="removeValueDisplayOverride(group.get('id')?.value || '', override.valueKey)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="['value', 'emoji', 'displayText', 'actions']"></tr>
+              <tr mat-row *matRowDef="let row; columns: ['value', 'emoji', 'displayText', 'actions'];"></tr>
+              
+            </table>
+
+            <button mat-raised-button (click)="addValueDisplayOverride(group.get('id')?.value)" class="add-override-btn">
+              <mat-icon>add</mat-icon>
+              Add Override
+            </button>
+          </div>
+
+        </div>
+
+      </mat-expansion-panel>
+
+    </mat-accordion>
+
+  </div>
+
+  <!-- Empty state template -->
+  <ng-template #emptyState>
+    <div class="empty-state">
+      <mat-icon>description</mat-icon>
+      <h3>No Document Loaded</h3>
+      <p>Please load a configuration document to begin editing criteria.</p>
+    </div>
+  </ng-template>
+
+</section>

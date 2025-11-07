@@ -1,0 +1,177 @@
+<!-- GENERATED FROM SPEC - DO NOT EDIT -->
+<!-- @generated with Tessl v0.28.0 from ../../../../specs/app/components/config-admin/config-admin-shell-component.html.spec.md -->
+<!-- (spec:43c7530d) (code:eef65002) -->
+
+<mat-toolbar class="config-admin-shell__toolbar">
+  <span class="config-admin-shell__title">Configuration Workspace</span>
+  
+  <!-- Metadata chips -->
+  <div class="config-admin-shell__metadata" *ngIf="selectedDocument$ | async as document">
+    <mat-chip-set>
+      <mat-chip *ngIf="document.metadata?.datasetId">
+        {{ document.metadata.datasetId }}
+      </mat-chip>
+      <mat-chip *ngIf="document.metadata?.isSharedDefault" color="accent">
+        Shared Default
+      </mat-chip>
+      <mat-chip *ngIf="document.metadata?.isDatasetConfig" color="primary">
+        Dataset Config
+      </mat-chip>
+    </mat-chip-set>
+  </div>
+
+  <div class="config-admin-shell__spacer"></div>
+
+  <!-- Action buttons -->
+  <div class="config-admin-shell__actions">
+    <button
+      mat-icon-button
+      [disabled]="!hasUnsavedChanges"
+      (click)="saveDocument()"
+      matTooltip="Save changes">
+      <mat-icon>save</mat-icon>
+    </button>
+    
+    <button
+      mat-icon-button
+      [disabled]="!hasUnsavedChanges"
+      (click)="discardChanges()"
+      matTooltip="Revert changes">
+      <mat-icon>undo</mat-icon>
+    </button>
+    
+    <button
+      mat-icon-button
+      (click)="toggleDiffView()"
+      matTooltip="Toggle diff view">
+      <mat-icon>compare</mat-icon>
+    </button>
+    
+    <button
+      mat-icon-button
+      (click)="copyYamlToClipboard()"
+      matTooltip="Copy YAML to clipboard">
+      <mat-icon>content_copy</mat-icon>
+    </button>
+    
+    <mat-divider vertical></mat-divider>
+    
+    <button
+      mat-icon-button
+      (click)="close()"
+      matTooltip="Close workspace">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <!-- Loading spinner -->
+  <mat-spinner
+    *ngIf="isLoading$ | async"
+    diameter="24"
+    class="config-admin-shell__spinner">
+  </mat-spinner>
+</mat-toolbar>
+
+<div class="config-admin-shell__layout" role="main">
+  <div class="config-admin-shell__catalog config-admin-shell__panel" role="navigation">
+    <ng-container *ngIf="{ isLoading: (isLoading$ | async) || false, catalog: (catalogItems$ | async) || [] } as vm">
+      <uc-config-catalog-tree
+        [catalog]="vm.catalog"
+        [selectedEncodedPath]="(selectedDocument$ | async)?.encodedPath || null"
+        [isSaving]="isSaving$ | async"
+        [loading]="vm.isLoading"
+        (select)="onCatalogSelect($event)"
+        (retry)="loadCatalog()"
+        (drawerToggle)="onCatalogDrawerToggle()">
+      </uc-config-catalog-tree>
+
+      <!-- Empty state for catalog -->
+      <div
+        *ngIf="vm.catalog.length === 0 && !vm.isLoading"
+        class="config-admin-shell__empty">
+        <mat-icon>folder_open</mat-icon>
+        <p>No configuration documents found</p>
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="config-admin-shell__editor config-admin-shell__panel" role="region">
+    <!-- Sticky summary bar -->
+    <div 
+      *ngIf="selectedDocument$ | async as document"
+      class="config-admin-shell__summary-bar">
+      <span>{{ totalGroups }} groups, {{ totalCriteria }} criteria</span>
+      <span 
+        *ngIf="hasUnsavedChanges"
+        class="config-admin-shell__dirty-indicator">
+        (unsaved changes)
+      </span>
+    </div>
+    <uc-config-criteria-form
+      *ngIf="selectedDocument$ | async as document"
+      [document]="document"
+      [allowedTypes]="allowedTypes"
+      [isReadonly]="false"
+      (documentChange)="onDocumentChange($event)"
+      (dirtyChange)="configWorkspace.markDocumentDirty()"
+      (requestCloneGroup)="onCloneGroup($event)"
+      (requestCloneCriteria)="onCloneCriteria($event)"
+      (requestDeleteGroup)="onDeleteGroup($event)"
+      (requestDeleteCriteria)="onDeleteCriteria($event)"
+      (valueDisplayChange)="onValueDisplayChange($event)"
+      (saveRequested)="saveDocument()"
+      (revertRequested)="discardChanges()"
+      (formatRequested)="refreshPreview()">
+    </uc-config-criteria-form>
+    
+    <!-- Empty state for editor -->
+    <div 
+      *ngIf="!(selectedDocument$ | async)"
+      class="config-admin-shell__empty">
+      <mat-icon>edit</mat-icon>
+      <p>Select a configuration document to edit</p>
+    </div>
+  </div>
+
+  <div class="config-admin-shell__preview config-admin-shell__panel" role="region">
+    <div *ngIf="selectedDocument$ | async as document">
+      <!-- Tabs/toggle for diff vs raw view -->
+      <mat-button-toggle-group 
+        [value]="previewMode"
+        (change)="onPreviewModeChange($event.value)"
+        class="config-admin-shell__view-toggle">
+        <mat-button-toggle value="diff">Diff</mat-button-toggle>
+        <mat-button-toggle value="raw">Raw YAML</mat-button-toggle>
+      </mat-button-toggle-group>
+      
+      <uc-config-diff-viewer
+        *ngIf="previewMode === 'diff'"
+        [originalYaml]="document.rawYaml || ''"
+        [modifiedYaml]="currentYaml"
+        [viewMode]="diffViewMode"
+        [theme]="diffTheme"
+        [isBusy]="isLoading$ | async"
+        [lastSavedTimestamp]="document.metadata?.lastModified | date:'medium'"
+        (viewModeChange)="onDiffViewModeChange($event)"
+        (optionsChange)="onDiffOptionsChange($event)">
+      </uc-config-diff-viewer>
+      
+      <!-- Alternate textarea for raw YAML -->
+      <textarea
+        *ngIf="previewMode === 'raw'"
+        class="config-admin-shell__yaml-textarea"
+        [value]="currentYaml"
+        readonly
+        cdkScrollable>
+      </textarea>
+    </div>
+    
+    <!-- Empty state for preview -->
+    <div 
+      *ngIf="!(selectedDocument$ | async)"
+      class="config-admin-shell__empty">
+      <mat-icon>preview</mat-icon>
+      <p>Select a document to preview changes</p>
+    </div>
+  </div>
+</div>

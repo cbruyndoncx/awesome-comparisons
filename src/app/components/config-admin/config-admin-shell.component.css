@@ -1,0 +1,153 @@
+/* Config Admin Shell Component Styles */
+
+.config-admin-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--surface-ground, #f5f5f5);
+}
+
+.config-admin-shell__layout {
+  display: grid;
+  grid-template-columns: 280px 1fr 360px;
+  grid-gap: 16px;
+  flex: 1;
+  padding: 16px;
+  overflow: hidden;
+}
+
+@media (max-width: 1279px) {
+  .config-admin-shell__layout {
+    grid-template-columns: 280px 1fr 320px;
+  }
+}
+
+@media (max-width: 959px) {
+  .config-admin-shell__layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  
+  .config-admin-shell__catalog {
+    order: 1;
+  }
+  
+  .config-admin-shell__editor {
+    order: 2;
+  }
+  
+  .config-admin-shell__preview {
+    order: 3;
+  }
+}
+
+.config-admin-shell__panel {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-card, #fff);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.config-admin-shell__panel:focus-within {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 0 2px var(--primary-color, #007bff);
+}
+
+.config-admin-shell__catalog {
+  /* Panel base styles applied via inheritance */
+}
+
+.config-admin-shell__editor {
+  /* Panel base styles applied via inheritance */
+}
+
+.config-admin-shell__preview {
+  display: flex;
+  flex-direction: column;
+}
+
+.config-admin-shell__preview-content {
+  flex: 1;
+  overflow: auto;
+}
+
+.config-admin-shell__toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--surface-card, #fff);
+  border-bottom: 1px solid var(--surface-border, #e0e0e0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.toolbar-spacer {
+  flex: 1;
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.config-admin-shell__summary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background: var(--surface-50, #fafafa);
+  border-bottom: 1px solid var(--surface-border, #e0e0e0);
+}
+
+.is-loading {
+  position: relative;
+}
+
+.is-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.is-dirty {
+  position: relative;
+}
+
+.is-dirty::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--orange-500, #ff9800);
+  z-index: 1;
+}
+
+@media (max-width: 959px) {
+  .config-admin-shell__drawer-toggle {
+    display: block;
+  }
+}
+
+@media (min-width: 960px) {
+  .config-admin-shell__drawer-toggle {
+    display: none;
+  }
+}

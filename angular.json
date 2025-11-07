@@ -83,7 +83,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "buildTarget": "ultimate-comparison:build:development"
+            "buildTarget": "ultimate-comparison:build:development",
+            "proxyConfig": "proxy.config.json"
           },
           "configurations": {
             "production": {

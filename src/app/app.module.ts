@@ -13,6 +13,8 @@ import { StoreRouterConnectingModule, RouterStateSerializer } from '@ngrx/router
 
 import { AppComponent } from './app.component';
 import { ComparisonModule } from './components/comparison/comparison.module';
+import { ConfigAdminModule } from './components/config-admin/config-admin.module';
+import { ConfigAdminShellComponent } from './components/config-admin/config-admin-shell.component';
 import { DatasetShellComponent } from './components/datasets/dataset-shell.component';
 import { masterReducer } from './redux/uc.reducers';
 import { CustomRouterStateSerializer } from './redux/custom-router-state-serializer';
@@ -25,10 +27,12 @@ import { CustomRouterStateSerializer } from './redux/custom-router-state-seriali
     MatTabsModule,
     RouterModule.forRoot(
       [
-        { path: '', component: DatasetShellComponent }
+        { path: '', component: DatasetShellComponent },
+        { path: 'admin/config', component: ConfigAdminShellComponent }
       ],
       { useHash: false }
     ),
+    ConfigAdminModule,
     StoreModule.forRoot(
       { state: masterReducer },
       {

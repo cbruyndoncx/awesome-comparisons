@@ -1,0 +1,219 @@
+.config-criteria {
+  /* Root scope for all config criteria styles */
+}
+
+/* Action bar sticky positioning */
+.config-criteria__action-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--mat-sys-surface);
+  padding: 16px;
+  border-bottom: 1px solid var(--mat-sys-outline-variant);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.config-criteria__metrics {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+/* Accordion styling using Material tokens */
+.config-criteria__group {
+  margin: 16px 0;
+  border: 1px solid var(--mat-sys-outline-variant);
+  border-radius: 8px;
+  background: var(--mat-sys-surface);
+}
+
+.config-criteria__group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: var(--mat-sys-surface-container);
+}
+
+.config-criteria__group.is-dirty {
+  border-left: 4px solid var(--mat-sys-primary);
+}
+
+/* Drag handle styling */
+.config-criteria__drag-handle {
+  cursor: grab;
+  padding: 4px;
+  margin-right: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.config-criteria__drag-handle:hover {
+  background: var(--mat-sys-surface-variant);
+}
+
+.config-criteria__drag-handle:active {
+  cursor: grabbing;
+}
+
+/* Criteria entry card layout */
+.config-criteria__entry {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--mat-sys-outline-variant);
+  border-radius: 8px;
+  background: var(--mat-sys-surface);
+  margin-bottom: 16px;
+}
+
+/* Value override table styling */
+.config-criteria__overrides {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.config-criteria__overrides th,
+.config-criteria__overrides td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--mat-sys-outline-variant);
+  text-align: left;
+}
+
+.config-criteria__overrides th {
+  background: var(--mat-sys-surface-container);
+  font-weight: 500;
+}
+
+.config-criteria__overrides tr:hover {
+  background: var(--mat-sys-surface-container-low);
+}
+
+.config-criteria__overrides input {
+  width: 100%;
+  padding: 4px 8px;
+  border: 1px solid var(--mat-sys-outline);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.config-criteria__overrides .emoji-column {
+  width: 60px;
+  text-align: center;
+}
+
+/* Empty state styling */
+.config-criteria__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  border: 2px dashed var(--mat-sys-outline-variant);
+  border-radius: 8px;
+  background: var(--mat-sys-surface-variant);
+  color: var(--mat-sys-on-surface-variant);
+  text-align: center;
+  margin: 24px 0;
+}
+
+.config-criteria__empty h3 {
+  margin: 16px 0 8px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.config-criteria__empty p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Focus and interaction styles */
+.config-criteria *:focus {
+  outline: 2px solid var(--mat-sys-primary);
+  outline-offset: 2px;
+}
+
+.config-criteria button:focus {
+  outline: 2px solid var(--mat-sys-primary);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar for long lists */
+.config-criteria::-webkit-scrollbar {
+  width: 8px;
+}
+
+.config-criteria::-webkit-scrollbar-track {
+  background: var(--mat-sys-surface-variant);
+}
+
+.config-criteria::-webkit-scrollbar-thumb {
+  background: var(--mat-sys-outline);
+  border-radius: 4px;
+}
+
+.config-criteria::-webkit-scrollbar-thumb:hover {
+  background: var(--mat-sys-outline-variant);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 960px) {
+  .config-criteria__entry {
+    grid-template-columns: 1fr;
+  }
+  
+  .config-criteria__action-bar {
+    padding: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .config-criteria__group-header {
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .config-criteria__overrides {
+    font-size: 14px;
+  }
+  
+  .config-criteria__overrides th,
+  .config-criteria__overrides td {
+    padding: 6px 8px;
+  }
+  
+  .config-criteria__empty {
+    padding: 32px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .config-criteria__action-bar {
+    padding: 8px;
+    top: 0;
+  }
+  
+  .config-criteria__entry {
+    padding: 12px;
+    gap: 8px;
+  }
+  
+  .config-criteria__group {
+    margin: 8px 0;
+  }
+  
+  .config-criteria__overrides th,
+  .config-criteria__overrides td {
+    padding: 4px 6px;
+    font-size: 13px;
+  }
+}
