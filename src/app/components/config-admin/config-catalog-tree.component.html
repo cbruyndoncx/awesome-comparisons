@@ -30,10 +30,13 @@
         <!-- Group heading -->
         <div class="group-header" *ngIf="group.isHeader">
           <h4>{{ group.label }}</h4>
+          <mat-chip *ngIf="group.datasetId" class="dataset-chip">
+            {{ group.datasetId }}
+          </mat-chip>
         </div>
 
         <!-- Catalog item -->
-        <button 
+        <button
           *ngIf="!group.isHeader"
           mat-list-item
           class="catalog-item"
@@ -42,40 +45,17 @@
           [matTooltip]="group.item.relativePath"
           role="option"
           (click)="onSelectItem(group.item)">
-          
+
           <div class="item-content">
             <div class="item-header">
               <span class="item-name">{{ group.fileName }}</span>
-              
-              <!-- Metadata chips -->
-              <div class="item-chips">
-                <mat-chip *ngIf="group.item.datasetId" class="dataset-chip">
-                  {{ group.item.datasetId }}
-                </mat-chip>
-                <mat-chip *ngIf="group.item.isSharedDefault" class="shared-chip">
-                  Shared
-                </mat-chip>
-              </div>
             </div>
-            
-            <!-- Timestamp -->
             <div class="item-meta" *ngIf="group.item.lastModified">
-              <mat-icon class="time-icon">schedule</mat-icon>
-              <span class="timestamp">{{ group.item.lastModified | date:'short' }}</span>
+              <span class="timestamp">{{ formatTimestamp(group.item.lastModified) }}</span>
             </div>
           </div>
         </button>
       </ng-container>
     </div>
-  </div>
-
-  <!-- Footer legend -->
-  <div class="config-catalog__footer">
-    <small class="legend">
-      <mat-chip class="legend-chip dataset-chip">Dataset</mat-chip>
-      <span>Dataset-specific configuration</span>
-      <mat-chip class="legend-chip shared-chip">Shared</mat-chip>
-      <span>Shared default configuration</span>
-    </small>
   </div>
 </section>

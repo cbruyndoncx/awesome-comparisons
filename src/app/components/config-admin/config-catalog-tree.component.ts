@@ -14,7 +14,7 @@ import {
 import { ConfigCatalogItem } from '../../models/config-document.model';
 
 type CatalogViewEntry =
-  | { isHeader: true; label: string }
+  | { isHeader: true; label: string; datasetId?: string }
   | { isHeader: false; item: ConfigCatalogItem; fileName: string };
 
 function isItemEntry(entry: CatalogViewEntry): entry is { isHeader: false; item: ConfigCatalogItem; fileName: string } {
@@ -103,6 +103,17 @@ export class ConfigCatalogTreeComponent implements OnInit {
     });
   }
 
+  formatTimestamp(lastModified: string): string {
+    const date = new Date(lastModified);
+    return date.toLocaleString(undefined, {
+      month: '2-digit',
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    });
+  }
+
   getFileName(item: ConfigCatalogItem): string {
     return item.relativePath.split('/').pop() || item.relativePath;
   }
@@ -149,7 +160,8 @@ export class ConfigCatalogTreeComponent implements OnInit {
     Array.from(datasetBuckets.entries())
       .sort((a, b) => a[0].localeCompare(b[0]))
       .forEach(([label, bucket]) => {
-        result.push({ isHeader: true, label });
+        const datasetId = bucket[0]?.datasetId;
+        result.push({ isHeader: true, label, datasetId });
         bucket
           .sort((a, b) => a.relativePath.localeCompare(b.relativePath))
           .forEach(item => {
