@@ -23,7 +23,7 @@ import { ConfigAlertService } from './config-alert.service';
 
 const OTHER_CRITERIA_GROUP_ID = '__other__';
 const OTHER_CRITERIA_GROUP_NAME = 'Other Criteria';
-const BLUEPRINT_MISSING_REF_RATIO_LIMIT = 2; // fallback when missing refs ≥ twice resolved refs
+const BLUEPRINT_MISSING_REF_RATIO_LIMIT = 100; // fallback when missing refs ≥ 100x resolved refs (very permissive)
 const BLUEPRINT_MISSING_REF_SAMPLE = 8;
 
 type CatalogFilters = {
@@ -49,6 +49,12 @@ interface GroupingBlueprintSource {
 interface DatasetGroupingBlueprint {
   datasetId: string;
   sources: GroupingBlueprintSource[];
+  loadedAt: number;
+}
+
+interface DatasetCriteriaBlueprint {
+  datasetId: string;
+  sharedCriteria: Map<string, any>;
   loadedAt: number;
 }
 
@@ -90,6 +96,8 @@ export class ConfigWorkspaceService {
   private datasetManifestRequest$: Observable<DatasetManifestEntry[]> | null = null;
   private datasetGroupingCache = new Map<string, DatasetGroupingBlueprint>();
   private activeGroupingBlueprint: DatasetGroupingBlueprint | null = null;
+  private datasetCriteriaCache = new Map<string, DatasetCriteriaBlueprint>();
+  private activeCriteriaBlueprint: DatasetCriteriaBlueprint | null = null;
   
   // Observable streams
   readonly catalog$: Observable<ConfigCatalogItem[]> = this.catalogSubject.asObservable().pipe(
@@ -208,13 +216,15 @@ export class ConfigWorkspaceService {
           ? Number.POSITIVE_INFINITY
           : missingReferences.length / Math.max(resolvedChildrenCount, 1);
 
-      const message =
-        !resolvedChildrenCount || ratio >= BLUEPRINT_MISSING_REF_RATIO_LIMIT
-          ? 'Too many missing blueprint references; skipping blueprint and falling back to document-defined groups.'
-          : 'Missing blueprint references detected; falling back to document-defined groups until definitions are synced.';
-
-      this.logMissingReferenceSummary(message, missingReferences);
-      return null;
+      if (!resolvedChildrenCount || ratio >= BLUEPRINT_MISSING_REF_RATIO_LIMIT) {
+        const message = 'Too many missing blueprint references; skipping blueprint and falling back to document-defined groups.';
+        this.logMissingReferenceSummary(message, missingReferences);
+        return null;
+      } else {
+        const message = 'Missing blueprint references detected; continuing with partial blueprint resolution.';
+        this.logMissingReferenceSummary(message, missingReferences);
+        // Continue with the resolved groups despite some missing references
+      }
     }
 
     return {
@@ -442,7 +452,10 @@ export class ConfigWorkspaceService {
     this.alerts.info(`Loading ${label}…`);
     
     const load$ = this.enableBlueprintGrouping
-      ? this.ensureDatasetBlueprint(catalogItem).pipe(
+      ? forkJoin({
+          criteria: this.ensureDatasetCriteria(catalogItem),
+          grouping: this.ensureDatasetBlueprint(catalogItem)
+        }).pipe(
           switchMap(() => this.http.get<any>(`${this.apiBaseUrl}/${catalogItem.encodedPath}`))
         )
       : this.http.get<any>(`${this.apiBaseUrl}/${catalogItem.encodedPath}`);
@@ -475,6 +488,7 @@ export class ConfigWorkspaceService {
     this.activeDocumentSubject.next(null);
     this.clearDirtyState();
     this.activeGroupingBlueprint = null;
+    this.activeCriteriaBlueprint = null;
   }
 
   revertDocument(): Observable<ConfigDocumentModel> {
@@ -854,6 +868,114 @@ export class ConfigWorkspaceService {
     );
   }
 
+  private ensureDatasetCriteria(catalogItem: ConfigCatalogItem): Observable<DatasetCriteriaBlueprint | null> {
+    if (!this.enableBlueprintGrouping) {
+      this.activeCriteriaBlueprint = null;
+      return of(null);
+    }
+
+    const datasetId = catalogItem.datasetId;
+    if (!datasetId) {
+      this.activeCriteriaBlueprint = null;
+      return of(null);
+    }
+
+    const cached = this.datasetCriteriaCache.get(datasetId);
+    if (cached) {
+      this.activeCriteriaBlueprint = cached;
+      return of(cached);
+    }
+
+    return this.loadDatasetManifest().pipe(
+      map(entries => entries.find(entry => entry.id === datasetId) || null),
+      switchMap(entry => {
+        if (!entry) {
+          console.warn(
+            `[ConfigWorkspaceService] Dataset "${datasetId}" not found in manifest.`
+          );
+          this.activeCriteriaBlueprint = null;
+          return of(null);
+        }
+
+        const criteriaPaths = this.extractCriteriaDefaults(entry);
+        console.log('[DEBUG] ensureDatasetCriteria: Found', criteriaPaths.length, 'criteria files for', datasetId);
+
+        if (criteriaPaths.length === 0) {
+          const blueprint: DatasetCriteriaBlueprint = {
+            datasetId,
+            sharedCriteria: new Map(),
+            loadedAt: Date.now()
+          };
+          this.datasetCriteriaCache.set(datasetId, blueprint);
+          this.activeCriteriaBlueprint = blueprint;
+          return of(blueprint);
+        }
+
+        const uniquePaths = Array.from(new Set(criteriaPaths));
+        const fetchRequests = uniquePaths.map(path => this.fetchCriteriaDocument(path));
+
+        return forkJoin(fetchRequests).pipe(
+          map(results => {
+            const sharedCriteria = new Map<string, any>();
+
+            results.forEach(result => {
+              if (result?.parsedDocument?.criteria) {
+                const defs = this.flattenCriteriaDefinitions(result.parsedDocument.criteria);
+                console.log('[DEBUG] ensureDatasetCriteria: Loaded', defs.size, 'definitions from', result.path);
+                defs.forEach((def, key) => {
+                  sharedCriteria.set(key, def);
+                });
+              }
+            });
+
+            const blueprint: DatasetCriteriaBlueprint = {
+              datasetId,
+              sharedCriteria,
+              loadedAt: Date.now()
+            };
+            this.datasetCriteriaCache.set(datasetId, blueprint);
+            this.activeCriteriaBlueprint = blueprint;
+
+            console.log('[DEBUG] ensureDatasetCriteria: Total shared criteria for', datasetId, ':', sharedCriteria.size);
+            return blueprint;
+          })
+        );
+      }),
+      catchError(error => {
+        console.error(
+          '[ConfigWorkspaceService] Failed to load dataset criteria defaults:',
+          error
+        );
+        this.activeCriteriaBlueprint = null;
+        return of(null);
+      })
+    );
+  }
+
+  private fetchCriteriaDocument(relativePath: string): Observable<{ path: string; parsedDocument: any } | null> {
+    const encodedPath = this.encodeRelativePath(relativePath);
+    if (!encodedPath) {
+      console.warn(
+        `[ConfigWorkspaceService] Unable to encode criteria path "${relativePath}", skipping.`
+      );
+      return of(null);
+    }
+
+    return this.http.get<any>(`${this.apiBaseUrl}/${encodedPath}`).pipe(
+      map(response => ({
+        path: relativePath,
+        parsedDocument: response?.parsedDocument || null
+      })),
+      catchError(error => {
+        console.error(
+          `[ConfigWorkspaceService] Failed to load criteria defaults from "${relativePath}":`,
+          error
+        );
+        return of(null);
+      })
+    );
+  }
+
   private loadDatasetManifest(): Observable<DatasetManifestEntry[]> {
     if (this.datasetManifestCache) {
       return of(this.datasetManifestCache);
@@ -881,6 +1003,19 @@ export class ConfigWorkspaceService {
       );
 
     return this.datasetManifestRequest$;
+  }
+
+  private extractCriteriaDefaults(entry: DatasetManifestEntry): string[] {
+    if (!entry.sources?.configDefaults) {
+      return [];
+    }
+    return entry.sources.configDefaults.filter(
+      (path): path is string =>
+        typeof path === 'string' &&
+        !path.includes('groups') &&           // Not a grouping file
+        !path.includes('value-display') &&    // Not a value display file
+        path.endsWith('.yml')                 // Is a YAML file
+    );
   }
 
   private extractGroupingDefaults(entry: DatasetManifestEntry): string[] {
@@ -1264,9 +1399,27 @@ export class ConfigWorkspaceService {
 
   private buildCriteriaGroups(rawCriteria: any): CriteriaGroupModel[] {
     console.log('[DEBUG] buildCriteriaGroups: Starting, enableBlueprintGrouping=', this.enableBlueprintGrouping);
-    const definitions = this.flattenCriteriaDefinitions(rawCriteria);
-    console.log('[DEBUG] buildCriteriaGroups: Flattened', definitions.size, 'definitions from document');
-    if (definitions.size === 0) {
+
+    // Load dataset-specific definitions
+    const datasetDefinitions = this.flattenCriteriaDefinitions(rawCriteria);
+    console.log('[DEBUG] buildCriteriaGroups: Flattened', datasetDefinitions.size, 'definitions from document');
+
+    // Merge with shared definitions if blueprint grouping enabled
+    let allDefinitions = datasetDefinitions;
+
+    if (this.enableBlueprintGrouping && this.activeCriteriaBlueprint) {
+      // Start with shared criteria
+      allDefinitions = new Map(this.activeCriteriaBlueprint.sharedCriteria);
+      console.log('[DEBUG] buildCriteriaGroups: Loaded', allDefinitions.size, 'shared criteria definitions');
+
+      // Dataset definitions override shared
+      datasetDefinitions.forEach((def, key) => {
+        allDefinitions.set(key, def);
+      });
+      console.log('[DEBUG] buildCriteriaGroups: After merge:', allDefinitions.size, 'total definitions');
+    }
+
+    if (allDefinitions.size === 0) {
       return [
         {
           id: OTHER_CRITERIA_GROUP_ID,
@@ -1281,23 +1434,24 @@ export class ConfigWorkspaceService {
       ];
     }
 
-    const groupDefinitionKeys = this.extractGroupDefinitionKeys(definitions);
+    const groupDefinitionKeys = this.extractGroupDefinitionKeys(allDefinitions);
 
     const blueprintResult = this.enableBlueprintGrouping
-      ? this.buildGroupsViaBlueprint(definitions)
+      ? this.buildGroupsViaBlueprint(allDefinitions)
       : null;
+
     if (blueprintResult) {
       console.log('[DEBUG] buildCriteriaGroups: Using blueprint result');
       return this.appendUngroupedEntries(
         blueprintResult.groups,
-        definitions,
+        allDefinitions,
         blueprintResult.assignedChildren,
         groupDefinitionKeys
       );
     }
 
     console.log('[DEBUG] buildCriteriaGroups: Using document-defined groups');
-    return this.buildGroupsFromDocumentDefinitions(definitions, groupDefinitionKeys);
+    return this.buildGroupsFromDocumentDefinitions(allDefinitions, groupDefinitionKeys);
   }
 
   private flattenCriteriaDefinitions(rawCriteria: any): Map<string, any> {
@@ -1391,7 +1545,8 @@ export class ConfigWorkspaceService {
     if (possibleKeys.length > 0) {
       const fallbackName = possibleKeys[possibleKeys.length - 1];
       for (const [key, definition] of definitions) {
-        if ((definition.name || '').toLowerCase() === String(fallbackName).toLowerCase()) {
+        const defName = typeof definition.name === 'string' ? definition.name : '';
+        if (defName.toLowerCase() === String(fallbackName).toLowerCase()) {
           return { key, definition };
         }
       }

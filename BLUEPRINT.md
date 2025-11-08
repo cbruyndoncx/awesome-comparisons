@@ -4,18 +4,76 @@
 
 This document describes the complete inheritance logic flow for blueprint-based grouping in the configuration admin system. The system supports a hierarchical inheritance model where shared definitions are centralized and extended/updated, while individual dataset files hold unique criteria and can override shared definitions.
 
+**IMPORTANT:** This logic is **completely generic** and works for **ANY dataset**. Throughout this document, `code-editor` is used as an example dataset, but the exact same flow applies to:
+- `code-editor`, `terminal`, `aie-model`, `code-agent`, `product-prototyping`, `other`, `all`
+- **Any future dataset added to the system**
+
+The dataset-specific behavior is driven entirely by the `configuration/datasets.manifest.json` file, which defines which shared files each dataset should inherit from.
+
+## Generic Pattern for ANY Dataset
+
+```typescript
+// This pattern works identically for ALL datasets
+
+function loadDocumentWithInheritance(datasetId: string) {
+  // 1. Look up manifest entry for THIS dataset
+  const manifest = loadManifest();
+  const datasetEntry = manifest.datasets.find(d => d.id === datasetId);
+
+  // 2. Load all shared files specified for THIS dataset
+  const sharedDefinitions = new Map();
+  for (const sharedFile of datasetEntry.sources.configDefaults) {
+    if (isCriteriaFile(sharedFile)) {
+      const defs = loadAndParseCriteria(sharedFile);
+      mergeInto(sharedDefinitions, defs);
+    }
+  }
+
+  // 3. Load THIS dataset's specific file
+  const datasetFile = datasetEntry.sources.config;
+  const datasetDefinitions = loadAndParseCriteria(datasetFile);
+
+  // 4. Merge: dataset overrides shared
+  const allDefinitions = mergeMaps(sharedDefinitions, datasetDefinitions);
+
+  // 5. Load blueprints specified for THIS dataset
+  const blueprints = [];
+  for (const sharedFile of datasetEntry.sources.configDefaults) {
+    if (isGroupingFile(sharedFile)) {
+      blueprints.push(loadAndParseBlueprint(sharedFile));
+    }
+  }
+
+  // 6. Resolve blueprint children against merged definitions
+  const groups = resolveBlueprintGroups(blueprints, allDefinitions);
+
+  return { groups, definitions: allDefinitions };
+}
+
+// Works for:
+// loadDocumentWithInheritance("code-editor")    ✓
+// loadDocumentWithInheritance("terminal")       ✓
+// loadDocumentWithInheritance("aie-model")      ✓
+// loadDocumentWithInheritance("any-future-id")  ✓
+```
+
 ## Complete Inheritance Logic Flow
 
 ### Phase 1: Document Selection & Manifest Lookup
 
-**Input:** User selects `datasets/code-editor/config/comparison.yml`
+**Input:** User selects `datasets/{DATASET_ID}/config/comparison.yml`
+- Example: `datasets/code-editor/config/comparison.yml` (but works for ANY dataset)
 
 **Step 1.1:** Extract dataset ID from catalog item
-- Catalog item has `datasetId: "code-editor"`
+- Catalog item has `datasetId: "{DATASET_ID}"` (e.g., "code-editor", "terminal", "aie-model", etc.)
 
 **Step 1.2:** Load dataset manifest entry
 ```typescript
 // From configuration/datasets.manifest.json
+// Find the manifest entry for THIS specific dataset
+const manifestEntry = manifest.datasets.find(d => d.id === datasetId);
+
+// Example for code-editor dataset:
 {
   "id": "code-editor",
   "sources": {
@@ -28,14 +86,31 @@ This document describes the complete inheritance logic flow for blueprint-based 
     ]
   }
 }
+
+// Example for aie-model dataset (note: no groups-advanced.yml):
+{
+  "id": "aie-model",
+  "sources": {
+    "config": "datasets/aie-model/config/comparison.yml",
+    "configDefaults": [
+      "configuration/comparison-default.yml",
+      "configuration/defaults/groups.yml",
+      "configuration/defaults/value-displays.yml"
+    ]
+  }
+}
 ```
 
 ### Phase 2: Load Files Based on Manifest
 
 **Step 2.1:** Load the dataset-specific file
-- **File:** `datasets/code-editor/config/comparison.yml`
+- **File:** `datasets/{DATASET_ID}/config/comparison.yml`
+  - For code-editor: `datasets/code-editor/config/comparison.yml`
+  - For terminal: `datasets/terminal/config/comparison.yml`
+  - For aie-model: `datasets/aie-model/config/comparison.yml`
+  - etc.
 - **Contains:**
-  - Dataset-specific criteria definitions (e.g., VSCodeExt, JetBrainsExt)
+  - Dataset-specific criteria definitions (e.g., VSCodeExt for code-editor, MobileVersion for terminal)
   - Possibly overrides for shared criteria (e.g., custom labels for "License")
   - Extra properties (title, subtitle, etc.)
 
