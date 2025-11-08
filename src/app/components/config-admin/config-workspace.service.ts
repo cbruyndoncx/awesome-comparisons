@@ -325,6 +325,13 @@ export class ConfigWorkspaceService {
 
     return this.http.get<ConfigCatalogItem[]>(`${this.apiBaseUrl}/catalog`).pipe(
       retry(3),
+      map(catalog => {
+        // Exclude the system default configuration file from being editable
+        // This file is foundational and should not be modified through the UI
+        return catalog.filter(item =>
+          item.relativePath !== 'configuration/comparison-default.yml'
+        );
+      }),
       tap(catalog => {
         this.rawCatalog = catalog;
         this.catalogSubject.next(catalog);
@@ -1353,11 +1360,11 @@ export class ConfigWorkspaceService {
     const criteriaGroups: CriteriaGroupModel[] = [];
     const valueDisplayOverrides = new Map<string, ValueDisplayModel[]>();
     const extraProperties: Record<string, any> = {};
-    
+
     criteriaGroups.push(
       ...this.buildCriteriaGroups(response.parsedDocument?.criteria)
     );
-    
+
     // Extract value display overrides
     if (response.parsedDocument?.valueDisplay) {
       Object.entries(response.parsedDocument.valueDisplay).forEach(([criteriaId, rawOverrides]) => {
@@ -1367,7 +1374,7 @@ export class ConfigWorkspaceService {
         }
       });
     }
-    
+
     // Extract extra properties (everything except criteria and valueDisplay)
     if (response.parsedDocument) {
       Object.entries(response.parsedDocument).forEach(([key, value]) => {
@@ -1376,8 +1383,9 @@ export class ConfigWorkspaceService {
         }
       });
     }
-    
-    return {
+
+    // Create the document model first
+    const documentModel: ConfigDocumentModel = {
       id: catalogItem.id,
       encodedPath: catalogItem.encodedPath,
       criteriaGroups,
@@ -1395,6 +1403,13 @@ export class ConfigWorkspaceService {
       isDirty: false,
       extraProperties
     };
+
+    // Normalize the rawYaml by regenerating it from the parsed model
+    // This ensures the diff viewer shows the blueprint-grouped structure from the start
+    // and avoids showing a massive diff on the first edit due to structural transformation
+    documentModel.rawYaml = this.generatePreviewYaml(documentModel);
+
+    return documentModel;
   }
 
   private buildCriteriaGroups(rawCriteria: any): CriteriaGroupModel[] {
