@@ -36,6 +36,14 @@ import {
 import { ValidationError } from '../../models/validation-error.model';
 import { serializeStructuredText } from './template-field.util';
 
+interface LinkableEntryOption {
+  id: string;
+  label: string;
+  groupIndex: number;
+  groupName: string;
+  entryIndex: number;
+}
+
 @Component({
   selector: 'uc-config-criteria-form',
   templateUrl: './config-criteria-form.component.html',
@@ -93,6 +101,8 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
   private subscriptions: Subscription[] = [];
   private formChangeSubject = new Subject<void>();
   private expandedEntries = new Set<string>();
+  linkSelections: Record<number, string | null> = {};
+  linkableEntryOptions: LinkableEntryOption[][] = [];
 
   constructor(private fb: FormBuilder) {}
 
@@ -144,6 +154,7 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
         Object.keys(this.valueDisplayOverridesForm.controls).forEach(key =>
           this.valueDisplayOverridesForm.removeControl(key)
         );
+        this.linkableEntryOptions = [];
       }
     }
   }
@@ -158,6 +169,8 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
       document.valueDisplayOverrides || new Map()
     );
     this.expandedEntries.clear();
+    this.linkSelections = {};
+    this.rebuildLinkableEntryOptions();
     this.isDirty = false;
     this.dirtyChange.emit(this.isDirty);
   }
@@ -230,6 +243,7 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
         entries: this.fb.array([])
       })
     );
+    this.rebuildLinkableEntryOptions();
     this.onFormValueChange();
   }
 
@@ -253,6 +267,7 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
       event.currentIndex
     );
     this.criteriaGroupsArray.updateValueAndValidity();
+    this.rebuildLinkableEntryOptions();
     this.onFormValueChange();
   }
 
@@ -282,12 +297,45 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
       search: false,
       table: false,
       detail: false,
+      andSearch: false,
+      rangeSearch: false,
       order: entries.length,
       placeholder: '',
       description: ''
     };
     entries.push(this.createEntryGroup(newEntry));
     this.setEntryExpansion(groupIndex, entries.length - 1, true);
+    this.rebuildLinkableEntryOptions();
+    this.onFormValueChange();
+  }
+
+  linkExistingCriteria(groupIndex: number, entryId: string | null): void {
+    if (!entryId) {
+      this.linkSelections[groupIndex] = null;
+      return;
+    }
+
+    const location = this.findEntryLocation(entryId);
+    if (!location || location.groupIndex === groupIndex) {
+      this.linkSelections[groupIndex] = null;
+      return;
+    }
+
+    const sourceArray = this.getCriteriaEntriesArray(location.groupIndex);
+    const targetArray = this.getCriteriaEntriesArray(groupIndex);
+    const entryControl = sourceArray.at(location.entryIndex) as FormGroup;
+    if (!entryControl) {
+      this.linkSelections[groupIndex] = null;
+      return;
+    }
+
+    sourceArray.removeAt(location.entryIndex);
+    targetArray.push(entryControl);
+    this.normalizeEntryOrders(location.groupIndex);
+    this.normalizeEntryOrders(groupIndex);
+    this.setEntryExpansion(groupIndex, targetArray.length - 1, true);
+    this.linkSelections[groupIndex] = null;
+    this.rebuildLinkableEntryOptions();
     this.onFormValueChange();
   }
 
@@ -320,6 +368,8 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
     if (event.previousContainer === event.container) {
       moveItemInArray(destinationArray.controls, event.previousIndex, event.currentIndex);
       destinationArray.updateValueAndValidity();
+      this.normalizeEntryOrders(groupIndex);
+      this.rebuildLinkableEntryOptions();
       this.onFormValueChange();
       return;
     }
@@ -338,6 +388,9 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
 
     sourceArray.updateValueAndValidity();
     destinationArray.updateValueAndValidity();
+    this.normalizeEntryOrders(sourceGroupIndex);
+    this.normalizeEntryOrders(groupIndex);
+    this.rebuildLinkableEntryOptions();
     this.onFormValueChange();
   }
 
@@ -628,6 +681,8 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
       search: [!!e.search],
       table: [!!e.table],
       detail: [!!e.detail],
+      andSearch: [!!e.andSearch],
+      rangeSearch: [!!e.rangeSearch],
       order: [e.order, [Validators.required, Validators.min(0)]],
       placeholder: [serializeStructuredText(e.placeholder)],
       description: [serializeStructuredText(e.description)]
@@ -683,5 +738,64 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
     return this.criteriaGroupsArray.controls
       .map((_, idx) => this.getDropListId(idx))
       .filter(id => id !== currentId);
+  }
+
+  private findEntryLocation(entryId: string): { groupIndex: number; entryIndex: number } | null {
+    for (let groupIdx = 0; groupIdx < this.criteriaGroupsArray.length; groupIdx++) {
+      const entries = this.getCriteriaEntriesArray(groupIdx);
+      for (let entryIdx = 0; entryIdx < entries.length; entryIdx++) {
+        if (entries.at(entryIdx)?.get('id')?.value === entryId) {
+          return { groupIndex: groupIdx, entryIndex: entryIdx };
+        }
+      }
+    }
+    return null;
+  }
+
+  private normalizeEntryOrders(groupIndex: number): void {
+    const entries = this.getCriteriaEntriesArray(groupIndex);
+    entries.controls.forEach((control, idx) => {
+      control.get('order')?.setValue(idx, { emitEvent: false });
+    });
+  }
+
+  private rebuildLinkableEntryOptions(): void {
+    if (!this.criteriaGroupsArray || this.criteriaGroupsArray.length === 0) {
+      this.linkableEntryOptions = [];
+      return;
+    }
+
+    const groups = this.criteriaGroupsArray;
+    this.linkableEntryOptions = groups.controls.map((_, groupIndex) => {
+      const options: LinkableEntryOption[] = [];
+      groups.controls.forEach((groupControl, idx) => {
+        if (idx === groupIndex) {
+          return;
+        }
+        const groupName = groupControl.get('name')?.value || `Group ${idx + 1}`;
+        const entries = (groupControl.get('entries') as FormArray).controls;
+        entries.forEach((entryControl, entryIdx) => {
+          const id = entryControl.get('id')?.value;
+          if (!id) {
+            return;
+          }
+          options.push({
+            id,
+            label: entryControl.get('name')?.value || id,
+            groupIndex: idx,
+            groupName,
+            entryIndex: entryIdx
+          });
+        });
+      });
+
+      return options.sort((a, b) => {
+        const groupCompare = a.groupName.localeCompare(b.groupName);
+        if (groupCompare !== 0) {
+          return groupCompare;
+        }
+        return a.label.localeCompare(b.label);
+      });
+    });
   }
 }

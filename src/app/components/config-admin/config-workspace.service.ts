@@ -4,7 +4,7 @@
 
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { Observable, BehaviorSubject, Subject, throwError, of, timer, combineLatest } from 'rxjs';
+import { Observable, BehaviorSubject, Subject, throwError, of, timer, combineLatest, forkJoin } from 'rxjs';
 import { catchError, retry, debounceTime, map, tap, switchMap, retryWhen, take, delay, concatMap, finalize, shareReplay, distinctUntilChanged } from 'rxjs/operators';
 import { stringify, parse, parseDocument, Document } from 'yaml';
 
@@ -22,12 +22,44 @@ import { parseStructuredText } from './template-field.util';
 
 const OTHER_CRITERIA_GROUP_ID = '__other__';
 const OTHER_CRITERIA_GROUP_NAME = 'Other Criteria';
+const BLUEPRINT_MISSING_REF_RATIO_LIMIT = 2; // fallback when missing refs ≥ twice resolved refs
+const BLUEPRINT_MISSING_REF_SAMPLE = 8;
 
 type CatalogFilters = {
   datasetIds: string[];
   types: string[];
   searchText: string;
 };
+
+interface DatasetManifestEntry {
+  id: string;
+  displayLabel?: string;
+  sources?: {
+    configDefaults?: string[];
+  };
+}
+
+interface GroupingBlueprintSource {
+  path: string;
+  parsedDocument: any;
+  rawYaml: string;
+}
+
+interface DatasetGroupingBlueprint {
+  datasetId: string;
+  sources: GroupingBlueprintSource[];
+  loadedAt: number;
+}
+
+interface BlueprintBuildResult {
+  groups: CriteriaGroupModel[];
+  assignedChildren: Set<string>;
+}
+
+interface MissingReferenceInfo {
+  group: string;
+  reference: string;
+}
 
 
 
@@ -39,6 +71,8 @@ type CatalogFilters = {
 })
 export class ConfigWorkspaceService {
   private readonly apiBaseUrl = '/api/config';
+  private readonly enableBlueprintGrouping = false;
+  private readonly datasetManifestUrl = 'assets/configuration/datasets.manifest.json';
   
   // Internal subjects
   private activeDocumentSubject = new BehaviorSubject<ConfigDocumentModel | null>(null);
@@ -51,6 +85,10 @@ export class ConfigWorkspaceService {
   
   // Raw catalog cache
   private rawCatalog: ConfigCatalogItem[] = [];
+  private datasetManifestCache: DatasetManifestEntry[] | null = null;
+  private datasetManifestRequest$: Observable<DatasetManifestEntry[]> | null = null;
+  private datasetGroupingCache = new Map<string, DatasetGroupingBlueprint>();
+  private activeGroupingBlueprint: DatasetGroupingBlueprint | null = null;
   
   // Observable streams
   readonly catalog$: Observable<ConfigCatalogItem[]> = this.catalogSubject.asObservable().pipe(
@@ -73,6 +111,190 @@ export class ConfigWorkspaceService {
 
   constructor(private http: HttpClient) {
     // Initialize catalog on service creation
+  }
+
+  private buildGroupsViaBlueprint(definitions: Map<string, any>): BlueprintBuildResult | null {
+    if (!this.enableBlueprintGrouping) {
+      return null;
+    }
+
+    const blueprint = this.activeGroupingBlueprint;
+    if (!blueprint || blueprint.sources.length === 0) {
+      return null;
+    }
+
+    const assignedChildren = new Set<string>();
+    const groups: CriteriaGroupModel[] = [];
+    const seenGroupIds = new Set<string>();
+    const missingReferences: MissingReferenceInfo[] = [];
+    let resolvedChildrenCount = 0;
+
+    blueprint.sources.forEach(source => {
+      const criteriaNode = source.parsedDocument?.criteria;
+      if (!criteriaNode) {
+        console.warn(
+          `[ConfigWorkspaceService] Grouping file "${source.path}" missing "criteria" node; skipping.`
+        );
+        return;
+      }
+
+      const blueprintDefinitions = this.flattenCriteriaDefinitions(criteriaNode);
+      blueprintDefinitions.forEach((definition, key) => {
+        if (!Array.isArray(definition.children) || definition.children.length === 0) {
+          return;
+        }
+
+        const groupId = definition.id || key || this.generateId();
+        if (seenGroupIds.has(groupId)) {
+          console.warn(
+            `[ConfigWorkspaceService] Duplicate grouping id "${groupId}" found in "${source.path}", ignoring subsequent definition.`
+          );
+          return;
+        }
+
+        const groupName = definition.name || key;
+        const children = this.resolveGroupChildren(
+          groupId,
+          definition.children,
+          definitions,
+          assignedChildren,
+          groupName,
+          missingReferences
+        );
+        resolvedChildrenCount += children.length;
+
+        if (children.length === 0) {
+          console.warn(
+            `[ConfigWorkspaceService] Group "${groupName}" from "${source.path}" has no resolvable children; skipping.`
+          );
+          return;
+        }
+
+        seenGroupIds.add(groupId);
+        groups.push({
+          id: groupId,
+          name: groupName,
+          type: definition.type || 'group',
+          search: Boolean(definition.search),
+          table: Boolean(definition.table),
+          detail: Boolean(definition.detail),
+          order: Number(definition.order) || groups.length,
+          children
+        });
+      });
+    });
+
+    if (groups.length === 0) {
+      console.warn(
+        '[ConfigWorkspaceService] Dataset blueprint resolved but produced zero groups; falling back to document-defined structure.'
+      );
+      return null;
+    }
+
+    if (missingReferences.length > 0) {
+      const ratio =
+        resolvedChildrenCount === 0
+          ? Number.POSITIVE_INFINITY
+          : missingReferences.length / Math.max(resolvedChildrenCount, 1);
+
+      const message =
+        !resolvedChildrenCount || ratio >= BLUEPRINT_MISSING_REF_RATIO_LIMIT
+          ? 'Too many missing blueprint references; skipping blueprint and falling back to document-defined groups.'
+          : 'Missing blueprint references detected; falling back to document-defined groups until definitions are synced.';
+
+      this.logMissingReferenceSummary(message, missingReferences);
+      return null;
+    }
+
+    return {
+      groups: groups.sort((a, b) => a.order - b.order),
+      assignedChildren
+    };
+  }
+
+  private buildGroupsFromDocumentDefinitions(
+    definitions: Map<string, any>,
+    groupDefinitionKeys: Set<string>
+  ): CriteriaGroupModel[] {
+    const assignedChildren = new Set<string>();
+    const groups: CriteriaGroupModel[] = [];
+
+    definitions.forEach((definition, key) => {
+      if (!Array.isArray(definition.children) || definition.children.length === 0) {
+        return;
+      }
+      const groupId = definition.id || key || this.generateId();
+      const groupName = definition.name || key;
+      const children = this.resolveGroupChildren(
+        groupId,
+        definition.children,
+        definitions,
+        assignedChildren,
+        groupName
+      );
+      if (children.length === 0) {
+        return;
+      }
+      groups.push({
+        id: groupId,
+        name: groupName,
+        type: definition.type || 'group',
+        search: Boolean(definition.search),
+        table: Boolean(definition.table),
+        detail: Boolean(definition.detail),
+        order: Number(definition.order) || groups.length,
+        children
+      });
+    });
+
+    return this.appendUngroupedEntries(groups, definitions, assignedChildren, groupDefinitionKeys);
+  }
+
+  private appendUngroupedEntries(
+    baseGroups: CriteriaGroupModel[],
+    definitions: Map<string, any>,
+    assignedChildren: Set<string>,
+    groupDefinitionKeys: Set<string>
+  ): CriteriaGroupModel[] {
+    const groups = [...baseGroups];
+    const ungroupedEntries: CriteriaEntryModel[] = [];
+
+    definitions.forEach((definition, key) => {
+      if (assignedChildren.has(key) || groupDefinitionKeys.has(key)) {
+        return;
+      }
+      ungroupedEntries.push(
+        this.toCriteriaEntryModel(key, definition, OTHER_CRITERIA_GROUP_ID)
+      );
+    });
+
+    groups.sort((a, b) => a.order - b.order);
+
+    if (ungroupedEntries.length > 0 || groups.length === 0) {
+      const maxOrder = groups.reduce((max, group) => Math.max(max, group.order), -1);
+      groups.push({
+        id: OTHER_CRITERIA_GROUP_ID,
+        name: OTHER_CRITERIA_GROUP_NAME,
+        type: 'group',
+        search: false,
+        table: false,
+        detail: false,
+        order: maxOrder + 1,
+        children: ungroupedEntries
+      });
+    }
+
+    return groups;
+  }
+
+  private extractGroupDefinitionKeys(definitions: Map<string, any>): Set<string> {
+    const keys = new Set<string>();
+    definitions.forEach((definition, key) => {
+      if (Array.isArray(definition.children) && definition.children.length > 0) {
+        keys.add(key);
+      }
+    });
+    return keys;
   }
 
   // Catalog operations
@@ -138,6 +360,8 @@ export class ConfigWorkspaceService {
               search: !!entryForm.search,
               table: !!entryForm.table,
               detail: !!entryForm.detail,
+              andSearch: !!entryForm.andSearch,
+              rangeSearch: !!entryForm.rangeSearch,
               order:
                 typeof entryForm.order === 'number'
                   ? entryForm.order
@@ -201,7 +425,13 @@ export class ConfigWorkspaceService {
   loadDocument(catalogItem: ConfigCatalogItem): Observable<ConfigDocumentModel> {
     this.isLoadingSubject.next(true);
     
-    return this.http.get<any>(`${this.apiBaseUrl}/${catalogItem.encodedPath}`).pipe(
+    const load$ = this.enableBlueprintGrouping
+      ? this.ensureDatasetBlueprint(catalogItem).pipe(
+          switchMap(() => this.http.get<any>(`${this.apiBaseUrl}/${catalogItem.encodedPath}`))
+        )
+      : this.http.get<any>(`${this.apiBaseUrl}/${catalogItem.encodedPath}`);
+
+    return load$.pipe(
       map(response => this.transformApiResponseToModel(catalogItem, response)),
       catchError(error => {
         this.errorsSubject.next(error);
@@ -226,6 +456,7 @@ export class ConfigWorkspaceService {
   clearActiveDocument(): void {
     this.activeDocumentSubject.next(null);
     this.clearDirtyState();
+    this.activeGroupingBlueprint = null;
   }
 
   revertDocument(): Observable<ConfigDocumentModel> {
@@ -346,6 +577,8 @@ export class ConfigWorkspaceService {
           search: false,
           table: false,
           detail: false,
+          andSearch: false,
+          rangeSearch: false,
           order: Math.max(...group.children.map(c => c.order), -1) + 1,
           parentId: parentGroupId
         };
@@ -528,6 +761,171 @@ export class ConfigWorkspaceService {
     };
     
     this.activeDocumentSubject.next(updatedDoc);
+  }
+
+  private ensureDatasetBlueprint(catalogItem: ConfigCatalogItem): Observable<DatasetGroupingBlueprint | null> {
+    if (!this.enableBlueprintGrouping) {
+      this.activeGroupingBlueprint = null;
+      return of(null);
+    }
+
+    const datasetId = catalogItem.datasetId;
+    if (!datasetId) {
+      this.activeGroupingBlueprint = null;
+      return of(null);
+    }
+
+    const cached = this.datasetGroupingCache.get(datasetId);
+    if (cached) {
+      this.activeGroupingBlueprint = cached;
+      return of(cached);
+    }
+
+    return this.loadDatasetManifest().pipe(
+      map(entries => entries.find(entry => entry.id === datasetId) || null),
+      switchMap(entry => {
+        if (!entry) {
+          console.warn(
+            `[ConfigWorkspaceService] Dataset "${datasetId}" not found in manifest; continuing without grouping defaults.`
+          );
+          this.activeGroupingBlueprint = null;
+          return of(null);
+        }
+
+        const groupingPaths = this.extractGroupingDefaults(entry);
+        if (groupingPaths.length === 0) {
+          const blueprint: DatasetGroupingBlueprint = {
+            datasetId,
+            sources: [],
+            loadedAt: Date.now()
+          };
+          this.datasetGroupingCache.set(datasetId, blueprint);
+          this.activeGroupingBlueprint = blueprint;
+          return of(blueprint);
+        }
+
+        const uniquePaths = Array.from(new Set(groupingPaths));
+        const fetchRequests = uniquePaths.map(path => this.fetchGroupingDocument(path));
+
+        return forkJoin(fetchRequests).pipe(
+          map(results =>
+            results.filter(
+              (result): result is GroupingBlueprintSource => Boolean(result)
+            )
+          ),
+          map(sources => {
+            const blueprint: DatasetGroupingBlueprint = {
+              datasetId,
+              sources,
+              loadedAt: Date.now()
+            };
+            this.datasetGroupingCache.set(datasetId, blueprint);
+            this.activeGroupingBlueprint = blueprint;
+            return blueprint;
+          })
+        );
+      }),
+      catchError(error => {
+        console.error(
+          '[ConfigWorkspaceService] Failed to resolve dataset grouping defaults:',
+          error
+        );
+        this.activeGroupingBlueprint = null;
+        return of(null);
+      })
+    );
+  }
+
+  private loadDatasetManifest(): Observable<DatasetManifestEntry[]> {
+    if (this.datasetManifestCache) {
+      return of(this.datasetManifestCache);
+    }
+
+    if (this.datasetManifestRequest$) {
+      return this.datasetManifestRequest$;
+    }
+
+    this.datasetManifestRequest$ = this.http
+      .get<{ datasets: DatasetManifestEntry[] }>(this.datasetManifestUrl)
+      .pipe(
+        map(response => (Array.isArray(response?.datasets) ? response.datasets : [])),
+        tap(entries => (this.datasetManifestCache = entries)),
+        catchError(error => {
+          console.error(
+            '[ConfigWorkspaceService] Failed to load dataset manifest:',
+            error
+          );
+          this.datasetManifestCache = null;
+          return of<DatasetManifestEntry[]>([]);
+        }),
+        finalize(() => (this.datasetManifestRequest$ = null)),
+        shareReplay({ bufferSize: 1, refCount: true })
+      );
+
+    return this.datasetManifestRequest$;
+  }
+
+  private extractGroupingDefaults(entry: DatasetManifestEntry): string[] {
+    if (!entry.sources?.configDefaults) {
+      return [];
+    }
+    return entry.sources.configDefaults.filter(
+      (path): path is string =>
+        typeof path === 'string' && /groups.*\.ya?ml$/i.test(path)
+    );
+  }
+
+  private fetchGroupingDocument(relativePath: string): Observable<GroupingBlueprintSource | null> {
+    const encodedPath = this.encodeRelativePath(relativePath);
+    if (!encodedPath) {
+      console.warn(
+        `[ConfigWorkspaceService] Unable to encode grouping path "${relativePath}", skipping.`
+      );
+      return of(null);
+    }
+
+    return this.http.get<any>(`${this.apiBaseUrl}/${encodedPath}`).pipe(
+      map(response => ({
+        path: relativePath,
+        parsedDocument: response?.parsedDocument || null,
+        rawYaml: response?.rawYaml || ''
+      })),
+      catchError(error => {
+        console.error(
+          `[ConfigWorkspaceService] Failed to load grouping defaults from "${relativePath}":`,
+          error
+        );
+        return of(null);
+      })
+    );
+  }
+
+  private encodeRelativePath(relativePath: string): string | null {
+    if (!relativePath) {
+      return null;
+    }
+    try {
+      const utf8 = encodeURIComponent(relativePath).replace(
+        /%([0-9A-F]{2})/g,
+        (_, hex) => String.fromCharCode(parseInt(hex, 16))
+      );
+      const base64 =
+        typeof btoa === 'function'
+          ? btoa(utf8)
+          : (globalThis as any)?.Buffer
+          ? (globalThis as any).Buffer.from(relativePath, 'utf-8').toString('base64')
+          : null;
+      if (!base64) {
+        return null;
+      }
+      return base64.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/g, '');
+    } catch (error) {
+      console.error(
+        '[ConfigWorkspaceService] Failed to encode relative path for grouping defaults:',
+        error
+      );
+      return null;
+    }
   }
 
   // YAML operations
@@ -720,12 +1118,21 @@ export class ConfigWorkspaceService {
           order: group.order,
           ...(group.children.length > 0 && {
             children: group.children.reduce((childAcc, child) => {
-              childAcc[child.name] = {
+              childAcc[child.id || child.name] = {
+                name: child.name,
                 type: child.type,
                 search: child.search,
                 table: child.table,
                 detail: child.detail,
-                order: child.order
+                andSearch: child.andSearch,
+                rangeSearch: child.rangeSearch,
+                order: child.order,
+                ...(child.placeholder !== undefined && child.placeholder !== '' && {
+                  placeholder: child.placeholder
+                }),
+                ...(child.description !== undefined && child.description !== '' && {
+                  description: child.description
+                })
               };
               return childAcc;
             }, {} as any)
@@ -840,66 +1247,35 @@ export class ConfigWorkspaceService {
   private buildCriteriaGroups(rawCriteria: any): CriteriaGroupModel[] {
     const definitions = this.flattenCriteriaDefinitions(rawCriteria);
     if (definitions.size === 0) {
-      return [{
-        id: OTHER_CRITERIA_GROUP_ID,
-        name: OTHER_CRITERIA_GROUP_NAME,
-        type: 'group',
-        search: false,
-        table: false,
-        detail: false,
-        order: 0,
-        children: []
-      }];
+      return [
+        {
+          id: OTHER_CRITERIA_GROUP_ID,
+          name: OTHER_CRITERIA_GROUP_NAME,
+          type: 'group',
+          search: false,
+          table: false,
+          detail: false,
+          order: 0,
+          children: []
+        }
+      ];
     }
 
-    const assignedChildren = new Set<string>();
-    const groupDefinitionKeys = new Set<string>();
-    const groups: CriteriaGroupModel[] = [];
+    const groupDefinitionKeys = this.extractGroupDefinitionKeys(definitions);
 
-    definitions.forEach((definition, key) => {
-      if (!Array.isArray(definition.children) || definition.children.length === 0) {
-        return;
-      }
-      const groupId = definition.id || key || this.generateId();
-      const children = this.resolveGroupChildren(groupId, definition.children, definitions, assignedChildren);
-      groups.push({
-        id: groupId,
-        name: definition.name || key,
-        type: definition.type || 'group',
-        search: Boolean(definition.search),
-        table: Boolean(definition.table),
-        detail: Boolean(definition.detail),
-        order: Number(definition.order) || groups.length,
-        children
-      });
-      groupDefinitionKeys.add(key);
-    });
-
-    const ungroupedEntries: CriteriaEntryModel[] = [];
-    definitions.forEach((definition, key) => {
-      if (assignedChildren.has(key) || groupDefinitionKeys.has(key)) {
-        return;
-      }
-      ungroupedEntries.push(
-        this.toCriteriaEntryModel(key, definition, OTHER_CRITERIA_GROUP_ID)
+    const blueprintResult = this.enableBlueprintGrouping
+      ? this.buildGroupsViaBlueprint(definitions)
+      : null;
+    if (blueprintResult) {
+      return this.appendUngroupedEntries(
+        blueprintResult.groups,
+        definitions,
+        blueprintResult.assignedChildren,
+        groupDefinitionKeys
       );
-    });
-
-    if (ungroupedEntries.length > 0 || groups.length === 0) {
-      const maxOrder = groups.reduce((max, group) => Math.max(max, group.order), 0);
-      groups.push({
-        id: OTHER_CRITERIA_GROUP_ID,
-        name: OTHER_CRITERIA_GROUP_NAME,
-        type: 'group',
-        search: false,
-        table: false,
-        detail: false,
-        order: maxOrder + 1,
-        children: ungroupedEntries
-      });
     }
 
-    return groups.sort((a, b) => a.order - b.order);
+    return this.buildGroupsFromDocumentDefinitions(definitions, groupDefinitionKeys);
   }
 
   private flattenCriteriaDefinitions(rawCriteria: any): Map<string, any> {
@@ -929,13 +1305,33 @@ export class ConfigWorkspaceService {
     parentId: string,
     childRefs: any[],
     definitions: Map<string, any>,
-    assignedChildren: Set<string>
+    assignedChildren: Set<string>,
+    groupName?: string,
+    missingReferences?: MissingReferenceInfo[]
   ): CriteriaEntryModel[] {
     const children: CriteriaEntryModel[] = [];
 
     childRefs.forEach(ref => {
       const resolved = this.resolveChildReference(ref, definitions);
       if (!resolved) {
+        const refLabel =
+          typeof ref === 'string' ? ref : JSON.stringify(ref ?? '');
+        if (missingReferences) {
+          missingReferences.push({
+            group: groupName || parentId,
+            reference: refLabel
+          });
+        } else {
+          console.warn(
+            `[ConfigWorkspaceService] Unable to resolve criteria reference "${refLabel}" for group "${groupName || parentId}".`
+          );
+        }
+        return;
+      }
+      if (assignedChildren.has(resolved.key)) {
+        console.warn(
+          `[ConfigWorkspaceService] Criteria "${resolved.key}" already assigned; skipping duplicate reference in group "${groupName || parentId}".`
+        );
         return;
       }
       assignedChildren.add(resolved.key);
@@ -994,6 +1390,8 @@ export class ConfigWorkspaceService {
       search: Boolean(definition.search),
       table: Boolean(definition.table),
       detail: Boolean(definition.detail),
+      andSearch: Boolean(definition.andSearch),
+      rangeSearch: Boolean(definition.rangeSearch),
       order: Number(definition.order) || 0,
       placeholder: this.parseStructuredField(definition.placeholder || ''),
       description: this.parseStructuredField(definition.description || ''),
@@ -1017,5 +1415,21 @@ export class ConfigWorkspaceService {
       return parseStructuredText(value);
     }
     return value;
+  }
+
+  private logMissingReferenceSummary(
+    message: string,
+    refs: MissingReferenceInfo[]
+  ): void {
+    const sample = refs.slice(0, BLUEPRINT_MISSING_REF_SAMPLE);
+    const formattedSample = sample
+      .map(ref => `${ref.reference}→${ref.group}`)
+      .join(', ');
+    const remaining = Math.max(refs.length - sample.length, 0);
+    console.warn(
+      `[ConfigWorkspaceService] ${message} Missing references: ${formattedSample}${
+        remaining > 0 ? ` … (+${remaining} more)` : ''
+      }`
+    );
   }
 }

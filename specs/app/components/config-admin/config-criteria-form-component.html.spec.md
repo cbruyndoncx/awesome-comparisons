@@ -42,6 +42,7 @@ Renders criteria groups in an expandable accordion with drag-and-drop support.
 - Each group header contains editable fields bound to FormGroup controls
 - Includes `mat-form-field` inputs for `name`, `type`, `order` with the type options driven by the `allowedTypes` input plus a sentinel `group` option so organizational buckets (e.g., “Other Criteria”) remain editable
 - Provides toggles for `search`, `table`, `detail` flags
+- Exposes a “Link existing criteria” `mat-select` per group that lists entries from other groups/fallback bucket so admins can move criteria without drag-and-drop
 - Contains clone button calling `cloneCriteriaGroup(i)`
 - Contains delete button calling `removeCriteriaGroup(i)`
 - Includes drag handle with `cdkDragHandle`
@@ -55,9 +56,9 @@ Renders individual criteria entries within each group with full form controls.
 - Uses `cdkDropList` for criteria entry reordering within groups
 - Each entry renders in a `mat-card` with reactive form controls
 - Includes controls for `id`, `name`, `type`, `order`, `placeholder`, `description` (type select also bound to `allowedTypes` so existing values remain visible)
-- Provides per-entry toggles for `search`, `table`, and `detail` flags so criteria-level display settings can be adjusted independently of the parent group
+- Provides per-entry toggles for `search`, `table`, `detail`, `andSearch`, and `rangeSearch` flags so criteria-level display settings can be adjusted independently of the parent group
 - Placeholder and description fields accept structured template strings emitted as `template:Your text | variables:name,other`, which round-trip back to the YAML `template/variables` objects automatically
-- Criteria cards render in a collapsed summary state (name/type plus flag badges) by default with an “Edit” button that reveals the full form
+- Criteria cards render in a collapsed summary state (name/type plus flag badges for all five flags) by default with an “Edit” button that reveals the full form
 - Contains clone button calling `cloneCriteriaEntry(i, j)`
 - Contains delete button calling `removeCriteriaEntry(i, j)`
 - Connects each drop list via `cdkDropListConnectedTo` so entries can be dragged between groups (including the automatic "Other Criteria" bucket)

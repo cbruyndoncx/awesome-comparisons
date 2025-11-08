@@ -129,6 +129,22 @@
             </button>
           </div>
 
+          <!-- Link existing criteria -->
+          <div class="link-existing" *ngIf="linkableEntryOptions[i]?.length">
+            <mat-form-field appearance="outline">
+              <mat-label>Link existing criteria</mat-label>
+              <mat-select
+                [(ngModel)]="linkSelections[i]"
+                [ngModelOptions]="{ standalone: true }"
+                (selectionChange)="linkExistingCriteria(i, $event.value)">
+                <mat-option [value]="null">Select criteria</mat-option>
+                <mat-option *ngFor="let option of linkableEntryOptions[i]" [value]="option.id">
+                  {{ option.label }} (from {{ option.groupName }})
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
           <!-- Criteria entries -->
           <div
             formArrayName="entries"
@@ -156,6 +172,8 @@
                     <span class="entry-flag" [class.entry-flag--active]="entry.get('search')?.value">Search</span>
                     <span class="entry-flag" [class.entry-flag--active]="entry.get('table')?.value">Table</span>
                     <span class="entry-flag" [class.entry-flag--active]="entry.get('detail')?.value">Detail</span>
+                    <span class="entry-flag" [class.entry-flag--active]="entry.get('andSearch')?.value">AND</span>
+                    <span class="entry-flag" [class.entry-flag--active]="entry.get('rangeSearch')?.value">Range</span>
                   </div>
                 </div>
                 <div class="entry-header__actions">
@@ -212,6 +230,8 @@
                   <mat-slide-toggle formControlName="search">Search</mat-slide-toggle>
                   <mat-slide-toggle formControlName="table">Table</mat-slide-toggle>
                   <mat-slide-toggle formControlName="detail">Detail</mat-slide-toggle>
+                  <mat-slide-toggle formControlName="andSearch">AND Search</mat-slide-toggle>
+                  <mat-slide-toggle formControlName="rangeSearch">Range Search</mat-slide-toggle>
                 </div>
 
               </mat-card-content>

@@ -49,6 +49,8 @@ export interface CriteriaEntryModel {
   search: boolean;
   table: boolean;
   detail: boolean;
+  andSearch: boolean;
+  rangeSearch: boolean;
   order: number;
   placeholder?: string;
   description?: string;
@@ -118,6 +120,8 @@ export function isCriteriaEntryModel(obj: unknown): obj is CriteriaEntryModel {
     typeof (obj as any).search === 'boolean' &&
     typeof (obj as any).table === 'boolean' &&
     typeof (obj as any).detail === 'boolean' &&
+    typeof (obj as any).andSearch === 'boolean' &&
+    typeof (obj as any).rangeSearch === 'boolean' &&
     typeof (obj as any).order === 'number' &&
     (typeof (obj as any).placeholder === 'string' || (obj as any).placeholder === undefined) &&
     (typeof (obj as any).description === 'string' || (obj as any).description === undefined) &&
@@ -148,6 +152,8 @@ export function cloneCriteriaEntry(entry: CriteriaEntryModel): CriteriaEntryMode
     search: entry.search,
     table: entry.table,
     detail: entry.detail,
+    andSearch: entry.andSearch,
+    rangeSearch: entry.rangeSearch,
     order: entry.order,
     placeholder: entry.placeholder,
     description: entry.description,
@@ -199,6 +205,8 @@ export function createEmptyCriteriaEntry(partial?: Partial<CriteriaEntryModel>):
     search: partial?.search || false,
     table: partial?.table || false,
     detail: partial?.detail || false,
+    andSearch: partial?.andSearch || false,
+    rangeSearch: partial?.rangeSearch || false,
     order: partial?.order || 0,
     placeholder: partial?.placeholder,
     description: partial?.description,

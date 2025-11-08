@@ -35,12 +35,20 @@ Renders per-group accordions with comprehensive editing controls.
 
 Renders criteria entry cards within each group with full metadata editing.
 
-- Editable fields: id, name, type, flags, order, placeholder, description
+- Editable fields: id, name, type, flags (search/table/detail/andSearch/rangeSearch), order, placeholder, description
 - Parent-child relationship maintenance within group context  
 - Individual entry validation with inline error display
 - Clone support plus CDK drag-drop reordering both within a group and across connected groups (including the fallback bucket) so admins can reorganize criteria exactly like the public settings dialog
 - Unique criteria ID validation across entire document
 - Card-based layout with Material form-field components
+
+### Link Existing Criteria Selector
+
+Allows admins to attach existing criteria from other groups (or the fallback bucket) without dragging.
+
+- Per-group Material select listing available criteria labels grouped by their current parent
+- Selecting an entry removes it from the source group, appends it to the target group, and normalizes both groups’ `order` values
+- Automatically expands the newly linked card for quick editing and clears the select value after each operation
 
 ### Value Display Overrides Management
 

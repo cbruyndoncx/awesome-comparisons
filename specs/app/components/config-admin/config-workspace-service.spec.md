@@ -27,6 +27,15 @@ Loads configuration documents via `GET /api/config/:encodedPath` and maintains a
 - Tracks loading states with `isLoading$` and `saveStatus$` observables
 - Handles document selection changes and clears dirty state appropriately
 
+### Dataset Manifest & Blueprint Resolution
+
+Fetches `configuration/datasets.manifest.json` once per document selection to resolve dataset-specific grouping defaults.
+
+- Caches the manifest response and per-dataset grouping YAML (e.g., `configuration/defaults/groups-advanced.yml`) so repeated selections do not re-fetch files
+- Clears the active blueprint cache when no document is selected to avoid stale associations
+- Gracefully handles missing or malformed grouping files with console warnings while still loading the target document
+- Applies blueprint-provided group definitions ahead of raw YAML parsing so code-editor/code-model datasets inherit the same grouping logic as the public website, falling back to the old “build from YAML children” routine if no blueprint data is available
+
 ### Working Copy Mutations
 
 Provides methods to mutate the working copy of configuration documents.
@@ -34,7 +43,7 @@ Provides methods to mutate the working copy of configuration documents.
 - Add, clone, remove, and reorder criteria groups
 - Add, clone, remove, and reorder criteria entries within groups
 - Update value display overrides with emoji mappings
-- Toggle search, table, and detail flags for criteria
+- Toggle search, table, detail, `andSearch`, and `rangeSearch` flags for criteria
 - Automatically recompute ordering numbers and parent/child relationships
 - Maintain dirty state tracking for unsaved changes
 

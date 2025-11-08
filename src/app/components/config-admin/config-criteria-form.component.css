@@ -132,7 +132,7 @@
   display: flex;
   gap: 12px;
   align-items: center;
-  white-space: nowrap;
+  flex-wrap: wrap;
 }
 
 .entry-flag {
@@ -156,6 +156,15 @@
   gap: 16px;
   margin-top: 12px;
   flex-wrap: wrap;
+}
+
+.link-existing {
+  margin-top: 12px;
+  max-width: 360px;
+}
+
+.link-existing mat-form-field {
+  width: 100%;
 }
 
 /* Value override table styling */
