@@ -66,6 +66,10 @@ Includes proper ARIA labels, roles, and tooltips for all interactive elements.
 - Panels have appropriate `role` attributes
 - Uses combined view-model `*ngIf` guards and the async pipe to handle observables safely without blinking the UI when loading completes
 
+### Alert history panel
+
+Renders a collapsible-style card directly beneath the toolbar that streams messages from `alertMessages$`. Each entry shows timestamp, level, and text, preserving the last ~200 diagnostics so users can review what happened even if the editor freezes later. Entries are styled based on severity (info/warn/error) for quick scanning.
+
 ## API
 
 ```html { .api }

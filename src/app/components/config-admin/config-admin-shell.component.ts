@@ -7,6 +7,7 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { finalize, map, takeUntil } from 'rxjs/operators';
 
 import { ConfigWorkspaceService } from './config-workspace.service';
+import { ConfigAlertService, AlertMessage } from './config-alert.service';
 import {
   ConfigCatalogItem,
   ConfigDocumentModel,
@@ -37,6 +38,7 @@ export class ConfigAdminShellComponent implements OnInit, OnDestroy {
   isLoading$: Observable<boolean> = this.configWorkspace.isLoading$;
   hasUnsavedChanges = false;
   isSaving$ = this.isSavingSubject.asObservable();
+  alertMessages$: Observable<AlertMessage[]> = this.alerts.messages$;
 
   @Output() configSaved = new EventEmitter<ConfigDocumentModel>();
   @Output() navigationRequested = new EventEmitter<string>();
@@ -62,6 +64,7 @@ export class ConfigAdminShellComponent implements OnInit, OnDestroy {
 
   constructor(
     private readonly configWorkspace: ConfigWorkspaceService,
+    private readonly alerts: ConfigAlertService,
     private readonly cdr: ChangeDetectorRef
   ) {
   }
@@ -196,6 +199,10 @@ export class ConfigAdminShellComponent implements OnInit, OnDestroy {
       event.emoji || '',
       event.displayText
     );
+  }
+
+  trackAlert(index: number, alert: AlertMessage): string {
+    return alert?.id || String(index);
   }
 
   onDiffViewModeChange(mode: 'unified' | 'split' | undefined | null): void {

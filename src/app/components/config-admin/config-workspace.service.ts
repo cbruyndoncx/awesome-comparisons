@@ -19,6 +19,7 @@ import {
   ValidationError
 } from '../../models/config-document.model';
 import { parseStructuredText } from './template-field.util';
+import { ConfigAlertService } from './config-alert.service';
 
 const OTHER_CRITERIA_GROUP_ID = '__other__';
 const OTHER_CRITERIA_GROUP_NAME = 'Other Criteria';
@@ -71,7 +72,7 @@ interface MissingReferenceInfo {
 })
 export class ConfigWorkspaceService {
   private readonly apiBaseUrl = '/api/config';
-  private readonly enableBlueprintGrouping = false;
+  private readonly enableBlueprintGrouping = true;
   private readonly datasetManifestUrl = 'assets/configuration/datasets.manifest.json';
   
   // Internal subjects
@@ -109,7 +110,10 @@ export class ConfigWorkspaceService {
     shareReplay({ bufferSize: 1, refCount: true })
   );
 
-  constructor(private http: HttpClient) {
+  constructor(
+    private http: HttpClient,
+    private alerts: ConfigAlertService
+  ) {
     // Initialize catalog on service creation
   }
 
@@ -122,6 +126,8 @@ export class ConfigWorkspaceService {
     if (!blueprint || blueprint.sources.length === 0) {
       return null;
     }
+
+    console.log('[DEBUG] buildGroupsViaBlueprint: Starting with', blueprint.sources.length, 'sources and', definitions.size, 'document definitions');
 
     const assignedChildren = new Set<string>();
     const groups: CriteriaGroupModel[] = [];
@@ -139,6 +145,7 @@ export class ConfigWorkspaceService {
       }
 
       const blueprintDefinitions = this.flattenCriteriaDefinitions(criteriaNode);
+      console.log('[DEBUG] buildGroupsViaBlueprint: Blueprint source', source.path, 'has', blueprintDefinitions.size, 'definitions');
       blueprintDefinitions.forEach((definition, key) => {
         if (!Array.isArray(definition.children) || definition.children.length === 0) {
           return;
@@ -153,6 +160,7 @@ export class ConfigWorkspaceService {
         }
 
         const groupName = definition.name || key;
+        console.log('[DEBUG] buildGroupsViaBlueprint: Resolving group', groupName, 'with', definition.children.length, 'child references');
         const children = this.resolveGroupChildren(
           groupId,
           definition.children,
@@ -161,6 +169,7 @@ export class ConfigWorkspaceService {
           groupName,
           missingReferences
         );
+        console.log('[DEBUG] buildGroupsViaBlueprint: Resolved', children.length, 'children for group', groupName);
         resolvedChildrenCount += children.length;
 
         if (children.length === 0) {
@@ -183,6 +192,8 @@ export class ConfigWorkspaceService {
         });
       });
     });
+
+    console.log('[DEBUG] buildGroupsViaBlueprint: Completed with', groups.length, 'groups,', resolvedChildrenCount, 'resolved children,', missingReferences.length, 'missing references');
 
     if (groups.length === 0) {
       console.warn(
@@ -300,6 +311,7 @@ export class ConfigWorkspaceService {
   // Catalog operations
   refreshCatalog(): Observable<ConfigCatalogItem[]> {
     this.isLoadingSubject.next(true);
+    this.alerts.info('Refreshing configuration catalog…');
 
     return this.http.get<ConfigCatalogItem[]>(`${this.apiBaseUrl}/catalog`).pipe(
       retry(3),
@@ -307,11 +319,13 @@ export class ConfigWorkspaceService {
         this.rawCatalog = catalog;
         this.catalogSubject.next(catalog);
         this.isLoadingSubject.next(false);
+        this.alerts.info(`Catalog loaded (${catalog.length} items).`);
       }),
       catchError(error => {
         console.error('[ConfigWorkspaceService] HTTP request failed:', error);
         this.errorsSubject.next(error);
         this.isLoadingSubject.next(false);
+        this.alerts.error(`Catalog refresh failed: ${error?.message || error}`);
         return throwError(error);
       })
     );
@@ -424,6 +438,8 @@ export class ConfigWorkspaceService {
   // Document operations
   loadDocument(catalogItem: ConfigCatalogItem): Observable<ConfigDocumentModel> {
     this.isLoadingSubject.next(true);
+    const label = catalogItem?.relativePath || catalogItem?.encodedPath || 'document';
+    this.alerts.info(`Loading ${label}…`);
     
     const load$ = this.enableBlueprintGrouping
       ? this.ensureDatasetBlueprint(catalogItem).pipe(
@@ -433,8 +449,10 @@ export class ConfigWorkspaceService {
 
     return load$.pipe(
       map(response => this.transformApiResponseToModel(catalogItem, response)),
+      tap(() => this.alerts.info(`Loaded ${label}.`)),
       catchError(error => {
         this.errorsSubject.next(error);
+        this.alerts.error(`Failed to load ${label}: ${error?.message || error}`);
         return throwError(error);
       }),
       tap(() => this.isLoadingSubject.next(false))
@@ -1245,7 +1263,9 @@ export class ConfigWorkspaceService {
   }
 
   private buildCriteriaGroups(rawCriteria: any): CriteriaGroupModel[] {
+    console.log('[DEBUG] buildCriteriaGroups: Starting, enableBlueprintGrouping=', this.enableBlueprintGrouping);
     const definitions = this.flattenCriteriaDefinitions(rawCriteria);
+    console.log('[DEBUG] buildCriteriaGroups: Flattened', definitions.size, 'definitions from document');
     if (definitions.size === 0) {
       return [
         {
@@ -1267,6 +1287,7 @@ export class ConfigWorkspaceService {
       ? this.buildGroupsViaBlueprint(definitions)
       : null;
     if (blueprintResult) {
+      console.log('[DEBUG] buildCriteriaGroups: Using blueprint result');
       return this.appendUngroupedEntries(
         blueprintResult.groups,
         definitions,
@@ -1275,6 +1296,7 @@ export class ConfigWorkspaceService {
       );
     }
 
+    console.log('[DEBUG] buildCriteriaGroups: Using document-defined groups');
     return this.buildGroupsFromDocumentDefinitions(definitions, groupDefinitionKeys);
   }
 
@@ -1426,10 +1448,10 @@ export class ConfigWorkspaceService {
       .map(ref => `${ref.reference}→${ref.group}`)
       .join(', ');
     const remaining = Math.max(refs.length - sample.length, 0);
-    console.warn(
-      `[ConfigWorkspaceService] ${message} Missing references: ${formattedSample}${
-        remaining > 0 ? ` … (+${remaining} more)` : ''
-      }`
-    );
+    const fullMessage = `${message} Missing references: ${formattedSample}${
+      remaining > 0 ? ` … (+${remaining} more)` : ''
+    }`;
+    console.warn(`[ConfigWorkspaceService] ${fullMessage}`);
+    this.alerts.warn(fullMessage);
   }
 }

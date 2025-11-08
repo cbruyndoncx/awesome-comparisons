@@ -32,6 +32,10 @@ Initiates document saves through the workspace service with optimistic locking, 
 
 Provides allowed criteria types, computed YAML preview text, and summary helpers for total group/criteria counts to populate toolbar/status UI. Prompts the user when attempting to discard unsaved changes.
 
+### Alert History & Diagnostics
+
+Subscribes to `ConfigAlertService` so every informational/warning/error message emitted by the workspace appears in a persistent alert history panel. Exposes the alert stream to the template plus a `trackAlert` helper for efficient rendering, ensuring troubleshooting context remains visible even if the criteria editor becomes unresponsive.
+
 ## API
 
 ```typescript { .api }

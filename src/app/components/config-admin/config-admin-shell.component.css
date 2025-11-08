@@ -189,3 +189,58 @@
     display: none;
   }
 }
+
+.config-admin-shell__alert-log {
+  padding: 8px 16px;
+}
+
+.config-admin-shell__alert-log mat-card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.config-admin-shell__alert-log-body {
+  max-height: 160px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.config-admin-shell__alert-log-empty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted, #666);
+}
+
+.config-admin-shell__alert-log-entry {
+  display: grid;
+  grid-template-columns: 80px 60px 1fr;
+  gap: 8px;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: var(--surface-variant, #f7f7f7);
+}
+
+.config-admin-shell__alert-log-entry.alert-log-entry--warn {
+  background: rgba(255, 193, 7, 0.15);
+}
+
+.config-admin-shell__alert-log-entry.alert-log-entry--error {
+  background: rgba(244, 67, 54, 0.15);
+}
+
+.alert-log-entry__timestamp {
+  font-weight: 600;
+  color: var(--text-muted, #777);
+}
+
+.alert-log-entry__level {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.alert-log-entry__text {
+  overflow-wrap: anywhere;
+}

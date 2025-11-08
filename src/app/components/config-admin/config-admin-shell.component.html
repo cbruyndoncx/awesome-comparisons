@@ -72,6 +72,29 @@
   </mat-spinner>
 </mat-toolbar>
 
+<section class="config-admin-shell__alert-log" role="region" aria-label="Alert history">
+  <mat-card>
+    <mat-card-title>Alert History</mat-card-title>
+    <div class="config-admin-shell__alert-log-body" *ngIf="alertMessages$ | async as alerts">
+      <div
+        *ngIf="alerts.length === 0"
+        class="config-admin-shell__alert-log-empty">
+        <mat-icon>info</mat-icon>
+        <span>No alerts yet</span>
+      </div>
+      <div
+        *ngFor="let alert of alerts; trackBy: trackAlert"
+        class="config-admin-shell__alert-log-entry"
+        [class.alert-log-entry--warn]="alert.level === 'warn'"
+        [class.alert-log-entry--error]="alert.level === 'error'">
+        <span class="alert-log-entry__timestamp">{{ alert.timestamp | date:'HH:mm:ss' }}</span>
+        <span class="alert-log-entry__level">{{ alert.level | uppercase }}</span>
+        <span class="alert-log-entry__text">{{ alert.text }}</span>
+      </div>
+    </div>
+  </mat-card>
+</section>
+
 <div class="config-admin-shell__layout" role="main">
   <div class="config-admin-shell__catalog config-admin-shell__panel" role="navigation">
     <ng-container *ngIf="{ isLoading: (isLoading$ | async) || false, catalog: (catalogItems$ | async) || [] } as vm">
