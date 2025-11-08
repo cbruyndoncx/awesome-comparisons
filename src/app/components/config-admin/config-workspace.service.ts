@@ -1271,42 +1271,74 @@ export class ConfigWorkspaceService {
 
   toApiPayload(document: ConfigDocumentModel): any {
     const payload = { ...document.extraProperties };
-    
-    // Convert criteria groups
+
+    // Convert criteria - use flat array format if original document used it
     if (document.criteriaGroups.length > 0) {
-      payload.criteria = document.criteriaGroups.reduce((acc, group) => {
-        acc[group.name] = {
-          type: group.type,
-          search: group.search,
-          table: group.table,
-          detail: group.detail,
-          order: group.order,
-          ...(group.children.length > 0 && {
-            children: group.children.reduce((childAcc, child) => {
-              childAcc[child.id || child.name] = {
-                name: child.name,
-                type: child.type,
-                search: child.search,
-                table: child.table,
-                detail: child.detail,
-                andSearch: child.andSearch,
-                rangeSearch: child.rangeSearch,
-                order: child.order,
-                ...(child.placeholder !== undefined && child.placeholder !== '' && {
-                  placeholder: child.placeholder
-                }),
-                ...(child.description !== undefined && child.description !== '' && {
-                  description: child.description
-                })
-              };
-              return childAcc;
-            }, {} as any)
-          })
-        };
-        return acc;
-      }, {} as any);
+      if (document.metadata.usesFlatArrayFormat) {
+        // Flat array format: [{ Version: {...} }, { Classification: {...} }]
+        payload.criteria = [];
+        document.criteriaGroups.forEach(group => {
+          group.children.forEach(child => {
+            const criteriaEntry: any = {};
+            criteriaEntry[child.name] = {
+              name: child.name,
+              type: child.type,
+              search: child.search,
+              table: child.table,
+              detail: child.detail,
+              andSearch: child.andSearch,
+              rangeSearch: child.rangeSearch,
+              order: child.order,
+              ...(child.placeholder !== undefined && child.placeholder !== '' && {
+                placeholder: child.placeholder
+              }),
+              ...(child.description !== undefined && child.description !== '' && {
+                description: child.description
+              }),
+              // Include any extra properties (values, referencedHeader, etc.)
+              ...(child.extraProperties || {})
+            };
+            payload.criteria.push(criteriaEntry);
+          });
+        });
+      } else {
+        // Grouped format: { "General Info": { type: "group", children: {...} } }
+        payload.criteria = document.criteriaGroups.reduce((acc, group) => {
+          acc[group.name] = {
+            type: group.type,
+            search: group.search,
+            table: group.table,
+            detail: group.detail,
+            order: group.order,
+            ...(group.children.length > 0 && {
+              children: group.children.reduce((childAcc, child) => {
+                childAcc[child.id || child.name] = {
+                  name: child.name,
+                  type: child.type,
+                  search: child.search,
+                  table: child.table,
+                  detail: child.detail,
+                  andSearch: child.andSearch,
+                  rangeSearch: child.rangeSearch,
+                  order: child.order,
+                  ...(child.placeholder !== undefined && child.placeholder !== '' && {
+                    placeholder: child.placeholder
+                  }),
+                  ...(child.description !== undefined && child.description !== '' && {
+                    description: child.description
+                  }),
+                  // Include any extra properties
+                  ...(child.extraProperties || {})
+                };
+                return childAcc;
+              }, {} as any)
+            })
+          };
+          return acc;
+        }, {} as any);
+      }
     }
-    
+
     // Convert value display overrides
     if (document.valueDisplayOverrides.size > 0) {
       payload.valueDisplay = {};
@@ -1322,7 +1354,7 @@ export class ConfigWorkspaceService {
         }
       });
     }
-    
+
     return payload;
   }
 
@@ -1366,6 +1398,11 @@ export class ConfigWorkspaceService {
     const valueDisplayOverrides = new Map<string, ValueDisplayModel[]>();
     const extraProperties: Record<string, any> = {};
 
+    // Detect if original document uses flat array format
+    // Flat array format: criteria is an array like [{ Version: {...} }, { Classification: {...} }]
+    // Grouped format: criteria is an object like { "General Info": { type: "group", children: {...} } }
+    const usesFlatArrayFormat = Array.isArray(response.parsedDocument?.criteria);
+
     criteriaGroups.push(
       ...this.buildCriteriaGroups(response.parsedDocument?.criteria)
     );
@@ -1400,7 +1437,8 @@ export class ConfigWorkspaceService {
         size: response.metadata?.size || catalogItem.size,
         isSharedDefault: response.metadata?.isSharedDefault || catalogItem.isSharedDefault,
         isDatasetConfig: response.metadata?.isDatasetConfig || catalogItem.isDatasetConfig,
-        ...(response.metadata?.datasetId && { datasetId: response.metadata.datasetId })
+        ...(response.metadata?.datasetId && { datasetId: response.metadata.datasetId }),
+        usesFlatArrayFormat
       },
       rawYaml: response.rawYaml || '',
       etag: response.etag || '',
@@ -1409,14 +1447,14 @@ export class ConfigWorkspaceService {
       extraProperties
     };
 
-    // Normalize the rawYaml by regenerating it from the parsed model
-    // This ensures the diff viewer shows the blueprint-grouped structure from the start
-    // and avoids showing a massive diff on the first edit due to structural transformation
-    // Skip normalization for the system default file to preserve its original structure
-    const isSystemDefault = catalogItem?.relativePath === 'configuration/comparison-default.yml';
-    if (!isSystemDefault) {
-      documentModel.rawYaml = this.generatePreviewYaml(documentModel);
-    }
+    // Skip YAML normalization entirely to avoid etag conflicts
+    // The diff will show structural changes on first edit, but this is acceptable
+    // and avoids 409 conflicts when saving
+    // Note: We still skip normalization for the system default file
+    // const isSystemDefault = catalogItem?.relativePath === 'configuration/comparison-default.yml';
+    // if (!isSystemDefault && blueprintWasApplied) {
+    //   documentModel.rawYaml = this.generatePreviewYaml(documentModel);
+    // }
 
     return documentModel;
   }
@@ -1584,6 +1622,25 @@ export class ConfigWorkspaceService {
     definition: any,
     parentId: string
   ): CriteriaEntryModel {
+    // Extract all properties as extra properties first, then selectively extract known ones
+    const extraProperties: Record<string, any> = { ...definition };
+
+    // Remove known properties from extraProperties
+    // We keep the original values for complex structures (objects) in extraProperties
+    const knownSimpleProps = ['id', 'name', 'type', 'search', 'table', 'detail',
+      'andSearch', 'rangeSearch', 'order'];
+
+    knownSimpleProps.forEach(prop => delete extraProperties[prop]);
+
+    // For placeholder and description, only delete if they're simple strings
+    // If they're objects (like template/variables), keep in extraProperties
+    if (definition.placeholder && typeof definition.placeholder === 'string') {
+      delete extraProperties.placeholder;
+    }
+    if (definition.description && typeof definition.description === 'string') {
+      delete extraProperties.description;
+    }
+
     return {
       id: definition.id || key || this.generateId(),
       name: definition.name || key,
@@ -1596,7 +1653,8 @@ export class ConfigWorkspaceService {
       order: Number(definition.order) || 0,
       placeholder: this.parseStructuredField(definition.placeholder || ''),
       description: this.parseStructuredField(definition.description || ''),
-      parentId
+      parentId,
+      ...(Object.keys(extraProperties).length > 0 && { extraProperties })
     };
   }
 

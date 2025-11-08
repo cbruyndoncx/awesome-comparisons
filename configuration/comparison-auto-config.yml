@@ -908,9 +908,9 @@ criteria:
   - General Info:
       name: General Info
       type: LABEL
-      search: false
-      table: false
-      detail: false
+      search: true
+      table: true
+      detail: true
       description: *ref_0
       placeholder: *ref_1
       order: ''
@@ -922,13 +922,6 @@ criteria:
         'No':
           displayHtml: <span class="status status-no">✖</span>
         Verdent aims to reduce manual overhead by letting agents handle repetitive engineering work while humans focus on strategy and validation.: {}
-      children:
-        - Classification
-        - Version
-        - Repo
-        - Rating
-        - Short Description
-        - Description
   - Repo:
       name: Repo
       type: LABEL
@@ -961,37 +954,24 @@ criteria:
       name: Developer Experience
       type: MARKDOWN
       search: false
-      table: false
-      detail: false
+      table: true
+      detail: true
       description: ''
       placeholder: ''
       order: ''
       andSearch: false
       rangeSearch: false
-      children:
-        - ContextManagement
-        - DirectFileReferences
-        - Checkpoints
-        - GitSupport
   - Ungrouped Criteria:
       name: Ungrouped Criteria
       type: MARKDOWN
       search: false
-      table: false
-      detail: false
+      table: true
+      detail: true
       description: ''
       placeholder: ''
       order: ''
       andSearch: false
       rangeSearch: false
-      children:
-        - Terminal
-        - Notes
-        - Last Update
-        - SpecDrivenDevelopment
-        - General Info
-        - RepositoryActive
-        - Rating-Criteria
   - Sources / Further Reading:
       name: Sources / Further Reading
       type: LABEL

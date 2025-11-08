@@ -55,6 +55,7 @@ export interface CriteriaEntryModel {
   placeholder?: string;
   description?: string;
   parentId?: string;
+  extraProperties?: Record<string, any>;
 }
 
 // Value display override metadata
@@ -72,6 +73,7 @@ export interface DocumentMetadata {
   isSharedDefault: boolean;
   isDatasetConfig: boolean;
   datasetId?: string;
+  usesFlatArrayFormat?: boolean;
 }
 
 // Save response model returned by the workspace API
@@ -158,6 +160,7 @@ export function cloneCriteriaEntry(entry: CriteriaEntryModel): CriteriaEntryMode
     placeholder: entry.placeholder,
     description: entry.description,
     parentId: entry.parentId,
+    extraProperties: entry.extraProperties ? { ...entry.extraProperties } : undefined,
   };
 }
 
@@ -211,5 +214,6 @@ export function createEmptyCriteriaEntry(partial?: Partial<CriteriaEntryModel>):
     placeholder: partial?.placeholder,
     description: partial?.description,
     parentId: partial?.parentId,
+    extraProperties: partial?.extraProperties,
   };
 }
