@@ -457,8 +457,12 @@ export class ConfigWorkspaceService {
     this.isLoadingSubject.next(true);
     const label = catalogItem?.relativePath || catalogItem?.encodedPath || 'document';
     this.alerts.info(`Loading ${label}…`);
-    
-    const load$ = this.enableBlueprintGrouping
+
+    // Skip blueprint grouping for the system default configuration file
+    const isSystemDefault = catalogItem?.relativePath === 'configuration/comparison-default.yml';
+    const useBlueprintGrouping = this.enableBlueprintGrouping && !isSystemDefault;
+
+    const load$ = useBlueprintGrouping
       ? forkJoin({
           criteria: this.ensureDatasetCriteria(catalogItem),
           grouping: this.ensureDatasetBlueprint(catalogItem)
@@ -1019,6 +1023,7 @@ export class ConfigWorkspaceService {
     return entry.sources.configDefaults.filter(
       (path): path is string =>
         typeof path === 'string' &&
+        path !== 'configuration/comparison-default.yml' &&  // Exclude system default
         !path.includes('groups') &&           // Not a grouping file
         !path.includes('value-display') &&    // Not a value display file
         path.endsWith('.yml')                 // Is a YAML file
@@ -1407,7 +1412,11 @@ export class ConfigWorkspaceService {
     // Normalize the rawYaml by regenerating it from the parsed model
     // This ensures the diff viewer shows the blueprint-grouped structure from the start
     // and avoids showing a massive diff on the first edit due to structural transformation
-    documentModel.rawYaml = this.generatePreviewYaml(documentModel);
+    // Skip normalization for the system default file to preserve its original structure
+    const isSystemDefault = catalogItem?.relativePath === 'configuration/comparison-default.yml';
+    if (!isSystemDefault) {
+      documentModel.rawYaml = this.generatePreviewYaml(documentModel);
+    }
 
     return documentModel;
   }
