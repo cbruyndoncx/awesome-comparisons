@@ -2,7 +2,7 @@
 // @generated with Tessl v0.28.0 from ../../../../specs/app/components/config-admin/config-admin-shell-component.spec.md
 // (spec:ddd2411e) (code:3b6f9b41)
 
-import { ChangeDetectorRef, Component, OnDestroy, OnInit, Output, EventEmitter } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit, Output, EventEmitter, ViewChild } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { finalize, map, takeUntil } from 'rxjs/operators';
 
@@ -14,6 +14,7 @@ import {
   CriteriaEntryModel,
   CriteriaGroupModel
 } from '../../models/config-document.model';
+import { ConfigCriteriaFormComponent } from './config-criteria-form.component';
 import { DiffOptions } from './config-diff-viewer.component';
 
 @Component({
@@ -26,6 +27,7 @@ export class ConfigAdminShellComponent implements OnInit, OnDestroy {
   private readonly isSavingSubject = new BehaviorSubject<boolean>(false);
   private catalogItemsSnapshot: ConfigCatalogItem[] = [];
   private currentDocument: ConfigDocumentModel | null = null;
+  @ViewChild(ConfigCriteriaFormComponent) private criteriaForm?: ConfigCriteriaFormComponent;
   
   totalGroups = 0;
   totalCriteria = 0;
@@ -133,6 +135,14 @@ export class ConfigAdminShellComponent implements OnInit, OnDestroy {
     this.configWorkspace.markDocumentDirty();
   }
 
+  onDirtyChange(isDirty: boolean): void {
+    if (isDirty) {
+      this.configWorkspace.markDocumentDirty();
+    } else {
+      this.configWorkspace.clearDirtyState();
+    }
+  }
+
   onCloneGroup(event: { sourceGroup: CriteriaGroupModel }): void {
     if (event?.sourceGroup) {
       this.configWorkspace.cloneCriteriaGroup(event.sourceGroup);
@@ -224,6 +234,7 @@ export class ConfigAdminShellComponent implements OnInit, OnDestroy {
   }
 
   saveDocument(): void {
+    this.criteriaForm?.flushPendingChanges();
     this.isSavingSubject.next(true);
     this.configWorkspace
       .saveDocument()
@@ -232,6 +243,7 @@ export class ConfigAdminShellComponent implements OnInit, OnDestroy {
         next: result => {
           if (result.success) {
             this.configWorkspace.clearDirtyState();
+            this.criteriaForm?.resetDirtyState();
             this.loadCatalog();
             if (this.currentDocument) {
               this.configSaved.emit(this.currentDocument);

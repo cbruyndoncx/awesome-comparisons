@@ -43,9 +43,7 @@ import { ConfigDiffViewerComponent } from './config-diff-viewer.component';
   imports: [
     CommonModule,
     HttpClientModule,
-    RouterModule.forChild([
-      { path: '', component: ConfigAdminShellComponent }
-    ]),
+    RouterModule,
     ReactiveFormsModule,
     FormsModule,
     ClipboardModule,

@@ -6,11 +6,6 @@
   
   <!-- Sticky action bar -->
   <div class="config-criteria__actions">
-    <button mat-raised-button color="primary" (click)="addCriteriaGroup()" matTooltip="Add new criteria group">
-      <mat-icon>add</mat-icon>
-      Add Group
-    </button>
-    
     <button mat-raised-button color="accent" (click)="saveRequested.emit()" [disabled]="!isDirty" 
             matTooltip="Save changes (Ctrl+S)">
       <mat-icon>save</mat-icon>
@@ -74,14 +69,33 @@
           <mat-panel-description class="group-meta">
             Type: {{ group.get('type')?.value || 'N/A' }} | Order: {{ group.get('order')?.value || 0 }}
           </mat-panel-description>
-          <button
-            type="button"
-            mat-icon-button
-            class="group-toggle"
-            (click)="panel.toggle(); $event.stopPropagation()"
-            [attr.aria-label]="panel.expanded ? 'Collapse group' : 'Expand group'">
-            <mat-icon>{{ panel.expanded ? 'expand_less' : 'expand_more' }}</mat-icon>
-          </button>
+          <div class="group-header__actions">
+            <button
+              type="button"
+              mat-icon-button
+              color="primary"
+              class="group-toggle"
+              (click)="panel.toggle(); $event.stopPropagation()"
+              [attr.aria-label]="panel.expanded ? 'Collapse group' : 'Edit group'"
+              [matTooltip]="panel.expanded ? 'Collapse criteria group' : 'Edit criteria group'">
+              <mat-icon>{{ panel.expanded ? 'expand_less' : 'edit' }}</mat-icon>
+            </button>
+            <button
+              mat-icon-button
+              (click)="cloneCriteriaGroup(i); $event.stopPropagation()"
+              matTooltip="Clone criteria group"
+              aria-label="Clone criteria group">
+              <mat-icon>content_copy</mat-icon>
+            </button>
+            <button
+              mat-icon-button
+              color="warn"
+              (click)="removeCriteriaGroup(i); $event.stopPropagation()"
+              matTooltip="Delete criteria group"
+              aria-label="Delete criteria group">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
         </mat-expansion-panel-header>
 
         <!-- Group content -->
@@ -117,16 +131,6 @@
             <mat-slide-toggle formControlName="search">Search</mat-slide-toggle>
             <mat-slide-toggle formControlName="table">Table</mat-slide-toggle>
             <mat-slide-toggle formControlName="detail">Detail</mat-slide-toggle>
-          </div>
-
-          <!-- Group actions -->
-          <div class="group-actions">
-            <button mat-icon-button (click)="cloneCriteriaGroup(i)" matTooltip="Clone group">
-              <mat-icon>content_copy</mat-icon>
-            </button>
-            <button mat-icon-button color="warn" (click)="removeCriteriaGroup(i)" matTooltip="Delete group">
-              <mat-icon>delete</mat-icon>
-            </button>
           </div>
 
           <!-- Link existing criteria -->
@@ -175,8 +179,25 @@
                   </div>
                 </div>
                 <div class="entry-header__actions">
-                  <button mat-stroked-button color="primary" (click)="toggleEntryExpansion(i, j)">
-                    {{ isEntryExpanded(i, j) ? 'Collapse' : 'Edit' }}
+                  <button
+                    mat-icon-button
+                    color="primary"
+                    (click)="toggleEntryExpansion(i, j)"
+                    [matTooltip]="isEntryExpanded(i, j) ? 'Collapse criteria entry' : 'Edit criteria entry'">
+                    <mat-icon>{{ isEntryExpanded(i, j) ? 'expand_less' : 'edit' }}</mat-icon>
+                  </button>
+                  <button
+                    mat-icon-button
+                    (click)="cloneCriteriaEntry(i, j)"
+                    matTooltip="Clone criteria entry">
+                    <mat-icon>content_copy</mat-icon>
+                  </button>
+                  <button
+                    mat-icon-button
+                    color="warn"
+                    (click)="removeCriteriaEntry(i, j)"
+                    matTooltip="Delete criteria entry">
+                    <mat-icon>delete</mat-icon>
                   </button>
                 </div>
               </mat-card-header>
@@ -232,16 +253,73 @@
                   <mat-slide-toggle formControlName="rangeSearch">Range Search</mat-slide-toggle>
                 </div>
 
-              </mat-card-content>
+                <ng-container *ngIf="entry.get('type')?.value === 'LABEL'">
+                  <ng-container *ngIf="getLabelValuesForEntry(i, j) as labelValues">
+                    <div *ngIf="labelValues.length" class="label-values">
+                      <h4>Label Options</h4>
+                      <div class="label-values__list">
+                        <span
+                          class="label-values__item"
+                          *ngFor="let value of labelValues">
+                          <strong>{{ value.key }}</strong>
+                          <span *ngIf="value.display" class="label-values__display">
+                            {{ value.display }}
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </ng-container>
+                  
+                  <div
+                    class="label-values-form"
+                    formArrayName="labelValues"
+                    *ngIf="isEntryExpanded(i, j)">
+                    <div class="label-values-form__header">
+                      <h4>Label Values</h4>
+                      <button
+                        mat-stroked-button
+                        color="primary"
+                        (click)="addLabelValue(i, j)">
+                        <mat-icon>add</mat-icon>
+                        Add Value
+                      </button>
+                    </div>
+                    <div
+                      class="label-values-form__empty"
+                      *ngIf="(getLabelValuesFormArray(i, j)?.length || 0) === 0">
+                      <p>No label values defined</p>
+                    </div>
+                    <div
+                      class="label-values-form__row"
+                      *ngFor="
+                        let valueCtrl of getLabelValuesFormArray(i, j)?.controls;
+                        let k = index
+                      "
+                      [formGroupName]="k">
+                      <mat-form-field appearance="outline">
+                        <mat-label>Key</mat-label>
+                        <input matInput formControlName="valueKey" placeholder="Value key">
+                      </mat-form-field>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Display Text</mat-label>
+                        <input matInput formControlName="display" placeholder="Label display">
+                      </mat-form-field>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Color</mat-label>
+                        <input matInput formControlName="color" placeholder="#rrggbb">
+                      </mat-form-field>
+                      <mat-form-field appearance="outline">
+                        <mat-label>Background</mat-label>
+                        <input matInput formControlName="backgroundColor" placeholder="#rrggbb">
+                      </mat-form-field>
+                      <button mat-icon-button color="warn" (click)="removeLabelValue(i, j, k)" matTooltip="Remove value">
+                        <mat-icon>delete</mat-icon>
+                      </button>
+                    </div>
+                  </div>
+                </ng-container>
 
-              <mat-card-actions *ngIf="isEntryExpanded(i, j)">
-                <button mat-icon-button (click)="cloneCriteriaEntry(i, j)" matTooltip="Clone entry">
-                  <mat-icon>content_copy</mat-icon>
-                </button>
-                <button mat-icon-button color="warn" (click)="removeCriteriaEntry(i, j)" matTooltip="Delete entry">
-                  <mat-icon>delete</mat-icon>
-                </button>
-              </mat-card-actions>
+              </mat-card-content>
 
             </mat-card>
 
@@ -311,6 +389,13 @@
       </mat-expansion-panel>
 
     </mat-accordion>
+
+    <div class="add-group-footer">
+      <button mat-raised-button color="primary" (click)="addCriteriaGroup()" matTooltip="Add new criteria group">
+        <mat-icon>add</mat-icon>
+        Add Group
+      </button>
+    </div>
 
   </div>
 

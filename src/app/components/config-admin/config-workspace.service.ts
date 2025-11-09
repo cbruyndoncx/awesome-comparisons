@@ -374,35 +374,50 @@ export class ConfigWorkspaceService {
           ? groupForm.entries
           : [];
 
-        const children: CriteriaEntryModel[] = entriesArray.map(
-          (entryForm: any, childIndex: number) => {
-            const existingEntry =
-              fallbackExisting?.children?.find(child => child.id === entryForm.id) ??
-              fallbackExisting?.children?.[childIndex] ??
-              null;
+            const children: CriteriaEntryModel[] = entriesArray.map(
+              (entryForm: any, childIndex: number) => {
+                const existingEntry =
+                  fallbackExisting?.children?.find(child => child.id === entryForm.id) ??
+                  fallbackExisting?.children?.[childIndex] ??
+                  null;
 
-            const placeholderValue = this.parseStructuredField(entryForm.placeholder);
-            const descriptionValue = this.parseStructuredField(entryForm.description);
+                const placeholderValue = this.parseStructuredField(entryForm.placeholder);
+                const descriptionValue = this.parseStructuredField(entryForm.description);
+                const preservedExtra = existingEntry?.extraProperties
+                  ? { ...existingEntry.extraProperties }
+                  : undefined;
+                const labelValuesForm = Array.isArray(entryForm.labelValues)
+                  ? entryForm.labelValues
+                  : [];
+                const labelValues = this.buildLabelValuesMap(labelValuesForm);
+                const extraProperties = { ...(preservedExtra || {}) };
+                if (labelValues) {
+                  extraProperties.values = labelValues;
+                } else if (labelValuesForm.length === 0 && 'values' in extraProperties) {
+                  delete extraProperties.values;
+                }
+                const hasExtra = Object.keys(extraProperties).length > 0;
 
-            return {
-              id: entryForm.id || existingEntry?.id || this.generateId(),
-              name: entryForm.name || existingEntry?.name || '',
-              type: entryForm.type || existingEntry?.type || '',
-              search: !!entryForm.search,
-              table: !!entryForm.table,
-              detail: !!entryForm.detail,
-              andSearch: !!entryForm.andSearch,
-              rangeSearch: !!entryForm.rangeSearch,
-              order:
-                typeof entryForm.order === 'number'
-                  ? entryForm.order
-                  : childIndex,
-              placeholder: placeholderValue,
-              description: descriptionValue,
-              parentId: groupId
-            };
-          }
-        );
+                return {
+                  id: entryForm.id || existingEntry?.id || this.generateId(),
+                  name: entryForm.name || existingEntry?.name || '',
+                  type: entryForm.type || existingEntry?.type || '',
+                  search: !!entryForm.search,
+                  table: !!entryForm.table,
+                  detail: !!entryForm.detail,
+                  andSearch: !!entryForm.andSearch,
+                  rangeSearch: !!entryForm.rangeSearch,
+                  order:
+                    typeof entryForm.order === 'number'
+                      ? entryForm.order
+                      : childIndex,
+                  placeholder: placeholderValue,
+                  description: descriptionValue,
+                  parentId: groupId,
+                  ...(hasExtra && { extraProperties })
+                };
+              }
+            );
 
         return {
           id: groupId,
@@ -1107,7 +1122,8 @@ export class ConfigWorkspaceService {
       });
       
       // Normalize line endings
-      return yamlString.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+      const normalized = this.stripEmptyLabelValueObjects(yamlString).replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+      return normalized;
     } catch (error) {
       console.error('Failed to generate preview YAML:', error);
       return `# Error generating YAML preview: ${error.message}`;
@@ -1128,6 +1144,40 @@ export class ConfigWorkspaceService {
     }
     
     return errors;
+  }
+
+  private stripEmptyLabelValueObjects(yaml: string): string {
+    const lines = yaml.split('\n');
+    let activeValuesIndent: number | null = null;
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      const trimmed = line.trim();
+
+      if (trimmed.length === 0) {
+        continue;
+      }
+
+      const indent = line.search(/\S|$/);
+
+      if (trimmed === 'values:') {
+        activeValuesIndent = indent;
+        continue;
+      }
+
+      if (activeValuesIndent !== null && indent <= activeValuesIndent && !line.startsWith(' '.repeat(activeValuesIndent) + 'values:')) {
+        activeValuesIndent = null;
+      }
+
+      if (
+        activeValuesIndent !== null &&
+        /:\s*(null|\{\s*\})\s*$/.test(trimmed)
+      ) {
+        lines[i] = line.replace(/:\s*(null|\{\s*\})(\s*)$/, ':$2');
+      }
+    }
+
+    return lines.join('\n');
   }
 
   // Persistence
@@ -1674,6 +1724,31 @@ export class ConfigWorkspaceService {
       return parseStructuredText(value);
     }
     return value;
+  }
+
+  private buildLabelValuesMap(valuesForm: any[]): Record<string, any> | null {
+    if (!Array.isArray(valuesForm)) {
+      return null;
+    }
+    const map: Record<string, any> = {};
+    valuesForm.forEach(value => {
+      const key = value?.valueKey?.toString().trim();
+      if (!key) {
+        return;
+      }
+      const entry: Record<string, any> = {};
+      if (value.display) {
+        entry.display = value.display;
+      }
+      if (value.color) {
+        entry.color = value.color;
+      }
+      if (value.backgroundColor) {
+        entry.backgroundColor = value.backgroundColor;
+      }
+      map[key] = Object.keys(entry).length > 0 ? entry : null;
+    });
+    return Object.keys(map).length > 0 ? map : null;
   }
 
   private logMissingReferenceSummary(

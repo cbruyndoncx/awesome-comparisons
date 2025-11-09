@@ -7,7 +7,7 @@
     "md2json:run:default": "npm run md2json:compile && node ./lib/md2json/dist/cli.js --input ./data --tmp ./tmp/md2json --output ./dist/data.json",
     "data:prepare": "npm run md2json:compile && node ./node_modules/gulp/bin/gulp.js default --gulpfile=./lib/gulp/gulpfile.js",
     "data:watch": "npm run md2json:compile && node ./node_modules/gulp/bin/gulp.js dev --gulpfile=./lib/gulp/gulpfile.js",
-    "start": "npm run data:prepare && ng serve --proxy-config proxy.config.json",
+    "start": "npm run data:prepare && concurrently \"npm run config:serve\" \"ng serve --proxy-config proxy.config.json\"",
     "config:serve": "node ./node_modules/gulp/bin/gulp.js config-workspace:serve --gulpfile=./lib/gulp/gulpfile.js",
     "dev": "concurrently \"npm run data:watch\" \"npm run config:serve\" \"ng serve --proxy-config proxy.config.json\"",
     "prebuild": "rm -f tmp/*/comparison-auto-config.yml",

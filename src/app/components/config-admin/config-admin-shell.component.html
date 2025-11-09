@@ -136,7 +136,7 @@
       [allowedTypes]="allowedTypes"
       [isReadonly]="false"
       (documentChange)="onDocumentChange($event)"
-      (dirtyChange)="configWorkspace.markDocumentDirty()"
+      (dirtyChange)="onDirtyChange($event)"
       (requestCloneGroup)="onCloneGroup($event)"
       (requestCloneCriteria)="onCloneCriteria($event)"
       (requestDeleteGroup)="onDeleteGroup($event)"

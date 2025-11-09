@@ -99,7 +99,9 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
   @ViewChild('emojiMenuTrigger') emojiMenuTrigger!: MatMenuTrigger;
 
   private subscriptions: Subscription[] = [];
-  private formChangeSubject = new Subject<void>();
+  private formChangeSubject = new Subject<number>();
+  private formChangeSequence = 0;
+  private suppressFormChangeNotifications = false;
   private expandedEntries = new Set<string>();
   linkSelections: Record<number, string | null> = {};
   linkableEntryOptions: LinkableEntryOption[][] = [];
@@ -146,12 +148,21 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
       this.syncGroupTypeOptions();
     }
     if (changes['document'] && this.documentForm) {
+      const prev = changes['document'].previousValue as ConfigDocumentModel | null | undefined;
+      const curr = changes['document'].currentValue as ConfigDocumentModel | null | undefined;
+      const encodedPathChanged =
+        prev?.encodedPath !== curr?.encodedPath;
+
       if (this.document) {
-        this.initializeForm(this.document);
+        if (changes['document'].isFirstChange() || encodedPathChanged) {
+          this.initializeForm(this.document);
+        } else if (!this.document.isDirty && this.isDirty) {
+          this.resetDirtyState();
+        }
       } else {
         this.documentForm.reset();
         this.criteriaGroupsArray.clear();
-        Object.keys(this.valueDisplayOverridesForm.controls).forEach(key =>
+        Object.keys(this.valueDisplayOverridesForm.controls).forEach((key) =>
           this.valueDisplayOverridesForm.removeControl(key)
         );
         this.linkableEntryOptions = [];
@@ -160,6 +171,7 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
   }
 
   initializeForm(document: ConfigDocumentModel): void {
+    this.suppressFormChangeNotifications = true;
     this.criteriaGroupsArray.clear();
     Object.keys(this.valueDisplayOverridesForm.controls).forEach((key) => {
       this.valueDisplayOverridesForm.removeControl(key);
@@ -173,6 +185,7 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
     this.rebuildLinkableEntryOptions();
     this.isDirty = false;
     this.dirtyChange.emit(this.isDirty);
+    this.suppressFormChangeNotifications = false;
   }
 
   rebuildCriteriaGroupsArray(groups: CriteriaGroupModel[]): void {
@@ -428,6 +441,35 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
     });
   }
 
+  addLabelValue(groupIndex: number, entryIndex: number): void {
+    const fa = this.getLabelValuesFormArray(groupIndex, entryIndex);
+    if (!fa) {
+      return;
+    }
+    fa.push(
+      this.fb.group({
+        valueKey: ['', Validators.required],
+        display: [''],
+        color: [''],
+        backgroundColor: ['']
+      })
+    );
+    this.onFormValueChange();
+  }
+
+  removeLabelValue(
+    groupIndex: number,
+    entryIndex: number,
+    valueIndex: number
+  ): void {
+    const fa = this.getLabelValuesFormArray(groupIndex, entryIndex);
+    if (!fa) {
+      return;
+    }
+    fa.removeAt(valueIndex);
+    this.onFormValueChange();
+  }
+
   updateValueDisplayOverride(
     criteriaId: string,
     valueKey: string,
@@ -550,11 +592,14 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
 
   // Event handling and state management
   onFormValueChange(): void {
+    if (this.suppressFormChangeNotifications) {
+      return;
+    }
     if (!this.isDirty) {
       this.isDirty = true;
       this.dirtyChange.emit(this.isDirty);
     }
-    this.formChangeSubject.next();
+    this.formChangeSubject.next(++this.formChangeSequence);
   }
 
   @HostListener('document:keydown', ['$event'])
@@ -585,8 +630,14 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
   }
 
   resetDirtyState(): void {
-    this.isDirty = false;
-    this.dirtyChange.emit(this.isDirty);
+    if (this.isDirty) {
+      this.isDirty = false;
+      this.dirtyChange.emit(this.isDirty);
+    }
+    if (this.documentForm) {
+      this.documentForm.markAsPristine();
+      this.documentForm.markAsUntouched();
+    }
   }
 
   // Utility methods
@@ -600,6 +651,59 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
       total += (g.get('entries') as FormArray).length;
     });
     return total;
+  }
+
+  flushPendingChanges(): void {
+    if (this.suppressFormChangeNotifications) {
+      return;
+    }
+    this.documentChange.emit(this.documentForm.value);
+  }
+
+  getLabelValuesForEntry(
+    groupIndex: number,
+    entryIndex: number
+  ): Array<{
+    key: string;
+    display?: string;
+    color?: string;
+    backgroundColor?: string;
+  }> {
+    const formArray = this.getLabelValuesFormArray(groupIndex, entryIndex);
+    if (!formArray) {
+      return [];
+    }
+
+    return formArray.controls.reduce<
+      Array<{
+        key: string;
+        display?: string;
+        color?: string;
+        backgroundColor?: string;
+      }>
+    >((acc, control) => {
+      const value = control.value || {};
+      const key = value?.valueKey;
+      if (!key) {
+        return acc;
+      }
+      acc.push({
+        key: key.toString(),
+        display: value.display,
+        color: value.color,
+        backgroundColor: value.backgroundColor
+      });
+      return acc;
+    }, []);
+  }
+
+  getLabelValuesFormArray(groupIndex: number, entryIndex: number): FormArray | null {
+    const entries = this.getCriteriaEntriesArray(groupIndex);
+    const entryGroup = entries.at(entryIndex) as FormGroup | null;
+    if (!entryGroup) {
+      return null;
+    }
+    return entryGroup.get('labelValues') as FormArray | null;
   }
 
   getGroupDisplayName(groupIndex: number): string {
@@ -685,7 +789,28 @@ export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges
       rangeSearch: [!!e.rangeSearch],
       order: [e.order, [Validators.required, Validators.min(0)]],
       placeholder: [serializeStructuredText(e.placeholder)],
-      description: [serializeStructuredText(e.description)]
+      description: [serializeStructuredText(e.description)],
+      labelValues: this.fb.array(this.buildLabelValueControls(e))
+    });
+  }
+
+  private buildLabelValueControls(entry: CriteriaEntryModel): FormGroup[] {
+    const values = entry.extraProperties?.values;
+    if (!values || typeof values !== 'object') {
+      return [];
+    }
+
+    return Object.entries(values).map(([key, rawValue]) => {
+      const parsed =
+        typeof rawValue === 'object' && rawValue !== null
+          ? (rawValue as Record<string, any>)
+          : ({} as Record<string, any>);
+      return this.fb.group({
+        valueKey: [key, Validators.required],
+        display: [parsed.display || parsed.displayText || (typeof rawValue === 'string' ? rawValue : '')],
+        color: [parsed.color || ''],
+        backgroundColor: [parsed.backgroundColor || '']
+      });
     });
   }
 
