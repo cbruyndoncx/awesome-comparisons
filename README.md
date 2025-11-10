@@ -1,21 +1,18 @@
-# Ultimate Comparisons — v3 (multi-dataset)
+# Awesome Comparisons
 
 ![Checks](https://github.com/ultimate-comparisons/ultimate-comparison-framework/workflows/Checks/badge.svg)
 
-> This repository is a v3 fork of the Ultimate Comparison Framework. v3 adds multi-dataset support, dataset-aware tooling, and updated build/publish workflows.
+> **Awesome Comparisons** (formerly Ultimate Comparison Framework v2) is a powerful framework for creating feature-rich comparison websites. This version introduces breaking changes including multi-dataset support, an admin configuration interface, and shared criteria/groupings. The rename to "Awesome Comparisons" helps avoid confusion with the previous v2 npm package.
 
+Built with [Angular](https://angular.io/), Awesome Comparisons provides a complete solution for building, managing, and publishing comparison sites with advanced features like dataset switching, visual configuration editing, and blueprint-based inheritance.
 
+> Scientifically interested? Read the original paper: [The Ultimate Comparison Framework](http://ceur-ws.org/Vol-2575/paper9.pdf).
 
-> This is the ultimate comparison framework written in [Angular](https://angular.io/).
-> This repository is a v3 fork; the original package is published as [ultimate-comparison](https://www.npmjs.com/package/ultimate-comparison).
->
-> Scientifically interested? - Read on at our paper [The Ultimate Comparison Framework](http://ceur-ws.org/Vol-2575/paper9.pdf).
->
-## Create your own ultimate comparison (v3)
+## Quick Start
 
-v3 provides a repository helper CLI called `awcmp-cli` (replacing the older `uc` helper). Use `awcmp-cli` to scaffold datasets non-interactively or use the repository npm scripts (data:prepare, dev, build) directly. Note: the v2 `uc` command is deprecated — use `awcmp-cli` or the npm scripts instead.
+### Creating a Comparison
 
-Quick steps to create and run a comparison:
+Use npm scripts to create and manage datasets. The previous v2 `uc` command has been replaced with dataset-aware npm scripts.
 
 1. Create a dataset directory (for example `datasets/my-comparison`) and add the required files (description.md, comparison.yml, and your entry markdown files).
 
@@ -41,22 +38,59 @@ npm run dev -- --dataset my-comparison
 npm run build -- --dataset my-comparison
 ```
 
-See `docs/uc-v3/` for examples, configuration details and migration guidance from v2.
+See `docs/uc-v3/` for detailed documentation, examples, and migration guidance from v2.
 
-### Configuration
+## Key Features
 
-The configuration files are located in the `configuration` directory.
+### Multiple Datasets
+- Host multiple comparison datasets in a single repository
+- Dataset selector UI for easy navigation
+- Per-dataset configuration, styling, and build outputs
+- Unified or separate publishing options
 
-`description.md`: It contains the description of your comparison which can be seen by visitors.
-It is located underneath the headline of your comparison.
-![Description location on page](https://cdn.rawgit.com/ultimate-comparisons/ultimate-comparison-BASE/85cc1e93/docs/images/descritpion.png)
+### Admin Configuration Interface
+- Visual configuration editor at `/admin` route
+- Edit criteria, groups, and value displays without touching YAML
+- Live diff preview with syntax highlighting
+- Catalog tree for navigating all dataset configs
+- Real-time validation and error reporting
 
-`comparison-example.yml`: Example configuration file containing comments on fields to explain their meaning.
+### Shared Configuration
+- Define criteria once, reuse across datasets
+- Blueprint-based grouping inheritance
+- Dataset-specific overrides
+- Modular configuration fragments in `configuration/defaults/`
 
-`comparison-default.yml`: Default configuration, intended as backup of your local comparison.
+### Developer Experience
+- TypeScript-based md2json converter (no Java required)
+- Dataset-aware build system
+- GitHub Pages publishing with `docs/` output
+- Comprehensive documentation and troubleshooting guides
 
-`comparison.yml`: The used configuration. Missing values are taken from `comparison-default.yml` and written back into this file.
-A `comparison.yml` has following attributes:
+## Configuration
+
+### Global Configuration
+
+The `configuration/` directory contains global settings and shared configuration fragments:
+
+- **`datasets.manifest.json`**: Dataset registry listing all available datasets with metadata, paths, and inheritance configuration
+- **`comparison-default.yml`**: Global default configuration values
+- **`defaults/`**: Shared configuration fragments (criteria definitions, groupings, value displays)
+  - `general-licensing.yml`: License and pricing criteria
+  - `groups-advanced.yml`: Advanced grouping blueprints
+  - `value-displays.yml`: Common value display configurations
+
+### Dataset Configuration
+
+Each dataset in `datasets/{id}/` has its own configuration:
+
+- **`config/comparison.yml`**: Dataset-specific configuration that overrides shared defaults
+- **`data/`**: Markdown entry files for comparison items
+- **`description.md`**: Dataset description shown below the title
+
+### Comparison Configuration Attributes
+
+A `comparison.yml` file has the following attributes:
 
 - `title`: The title of the comparison. It is the headline of the page.
   ![Title location on page](https://cdn.rawgit.com/ultimate-comparisons/ultimate-comparison-BASE/85cc1e93/docs/images/title.png)
@@ -99,23 +133,54 @@ A `comparison.yml` has following attributes:
 
 The framework reserves the first table column for the `Name`/`id` field and always places `ShortDescription` as the second column. Remaining table columns follow their configured `order` values.
 
-Datasets declared in `configuration/datasets.manifest.json` can now reuse shared configuration fragments by specifying `sources.configDefaults`. Provide one or more YAML paths (e.g. `["configuration/comparison-default.yml", "configuration/defaults/groups.yml", "configuration/defaults/groups-advanced.yml", "configuration/defaults/value-displays.yml"]`) to pull in centrally maintained criteria groups or other defaults ahead of each dataset's local `comparison.yml`.
+### Configuration Inheritance
 
-### Define comparison elements
+Datasets can reuse shared configuration by specifying `sources.configDefaults` in `configuration/datasets.manifest.json`:
 
-For each thing, create a markdown file in `data`.
-You can base it on `template.md`.
-If one column depends on a repository (repo-attribute in `comparison.yml` true), you have to define a `## Repo` section and add the repository as first list item, eg:
+```json
+"sources": {
+  "configDefaults": [
+    "configuration/comparison-default.yml",
+    "configuration/defaults/general-licensing.yml",
+    "configuration/defaults/groups-advanced.yml",
+    "configuration/defaults/value-displays.yml"
+  ]
+}
+```
+
+This inheritance system allows you to:
+- Define criteria once, reuse across datasets
+- Share grouping blueprints
+- Override shared settings per dataset
+- Maintain consistency while allowing customization
+
+See [docs/uc-v3/Shared_Configuration.md](docs/uc-v3/Shared_Configuration.md) for details.
+
+## Creating Comparison Entries
+
+For each item to compare, create a markdown file in the dataset's `data/` directory (e.g., `datasets/my-comparison/data/`).
+
+If a criterion has type `repository`, include a `## Repo` section with the repository URL as the first list item:
 
 ```markdown
 ## Repo
 - https://github.com/ultimate-comparisons/ultimate-comparison-BASE
 ```
 
-## Update your comparison
+## Documentation
 
-To update the ultimate comparison framework that your comparison uses, just run `npm update` in the directory that contains your comparison.
-It installs the latest version with the same major version number (ie. `2.x.x`).
+Comprehensive documentation is available in the `docs/uc-v3/` directory:
+
+- **[Overview](docs/uc-v3/Overview.md)** - System architecture, key features, and concepts
+- **[Update YOUR Comparison](docs/uc-v3/Update_YOUR_Comparison.md)** - Creating and updating datasets
+- **[Admin Config Interface](docs/uc-v3/Admin_Config_Interface.md)** - Using the visual configuration editor
+- **[Shared Configuration](docs/uc-v3/Shared_Configuration.md)** - Working with shared criteria and groupings
+- **[Migration from v2](docs/uc-v3/Migration_From_v2.md)** - Upgrading from Ultimate Comparison v2
+- **[CI & Deploy](docs/uc-v3/CI_and_Deploy.md)** - Publishing to GitHub Pages
+- **[FAQ](docs/uc-v3/FAQ.md)** - Frequently asked questions
+- **[Troubleshooting](docs/uc-v3/Troubleshooting.md)** - Common problems and solutions
+
+Legacy v2 documentation is archived in `docs/uc-v2/`.
 
 ## Release process
 
@@ -126,21 +191,38 @@ Refer to [docs/release-workflow.md](docs/release-workflow.md) for the full check
 - Tag the release using the generated label and publish it through GitHub releases (`gh release create <label>` is recommended).
 - Debug builds (`npm run dev`, `npm run build`) never modify the stamped footer, so you can iterate locally without touching release metadata.
 
-## Development hints
+## Development
 
-When developing on the framework itself, these might be helpful hints:
+### Requirements
 
-### Linux
+- Node.js 12+ (14+ recommended)
+- npm 6+
 
-Use node 12.
+### Development Server
 
-### Windows
+```bash
+npm install
+npm run dev -- --dataset <dataset-id>
+```
 
-Development on Windows currently does not work.
+The development server will start at `http://localhost:4200`. Navigate to `/admin` to access the configuration interface.
 
-- `npm install --global --production windows-build-tools`
-  - Alternative: - `choco install python2 vcredist2013` (currently does not fully work)
-- `node_modules/.bin/gulp default --gulpfile=/c/Users/login/git-repositories/uc/ultimate-comparison-BASE/lib/gulp/gulpfile.js --dir=node_modules/ultimate-comparison`
+### Admin Interface
+
+The admin configuration interface is available at `/admin` when running the dev server:
+
+```bash
+npm run dev
+# Then open http://localhost:4200/admin
+```
+
+Features:
+- Visual YAML editor for criteria and groupings
+- Live diff preview
+- Catalog tree navigation
+- Real-time validation
+
+See [docs/uc-v3/Admin_Config_Interface.md](docs/uc-v3/Admin_Config_Interface.md) for usage details.
 
 ## License
 
