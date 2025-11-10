@@ -897,7 +897,9 @@ function routeReducer(state: IUCAppState = new UcAppState(), action: UCRouterAct
         const values = state.criterias.values();
         let crit = values.next().value;
         while (!isNullOrUndefined(crit)) {
-            state.currentColumns.push(crit.id);
+            if (crit.table === true) {
+                state.currentColumns.push(crit.id);
+            }
             crit = values.next().value;
         }
     }

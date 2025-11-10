@@ -71,7 +71,7 @@ criteria:
       search: true
       table: true
       detail: true
-      description: &ref_0
+      description: &ref_3
         template: 'AI Native Dev ainativedev.io {}'
         variables:
           - name
@@ -95,14 +95,11 @@ criteria:
       search: true
       table: true
       detail: true
-      description: &ref_0
+      description:
         template: 'Any or limited list of supported programming {}'
         variables:
           - name
-      placeholder: &ref_1
-        template: 'Select {} ...'
-        variables:
-          - name
+      placeholder: *ref_1
       order: '15'
       andSearch: true
       rangeSearch: false
@@ -224,10 +221,7 @@ criteria:
         template: 'Default description for {}'
         variables:
           - name
-      placeholder: &ref_1
-        template: 'Select {} ...'
-        variables:
-          - name
+      placeholder: *ref_1
       order: '21'
       andSearch: false
       rangeSearch: false

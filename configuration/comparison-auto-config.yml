@@ -870,18 +870,7 @@ criteria:
         Core source available on GitHub: {}
         'Yes': {}
         'No': {}
-  - Last Update:
-      name: Last Update
-      type: MARKDOWN
-      search: false
-      table: true
-      detail: true
-      description: ''
-      placeholder: ''
-      order: ''
-      andSearch: false
-      rangeSearch: false
-  - Useful links:
+  - Usefullinks:
       name: Useful links
       type: LABEL
       search: true
@@ -905,74 +894,26 @@ criteria:
           displayHtml: <span class="status status-no">✖</span>
         'Official site: https://cursor.com': {}
         'Announcement coverage: select product release posts and reviews (search for "Cursor 2.0 Composer multi-agent").': {}
-  - General Info:
-      name: General Info
-      type: LABEL
-      search: true
-      table: true
-      detail: true
-      description: *ref_0
-      placeholder: *ref_1
-      order: ''
-      andSearch: false
-      rangeSearch: false
-      values:
-        'Yes':
-          display: ✅
-        'No':
-          displayHtml: <span class="status status-no">✖</span>
-        Verdent aims to reduce manual overhead by letting agents handle repetitive engineering work while humans focus on strategy and validation.: {}
-  - Repo:
-      name: Repo
-      type: LABEL
-      search: true
-      table: true
-      detail: true
-      description: *ref_0
-      placeholder: *ref_1
-      order: ''
-      andSearch: false
-      rangeSearch: false
-      values:
-        'Yes':
-          display: ✅
-        'No':
-          displayHtml: <span class="status status-no">✖</span>
-        Proprietary product — no public GitHub repo discovered: {}
-  - Short Description:
-      name: Short Description
-      type: MARKDOWN
-      search: false
-      table: true
-      detail: true
-      description: ''
-      placeholder: ''
-      order: ''
-      andSearch: false
-      rangeSearch: false
-  - Developer Experience:
-      name: Developer Experience
-      type: MARKDOWN
-      search: false
-      table: true
-      detail: true
-      description: ''
-      placeholder: ''
-      order: ''
-      andSearch: false
-      rangeSearch: false
-  - Ungrouped Criteria:
+  - UngroupedCriteria:
       name: Ungrouped Criteria
       type: MARKDOWN
       search: false
-      table: true
-      detail: true
+      table: false
+      detail: false
       description: ''
       placeholder: ''
       order: ''
       andSearch: false
       rangeSearch: false
-  - Sources / Further Reading:
+      children:
+        - Terminal
+        - Notes
+        - Last Update
+        - SpecDrivenDevelopment
+        - General Info
+        - RepositoryActive
+        - Rating-Criteria
+  - SourcesFurtherReading:
       name: Sources / Further Reading
       type: LABEL
       search: true
@@ -990,7 +931,7 @@ criteria:
           displayHtml: <span class="status status-no">✖</span>
         'Vendor and press coverage (product announcements and interviews, 2025)': {}
         Early user reports and blog posts discussing Verdent's plan-first approach and Deck application: {}
-  - Key Features:
+  - KeyFeatures:
       name: Key Features
       type: LABEL
       search: true
@@ -1048,15 +989,6 @@ criteria:
           displayHtml: <span class="status status-no">✖</span>
         Verdent product announcements and coverage (2025): {}
         Reviews and demonstrations showing Verdent launching from within VS Code and the Verdent Deck demos: {}
-  - Classification:
-      type: LABEL
-      values:
-        AIE/Model: {}
-        Code/Autonomous agent: {}
-        Code/Editor: {}
-        Code/Spec Driven: {}
-        Code/Terminal: {}
-        Product/Prototyping: {}
   - Prompts:
       type: LABEL
       values:
@@ -1072,3 +1004,12 @@ criteria:
       values:
         'Yes': {}
         'No': {}
+  - Classification:
+      type: LABEL
+      values:
+        AIE/Model: {}
+        Code/Autonomous agent: {}
+        Code/Editor: {}
+        Code/Spec Driven: {}
+        Code/Terminal: {}
+        Product/Prototyping: {}

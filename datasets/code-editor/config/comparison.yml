@@ -3,143 +3,6 @@ subtitle: Comparison of AI Integrated Development Environments (IDE) a.o. listed
 #selectTitle: Filter Criteria
 #tableTitle: Comparison of AI Code Editors
 criteria:
-  - Version:
-      name: Version
-      type: MARKDOWN
-      search: false
-      table: false
-      detail: true
-      description: 'Latest version used for update'
-      placeholder: ''
-      order: '10'
-      andSearch: false
-      rangeSearch: false
-  # Rating references the second level header 'Rating'
-  # (With type=rating) e.g. '## Rating\n - [1] Comment 1\n - [3] Comment 2'
-  #   => Column value for Rating (average): 2 stars
-  #   => Details Rating section: '- 1 star Comment 1\n 3 stars Comment 2'
-  - Rating:
-      name: Rating
-      search: false
-      table: false
-      detail: false
-      description: 'Avg rating based on review comments'
-      placeholder: ''
-      referencedHeader: Development
-      type: RATING
-      order: '94'
-  # Repository references the second level header 'Repository'
-  # (With type=repository) e.g. 'https://github.com/ultimate-comparisons/ultimate-comparison-BASE'
-  # The npm start task will check the repository url (github repo url required) for the last commit and automatically
-  # adds values for the 'referencedHeader' (in this case 'Development')
-  - RepositoryActive:
-      search: false
-      table: false
-      detail: false
-      description: 'BUG System maintained field looking up repo activity - NOT WORKING'
-      placeholder: ''
-      type: REPOSITORY
-      order: '95'
-      values:
-        Active:
-          minAge: -1                                          # default: -1
-          maxAge: 1                                           # default: -1
-          minAgeUnit: months                                  # default: months
-          maxAgeUnit: months                                  # default: 'min-age-unit'
-          class: label-success
-        Inactive:
-          minAge: 6
-          class: label-danger
-        Not Sure:
-          minAge: 1
-          maxAge: 6
-          class: label-warning
-  - Repository:
-      name: Repo
-      type: MARKDOWN
-      search: false
-      table: false
-      detail: true
-      description: 'Associated Github repository'
-      placeholder: ''
-      order: '10'
-      andSearch: false
-      rangeSearch: false
-  - Classification:
-      name: Classification
-      type: LABEL
-      search: true
-      table: true
-      detail: true
-      description: &ref_0
-        template: 'AI Native Dev ainativedev.io {}'
-        variables:
-          - name
-      placeholder: &ref_1
-        template: 'Select {} ...'
-        variables:
-          - name
-      order: '15'
-      andSearch: true
-      rangeSearch: false
-      values:
-        'AIE/Model':
-        'Code/Autonomous agent':
-        'Code/Editor':
-        'Code/Spec Driven':
-        'Code/Terminal':
-        'Product/Prototyping':
-  - Languages:
-      name: Languages
-      type: LABEL
-      search: true
-      table: true
-      detail: true
-      description: &ref_0
-        template: 'Any or limited list of supported programming {}'
-        variables:
-          - name
-      placeholder: &ref_1
-        template: 'Select {} ...'
-        variables:
-          - name
-      order: '15'
-      andSearch: true
-      rangeSearch: false
-      values:
-        Any:
-        Java:
-        Bash:
-        XML:
-        Python:
-        Ruby:
-        Groovy:
-        JavaScript:
-        SQL:
-        Go:
-        Rust:
-        PHP:
-        TypeScript:
-        C#:
-        HTML/CSS:
-        Shell:
-        Swift:
-        Kotlin:
-        C/C++:
-        Scala:
-        GraphQL:
-
-  - Description:
-      name: Description
-      type: MARKDOWN
-      search: false
-      table: false
-      detail: true
-      description: 'Few paragraphs about the product'
-      placeholder: ''
-      order: '10'
-      andSearch: false
-      rangeSearch: false
   - BYOK:
       name: BYOK
       type: LABEL
@@ -147,7 +10,10 @@ criteria:
       table: true
       detail: true
       description: 'Bring Your Own LLM API Key supported'
-      placeholder: *ref_1
+      placeholder: &ref_1
+        template: 'Select {} ...'
+        variables:
+          - name
       order: '50'
       andSearch: false
       rangeSearch: false
@@ -224,10 +90,7 @@ criteria:
         template: 'Default description for {}'
         variables:
           - name
-      placeholder: &ref_1
-        template: 'Select {} ...'
-        variables:
-          - name
+      placeholder: *ref_1
       order: '21'
       andSearch: false
       rangeSearch: false

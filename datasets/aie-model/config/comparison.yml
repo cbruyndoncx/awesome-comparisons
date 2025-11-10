@@ -3,121 +3,25 @@ subtitle: Comparison of AIE Models and model tooling a.o. listed AINativeDev AIE
 selectTitle: Filter Criteria
 tableTitle: Comparison of AIE Models
 criteria:
-  - Version:
-      name: Version
-      type: MARKDOWN
-      search: false
-      table: false
-      detail: true
-      description: 'Latest version used for update'
-      placeholder: ''
-      order: '10'
-      andSearch: false
-      rangeSearch: false
-  # Rating references the second level header 'Rating'
-  # (With type=rating) e.g. '## Rating\n - [1] Comment 1\n - [3] Comment 2'
-  #   => Column value for Rating (average): 2 stars
-  #   => Details Rating section: '- 1 star Comment 1\n 3 stars Comment 2'
-  - Rating:
-      name: Rating
-      search: false
-      table: false
-      detail: false
-      description: 'Avg rating based on review comments'
-      placeholder: ''
-      referencedHeader: Development
-      type: RATING
-      order: '94'
-  - Classification:
-      name: Classification
-      type: LABEL
-      search: true
-      table: true
-      detail: true
-      description: &ref_0
-        template: 'AI Native Dev ainativedev.io {}'
-        variables:
-          - name
-      placeholder: &ref_1
-        template: 'Select {} ...'
-        variables:
-          - name
-      order: '15'
-      andSearch: true
-      rangeSearch: false
-      values:
-        'AIE/Model':
-        'Code/Autonomous agent':
-        'Code/Editor':
-        'Code/Spec Driven':
-        'Code/Terminal':
-        'Product/Prototyping':
-
-  - Description:
-      name: Description
-      type: MARKDOWN
-      search: false
-      table: false
-      detail: true
-      description: 'Few paragraphs about the product'
-      placeholder: ''
-      order: '10'
-      andSearch: false
-      rangeSearch: false
-
-  - Opensource:
-      name: Opensource
-      type: LABEL
-      search: true
-      table: true
-      detail: true
-      description: 'Coding tool is released under opensource license'
-      placeholder: *ref_1
-      order: '90'
-      andSearch: false
-      rangeSearch: false
-      values:
-        'Yes':
-        'No':
-  - License:
-      name: License
-      type: LABEL
-      search: true
-      table: true
-      detail: true
-      description: 'Opensource specific license or Proprietary for other commercial licenses'
-      placeholder: *ref_1
-      order: '91'
-      andSearch: false
-      rangeSearch: false
-      values:
-        MIT:
-        Apache-2.0:
-        Proprietary:
-        FSL:
-        BSD-3:
-        Other:
-        EPL-2.0:
-        GPL-3.0:
   - Notes:
       name: Notes
       type: MARKDOWN
       search: false
       table: false
       detail: true
-      description: ''
-      placeholder: ''
-      order: 'Y'
       andSearch: false
       rangeSearch: false
-  - LastUpdated:
+      order: 0
+      description: ""
+      placeholder: ""
+  - Last Update:
       name: Last Update
       type: MARKDOWN
       search: false
-      table: false
+      table: true
       detail: true
-      description: 'Note Date last updated'
-      placeholder: ''
-      order: 'Z'
       andSearch: false
       rangeSearch: false
+      order: 0
+      description: Note Date last updated
+      placeholder: ""

@@ -31,9 +31,9 @@ criteria:
   - Extensible:
       name: Extensible
       type: LABEL
-      search: true
-      table: true
-      detail: true
+      search: false
+      table: false
+      detail: false
       description: 'Is it possible to extend or customize the system in any way'
       order: '20'
       andSearch: false

@@ -3,143 +3,6 @@ subtitle: Comparison of Product builders suited for Prototyping a.o. listed AINa
 selectTitle: Filter Criteria
 tableTitle: Comparison of AI Code Editors
 criteria:
-  - Version:
-      name: Version
-      type: MARKDOWN
-      search: false
-      table: false
-      detail: true
-      description: 'Latest version used for update'
-      placeholder: ''
-      order: '10'
-      andSearch: false
-      rangeSearch: false
-  # Rating references the second level header 'Rating'
-  # (With type=rating) e.g. '## Rating\n - [1] Comment 1\n - [3] Comment 2'
-  #   => Column value for Rating (average): 2 stars
-  #   => Details Rating section: '- 1 star Comment 1\n 3 stars Comment 2'
-  - Rating:
-      name: Rating
-      search: false
-      table: false
-      detail: false
-      description: 'Avg rating based on review comments'
-      placeholder: ''
-      referencedHeader: Development
-      type: RATING
-      order: '94'
-  # Repository references the second level header 'Repository'
-  # (With type=repository) e.g. 'https://github.com/ultimate-comparisons/ultimate-comparison-BASE'
-  # The npm start task will check the repository url (github repo url required) for the last commit and automatically
-  # adds values for the 'referencedHeader' (in this case 'Development')
-  - RepositoryActive:
-      search: false
-      table: false
-      detail: false
-      description: 'BUG System maintained field looking up repo activity - NOT WORKING'
-      placeholder: ''
-      type: REPOSITORY
-      order: '95'
-      values:
-        Active:
-          minAge: -1                                          # default: -1
-          maxAge: 1                                           # default: -1
-          minAgeUnit: months                                  # default: months
-          maxAgeUnit: months                                  # default: 'min-age-unit'
-          class: label-success
-        Inactive:
-          minAge: 6
-          class: label-danger
-        Not Sure:
-          minAge: 1
-          maxAge: 6
-          class: label-warning
-  - Repository:
-      name: Repo
-      type: MARKDOWN
-      search: false
-      table: false
-      detail: true
-      description: 'Associated Github repository'
-      placeholder: ''
-      order: '10'
-      andSearch: false
-      rangeSearch: false
-  - Classification:
-      name: Classification
-      type: LABEL
-      search: true
-      table: true
-      detail: true
-      description: &ref_0
-        template: 'AI Native Dev ainativedev.io {}'
-        variables:
-          - name
-      placeholder: &ref_1
-        template: 'Select {} ...'
-        variables:
-          - name
-      order: '15'
-      andSearch: true
-      rangeSearch: false
-      values:
-        'AIE/Model':
-        'Code/Autonomous agent':
-        'Code/Editor':
-        'Code/Spec Driven':
-        'Code/Terminal':
-        'Product/Prototyping':
-  - Languages:
-      name: Languages
-      type: LABEL
-      search: true
-      table: true
-      detail: true
-      description: &ref_0
-        template: 'Any or limited list of supported programming {}'
-        variables:
-          - name
-      placeholder: &ref_1
-        template: 'Select {} ...'
-        variables:
-          - name
-      order: '15'
-      andSearch: true
-      rangeSearch: false
-      values:
-        Any:
-        Java:
-        Bash:
-        XML:
-        Python:
-        Ruby:
-        Groovy:
-        JavaScript:
-        SQL:
-        Go:
-        Rust:
-        PHP:
-        TypeScript:
-        C#:
-        HTML/CSS:
-        Shell:
-        Swift:
-        Kotlin:
-        C/C++:
-        Scala:
-        GraphQL:
-
-  - Description:
-      name: Description
-      type: MARKDOWN
-      search: false
-      table: false
-      detail: true
-      description: 'Few paragraphs about the product'
-      placeholder: ''
-      order: '10'
-      andSearch: false
-      rangeSearch: false
   - BYOK:
       name: BYOK
       type: LABEL
@@ -147,7 +10,7 @@ criteria:
       table: true
       detail: true
       description: 'Bring Your Own LLM API Key supported'
-      placeholder: *ref_1
+      placeholder: 
       order: '50'
       andSearch: false
       rangeSearch: false
@@ -161,7 +24,7 @@ criteria:
       table: true
       detail: true
       description: 'Support for local on-site deployment or local offline use'
-      placeholder: *ref_1
+      placeholder: 
       order: '60'
       andSearch: false
       rangeSearch: false
@@ -175,7 +38,7 @@ criteria:
       table: true
       detail: true
       description: 'Free access (like opensource), or free (potentially limited) trial available'
-      placeholder: *ref_1
+      placeholder: 
       order: '95'
       andSearch: false
       rangeSearch: false
@@ -189,7 +52,7 @@ criteria:
       table: true
       detail: true
       description: 'Coding tool is aware of GIT and can work/integrate with GIT repos'
-      placeholder: *ref_1
+      placeholder: 
       order: '20'
       andSearch: false
       rangeSearch: false
@@ -220,11 +83,11 @@ criteria:
       search: true
       table: true
       detail: true
-      description: &ref_0
+      description: 
         template: 'Default description for {}'
         variables:
           - name
-      placeholder: &ref_1
+      placeholder: 
         template: 'Select {} ...'
         variables:
           - name
@@ -240,8 +103,8 @@ criteria:
       search: true
       table: true
       detail: true
-      description: *ref_0
-      placeholder: *ref_1
+      description: 
+      placeholder: 
       order: '21'
       andSearch: false
       rangeSearch: false
@@ -254,8 +117,8 @@ criteria:
       search: true
       table: true
       detail: true
-      description: *ref_0
-      placeholder: *ref_1
+      description: 
+      placeholder: 
       order: '21'
       andSearch: false
       rangeSearch: false
@@ -269,47 +132,13 @@ criteria:
       table: true
       detail: true
       description: 'Coding tool can operate in a terminal/cli environment'
-      placeholder: *ref_1
+      placeholder: 
       order: '20'
       andSearch: false
       rangeSearch: false
       values:
         'Yes':
         'No':
-  - Opensource:
-      name: Opensource
-      type: LABEL
-      search: true
-      table: true
-      detail: true
-      description: 'Coding tool is released under opensource license'
-      placeholder: *ref_1
-      order: '90'
-      andSearch: false
-      rangeSearch: false
-      values:
-        'Yes':
-        'No':
-  - License:
-      name: License
-      type: LABEL
-      search: true
-      table: true
-      detail: true
-      description: 'Opensource specific license or Proprietary for other commercial licenses'
-      placeholder: *ref_1
-      order: '91'
-      andSearch: false
-      rangeSearch: false
-      values:
-        MIT:
-        Apache-2.0:
-        Proprietary:
-        FSL:
-        BSD-3:
-        Other:
-        EPL-2.0:
-        GPL-3.0:
   - Notes:
       name: Notes
       type: MARKDOWN
@@ -340,7 +169,7 @@ criteria:
       table: true
       detail: true
       description: 'Methods for managing and updating the context.'
-      placeholder: *ref_1
+      placeholder: 
       order: '60'
       andSearch: false
       rangeSearch: false
@@ -354,7 +183,7 @@ criteria:
       table: true
       detail: true
       description: 'Can with @file or similar provide context.'
-      placeholder: *ref_1
+      placeholder: 
       order: '60'
       andSearch: false
       rangeSearch: false
@@ -368,7 +197,7 @@ criteria:
       table: true
       detail: true
       description: 'Lifecycle events for the agent.'
-      placeholder: *ref_1
+      placeholder: 
       order: '60'
       andSearch: false
       rangeSearch: false
@@ -382,7 +211,7 @@ criteria:
       table: true
       detail: true
       description: 'Re-usable commands that can be manually triggered by the user.'
-      placeholder: *ref_1
+      placeholder: 
       order: '60'
       andSearch: false
       rangeSearch: false
@@ -396,7 +225,7 @@ criteria:
       table: true
       detail: true
       description: 'Define specialized AI subagents for task-specific workflows.'
-      placeholder: *ref_1
+      placeholder: 
       order: '60'
       andSearch: false
       rangeSearch: false
@@ -410,7 +239,7 @@ criteria:
       table: true
       detail: true
       description: 'Create specialist modes that enable you to tailor the chat experience for specific tasks.'
-      placeholder: *ref_1
+      placeholder: 
       order: '60'
       andSearch: false
       rangeSearch: false
@@ -424,7 +253,7 @@ criteria:
       table: true
       detail: true
       description: 'A method of bundling together commands, agents and hooks (claude).'
-      placeholder: *ref_1
+      placeholder: 
       order: '60'
       andSearch: false
       rangeSearch: false
@@ -438,7 +267,7 @@ criteria:
       table: true
       detail: true
       description: 'A way to undo using checkpoints or if autocommitted git history'
-      placeholder: *ref_1
+      placeholder: 
       order: '60'
       andSearch: false
       rangeSearch: false
@@ -452,7 +281,7 @@ criteria:
       table: true
       detail: true
       description: 'Has support for these Spec Driven Development methodologies:'
-      placeholder: *ref_1
+      placeholder: 
       order: '60'
       andSearch: false
       rangeSearch: false

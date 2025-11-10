@@ -95,14 +95,11 @@ criteria:
       search: true
       table: true
       detail: true
-      description: &ref_0
+      description: &ref_2
         template: 'Any or limited list of supported programming {}'
         variables:
           - name
-      placeholder: &ref_1
-        template: 'Select {} ...'
-        variables:
-          - name
+      placeholder: *ref_1
       order: '15'
       andSearch: true
       rangeSearch: false
@@ -220,14 +217,8 @@ criteria:
       search: true
       table: true
       detail: true
-      description: &ref_0
-        template: 'Default description for {}'
-        variables:
-          - name
-      placeholder: &ref_1
-        template: 'Select {} ...'
-        variables:
-          - name
+      description: *ref_0
+      placeholder: *ref_1
       order: '21'
       andSearch: false
       rangeSearch: false
