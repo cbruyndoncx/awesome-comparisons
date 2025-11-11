@@ -13,6 +13,7 @@ Comprehensive documentation for Awesome Comparisons (formerly Ultimate Compariso
 - **[Admin Config Interface](uc-v3/Admin_Config_Interface.md)** - Visual configuration editor at `/admin`
 - **[Shared Configuration](uc-v3/Shared_Configuration.md)** - Inheritance system for reusing criteria
 - **[CI & Deploy](uc-v3/CI_and_Deploy.md)** - Publishing to GitHub Pages
+- **[Dynamic Repository URLs](uc-v3/Dynamic_Repository_URLs.md)** - Configure repo URLs via environment variables
 
 ## Reference
 

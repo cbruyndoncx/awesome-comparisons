@@ -37,11 +37,12 @@ The main editing area where you modify configuration content.
 **Sections:**
 
 #### Criteria Groups
-Organize criteria into collapsible sections for better UX:
-- Add, edit, or delete groups
-- Drag to reorder (if implemented)
-- Set group label and collapse state
-- Assign criteria to groups via children tags
+Organize criteria into collapsible sections for better UX. Groups are regular criteria items with special properties:
+- Groups are defined in the `criteria` array with `type: MARKDOWN`
+- Groups must have `search: false`, `table: false`, `detail: false`
+- Groups have `children` array listing criterion tags to include
+- Groups have `defaultExpanded` (boolean) to control initial state
+- Groups have `order` to control positioning
 
 #### Criteria Definitions
 Define the fields that comparison entries will have:
@@ -129,14 +130,19 @@ Shows live preview of your changes in YAML format.
 
 ### Creating a Criterion Group
 
-1. Scroll to "Criteria Groups" section
-2. Click "Add Group" button
-3. Set:
-   - **Group ID**: Unique identifier
-   - **Label**: Display name for the group
-   - **Collapsed**: Default collapsed state
+1. Scroll to "Criteria Definitions" section
+2. Click "Add Criterion" button
+3. Set the criterion as a group:
+   - **Tag**: Unique identifier (e.g., "Licensing", "Features")
+   - **Name**: Display name for the group
+   - **Type**: `MARKDOWN`
+   - **Search**: `false`
+   - **Table**: `false`
+   - **Detail**: `false`
+   - **Order**: Position in list (e.g., "90")
+   - **Default Expanded**: `true` or `false` for initial state
    - **Children**: List of criterion tags to include
-4. Add criterion tags (comma-separated or one per line)
+4. Add criterion tags to children array
 5. Save changes
 
 ### Configuring Value Displays
@@ -221,7 +227,7 @@ The alert history panel (bottom of screen) shows:
 - "Document loaded successfully"
 - "Configuration saved"
 - "Validation error: duplicate tag detected"
-- "Blueprint child X not found in criteria definitions"
+- "Group child X not found in criteria definitions"
 
 Alerts persist across editing sessions for troubleshooting.
 
@@ -235,33 +241,42 @@ Real-time validation checks for:
 
 Validation errors appear as alerts and prevent saving until resolved.
 
-### Blueprint Resolution
+### Group Resolution
 
 When working with groupings:
 
-1. **Blueprint Definition** (in shared defaults):
+1. **Group Definition** (in criteria array):
 ```yaml
-criteriaGroups:
-  - groupId: "licensing"
-    label: "Licensing"
-    children:
-      - "Opensource"
-      - "License"
-      - "FreeTrial"
+criteria:
+  - Licensing:
+      name: Licensing
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      order: '90'
+      defaultExpanded: true
+      children:
+        - Opensource
+        - License
+        - FreeTrial
 ```
 
-2. **Criteria Definitions** (merged from shared + dataset):
+2. **Child Criteria Definitions** (in same criteria array):
 ```yaml
 criteria:
   - Opensource:
       name: Opensource
       type: LABEL
+      order: '91'
   - License:
       name: License
       type: LABEL
+      order: '92'
   - FreeTrial:
       name: FreeTrial
       type: LABEL
+      order: '93'
 ```
 
 3. **Resolution**: Admin interface resolves children tags against available criteria and warns if any are missing.

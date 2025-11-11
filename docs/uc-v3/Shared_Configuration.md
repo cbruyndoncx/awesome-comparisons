@@ -22,8 +22,8 @@ configuration/
 ├── comparison-default.yml          # Global defaults
 └── defaults/                       # Shared fragments
     ├── general-licensing.yml       # License-related criteria
-    ├── groups-advanced.yml         # Advanced grouping blueprints
-    ├── groups.yml                  # Basic grouping blueprints
+    ├── groups-advanced.yml         # Advanced grouping definitions
+    ├── groups.yml                  # Basic grouping definitions
     └── value-displays.yml          # Common value displays
 ```
 
@@ -84,44 +84,59 @@ criteria:
           class: "label-danger"
 ```
 
-#### 2. Grouping Blueprints
+#### 2. Grouping Definitions
 
-Define how criteria are organized into groups:
+Define how criteria are organized into groups. Groups are regular criteria items with special properties:
 
 **Example: `configuration/defaults/groups-advanced.yml`**
 
 ```yaml
-criteriaGroups:
-  - groupId: "general"
-    label: "General Info"
-    isCollapsed: false
-    children:
-      - "Classification"
-      - "Version"
-      - "Repository"
-      - "Rating"
-      - "ShortDescription"
-      - "Description"
-      - "Languages"
+criteria:
+  - General:
+      name: General Info
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      order: '10'
+      defaultExpanded: true
+      children:
+        - Classification
+        - Version
+        - Repository
+        - Rating
+        - ShortDescription
+        - Description
+        - Languages
 
-  - groupId: "licensing"
-    label: "Licensing"
-    isCollapsed: false
-    children:
-      - "Opensource"
-      - "License"
-      - "FreeTrial"
+  - Licensing:
+      name: Licensing
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      order: '20'
+      defaultExpanded: true
+      children:
+        - Opensource
+        - License
+        - FreeTrial
 
-  - groupId: "features"
-    label: "Features"
-    isCollapsed: false
-    children:
-      - "BYOK"
-      - "LocalOffline"
-      - "GitSupport"
-      - "Terminal"
-      - "Extensible"
-      - "MCP-Client"
+  - Features:
+      name: Features
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      order: '30'
+      defaultExpanded: true
+      children:
+        - BYOK
+        - LocalOffline
+        - GitSupport
+        - Terminal
+        - Extensible
+        - MCP-Client
 ```
 
 #### 3. Value Displays
@@ -231,9 +246,9 @@ When loading a dataset configuration, the system:
    - Start with `configuration/comparison-default.yml`
 
 2. **Loads Shared Fragments** (in order from `configDefaults`)
-   - Merge criteria by tag
+   - Merge criteria by tag (including groups)
    - Later criteria override earlier with same tag
-   - Accumulate groupings (no override, additive)
+   - Groups are criteria items, so they merge like any other criterion
    - Merge value displays by value name
 
 3. **Loads Dataset-Specific Config**
@@ -241,11 +256,11 @@ When loading a dataset configuration, the system:
 
 4. **Applies Dataset Overrides**
    - Dataset criteria override shared criteria (by tag)
-   - Dataset groups are additive or can replace shared groups
+   - Groups override like any other criterion (same tag = override)
    - Dataset value displays override shared displays
 
-5. **Resolves Blueprint Children**
-   - For each group, resolve children tags against merged criteria
+5. **Resolves Group Children**
+   - For each group criterion, resolve children tags against merged criteria
    - Warn if any children reference non-existent criteria
 
 ### Example Resolution
@@ -311,10 +326,13 @@ criteria:
 
 1. Design the grouping structure
 2. Create or edit a grouping file (e.g., `groups-custom.yml`)
-3. Define `criteriaGroups` array with:
-   - `groupId`: Unique identifier
-   - `label`: Display name
-   - `isCollapsed`: Default state
+3. Define groups in `criteria` array with:
+   - Criterion key as the group identifier (e.g., `- Deployment:`)
+   - `name`: Display name
+   - `type`: Must be `MARKDOWN`
+   - `search`, `table`, `detail`: Must all be `false`
+   - `order`: Position in list
+   - `defaultExpanded`: Default state (true/false)
    - `children`: Array of criterion tags
 4. Add to `configDefaults` for datasets that need it
 
@@ -322,22 +340,32 @@ criteria:
 
 ```yaml
 # configuration/defaults/groups-devtools.yml
-criteriaGroups:
-  - groupId: "deployment"
-    label: "Deployment Options"
-    isCollapsed: false
-    children:
-      - "BYOK"
-      - "LocalOffline"
-      - "GitSupport"
+criteria:
+  - Deployment:
+      name: Deployment Options
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      order: '40'
+      defaultExpanded: true
+      children:
+        - BYOK
+        - LocalOffline
+        - GitSupport
 
-  - groupId: "integration"
-    label: "Integration Features"
-    isCollapsed: false
-    children:
-      - "Terminal"
-      - "Extensible"
-      - "MCP-Client"
+  - Integration:
+      name: Integration Features
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      order: '50'
+      defaultExpanded: true
+      children:
+        - Terminal
+        - Extensible
+        - MCP-Client
 ```
 
 ### Overriding Shared Configuration
@@ -408,9 +436,9 @@ Override just values, not the entire criterion:
 
 ### Conditional Groupings
 
-Different datasets can use different grouping structures:
+Different datasets can use different grouping structures by including different shared config files:
 
-**Simple Dataset** uses `groups.yml` (basic):
+**Simple Dataset** uses `groups.yml` (basic grouping):
 ```json
 "configDefaults": [
   "configuration/comparison-default.yml",
@@ -418,7 +446,7 @@ Different datasets can use different grouping structures:
 ]
 ```
 
-**Advanced Dataset** uses `groups-advanced.yml` (detailed):
+**Advanced Dataset** uses `groups-advanced.yml` (detailed grouping):
 ```json
 "configDefaults": [
   "configuration/comparison-default.yml",
@@ -426,18 +454,28 @@ Different datasets can use different grouping structures:
 ]
 ```
 
+Groups are merged like any other criteria, so datasets can also override or add to groups.
+
 ### Dynamic Children
 
 Groups can reference criteria that don't exist in all datasets:
 
 **Shared grouping:**
 ```yaml
-- groupId: "features"
-  children:
-    - "BYOK"
-    - "LocalOffline"
-    - "GitSupport"
-    - "Terminal"  # May not exist in all datasets
+criteria:
+  - Features:
+      name: Features
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      order: '30'
+      defaultExpanded: true
+      children:
+        - BYOK
+        - LocalOffline
+        - GitSupport
+        - Terminal  # May not exist in all datasets
 ```
 
 The system resolves children against the merged criteria for each dataset and warns (but doesn't fail) if criteria are missing.
@@ -470,16 +508,16 @@ The system resolves children against the merged criteria for each dataset and wa
 
 ## Troubleshooting
 
-### Blueprint Child Not Found
+### Group Child Not Found
 
-**Error:** "Blueprint child 'X' not found in criteria definitions"
+**Error:** "Group child 'X' not found in criteria definitions"
 
-**Cause:** A group references a criterion tag that doesn't exist in the merged criteria.
+**Cause:** A group criterion references a child tag that doesn't exist in the merged criteria.
 
 **Solutions:**
 1. Add the missing criterion to shared or dataset config
-2. Remove the child reference from the group
-3. Check for typos in tag names
+2. Remove the child reference from the group's children array
+3. Check for typos in tag names (case-sensitive)
 
 ### Duplicate Tag Warning
 
@@ -550,13 +588,18 @@ criteria:
 
 `configuration/defaults/groups-custom.yml`:
 ```yaml
-criteriaGroups:
-  - groupId: "deployment-features"
-    label: "Deployment Features"
-    isCollapsed: false
-    children:
-      - "BYOK"
-      - "LocalOffline"
+criteria:
+  - DeploymentFeatures:
+      name: Deployment Features
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      order: '60'
+      defaultExpanded: true
+      children:
+        - BYOK
+        - LocalOffline
 ```
 
 **3. Add to dataset manifest:**
@@ -594,4 +637,4 @@ criteria:
 - [Admin_Config_Interface.md](Admin_Config_Interface.md) - Visual config editor
 - [Update_YOUR_Comparison.md](Update_YOUR_Comparison.md) - Manual configuration
 - [Migration_From_v2.md](Migration_From_v2.md) - Migrating from v2
-- [BLUEPRINT.md](../../BLUEPRINT.md) - Technical blueprint inheritance details
+- [BLUEPRINT.md](../../BLUEPRINT.md) - Technical inheritance implementation details

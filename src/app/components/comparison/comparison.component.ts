@@ -10,6 +10,7 @@ import { isNullOrUndefined } from '../../shared/util/null-check';
 import { Criteria, DataElement, Label } from '../../../../lib/gulp/model/model.module';
 import { FeatureGroupView } from '../../models/feature-grouping.model';
 import { ComparisonTemplateExportService } from './settings/comparison-template-export.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
     selector: 'comparison',
@@ -48,6 +49,14 @@ export class ComparisonComponent {
 
     public getVersionInformation(): VersionInformation {
         return this.versionInformation;
+    }
+
+    public getRepositoryUrl(): string {
+        return environment.repositoryUrl;
+    }
+
+    public getGithubPagesUrl(): string {
+        return environment.githubPagesUrl;
     }
 
     public criteriaChanged(value: string, crit: Criteria) {

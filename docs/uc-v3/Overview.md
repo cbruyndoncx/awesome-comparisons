@@ -6,7 +6,7 @@ Awesome Comparisons (formerly Ultimate Comparison Framework v2) is a framework f
 
 - **Multi-dataset support** - Host multiple comparisons in one repository with dataset selector UI
 - **Admin interface** - Visual YAML editor at `/admin` with live diff preview
-- **Shared configuration** - Define criteria once, reuse via blueprint inheritance
+- **Shared configuration** - Define criteria once, reuse via inheritance system
 - **TypeScript converter** - No Java dependency (replaces v2 Java-based md2json)
 - **Dataset-aware builds** - CLI flags (`--dataset <id>`) and GitHub Pages output
 

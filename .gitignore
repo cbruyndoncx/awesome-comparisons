@@ -303,3 +303,6 @@ gradle-app.setting
 
 # End of https://www.gitignore.io/api/eclipse,gradle,intellij+iml,node,grunt,typings,visualstudiocode,windows,linux,macos,vim,jabref
 .angular/cache/
+
+# Auto-generated environment file
+src/environments/environment.prod.ts
