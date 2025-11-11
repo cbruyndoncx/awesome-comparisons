@@ -4,12 +4,13 @@ This guide explains how to set up or update a comparison to work with v3 of the 
 
 ## Quick start — create a new dataset
 
-1. Create a directory for your dataset and initialize the comparison skeleton (example):
+1. Create a directory for your dataset and initialize the comparison skeleton (example using aie-model as reference):
 
 ```bash
 mkdir -p datasets/my-comparison
 cd datasets/my-comparison
 # create description.md and a comparison.yml or dataset.yaml as required
+# See datasets/aie-model/ for a working example
 ```
 
 2. Add your comparison data files (markdown entries) under the dataset directory.

@@ -10,7 +10,7 @@ Built with [Angular](https://angular.io/). Read the original paper: [The Ultimat
 
 ```bash
 npm install
-npm run dev -- --dataset code-editor
+npm run dev -- --dataset aie-model
 ```
 
 Then open `http://localhost:4200` (comparison) or `http://localhost:4200/admin` (config editor).

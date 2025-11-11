@@ -37,54 +37,51 @@ Define reusable criteria in shared YAML files:
 
 ```yaml
 criteria:
-  - tag: "License"
-    name: "License"
-    type: "label"
-    search: true
-    table: true
-    detail: true
-    values:
-      - name: "MIT"
-        description: "MIT License - permissive open source"
-        class: "label-success"
-      - name: "Apache-2.0"
-        description: "Apache License 2.0"
-        class: "label-success"
-      - name: "GPL-3.0"
-        description: "GNU General Public License v3.0"
-        class: "label-info"
-      - name: "Commercial"
-        description: "Commercial/proprietary license"
-        class: "label-warning"
+  - License:
+      name: License
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      values:
+        - name: "MIT"
+          description: "MIT License - permissive open source"
+          class: "label-success"
+        - name: "Apache-2.0"
+          description: "Apache License 2.0"
+          class: "label-success"
+        - name: "GPL-3.0"
+          description: "GNU General Public License v3.0"
+          class: "label-info"
+        - name: "Proprietary"
+          description: "Proprietary/commercial license"
+          class: "label-warning"
 
-  - tag: "Pricing"
-    name: "Pricing Model"
-    type: "label"
-    search: true
-    table: true
-    values:
-      - name: "Free"
-        display: "Free"
-        class: "label-success"
-      - name: "Freemium"
-        display: "Freemium"
-        class: "label-info"
-      - name: "Paid"
-        display: "Paid"
-        class: "label-warning"
+  - Opensource:
+      name: Opensource
+      type: LABEL
+      search: true
+      table: true
+      values:
+        - name: "Yes"
+          display: "Yes"
+          class: "label-success"
+        - name: "No"
+          display: "No"
+          class: "label-warning"
 
-  - tag: "FreeTier"
-    name: "Free Tier Available"
-    type: "label"
-    search: true
-    table: true
-    values:
-      - name: "Yes"
-        display: "✓"
-        class: "label-success"
-      - name: "No"
-        display: "✗"
-        class: "label-danger"
+  - FreeTrial:
+      name: FreeTrial
+      type: LABEL
+      search: true
+      table: true
+      values:
+        - name: "Yes"
+          display: "✓"
+          class: "label-success"
+        - name: "No"
+          display: "✗"
+          class: "label-danger"
 ```
 
 #### 2. Grouping Blueprints
@@ -95,37 +92,36 @@ Define how criteria are organized into groups:
 
 ```yaml
 criteriaGroups:
-  - groupId: "overview"
-    label: "Overview"
+  - groupId: "general"
+    label: "General Info"
     isCollapsed: false
     children:
+      - "Classification"
+      - "Version"
+      - "Repository"
+      - "Rating"
       - "ShortDescription"
-      - "Platform"
-      - "Category"
+      - "Description"
+      - "Languages"
 
   - groupId: "licensing"
-    label: "Licensing & Cost"
+    label: "Licensing"
     isCollapsed: false
     children:
+      - "Opensource"
       - "License"
-      - "Pricing"
-      - "FreeTier"
+      - "FreeTrial"
 
   - groupId: "features"
     label: "Features"
     isCollapsed: false
     children:
-      - "CodeCompletion"
-      - "CodeGeneration"
-      - "ChatInterface"
-
-  - groupId: "technical"
-    label: "Technical Details"
-    isCollapsed: true
-    children:
-      - "SupportedLanguages"
-      - "LocalProcessing"
-      - "CloudBased"
+      - "BYOK"
+      - "LocalOffline"
+      - "GitSupport"
+      - "Terminal"
+      - "Extensible"
+      - "MCP-Client"
 ```
 
 #### 3. Value Displays
@@ -136,26 +132,27 @@ Define how specific values should render:
 
 ```yaml
 criteria:
-  - tag: "Platform"
-    values:
-      - name: "VSCode"
-        display: "VS Code"
-        displayHtml: "<span class='platform-badge'>VS Code</span>"
-      - name: "JetBrains"
-        display: "JetBrains IDEs"
-      - name: "Web"
-        display: "🌐 Web"
+  - Classification:
+      values:
+        - name: "AIE/Model"
+          display: "AIE/Model"
+        - name: "Code/Editor"
+          display: "Code/Editor"
+        - name: "Code/Terminal"
+          display: "Code/Terminal"
 
-  - tag: "SupportedLanguages"
-    values:
-      - name: "Python"
-        display: "🐍 Python"
-      - name: "JavaScript"
-        display: "JS"
-      - name: "TypeScript"
-        display: "TS"
-      - name: "Java"
-        display: "☕ Java"
+  - Languages:
+      values:
+        - name: "Python"
+          display: "🐍 Python"
+        - name: "JavaScript"
+          display: "JS"
+        - name: "TypeScript"
+          display: "TS"
+        - name: "Java"
+          display: "☕ Java"
+        - name: "Any"
+          display: "Any"
 ```
 
 ## Dataset Manifest Configuration
@@ -166,11 +163,11 @@ The dataset manifest (`configuration/datasets.manifest.json`) specifies which sh
 
 ```json
 {
-  "id": "code-editor",
-  "displayLabel": "Code/Editors",
+  "id": "aie-model",
+  "displayLabel": "AIE/Model",
   "sources": {
-    "dataDir": "datasets/code-editor/data",
-    "config": "datasets/code-editor/config/comparison.yml",
+    "dataDir": "datasets/aie-model/data",
+    "config": "datasets/aie-model/config/comparison.yml",
     "configDefaults": [
       "configuration/comparison-default.yml",
       "configuration/defaults/general-licensing.yml",
@@ -205,7 +202,7 @@ The `configDefaults` array lists shared configuration files in order:
 
 Different datasets can inherit different combinations:
 
-**Code Editor Dataset** (full set):
+**AIE Model Dataset** (full set):
 ```json
 "configDefaults": [
   "configuration/comparison-default.yml",
@@ -215,7 +212,7 @@ Different datasets can inherit different combinations:
 ]
 ```
 
-**AI Model Dataset** (no advanced groups):
+**Terminal Dataset** (simpler configuration):
 ```json
 "configDefaults": [
   "configuration/comparison-default.yml",
@@ -256,43 +253,43 @@ When loading a dataset configuration, the system:
 **Shared (`general-licensing.yml`):**
 ```yaml
 criteria:
-  - tag: "License"
-    name: "License"
-    type: "label"
-    search: true
-    table: true
+  - License:
+      name: License
+      type: LABEL
+      search: true
+      table: true
 ```
 
-**Dataset-Specific (`datasets/code-editor/config/comparison.yml`):**
+**Dataset-Specific (`datasets/aie-model/config/comparison.yml`):**
 ```yaml
 criteria:
-  - tag: "License"
-    name: "License Type"  # Override name
-    type: "label"
-    search: true
-    table: true
-    detail: true  # Add detail visibility
+  - License:
+      name: "License Type"  # Override name
+      type: LABEL
+      search: true
+      table: true
+      detail: true  # Add detail visibility
 
-  - tag: "EditorType"  # Dataset-unique criterion
-    name: "Editor Type"
-    type: "label"
-    search: true
+  - BYOK:  # Dataset-unique criterion
+      name: "Bring Your Own Key"
+      type: LABEL
+      search: true
 ```
 
-**Merged Result for code-editor:**
+**Merged Result for aie-model:**
 ```yaml
 criteria:
-  - tag: "License"
-    name: "License Type"  # From dataset (overrides shared)
-    type: "label"
-    search: true
-    table: true
-    detail: true  # From dataset
+  - License:
+      name: "License Type"  # From dataset (overrides shared)
+      type: LABEL
+      search: true
+      table: true
+      detail: true  # From dataset
 
-  - tag: "EditorType"  # From dataset (unique)
-    name: "Editor Type"
-    type: "label"
-    search: true
+  - BYOK:  # From dataset (unique)
+      name: "Bring Your Own Key"
+      type: LABEL
+      search: true
 ```
 
 ## Working with Shared Configuration
@@ -326,22 +323,21 @@ criteria:
 ```yaml
 # configuration/defaults/groups-devtools.yml
 criteriaGroups:
-  - groupId: "dev-experience"
-    label: "Developer Experience"
+  - groupId: "deployment"
+    label: "Deployment Options"
     isCollapsed: false
     children:
-      - "CodeCompletion"
-      - "IntelliSense"
-      - "Refactoring"
-      - "Debugging"
+      - "BYOK"
+      - "LocalOffline"
+      - "GitSupport"
 
-  - groupId: "collaboration"
-    label: "Collaboration Features"
+  - groupId: "integration"
+    label: "Integration Features"
     isCollapsed: false
     children:
-      - "LiveShare"
-      - "CodeReview"
-      - "PairProgramming"
+      - "Terminal"
+      - "Extensible"
+      - "MCP-Client"
 ```
 
 ### Overriding Shared Configuration
@@ -356,18 +352,18 @@ To override a shared criterion in a dataset:
 
 **Shared:**
 ```yaml
-- tag: "Platform"
-  name: "Platform"
-  type: "label"
-  search: true
-  table: true
+- Classification:
+    name: Classification
+    type: LABEL
+    search: true
+    table: true
 ```
 
 **Dataset Override:**
 ```yaml
-- tag: "Platform"
-  name: "Supported Platforms"  # Override name only
-  # type, search, table inherited from shared
+- Classification:
+    name: "Tool Classification"  # Override name only
+    # type, search, table inherited from shared
 ```
 
 ## Advanced Patterns
@@ -379,11 +375,9 @@ Stack multiple shared files for modular configuration:
 ```json
 "configDefaults": [
   "configuration/comparison-default.yml",       // Base
-  "configuration/defaults/platform-support.yml", // Add platform criteria
-  "configuration/defaults/licensing.yml",        // Add licensing
-  "configuration/defaults/ai-features.yml",      // Add AI-specific criteria
-  "configuration/defaults/groups-ai.yml",        // Add AI groupings
-  "configuration/defaults/value-displays.yml"    // Common displays
+  "configuration/defaults/general-licensing.yml", // Add licensing criteria
+  "configuration/defaults/groups-advanced.yml",   // Add advanced groupings
+  "configuration/defaults/value-displays.yml"     // Common displays
 ]
 ```
 
@@ -393,23 +387,23 @@ Override just values, not the entire criterion:
 
 **Shared:**
 ```yaml
-- tag: "Pricing"
-  name: "Pricing"
-  type: "label"
-  values:
-    - name: "Free"
-      class: "label-success"
-    - name: "Paid"
-      class: "label-warning"
+- Opensource:
+    name: Opensource
+    type: LABEL
+    values:
+      - name: "Yes"
+        class: "label-success"
+      - name: "No"
+        class: "label-warning"
 ```
 
 **Dataset:**
 ```yaml
-- tag: "Pricing"
-  values:
-    - name: "Free"
-      display: "💰 Free"  # Override just display
-    # Inherits "Paid" from shared
+- Opensource:
+    values:
+      - name: "Yes"
+        display: "✓ Open Source"  # Override just display
+      # Inherits "No" from shared
 ```
 
 ### Conditional Groupings
@@ -438,11 +432,12 @@ Groups can reference criteria that don't exist in all datasets:
 
 **Shared grouping:**
 ```yaml
-- groupId: "ai-features"
+- groupId: "features"
   children:
-    - "CodeCompletion"
-    - "ChatInterface"
-    - "ContextAwareness"  # May not exist in all datasets
+    - "BYOK"
+    - "LocalOffline"
+    - "GitSupport"
+    - "Terminal"  # May not exist in all datasets
 ```
 
 The system resolves children against the merged criteria for each dataset and warns (but doesn't fail) if criteria are missing.
@@ -527,28 +522,28 @@ The system resolves children against the merged criteria for each dataset and wa
 `configuration/defaults/custom-features.yml`:
 ```yaml
 criteria:
-  - tag: "AIAssistance"
-    name: "AI Assistance Level"
-    type: "label"
-    search: true
-    table: true
-    values:
-      - name: "Basic"
-        class: "label-info"
-      - name: "Advanced"
-        class: "label-success"
-      - name: "None"
-        class: "label-secondary"
+  - BYOK:
+      name: "Bring Your Own Key"
+      type: LABEL
+      search: true
+      table: true
+      values:
+        - name: "Yes"
+          class: "label-success"
+        - name: "No"
+          class: "label-secondary"
+        - name: "Partial"
+          class: "label-info"
 
-  - tag: "CloudSync"
-    name: "Cloud Sync"
-    type: "label"
-    search: true
-    values:
-      - name: "Yes"
-        display: "✓"
-      - name: "No"
-        display: "✗"
+  - LocalOffline:
+      name: "Local/Offline"
+      type: LABEL
+      search: true
+      values:
+        - name: "Yes"
+          display: "✓"
+        - name: "No"
+          display: "✗"
 ```
 
 **2. Create shared grouping:**
@@ -556,19 +551,19 @@ criteria:
 `configuration/defaults/groups-custom.yml`:
 ```yaml
 criteriaGroups:
-  - groupId: "ai-capabilities"
-    label: "AI Capabilities"
+  - groupId: "deployment-features"
+    label: "Deployment Features"
     isCollapsed: false
     children:
-      - "AIAssistance"
-      - "CloudSync"
+      - "BYOK"
+      - "LocalOffline"
 ```
 
 **3. Add to dataset manifest:**
 
 ```json
 {
-  "id": "my-dataset",
+  "id": "aie-model",
   "sources": {
     "configDefaults": [
       "configuration/comparison-default.yml",
@@ -581,16 +576,16 @@ criteriaGroups:
 
 **4. Dataset can now override:**
 
-`datasets/my-dataset/config/comparison.yml`:
+`datasets/aie-model/config/comparison.yml`:
 ```yaml
 criteria:
-  - tag: "AIAssistance"
-    name: "AI Features"  # Override name
-    # Other fields inherited from shared
+  - BYOK:
+      name: "API Key Support"  # Override name
+      # Other fields inherited from shared
 
-  - tag: "CustomFeature"  # Dataset-specific
-    name: "Custom Feature"
-    type: "text"
+  - MCP-Client:  # Dataset-specific
+      name: "MCP Client Support"
+      type: LABEL
 ```
 
 ## See Also

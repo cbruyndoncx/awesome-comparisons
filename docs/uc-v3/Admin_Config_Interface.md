@@ -20,7 +20,7 @@ The admin interface consists of three main panels:
 ### 1. Catalog Tree (Left Panel)
 
 The catalog tree displays all available dataset configurations organized by:
-- **Dataset**: Group by dataset (code-editor, terminal, etc.)
+- **Dataset**: Group by dataset (aie-model, code-editor, terminal, etc.)
 - **Configuration Type**: Shows dataset-specific configs and shared defaults
 - **Search**: Filter configurations by name
 
@@ -45,7 +45,7 @@ Organize criteria into collapsible sections for better UX:
 
 #### Criteria Definitions
 Define the fields that comparison entries will have:
-- **Tag**: Unique identifier (e.g., "License", "Platform")
+- **Tag**: Unique identifier (e.g., "License", "Classification", "Languages")
 - **Name**: Display name shown in UI
 - **Type**: Data type (text, label, url, markdown, rating, repository)
 - **Visibility**: Search, table, detail toggles
@@ -158,11 +158,11 @@ values:
     description: "MIT License - permissive open source"
     class: "label-success"
     display: "MIT"
-  - name: "Commercial"
-    description: "Commercial/proprietary license"
+  - name: "Proprietary"
+    description: "Proprietary/commercial license"
     backgroundColor: "#dc3545"
     color: "#ffffff"
-    display: "💰"
+    display: "Proprietary"
 ```
 
 ## Configuration Inheritance
@@ -206,7 +206,7 @@ To edit shared configuration files:
 4. Save changes
 5. All datasets that inherit this file will receive updates
 
-**Best Practice:** Use shared defaults for criteria common across multiple datasets (e.g., License, Platform, Language Support).
+**Best Practice:** Use shared defaults for criteria common across multiple datasets (e.g., License, Opensource, Languages).
 
 ## Advanced Features
 
@@ -243,22 +243,25 @@ When working with groupings:
 ```yaml
 criteriaGroups:
   - groupId: "licensing"
-    label: "Licensing & Cost"
+    label: "Licensing"
     children:
+      - "Opensource"
       - "License"
-      - "Pricing"
-      - "FreeTier"
+      - "FreeTrial"
 ```
 
 2. **Criteria Definitions** (merged from shared + dataset):
 ```yaml
 criteria:
-  - tag: "License"
-    name: "License"
-    type: "label"
-  - tag: "Pricing"
-    name: "Pricing Model"
-    type: "label"
+  - Opensource:
+      name: Opensource
+      type: LABEL
+  - License:
+      name: License
+      type: LABEL
+  - FreeTrial:
+      name: FreeTrial
+      type: LABEL
 ```
 
 3. **Resolution**: Admin interface resolves children tags against available criteria and warns if any are missing.
@@ -281,7 +284,7 @@ Customize diff view:
 
 ### Shared Configuration
 
-- **Common Criteria**: Put widely-used criteria (License, Platform, etc.) in shared defaults
+- **Common Criteria**: Put widely-used criteria (License, Opensource, Languages, etc.) in shared defaults
 - **Dataset-Specific**: Keep unique criteria in dataset configs
 - **Minimal Overrides**: Only override what's necessary in dataset files
 
