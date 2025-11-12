@@ -1,6 +1,9 @@
 # StarCoder - https://huggingface.co/bigcode/starcoder
 An open-source large language model for code, developed by the BigCode community and released on Hugging Face. Built for code generation, completion and code-aware assistance across many programming languages.
 
+## Classification
+- AIE/Model
+
 ## Version
 v1 / 15.5B (initial: 2023)
 

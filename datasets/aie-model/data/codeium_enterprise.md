@@ -1,5 +1,8 @@
 # Codeium Enterprise - https://codeium.com/
 Secure, enterprise-grade AI coding assistant with on-prem and air-gapped deployment options
+## Classification
+- AIE/Model
+
 ## Version
 n/a
 ## Rating

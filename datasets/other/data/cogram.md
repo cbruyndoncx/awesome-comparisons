@@ -1,5 +1,7 @@
 # Cogram - https://cogram.ai/
 [AI-powered coding assistant for Jupyter Notebooks / data-science workflows. Note: there is a different product with the same name at cogram.com (construction/architecture).]
+## Classification
+- Code/Other
 ## Version
 
 ## Rating

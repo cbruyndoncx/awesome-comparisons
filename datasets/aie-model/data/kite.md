@@ -1,6 +1,9 @@
 # Kite — https://kite.com
 A desktop AI code-completion assistant focused initially on Python, later multi-language. Ran local models for low-latency, privacy-first completions and editor integrations. Company ceased operations in late 2022 and released parts of its codebase as open source.
 
+## Classification
+- AIE/Model
+
 ## Version
 Archived (2022-12-31)
 

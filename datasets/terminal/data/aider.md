@@ -1,6 +1,8 @@
 #Aider - https://aider.chat
 Aider is the first popular AI Coding CLI, with a fairly recently added webbased gui.
 Aider is a python package and frequently updated with a mass following and an active Discord community.
+## Classification
+- Code/Terminal
 ## Version
 tbd (2025-10-18)
 ## Rating
@@ -42,3 +44,4 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 - Installation: pip-based installer (e.g., python -m pip install aider-install; then run aider-install), then run aider in a repo with your chosen model and API key.
 - Good fit for: teams wanting repo-aware AI edits, those requiring private/local model runs, developers who prefer CLI workflows and Git-backed safety for AI edits.
 - Limitations/considerations: Aider is a thin orchestration layer — actual model behavior, costs, and availability depend on chosen LLM provider or local runtime; evaluate model performance and token costs for your use case before large-scale adoption.
+

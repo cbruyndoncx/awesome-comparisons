@@ -886,7 +886,7 @@ criteria:
         AIE/Model: {}
         Code/Autonomous agent: {}
         Code/Editor: {}
-        Code/Spec Driven: {}
+        Code/Other: {}
         Code/Terminal: {}
         Product/Prototyping: {}
   - Prompts:

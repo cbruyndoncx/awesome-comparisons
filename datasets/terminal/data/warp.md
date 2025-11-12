@@ -54,3 +54,6 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 - Strengths: Unified UX for prompt + shell input, native diff review for agent-made changes, strong collaboration primitives for teams.
 - Limitations / unknowns: public documentation is limited on BYOK (bring-your-own-key) and fully offline local LLM operation; product is proprietary which may limit on-premise customization for some organizations.
 - Recommended when: you want a first-class terminal with integrated AI agents and team sharing (Drive), and you prefer an opinionated, commercial product with enterprise privacy controls rather than an open-source self-hosted solution.
+
+## Classification
+- Code/Terminal

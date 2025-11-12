@@ -94,3 +94,6 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
 ## SpecDrivenDevelopment
 - Other
   - OpenCode is not bundled with or tied to specific spec-driven frameworks (BMAD, SpecKit, OpenSpec, Tessl, AgentOS, ClaudeFlow, SPARC, SuperClaude). It can, however, support spec-driven workflows through Plan Mode and scripted skills—developers would integrate their preferred SDD tooling themselves rather than rely on a built-in spec framework.
+
+## Classification
+- Code/Terminal

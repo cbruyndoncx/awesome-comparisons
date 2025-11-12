@@ -1,5 +1,8 @@
 # CodeLlama - https://ai.meta.com/blog/codegen-meta-code-llama/
 Code Llama is Meta's open-source family of large language models optimized for code generation, completion, and reasoning about code.
+## Classification
+- AIE/Model
+
 ## Version
 v1 (2023-08)
 ## Rating

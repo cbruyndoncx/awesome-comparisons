@@ -1,5 +1,8 @@
 # FauxPilot - https://github.com/fauxpilot/fauxpilot
 [Open-source, locally-hosted code-completion server that provides a privacy-focused alternative to cloud-based assistants like GitHub Copilot.]
+## Classification
+- AIE/Model
+
 ## Version
 
 ## Rating

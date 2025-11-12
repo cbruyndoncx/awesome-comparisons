@@ -1,5 +1,8 @@
 # PolyCoder - https://github.com/VHellendoorn/Code-LMs
 Open-source code generation model with strong C-language performance
+## Classification
+- AIE/Model
+
 ## Version
 v2.7B (2022-03-01)
 ## Rating

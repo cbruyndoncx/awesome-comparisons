@@ -42,3 +42,6 @@ The tool is focused on large-context reasoning, multi-file code transformations,
 - Safety & controls: interactive permission prompts, enterprise controls for data handling, and options to route through organization-managed endpoints.
 - Ecosystem: community tooling and integrations exist (context engineers, wrappers, "awesome" lists) though the official product is closed-source.
 - Further reading: consult the official Claude documentation at https://claude.ai/ and Anthropic's product pages for up-to-date pricing, model names, and deployment options.
+
+## Classification
+- Code/Terminal

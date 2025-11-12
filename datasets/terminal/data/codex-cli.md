@@ -44,3 +44,6 @@ Codex CLI provides a lightweight, terminal-first agent that lets developers read
 - Useful for exploratory code tasks, automated refactors, running test-fix cycles, and generating PR-ready diffs; best results when the repository includes clear tests and documentation.
 
 Sources: GitHub repository (https://github.com/openai/codex) and project documentation/examples aggregated from public write-ups about Codex CLI and its configuration.
+
+## Classification
+- Code/Terminal

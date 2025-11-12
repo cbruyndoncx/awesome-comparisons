@@ -1,5 +1,8 @@
 # CodeGeeX - https://github.com/THUDM/CodeGeeX
 Open-source multilingual code generation model from Tsinghua University (THUDM).
+## Classification
+- AIE/Model
+
 ## Version
 
 ## Rating
