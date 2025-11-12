@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, Output } from '@angular/core';
 import { CriteriaData, DataElement, Label } from '../../../../../lib/gulp/model/model.module';
 
 interface SheetRow {
@@ -30,6 +30,11 @@ export class FocusedComparisonSheetComponent implements OnChanges {
     @Input() elementData: Array<DataElement> = [];
     @Input() labelColorsEnabled: boolean = true;
     @Input() showMissingIndicators: boolean = false;
+    @Input() tableExpanded: boolean = false;
+    @Input() viewMode: string = 'sheet';
+
+    @Output() toggleExpand: EventEmitter<boolean> = new EventEmitter<boolean>();
+    @Output() viewModeChange: EventEmitter<string> = new EventEmitter<string>();
 
     public elementHeaders: SheetElementHeader[] = [];
     public sheetRows: SheetRow[] = [];

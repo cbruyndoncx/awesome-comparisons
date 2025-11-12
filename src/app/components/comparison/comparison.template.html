@@ -173,7 +173,9 @@
                           [showMissingIndicators]="vm.state.showMissingIndicators"
                           [dataElements]="configurationService.dataElements"
                           [tableExpanded]="vm.state.tableExpand"
+                          [viewMode]="vm.state.viewMode"
                           (toggleExpand)="toggleTableExpand($event)"
+                          (viewModeChange)="setViewMode($event)"
                           (settingsCallback)="settingsOpen = true"
                           (showDetails)="showDetails($event)"
                           (orderChange)="changeOrder($event)"
@@ -187,7 +189,11 @@
                                       [rowIndexes]="vm.state.rowIndexes"
                                       [elementData]="configurationService.dataElements"
                                       [labelColorsEnabled]="vm.state.labelColorsEnabled"
-                                      [showMissingIndicators]="vm.state.showMissingIndicators"></focused-comparison-sheet>
+                                      [showMissingIndicators]="vm.state.showMissingIndicators"
+                                      [tableExpanded]="vm.state.tableExpand"
+                                      [viewMode]="vm.state.viewMode"
+                                      (toggleExpand)="toggleTableExpand($event)"
+                                      (viewModeChange)="setViewMode($event)"></focused-comparison-sheet>
         </ng-container>
     </div>
     <pdialog [opened]="vm.state.detailsOpen" *ngIf="vm.state.detailsOpen"

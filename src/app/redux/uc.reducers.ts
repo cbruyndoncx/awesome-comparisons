@@ -385,6 +385,25 @@ function toggleGroup(state: IUCAppState, action: UCToggleGroupAction): IUCAppSta
             isExpanded: action.expanded
         };
     });
+
+    // Enable/disable columns based on group expansion
+    const groupChildKeys = new Set((group.children || []).map(c => c.id));
+    if (group.primaryCriteria) {
+        groupChildKeys.add(group.primaryCriteria.id);
+    }
+
+    state.columnKeys.forEach((colKey, index) => {
+        if (groupChildKeys.has(colKey)) {
+            const criteria = state.criterias.get(colKey);
+            // Only enable the column if it has table: true in its configuration
+            if (action.expanded) {
+                state.columnsEnabled[index] = criteria?.table === true;
+            } else {
+                state.columnsEnabled[index] = false;
+            }
+        }
+    });
+
     state.currentChanged = true;
     return state;
 }
@@ -506,10 +525,12 @@ function filterColumns(state: IUCAppState, columns: Map<string, boolean> = new M
         if (!state.columnsEnabled[index]) {
             return;
         }
+        const criteria = state.criterias.get(value);
         const groupKey = groupLookup[value];
         if (!isNullOrUndefined(groupKey)) {
             const isExcluded = excludedGroups.has(groupKey);
             const isExpanded = expandedState[groupKey] === true;
+            // Skip if group is excluded or collapsed
             if (isExcluded || !isExpanded) {
                 return;
             }

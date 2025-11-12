@@ -1,5 +1,23 @@
 :host {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    --grouping-button-color: var(--text-color, #424242);
+    --grouping-button-background: var(--card-background, #f9f9f9);
+    --grouping-expanded-foreground: var(--uc-accent, #1e88e5);
+    --grouping-expanded-background: var(--accent-surface-strong, #e3f2fd);
+    --grouping-expanded-header-text: #fdfcff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :host {
+        --grouping-button-color: var(--text-color, #e2e8f0);
+        --grouping-button-background: var(--card-background, #111827);
+        --grouping-expanded-foreground: var(--uc-accent, #60a5fa);
+        --grouping-expanded-background: var(--accent-surface-strong, rgba(148, 163, 184, 0.22));
+        --grouping-expanded-header-text: #0f172a;
+    }
 }
 
 .grid-table {
@@ -132,34 +150,15 @@ table {
 .group-panel {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    margin-bottom: 12px;
-    padding: 14px 16px;
-    border: 1px solid var(--border-color, #dedede);
-    border-radius: 12px;
-    background: var(--card-background, #fdfdfd);
-    box-shadow: 0 16px 32px -28px var(--shadow-color, rgba(15, 23, 42, 0.18));
-    --grouping-button-color: var(--text-color, #424242);
-    --grouping-button-background: var(--card-background, #f9f9f9);
-    --grouping-expanded-foreground: var(--uc-accent, #1e88e5);
-    --grouping-expanded-background: var(--accent-surface-strong, #e3f2fd);
-    --grouping-expanded-header-text: #fdfcff;
+    gap: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-    .group-panel {
-        --grouping-button-color: var(--text-color, #e2e8f0);
-        --grouping-button-background: var(--card-background, #111827);
-        --grouping-expanded-foreground: var(--uc-accent, #60a5fa);
-        --grouping-expanded-background: var(--accent-surface-strong, rgba(148, 163, 184, 0.22));
-        --grouping-expanded-header-text: #0f172a;
-    }
-}
 
 .group-controls {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-bottom: 12px;
 }
 
 .group-controls__header {
@@ -196,6 +195,12 @@ table {
     color: var(--text-secondary, #616161);
 }
 
+.group-controls__buttons {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
 .group-controls__toggle {
     border: 1px solid var(--border-color, rgba(15, 23, 42, 0.12));
     border-radius: 999px;
@@ -212,6 +217,11 @@ table {
 .group-controls__toggle:hover,
 .group-controls__toggle:focus-visible {
     background: var(--hover-color, rgba(37, 99, 235, 0.12));
+}
+
+.group-controls__toggle[aria-pressed="true"] {
+    background: var(--accent-surface, rgba(37, 99, 235, 0.24));
+    border-color: var(--uc-accent, #2563eb);
 }
 
 .group-controls__list {

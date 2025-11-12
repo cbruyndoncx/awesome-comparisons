@@ -3,6 +3,18 @@
     color: var(--text-color, #0f172a);
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
 .focused-sheet {
     display: flex;
     flex-direction: column;
@@ -11,7 +23,39 @@
 
 .focused-sheet__controls {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.focused-sheet__controls-left {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.focused-sheet__button {
+    border: 1px solid var(--border-color, rgba(15, 23, 42, 0.12));
+    border-radius: 999px;
+    background: var(--card-background, #ffffff);
+    color: var(--text-color, #0f172a);
+    padding: 4px 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.focused-sheet__button:hover,
+.focused-sheet__button:focus-visible {
+    background: var(--hover-color, rgba(37, 99, 235, 0.12));
+}
+
+.focused-sheet__button[aria-pressed="true"] {
+    background: var(--accent-surface, rgba(37, 99, 235, 0.24));
+    border-color: var(--uc-accent, #2563eb);
 }
 
 .focused-sheet__print {

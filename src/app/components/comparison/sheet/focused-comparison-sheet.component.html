@@ -1,13 +1,31 @@
-<div class="focused-sheet">
-    <div class="focused-sheet__controls">
+<div class="focused-sheet__controls">
+    <div class="focused-sheet__controls-left">
         <button type="button"
-                class="focused-sheet__print"
-                (click)="triggerPrint()">
-            <span aria-hidden="true">🖨️</span>
-            <span>Print / Save as PDF</span>
+                class="focused-sheet__button"
+                (click)="viewModeChange.emit(viewMode === 'sheet' ? 'table' : 'sheet')"
+                [attr.aria-pressed]="viewMode === 'sheet'"
+                [attr.title]="viewMode === 'sheet' ? 'Switch to standard table view' : 'Switch to focused sheet view'">
+            <iicon icon="view-column"></iicon>
+            <span class="sr-only">{{ viewMode === 'sheet' ? 'Standard view' : 'Focused sheet view' }}</span>
+        </button>
+        <button type="button"
+                class="focused-sheet__button"
+                (click)="toggleExpand.emit(!tableExpanded)"
+                [attr.aria-pressed]="tableExpanded"
+                [attr.title]="tableExpanded ? 'Collapse table view' : 'Expand table view'">
+            <iicon [icon]="tableExpanded ? 'resize-small' : 'resize-full'"></iicon>
+            <span class="sr-only">{{ tableExpanded ? 'Collapse table view' : 'Expand table view' }}</span>
         </button>
     </div>
+    <button type="button"
+            class="focused-sheet__print"
+            (click)="triggerPrint()">
+        <span aria-hidden="true">🖨️</span>
+        <span>Print / Save as PDF</span>
+    </button>
+</div>
 
+<div class="focused-sheet">
     <div class="focused-sheet__table-wrapper">
         <table class="focused-sheet__table">
             <thead>

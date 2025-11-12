@@ -1,8 +1,16 @@
-<div class="group-panel">
-    <ng-container *ngIf="groups$ | async as groups">
-        <div class="group-controls" *ngIf="groups.length > 0">
-            <div class="group-controls__header">
-                <div class="group-controls__title">Show/hide column groups:</div>
+<ng-container *ngIf="groups$ | async as groups">
+    <div class="group-controls" *ngIf="groups.length > 0">
+        <div class="group-controls__header">
+            <div class="group-controls__title">Show/hide column groups:</div>
+            <div class="group-controls__buttons">
+                <button type="button"
+                        class="group-controls__toggle"
+                        (click)="viewModeChange.emit(viewMode === 'sheet' ? 'table' : 'sheet')"
+                        [attr.aria-pressed]="viewMode === 'sheet'"
+                        [attr.title]="viewMode === 'sheet' ? 'Switch to standard table view' : 'Switch to focused sheet view'">
+                    <iicon icon="view-column"></iicon>
+                    <span class="sr-only">{{ viewMode === 'sheet' ? 'Standard view' : 'Focused sheet view' }}</span>
+                </button>
                 <button type="button"
                         class="group-controls__toggle"
                         (click)="toggleExpand.emit(!tableExpanded)"
@@ -12,25 +20,27 @@
                     <span class="sr-only">{{ tableExpanded ? 'Collapse table view' : 'Expand table view' }}</span>
                 </button>
             </div>
-            <div class="group-controls__list">
-                <button type="button"
-                        class="group-control"
-                        *ngFor="let group of groups; trackBy: trackGroup"
-                        [class.group-control--expanded]="group.isExpanded"
-                        [class.group-control--excluded]="group.isExcluded"
-                        [disabled]="group.isExcluded"
-                        [attr.aria-expanded]="group.isExpanded"
-                        (click)="toggleGroup(group)">
-                    <span class="group-name">{{group.displayName}}</span>
-                    <span class="group-indicator" aria-hidden="true">{{groupIndicator(group)}}</span>
-                    <span class="sr-only">
-                        {{ group.isExcluded ? 'Unavailable' : (group.isExpanded ? 'Collapse' : 'Expand') }}
-                    </span>
-                </button>
-            </div>
         </div>
-    </ng-container>
+        <div class="group-controls__list">
+            <button type="button"
+                    class="group-control"
+                    *ngFor="let group of groups; trackBy: trackGroup"
+                    [class.group-control--expanded]="group.isExpanded"
+                    [class.group-control--excluded]="group.isExcluded"
+                    [disabled]="group.isExcluded"
+                    [attr.aria-expanded]="group.isExpanded"
+                    (click)="toggleGroup(group)">
+                <span class="group-name">{{group.displayName}}</span>
+                <span class="group-indicator" aria-hidden="true">{{groupIndicator(group)}}</span>
+                <span class="sr-only">
+                    {{ group.isExcluded ? 'Unavailable' : (group.isExpanded ? 'Collapse' : 'Expand') }}
+                </span>
+            </button>
+        </div>
+    </div>
+</ng-container>
 
+<div class="group-panel">
     <div class="group-panel__table">
         <table class="table-hover">
             <thead>
