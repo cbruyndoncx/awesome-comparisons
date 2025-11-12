@@ -2,6 +2,10 @@
 AI-assisted code generator focused on WordPress development: generates PHP/JS snippets, shortcodes, blocks and can export as plugins
 ## Version
 N/A (2025-10-19)
+
+## Classification 
+- Product/Prototyping
+
 ## Rating
 - [4] Ease of use — clean web UI and natural-language prompts make it fast for WP devs
 - [4] WordPress expertise — specialized modes for popular WP plugins and builders

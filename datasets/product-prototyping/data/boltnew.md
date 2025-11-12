@@ -4,6 +4,9 @@ Bolt.new is a browser-first, AI-powered full-stack development environment that 
 ## Version
 N/A (2025-10-19)
 
+## Classification 
+- Product/Prototyping
+
 ## Rating
 - [4] Excellent for rapid full‑stack prototyping and demos
 - [3] Limited offline / local-only workflows

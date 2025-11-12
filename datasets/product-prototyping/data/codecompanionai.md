@@ -3,6 +3,8 @@ A desktop AI coding assistant that exposes a ChatGPT-powered chatbot for working
 
 ## Version
 
+## Classification 
+- Product/Prototyping
 
 ## Rating
 - 
