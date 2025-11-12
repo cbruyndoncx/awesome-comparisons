@@ -14,6 +14,8 @@ criteria:
         - ShortDescription
         - Description
         - Languages
+        - Notes
+        - LastUpdated
       defaultExpanded: true
   - Licensing:
       name: Licensing
@@ -163,6 +165,29 @@ criteria:
       order: '10'
       andSearch: false
       rangeSearch: false
+  - Notes:
+      name: Notes
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: true
+      description: ''
+      placeholder: ''
+      order: 'Y'
+      andSearch: false
+      rangeSearch: false
+  - LastUpdated:
+      name: Last Update
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: true
+      description: 'Note Date last updated'
+      placeholder: ''
+      order: 'Z'
+      andSearch: false
+      rangeSearch: false
+
   - Opensource:
       name: Opensource
       type: LABEL

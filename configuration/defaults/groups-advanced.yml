@@ -1,4 +1,70 @@
 criteria:
+  - MCP-Client:
+      name: MCP-Client
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Coding tool has built-in MCP client so can connect to MCP servers'
+      placeholder: ''
+      order: '21'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+        'No':
+      children:
+          - Prompts
+          - Tools
+          - Resources
+  - Prompts:
+      name: Prompts
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: &ref_0
+        template: 'Default description for {}'
+        variables:
+          - name
+      placeholder: &ref_1
+        template: 'Select {} ...'
+        variables:
+          - name
+      order: '21'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+        'No':
+  - Tools:
+      name: Tools
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: *ref_0
+      placeholder: *ref_1
+      order: '21'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+        'No':
+  - Resources:
+      name: Resources
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: *ref_0
+      placeholder: *ref_1
+      order: '21'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+        'No':
   - Deployment:
       name: Deployment
       type: MARKDOWN
@@ -15,6 +81,34 @@ criteria:
         - DownloadableApplication
         - HostedSaas
         - MobileVersion
+  - BYOK:
+      name: BYOK
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Bring Your Own LLM API Key supported'
+      placeholder: *ref_1
+      order: '50'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+        'No':
+  - LocalOffline:
+      name: LocalOffline
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Support for local on-site deployment or local offline use'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+        'No':
   - DeveloperExperience:
       name: Developer Experience
       type: MARKDOWN
@@ -28,6 +122,62 @@ criteria:
         - Checkpoints
         - GitSupport
       defaultExpanded: true
+  - ContextManagement:
+      name: ContextManagement
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Methods for managing and updating the context.'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+        'No':
+  - DirectFileReferences:
+      name: DirectFileReferences
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Can with @file or similar provide context.'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+        'No':
+  - Checkpoints:
+      name: Checkpoints
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'A way to undo using checkpoints or if autocommitted git history'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+        'No':
+  - GitSupport:
+      name: GitSupport
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Coding tool is aware of GIT and can work/integrate with GIT repos'
+      placeholder: *ref_1
+      order: '20'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+        'No':
   - Extensible:
       name: Extensible
       type: LABEL
@@ -46,3 +196,73 @@ criteria:
         - Subagents
         - RemoteAgents
       defaultExpanded: true
+  - Plugins:
+      name: Plugins
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'A method of bundling together commands, agents and hooks (claude).'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+        'No':
+  - Hooks:
+      name: Hooks
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Lifecycle events for the agent.'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+        'No':
+  - SlashCommands:
+      name: SlashCommands
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Re-usable commands that can be manually triggered by the user.'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+        'No':
+  - CustomModes:
+      name: CustomModes
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Create specialist modes that enable you to tailor the chat experience for specific tasks.'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+        'No':
+  - Subagents:
+      name: Subagents
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Define specialized AI subagents for task-specific workflows.'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+        'No':

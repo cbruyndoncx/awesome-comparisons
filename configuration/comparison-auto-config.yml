@@ -825,8 +825,10 @@ criteria:
         'Functional Source License (FSL) / Fair Source (source-available, not MIT/Apache/GPL)': {}
         'Core engine: MIT (varies by individual micro-app)': {}
         core open-source components: {}
+        BSD-3: {}
         Sourcegraph Enterprise (formerly Apache 2.0 for much of the codebase prior to relicensing): {}
         Apache License 2.0: {}
+        EPL-2.0: {}
         Eclipse Public License 2.0 (EPL-2.0): {}
         GPL: {}
         'GPL-3.0 (core editor), AGPL for certain server/collab components; other crates/components may use Apache/MIT for specific parts': {}
@@ -834,10 +836,11 @@ criteria:
         Apache-2.0: {}
         Proprietary: {}
         FSL: {}
-        BSD-3: {}
-        Other: {}
-        EPL-2.0: {}
         GPL-3.0: {}
+        AGPL-3.0: {}
+        BSD-3-Clause: {}
+        ISC: {}
+        MPL-2.0: {}
   - BYOK:
       type: LABEL
       values:
