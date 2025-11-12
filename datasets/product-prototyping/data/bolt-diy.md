@@ -4,6 +4,9 @@ Bolt.diy is an open-source, model-agnostic AI-assisted development platform for 
 ## Version
 v1.0 (2025-10-19)
 
+## Classification 
+- Product/Prototyping
+
 ## Rating
 - [5] Strong multi-LLM support and browser-based development environment
 - [4] Rapid prototyping and migration use-cases

@@ -3,7 +3,7 @@
 ## Version
 vN/A (2025-10-19)
 ## Classification 
-- Code/Editor
+- Product/Prototyping
 
 ## Rating
 - [4] Strong for fast prototyping, education and collaborative cloud IDE workflows

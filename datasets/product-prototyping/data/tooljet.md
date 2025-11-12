@@ -5,7 +5,7 @@ Open-source, low-code internal app builder with visual drag-and-drop authoring, 
 v (2025-10-19)
 
 ## Classification 
-- Code/Editor
+- Product/Prototyping
 
 ## Rating
 - [4] Strong for building internal dashboards and admin tools rapidly

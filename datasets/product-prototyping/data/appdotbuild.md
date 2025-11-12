@@ -5,7 +5,7 @@
 v1.31.3 (2025-07-??)
 
 ## Classification 
-- Code/Editor
+- Product/Prototyping
 
 ## Rating
 - [5] Excellent for rapid full-stack scaffolding and deployment

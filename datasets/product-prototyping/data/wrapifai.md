@@ -5,7 +5,7 @@ No-code platform to build embeddable AI-powered micro‑tools (calculators, gene
 v1.0 (2025-10-19)
 
 ## Classification 
-- Code/Editor
+- Product/Prototyping
 
 ## Rating
 - [4] Fast no-code builder for marketers and small teams
