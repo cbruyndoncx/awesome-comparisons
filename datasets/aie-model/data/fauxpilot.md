@@ -8,43 +8,20 @@
 ## Rating
 -
 
-## Repository
-- https://github.com/fauxpilot/fauxpilot
-
 ## Languages
 - Any
-
-## Extensible
-- Yes
 
 ## Description
 FauxPilot is an open-source code-completion server designed to run on-premises or on private infrastructure so that source code and telemetry do not need to be sent to a third-party cloud service. It provides an OpenAI-compatible API surface and integrations that let editors and tools use it in place of cloud assistants. The project is focused on privacy, local deployment, and model flexibility: it supports running models (notably Salesforce CodeGen variants) inside NVIDIA's Triton Inference Server with the FasterTransformer backend and can split large models across multiple GPUs.
 
-## BYOK
-- N/A
-
-## LocalOffline
-- Yes
-  - Runs locally or on private servers using Docker / docker-compose and nvidia-docker for GPU acceleration. Supports multi-GPU model sharding so larger models can be run across several cards.
-
 ## FreeTrial
 - Yes
-
-## GitSupport
-- N/A
-
-## Terminal
-- Yes
-  - Server components are deployed and managed via Docker/docker-compose and expose REST/OpenAI-compatible APIs; setup and monitoring are typically done from the command line.
 
 ## Opensource
 - Yes
 
 ## License
 - MIT
-
-## MCP-Client
-- No
 
 ## Notes
 - Model support: commonly used with Salesforce CodeGen models converted for FasterTransformer / Triton; models are typically downloaded from Hugging Face and converted during setup.

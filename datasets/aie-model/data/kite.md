@@ -13,9 +13,6 @@ Archived (2022-12-31)
 - [4] Privacy: good (local processing design)
 - [2] Business viability: failed to monetize sufficiently
 
-## Repository
-- 
-
 ## Languages
 - Python
 - JavaScript / TypeScript
@@ -24,28 +21,11 @@ Archived (2022-12-31)
 - Other
   - Many others via editor plugins
 
-## Extensible
-- Yes
-  - Editor plugins and integrations (VS Code, Sublime, Atom, JetBrains IDEs)
-
 ## Description
 Kite was an early AI-assisted coding tool (founded 2014) that provided context-aware code completions, documentation lookups, and inline examples inside editors. Its core differentiator was processing code and ML inference locally on the developer's machine to reduce latency and address privacy concerns. Kite trained models on large bodies of open-source code and tuned them for code prediction tasks rather than using plain NLP models. Despite strong technical work and a sizeable user base, Kite shut down operations in late 2022 and open-sourced a portion of its codebase.
 
-## BYOK
-- No
-
-## LocalOffline
-- Yes
-  - Any additional details: primary design emphasized on-device inference and privacy (local completions rather than cloud-only).
-
 ## FreeTrial
 - Yes
-
-## GitSupport
-- Yes
-
-## Terminal
-- No
 
 ## Opensource
 - Yes
@@ -53,9 +33,6 @@ Kite was an early AI-assisted coding tool (founded 2014) that provided context-a
 
 ## License
 - Mixed / see repository
-
-## MCP-Client
-- No
 
 ## Notes
 - Founded 2014; widely adopted by Python developers for smarter completions and docs.

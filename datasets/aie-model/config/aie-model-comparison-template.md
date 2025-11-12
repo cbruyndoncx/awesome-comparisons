@@ -17,7 +17,7 @@ AI Models and model tooling
 - AIE/Model
 - Code/Autonomous agent
 - Code/Editor
-- Code/Spec Driven
+- Code/Other
 - Code/Terminal
 - Product/Prototyping
 
@@ -29,22 +29,11 @@ AI Models and model tooling
 
 -
 
-### Repository
+### Repo
 
-<!-- Default description for Repository -->
+<!-- Associated Github repository -->
 
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
-- Yes
-- No
-- https://github.com/THUDM/CodeGeeX
 -
-- https://github.com/facebookresearch/CodeLlama
-- https://github.com/fauxpilot/fauxpilot
-- https://github.com/VHellendoorn/Code-LMs
-- https://huggingface.co/bigcode/starcoder
-
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 
 ### Rating
 
@@ -66,28 +55,43 @@ AI Models and model tooling
 
 ### Languages
 
-<!-- Default description for Languages -->
+<!-- Any or limited list of supported programming Languages -->
 
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
 
-- Yes
-- No
 - Any
-- Python
-- JavaScript / TypeScript
 - Java
-- Go
-- Other
-- Many others via editor plugins
-- C/C++
-- JavaScript
-- PHP
+- Bash
+- XML
+- Python
 - Ruby
+- Groovy
+- JavaScript
+- SQL
+- Go
+- Rust
+- PHP
+- TypeScript
 - C#
-- 12 in total
-- 80+ programming languages (Python, JavaScript, Java, C/C++, Go, Ruby, Rust, TypeScript, PHP, Shell, SQL, etc.)
+- HTML/CSS
+- Shell
+- Swift
+- Kotlin
+- C/C++
+- Scala
+- GraphQL
 
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### Notes
+
+-
+
+### Last Update
+
+<!-- Note Date last updated -->
+
+-
 
 ## Licensing
 
@@ -114,14 +118,17 @@ AI Models and model tooling
 - Apache-2.0
 - Proprietary
 - FSL
-- BSD-3
-- Other
-- EPL-2.0
 - GPL-3.0
+- AGPL-3.0
+- BSD-3-Clause
+- ISC
+- MPL-2.0
 
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 
 ### FreeTrial
+
+<!-- Free access (like opensource), or free (potentially limited) trial available -->
 
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 
@@ -142,10 +149,6 @@ AI Models and model tooling
 
 -
 
-### Notes
-
--
-
 ### Last Update
 
 <!-- Note Date last updated -->
@@ -163,6 +166,14 @@ AI Models and model tooling
 -
 
 ### Licensing
+
+-
+
+### RepositoryActive
+
+<!-- BUG System maintained field looking up repo activity - NOT WORKING -->
+
+<!-- List the relevant repository links for RepositoryActive or remove if not applicable. -->
 
 -
 

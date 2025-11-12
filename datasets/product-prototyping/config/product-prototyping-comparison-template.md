@@ -4,54 +4,6 @@ Prototyping and product-focused coding tools
 
 **Dataset ID:** product-prototyping
 
-## MCP-Client
-
-<!-- Coding tool has built-in MCP client so can connect to MCP servers -->
-
-### MCP-Client
-
-<!-- Coding tool has built-in MCP client so can connect to MCP servers -->
-
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
-- Yes
-- No
-
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
-### Prompts
-
-<!-- Default description for Prompts -->
-
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
-- Yes
-- No
-
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
-### Tools
-
-<!-- Default description for Tools -->
-
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
-- Yes
-- No
-
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
-### Resources
-
-<!-- Default description for Resources -->
-
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
-- Yes
-- No
-
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
 ## General Info
 
 <!-- General Info -->
@@ -65,7 +17,7 @@ Prototyping and product-focused coding tools
 - AIE/Model
 - Code/Autonomous agent
 - Code/Editor
-- Code/Spec Driven
+- Code/Other
 - Code/Terminal
 - Product/Prototyping
 
@@ -131,6 +83,16 @@ Prototyping and product-focused coding tools
 
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 
+### Notes
+
+-
+
+### Last Update
+
+<!-- Note Date last updated -->
+
+-
+
 ## Licensing
 
 <!-- Licensing -->
@@ -156,16 +118,65 @@ Prototyping and product-focused coding tools
 - Apache-2.0
 - Proprietary
 - FSL
-- BSD-3
-- Other
-- EPL-2.0
 - GPL-3.0
+- AGPL-3.0
+- BSD-3-Clause
+- ISC
+- MPL-2.0
 
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 
 ### FreeTrial
 
 <!-- Free access (like opensource), or free (potentially limited) trial available -->
+
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+
+- Yes
+- No
+
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+## MCP-Client
+
+<!-- Coding tool has built-in MCP client so can connect to MCP servers -->
+
+### MCP-Client
+
+<!-- Coding tool has built-in MCP client so can connect to MCP servers -->
+
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+
+- Yes
+- No
+
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### Prompts
+
+<!-- Default description for Prompts -->
+
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+
+- Yes
+- No
+
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### Tools
+
+<!-- Default description for Tools -->
+
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+
+- Yes
+- No
+
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### Resources
+
+<!-- Default description for Resources -->
 
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 
@@ -252,16 +263,6 @@ Prototyping and product-focused coding tools
 
 <!-- Is it possible to extend or customize the system in any way -->
 
-### Extensible
-
-<!-- Is it possible to extend or customize the system in any way -->
-
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
-<!-- Add the label values that apply. Use indented "- " entries beneath each kept value for any notes. -->
-
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
 ### Plugins
 
 <!-- A method of bundling together commands, agents and hooks (claude). -->
@@ -329,14 +330,6 @@ Prototyping and product-focused coding tools
 
 -
 
-### RepositoryActive
-
-<!-- BUG System maintained field looking up repo activity - NOT WORKING -->
-
-<!-- List the relevant repository links for RepositoryActive or remove if not applicable. -->
-
--
-
 ### Terminal
 
 <!-- Coding tool can operate in a terminal/cli environment -->
@@ -347,16 +340,6 @@ Prototyping and product-focused coding tools
 - No
 
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
-### Notes
-
--
-
-### Last Update
-
-<!-- Note Date last updated -->
-
--
 
 ### SpecDrivenDevelopment
 
@@ -389,6 +372,14 @@ Prototyping and product-focused coding tools
 
 -
 
+### RepositoryActive
+
+<!-- BUG System maintained field looking up repo activity - NOT WORKING -->
+
+<!-- List the relevant repository links for RepositoryActive or remove if not applicable. -->
+
+-
+
 ### Deployment
 
 -
@@ -396,3 +387,13 @@ Prototyping and product-focused coding tools
 ### Developer Experience
 
 -
+
+### Extensible
+
+<!-- Is it possible to extend or customize the system in any way -->
+
+<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
+
+<!-- Add the label values that apply. Use indented "- " entries beneath each kept value for any notes. -->
+
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
