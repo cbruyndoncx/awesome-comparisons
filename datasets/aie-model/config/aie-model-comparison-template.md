@@ -1,46 +1,34 @@
 # Code Models
-
+<!-- Add the comparison entry name plus canonical URL. -->
+-
+<!-- Describe this comparison entry using one or two paragraphs. -->
 AI Models and model tooling
 
 **Dataset ID:** aie-model
 
 ## General Info
-
 <!-- General Info -->
-
 ### Classification
-
 <!-- AI Native Dev ainativedev.io Classification -->
-
 <!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
 - AIE/Model
 - Code/Autonomous agent
 - Code/Editor
 - Code/Other
 - Code/Terminal
 - Product/Prototyping
-
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
 ### Version
-
 <!-- Latest version used for update -->
-
 -
 
 ### Repo
-
 <!-- Associated Github repository -->
-
 -
 
 ### Rating
-
 <!-- Avg rating based on review comments -->
-
 <!-- Provide the rating value for Rating or remove if unknown. -->
-
 -
 
 ### Short Description
@@ -48,17 +36,12 @@ AI Models and model tooling
 -
 
 ### Description
-
 <!-- Few paragraphs about the product -->
-
 -
 
 ### Languages
-
 <!-- Any or limited list of supported programming Languages -->
-
 <!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
 - Any
 - Java
 - Bash
@@ -80,40 +63,26 @@ AI Models and model tooling
 - C/C++
 - Scala
 - GraphQL
-
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
 ### Notes
 
 -
 
 ### Last Update
-
 <!-- Note Date last updated -->
-
 -
 
 ## Licensing
-
 <!-- Licensing -->
-
 ### Opensource
-
 <!-- Coding tool is released under opensource license -->
-
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
 - Yes
 - No
-
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
 ### License
-
 <!-- Opensource specific license or Proprietary for other commercial licenses -->
-
 <!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
 - MIT
 - Apache-2.0
 - Proprietary
@@ -123,154 +92,10 @@ AI Models and model tooling
 - BSD-3-Clause
 - ISC
 - MPL-2.0
-
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
 ### FreeTrial
-
 <!-- Free access (like opensource), or free (potentially limited) trial available -->
-
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
 - Yes
 - No
-
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
-## Ungrouped Criteria
-
-### [object Object]
-
-<!-- Add the appropriate content for [object Object]. -->
-
--
-
-### Description
-
--
-
-### Last Update
-
-<!-- Note Date last updated -->
-
--
-
-### Rating-Criteria
-
-<!-- Provide the rating value for Rating-Criteria or remove if unknown. -->
-
--
-
-### General Info
-
--
-
-### Licensing
-
--
-
-### RepositoryActive
-
-<!-- BUG System maintained field looking up repo activity - NOT WORKING -->
-
-<!-- List the relevant repository links for RepositoryActive or remove if not applicable. -->
-
--
-
-### Extensible
-
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
-- Yes
-- No
-
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
-### BYOK
-
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
-- Yes
-- No
-
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
-### LocalOffline
-
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
-- Yes
-- No
-
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
-### Terminal
-
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
-- Yes
-- No
-
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
-### MCP-Client
-
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
-- Yes
-- No
-
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
-### Prompts
-
--
-
-### Resources
-
--
-
-### Tools
-
--
-
-### ContextManagement
-
--
-
-### DirectFileReferences
-
--
-
-### Checkpoints
-
--
-
-### GitSupport
-
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
-- Yes
-- No
-
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
-### Plugins
-
--
-
-### Hooks
-
--
-
-### SlashCommands
-
--
-
-### CustomModes
-
--
-
-### Subagents
-
--

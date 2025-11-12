@@ -98,6 +98,9 @@ export class ComparisonTemplateExportService {
     }
 
     const appState = this.unwrapState(rawState);
+    const configured = this.configurationService.configuration.criteria || [];
+    const declaredCriteria = configured.filter((criteria) => this.isDeclaredCriteria(criteria));
+
     const featureGroups =
       featureGroupsFromService && featureGroupsFromService.length > 0
         ? featureGroupsFromService
@@ -106,17 +109,39 @@ export class ComparisonTemplateExportService {
     // Build a lookup of all criteria from the store state
     const criteriaLookup = this.buildCriteriaLookup(appState.criterias);
 
+    const allowedGroupKeys = this.collectConfigurationGroupIds(declaredCriteria);
+    const filteredGroups = featureGroups
+      .filter((group) => group && allowedGroupKeys.has(group.key));
+
+    const configurationGroups =
+      filteredGroups.length > 0
+        ? filteredGroups
+        : this.buildGroupsFromConfiguration(declaredCriteria, criteriaLookup);
+
     // Determine ungrouped criteria based on full configuration order
-    const configured = this.configurationService.configuration.criteria || [];
     const groupedIds = new Set<string>();
-    featureGroups.forEach((group) =>
+    const groupedCanonicalKeys = new Set<string>();
+    configurationGroups.forEach((group) => {
+      if (group?.key) {
+        groupedIds.add(group.key);
+        this.collectCanonicalKeysFromValue(group.key).forEach((key) => groupedCanonicalKeys.add(key));
+      }
       (group.children || []).forEach((child) => {
         if (child?.id) {
           groupedIds.add(child.id);
         }
-      })
+        this.collectCanonicalKeys(child).forEach((key) => groupedCanonicalKeys.add(key));
+      });
+    });
+    const ungroupedCriteria = declaredCriteria.filter(
+      (c) => {
+        if (typeof c.id !== 'string' || groupedIds.has(c.id)) {
+          return false;
+        }
+        const canonicalKeys = this.collectCanonicalKeys(c);
+        return canonicalKeys.every((key) => !groupedCanonicalKeys.has(key));
+      }
     );
-    const ungroupedCriteria = configured.filter((c) => c.id && !groupedIds.has(c.id));
 
     // Delegate Markdown assembly to shared builder
     const template = buildTemplateDocument(
@@ -125,12 +150,93 @@ export class ComparisonTemplateExportService {
         displayLabel: dataset.displayLabel,
         shortDescription: dataset.shortDescription
       },
-      featureGroups,
+      configurationGroups,
       ungroupedCriteria,
-      criteriaLookup
+      criteriaLookup,
+      {
+        introCriteria: this.extractIntroCriteria(criteriaLookup)
+      }
     );
 
     return { template, dataset };
+  }
+
+  private canonicalKey(value?: string): string {
+    if (!value) {
+      return '';
+    }
+    return value.toString().trim().toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  }
+
+  private collectCanonicalKeys(criteria?: Criteria): string[] {
+    const keys = new Set<string>();
+    if (criteria?.id) {
+      const canonical = this.canonicalKey(criteria.id);
+      if (canonical) {
+        keys.add(canonical);
+      }
+    }
+    if (criteria?.name) {
+      const canonical = this.canonicalKey(criteria.name);
+      if (canonical) {
+        keys.add(canonical);
+      }
+    }
+    return Array.from(keys);
+  }
+
+  private collectCanonicalKeysFromValue(value?: string): string[] {
+    const canonical = this.canonicalKey(value);
+    return canonical ? [canonical] : [];
+  }
+
+  private collectConfigurationGroupIds(criteriaList: Criteria[]): Set<string> {
+    const ids = new Set<string>();
+    criteriaList.forEach((criteria) => {
+      if (criteria?.id && Array.isArray(criteria.children) && criteria.children.length > 0) {
+        ids.add(criteria.id);
+      }
+    });
+    return ids;
+  }
+
+  private buildGroupsFromConfiguration(criteriaList: Criteria[], criteriaLookup: Map<string, Criteria>): FeatureGroupView[] {
+    return criteriaList
+      .filter((criteria) => criteria?.id && Array.isArray(criteria.children) && criteria.children.length > 0)
+      .map((criteria) => {
+        const parent = criteriaLookup.get(criteria.id) || criteria;
+        const childSet = new Set<string>();
+        const children: Criteria[] = [];
+
+        if (parent.search) {
+          children.push(parent);
+          childSet.add(parent.id);
+        }
+
+        (criteria.children || [])
+          .map((childId) => criteriaLookup.get(childId))
+          .filter((child): child is Criteria => !!child)
+          .forEach((child) => {
+            if (!childSet.has(child.id)) {
+              children.push(child);
+              childSet.add(child.id);
+            }
+          });
+
+        return {
+          key: criteria.id,
+          displayName: criteria.name || criteria.id,
+          label: {
+            value: criteria.name || criteria.id,
+            tooltip: criteria.description
+          },
+          children,
+          isExcluded: false,
+          isExpanded: criteria.defaultExpanded === true,
+          defaultExpanded: criteria.defaultExpanded === true,
+          primaryCriteria: parent.search ? parent : null
+        } as FeatureGroupView;
+      });
   }
 
   private buildCriteriaLookup(source: any): Map<string, Criteria> {
@@ -174,5 +280,31 @@ export class ComparisonTemplateExportService {
     });
 
     return merged;
+  }
+
+  private extractIntroCriteria(criteriaLookup: Map<string, Criteria>): {
+    id?: Criteria;
+    description?: Criteria;
+  } {
+    const intro: { id?: Criteria; description?: Criteria } = {};
+    const idCriteria = criteriaLookup.get('id');
+    if (idCriteria) {
+      intro.id = idCriteria;
+    }
+    const descriptionCriteria = criteriaLookup.get('description');
+    if (descriptionCriteria) {
+      intro.description = descriptionCriteria;
+    }
+    return intro;
+  }
+
+  private isDeclaredCriteria(criteria: Criteria | undefined): criteria is Criteria {
+    if (!criteria || !criteria.id) {
+      return false;
+    }
+    if (criteria.id === 'id' || criteria.id === 'description') {
+      return true;
+    }
+    return typeof criteria.name === 'string' && criteria.name.trim().length > 0;
   }
 }
