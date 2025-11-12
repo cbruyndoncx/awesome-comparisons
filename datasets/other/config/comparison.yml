@@ -10,7 +10,10 @@ criteria:
       table: true
       detail: true
       description: 'Coding tool can operate in a terminal/cli environment'
-      placeholder: *ref_1
+      placeholder: &ref_1
+        template: 'Select {} ...'
+        variables:
+          - name
       order: '20'
       andSearch: false
       rangeSearch: false

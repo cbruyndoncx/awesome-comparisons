@@ -200,6 +200,7 @@ table {
     border: 1px solid var(--border-color, rgba(15, 23, 42, 0.12));
     border-radius: 999px;
     background: var(--card-background, #ffffff);
+    color: var(--text-color, #0f172a);
     padding: 4px 10px;
     display: inline-flex;
     align-items: center;
@@ -210,7 +211,7 @@ table {
 
 .group-controls__toggle:hover,
 .group-controls__toggle:focus-visible {
-    background: rgba(37, 99, 235, 0.12);
+    background: var(--hover-color, rgba(37, 99, 235, 0.12));
 }
 
 .group-controls__list {

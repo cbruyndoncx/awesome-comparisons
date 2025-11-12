@@ -26,6 +26,7 @@ criteria:
         'Integrates with major IDEs (VS Code, JetBrains, Neovim) and offers chat integrations; product roadmap and integrations may expand': {}
         Modular architecture designed for composing custom IDEs and integrating extensions (supports VS Code extensions via Open VSX): {}
         Platform exposes agentic workflows and configuration (rules/policies) to steer agent behavior across projects.: {}
+        'Verdent offers extension points and a VS Code plugin; specialized subagents (e.g., Researcher, Verifier) execute tasks in parallel and can be customized.': {}
         Extension registry available; growing ecosystem but smaller than VS Code's marketplace: {}
   - LocalOffline:
       type: LABEL
@@ -60,7 +61,8 @@ criteria:
         Supports local model execution and private/on-prem deployments. Offers VPC and air-gapped installation options for organizations with strict data residency and compliance requirements.: {}
         Theia can run locally as a desktop app or be self-hosted on-premise. Its AI integrations support local/offline models (where supported by the chosen model runtime) enabling air-gapped or privacy-sensitive deployments.: {}
         Trae runs cloud models and does not currently advertise a fully local/offline mode: {}
-        No (cloud-first product; local-only operation not advertised): {}
+        Cloud-first product; local-only operation not advertised: {}
+        Cloud-first with extension-based integration into VS Code. Local offline modes not advertised; enterprise/enterprise-on-prem options may exist.: {}
         'Supports running local/open-source models via integrations (Ollama, LM Studio, local runners) so inference can remain on-device or on-prem.': {}
         Windsurf is primarily a cloud-hosted agent; local/offline modes are limited compared with some local-first tools (though integrations and enterprise offerings may offer stronger controls).: {}
         Zed can be configured to use local LLMs (via Ollama or other OpenAI-compatible endpoints) so prompts and code can stay on-device. It also supports running Ollama on remote GPU hosts (SSH/port-forwarding) if needed.: {}
@@ -89,6 +91,7 @@ criteria:
         Integrates with IDEs and understands repository context; includes features that operate across the repo and work with recent edits: {}
         'Native Git support via extensions (benefits from VS Code extension ecosystem). Git tooling, source control views and integrations are commonly added through Open VSX extensions.': {}
         'Built-in workflows for creating commits, opening pull requests, and rolling back changes from the Deck interface.': {}
+        Integrated commit/PR workflows: {}
         Integrates with Git workflows; project-aware features and diagnostics help with common VCS tasks.: {}
         'Yes': {}
         'No': {}
@@ -192,6 +195,7 @@ criteria:
         'Theia provides multiple, well-defined mechanisms for managing and updating context: workspace scopes (user/workspace/folder) for preferences; a WorkspaceService and WorkspaceState for persisting extension-specific data; context keys and keybinding/menu "when" expressions to gate UI and commands; editor/selection/active widget context propagated by the frontend; and programmatic APIs (e.g. ContextKeyService, PreferenceService, WorkspaceService) that extensions use to observe and update context.': {}
         '[Trae maintains and updates context using a combination of codebase indexing, persistent project "rules" files, and Model Context Protocol (MCP) sessions. The IDE indexes repository files and open buffers to provide file-level and project-level context to agents; rules/metadata files persist project conventions and preferences so the agent remembers them across sessions; MCP enables explicit context objects to be attached to agent calls (scoped contexts for tasks, file lists, or external resources). The Builder/ SOLO flows present "execution previews" before changes are applied so users can review and refine context or constraints.]': {}
         Verdent indexes full repositories and maintains long-horizon session context so agents can reason about project-wide structure rather than only the active file.: {}
+        Long-horizon memory and repository indexing: {}
         'Void maintains multi-file and workspace-level context via file indexing and a project-aware workspace model. The editor exposes this context to its AI features in several ways:': {}
         'File indexing / workspace awareness: Void builds an index of the repository so the AI can reason over multiple files (cross-file references, symbol lookup, project-level search).': {}
         'Chat attachments & contextual chat: users can include files or open buffers in the contextual AI chat so that the model receives precise file-level context for questions or fixes.': {}
@@ -282,6 +286,7 @@ criteria:
         'Theia exposes direct file and URI APIs for referencing and manipulating files: FileSystem/FileSystemProvider (backend), URI objects, WorkspaceService for workspace roots, and EditorManager/EditorOpener for opening files. Extensions typically use these services to resolve file paths, create/open editors (EditorManager.open(uri)), and watch file changes (FileSystem.watch). Theia also interoperates with VS Code-style URIs when using VS Code plugins.': {}
         '[Files can be directly referenced via the editor and agent commands: the Builder/agent can accept file paths or scoped file selections, the chat supports inline file references and #Context-like selectors, and the system indexes files so agents can open, diff, and patch specific files. Editor integration also permits selecting an open file or range to provide explicit context to the agent.]': {}
         Integrates with repo files and exposes relevant files to agents; VS Code extension offers in-editor actions while Deck manages sessions and diffs.: {}
+        Agents can surface and edit files directly in the workspace: {}
         'Files can be directly referenced and provided to the AI workflows:': {}
         'Inline edits: AI can propose and apply edits directly to files opened in the editor (Ctrl+K inline editing and Fast Apply for large files).': {}
         'Chat file attachments: the chat UI supports attaching files and referencing file paths so the assistant works from concrete file content.': {}
@@ -454,6 +459,7 @@ criteria:
         'While Theia does not mandate a specific "AI subagent" framework, it fully supports implementing specialized subagents via extensions: backend services or microservices (HTTP/WebSocket/RPC) that host LLMs or agent orchestration, frontend contributions that present agent UIs (views, webviews, quick-open), and integration points for multi-agent workflows (task APIs, terminals, debug adapters). Projects like Theia AI (and other community extensions) demonstrate how to implement multi-agent assistants and orchestrate them from Theia extensions.': {}
         '[Trae enables specialized subagents via the MCP client and custom agent definitions (SOLO, Builder, and user-defined agents). Users can create task-specific agents (e.g., testing agent, refactor agent, deploy agent) that encapsulate particular workflows and tool access scopes; these subagents can be invoked from the main Builder flow or chat.]': {}
         Work is decomposed and routed to specialized subagents that execute in parallel where appropriate.: {}
+        'Specialized subagents (e.g., Researcher, Verifier) execute tasks in parallel': {}
         'Void supports autonomous "Agent Mode" which runs multi-step workflows where the model can read files, propose changes, and run terminal commands. While not described as a formal multi-agent framework, Agent Mode functions as a specialized subagent that can be granted permissions (read/write/terminal) and operate semi-autonomously.': {}
         'Users can select models for Agent Mode (local or cloud) and control behavior through editable prompts and configuration, enabling task-specific agent behaviors (e.g., code-rewrite agent, audit agent via Gather Mode).': {}
         'Specialized flows & model selection: Cascade supports creating distinct AI flows with specific settings (model choice, memory, rules) to act like specialized subagents for task-specific workflows (e.g., refactor agent, test-generator agent).': {}
@@ -515,6 +521,7 @@ criteria:
         'Theia bundles commands, contributions, and lifecycle hooks via the extension/package model. An extension is packaged with frontend and optional backend parts and declares contribution points (commands, menus, views, preferences) in its package.json. Theia also supports VS Code-style plugins (via the plugin extension) and Open VSX packaging to reuse existing VS Code extensions.': {}
         '[Trae supports extensions and plugin-like integration via its VS Code ancestry (VS Code extensions compatibility) and by exposing MCP for bundling agent behaviors and tool integrations. Developers can package commands, agents, and hook logic in extension form or via MCP client modules to compose reusable feature bundles.]': {}
         Verdent provides a VS Code extension to bring Deck-style agent capabilities into the editor.: {}
+        Verdent provides a VS Code extension to bring Deck-style agent capabilities into the editor: {}
         'Because Void is a VS Code fork, it inherits the extension/plugin model. In addition to built-in integrations (Ollama, DocSearch, etc.), developers can add extensions or propose new integrations via the project''s plugin/extension mechanisms. This allows bundling commands, AI integrations, and UI elements into installable packages.': {}
         'VS Code extension compatibility: As a VS Code fork, Windsurf can leverage the existing extension/plugin ecosystem to bundle commands, linters, debuggers and UI integrations.': {}
         'AI rules + extensions: Windsurf''s AI rules and Cascade flows can be combined with extensions to create reusable bundles of behavior (commands + hooks + rules).': {}
@@ -577,6 +584,7 @@ criteria:
         Server and agent provide CLI tools; Docker image and direct binary available for server usage.: {}
         Integrated terminal available (desktop & web). AI features add inline assistance in terminals in recent AI-enabled builds.: {}
         Integrates with developer workflows and git; Deck is focused on high-level orchestration rather than being a terminal IDE replacement.: {}
+        Integrates with developer workflows and git; focused on high-level orchestration.: {}
         Built-in integrated terminal and task runner.: {}
         'Yes': {}
         'No': {}
@@ -592,6 +600,7 @@ criteria:
         'MCP servers extend RooCode beyond the editor to interact with Docker, databases, browsers and other external tooling.': {}
         'Cody and the AI integrations support bringing multi-repo and file-context into model prompts (context-enhanced chat); suitable for advanced, model-backed code assistance workflows.': {}
         Model Context Protocol support added in v1.3.0 to enable custom agents and richer context handling: {}
+        '-': {}
         MCP servers are integrated similar to other extensions like e.g. theming: {}
         'Yes': {}
         'No': {}
@@ -717,6 +726,7 @@ criteria:
         'Theia provides several mechanisms that function as checkpoints or enable recovery: workspace state persistence (open editors, layout), crash/restart recovery, cloud/workspace snapshots in managed deployments, and extensible local-history or snapshot extensions. For source-controlled checkpoints, Theia integrates with Git extensions (commit/branch/rollback) so users can revert changes via standard VCS workflows. For richer checkpoint semantics, authors typically add an extension (local history, snapshotting service, or backend snapshot API).': {}
         '[Trae provides undo and checkpointing through several mechanisms: execution previews (inspect changes before apply), native Git/VCS integration (stage/commit/checkout to revert), and the Builder''s planned-change workflow which can be canceled or rolled back. These combined affordances let teams undo agent actions or restore prior states.]': {}
         Git worktree integration provides commit/rollback and branch management per agent session to prevent unwanted repository-level collisions.: {}
+        Worktree-level commits and rollbacks protect main branches: {}
         'Multiple mechanisms exist to undo or revert agent actions:': {}
         'Editor undo stack: AI-applied edits are regular editor changes and can be undone with the editor''s undo/redo commands.': {}
         'Git / source control: typical Git workflows (commits, branches) can be used to checkpoint and revert agent changes; teams can require PRs for AI changes.': {}
@@ -762,7 +772,8 @@ criteria:
         'Tabnine does not natively implement a spec-driven development framework. It is workflow-agnostic and can be used alongside SDD tools (Tessl, OpenSpec, etc.) but offers no built-in spec-to-code or spec-management features. Enterprise customers can integrate Tabnine into their development workflows (including spec-driven ones) by configuring model training, repository indexing, and IDE settings to align with SDD practices.': {}
         'Theia itself is an IDE framework and does not enforce a particular spec-driven development tool, but it is compatible with SDD workflows. In projects that use Tessl (like this repo), Theia can be extended to surface Tessl specs, run Tessl tools via tasks/terminals, and provide editor integrations (syntax highlighting, quick actions) for Tessl-managed specs.': {}
         '[Trae is not tied to a specific spec-driven development framework. It integrates with project rules/metadata and MCP-driven agents so it can be used alongside spec-driven workflows (including Tessl or other frameworks) but does not formally implement or require one of the listed SDD frameworks.]': {}
-        Tessl (conceptually aligns with outcome-driven planning and spec-to-code workflows): {}
+        Conceptually aligns with outcome-driven planning and spec-to-code workflows: {}
+        '-': {}
         'Void Editor is not itself a spec-driven-development tool; it is an AI-powered code editor. There is no native mapping to the named SDD frameworks (BMAD, SpecKit, OpenSpec, Tessl, AgentOS, ClaudeFlow, SPARC, SuperClaude). However, Void''s prompt-editing, workspace awareness and Agent/Gather modes can be combined with external SDD tooling (e.g., Tessl or a spec runner) by using extensions or workspace scripts to enforce spec-driven workflows.': {}
         'Windsurf is not tied to a single, opinionated spec-driven development framework. Instead it provides flexible automation primitives (flows, rules, memories, extensions) that teams can use to implement SDD processes such as Tessl or other internal spec workflows.': {}
         'Zed itself does not ship a built-in spec-driven development framework (none of the listed frameworks are bundled with the editor). Zed is an extensible editor and can be used alongside spec-driven workflows or external tools (including Tessl, SpecKit, or custom tooling) via its extension system, Agent Panel tools, or external integrations, but no first-class, editor-native SDD framework is documented in the available sources.': {}
@@ -792,10 +803,6 @@ criteria:
         Node.js / Express (backend): {}
         'SQLite, PostgreSQL': {}
         Many other popular languages (wide IDE/language support): {}
-        Any (multi-language support via AI backends): {}
-        JavaScript / TypeScript: {}
-        Shell scripts: {}
-        Any (language-agnostic): {}
         'Python, JavaScript/TypeScript, Go, Java, Ruby, C#, and most common programming languages (broad support via language-agnostic indexing)': {}
         Any: {}
         Java: {}
@@ -873,125 +880,15 @@ criteria:
         Core source available on GitHub: {}
         'Yes': {}
         'No': {}
-  - Usefullinks:
-      name: Useful links
+  - Classification:
       type: LABEL
-      search: true
-      table: true
-      detail: true
-      description: &ref_0
-        template: 'Default description for {}'
-        variables:
-          - name
-      placeholder: &ref_1
-        template: 'Select {} ...'
-        variables:
-          - name
-      order: ''
-      andSearch: false
-      rangeSearch: false
       values:
-        'Yes':
-          display: ✅
-        'No':
-          displayHtml: <span class="status status-no">✖</span>
-        'Official site: https://cursor.com': {}
-        'Announcement coverage: select product release posts and reviews (search for "Cursor 2.0 Composer multi-agent").': {}
-  - UngroupedCriteria:
-      name: Ungrouped Criteria
-      type: MARKDOWN
-      search: false
-      table: false
-      detail: false
-      description: ''
-      placeholder: ''
-      order: ''
-      andSearch: false
-      rangeSearch: false
-      children:
-        - Terminal
-        - Notes
-        - Last Update
-        - SpecDrivenDevelopment
-        - General Info
-        - RepositoryActive
-        - Rating-Criteria
-  - SourcesFurtherReading:
-      name: Sources / Further Reading
-      type: LABEL
-      search: true
-      table: true
-      detail: true
-      description: *ref_0
-      placeholder: *ref_1
-      order: ''
-      andSearch: false
-      rangeSearch: false
-      values:
-        'Yes':
-          display: ✅
-        'No':
-          displayHtml: <span class="status status-no">✖</span>
-        'Vendor and press coverage (product announcements and interviews, 2025)': {}
-        Early user reports and blog posts discussing Verdent's plan-first approach and Deck application: {}
-  - KeyFeatures:
-      name: Key Features
-      type: LABEL
-      search: true
-      table: true
-      detail: true
-      description: *ref_0
-      placeholder: *ref_1
-      order: ''
-      andSearch: false
-      rangeSearch: false
-      values:
-        'Yes':
-          display: ✅
-        'No':
-          displayHtml: <span class="status status-no">✖</span>
-        Plan-first task decomposition and agent orchestration: {}
-        Parallel subagents with isolated git worktrees: {}
-        Built-in verifier for automated testing and web interactions: {}
-        DiffLens for clear visibility into changes: {}
-        'Commit, PR creation, and rollback support from within the editor': {}
-        Customizable rules and permissions to control agent autonomy: {}
-  - Extensibility:
-      name: Extensibility
-      type: LABEL
-      search: true
-      table: true
-      detail: true
-      description: *ref_0
-      placeholder: *ref_1
-      order: ''
-      andSearch: false
-      rangeSearch: false
-      values:
-        'Yes':
-          display: ✅
-        'No':
-          displayHtml: <span class="status status-no">✖</span>
-        'Plugins: Yes — Verdent offers extension points and a VS Code plugin': {}
-        'Subagents: Yes — specialized subagents (e.g., Researcher, Verifier) execute tasks in parallel and can be customized': {}
-  - Sources:
-      name: Sources
-      type: LABEL
-      search: true
-      table: true
-      detail: true
-      description: *ref_0
-      placeholder: *ref_1
-      order: ''
-      andSearch: false
-      rangeSearch: false
-      values:
-        'Yes':
-          display: ✅
-        'No':
-          displayHtml: <span class="status status-no">✖</span>
-        Verdent product announcements and coverage (2025): {}
-        Reviews and demonstrations showing Verdent launching from within VS Code and the Verdent Deck demos: {}
+        AIE/Model: {}
+        Code/Autonomous agent: {}
+        Code/Editor: {}
+        Code/Spec Driven: {}
+        Code/Terminal: {}
+        Product/Prototyping: {}
   - Prompts:
       type: LABEL
       values:
@@ -1007,12 +904,3 @@ criteria:
       values:
         'Yes': {}
         'No': {}
-  - Classification:
-      type: LABEL
-      values:
-        AIE/Model: {}
-        Code/Autonomous agent: {}
-        Code/Editor: {}
-        Code/Spec Driven: {}
-        Code/Terminal: {}
-        Product/Prototyping: {}

@@ -74,6 +74,7 @@ Cursor reimagines the developer workflow by making AI agents first-class collabo
 - Model flexibility: Cursor supports multiple model providers and BYOK; teams can choose higher-accuracy or lower-latency models depending on workflow needs.
 - Collaboration & teams: Team and Enterprise tiers add centralized billing, SSO, usage analytics, and admin controls for managing agent behavior across an organization.
 - Pricing model: Tiered offering (Hobby free tier, Pro, Pro+, Ultra, Teams, Enterprise) with per-plan usage multipliers and add-ons. Pricing reflects model-inference costs and usage limits—pick plans carefully for heavy agent workloads.
+- Useful links: Official site: https://cursor.com | Announcement coverage: select product release posts and reviews (search for "Cursor 2.0 Composer multi-agent").
 
 ## ContextManagement
 - Yes
@@ -114,8 +115,3 @@ Cursor reimagines the developer workflow by making AI agents first-class collabo
 
 ## Last Update
 2025-10-29
-
-
-## Useful links
-- Official site: https://cursor.com
-- Announcement coverage: select product release posts and reviews (search for "Cursor 2.0 Composer multi-agent").

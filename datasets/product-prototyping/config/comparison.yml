@@ -10,7 +10,10 @@ criteria:
       table: true
       detail: true
       description: 'Coding tool can operate in a terminal/cli environment'
-      placeholder: 
+      placeholder: &ref_1
+        template: 'Select {} ...'
+        variables:
+          - name
       order: '20'
       andSearch: false
       rangeSearch: false
@@ -24,7 +27,7 @@ criteria:
       table: true
       detail: true
       description: 'Has support for these Spec Driven Development methodologies:'
-      placeholder: 
+      placeholder: *ref_1
       order: '60'
       andSearch: false
       rangeSearch: false

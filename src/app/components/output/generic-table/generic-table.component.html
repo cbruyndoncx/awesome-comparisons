@@ -6,7 +6,8 @@
                 <button type="button"
                         class="group-controls__toggle"
                         (click)="toggleExpand.emit(!tableExpanded)"
-                        [attr.aria-pressed]="tableExpanded">
+                        [attr.aria-pressed]="tableExpanded"
+                        [attr.title]="tableExpanded ? 'Collapse table view' : 'Expand table view'">
                     <iicon [icon]="tableExpanded ? 'resize-small' : 'resize-full'"></iicon>
                     <span class="sr-only">{{ tableExpanded ? 'Collapse table view' : 'Expand table view' }}</span>
                 </button>

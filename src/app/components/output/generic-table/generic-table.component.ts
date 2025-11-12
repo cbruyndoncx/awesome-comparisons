@@ -31,8 +31,10 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
     @Input() showMissingIndicators: boolean = false;
     @Input() dataElements: Array<DataElement> = [];
     @Input() tableExpanded: boolean = false;
+    @Input() viewMode: string = 'table';
 
     @Output() toggleExpand: EventEmitter<boolean> = new EventEmitter<boolean>();
+    @Output() viewModeChange: EventEmitter<string> = new EventEmitter<string>();
 
     public groups$: Observable<FeatureGroupView[]>;
     public columnGroupMap$: Observable<Record<string, string>>;
