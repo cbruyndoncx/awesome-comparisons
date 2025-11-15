@@ -83,6 +83,9 @@ export class FeatureGroupingService {
                     primaryCriteria: primaryCriteria || null
                 });
                 seenGroups.add(criteria.id);
+                if (criteria.name && criteria.name !== criteria.id) {
+                    seenGroups.add(criteria.name);
+                }
             } else {
                 flat.push(criteria);
             }
@@ -139,6 +142,9 @@ export class FeatureGroupingService {
                 primaryCriteria: primaryCriteria || null
             });
             seenGroups.add(groupKey);
+            if (criteria?.name && criteria.name !== groupKey) {
+                seenGroups.add(criteria.name);
+            }
         });
 
         const groupedColumnKeys = new Set(Object.keys(columnGroupMap));

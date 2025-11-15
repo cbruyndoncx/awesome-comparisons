@@ -1,33 +1,4 @@
 criteria:
-  - Extensible:
-      type: LABEL
-      values:
-        'Yes': {}
-        'Supports Model Context Protocol (MCP) connections and a plugin/alias system for third-party tooling (monitoring, security providers)': {}
-        Plugin / "Codi Apps" modular tools model: {}
-        'Plugins / IDE extensions (VS Code, JetBrains, Vim/Neovim)': {}
-        'Integrations with GitHub, Jira, Confluence, Notion, Linear': {}
-        VS Code extension plus MCP (Model Context Protocol) support for custom tools: {}
-        'Continue is built to be extensible via blocks, MCP integrations and a hub for sharing assistants.': {}
-        'Extension points for integrations, team commands, and model selection. Cursor emphasizes agent tooling and may provide hooks for custom integrations via its dashboard and extension APIs.': {}
-        'VS Code extension available (integrates chat, slash commands, inline quick edits)': {}
-        'Integrations: Figma import (Builder.io plugin), GitHub/GitLab/Bitbucket import, template gallery': {}
-        'Editor and IDE integrations (VS Code, Visual Studio, JetBrains, Xcode, Vim/Neovim, Eclipse), GitHub Marketplace extensions and CLI/Terminal integrations': {}
-        Integrates with Vertex AI and supports function-calling/tool integrations: {}
-        IDE plugin surface for different JetBrains products: {}
-        'Integrates with IDEs (VS Code, Cursor), web app and desktop client; supports multi-repo context and external LLMs': {}
-        MCP (Model Context Protocol) Server Marketplace for custom tools and integrations: {}
-        Fine-tuning / post-training on private repos: {}
-        Integration via plugins and Continue.dev: {}
-        Fork of VSCode + modular submodules for AI features; supports plugins and integrations: {}
-        Editor extensions are available on paid tiers (editor plugins/support mentioned in product features): {}
-        'VS Code extension architecture, custom modes, MCP (Model Context Protocol) servers, and provider/plugin integrations': {}
-        'Integrations: IDE plugins (VS Code, JetBrains, Visual Studio, Eclipse), browser extensions, code host integrations (GitHub, GitLab, Bitbucket), API and webhooks, app/extensions framework': {}
-        'Integrates with major IDEs (VS Code, JetBrains, Neovim) and offers chat integrations; product roadmap and integrations may expand': {}
-        Modular architecture designed for composing custom IDEs and integrating extensions (supports VS Code extensions via Open VSX): {}
-        Platform exposes agentic workflows and configuration (rules/policies) to steer agent behavior across projects.: {}
-        'Verdent offers extension points and a VS Code plugin; specialized subagents (e.g., Researcher, Verifier) execute tasks in parallel and can be customized.': {}
-        Extension registry available; growing ecosystem but smaller than VS Code's marketplace: {}
   - LocalOffline:
       type: LABEL
       values:
@@ -66,33 +37,6 @@ criteria:
         'Supports running local/open-source models via integrations (Ollama, LM Studio, local runners) so inference can remain on-device or on-prem.': {}
         Windsurf is primarily a cloud-hosted agent; local/offline modes are limited compared with some local-first tools (though integrations and enterprise offerings may offer stronger controls).: {}
         Zed can be configured to use local LLMs (via Ollama or other OpenAI-compatible endpoints) so prompts and code can stay on-device. It also supports running Ollama on remote GPU hosts (SSH/port-forwarding) if needed.: {}
-        'Yes': {}
-        'No': {}
-  - GitSupport:
-      type: LABEL
-      values:
-        Integrates with repository search and can surface examples and API usage from GitHub/open-source code; version-control integration is part of the IDE workflow.: {}
-        Works with repository workflows via IDE integrations; generated suggestions and transformations can be applied to local repos but require human review for correctness and licensing.: {}
-        Reads project context / Codespace-style integrations for richer suggestions: {}
-        Native integrations (MCP-style integrations) for GitHub and git workflows; automation via CLI for PR/comments/summaries.: {}
-        Uses git worktrees and integrates with standard Git workflows. Multi-agent execution uses isolated worktrees to avoid merge conflicts while agents make changes.: {}
-        Integrates with local repositories and provides VS Code extension workflows: {}
-        'Import from GitHub, GitLab, Bitbucket; code workspace exposes repo integration and basic Git operations.': {}
-        'Integrates with GitHub workflows: PR description generation, PR creation by the Copilot agent, and issue-to-PR workflows in enterprise features.': {}
-        Studio offers code export but does not act as a git host. Exported snippets are intended to be copied into developer repositories.: {}
-        'Assistive features for commit messages, PR descriptions, refactor-aware changes, and multi-file edits that can be staged/reviewed in the IDE.': {}
-        'Can produce git patches and integrate with repositories; IDE extensions apply changes directly]': {}
-        'deep Git/GitHub integration patterns for generating commit messages, searching codebase, and automating repo tasks': {}
-        Generates/clones GitHub repositories for created apps: {}
-        'Integrates with repositories for retrieval-augmented generation, code search, and fine-tuning': {}
-        Integrates with Git workflows; offers @diff referencing of branch changes and commit workflow helpers: {}
-        RooCode can run terminal/cli actions and operate on workspace files; many users run git commands through the integrated terminal or via custom MCP servers.: {}
-        Deep integrations with Git-based hosts and workflows; built to index and search Git repositories at scale.: {}
-        Integrates with IDEs and understands repository context; includes features that operate across the repo and work with recent edits: {}
-        'Native Git support via extensions (benefits from VS Code extension ecosystem). Git tooling, source control views and integrations are commonly added through Open VSX extensions.': {}
-        'Built-in workflows for creating commits, opening pull requests, and rolling back changes from the Deck interface.': {}
-        Integrated commit/PR workflows: {}
-        Integrates with Git workflows; project-aware features and diagnostics help with common VCS tasks.: {}
         'Yes': {}
         'No': {}
   - ContextManagement:
@@ -298,6 +242,124 @@ criteria:
         'You can also insert selected text from the main editor into the assistant buffer via keyboard shortcuts or the command palette, and the Agent Panel tools can navigate and open files as the agent reads your workspace.': {}
         'Yes': {}
         'No': {}
+  - GitSupport:
+      type: LABEL
+      values:
+        Integrates with repository search and can surface examples and API usage from GitHub/open-source code; version-control integration is part of the IDE workflow.: {}
+        Works with repository workflows via IDE integrations; generated suggestions and transformations can be applied to local repos but require human review for correctness and licensing.: {}
+        Reads project context / Codespace-style integrations for richer suggestions: {}
+        Native integrations (MCP-style integrations) for GitHub and git workflows; automation via CLI for PR/comments/summaries.: {}
+        Uses git worktrees and integrates with standard Git workflows. Multi-agent execution uses isolated worktrees to avoid merge conflicts while agents make changes.: {}
+        Integrates with local repositories and provides VS Code extension workflows: {}
+        'Import from GitHub, GitLab, Bitbucket; code workspace exposes repo integration and basic Git operations.': {}
+        'Integrates with GitHub workflows: PR description generation, PR creation by the Copilot agent, and issue-to-PR workflows in enterprise features.': {}
+        Studio offers code export but does not act as a git host. Exported snippets are intended to be copied into developer repositories.: {}
+        'Assistive features for commit messages, PR descriptions, refactor-aware changes, and multi-file edits that can be staged/reviewed in the IDE.': {}
+        'Can produce git patches and integrate with repositories; IDE extensions apply changes directly]': {}
+        'deep Git/GitHub integration patterns for generating commit messages, searching codebase, and automating repo tasks': {}
+        Generates/clones GitHub repositories for created apps: {}
+        'Integrates with repositories for retrieval-augmented generation, code search, and fine-tuning': {}
+        Integrates with Git workflows; offers @diff referencing of branch changes and commit workflow helpers: {}
+        RooCode can run terminal/cli actions and operate on workspace files; many users run git commands through the integrated terminal or via custom MCP servers.: {}
+        Deep integrations with Git-based hosts and workflows; built to index and search Git repositories at scale.: {}
+        Integrates with IDEs and understands repository context; includes features that operate across the repo and work with recent edits: {}
+        'Native Git support via extensions (benefits from VS Code extension ecosystem). Git tooling, source control views and integrations are commonly added through Open VSX extensions.': {}
+        'Built-in workflows for creating commits, opening pull requests, and rolling back changes from the Deck interface.': {}
+        Integrated commit/PR workflows: {}
+        Integrates with Git workflows; project-aware features and diagnostics help with common VCS tasks.: {}
+        'Yes': {}
+        'No': {}
+  - Extensible:
+      type: LABEL
+      values:
+        'Yes': {}
+        'Supports Model Context Protocol (MCP) connections and a plugin/alias system for third-party tooling (monitoring, security providers)': {}
+        Plugin / "Codi Apps" modular tools model: {}
+        'Plugins / IDE extensions (VS Code, JetBrains, Vim/Neovim)': {}
+        'Integrations with GitHub, Jira, Confluence, Notion, Linear': {}
+        VS Code extension plus MCP (Model Context Protocol) support for custom tools: {}
+        'Continue is built to be extensible via blocks, MCP integrations and a hub for sharing assistants.': {}
+        'Extension points for integrations, team commands, and model selection. Cursor emphasizes agent tooling and may provide hooks for custom integrations via its dashboard and extension APIs.': {}
+        'VS Code extension available (integrates chat, slash commands, inline quick edits)': {}
+        'Integrations: Figma import (Builder.io plugin), GitHub/GitLab/Bitbucket import, template gallery': {}
+        'Editor and IDE integrations (VS Code, Visual Studio, JetBrains, Xcode, Vim/Neovim, Eclipse), GitHub Marketplace extensions and CLI/Terminal integrations': {}
+        Integrates with Vertex AI and supports function-calling/tool integrations: {}
+        IDE plugin surface for different JetBrains products: {}
+        'Integrates with IDEs (VS Code, Cursor), web app and desktop client; supports multi-repo context and external LLMs': {}
+        MCP (Model Context Protocol) Server Marketplace for custom tools and integrations: {}
+        Fine-tuning / post-training on private repos: {}
+        Integration via plugins and Continue.dev: {}
+        Fork of VSCode + modular submodules for AI features; supports plugins and integrations: {}
+        Editor extensions are available on paid tiers (editor plugins/support mentioned in product features): {}
+        'VS Code extension architecture, custom modes, MCP (Model Context Protocol) servers, and provider/plugin integrations': {}
+        'Integrations: IDE plugins (VS Code, JetBrains, Visual Studio, Eclipse), browser extensions, code host integrations (GitHub, GitLab, Bitbucket), API and webhooks, app/extensions framework': {}
+        'Integrates with major IDEs (VS Code, JetBrains, Neovim) and offers chat integrations; product roadmap and integrations may expand': {}
+        Modular architecture designed for composing custom IDEs and integrating extensions (supports VS Code extensions via Open VSX): {}
+        Platform exposes agentic workflows and configuration (rules/policies) to steer agent behavior across projects.: {}
+        'Verdent offers extension points and a VS Code plugin; specialized subagents (e.g., Researcher, Verifier) execute tasks in parallel and can be customized.': {}
+        Extension registry available; growing ecosystem but smaller than VS Code's marketplace: {}
+  - Plugins:
+      type: LABEL
+      values:
+        'aiXcoder bundles IDE plugins (VS Code, JetBrains, Eclipse) that package UI commands, context capture, and model inference; enterprise offerings include private bundles and integrations for internal tooling.': {}
+        'Amazon Q supports a plugin/alias system and MCP-based integrations:': {}
+        'AWS Console plugin aliases: third-party providers (CloudZero, Datadog, Wiz) are configured as aliases; prefixing queries with an alias causes Amazon Q to call that provider''s APIs and surface results with deep links.': {}
+        'MCP servers: act as plugin-style connectors that expose structured context and actions to the assistant (e.g., Jira issues, Figma designs, cluster data from an EKS MCP server).': {}
+        'Privacy model: plugin usage is designed to avoid sending chat transcripts to third-party providers during configuration and use (data flows are described in docs as provider API calls initiated by the Q service and surfaced to the user).': {}
+        'Bundling: while there isn''t a published "plugin SDK" in the same sense as browser extensions, MCP provides the protocol for bundling tool connectors, and the AWS Console aliasing provides the user-visible mechanism to call them.': {}
+        'Codi Apps: an internal modular plugin-like system of specialized tools that provide focused capabilities (refactors, test generation, SQL/regex builders, explainers).': {}
+        'IDE plugins: official extensions for VS Code and other community extensions for JetBrains, Neovim, Sublime, Zed, Cursor, Continue.dev that integrate AskCodi features directly into editors.': {}
+        'Augment offers an extensibility model via editor plugins (VS Code, JetBrains, Vim/Neovim), MCP connectors and native integrations (GitHub, Jira, Confluence, Notion, Linear). These bundle commands, agent capabilities, and integration hooks so teams can compose workflows and connect external tools.': {}
+        'Extensibility via the open-source client: Brokk''s codebase and configuration enable integration points (model providers, build system adapters, dependency importers) and teams can extend behavior by modifying or contributing to the client.': {}
+        BYOK and configurable model/provider integrations let organizations plug in their preferred LLMs and key management approaches.: {}
+        'MCP provides a mechanism to bundle commands, tools and integrations: developers create MCP servers/tools and install them into Cline to extend functionality.': {}
+        'The VS Code extension model plus community MCP servers enables packaging sets of capabilities (commands, hooks, tool endpoints) that behave like plugins.': {}
+        'The platform is extensible: CodeLayer is open-source and designed to be extended via configuration, model selection, and SDK integrations. HumanLayer''s SDK and webhooks let teams bundle commands, agent behaviors, and approval hooks into higher-level integrations (e.g., repo automation, CI hooks, Slack routing). The repo and SDK patterns enable building custom integrations or plugins that orchestrate agents and human approvals.': {}
+        'Extension/recipe model allows bundling commands, agents and hooks:': {}
+        Extensions are enable/disable units (platform__manage_extensions) that change the agent's available toolset.: {}
+        Scheduled recipe jobs (platform__manage_schedule create) can package recurring workflows.: {}
+        'dynamic_task__create_task tasks can be used as reusable, parameterized operations that behave like plugins when stored and invoked programmatically.': {}
+        'Sources:': {}
+        platform__manage_extensions: {}
+        platform__manage_schedule: {}
+        dynamic_task__create_task: {}
+        'Extension/integration points exist for model providers, team commands, and tooling integrations; the ecosystem is growing.': {}
+        DevoxxGenie itself is a JetBrains plugin and can be extended by modifying its source or contributing upstream; it supports connectors to different model backends (local or cloud) and MCP servers.: {}
+        'Prompts, MCP connectors and embedding/RAG pipelines are the primary extensibility points exposed to users and integrators.': {}
+        'Firebase Studio exposes integrations and plugin-like extensions in the preview (examples: Builder.io Figma import, Genkit integration, template gallery, and Git provider integrations). These are enabled/configured through the workspace UI (import plugin/integration or select templates) and by provisioning AI resources (Gemini/Genkit) into the workspace; developer-facing documentation for authoring third-party plugins or bundling commands/agents/hooks is not publicly detailed in the preview documentation.': {}
+        'From021 does not expose a plugin system for bundling commands/agents/hooks. Integrations are provided as export connectors (examples: Trello, JIRA, v0, Lovable, Cursor) rather than a plugin marketplace or SDK.': {}
+        'While the Workspace integrated with developer tooling (Codespaces, VS Code extension) and could open sessions in those environments, there was no documented plugin system for bundling custom commands, agents, and hooks inside Workspace itself.': {}
+        'Is there a method of bundling together commands, agents and hooks ? If so, explain how''': {}
+        'Copilot Extensions / GitHub Apps act as bundles that package skillsets/agents, commands, and integration hooks; they are installed as apps or extensions in IDEs and on GitHub and include permission configuration (including Copilot Editor Context).': {}
+        Organization-managed Copilot Spaces and knowledge bases let admins distribute curated plugins/contexts across teams.: {}
+        'JetBrains IDEs support a rich plugin ecosystem. AI Assistant itself is delivered as IDE-integrated functionality and can interoperate with other plugins. Plugin authors can use the IntelliJ Platform plugin SDK to extend IDE behavior, integrate model endpoints, or build complementary tooling that works alongside the AI Assistant.': {}
+        'MarsX provides a Micro‑App marketplace that acts like a plugin system: Micro‑Apps are bundled units containing UI, backend logic, DB schemas, admin panels and metadata which can be installed into projects to add functionality.': {}
+        'Micro‑Apps function as self-contained extensions that can be shared, versioned, monetized (free/premium) and composed together, similar to a plugin ecosystem for full‑stack features.': {}
+        'Official IDE plugins for VS Code and JetBrains (private beta/GA progression) integrate completions, semantic search and one-click automations into the editor UI.': {}
+        'Integration with Continue.dev and the plugin model enables embedding Mistral Code features into IDE/tooling workflows and connecting to enterprise infrastructure (SSO, audit logs).': {}
+        'Ona integrates with IDE extensions and editor platforms (e.g., VS Code, JetBrains, Cursor, Zed) and exposes automation/extension points; bundling commands and automation into reusable packages is done via workspace/automation configuration and editor extension packs rather than a single "plugin store" model.': {}
+        'PearAI is extensible and built on a VSCode-like architecture; it supports plugins/integrations that can bundle commands, tooling, and integrations. Developers can extend behavior by adding integrations (model providers via BYOK, documentation sources, or custom tooling) and packaging those as extensions/plugins compatible with the environment.': {}
+        'The primary integration point is the VS Code extension which bundles commands, editor integrations, and the multi-agent orchestration into a single user-facing plugin. Additionally, Pythagora integrates with Git providers and deployment targets (one-click deploys), and supports configuration via a project-level core directory.': {}
+        There is no public evidence of a broader third-party plugin marketplace or plugin SDK — the VS Code extension and built-in integrations act as the bundling mechanism.: {}
+        'Refact.ai provides IDE plugins (VS Code, JetBrains, Neovim) and connectors (GitHub/GitLab, databases, Docker) that bundle commands, agent behaviors, and integrations into reusable workflows.': {}
+        Deployments (self-hosted Docker / enterprise images) and extension points allow organizations to integrate custom tools and scripts that the agent can call as part of its actions.: {}
+        'While Refraction provides an editor integration (a Sublime Text extension) for more convenient in-editor flows, there is no evidence of a broader extensibility/plugin system for bundling commands, agents, and hooks as a platform-facing plugin framework.': {}
+        'RooCode supports extension via MCP plugins/providers and integrates with multiple model providers. Teams can bundle together provider configurations, MCP servers, and custom modes to produce reusable plugin-like setups that encapsulate commands, tools, and integrations.': {}
+        'Runner H supports a plugin-style integration model via connectors and automation integrations (Zapier, Google Workspace, Slack, webhooks). These bundle together commands, workflows (recipes), and event hooks so teams can package reusable automation bundles and integrate them into broader pipelines.': {}
+        'There is no documented plugin system, extension marketplace, or bundling mechanism for adding new capabilities to the service.': {}
+        'Sourcegraph provides an extensions framework, IDE plugins, and integrations for IDEs (VS Code, JetBrains, Visual Studio) and code hosts (GitHub, GitLab, Bitbucket). These bundle commands, search capabilities, and code intelligence features that operate together with Cody and the platform.': {}
+        'Supermaven ships as IDE plugins (VS Code, JetBrains, Neovim) but it does not advertise a plugin ecosystem for bundling agent behaviors, commands and hooks as user-installable extensions. Integration is through the official plugins rather than a third-party plugin marketplace.': {}
+        'Theia bundles commands, contributions, and lifecycle hooks via the extension/package model. An extension is packaged with frontend and optional backend parts and declares contribution points (commands, menus, views, preferences) in its package.json. Theia also supports VS Code-style plugins (via the plugin extension) and Open VSX packaging to reuse existing VS Code extensions.': {}
+        '[Trae supports extensions and plugin-like integration via its VS Code ancestry (VS Code extensions compatibility) and by exposing MCP for bundling agent behaviors and tool integrations. Developers can package commands, agents, and hook logic in extension form or via MCP client modules to compose reusable feature bundles.]': {}
+        Verdent provides a VS Code extension to bring Deck-style agent capabilities into the editor.: {}
+        Verdent provides a VS Code extension to bring Deck-style agent capabilities into the editor: {}
+        'Because Void is a VS Code fork, it inherits the extension/plugin model. In addition to built-in integrations (Ollama, DocSearch, etc.), developers can add extensions or propose new integrations via the project''s plugin/extension mechanisms. This allows bundling commands, AI integrations, and UI elements into installable packages.': {}
+        'VS Code extension compatibility: As a VS Code fork, Windsurf can leverage the existing extension/plugin ecosystem to bundle commands, linters, debuggers and UI integrations.': {}
+        'AI rules + extensions: Windsurf''s AI rules and Cascade flows can be combined with extensions to create reusable bundles of behavior (commands + hooks + rules).': {}
+        'Zed has an extension system and a growing registry; extensions can add functionality and integrate with editor workflows. Extension development leverages WebAssembly and platform extension points, and MCP servers can provide additional tool capabilities to the Agent Panel.': {}
+        The ecosystem is younger and smaller than VS Code's marketplace but is expanding; community and first-party extensions are distributed via the registry.: {}
+        'Yes': {}
+        'No': {}
   - Hooks:
       type: LABEL
       values:
@@ -467,68 +529,20 @@ criteria:
         'There is no explicit public documentation describing named "subagents" you can define and register. Zed does provide an Agent Panel with tool calling, profiles that restrict or grant tool access, and MCP server integration for custom tools — these enable agentic workflows, but the term "subagent" (as separately definable autonomous agents) is not documented in the sources used.': {}
         'Yes': {}
         'No': {}
-  - Plugins:
-      type: LABEL
-      values:
-        'aiXcoder bundles IDE plugins (VS Code, JetBrains, Eclipse) that package UI commands, context capture, and model inference; enterprise offerings include private bundles and integrations for internal tooling.': {}
-        'Amazon Q supports a plugin/alias system and MCP-based integrations:': {}
-        'AWS Console plugin aliases: third-party providers (CloudZero, Datadog, Wiz) are configured as aliases; prefixing queries with an alias causes Amazon Q to call that provider''s APIs and surface results with deep links.': {}
-        'MCP servers: act as plugin-style connectors that expose structured context and actions to the assistant (e.g., Jira issues, Figma designs, cluster data from an EKS MCP server).': {}
-        'Privacy model: plugin usage is designed to avoid sending chat transcripts to third-party providers during configuration and use (data flows are described in docs as provider API calls initiated by the Q service and surfaced to the user).': {}
-        'Bundling: while there isn''t a published "plugin SDK" in the same sense as browser extensions, MCP provides the protocol for bundling tool connectors, and the AWS Console aliasing provides the user-visible mechanism to call them.': {}
-        'Codi Apps: an internal modular plugin-like system of specialized tools that provide focused capabilities (refactors, test generation, SQL/regex builders, explainers).': {}
-        'IDE plugins: official extensions for VS Code and other community extensions for JetBrains, Neovim, Sublime, Zed, Cursor, Continue.dev that integrate AskCodi features directly into editors.': {}
-        'Augment offers an extensibility model via editor plugins (VS Code, JetBrains, Vim/Neovim), MCP connectors and native integrations (GitHub, Jira, Confluence, Notion, Linear). These bundle commands, agent capabilities, and integration hooks so teams can compose workflows and connect external tools.': {}
-        'Extensibility via the open-source client: Brokk''s codebase and configuration enable integration points (model providers, build system adapters, dependency importers) and teams can extend behavior by modifying or contributing to the client.': {}
-        BYOK and configurable model/provider integrations let organizations plug in their preferred LLMs and key management approaches.: {}
-        'MCP provides a mechanism to bundle commands, tools and integrations: developers create MCP servers/tools and install them into Cline to extend functionality.': {}
-        'The VS Code extension model plus community MCP servers enables packaging sets of capabilities (commands, hooks, tool endpoints) that behave like plugins.': {}
-        'The platform is extensible: CodeLayer is open-source and designed to be extended via configuration, model selection, and SDK integrations. HumanLayer''s SDK and webhooks let teams bundle commands, agent behaviors, and approval hooks into higher-level integrations (e.g., repo automation, CI hooks, Slack routing). The repo and SDK patterns enable building custom integrations or plugins that orchestrate agents and human approvals.': {}
-        'Extension/recipe model allows bundling commands, agents and hooks:': {}
-        Extensions are enable/disable units (platform__manage_extensions) that change the agent's available toolset.: {}
-        Scheduled recipe jobs (platform__manage_schedule create) can package recurring workflows.: {}
-        'dynamic_task__create_task tasks can be used as reusable, parameterized operations that behave like plugins when stored and invoked programmatically.': {}
-        'Sources:': {}
-        platform__manage_extensions: {}
-        platform__manage_schedule: {}
-        dynamic_task__create_task: {}
-        'Extension/integration points exist for model providers, team commands, and tooling integrations; the ecosystem is growing.': {}
-        DevoxxGenie itself is a JetBrains plugin and can be extended by modifying its source or contributing upstream; it supports connectors to different model backends (local or cloud) and MCP servers.: {}
-        'Prompts, MCP connectors and embedding/RAG pipelines are the primary extensibility points exposed to users and integrators.': {}
-        'Firebase Studio exposes integrations and plugin-like extensions in the preview (examples: Builder.io Figma import, Genkit integration, template gallery, and Git provider integrations). These are enabled/configured through the workspace UI (import plugin/integration or select templates) and by provisioning AI resources (Gemini/Genkit) into the workspace; developer-facing documentation for authoring third-party plugins or bundling commands/agents/hooks is not publicly detailed in the preview documentation.': {}
-        'From021 does not expose a plugin system for bundling commands/agents/hooks. Integrations are provided as export connectors (examples: Trello, JIRA, v0, Lovable, Cursor) rather than a plugin marketplace or SDK.': {}
-        'While the Workspace integrated with developer tooling (Codespaces, VS Code extension) and could open sessions in those environments, there was no documented plugin system for bundling custom commands, agents, and hooks inside Workspace itself.': {}
-        'Is there a method of bundling together commands, agents and hooks ? If so, explain how''': {}
-        'Copilot Extensions / GitHub Apps act as bundles that package skillsets/agents, commands, and integration hooks; they are installed as apps or extensions in IDEs and on GitHub and include permission configuration (including Copilot Editor Context).': {}
-        Organization-managed Copilot Spaces and knowledge bases let admins distribute curated plugins/contexts across teams.: {}
-        'JetBrains IDEs support a rich plugin ecosystem. AI Assistant itself is delivered as IDE-integrated functionality and can interoperate with other plugins. Plugin authors can use the IntelliJ Platform plugin SDK to extend IDE behavior, integrate model endpoints, or build complementary tooling that works alongside the AI Assistant.': {}
-        'MarsX provides a Micro‑App marketplace that acts like a plugin system: Micro‑Apps are bundled units containing UI, backend logic, DB schemas, admin panels and metadata which can be installed into projects to add functionality.': {}
-        'Micro‑Apps function as self-contained extensions that can be shared, versioned, monetized (free/premium) and composed together, similar to a plugin ecosystem for full‑stack features.': {}
-        'Official IDE plugins for VS Code and JetBrains (private beta/GA progression) integrate completions, semantic search and one-click automations into the editor UI.': {}
-        'Integration with Continue.dev and the plugin model enables embedding Mistral Code features into IDE/tooling workflows and connecting to enterprise infrastructure (SSO, audit logs).': {}
-        'Ona integrates with IDE extensions and editor platforms (e.g., VS Code, JetBrains, Cursor, Zed) and exposes automation/extension points; bundling commands and automation into reusable packages is done via workspace/automation configuration and editor extension packs rather than a single "plugin store" model.': {}
-        'PearAI is extensible and built on a VSCode-like architecture; it supports plugins/integrations that can bundle commands, tooling, and integrations. Developers can extend behavior by adding integrations (model providers via BYOK, documentation sources, or custom tooling) and packaging those as extensions/plugins compatible with the environment.': {}
-        'The primary integration point is the VS Code extension which bundles commands, editor integrations, and the multi-agent orchestration into a single user-facing plugin. Additionally, Pythagora integrates with Git providers and deployment targets (one-click deploys), and supports configuration via a project-level core directory.': {}
-        There is no public evidence of a broader third-party plugin marketplace or plugin SDK — the VS Code extension and built-in integrations act as the bundling mechanism.: {}
-        'Refact.ai provides IDE plugins (VS Code, JetBrains, Neovim) and connectors (GitHub/GitLab, databases, Docker) that bundle commands, agent behaviors, and integrations into reusable workflows.': {}
-        Deployments (self-hosted Docker / enterprise images) and extension points allow organizations to integrate custom tools and scripts that the agent can call as part of its actions.: {}
-        'While Refraction provides an editor integration (a Sublime Text extension) for more convenient in-editor flows, there is no evidence of a broader extensibility/plugin system for bundling commands, agents, and hooks as a platform-facing plugin framework.': {}
-        'RooCode supports extension via MCP plugins/providers and integrates with multiple model providers. Teams can bundle together provider configurations, MCP servers, and custom modes to produce reusable plugin-like setups that encapsulate commands, tools, and integrations.': {}
-        'Runner H supports a plugin-style integration model via connectors and automation integrations (Zapier, Google Workspace, Slack, webhooks). These bundle together commands, workflows (recipes), and event hooks so teams can package reusable automation bundles and integrate them into broader pipelines.': {}
-        'There is no documented plugin system, extension marketplace, or bundling mechanism for adding new capabilities to the service.': {}
-        'Sourcegraph provides an extensions framework, IDE plugins, and integrations for IDEs (VS Code, JetBrains, Visual Studio) and code hosts (GitHub, GitLab, Bitbucket). These bundle commands, search capabilities, and code intelligence features that operate together with Cody and the platform.': {}
-        'Supermaven ships as IDE plugins (VS Code, JetBrains, Neovim) but it does not advertise a plugin ecosystem for bundling agent behaviors, commands and hooks as user-installable extensions. Integration is through the official plugins rather than a third-party plugin marketplace.': {}
-        'Theia bundles commands, contributions, and lifecycle hooks via the extension/package model. An extension is packaged with frontend and optional backend parts and declares contribution points (commands, menus, views, preferences) in its package.json. Theia also supports VS Code-style plugins (via the plugin extension) and Open VSX packaging to reuse existing VS Code extensions.': {}
-        '[Trae supports extensions and plugin-like integration via its VS Code ancestry (VS Code extensions compatibility) and by exposing MCP for bundling agent behaviors and tool integrations. Developers can package commands, agents, and hook logic in extension form or via MCP client modules to compose reusable feature bundles.]': {}
-        Verdent provides a VS Code extension to bring Deck-style agent capabilities into the editor.: {}
-        Verdent provides a VS Code extension to bring Deck-style agent capabilities into the editor: {}
-        'Because Void is a VS Code fork, it inherits the extension/plugin model. In addition to built-in integrations (Ollama, DocSearch, etc.), developers can add extensions or propose new integrations via the project''s plugin/extension mechanisms. This allows bundling commands, AI integrations, and UI elements into installable packages.': {}
-        'VS Code extension compatibility: As a VS Code fork, Windsurf can leverage the existing extension/plugin ecosystem to bundle commands, linters, debuggers and UI integrations.': {}
-        'AI rules + extensions: Windsurf''s AI rules and Cascade flows can be combined with extensions to create reusable bundles of behavior (commands + hooks + rules).': {}
-        'Zed has an extension system and a growing registry; extensions can add functionality and integrate with editor workflows. Extension development leverages WebAssembly and platform extension points, and MCP servers can provide additional tool capabilities to the Agent Panel.': {}
-        The ecosystem is younger and smaller than VS Code's marketplace but is expanding; community and first-party extensions are distributed via the registry.: {}
-        'Yes': {}
-        'No': {}
+  - UngroupedCriteria:
+      name: Ungrouped Criteria
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      description: ''
+      placeholder: ''
+      order: ''
+      andSearch: false
+      rangeSearch: false
+      children:
+        - Terminal
+        - SpecDrivenDevelopment
   - FreeTrial:
       type: LABEL
       values:
@@ -559,35 +573,6 @@ criteria:
         The editor and source are available openly; binaries are freely downloadable. (See "Notes" about binary EULA nuance.): {}
         'Yes': {}
         'No': {}
-  - Terminal:
-      type: LABEL
-      values:
-        'Primary surface: IDE plugins and AWS Console chat. There is no official terminal-only interactive CLI assistant equivalent documented as the main surface.': {}
-        CLI and TUI available: {}
-        The `cn` CLI provides an interactive TUI and a headless mode for scripted and CI uses.: {}
-        Integrated terminals and sandboxed terminal features (secure command execution for agent-run commands) are part of the 2.0 feature set.: {}
-        'Full coding workspace includes terminal access for builds, package managers, and CLI workflows.': {}
-        'Copilot Chat is available in supported terminals (Windows Terminal Canary, GitHub CLI integrations) and can be used from the command line in supported environments.': {}
-        'Interaction is through the web UI (Playground, chat, multimodal inputs) and exported code; no integrated shell/terminal is advertised.': {}
-        CLI-driven project creation and workspace management are supported.: {}
-        AI Assistant is provided inside JetBrains IDE UIs; there is no native terminal-only assistant shipped as a separate TUI (some IDE features can be used alongside integrated terminals).: {}
-        incorporates terminal/CLI execution capabilities (inherited from Cline-style tooling) for running commands and automations: {}
-        Cloud IDE typically exposes developer tooling; advanced users can work with code directly.: {}
-        'Agentic capabilities can reason over terminal output, run commands, and propose diffs under configurable approval flows': {}
-        Provides an npm package and CLI for setup/configuration; integrates with developer workflows.: {}
-        Built on VSCode fork; includes integrated terminal and @terminal context command: {}
-        Offers CLI commands (e.g. npx pythagora ...) to generate tests and scaffold code.: {}
-        'Agent can execute shell commands, interact with Docker, run tests and debuggers (e.g., pdb) when permitted by deployment configuration.': {}
-        Supports running terminal commands and automation as part of tasks and modes.: {}
-        'CLI tooling (e.g., src CLI / developer tools) and integrations that allow scripted interactions and automation.': {}
-        Primary integrations are editor/IDE plugins; Supermaven also provides its own editor/IDE experience rather than a terminal-first tool: {}
-        Server and agent provide CLI tools; Docker image and direct binary available for server usage.: {}
-        Integrated terminal available (desktop & web). AI features add inline assistance in terminals in recent AI-enabled builds.: {}
-        Integrates with developer workflows and git; Deck is focused on high-level orchestration rather than being a terminal IDE replacement.: {}
-        Integrates with developer workflows and git; focused on high-level orchestration.: {}
-        Built-in integrated terminal and task runner.: {}
-        'Yes': {}
-        'No': {}
   - MCP-Client:
       type: LABEL
       values:
@@ -602,6 +587,72 @@ criteria:
         Model Context Protocol support added in v1.3.0 to enable custom agents and richer context handling: {}
         '-': {}
         MCP servers are integrated similar to other extensions like e.g. theming: {}
+        'Yes': {}
+        'No': {}
+  - Checkpoints:
+      type: LABEL
+      values:
+        'Undo / rollback options in typical workflows include:': {}
+        'Editor undo and local change staging: changes generated by Amazon Q are applied through the IDE, so standard undo/redo and editor history apply immediately after edits.': {}
+        'Git / VCS: recommended rollback mechanism—users can commit or stash before applying changes and use git to revert unwanted modifications (no built-in Q checkpointing was documented).': {}
+        No documented built-in persistent "checkpoint" or automatic snapshot feature inside Amazon Q itself; rely on editor and VCS for safe rollback.: {}
+        AskCodi does not publicly document a built-in "checkpoint/undo" feature for generated changes; typical recovery/rollback would be handled via VCS (git) in the uploaded Codespace or local editor. Confirm enterprise/backups features with AskCodi sales/support for advanced checkpointing.: {}
+        'The platform provides change checkpoints and snapshotting for safe experimentation: automatic change tracking, named checkpoints before applying edits, easy rollback/restore, and Git/PR-backed snapshots for human review. Checkpoints are central to Smart Apply / Next Edit flows.': {}
+        'Edits are produced as diffs/patches and Brokk is Git-aware; users can review changes, commit, or revert using standard VCS workflows.': {}
+        'The edit/build/test loop preserves build/test results and incremental revisions, allowing iterative rollback or refinement of agent-produced changes.': {}
+        'Built-in checkpointing snapshots workspace state at steps and tool calls; users can compare changes, restore previous snapshots, or revert risky edits.': {}
+        File Timeline and standard Git history complement checkpointing for undo/rollback workflows.: {}
+        'Checkpoints are supported via git/worktree integration (explicit worktrees per session, diffs, and commits) plus session archiving and approval audit logs. Because CodeLayer operates alongside git, standard git workflows (commits, branches, resets) provide reversible checkpoints; HumanLayer also records approval histories and function-call traces for audit and rollback reasoning.': {}
+        'Undo and recovery mechanisms:': {}
+        developer__text_editor undo_edit provides local edit rollback for the last text_editor operation.: {}
+        'Git operations via developer__shell (git commit, git revert, git reset) can be used to create and restore checkpoints in repository history.': {}
+        'When using todo__read/todo__write and plan files, maintain incremental commits to enable reverting high-level work.': {}
+        'Sources:': {}
+        developer__text_editor tool description (undo_edit): {}
+        developer__shell usage for git commands: {}
+        Agent edits and Composer changes are presented as diffs and create checkpoints or restore points so you can revert unwanted changes.: {}
+        'While DevoxxGenie doesn''t provide a built-in "checkpoint/undo" system for code edits, typical IDE workflows provide recovery: IntelliJ Local History, VCS (Git) commits and rollbacks, and saved chat history to re-run decisions.': {}
+        Chat history stored locally allows re-opening prior conversations and re-applying previously used prompts/contexts.: {}
+        'Undo and rollback are handled primarily via standard version control (Git) integration: commits, branches, and repo history allow reverting agent-made changes. Workspace share URLs, preview deployments and published app versions provide additional reference points, but there is no documented first-class "agent checkpoint" system independent of source control in the preview.': {}
+        'No explicit checkpoint/undo/versioning mechanism is documented publicly; inquire with the vendor for data retention, revision history, or rollback capabilities.': {}
+        'Workspace tracked session state and maintained a history of edits; generated changes were presented as diffs and could be revised, undone, or committed as PRs.': {}
+        'While not marketed as a "checkpoint" API, the combination of session versioning, editable specs/plans, and Git-backed commits/PRs provided checkpoint-like rollback and recovery mechanisms.': {}
+        'Is it possible to undo actions taken by the agent by using checkpoints or if autocommitted to git, reversing the history ?': {}
+        'Editor undo and local history: any automatic edits suggested by Copilot must be accepted by the user in the editor, and typical editor undo/redo and local history remain available.': {}
+        'PR/commit workflow: when Copilot creates commits or PRs (agent-driven), standard git workflows allow reverting commits, closing or reverting PRs, and using branch-based reviews to avoid autocommit risk.': {}
+        'Preview and review steps: Copilot Chat multi-file edits are surfaced for review before commit in supported integrations; enterprise policies can enforce review gates.': {}
+        'The workflow explicitly includes human review checkpoints and automated test generation at two granularities (unit tests after steps, integration/e2e tests after tasks). Work is persisted in a workspace with Git support and a CLI/VS Code integration, enabling manual rollbacks or inspection. The system''s "95% automated / 5% human oversight" model makes checkpoints first-class (stop-and-review before progressing).': {}
+        'The assistant supports review-before-apply for generated edits (preview diffs). Users can accept or reject changes. Additionally, JetBrains IDEs provide VCS integration (Git) and Local History, enabling undo/revert of applied changes even if the assistant makes edits. These mechanisms together act as checkpoints for recovery.': {}
+        'No public documentation of built-in checkpoint/undo features. Jolt supports exporting patches and integrates with git/IDE workflows, so rollbacks are typically handled via VCS (branches, commits) or IDE undo rather than an internal checkpoint system.': {}
+        'Generated code and projects are pushed to GitHub repositories, which provides standard version-control checkpoints (commits, branches, revert). Because the platform writes to Git repos, users can undo or revert generated changes via normal Git workflows. There is no widely advertised separate "checkpoint/restore" feature beyond standard VCS usage in public product notes.': {}
+        'Git integration and source control: MarsX exposes Git support for projects/microapps, enabling standard commit/rollback workflows and history-based recovery.': {}
+        'Micro‑App versioning and marketplace releases provide another checkpoint mechanism: published microapps can be versioned and rolled back to prior published releases.': {}
+        Agentic edits are surfaced as draft changes / pull requests and pass through configurable approval workflows; audit logs record actions so changes can be reviewed and reversed via normal git history.: {}
+        'On‑prem deployments and RBAC reduce risk of unwanted auto-commits; standard VCS workflows (branches, PRs) serve as checkpoints for undoing agent actions.': {}
+        'Ona/Gitpod workflows provide workspace snapshots, prebuilds and the normal git history as mechanisms to revert or recover from agent actions. For enterprise users, Guardrails and audit trails further enable tracing and, where necessary, rolling back changes using standard VCS or snapshot workflows.': {}
+        'PearAI presents diffs for inline edits before applying changes, supports local undo in the editor, and integrates with Git so changes can be committed and reverted. The @diff workflow and preview/accept model provide checkpoints prior to committing AI-generated edits; standard Git operations (revert/reset) and editor undo serve as recovery mechanisms.': {}
+        'Undo/rollback workflows are supported indirectly via standard Git integration; Pythagora writes real files to the workspace/repo so developers can use their normal VCS workflows to create commits, branches and rollbacks.': {}
+        The platform also provides activity logs and agent traces which can help reconstruct or revert changes.: {}
+        'There is no clearly documented in-platform "checkpoint" snapshot API (e.g., one-click snapshot/restore) beyond using Git and deployment snapshots.': {}
+        'Actions performed by the agent that modify repository state (branches, commits, PRs) are reversible using standard Git operations (revert, reset, branch/commit history) when the agent''s git-level permissions are enabled.': {}
+        Self-hosted deployments can enforce additional backup/versioning policies; enterprise deployments support retaining audit logs and rolling back via git or deployment snapshots.: {}
+        'There is no documented checkpoint or undo system for reverting actions; Refraction stores generation history for user review, but this is not presented as a versioned checkpoint/rollback mechanism.': {}
+        'RooCode implements checkpointing and diffs: it records change checkpoints (and ties into VS Code timeline/git workflows), shows diffs for review before applying edits, and allows reverting to previous states. Auto-approve settings can be gated with explicit checkpoints to prevent unwanted changes.': {}
+        'The system records step-level logs and maintains run histories that provide the ability to review, replay, and intervene in task execution. There are human-in-the-loop approval gates and a QA/validation agent that can block or confirm changes before finalizing. While not a transactional "database rollback" in all cases, Runner H provides operational checkpoints, re-run/undo patterns, and error-recovery strategies to revert or correct actions performed by an agent.': {}
+        'No documented support for checkpoints, snapshot/undo features, or versioned state management for generated outputs.': {}
+        Sourcegraph's Batch Changes and code change workflows are designed to be auditable and reversible through version control. Administrators can rely on Git history and repository state to revert changes; self-hosted deployments provide full control over commit histories. There is also support for observability and monitoring of external requests.: {}
+        'Agent-driven changes are presented as diffs and edits that can be previewed before applying; once applied typical safety nets exist (IDE undo, local VCS/git history). For teams using CI or repo protection, any autocommit workflows would still be revertable through standard git history.': {}
+        'Theia provides several mechanisms that function as checkpoints or enable recovery: workspace state persistence (open editors, layout), crash/restart recovery, cloud/workspace snapshots in managed deployments, and extensible local-history or snapshot extensions. For source-controlled checkpoints, Theia integrates with Git extensions (commit/branch/rollback) so users can revert changes via standard VCS workflows. For richer checkpoint semantics, authors typically add an extension (local history, snapshotting service, or backend snapshot API).': {}
+        '[Trae provides undo and checkpointing through several mechanisms: execution previews (inspect changes before apply), native Git/VCS integration (stage/commit/checkout to revert), and the Builder''s planned-change workflow which can be canceled or rolled back. These combined affordances let teams undo agent actions or restore prior states.]': {}
+        Git worktree integration provides commit/rollback and branch management per agent session to prevent unwanted repository-level collisions.: {}
+        Worktree-level commits and rollbacks protect main branches: {}
+        'Multiple mechanisms exist to undo or revert agent actions:': {}
+        'Editor undo stack: AI-applied edits are regular editor changes and can be undone with the editor''s undo/redo commands.': {}
+        'Git / source control: typical Git workflows (commits, branches) can be used to checkpoint and revert agent changes; teams can require PRs for AI changes.': {}
+        'Read-only modes: Gather Mode provides a safe, read-only analysis option to avoid accidental changes.': {}
+        'Approval & diffs: Cascade shows diffs and asks for approval before applying code changes or running terminal commands, providing a human-in-the-loop checkpoint.': {}
+        'VCS integration: Because it operates inside a code editor and integrates with terminals, standard git workflows (commit, branch, revert) can be used to undo or roll back changes.': {}
+        'When the AI agent makes edits, Zed creates a restore checkpoint for the pre-edit state and surfaces a "Restore Checkpoint" action on the message so you can revert the workspace to the state before the AI change. Checkpoints appear even if an edit was interrupted mid-change, offering a safety net for agentic editing workflows.': {}
         'Yes': {}
         'No': {}
   - CustomModes:
@@ -670,70 +721,33 @@ criteria:
         'The editor also supports extensibility (extensions, settings, keymaps), so you can compose specialist workflows or modes via extensions plus profile/policy configuration.': {}
         'Yes': {}
         'No': {}
-  - Checkpoints:
+  - Terminal:
       type: LABEL
       values:
-        'Undo / rollback options in typical workflows include:': {}
-        'Editor undo and local change staging: changes generated by Amazon Q are applied through the IDE, so standard undo/redo and editor history apply immediately after edits.': {}
-        'Git / VCS: recommended rollback mechanism—users can commit or stash before applying changes and use git to revert unwanted modifications (no built-in Q checkpointing was documented).': {}
-        No documented built-in persistent "checkpoint" or automatic snapshot feature inside Amazon Q itself; rely on editor and VCS for safe rollback.: {}
-        AskCodi does not publicly document a built-in "checkpoint/undo" feature for generated changes; typical recovery/rollback would be handled via VCS (git) in the uploaded Codespace or local editor. Confirm enterprise/backups features with AskCodi sales/support for advanced checkpointing.: {}
-        'The platform provides change checkpoints and snapshotting for safe experimentation: automatic change tracking, named checkpoints before applying edits, easy rollback/restore, and Git/PR-backed snapshots for human review. Checkpoints are central to Smart Apply / Next Edit flows.': {}
-        'Edits are produced as diffs/patches and Brokk is Git-aware; users can review changes, commit, or revert using standard VCS workflows.': {}
-        'The edit/build/test loop preserves build/test results and incremental revisions, allowing iterative rollback or refinement of agent-produced changes.': {}
-        'Built-in checkpointing snapshots workspace state at steps and tool calls; users can compare changes, restore previous snapshots, or revert risky edits.': {}
-        File Timeline and standard Git history complement checkpointing for undo/rollback workflows.: {}
-        'Checkpoints are supported via git/worktree integration (explicit worktrees per session, diffs, and commits) plus session archiving and approval audit logs. Because CodeLayer operates alongside git, standard git workflows (commits, branches, resets) provide reversible checkpoints; HumanLayer also records approval histories and function-call traces for audit and rollback reasoning.': {}
-        'Undo and recovery mechanisms:': {}
-        developer__text_editor undo_edit provides local edit rollback for the last text_editor operation.: {}
-        'Git operations via developer__shell (git commit, git revert, git reset) can be used to create and restore checkpoints in repository history.': {}
-        'When using todo__read/todo__write and plan files, maintain incremental commits to enable reverting high-level work.': {}
-        'Sources:': {}
-        developer__text_editor tool description (undo_edit): {}
-        developer__shell usage for git commands: {}
-        Agent edits and Composer changes are presented as diffs and create checkpoints or restore points so you can revert unwanted changes.: {}
-        'While DevoxxGenie doesn''t provide a built-in "checkpoint/undo" system for code edits, typical IDE workflows provide recovery: IntelliJ Local History, VCS (Git) commits and rollbacks, and saved chat history to re-run decisions.': {}
-        Chat history stored locally allows re-opening prior conversations and re-applying previously used prompts/contexts.: {}
-        'Undo and rollback are handled primarily via standard version control (Git) integration: commits, branches, and repo history allow reverting agent-made changes. Workspace share URLs, preview deployments and published app versions provide additional reference points, but there is no documented first-class "agent checkpoint" system independent of source control in the preview.': {}
-        'No explicit checkpoint/undo/versioning mechanism is documented publicly; inquire with the vendor for data retention, revision history, or rollback capabilities.': {}
-        'Workspace tracked session state and maintained a history of edits; generated changes were presented as diffs and could be revised, undone, or committed as PRs.': {}
-        'While not marketed as a "checkpoint" API, the combination of session versioning, editable specs/plans, and Git-backed commits/PRs provided checkpoint-like rollback and recovery mechanisms.': {}
-        'Is it possible to undo actions taken by the agent by using checkpoints or if autocommitted to git, reversing the history ?': {}
-        'Editor undo and local history: any automatic edits suggested by Copilot must be accepted by the user in the editor, and typical editor undo/redo and local history remain available.': {}
-        'PR/commit workflow: when Copilot creates commits or PRs (agent-driven), standard git workflows allow reverting commits, closing or reverting PRs, and using branch-based reviews to avoid autocommit risk.': {}
-        'Preview and review steps: Copilot Chat multi-file edits are surfaced for review before commit in supported integrations; enterprise policies can enforce review gates.': {}
-        'The workflow explicitly includes human review checkpoints and automated test generation at two granularities (unit tests after steps, integration/e2e tests after tasks). Work is persisted in a workspace with Git support and a CLI/VS Code integration, enabling manual rollbacks or inspection. The system''s "95% automated / 5% human oversight" model makes checkpoints first-class (stop-and-review before progressing).': {}
-        'The assistant supports review-before-apply for generated edits (preview diffs). Users can accept or reject changes. Additionally, JetBrains IDEs provide VCS integration (Git) and Local History, enabling undo/revert of applied changes even if the assistant makes edits. These mechanisms together act as checkpoints for recovery.': {}
-        'No public documentation of built-in checkpoint/undo features. Jolt supports exporting patches and integrates with git/IDE workflows, so rollbacks are typically handled via VCS (branches, commits) or IDE undo rather than an internal checkpoint system.': {}
-        'Generated code and projects are pushed to GitHub repositories, which provides standard version-control checkpoints (commits, branches, revert). Because the platform writes to Git repos, users can undo or revert generated changes via normal Git workflows. There is no widely advertised separate "checkpoint/restore" feature beyond standard VCS usage in public product notes.': {}
-        'Git integration and source control: MarsX exposes Git support for projects/microapps, enabling standard commit/rollback workflows and history-based recovery.': {}
-        'Micro‑App versioning and marketplace releases provide another checkpoint mechanism: published microapps can be versioned and rolled back to prior published releases.': {}
-        Agentic edits are surfaced as draft changes / pull requests and pass through configurable approval workflows; audit logs record actions so changes can be reviewed and reversed via normal git history.: {}
-        'On‑prem deployments and RBAC reduce risk of unwanted auto-commits; standard VCS workflows (branches, PRs) serve as checkpoints for undoing agent actions.': {}
-        'Ona/Gitpod workflows provide workspace snapshots, prebuilds and the normal git history as mechanisms to revert or recover from agent actions. For enterprise users, Guardrails and audit trails further enable tracing and, where necessary, rolling back changes using standard VCS or snapshot workflows.': {}
-        'PearAI presents diffs for inline edits before applying changes, supports local undo in the editor, and integrates with Git so changes can be committed and reverted. The @diff workflow and preview/accept model provide checkpoints prior to committing AI-generated edits; standard Git operations (revert/reset) and editor undo serve as recovery mechanisms.': {}
-        'Undo/rollback workflows are supported indirectly via standard Git integration; Pythagora writes real files to the workspace/repo so developers can use their normal VCS workflows to create commits, branches and rollbacks.': {}
-        The platform also provides activity logs and agent traces which can help reconstruct or revert changes.: {}
-        'There is no clearly documented in-platform "checkpoint" snapshot API (e.g., one-click snapshot/restore) beyond using Git and deployment snapshots.': {}
-        'Actions performed by the agent that modify repository state (branches, commits, PRs) are reversible using standard Git operations (revert, reset, branch/commit history) when the agent''s git-level permissions are enabled.': {}
-        Self-hosted deployments can enforce additional backup/versioning policies; enterprise deployments support retaining audit logs and rolling back via git or deployment snapshots.: {}
-        'There is no documented checkpoint or undo system for reverting actions; Refraction stores generation history for user review, but this is not presented as a versioned checkpoint/rollback mechanism.': {}
-        'RooCode implements checkpointing and diffs: it records change checkpoints (and ties into VS Code timeline/git workflows), shows diffs for review before applying edits, and allows reverting to previous states. Auto-approve settings can be gated with explicit checkpoints to prevent unwanted changes.': {}
-        'The system records step-level logs and maintains run histories that provide the ability to review, replay, and intervene in task execution. There are human-in-the-loop approval gates and a QA/validation agent that can block or confirm changes before finalizing. While not a transactional "database rollback" in all cases, Runner H provides operational checkpoints, re-run/undo patterns, and error-recovery strategies to revert or correct actions performed by an agent.': {}
-        'No documented support for checkpoints, snapshot/undo features, or versioned state management for generated outputs.': {}
-        Sourcegraph's Batch Changes and code change workflows are designed to be auditable and reversible through version control. Administrators can rely on Git history and repository state to revert changes; self-hosted deployments provide full control over commit histories. There is also support for observability and monitoring of external requests.: {}
-        'Agent-driven changes are presented as diffs and edits that can be previewed before applying; once applied typical safety nets exist (IDE undo, local VCS/git history). For teams using CI or repo protection, any autocommit workflows would still be revertable through standard git history.': {}
-        'Theia provides several mechanisms that function as checkpoints or enable recovery: workspace state persistence (open editors, layout), crash/restart recovery, cloud/workspace snapshots in managed deployments, and extensible local-history or snapshot extensions. For source-controlled checkpoints, Theia integrates with Git extensions (commit/branch/rollback) so users can revert changes via standard VCS workflows. For richer checkpoint semantics, authors typically add an extension (local history, snapshotting service, or backend snapshot API).': {}
-        '[Trae provides undo and checkpointing through several mechanisms: execution previews (inspect changes before apply), native Git/VCS integration (stage/commit/checkout to revert), and the Builder''s planned-change workflow which can be canceled or rolled back. These combined affordances let teams undo agent actions or restore prior states.]': {}
-        Git worktree integration provides commit/rollback and branch management per agent session to prevent unwanted repository-level collisions.: {}
-        Worktree-level commits and rollbacks protect main branches: {}
-        'Multiple mechanisms exist to undo or revert agent actions:': {}
-        'Editor undo stack: AI-applied edits are regular editor changes and can be undone with the editor''s undo/redo commands.': {}
-        'Git / source control: typical Git workflows (commits, branches) can be used to checkpoint and revert agent changes; teams can require PRs for AI changes.': {}
-        'Read-only modes: Gather Mode provides a safe, read-only analysis option to avoid accidental changes.': {}
-        'Approval & diffs: Cascade shows diffs and asks for approval before applying code changes or running terminal commands, providing a human-in-the-loop checkpoint.': {}
-        'VCS integration: Because it operates inside a code editor and integrates with terminals, standard git workflows (commit, branch, revert) can be used to undo or roll back changes.': {}
-        'When the AI agent makes edits, Zed creates a restore checkpoint for the pre-edit state and surfaces a "Restore Checkpoint" action on the message so you can revert the workspace to the state before the AI change. Checkpoints appear even if an edit was interrupted mid-change, offering a safety net for agentic editing workflows.': {}
+        'Primary surface: IDE plugins and AWS Console chat. There is no official terminal-only interactive CLI assistant equivalent documented as the main surface.': {}
+        CLI and TUI available: {}
+        The `cn` CLI provides an interactive TUI and a headless mode for scripted and CI uses.: {}
+        Integrated terminals and sandboxed terminal features (secure command execution for agent-run commands) are part of the 2.0 feature set.: {}
+        'Full coding workspace includes terminal access for builds, package managers, and CLI workflows.': {}
+        'Copilot Chat is available in supported terminals (Windows Terminal Canary, GitHub CLI integrations) and can be used from the command line in supported environments.': {}
+        'Interaction is through the web UI (Playground, chat, multimodal inputs) and exported code; no integrated shell/terminal is advertised.': {}
+        CLI-driven project creation and workspace management are supported.: {}
+        AI Assistant is provided inside JetBrains IDE UIs; there is no native terminal-only assistant shipped as a separate TUI (some IDE features can be used alongside integrated terminals).: {}
+        incorporates terminal/CLI execution capabilities (inherited from Cline-style tooling) for running commands and automations: {}
+        Cloud IDE typically exposes developer tooling; advanced users can work with code directly.: {}
+        'Agentic capabilities can reason over terminal output, run commands, and propose diffs under configurable approval flows': {}
+        Provides an npm package and CLI for setup/configuration; integrates with developer workflows.: {}
+        Built on VSCode fork; includes integrated terminal and @terminal context command: {}
+        Offers CLI commands (e.g. npx pythagora ...) to generate tests and scaffold code.: {}
+        'Agent can execute shell commands, interact with Docker, run tests and debuggers (e.g., pdb) when permitted by deployment configuration.': {}
+        Supports running terminal commands and automation as part of tasks and modes.: {}
+        'CLI tooling (e.g., src CLI / developer tools) and integrations that allow scripted interactions and automation.': {}
+        Primary integrations are editor/IDE plugins; Supermaven also provides its own editor/IDE experience rather than a terminal-first tool: {}
+        Server and agent provide CLI tools; Docker image and direct binary available for server usage.: {}
+        Integrated terminal available (desktop & web). AI features add inline assistance in terminals in recent AI-enabled builds.: {}
+        Integrates with developer workflows and git; Deck is focused on high-level orchestration rather than being a terminal IDE replacement.: {}
+        Integrates with developer workflows and git; focused on high-level orchestration.: {}
+        Built-in integrated terminal and task runner.: {}
         'Yes': {}
         'No': {}
   - SpecDrivenDevelopment:
