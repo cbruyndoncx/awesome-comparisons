@@ -4,16 +4,8 @@ AI-native developer platform that generates living documentation, code explanati
 ## General Info
 
 ### Classification
-<!-- ToDo -->
-<!-- AI Native Dev ainativedev.io Classification -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- AIE/Model
+
 - Code/Autonomous agent
-- Code/Editor
-- Code/Other
-- Code/Terminal
-- Product/Prototyping
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 
 ### Version
 N/A
