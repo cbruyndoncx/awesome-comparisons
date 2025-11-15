@@ -1,62 +1,36 @@
 # ToolJet - https://www.tooljet.com/
 Open-source, low-code internal app builder with visual drag-and-drop authoring, extensible connectors, and optional AI-driven app generation.
 
-## Version
-v (2025-10-19)
+## General Info
 
-## Classification 
+### Classification
 - Product/Prototyping
 
-## Rating
-- [4] Strong for building internal dashboards and admin tools rapidly
-- [5] Active open-source community and increasingly capable AI features
-  
-## Repository
+### Version
+v (2025-10-19)
+
+### Repo
 - https://github.com/ToolJet/ToolJet
 
-## Languages
+### Rating
+- [4] Strong for building internal dashboards and admin tools rapidly
+- [5] Active open-source community and increasingly capable AI features
+
+### Short Description
+<!-- ToDo -->
+
+-
+
+### Description
+ToolJet is an open-source low-code platform focused on building internal tools, dashboards, and admin applications quickly. It provides a visual drag-and-drop app builder, a built-in Postgres-backed "ToolJet Database" editor, workflow automation, and connectors to many external data sources. For organisations that need AI-assisted development, ToolJet offers enterprise features that generate apps from prompts, assist with query-building, and provide AI debugging and agent-builder capabilities.
+
+### Languages
 - TypeScript
 - JavaScript
 - Python
 - SQL
 
-## Extensible
-- Yes
-  - Custom connectors, plugins, and ability to import React components; CLI for extensions
-
-## Description
-ToolJet is an open-source low-code platform focused on building internal tools, dashboards, and admin applications quickly. It provides a visual drag-and-drop app builder, a built-in Postgres-backed "ToolJet Database" editor, workflow automation, and connectors to many external data sources. For organisations that need AI-assisted development, ToolJet offers enterprise features that generate apps from prompts, assist with query-building, and provide AI debugging and agent-builder capabilities.
-
-## BYOK
-- Yes
-  - Users provide their own API keys for third-party services and LLMs when configuring integrations.
-
-## LocalOffline
-- Yes
-  - Self-hostable via Docker and Kubernetes; can be run on-prem or in isolated/cloud VPCs.
-
-## FreeTrial
-- Yes
-  - Community Edition is free and open-source; paid plans offer additional features and hosted options.
-
-## GitSupport
-- Yes
-  - GitSync / CI integrations for versioning (GitHub/GitLab supported in paid/enterprise tiers).
-
-## Terminal
-- Yes
-  - Supports JavaScript/Python snippets inside apps and provides a CLI for developers.
-
-## Opensource
-- Yes
-
-## License
-- Apache-2.0
-
-## MCP-Client
-- No
-
-## Notes
+### Notes
 - Key features:
   - Visual app builder with ~60+ UI components (tables, charts, forms, lists, etc.)
   - 75+ data source connectors (SQL/NoSQL, REST, GraphQL, SaaS APIs, cloud storage, LLMs)
@@ -94,41 +68,113 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
   - Docs: https://docs.tooljet.com/
   - GitHub: https://github.com/ToolJet/ToolJet
 
+### Last Update
+<!-- ToDo -->
+<!-- Note Date last updated -->
+-
 
+## Licensing
 
-## ContextManagement
+### Opensource
+- Yes
+
+### License
+- Apache-2.0
+
+### FreeTrial
+- Yes
+  - Community Edition is free and open-source; paid plans offer additional features and hosted options.
+
+## MCP-Client
+
+### MCP-Client
+- No
+
+### Prompts
+<!-- ToDo -->
+<!-- Default description for Prompts -->
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+- Yes
+- No
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### Tools
+<!-- ToDo -->
+<!-- Default description for Tools -->
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+- Yes
+- No
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### Resources
+<!-- ToDo -->
+<!-- Default description for Resources -->
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+- Yes
+- No
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+## Deployment
+
+### BYOK
+- Yes
+  - Users provide their own API keys for third-party services and LLMs when configuring integrations.
+
+### LocalOffline
+- Yes
+  - Self-hostable via Docker and Kubernetes; can be run on-prem or in isolated/cloud VPCs.
+
+## Developer Experience
+
+### ContextManagement
 - Yes
   - ToolJet exposes multiple ways to manage and surface runtime/contextual data to apps: the built-in globals object (globals.currentUser, globals.groups, globals.theme, globals.urlparams, globals.environment, globals.modes), component bindings and template expressions (eg. {{components.myInput.value}}, {{queryName.data}}), URL parameters, environment identifiers, and the Inspector panel in the app builder that shows available context paths. ToolJet also supports external context integrations via the MCP (Model Context Protocol) bridge for AI assistants and programmatic access to users/workspaces/apps.
 
-## DirectFileReferences
+### DirectFileReferences
 - No
   - ToolJet apps do not provide arbitrary direct filesystem path access inside the app runtime. Files are handled via file-upload / file-picker components, storage connectors (S3, Google Cloud Storage, etc.), the ToolJet Database or external APIs; assets and uploaded files are referenced by URL or connector-managed storage rather than local filesystem paths.
 
-## Hooks
-- Yes
-  - ToolJet provides event hooks and lifecycle triggers you can attach to: component events (onClick, onChange, onRowClick, etc.), query lifecycle hooks (onSuccess, onError, onFinally), page load / on-load actions, and server-side / automation workflows. These hooks are configured in the UI and can run JS/Python snippets, trigger queries, or call server-side actions.
-
-## SlashCommands
-- No
-  - There is no built-in "slash command" palette feature documented as a first-class capability. Developers can implement their own command-like UI (input + event handlers) to emulate slash-commands or quick actions within an app.
-
-## Subagents
-- Yes
-  - ToolJet provides AI/automation capabilities (Agent Builder / automation workflows in enterprise editions) that act like specialized subagents: they can orchestrate queries, connectors, and LLM calls to automate tasks or respond to prompts. Additionally, integrations with LLMs and MCP enable external AI assistants to interact with ToolJet programmatically.
-
-## CustomModes
-- Yes
-  - ToolJet includes built-in modes (edit, preview, view) surfaced via globals.modes and the Inspector. While there isn't a single "custom modes" API, developers can emulate custom modes and alternate UX states using URL parameters (globals.urlparams), environment identifiers (globals.environment), conditional rendering and logic driven by globals or app-level variables.
-
-## Plugins
-- Yes
-  - ToolJet is extensible: it supports custom connectors, plugins, importing React components, server-side actions, and a CLI for building extensions. Connectors let you add new data sources or SaaS integrations; custom components let you extend the UI beyond the built-in components.
-
-## Checkpoints
+### Checkpoints
 - Yes
   - ToolJet supports versioning and rollback patterns via GitSync / CI integrations (GitHub/GitLab) and app versioning features (enterprise/hosted features). For self-hosted deployments you can also rely on database backups and container snapshots to restore state. Note that the availability and convenience of these checkpointing/rollback features depend on the edition (community vs. enterprise) and how you configure persistence/versioning.
 
-## SpecDrivenDevelopment
+### GitSupport
+- Yes
+  - GitSync / CI integrations for versioning (GitHub/GitLab supported in paid/enterprise tiers).
+
+## Extensible
+
+### Extensible
+- Yes
+  - Custom connectors, plugins, and ability to import React components; CLI for extensions
+
+### Plugins
+- Yes
+  - ToolJet is extensible: it supports custom connectors, plugins, importing React components, server-side actions, and a CLI for building extensions. Connectors let you add new data sources or SaaS integrations; custom components let you extend the UI beyond the built-in components.
+
+### Hooks
+- Yes
+  - ToolJet provides event hooks and lifecycle triggers you can attach to: component events (onClick, onChange, onRowClick, etc.), query lifecycle hooks (onSuccess, onError, onFinally), page load / on-load actions, and server-side / automation workflows. These hooks are configured in the UI and can run JS/Python snippets, trigger queries, or call server-side actions.
+
+### SlashCommands
+- No
+  - There is no built-in "slash command" palette feature documented as a first-class capability. Developers can implement their own command-like UI (input + event handlers) to emulate slash-commands or quick actions within an app.
+
+### CustomModes
+- Yes
+  - ToolJet includes built-in modes (edit, preview, view) surfaced via globals.modes and the Inspector. While there isn't a single "custom modes" API, developers can emulate custom modes and alternate UX states using URL parameters (globals.urlparams), environment identifiers (globals.environment), conditional rendering and logic driven by globals or app-level variables.
+
+### Subagents
+- Yes
+  - ToolJet provides AI/automation capabilities (Agent Builder / automation workflows in enterprise editions) that act like specialized subagents: they can orchestrate queries, connectors, and LLM calls to automate tasks or respond to prompts. Additionally, integrations with LLMs and MCP enable external AI assistants to interact with ToolJet programmatically.
+
+## Ungrouped Criteria
+
+### Terminal
+- Yes
+  - Supports JavaScript/Python snippets inside apps and provides a CLI for developers.
+
+### SpecDrivenDevelopment
 - BMAD
 - SpecKit
 - OpenSpec
