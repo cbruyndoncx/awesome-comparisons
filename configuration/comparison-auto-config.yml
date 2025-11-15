@@ -862,6 +862,21 @@ criteria:
         BSD-3-Clause: {}
         ISC: {}
         MPL-2.0: {}
+  - Opensource:
+      type: LABEL
+      values:
+        The project is open-source and community contributions are actively encouraged.: {}
+        Cursor is a commercial product; the core platform and Composer model are proprietary.: {}
+        Studio and Gemini are proprietary Google services; there are no public source repositories for the hosted Studio environment.: {}
+        The project is distributed under a Functional Source License (FSL) / "Fair Source" style license (source-available) rather than an OSI-approved open-source license.: {}
+        'source available on GitHub, community contributions encouraged': {}
+        Nuanced began as an open-source call-graph/context library; core components have been published for community use.: {}
+        Core Gitpod components remain open-source; some agent and enterprise-grade features are commercial/proprietary.: {}
+        'Holo-1 (the VLM) has open-source releases, but Runner H’s orchestration and hosted agent product is closed-source as of initial public information.': {}
+        'Historically Apache 2.0 (OSS) until 2023; in 2023–2024 Sourcegraph moved large portions of the project to an enterprise/proprietary license and in Aug 2024 made the core repository private. Some related projects (e.g., parts of Cody or community tooling) remain open source.': {}
+        Core source available on GitHub: {}
+        'Yes': {}
+        'No': {}
   - BYOK:
       type: LABEL
       values:
@@ -877,21 +892,6 @@ criteria:
         'Theia AI and integrations follow a bring-your-own-key / bring-your-own-model philosophy: you can configure external LLM providers or self-hosted models (e.g., Ollama, LlamaFile, hosted Anthropic/OpenAI keys) depending on deployment and data-control needs.': {}
         '-': {}
         'Zed supports OpenAI-compatible providers and can be configured to use local LLM hosts (e.g., Ollama) so you can run models with your own keys or entirely offline.': {}
-        'Yes': {}
-        'No': {}
-  - Opensource:
-      type: LABEL
-      values:
-        The project is open-source and community contributions are actively encouraged.: {}
-        Cursor is a commercial product; the core platform and Composer model are proprietary.: {}
-        Studio and Gemini are proprietary Google services; there are no public source repositories for the hosted Studio environment.: {}
-        The project is distributed under a Functional Source License (FSL) / "Fair Source" style license (source-available) rather than an OSI-approved open-source license.: {}
-        'source available on GitHub, community contributions encouraged': {}
-        Nuanced began as an open-source call-graph/context library; core components have been published for community use.: {}
-        Core Gitpod components remain open-source; some agent and enterprise-grade features are commercial/proprietary.: {}
-        'Holo-1 (the VLM) has open-source releases, but Runner H’s orchestration and hosted agent product is closed-source as of initial public information.': {}
-        'Historically Apache 2.0 (OSS) until 2023; in 2023–2024 Sourcegraph moved large portions of the project to an enterprise/proprietary license and in Aug 2024 made the core repository private. Some related projects (e.g., parts of Cody or community tooling) remain open source.': {}
-        Core source available on GitHub: {}
         'Yes': {}
         'No': {}
   - Classification:

@@ -1,47 +1,37 @@
 # GPT Pilot - https://github.com/Pythagora-io/gpt-pilot/
 Open-source/Source-available AI developer companion that generates full-stack applications using multi-agent LLM workflows.
-## Version
 
-## Classification 
+## General Info
+
+### Classification
 - Code/Editor
 
-## Rating
+### Version
+<!-- ToDo -->
+<!-- Latest version used for update -->
+-
+
+### Repo
+- https://github.com/Pythagora-io/gpt-pilot
+
+### Rating
 - [4] Strong at end-to-end prototype and feature generation
 - [3] Requires active human oversight for correctness, design and edge cases
-## Repository
-- https://github.com/Pythagora-io/gpt-pilot
-## Languages
+
+### Short Description
+<!-- ToDo -->
+
+-
+
+### Description
+GPT Pilot (by Pythagora) is a source-available AI developer assistant designed to automate large parts of the software development lifecycle. It uses a multi-agent workflow to: clarify requirements, design architecture, break work into tasks, generate code, run tests, and iterate with human reviews. It targets generating production-ready features (not just snippets) and integrates with developer tooling like a VS Code extension and a CLI.
+
+### Languages
 - Python
 - JavaScript
 - TypeScript
-## Extensible
-- Yes
-## Description
-GPT Pilot (by Pythagora) is a source-available AI developer assistant designed to automate large parts of the software development lifecycle. It uses a multi-agent workflow to: clarify requirements, design architecture, break work into tasks, generate code, run tests, and iterate with human reviews. It targets generating production-ready features (not just snippets) and integrates with developer tooling like a VS Code extension and a CLI.
-## BYOK
-- Yes
-  - Supports multiple LLM providers (OpenAI, Anthropic/Claude, Groq) via configuration — effectively a vendor-agnostic/BYOK model.
-## LocalOffline
-- Yes
-  - Can be run locally or inside Docker; configurable to use local LLM endpoints or self-hosted inference where supported.
-## FreeTrial
-- Yes
-  - The open/source-available GPT Pilot codebase is free to run; Pythagora also offers a commercial Pythagora Pro product with paid features.
-## GitSupport
-- Yes
-## Terminal
-- Yes
-  - CLI-driven project creation and workspace management are supported.
-## Opensource
-- No
-  - The project is distributed under a Functional Source License (FSL) / "Fair Source" style license (source-available) rather than an OSI-approved open-source license.
-## License
-- FSL
-  - Functional Source License (FSL) / Fair Source (source-available, not MIT/Apache/GPL)
-## MCP-Client
-- 
-  
-## Notes
+
+### Notes
 - BYOK: Configure your own API keys (OpenAI, Anthropic, Groq, etc.) in config.json or environment variables; no vendor lock-in by default.
 - Local & Docker: Official examples and docker-compose are provided; workspace defaults to a local folder and Postgres is supported for persistence.
 - Requirements: Python 3.9+; example-config.json / .env templates provided in the repo.
@@ -54,32 +44,129 @@ GPT Pilot (by Pythagora) is a source-available AI developer assistant designed t
   - Project site: https://www.pythagora.ai
   - PyPI package: https://pypi.org/project/gpt-pilot/
 
+### Last Update
+<!-- ToDo -->
+<!-- Note Date last updated -->
+-
 
-## ContextManagement
+## Licensing
+
+### Opensource
+- No
+  - The project is distributed under a Functional Source License (FSL) / "Fair Source" style license (source-available) rather than an OSI-approved open-source license.
+
+### License
+- FSL
+  - Functional Source License (FSL) / Fair Source (source-available, not MIT/Apache/GPL)
+
+### FreeTrial
+- Yes
+  - The open/source-available GPT Pilot codebase is free to run; Pythagora also offers a commercial Pythagora Pro product with paid features.
+
+## MCP-Client
+
+### MCP-Client
+-
+
+### Prompts
+<!-- ToDo -->
+<!-- Default description for Prompts -->
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+- Yes
+- No
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### Tools
+<!-- ToDo -->
+<!-- Default description for Tools -->
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+- Yes
+- No
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### Resources
+<!-- ToDo -->
+<!-- Default description for Resources -->
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+- Yes
+- No
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+## Deployment
+
+### BYOK
+- Yes
+  - Supports multiple LLM providers (OpenAI, Anthropic/Claude, Groq) via configuration — effectively a vendor-agnostic/BYOK model.
+
+### LocalOffline
+- Yes
+  - Can be run locally or inside Docker; configurable to use local LLM endpoints or self-hosted inference where supported.
+
+## Developer Experience
+
+### ContextManagement
 - Yes
   - GPT Pilot uses a multi-part context management strategy designed for large codebases: context-rewinding, recursive conversations, and TDD-driven checkpoints. It maintains a project file/folder tree with human-readable descriptions and generates pseudocode summaries for functions and files. Before implementing a step it: (1) presents the workspace tree + descriptions so the LLM can narrow relevant files, (2) supplies pseudocode summaries for candidate files so the LLM can identify relevant functions, then (3) fetches the actual code for the selected files into the implementation conversation. This selective fetching + pseudocode approach keeps the LLM prompt size bounded while preserving the necessary local context.
 
-## DirectFileReferences
+### DirectFileReferences
 - Yes
   - Files and folders are represented in the workspace with descriptions; GPT Pilot can present a project tree and selectively fetch files into the active conversation. It also stores generated code in a workspace (CLI-driven) and integrates with Git, VS Code, and a local workspace so the system can operate on real files, commit changes, and run tests. The pseudocode+file-description layer lets the system reference files at function-level granularity before pulling full source.
 
-## Hooks
+### Checkpoints
+- Yes
+  - The workflow explicitly includes human review checkpoints and automated test generation at two granularities (unit tests after steps, integration/e2e tests after tasks). Work is persisted in a workspace with Git support and a CLI/VS Code integration, enabling manual rollbacks or inspection. The system's "95% automated / 5% human oversight" model makes checkpoints first-class (stop-and-review before progressing).
 
-## SlashCommands
+### GitSupport
+- Yes
 
-## Subagents
+## Extensible
+
+### Extensible
+- Yes
+
+### Plugins
+<!-- ToDo -->
+<!-- A method of bundling together commands, agents and hooks (claude). -->
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+- Yes
+- No
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### Hooks
+<!-- ToDo -->
+<!-- Lifecycle events for the agent. -->
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+- Yes
+- No
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### SlashCommands
+<!-- ToDo -->
+<!-- Re-usable commands that can be manually triggered by the user. -->
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+- Yes
+- No
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### CustomModes
+<!-- ToDo -->
+<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+- Yes
+- No
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### Subagents
 - Yes
   - GPT Pilot implements a multi-agent/subagent architecture with specialized roles (Product Owner, Specification Writer, Software Architect, DevOps, Tech Lead, Developer, Code Monkey, Reviewer, Troubleshooter, Debugger, Technical Writer). These agents are orchestrated to break down requirements into tasks/steps, generate pseudocode, implement code, run tests, and request human review. The agent behaviours and orchestration are implemented in the codebase and can be inspected/extended by modifying the project's agent orchestration/configuration (i.e., adding or changing agent logic requires code/config edits).
 
-## CustomModes
+## Ungrouped Criteria
 
-## Plugins
-
-## Checkpoints
+### Terminal
 - Yes
-  - The workflow explicitly includes human review checkpoints and automated test generation at two granularities (unit tests after steps, integration/e2e tests after tasks). Work is persisted in a workspace with Git support and a CLI/VS Code integration, enabling manual rollbacks or inspection. The system's "95% automated / 5% human oversight" model makes checkpoints first-class (stop-and-review before progressing). 
+  - CLI-driven project creation and workspace management are supported.
 
-## SpecDrivenDevelopment
+### SpecDrivenDevelopment
 
 - Other
   - GPT Pilot does not advertise one of the named spec frameworks; instead it uses a task/spec decomposition model combined with TDD and multi-agent roles (product-owner/spec-writer → architect → task decomposition → implementation steps + programmatic test goals). The workflow is spec-like (clear programmatic goals, user_review_goals, and auto-test generation) but implemented within the project-specific agent/task framework rather than a published spec-driven framework listed above.

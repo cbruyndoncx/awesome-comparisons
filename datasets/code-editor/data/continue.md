@@ -1,62 +1,34 @@
 # Continue - https://continue.dev
 Open-source AI coding assistant focused on developer control, model choice, and IDE/CLI integration.
 
-## Version
-v (2025-10-19)
+## General Info
 
-## Classification 
+### Classification
 - Code/Editor
 
-## Rating
+### Version
+v (2025-10-19)
+
+### Repo
+- https://github.com/continuedev/continue
+
+### Rating
 - [4] Strong customization and model choice
 - [4] Good IDE & CLI coverage (VS Code, JetBrains, terminal)
 - [3] Hub & team features maturing (1.0 release)
 
-## Repository
-- https://github.com/continuedev/continue
+### Short Description
+<!-- ToDo -->
 
-## Languages
-- Any
+-
 
-## Extensible
-- Yes
-  - Continue is built to be extensible via blocks, MCP integrations and a hub for sharing assistants.
-
-## Description
+### Description
 Continue is an open-source AI coding assistant and platform that brings AI capabilities into editors (VS Code, JetBrains), the terminal (CLI) and CI/CD workflows. It emphasizes developer control: choose models (cloud or local), customize prompts and agents, and run fully local/offline when required. The platform includes IDE extensions, a CLI (cn) with interactive and headless modes, and an optional Continue Hub for sharing and managing assistant building blocks.
 
-## BYOK
-- Yes
-  - You can configure and use your own API keys and model endpoints, and switch between local/remote models.
+### Languages
+- Any
 
-## LocalOffline
-- Yes
-  - Supports local model workflows (e.g. via Ollama/local LLMs) and headless/offline operation for air-gapped environments.
-
-## FreeTrial
-- Yes
-  - A free/solo tier exists (open-source extensions + hub access for public/shared blocks). Paid team/enterprise tiers add governance and private deployment options.
-
-## GitSupport
-- Yes
-  - Native integrations (MCP-style integrations) for GitHub and git workflows; automation via CLI for PR/comments/summaries.
-
-## Terminal
-- Yes
-  - The `cn` CLI provides an interactive TUI and a headless mode for scripted and CI uses.
-
-## Opensource
-- Yes
-  - The project is open-source and community contributions are actively encouraged.
-
-## License
-- Apache-2.0
-
-## MCP-Client
-- Yes
-  - Integrates with Model Context Protocols for adding context providers (GitHub, Jira, etc.) and usable via the hub.
-
-## Notes
+### Notes
 - Strengths:
   - Model-agnostic: swap between OpenAI, Anthropic, local LLMs, etc.
   - Full-stack integration: editor + terminal + CI/CD automation paths.
@@ -80,7 +52,67 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
   - Hub: https://hub.continue.dev
   - GitHub: https://github.com/continuedev/continue
 
-## ContextManagement
+### Last Update
+<!-- ToDo -->
+<!-- Note Date last updated -->
+-
+
+## Licensing
+
+### Opensource
+- Yes
+  - The project is open-source and community contributions are actively encouraged.
+
+### License
+- Apache-2.0
+
+### FreeTrial
+- Yes
+  - A free/solo tier exists (open-source extensions + hub access for public/shared blocks). Paid team/enterprise tiers add governance and private deployment options.
+
+## MCP-Client
+
+### MCP-Client
+- Yes
+  - Integrates with Model Context Protocols for adding context providers (GitHub, Jira, etc.) and usable via the hub.
+
+### Prompts
+<!-- ToDo -->
+<!-- Default description for Prompts -->
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+- Yes
+- No
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### Tools
+<!-- ToDo -->
+<!-- Default description for Tools -->
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+- Yes
+- No
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### Resources
+<!-- ToDo -->
+<!-- Default description for Resources -->
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+- Yes
+- No
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+## Deployment
+
+### BYOK
+- Yes
+  - You can configure and use your own API keys and model endpoints, and switch between local/remote models.
+
+### LocalOffline
+- Yes
+  - Supports local model workflows (e.g. via Ollama/local LLMs) and headless/offline operation for air-gapped environments.
+
+## Developer Experience
+
+### ContextManagement
 - Yes
   - Methods for managing and updating context:
     - Conversation-level context (chat state / memory) maintained by the agent across messages.
@@ -92,7 +124,7 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
     - .tessl/framework/agents.md (project spec & workflow guidance)
     - developer extension tool descriptions (developer__text_editor, developer__analyze, platform__manage_extensions)
 
-## DirectFileReferences
+### DirectFileReferences
 - Yes
   - Files can be directly referenced by path in tool calls and task context:
     - developer__text_editor accepts absolute or repo-relative paths for view/write/insert/str_replace operations.
@@ -105,46 +137,27 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
   - Sources:
     - Developer extension tool docs (developer__text_editor, developer__analyze, todo__read/todo__write)
 
-## Hooks
+### Checkpoints
 - Yes
-  - Lifecycle-like attachment points available:
-    - Scheduled jobs (platform__manage_schedule) provide lifecycle actions (create, run_now, pause, unpause, delete, inspect, sessions) that act like hooks for recurring automation.
-    - Subagent/task lifecycle: dynamic_task__create_task and subagent__execute_task expose start/finish semantics and can be monitored via their responses and session content (platform schedule sessions API).
-    - developer__text_editor undo_edit provides a simple edit-level rollback hook.
+  - Undo and recovery mechanisms:
+    - developer__text_editor undo_edit provides local edit rollback for the last text_editor operation.
+    - Git operations via developer__shell (git commit, git revert, git reset) can be used to create and restore checkpoints in repository history.
+    - When using todo__read/todo__write and plan files, maintain incremental commits to enable reverting high-level work.
   - Sources:
-    - platform__manage_schedule tool description
-    - dynamic_task__create_task and subagent__execute_task tool descriptions
+    - developer__text_editor tool description (undo_edit)
+    - developer__shell usage for git commands
 
-## SlashCommands
+### GitSupport
 - Yes
-  - The environment provides reusable slash commands that users can trigger from the CLI:
-    - /exit or /quit — Exit the session
-    - /t — Toggle between Light/Dark/Ansi themes
-    - /? or /help — Display help message
-  - Comments:
-    - These are small, user-facing commands; broader automation is implemented via the platform and developer tools rather than additional built-in slash commands.
-  - Sources:
-    - Session command list provided in the runtime instructions at the top of this environment
+  - Native integrations (MCP-style integrations) for GitHub and git workflows; automation via CLI for PR/comments/summaries.
 
-## Subagents
+## Extensible
+
+### Extensible
 - Yes
-  - Specialized subagents and task workflows are supported:
-    - Use dynamic_task__create_task to spawn tasks with custom instructions, extension scoping, and execution settings.
-    - Use subagent__execute_task to run tasks created by the dynamic task system; supports sequential or parallel execution modes.
-    - Subagents can be given explicit context and are intended for parallelizable or long-running subtasks.
-  - Sources:
-    - dynamic_task__create_task and subagent__execute_task tool descriptions
+  - Continue is built to be extensible via blocks, MCP integrations and a hub for sharing assistants.
 
-## CustomModes
-- Yes
-  - Specialist modes can be created by combining extensions, execution settings, and curated prompts:
-    - Enable/disable specific extensions (platform__manage_extensions) to tailor available tools for the mode.
-    - Create dynamic tasks or scheduled recipes (platform__manage_schedule) that run with a specific configuration to emulate a mode.
-    - Use prompt engineering and subagent settings to constrain behavior (e.g., read-only auditing mode vs. active-editing mode).
-  - Sources:
-    - platform__manage_extensions, dynamic_task__create_task, platform__manage_schedule tool descriptions
-
-## Plugins
+### Plugins
 - Yes
   - Extension/recipe model allows bundling commands, agents and hooks:
     - Extensions are enable/disable units (platform__manage_extensions) that change the agent's available toolset.
@@ -155,17 +168,52 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
     - platform__manage_schedule
     - dynamic_task__create_task
 
-## Checkpoints
+### Hooks
 - Yes
-  - Undo and recovery mechanisms:
-    - developer__text_editor undo_edit provides local edit rollback for the last text_editor operation.
-    - Git operations via developer__shell (git commit, git revert, git reset) can be used to create and restore checkpoints in repository history.
-    - When using todo__read/todo__write and plan files, maintain incremental commits to enable reverting high-level work.
+  - Lifecycle-like attachment points available:
+    - Scheduled jobs (platform__manage_schedule) provide lifecycle actions (create, run_now, pause, unpause, delete, inspect, sessions) that act like hooks for recurring automation.
+    - Subagent/task lifecycle: dynamic_task__create_task and subagent__execute_task expose start/finish semantics and can be monitored via their responses and session content (platform schedule sessions API).
+    - developer__text_editor undo_edit provides a simple edit-level rollback hook.
   - Sources:
-    - developer__text_editor tool description (undo_edit)
-    - developer__shell usage for git commands
+    - platform__manage_schedule tool description
+    - dynamic_task__create_task and subagent__execute_task tool descriptions
 
-## SpecDrivenDevelopment
+### SlashCommands
+- Yes
+  - The environment provides reusable slash commands that users can trigger from the CLI:
+    - /exit or /quit — Exit the session
+    - /t — Toggle between Light/Dark/Ansi themes
+    - /? or /help — Display help message
+  - Comments:
+    - These are small, user-facing commands; broader automation is implemented via the platform and developer tools rather than additional built-in slash commands.
+  - Sources:
+    - Session command list provided in the runtime instructions at the top of this environment
+
+### CustomModes
+- Yes
+  - Specialist modes can be created by combining extensions, execution settings, and curated prompts:
+    - Enable/disable specific extensions (platform__manage_extensions) to tailor available tools for the mode.
+    - Create dynamic tasks or scheduled recipes (platform__manage_schedule) that run with a specific configuration to emulate a mode.
+    - Use prompt engineering and subagent settings to constrain behavior (e.g., read-only auditing mode vs. active-editing mode).
+  - Sources:
+    - platform__manage_extensions, dynamic_task__create_task, platform__manage_schedule tool descriptions
+
+### Subagents
+- Yes
+  - Specialized subagents and task workflows are supported:
+    - Use dynamic_task__create_task to spawn tasks with custom instructions, extension scoping, and execution settings.
+    - Use subagent__execute_task to run tasks created by the dynamic task system; supports sequential or parallel execution modes.
+    - Subagents can be given explicit context and are intended for parallelizable or long-running subtasks.
+  - Sources:
+    - dynamic_task__create_task and subagent__execute_task tool descriptions
+
+## Ungrouped Criteria
+
+### Terminal
+- Yes
+  - The `cn` CLI provides an interactive TUI and a headless mode for scripted and CI uses.
+
+### SpecDrivenDevelopment
 - Tessl
   - This project explicitly uses Tessl for Spec Driven Development. See .tessl/framework/agents.md and the project's Spec Driven Development documentation for detailed workflows and rules.
   - Sources:

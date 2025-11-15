@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Reorganize code editor notes to follow the latest comparison template."""
+"""Reorganize notes to follow the latest comparison template."""
 
 from __future__ import annotations
 
 import argparse
 import re
+import textwrap
 from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
@@ -227,19 +228,48 @@ def iter_target_files(data_dir: Path, explicit: Sequence[str]) -> Iterable[Path]
             yield path
 
 
+HELP_EPILOG = textwrap.dedent(
+    """Examples:
+      python scripts/reorganize_notes.py --dry-run
+      python scripts/reorganize_notes.py data/vim.md data/emacs.md
+
+    Notes:
+      * Filenames are resolved relative to --data-dir.
+      * --template controls which comparison template to follow.
+    """
+)
+
+
 def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(
+        description=__doc__,
+        add_help=False,
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=HELP_EPILOG,
+    )
+    parser.add_argument(
+        "-h",
+        "--help",
+        action="help",
+        default=argparse.SUPPRESS,
+        help="Show this help message and exit",
+    )
+    parser.add_argument(
+        "--dataset",
+        type=Path,
+        help="Path to a dataset root containing config/ and data/ subdirectories",
+    )
     parser.add_argument(
         "--template",
-        default="config/code-editor-comparison-template.md",
+        default=Path("config/comparison-template.md"),
         type=Path,
-        help="Path to the comparison template",
+        help="Path to the comparison template (overrides --dataset config)",
     )
     parser.add_argument(
         "--data-dir",
         default=Path("data"),
         type=Path,
-        help="Directory containing code editor notes",
+        help="Directory containing notes (overrides --dataset data dir)",
     )
     parser.add_argument(
         "--dry-run",
@@ -253,10 +283,29 @@ def main() -> None:
     )
 
     args = parser.parse_args()
-    groups = parse_template(args.template)
+
+    if args.dataset:
+        dataset_root = args.dataset
+        data_dir = dataset_root / "data"
+        config_dir = dataset_root / "config"
+        template_matches = sorted(config_dir.glob("*comparison-template.md"))
+        if not template_matches:
+            raise FileNotFoundError(
+                f"No comparison template found in {config_dir} matching '*comparison-template.md'"
+            )
+        if len(template_matches) > 1:
+            raise RuntimeError(
+                f"Multiple comparison templates found in {config_dir}: {', '.join(str(p) for p in template_matches)}"
+            )
+        template_path = template_matches[0]
+    else:
+        data_dir = args.data_dir
+        template_path = args.template
+
+    groups = parse_template(template_path)
     warnings: List[str] = []
 
-    for note_path in iter_target_files(args.data_dir, args.files):
+    for note_path in iter_target_files(data_dir, args.files):
         warnings.extend(process_file(note_path, groups, args.dry_run))
 
     if warnings:
