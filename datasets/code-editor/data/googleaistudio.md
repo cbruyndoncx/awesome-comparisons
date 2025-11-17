@@ -4,17 +4,13 @@ Browser-based development environment from Google for prototyping and experiment
 ## General Info
 
 ### Classification
-<!-- ToDo -->
-<!-- AI Native Dev ainativedev.io Classification -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - AIE/Model
-- Code/Editor
 - Product/Prototyping
 - Code/Autonomous agent
 
-- First-class access to Gemini models (AIE/Model) and an interactive web IDE for building multimodal apps (Code/Editor).
-- Focused on prototyping and experimentation (Product/Prototyping).
-- Supports agentic workflows, function-calling and tool integrations for building autonomous behaviours (Code/Autonomous agent).
+- Primary focus: Model prototyping and experimentation playground (AIE/Model, Product/Prototyping)
+- Supports agentic workflows, function-calling and tool integrations for building autonomous behaviors (Code/Autonomous agent)
+- Note: While it has IDE-like features for building multimodal apps, it's primarily a model experimentation environment rather than a general-purpose code editor
 
 ### Version
  (2025-10-19)

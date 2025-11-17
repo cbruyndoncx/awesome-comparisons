@@ -4,7 +4,7 @@ A web-focused autonomous agent that executes multi-step tasks via natural langua
 ## General Info
 
 ### Classification
-- Code/Editor
+- Code/Autonomous agent (Web Automation)
 
 ### Version
 v0.9 (2024-05)

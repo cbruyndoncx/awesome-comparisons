@@ -4,7 +4,7 @@ An AI-powered product definition platform that helps teams convert ideas into im
 ## General Info
 
 ### Classification
-- Code/Editor
+- Product/Prototyping
 
 ### Version
 v (2025-10-19)

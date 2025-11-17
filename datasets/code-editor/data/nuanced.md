@@ -4,7 +4,7 @@ Nuanced provides compiler-grade code intelligence (call graphs, symbols, types, 
 ## General Info
 
 ### Classification
-- Code/Editor
+- Developer Tools (Code Intelligence/MCP Server)
 
 ### Version
 v— (2025-10-19)
