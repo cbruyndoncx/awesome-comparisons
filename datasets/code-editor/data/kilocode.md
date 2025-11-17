@@ -149,6 +149,5 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
   - incorporates terminal/CLI execution capabilities (inherited from Cline-style tooling) for running commands and automations
 
 ### SpecDrivenDevelopment
-<!-- Has support for these Spec Driven Development methodologies: -->
-
-
+- Other
+  - No specific spec-driven development framework documented; focuses on agent-based coding assistance

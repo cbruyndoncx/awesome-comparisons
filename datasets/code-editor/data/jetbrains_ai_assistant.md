@@ -67,7 +67,8 @@ JetBrains AI Assistant embeds AI workflows directly inside JetBrains IDEs and le
 ## MCP-Client
 
 ### MCP-Client
--
+- Unknown
+  - No public documentation found for MCP (Model Context Protocol) client support; primarily uses direct LLM integrations
 
 ### Prompts
 - Yes

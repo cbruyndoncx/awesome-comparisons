@@ -7,13 +7,16 @@ AIXcoder (often styled aiXcoder or Aix Coder) is an AI-powered code-completion a
 - Code/Editor
 
 ### Version
-(2025-10-19)
+- Unknown (last checked 2025-10-19)
+  - No public version number documented; check vendor site for current release
 
 ### Repo
 -
 
 ### Rating
--
+- [4] Strong local-first/privacy design with offline model capability
+- [3] Good IDE integration (VS Code, JetBrains, Eclipse)
+- [3] Limited public documentation compared to major competitors
 
 ### Short Description
 - AI-powered code completion and method-level code generation assistant with local-first (offline) model support and IDE integrations.
@@ -54,8 +57,8 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
 ## MCP-Client
 
 ### MCP-Client
-
-
+- Unknown
+  - No public documentation found regarding MCP (Model Context Protocol) support; primarily focuses on local model inference
 ### Prompts
 - Yes
   - Supports natural-language prompts for method-level generation and NL-to-code workflows.
@@ -71,8 +74,8 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
 ## Deployment
 
 ### BYOK
-
-
+- Unknown
+  - Local-first model runs offline without API keys; BYOK for cloud features not publicly documented
 ### LocalOffline
 - Yes
   - AIXcoder emphasizes local/offline model operation so code and context can remain on-device. The product also offers cloud modes for extended functionality.
@@ -88,8 +91,8 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
   - The IDE integrations surface repository and file-level examples; agent can reference files from the open repo search features and local workspace context when running locally.
 
 ### Checkpoints
-
-
+- No
+  - No built-in checkpoint/undo system documented; use standard IDE local history or git for rollback
 ### GitSupport
 - Yes
   - Integrates with repository search and can surface examples and API usage from GitHub/open-source code; version-control integration is part of the IDE workflow.
@@ -112,8 +115,8 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
   - Within supported IDEs, aiXcoder exposes quick actions and command palette entries (e.g., trigger generation, search) that act like reusable commands; exact support depends on the IDE plugin.
 
 ### CustomModes
-
-
+- Yes
+  - Supports local vs cloud mode, different model configurations, and enterprise custom models for specialized workflows
 ### Subagents
 - Yes
   - aiXcoder supports specialized workflows (search, generation, repair) that behave like subagents; enterprise/custom models or fine-tuned variants can be deployed to handle task-specific flows (e.g., network automation script generation).
@@ -125,6 +128,6 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
   - Model repositories and examples include command-line and Python script usage for local inference; some distributions expose CLI tools for local model runs.
 
 ### SpecDrivenDevelopment
-
-
+- Other
+  - No specific spec-driven development framework documented; focuses on code completion and generation workflows
 ---

@@ -79,8 +79,8 @@ MarsX is an open-source development platform and marketplace that combines AI as
 ## Deployment
 
 ### BYOK
-
-
+- Unknown
+  - No public documentation found for bring-your-own-key support; platform uses integrated AI services
 ### LocalOffline
 - No
   - MarsX is primarily a cloud platform with a web-based IDE and Micro AppStore.

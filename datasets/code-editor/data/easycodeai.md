@@ -196,10 +196,5 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 - Primary interfaces are the Flow GUI and editor extensions (VS Code/JetBrains); no documented standalone CLI-only workflow.
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
-- No explicit integrations
-- No public documentation indicating first-class support for BMAD, SpecKit, Tessl or other spec-driven frameworks; EasyCode focuses on planning/implementation flows rather than formal spec tooling.
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Other
+  - No public documentation indicating first-class support for BMAD, SpecKit, Tessl or other spec-driven frameworks; EasyCode focuses on planning/implementation flows rather than formal spec tooling

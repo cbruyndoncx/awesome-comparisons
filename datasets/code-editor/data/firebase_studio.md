@@ -60,7 +60,8 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
 ## MCP-Client
 
 ### MCP-Client
--
+- Unknown
+  - Firebase Studio uses Gemini models; no public documentation found for general MCP client support
 
 ### Prompts
 - Yes
