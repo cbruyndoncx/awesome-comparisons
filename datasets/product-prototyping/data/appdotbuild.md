@@ -7,7 +7,8 @@
 - Product/Prototyping
 
 ### Version
-v1.31.3 (2025-07-??)
+- v1.31.3
+  - Release date details unavailable; check repository for specific date
 
 ### Repo
 - https://github.com/appdotbuild/platform
@@ -18,8 +19,6 @@ v1.31.3 (2025-07-??)
 
 ### Short Description
 Open-source AI agent that converts a single natural-language prompt (CLI or web) into a complete, deployable full-stack application, including frontend, backend, database provisioning, authentication, tests, GitHub repository creation, and automated deployment.
-
--
 
 ### Description
 app.build is an open-source AI agent that turns a single terminal (or web) prompt into a complete, deployed full-stack web application. It scaffolds frontend and backend code, provisions a hosted Postgres database, wires up authentication, writes and runs tests, creates a GitHub repository in the user's account, and deploys the app to a live URL. The project emphasizes developer control by outputting a complete, editable codebase in the user's own GitHub repo rather than locking code behind a proprietary interface.
@@ -42,9 +41,8 @@ The default generated stacks commonly include React on the frontend and Fastify 
 - Sources: coverage gathered from platform README and third-party posts about app.build (Neon/Koyeb posts, GitHub repo).
 
 ### Last Update
-2025-07
-- Release series: v1.31.x published in July 2025 (referenced in project release notes / changelog)
--
+- 2025-07
+  - Release series: v1.31.x published in July 2025 (referenced in project release notes / changelog)
 
 ## Licensing
 

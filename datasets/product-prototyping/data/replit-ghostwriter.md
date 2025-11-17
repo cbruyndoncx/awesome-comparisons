@@ -7,7 +7,8 @@
 - Product/Prototyping
 
 ### Version
-vN/A (2025-10-19)
+- Unknown (2025-10-19)
+  - Integrated into Replit IDE; no separate version tracking
 
 ### Repo
 -

@@ -21,8 +21,6 @@ A terminal-native, open-source AI coding assistant that brings LLM-powered code 
 ### Short Description
 A terminal-native, local-first AI coding assistant with a TUI for interactive planning and building; supports local and cloud LLMs, LSP integration, git-aware editing, and extensible skills/actions.
 
--
-
 ### Description
 OpenCode is an open-source AI assistant designed for use from the terminal. It provides a conversational interface and a suite of programmatic tools (file operations, grep/glob, patch/apply, diagnostics, shell execution, fetch, Sourcegraph search, etc.) that allow the assistant to read, explain, modify and create code in the context of a repository. OpenCode supports both cloud and local LLMs (through Models.dev and adapters such as Ollama), can initialize project context, produce implementation plans, and then switch to a build mode to apply edits. Its architecture supports extensible actions/skills and hierarchical agents for complex tasks.
 
@@ -50,7 +48,8 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
 - MIT
 
 ### FreeTrial
-- Yes
+- N/A
+  - Open-source software (permanently free), not a time-limited trial
 
 ## MCP-Client
 

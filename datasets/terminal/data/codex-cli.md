@@ -14,8 +14,8 @@ Codex CLI is an open-source command-line interface for interacting with OpenAI's
 - https://github.com/openai/codex
 
 ### Rating
-- 4.2/5
-  - Community and practitioner assessments (subjective aggregate as of 2025-10-19).
+- [4] Strong community and practitioner assessments
+- [4] Effective terminal-first coding agent with configurable approval modes
 
 ### Short Description
 - A terminal-first coding agent that reads, edits, and executes code using LLMs with configurable approval/sandbox modes and provider gateways.

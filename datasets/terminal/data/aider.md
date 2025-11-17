@@ -21,8 +21,6 @@ Aider is a python package and frequently updated with a mass following and an ac
 ### Short Description
 A terminal-first AI pair-programming CLI (with optional browser UI) that provides repo-aware, multi-file edits, automatic Git commits, and support for multiple remote and local LLM backends.
 
--
-
 ### Description
 Aider is an open-source AI pair-programming tool focused on the terminal-first developer workflow. It allows developers to chat with LLMs, make multi-file edits, run linters/tests, and commit changes automatically via Git — all from the CLI (with an optional web GUI). Aider works across languages and large codebases by building and using a code-map of the repository to provide context-aware edits. It supports multiple remote LLM providers and local models, enabling private and offline workflows.
 
@@ -41,7 +39,6 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 
 ### Last Update
 - 2025-10-18
--
 
 ## Licensing
 
@@ -52,8 +49,8 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 - MIT
 
 ### FreeTrial
-- Yes
-  - The tool itself is free/open-source (users pay the LLM provider they connect to)
+- N/A
+  - Open-source tool (permanently free); users pay their own LLM provider for API usage, not a time-limited trial
 
 ## MCP-Client
 
@@ -133,5 +130,5 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 - Yes
 
 ### SpecDrivenDevelopment
-
-
+- No
+  - Aider is a terminal-based coding assistant focused on interactive chat workflows, not a spec-driven development framework

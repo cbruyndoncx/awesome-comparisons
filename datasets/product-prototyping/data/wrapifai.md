@@ -137,13 +137,5 @@ Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you c
 - No
 
 ### SpecDrivenDevelopment
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
 - Other
-  -
+  - Wrapifai is not a spec-driven development framework; it is a no-code tool builder for creating AI-powered applications

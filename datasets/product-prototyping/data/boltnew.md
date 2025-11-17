@@ -132,6 +132,5 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
   - In‑browser terminal via WebContainers that can run npm, Node.js servers, and CLI tooling.
 
 ### SpecDrivenDevelopment
-
-
-### End of file
+- No
+  - Bolt.new is an AI-powered fullstack development tool focused on prompt-driven application generation, not a spec-driven development framework
