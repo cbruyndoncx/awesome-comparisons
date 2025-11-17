@@ -56,7 +56,8 @@ The platform is positioned for both individual developer workflows (autocomplete
 ## MCP-Client
 
 ### MCP-Client
--
+- Unknown
+  - No public documentation found indicating Model Context Protocol (MCP) support.
 
 ### Prompts
 - Yes
@@ -73,7 +74,8 @@ The platform is positioned for both individual developer workflows (autocomplete
 ## Deployment
 
 ### BYOK
--
+- Unknown
+  - No public documentation found regarding BYOK support; enterprise deployment options may vary.
 
 ### LocalOffline
 - No

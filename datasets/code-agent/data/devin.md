@@ -48,12 +48,14 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 - Proprietary
 
 ### FreeTrial
--
+- Unknown
+  - No public information available about free trial availability; contact Cognition Labs for access.
 
 ## MCP-Client
 
 ### MCP-Client
--
+- Unknown
+  - No public documentation available for Model Context Protocol (MCP) support.
 
 ### Prompts
 - Yes
@@ -73,7 +75,8 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 ## Deployment
 
 ### BYOK
--
+- Unknown
+  - No public documentation available regarding BYOK support.
 
 ### LocalOffline
 - No
@@ -108,9 +111,13 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
   - Supports integrations and connectors for common developer tooling (GitHub, editor integrations, CI hooks)
 
 ### Hooks
+- Unknown
+  - No public documentation available regarding lifecycle hooks or custom event handlers.
 
 
 ### SlashCommands
+- Unknown
+  - No public documentation available regarding slash-command style interface.
 
 
 ### CustomModes
@@ -118,6 +125,8 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
   - Features and modes highlighted in product updates include Interactive Planning (plan-first workflows), Devin Search (codebase search), and Devin Wiki (knowledge base/documentation)
 
 ### Subagents
+- Unknown
+  - No public documentation available regarding subagent or multi-agent architecture.
 
 
 ## Ungrouped Criteria

@@ -53,7 +53,8 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
 ## MCP-Client
 
 ### MCP-Client
--
+- No
+  - No Model Context Protocol (MCP) integration; uses IDE plugins and CLI for integration.
 
 ### Prompts
 - No
@@ -74,10 +75,12 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
 ## Deployment
 
 ### BYOK
--
+- Unknown (likely available for Enterprise)
+  - No public documentation; Teams/Enterprise editions mention on-prem deployment options.
 
 ### LocalOffline
--
+- Partial (Enterprise on-prem option available)
+  - Standard offering is cloud-based; Enterprise customers can deploy on-premises.
 
 ## Developer Experience
 

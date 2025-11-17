@@ -53,6 +53,8 @@ OpenDevin is an open-source project that implements an autonomous AI software en
 ## MCP-Client
 
 ### MCP-Client
+- Unknown
+  - No public documentation found indicating Model Context Protocol (MCP) support.
 
 
 ### Prompts
