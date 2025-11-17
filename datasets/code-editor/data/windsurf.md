@@ -7,7 +7,8 @@ AI-powered agentic IDE and coding assistant focused on whole-project understandi
 - Code/Editor
 
 ### Version
-v1.0 (2025-10-19)
+- v1.0 (2025-10-19)
+  - Note: Last Update date (2025-11-15) is more recent; active development may not always increment version number
 
 ### Repo
 - https://windsurf.ai
