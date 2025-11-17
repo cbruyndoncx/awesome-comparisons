@@ -132,29 +132,9 @@ Several tools are classified as "Code/Autonomous agent" when they are more speci
 
 ---
 
-## Priority 4: Date and Version Issues (2 issues)
+## Priority 4: Date and Version Issues (1 issue)
 
-### Issue 9: Fix Future Dates Across Multiple Files
-**Files:** Multiple (7 files affected)
-**Severity:** Medium - Data Quality
-**Description:**
-Multiple files contain future dates (environment date is 2025-11-17):
-- amp.md (Line 11): 2025-10-19
-- codiumai.md: 2025-10-19
-- devika-ai.md (Line 11): 2025-10-19
-- coderabbit.md: 2025-10-19
-- codenamegoose.md: 2025-10-19
-- diffblue_cover.md: 2025-10-19
-- smol-developer.md: 2025-09-26
-
-**Action Required:**
-- Verify actual last update dates for each tool
-- Update to realistic dates based on actual product releases/documentation
-- Consider using format that indicates "as of" date for data gathering
-
----
-
-### Issue 10: Fix Malformed Version Numbers
+### Issue 9: Fix Malformed Version Numbers
 **Files:** devika-ai.md, openhands.md, diffblue_cover.md
 **Severity:** Medium - Data Quality
 **Description:**
@@ -172,7 +152,7 @@ Several files have malformed version numbers:
 
 ## Priority 5: Incomplete Required Fields (3 issues)
 
-### Issue 11: Complete Empty MCP-Client Fields
+### Issue 10: Complete Empty MCP-Client Fields
 **Files:** mutableai.md, diffblue_cover.md, openhands.md, devin.md
 **Severity:** Medium - Incomplete Data
 **Description:**
@@ -189,7 +169,7 @@ Multiple files missing MCP-Client Yes/No answers:
 
 ---
 
-### Issue 12: Complete Empty BYOK and LocalOffline Fields
+### Issue 11: Complete Empty BYOK and LocalOffline Fields
 **Files:** mutableai.md, diffblue_cover.md, devin.md
 **Severity:** Medium - Incomplete Data
 **Description:**
@@ -205,7 +185,7 @@ Critical enterprise deployment fields are empty:
 
 ---
 
-### Issue 13: Complete Empty Extensibility Fields in Devin
+### Issue 12: Complete Empty Extensibility Fields in Devin
 **File:** `datasets/code-agent/data/devin.md`
 **Severity:** Medium - Incomplete Data
 **Description:**
@@ -225,7 +205,7 @@ Multiple critical extensibility fields are completely empty:
 
 ## Priority 6: Specific Data Issues (4 issues)
 
-### Issue 14: Verify and Fix Unverified MCP Claim in CodiumAI
+### Issue 13: Verify and Fix Unverified MCP Claim in CodiumAI
 **File:** `datasets/code-agent/data/codiumai.md`
 **Severity:** High - Unverified Claim
 **Description:**
@@ -241,7 +221,7 @@ Multiple critical extensibility fields are completely empty:
 
 ---
 
-### Issue 15: Clarify Product Name Confusion in Devika AI
+### Issue 14: Clarify Product Name Confusion in Devika AI
 **File:** `datasets/code-agent/data/devika-ai.md`
 **Severity:** Medium - Naming Confusion
 **Description:**
@@ -257,7 +237,7 @@ Multiple critical extensibility fields are completely empty:
 
 ---
 
-### Issue 16: Fix Repository vs Website Confusion in AMP
+### Issue 15: Fix Repository vs Website Confusion in AMP
 **File:** `datasets/code-agent/data/amp.md`
 **Severity:** Low - Minor Error
 **Description:**
@@ -272,7 +252,7 @@ Multiple critical extensibility fields are completely empty:
 
 ---
 
-### Issue 17: Fix CLI vs Slash Command Confusion in Diffblue Cover
+### Issue 16: Fix CLI vs Slash Command Confusion in Diffblue Cover
 **File:** `datasets/code-agent/data/diffblue_cover.md`
 **Severity:** Medium - Conceptual Error
 **Description:**
@@ -289,7 +269,7 @@ Multiple critical extensibility fields are completely empty:
 
 ## Priority 7: Template and Consistency Issues (2 issues)
 
-### Issue 18: Complete Empty SpecDrivenDevelopment Sections
+### Issue 17: Complete Empty SpecDrivenDevelopment Sections
 **Files:** amp.md, mutableai.md
 **Severity:** Low - Incomplete Data
 **Description:**
@@ -304,7 +284,7 @@ Multiple critical extensibility fields are completely empty:
 
 ---
 
-### Issue 19: Standardize Format for Unknown/Missing Values
+### Issue 18: Standardize Format for Unknown/Missing Values
 **Files:** Multiple
 **Severity:** Low - Consistency
 **Description:**
@@ -325,7 +305,7 @@ Inconsistent formats for unknown or missing values:
 
 ## Priority 8: Language Support Clarification (1 issue)
 
-### Issue 20: Clarify Language Support Across Multiple Files
+### Issue 19: Clarify Language Support Across Multiple Files
 **Files:** devin.md, devika-ai.md, codiumai.md, coderabbit.md
 **Severity:** Medium - Incomplete/Unclear Data
 **Description:**
@@ -345,10 +325,10 @@ Several files have unclear or incomplete language support:
 
 ## Summary Statistics
 
-- **Total Issues Proposed:** 20
+- **Total Issues Proposed:** 19
 - **Critical Priority:** 3 issues
 - **High Priority:** 4 issues
-- **Medium Priority:** 11 issues
+- **Medium Priority:** 10 issues
 - **Low Priority:** 2 issues
 
 - **Files Affected:** 11 files (all files in datasets/code-agent/data/)
@@ -358,9 +338,9 @@ Several files have unclear or incomplete language support:
 
 1. **Week 1:** Address Priority 1 (Critical Factual Errors) - Issues #1-3
 2. **Week 2:** Address Priority 2 (Contradictory Information) - Issues #4-7
-3. **Week 3:** Address Priority 3-4 (Classification & Dates) - Issues #8-10
-4. **Week 4:** Address Priority 5-6 (Incomplete Fields & Data Issues) - Issues #11-17
-5. **Week 5:** Address Priority 7-8 (Template & Consistency) - Issues #18-20
+3. **Week 3:** Address Priority 3-4 (Classification & Version Issues) - Issues #8-9
+4. **Week 4:** Address Priority 5-6 (Incomplete Fields & Data Issues) - Issues #10-16
+5. **Week 5:** Address Priority 7-8 (Template & Consistency) - Issues #17-19
 
 ## Labels Recommendation
 
@@ -368,8 +348,8 @@ Suggested labels for these issues:
 - `data-quality` - For all issues
 - `critical` - For Priority 1 issues
 - `research-needed` - For issues requiring vendor research
-- `template-improvement` - For Issues #17, #18, #19
-- `good-first-issue` - For simple fixes like #16
+- `template-improvement` - For Issues #16, #17, #18
+- `good-first-issue` - For simple fixes like #15
 
 ---
 
