@@ -5,10 +5,10 @@ AI-powered unit test generation for Java
 
 ### Classification
 
-- Code/Autonomous agent
+- Test Generation Tool (Java)
 
 ### Version
-vN/A (2025-10-19)
+N/A (last checked 2025-10-19)
 
 ### Repo
 -

@@ -8,7 +8,7 @@ Open-source autonomous AI software engineer (originally OpenDevin; now maintaine
 - Code/Autonomous agent
 
 ### Version
-v (2025-10-19)
+Unknown (last checked 2025-10-19)
 
 ### Repo
 - https://github.com/All-Hands-AI/OpenHands

@@ -8,7 +8,7 @@ An open-source agentic AI software engineer for end-to-end code generation, rese
 - Code/Autonomous agent
 
 ### Version
-v (2025-10-19)
+Unknown (last checked 2025-10-19)
 
 ### Repo
 - https://github.com/stitionai/devika

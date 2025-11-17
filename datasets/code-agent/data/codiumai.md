@@ -5,7 +5,7 @@ AI-powered test generation and code integrity platform (rebranded to Qodo)
 
 ### Classification
 
-- Code/Autonomous agent
+- Test Generation & PR Review Tool
 
 ### Version
 <!-- ToDo -->

@@ -5,7 +5,7 @@
 
 ### Classification
 
-- Code/Autonomous agent
+- AI Assistant (with coding capabilities)
 
 ### Version
 v1.0 (2025-10-18)
