@@ -77,8 +77,8 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
   - Users bring their own LLM API keys (e.g., OpenAI) for generation.
 
 ### LocalOffline
-- Yes
-  - Smol can be used with locally hosted/open-source LLMs in some setups, but most common usage relies on a cloud LLM (e.g., OpenAI GPT-4) which requires network access and an API key.
+- Partial (supports local LLMs but typically uses cloud)
+  - Smol can be configured to use locally hosted/open-source LLMs, but most common usage relies on a cloud LLM (e.g., OpenAI GPT-4) which requires network access and an API key.
 
 ## Developer Experience
 
