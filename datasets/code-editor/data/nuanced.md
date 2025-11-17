@@ -7,7 +7,8 @@ Nuanced provides compiler-grade code intelligence (call graphs, symbols, types, 
 - Developer Tools (Code Intelligence/MCP Server)
 
 ### Version
-v— (2025-10-19)
+- Unknown (last checked 2025-10-19)
+  - Early-stage project; check GitHub for releases
 
 ### Repo
 - https://github.com/mattmorgis/nuanced-mcp

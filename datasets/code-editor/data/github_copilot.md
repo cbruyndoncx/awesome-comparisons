@@ -7,7 +7,8 @@ AI pair-programmer and code assistant integrated across popular IDEs and GitHub.
 - Code/Editor
 
 ### Version
-vN/A (2025-10-19)
+- Unknown (last checked 2025-10-19)
+  - GitHub Copilot uses rolling updates without public version numbers; features evolve continuously
 
 ### Repo
 -

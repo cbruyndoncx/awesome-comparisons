@@ -191,19 +191,5 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
   - Interaction is through the web UI (Playground, chat, multimodal inputs) and exported code; no integrated shell/terminal is advertised.
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
 - None
   - No explicit, first-class support for community Spec‑Driven frameworks (Tessl, BMAD, SpecKit, AgentOS, etc.) is documented; teams typically export code and integrate with their own SDLC and spec tools outside Studio.
-
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented '- ' entries beneath the kept values. -->

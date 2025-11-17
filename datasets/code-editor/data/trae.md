@@ -7,7 +7,8 @@ A modern AI-powered IDE and coding assistant ("The Real AI Engineer") focused on
 - Code/Editor
 
 ### Version
-v1.3.0 (2025-04-xx)
+- v1.3.0 (2025-04)
+  - Released April 2025 with MCP support and Builder/SOLO enhancements
 
 ### Repo
 -
@@ -127,13 +128,5 @@ Trae is an AI-first IDE intended to act as a full software engineering partner r
 - Yes
 
 ### SpecDrivenDevelopment
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
 - Other
-  - [Trae is not tied to a specific spec-driven development framework. It integrates with project rules/metadata and MCP-driven agents so it can be used alongside spec-driven workflows (including Tessl or other frameworks) but does not formally implement or require one of the listed SDD frameworks.]
+  - Trae is not tied to a specific spec-driven development framework. It integrates with project rules/metadata and MCP-driven agents so it can be used alongside spec-driven workflows (including Tessl or other frameworks) but does not formally implement or require one of the listed SDD frameworks.

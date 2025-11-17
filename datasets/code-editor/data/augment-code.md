@@ -7,7 +7,8 @@ AI-powered developer platform focused on deep codebase understanding and autonom
 - Code/Editor
 
 ### Version
-vN.N (yyyy-mm-dd)
+- Unknown
+  - No public version information available; check augmentcode.com for current release information
 
 ### Repo
 - https://augmentcode.com

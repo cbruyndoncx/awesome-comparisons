@@ -7,7 +7,8 @@ AI-assisted coding assistant and unified LLM gateway for developers
 - Code/Editor
 
 ### Version
-(2025-10-18)
+- Unknown (last checked 2025-10-18)
+  - Web service with continuous updates; no public version releases
 
 ### Repo
 - https://github.com/askcodi

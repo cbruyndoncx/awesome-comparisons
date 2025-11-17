@@ -162,15 +162,5 @@ Jolt is a commercial AI coding assistant designed for large production codebases
 ## Project Hints
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Other
+  - No specific spec-driven development framework is documented for Jolt; the tool focuses on natural-language workflows and code generation without formally prescribing a particular SDD methodology.

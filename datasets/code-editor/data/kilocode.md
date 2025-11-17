@@ -12,7 +12,8 @@ Open-source AI coding assistant / VS Code extension
   - Open-source VS Code (and JetBrains) extension with CLI support, agent orchestration, and project-scoped memory stored under .kilocode/
 
 ### Version
-(2025-10-19)
+- Unknown (last checked 2025-10-19)
+  - Check GitHub releases for current version
 
 ### Repo
 - https://github.com/Kilo-Org/kilocode

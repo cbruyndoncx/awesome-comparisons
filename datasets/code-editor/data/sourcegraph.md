@@ -7,7 +7,8 @@ A code intelligence platform for universal code search, navigation, large-scale 
 - Code/Editor
 
 ### Version
-vN/A (2025-10-19)
+- Unknown (last checked 2025-10-19)
+  - Sourcegraph uses rolling releases; check sourcegraph.com/changelog for current version
 
 ### Repo
 - https://github.com/sourcegraph/sourcegraph-public-snapshot

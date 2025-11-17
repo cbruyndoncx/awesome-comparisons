@@ -7,7 +7,8 @@ A development platform that blends AI, no-code/low-code and traditional pro-code
 - Code/Editor
 
 ### Version
-v (2024)
+- Unknown (last checked 2024)
+  - No public version number documented
 
 ### Repo
 - https://github.com/MarsX-dev/devhunt

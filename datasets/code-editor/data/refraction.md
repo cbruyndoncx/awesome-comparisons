@@ -7,7 +7,8 @@ A small, practical AI assistant for developers focused on refactoring, test gene
 - Code/Editor
 
 ### Version
-(2025-10-19)
+- Unknown (last checked 2025-10-19)
+  - Web-based service with continuous updates; no public version releases
 
 ### Repo
 -
