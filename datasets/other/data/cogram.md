@@ -7,14 +7,17 @@
 - Code/Other
 
 ### Version
-- 0.11.23
+- 0.11.23 (OUTDATED - Last update 2022-01-24)
   - PyPI: jupyter-cogram 0.11.23 (2022-01-24)
+  - NOTE: Product appears to have no updates since January 2022 (~4 years old). Verify current status and availability on cogram.ai before use
 
 ### Repo
--
+- Unknown / Not Found
+  - No official public source repository located for cogram.ai jupyter-cogram extension; community/test repositories may exist but are unofficial
 
 ### Rating
--
+- Not Available
+  - Insufficient public review data to provide a rating; product appears inactive since 2022
 
 ### Short Description
 - AI coding assistant for Jupyter Notebooks that generates Python code from natural-language comments and provides context-aware autocompletions for data-science workflows.
@@ -69,7 +72,8 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
 ## Deployment
 
 ### BYOK
-
+- Unknown
+  - No public documentation found regarding BYOK (Bring Your Own Key) capability for the proprietary Cogram.ai service
 
 ### LocalOffline
 - No
@@ -82,7 +86,8 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
   - Uses the notebook execution and cell history (code above the cursor) as context to generate more accurate suggestions.
 
 ### DirectFileReferences
-
+- No
+  - No indication that the jupyter-cogram extension provides direct file reference management or file browsing capabilities in the documented interface
 
 ### Checkpoints
 - No
@@ -123,5 +128,5 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
 - No
 
 ### SpecDrivenDevelopment
-
-- 
+- No
+  - No evidence of specification-driven development capabilities (e.g., formal spec parsing or spec-to-code generation) in the documented jupyter-cogram extension

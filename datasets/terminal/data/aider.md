@@ -8,7 +8,8 @@ Aider is a python package and frequently updated with a mass following and an ac
 - Code/Terminal
 
 ### Version
-tbd (2025-10-18)
+- Unknown (2025-10-18)
+  - Actively maintained open-source project; check https://github.com/Aider-AI/aider for current version
 
 ### Repo
 - https://github.com/Aider-AI/aider

@@ -7,7 +7,8 @@ Modern AI-powered terminal and agentic development environment focused on unifyi
 - Code/Terminal
 
 ### Version
-v2.0 (2025-09-xx)
+- v2.0
+  - Specific release date unavailable; major v2.0 release occurred in September 2025
 
 ### Repo
 - https://www.warp.dev

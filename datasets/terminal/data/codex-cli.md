@@ -7,7 +7,8 @@ Codex CLI is an open-source command-line interface for interacting with OpenAI's
 - Code/Terminal
 
 ### Version
- (2025-10-19)
+- Unknown (2025-10-19)
+  - Version information not available for OpenAI Codex CLI
 
 ### Repo
 - https://github.com/openai/codex
