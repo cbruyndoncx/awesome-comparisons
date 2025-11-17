@@ -84,7 +84,6 @@ Proprietary
   - Codespaces: full-project upload/workspace that provides the model with repository-wide context (files, deps, project structure) for more accurate, consistent suggestions.
   - Codi Workbook: continuous, Jupyter-style sessions that preserve conversational and code-generation context across interactions within a project.
   - IDE extensions: session- and project-scoped chat history in Codi Chat; model selection and project settings help tailor contextual behavior.
-- No
 
 ### DirectFileReferences
 - Yes

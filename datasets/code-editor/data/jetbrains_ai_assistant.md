@@ -78,20 +78,12 @@ JetBrains AI Assistant embeds AI workflows directly inside JetBrains IDEs and le
   - Custom prompts are accessible from the AI chat, the AI Actions popup (Alt+Enter), editor context menus, and commit/Documentation actions.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrates with JetBrains IDE tooling, build systems, and test runners; supports tool calling for code analysis and execution
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Can access project files, documentation, and codebase resources for context
 
 ## Deployment
 
