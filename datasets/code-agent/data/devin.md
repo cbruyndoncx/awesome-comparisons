@@ -26,8 +26,9 @@ An autonomous agent from Cognition Labs that accepts high-level natural-language
 Devin is designed as an autonomous software engineering agent created by Cognition Labs. Unlike code-completion assistants, Devin accepts high-level natural-language tasks, decomposes them into step-by-step plans, and executes those plans inside a sandboxed environment (editor, shell, browser). It can install dependencies, modify code, run tests, search documentation, iterate on failures, and create pull requests. The product is aimed at accelerating engineering teams or acting as a junior developer to complete discrete tasks with minimal supervision.
 
 ### Languages
-- Python
-- JavaScript/TypeScript
+- Multi-language support (specific languages not publicly documented)
+  - Demos primarily showcase Python and JavaScript/TypeScript
+  - As a general-purpose autonomous agent, likely supports additional languages
 
 ### Notes
 - Distinguishing features: autonomous multi-step planning and execution, long-horizon reasoning across thousands of micro-steps, ability to research (browse docs) and iteratively debug.

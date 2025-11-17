@@ -28,9 +28,9 @@ Devika AI is an open-source "software engineer" agent that accepts high-level in
 Key capabilities include automated planning (breaking objectives into actionable steps), web research (browse and extract relevant docs), code generation across multiple languages/stack contexts, repository/Git integration, and deployment helpers (for example, static site deployment to Netlify).
 
 ### Languages
-- JavaScript / TypeScript
-- Python
-- Shell
+- Multi-language code generation support
+  - Implementation: Python (backend), JavaScript/TypeScript (UI)
+  - Generates code across multiple languages/stacks (specific list not documented)
 
 ### Notes
 - Multi-model support: commonly used with Claude 3, GPT-4, Gemini, Mistral, Groq and local models via Ollama.

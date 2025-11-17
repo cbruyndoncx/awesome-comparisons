@@ -32,6 +32,7 @@ CodiumAI (rebranded to Qodo) is an AI-first code quality platform focused on aut
 ### Languages
 - Python
 - JavaScript / TypeScript
+- Additional languages likely supported (check official documentation for complete list)
 
 ### Notes
 - Rebranded to Qodo in 2024; platform and docs may be under either the Codium AI or Qodo name.

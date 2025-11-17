@@ -33,8 +33,8 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
 - Go
 - C#
 - Ruby
-- Other
-  - Other common languages (multi-language support via static analysis and AST parsing)
+- Multi-language support via static analysis and AST parsing
+  - Supports additional common languages beyond those listed above
 
 ### Notes
 - Key features:

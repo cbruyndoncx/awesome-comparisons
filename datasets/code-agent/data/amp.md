@@ -136,6 +136,21 @@ Amp is designed as an "agentic" coding assistant that can autonomously reason th
 - Yes
 
 ### SpecDrivenDevelopment
-
+- Tessl
+  - Unknown
+- SpecKit
+  - Unknown
+- OpenSpec
+  - Unknown
+- BMAD
+  - Unknown
+- AgentOS
+  - Unknown
+- ClaudeFlow
+  - Unknown
+- SPARC
+  - Unknown
+- SuperClaude
+  - Unknown
 
 ---
