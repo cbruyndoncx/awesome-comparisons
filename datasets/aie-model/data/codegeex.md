@@ -7,7 +7,8 @@ Open-source multilingual code generation model from Tsinghua University (THUDM).
 - AIE/Model
 
 ### Version
-- CodeGeeX v1 (13B, released Sep 2022); CodeGeeX2 (follow-up, released 2023-07-24)
+- CodeGeeX v1 (13B parameters, September 2022)
+- CodeGeeX2 (follow-up release, 2023-07-24)
 
 ### Repo
 - https://github.com/THUDM/CodeGeeX

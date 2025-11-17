@@ -7,7 +7,7 @@ An open-source large language model for code, developed by the BigCode community
 - AIE/Model
 
 ### Version
-v1 / 15.5B (initial: 2023)
+- v1 (15.5B parameters, 2023)
 
 ### Repo
 - https://github.com/bigcode-project/starcoder
@@ -19,8 +19,6 @@ v1 / 15.5B (initial: 2023)
 
 ### Short Description
 - Open-source 15.5B-parameter decoder-only transformer for code generation and infilling, trained on permissively licensed GitHub code (The Stack). Optimized for code completion, infilling, translation between languages, and code-aware QA.
-
--
 
 ### Description
 StarCoder is a decoder-only transformer model optimized for programming tasks. The original released model has ~15.5 billion parameters and was trained by the BigCode community on The Stack — a large, permissively-licensed corpus of GitHub code — with heavy filtering and preprocessing. StarCoder offers a long context window (commonly released with an 8k token context), strong multilingual code support, and capabilities for code completion, infilling, translation between languages, and code-aware question answering.
@@ -54,5 +52,5 @@ The project emphasizes responsible open-source release practices (dataset opt-ou
   - BigCode-OpenRAIL / OpenRAIL-M (model card requires agreement on use)
 
 ### FreeTrial
-- Yes
-  - Model weights and checkpoints are openly downloadable (subject to accepting the model card / license on Hugging Face).
+- N/A
+  - Open-source model: weights and checkpoints are freely available (subject to accepting the model card / license on Hugging Face), not a time-limited trial.
