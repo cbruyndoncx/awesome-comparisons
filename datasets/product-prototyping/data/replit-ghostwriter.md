@@ -122,7 +122,6 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 ### SlashCommands
 - Yes
   - Within the Replit IDE chat/command palette, Ghostwriter supports in-editor chat interactions and may accept slash-like quick commands in the chat UI for common tasks (e.g., refactor, explain, generate). Public docs do not provide a formal, documented slash-command syntax; behavior is primarily UI-driven rather than command-driven.
-- No
 
 ### CustomModes
 - Yes
