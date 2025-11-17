@@ -1,4 +1,4 @@
-# Codename Goose - https://goose.ai/
+# Codename Goose - https://github.com/block/goose
 Lightweight open-source agent framework for automating development and productivity workflows on-machine.
 
 ## General Info

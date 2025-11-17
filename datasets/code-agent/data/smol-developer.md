@@ -56,7 +56,7 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
 
 ### MCP-Client
 - No
-  - Smol Developer does not include a built-in MCP (Tessl) client; it is a standalone Python library/repo workflow. Integration with MCP-style servers would need to be added by consumers.
+  - Smol Developer does not include built-in support for the Model Context Protocol (MCP); it is a standalone Python library/repo workflow. Integration with MCP servers would need to be added by consumers.
 
 ### Prompts
 - Yes

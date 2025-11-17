@@ -134,9 +134,9 @@ Designed for Pro, Max, Team and Enterprise customers, Claude Desktop aims to mak
 
 ### SpecDrivenDevelopment
 - Tessl
-  - Claude Desktop does not have documented first-class support specifically for Tessl; most spec-driven development tooling references in the ecosystem target coding-focused agents like Claude Code and GitHub Copilot. For formal Tessl workflows, prefer Claude Code or SpecKit-compatible tools.
+  - Unknown - Claude Desktop does not have documented first-class support for Tessl workflows.
 - SpecKit
-  - Claude Code and other coding agents are known to integrate with SpecKit workflows. Claude Desktop may participate indirectly through shared account/project context, but SpecKit-focused workflows typically use coding-focused agents.
+  - Unknown - No documented SpecKit integration for Claude Desktop.
 - OpenSpec
   - Unknown
 - BMAD
@@ -150,5 +150,5 @@ Designed for Pro, Max, Team and Enterprise customers, Claude Desktop aims to mak
 - SuperClaude
   - Unknown
   - Notes:
-    - Spec-driven development is primarily supported by coding-focused agents (Claude Code, Copilot, Gemini CLI). Claude Desktop targets productivity and file workflows; for SDD projects that require tight VCS and build integrations, use a coding agent and integrate MCP where needed.
+    - Claude Desktop is a general-purpose AI assistant focused on productivity and file workflows rather than coding-specific spec-driven development. For formal spec-driven development workflows that require tight VCS and build integrations, consider using dedicated coding agents.
 
