@@ -113,8 +113,8 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
   - There are no widely documented lifecycle hook APIs for Cover; integrations are achieved via standard CI/CD hooks and the CLI rather than a bespoke lifecycle hook system.
 
 ### SlashCommands
-- Yes
-  - CLI subcommands (e.g., test generation and diagnostic commands such as `dcover issues`), and IDE actions exposed in IntelliJ for invoking test generation on classes/methods.
+- No
+  - Diffblue Cover provides CLI subcommands (e.g., `dcover test`, `dcover issues`) and IDE actions, but does not have chat-style slash commands like "/review" or "/test" in an interactive agent interface.
 
 ### CustomModes
 - No

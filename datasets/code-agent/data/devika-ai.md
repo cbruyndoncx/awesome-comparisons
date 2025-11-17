@@ -1,5 +1,5 @@
-# Opcode (Devika AI) - https://opcode.sh
-An open-source agentic AI software engineer for end-to-end code generation, research, and project automation.
+# Devika AI - https://github.com/stitionai/devika
+An open-source agentic AI software engineer for end-to-end code generation, research, and project automation. (Note: Relationship to "Opcode" brand/website unclear)
 
 ## General Info
 
