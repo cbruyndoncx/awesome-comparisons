@@ -4,7 +4,7 @@ Secure, enterprise-grade AI coding assistant with on-prem and air-gapped deploym
 ## General Info
 
 ### Classification
-- AIE/Model
+- AIE/Agent
 
 ### Version
 n/a
@@ -42,7 +42,7 @@ References & further reading
 - https://codeium.com/enterprise (vendor enterprise overview)
 
 ### Last Update
-2025-11-16
+- 2025-11-16
 
 ## Licensing
 

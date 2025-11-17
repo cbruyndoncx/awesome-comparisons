@@ -46,7 +46,7 @@ PolyCoder was released in multiple sizes (160M, 405M and 2.7B parameters). The 2
 - Keep expectations realistic: PolyCoder is a 2022-era model and does not match the capabilities of later multi-hundred-billion-parameter code-specialized models, though it remains valuable for C/C++ and systems-level use-cases.
 
 ### Last Update
-- 2025-11-16
+- 2022-03-01
 
 
 ## Licensing

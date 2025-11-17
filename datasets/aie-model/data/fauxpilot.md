@@ -4,7 +4,7 @@
 ## General Info
 
 ### Classification
-- AIE/Model
+- AIE/Infrastructure
 
 ### Version
 - -
