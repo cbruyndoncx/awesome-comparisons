@@ -35,6 +35,7 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 
 ### Last Update
 - 2025-11-16
+  - Note: This date may reflect documentation update; actively maintained commercial product
 
 ## Licensing
 

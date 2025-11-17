@@ -71,6 +71,7 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
 
 ### Last Update
 - 2025-11-15
+  - Note: This date may reflect documentation update; actively maintained open-source project
 
 ## Licensing
 

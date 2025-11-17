@@ -4,7 +4,7 @@
 ## General Info
 
 ### Classification
-- Code/Other
+- Other
 
 ### Version
 - 0.11.23 (OUTDATED - Last update 2022-01-24)
@@ -29,6 +29,11 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
 - Python
 
 ### Notes
+- **⚠️ PRODUCT STATUS WARNING - POTENTIALLY INACTIVE/ABANDONED:**
+  - Latest recorded update: January 24, 2022 (~4 years old)
+  - No recent PyPI releases or updates found since 2022
+  - Verify current product availability and maintenance status on cogram.ai before use or evaluation
+  - Consider alternative active Jupyter AI assistants if cogram.ai proves unavailable
 - Two different Cogram products exist: cogram.ai (coding assistant) and cogram.com (construction / meeting docs). Make sure to confirm which product you mean.
 - Installation references: pip package and Jupyter nbextension (users sign up for an API token). Example pip install: `pip install -U jupyter-cogram` (community references).
 - Official BYOK and enterprise privacy guarantees for cogram.ai were not found in public docs; some enterprise / privacy language appears associated with the other Cogram product (construction), so exercise caution when evaluating privacy claims.
@@ -48,8 +53,8 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
   - PyPI-distributed package; no official public source repository located. Licensing appears to be commercial/proprietary rather than an OSS license.
 
 ### FreeTrial
-- Yes
-  - (marketing indicates a free account/trial is available; details not enumerated in public docs)
+- Unknown (Likely outdated)
+  - Marketing materials from 2022 suggested free account/trial available, but trial terms (duration, limitations) were not documented. Product appears inactive since 2022; verify current availability on cogram.ai before attempting to use
 
 ## MCP-Client
 

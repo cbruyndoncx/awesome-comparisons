@@ -48,6 +48,7 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 
 ### Last Update
 - 2025-11-15
+  - Note: This date may reflect documentation update; actively maintained SaaS product integrated into Replit IDE
 
 ## Licensing
 

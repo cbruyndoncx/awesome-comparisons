@@ -37,7 +37,8 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 - Research summary based on multiple third-party write-ups and product summaries; authoritative vendor documentation and pricing were not found in the search results available.
 
 ### Last Update
-2025-11-15
+- 2025-11-15
+  - Note: This date may reflect documentation update; verify current product status on vendor site
 
 ## Licensing
 
@@ -49,8 +50,8 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
   - No authoritative public source indicates an open-source license or public repository for the desktop product; third-party write-ups describe it as a proprietary desktop application.
 
 ### FreeTrial
-- Yes
-  - The product is often described as using the user's own OpenAI API key (BYOK) which enables usage without a separate paid tier from the vendor; however any model usage will consume the user's OpenAI quota which may incur cost.
+- Other (BYOK model)
+  - Requires user's own OpenAI API key (BYOK); no product-provided trial, but usage cost depends on user's OpenAI quota rather than vendor subscription
 
 ## MCP-Client
 

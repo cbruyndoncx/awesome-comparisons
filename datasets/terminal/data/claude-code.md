@@ -42,6 +42,7 @@ The tool is focused on large-context reasoning, multi-file code transformations,
 
 ### Last Update
 - 2025-11-16
+  - Note: This date may reflect documentation update; actively maintained product from Anthropic
 
 ## Licensing
 

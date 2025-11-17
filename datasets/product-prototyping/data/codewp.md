@@ -54,7 +54,8 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
   - CodeWP v2.5 release notes / walkthroughs (public posts and videos, 2024-2025)
 
 ### Last Update
-2025-11-15
+- 2025-11-15
+  - Note: This date may reflect documentation update; actively maintained SaaS product
 
 ## Licensing
 
