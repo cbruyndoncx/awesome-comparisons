@@ -165,10 +165,5 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
   - Copilot Chat is available in supported terminals (Windows Terminal Canary, GitHub CLI integrations) and can be used from the command line in supported environments.
 
 ### SpecDrivenDevelopment
-
-<!-- Has support for these Spec Driven Development methodologies: -->
-
-
-### SpecDrivenDevelopment
 - No
   - Copilot can assist in authoring specifications and code artifacts but does not provide explicit, built-in integrations or native support for specific Spec Driven Development frameworks (e.g., BMAD, SpecKit, OpenSpec, Tessl, AgentOS, ClaudeFlow, SPARC, SuperClaude) as of the last update (2025-11-04).
