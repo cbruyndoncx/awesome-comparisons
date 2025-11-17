@@ -18,7 +18,7 @@ v (2025-10-19)
 - [3] Hub & team features maturing (1.0 release)
 
 ### Short Description
-<!-- ToDo -->
+Open-source AI coding assistant and platform that brings AI capabilities into editors (VS Code, JetBrains), the terminal (CLI) and CI/CD workflows, emphasizing developer control, model choice, customization, and privacy.
 
 -
 
@@ -53,9 +53,7 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
   - GitHub: https://github.com/continuedev/continue
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-11-15
 
 ## Licensing
 
@@ -77,28 +75,22 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
   - Integrates with Model Context Protocols for adding context providers (GitHub, Jira, etc.) and usable via the hub.
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports customizable prompts and agent definitions; teams can define behaviors via configuration-as-code
+  - Modes (Chat / Plan / Agent) enable different prompt/tool access levels for safer workflows
+  - Prompts and building blocks can be shared via Continue Hub for reuse across teams
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - MCP-style tool integrations (GitHub, Sentry, Snyk, Linear) allow the assistant to fetch contextual data
+  - CLI (`cn`) provides headless automation and scripting; IDE extensions expose tool interactions in-editor
+  - Supports configuring local and remote model endpoints (BYOK)
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Continue Hub (hub.continue.dev) for shared assistants and reusable building blocks
+  - Official docs at https://continue.dev and source at https://github.com/continuedev/continue
+  - MCP integrations and context providers (GitHub, issue trackers, error monitoring) available as resources
 
 ## Deployment
 
@@ -120,9 +112,9 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
     - File edits: directly update repository files via developer__text_editor (view/insert/write/str_replace/undo_edit) to change canonical project context.
     - Subagents / tasks: pass contextual parameters to dynamic_task__create_task and subagent__execute_task so specialized subagents operate with explicit context.
     - Analysis tools: use developer__analyze and developer__shell to gather and refresh context (code structure, file contents) before making changes.
-  - Sources:
-    - .tessl/framework/agents.md (project spec & workflow guidance)
-    - developer extension tool descriptions (developer__text_editor, developer__analyze, platform__manage_extensions)
+    - Sources:
+      - .tessl/framework/agents.md (project spec & workflow guidance)
+      - developer extension tool descriptions (developer__text_editor, developer__analyze)
 
 ### DirectFileReferences
 - Yes
@@ -161,7 +153,7 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
 - Yes
   - Extension/recipe model allows bundling commands, agents and hooks:
     - Extensions are enable/disable units (platform__manage_extensions) that change the agent's available toolset.
-    - Scheduled recipe jobs (platform__manage_schedule create) can package recurring workflows.
+    - Scheduled recipe jobs (platform__manage_schedule) can package recurring workflows.
     - dynamic_task__create_task tasks can be used as reusable, parameterized operations that behave like plugins when stored and invoked programmatically.
   - Sources:
     - platform__manage_extensions

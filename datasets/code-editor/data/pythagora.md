@@ -17,7 +17,7 @@ A developer-focused AI platform that generates full-stack applications and autom
 - [3] Maturity and enterprise polish can vary depending on use case
 
 ### Short Description
-<!-- ToDo -->
+A developer-focused AI assistant that generates full-stack (React + Node/Express) applications, scaffolding, and Jest unit tests from natural language prompts, integrated via a VS Code extension and CLI.
 
 -
 
@@ -66,9 +66,7 @@ Pythagora is an AI-driven development assistant that can generate full-stack web
   - Good complement to developer workflows when paired with code review and CI/CD practices
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-11-15
 
 ## Licensing
 
@@ -87,28 +85,20 @@ Pythagora is an AI-driven development assistant that can generate full-stack web
 -
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Natural language prompts are the primary input for generating applications, specs and unit tests.
+  - Users can edit and refine generated specs in VS Code before generation proceeds.
+  - CLI examples exist (e.g. `npx pythagora --unit-tests --path ./src/utils/common.js`).
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - VS Code extension (primary integration) and a CLI (`npx pythagora`).
+  - Debugging primitives (logs, breakpoints, step-debugging), Git integration, DB connectors, and deployment integrations.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Official website/documentation (pythagora.ai) and VS Code Marketplace listing for the extension.
+  - Blog posts, demos and community write-ups; underlying GPT Pilot project and related GitHub resources for the multi-agent framework.
 
 ## Deployment
 

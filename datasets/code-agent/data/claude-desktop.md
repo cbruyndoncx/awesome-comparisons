@@ -18,7 +18,7 @@ v1.0 (2025-10-18)
 - [4] Powerful "Skills" integration for automating structured workflows
 
 ### Short Description
-<!-- ToDo -->
+- Native desktop application for Anthropic's Claude models that unifies chat, Skills, and file-aware workflows (create/edit documents, spreadsheets, slide decks, and PDFs) with optional MCP-based local integrations.
 
 -
 
@@ -39,9 +39,7 @@ Designed for Pro, Max, Team and Enterprise customers, Claude Desktop aims to mak
 - Comparison note: For heavy developer workflows that require CLI-first, git-aware operations and explicit BYOK/local routing, Claude Code (Anthropic's CLI/terminal tool) is a more explicit offering; Claude Desktop is focused on productivity, file workflows, and Skills-driven automation inside a native app.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-11-15
 
 ## Licensing
 
@@ -60,28 +58,19 @@ Designed for Pro, Max, Team and Enterprise customers, Claude Desktop aims to mak
 - Yes
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Claude supports structured prompts and can automatically invoke Skills when a prompt matches a Skill's trigger. Prompts can include file attachments and are used to request file operations (e.g., "Edit this spreadsheet to add a totals column").
+
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Claude Desktop can access and invoke external tools via MCP servers and built-in tooling for file editing, document conversion, and task automation. Tools are surfaced through the UI when MCP servers are configured.
+
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Claude Desktop provides in-app documentation for Skills, MCP setup, and file operations. Public resources include Anthropic's help center and developer documentation for MCP. Enterprise customers also receive additional admin and deployment documentation.
+
 
 ## Deployment
 
@@ -95,28 +84,19 @@ Designed for Pro, Max, Team and Enterprise customers, Claude Desktop aims to mak
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Claude Desktop supports project-scoped context and memory with configurable retention policies. Users can create session recaps, use project memory, and enable incognito mode to avoid long-term storage of sensitive content. Memory and context policies are configurable by administrators in Enterprise/Team plans.
+
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Claude Desktop supports referencing files inline using the `@` syntax (e.g., `@path/to/file.txt`) with tab-completion. Referencing a file pulls its content into the conversation context and may also load local CLAUDE.md context files in the same directory. The `@` syntax can also target MCP-exposed resources and directories. Users can also drag-and-drop files into the app to create references.
+
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Claude Desktop provides automatic checkpoints (snapshots) before Claude performs file or code edits. Checkpoints persist across sessions for a limited retention period (default ~30 days) and can be used to restore code, conversation, or both. They are accessible via UI shortcuts (e.g., Esc Esc or /rewind) and are intended as a safety net, not a replacement for Git or other VCS.
+
 
 ### GitSupport
 - No
@@ -127,44 +107,25 @@ Designed for Pro, Max, Team and Enterprise customers, Claude Desktop aims to mak
 - Yes
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Plugins bundle commands, Skills, hooks, MCP server configurations, and helper assets into installable packages. They are distributed via plugin registries and can be enabled per-project or globally.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Hooks provide lifecycle event handlers (pre/post actions) that run automatically. Common uses include formatting, linting, CI checks, or notifying external systems after agent actions.
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Slash commands are user-invoked shortcuts (/command) for repeatable workflows. They are defined in project files (e.g., .claude/commands) and can invoke subagents, run scripts, or execute templated prompts.
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Claude Desktop supports custom modes or specialist modes that tailor the chat experience for specific tasks (e.g., coding mode, review mode). These are often delivered via Skills or plugin configurations.
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Subagents are specialized AI assistants for task-specific workflows. They can be invoked by commands or Skills and run in isolated contexts to perform planning, analysis, or tool orchestration.
+
 
 ## Ungrouped Criteria
 
@@ -172,15 +133,22 @@ Designed for Pro, Max, Team and Enterprise customers, Claude Desktop aims to mak
 - No
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
 - Tessl
+  - Claude Desktop does not have documented first-class support specifically for Tessl; most spec-driven development tooling references in the ecosystem target coding-focused agents like Claude Code and GitHub Copilot. For formal Tessl workflows, prefer Claude Code or SpecKit-compatible tools.
+- SpecKit
+  - Claude Code and other coding agents are known to integrate with SpecKit workflows. Claude Desktop may participate indirectly through shared account/project context, but SpecKit-focused workflows typically use coding-focused agents.
+- OpenSpec
+  - Unknown
+- BMAD
+  - Unknown
 - AgentOS
+  - Unknown
 - ClaudeFlow
+  - Unknown
 - SPARC
+  - Unknown
 - SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Unknown
+  - Notes:
+    - Spec-driven development is primarily supported by coding-focused agents (Claude Code, Copilot, Gemini CLI). Claude Desktop targets productivity and file workflows; for SDD projects that require tight VCS and build integrations, use a coding agent and integrate MCP where needed.
+

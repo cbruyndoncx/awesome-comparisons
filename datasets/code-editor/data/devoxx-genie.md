@@ -17,7 +17,7 @@ v0.x (initial releases 2024)
 - [4] Very useful for Java/IDEA users; UI and workflows continue improving
 
 ### Short Description
-<!-- ToDo -->
+An IntelliJ IDEA plugin that embeds an LLM-powered coding assistant with support for local and cloud models, Retrieval-Augmented Generation (RAG), MCP integration, project-scoped context and multimodal inputs.
 
 -
 
@@ -38,9 +38,7 @@ DevoxxGenie is an IntelliJ IDEA plugin (100% Java-based) that provides an LLM-po
 - Good fit for teams that need local/offline LLM execution or want flexible model selection inside IntelliJ.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-08-06 (v0.7.0 release)
 
 ## Licensing
 
@@ -59,28 +57,20 @@ DevoxxGenie is an IntelliJ IDEA plugin (100% Java-based) that provides an LLM-po
 - Yes
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
+  - DevoxxGenie provides built-in prompt templates and allows users to create, save and manage custom prompts via the Prompts settings page.
+  - The `/init` slash command can generate a DEVOXXGENIE.md project descriptor and add it to the system prompt for improved contextual responses.
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
+  - DevoxxGenie integrates RAG tooling (ChromaDB) and local model runners (Ollama, GPT4All) to provide semantic search and local LLM execution. It also supports cloud provider tools via API connectors (OpenAI, Anthropic, Gemini, etc.).
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
+  - Project README and JetBrains Marketplace listing provide usage docs and release notes. Community videos and blog posts (Devoxx talks, YouTube demos) supplement official docs.
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 
 ## Deployment
 

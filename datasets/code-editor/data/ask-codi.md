@@ -10,9 +10,8 @@ AI-assisted coding assistant and unified LLM gateway for developers
 (2025-10-18)
 
 ### Repo
-<!-- ToDo -->
-<!-- Associated Github repository -->
--
+- https://github.com/askcodi
+- https://github.com/AskCodi/Sublime-AskCodi
 
 ### Rating
 - [4] Feature set and tooling
@@ -21,8 +20,7 @@ AI-assisted coding assistant and unified LLM gateway for developers
 - [4] Value for individual developers
 
 ### Short Description
-<!-- ToDo -->
--
+AI-assisted coding assistant and OpenAI-compatible multi-model LLM gateway with IDE integrations and modular "Codi Apps" for focused developer tasks.
 
 ### Description
 AskCodi is an AI-powered coding assistant and OpenAI-compatible LLM gateway developed to help developers generate, explain, refactor, document, and test code. It combines a suite of focused developer tools (branded as "Codi Apps") with IDE extensions and an API that lets teams call multiple LLM providers through a single endpoint. AskCodi emphasizes practical developer workflows — inline completions, chat, code explanation, unit-test generation, SQL/regex builders, and automated refactors — and aims to reduce context-switching by integrating directly into popular editors.
@@ -40,9 +38,7 @@ AskCodi is an AI-powered coding assistant and OpenAI-compatible LLM gateway deve
 - Caveats: not open-source and primarily cloud-based; enterprise/local deployment and exact BYOK/local-offline capabilities should be confirmed against AskCodi's current documentation or sales/enterprise channels for sensitive or regulated environments.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-10-18
 
 ## Licensing
 
@@ -61,28 +57,17 @@ Proprietary
 - No
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Built-in prompt templates and task-focused prompt UIs are available via Codi Apps and the workbook/chat interfaces; API is OpenAI-compatible so standard prompt engineering applies.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Codi Apps: modular tools (refactor, test generation, SQL/regex builders, explainers) exposed in the web UI and IDE extensions.
+  - IDE command palette integrations, keyboard shortcuts, and contextual editor actions (generate/document/explain/test code).
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Documentation and guides on askcodi.com, an OpenAI-compatible API, GitHub repositories for editor extensions (e.g., Sublime), and marketplace listings (VS Code, Package Control).
 
 ## Deployment
 

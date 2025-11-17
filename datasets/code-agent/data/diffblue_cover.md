@@ -18,7 +18,7 @@ vN/A (2025-10-19)
 - [3] Enterprise pricing is high; smaller teams should evaluate quotas
 
 ### Short Description
-<!-- ToDo -->
+Diffblue Cover autonomously generates, executes and maintains Java unit tests (JUnit/TestNG) from source code, via IDE plugins, CLI and CI integrations to accelerate coverage and regression safety.
 
 -
 
@@ -36,9 +36,7 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
 - Unknown / not publicly documented here: explicit BYOK/key-management details, detailed on-prem installation steps and specific license terms—contact Diffblue sales for enterprise security, on-prem deployment and licensing specifics.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-11-15
 
 ## Licensing
 
@@ -58,28 +56,20 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
 -
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Diffblue Cover does not expose LLM-style textual prompting for test generation. Users trigger test generation via IDE actions or CLI/CI commands rather than crafting natural-language prompts.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - CLI (dcover / dcover-cli) for project-level automation and CI integration
+  - IntelliJ IDEA plugin for inner-loop, in-IDE test generation
+  - CI integrations (GitHub/GitLab/Jenkins) and Docker images for pipeline usage
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Official documentation and user guides: https://www.diffblue.com/docs/cover
+  - Product pages and release notes: https://www.diffblue.com/products/cover and company blog
+  - Community Edition download and trial instructions available from Diffblue website
 
 ## Deployment
 
@@ -92,28 +82,16 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Project-aware analysis and incremental test maintenance; Cover tracks generated tests and can re-generate/update tests as code changes, integrating with the project's source layout and build system.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Cover operates by scanning the project/source tree (IDE or CLI) rather than accepting ad-hoc @file references in a prompt-like fashion.
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Diffblue does not provide its own checkpoint/undo system; users should rely on VCS (git) to manage changes and review generated tests. Cover does, however, separate Diffblue-managed tests from user-written tests to reduce accidental edits.
 
 ### GitSupport
 - Yes
@@ -124,44 +102,24 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
 - Yes
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - IntelliJ plugin, CI plugins/integration points, and Docker-based deployment artifacts for pipeline integration.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - There are no widely documented lifecycle hook APIs for Cover; integrations are achieved via standard CI/CD hooks and the CLI rather than a bespoke lifecycle hook system.
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - CLI subcommands (e.g., test generation and diagnostic commands such as `dcover issues`), and IDE actions exposed in IntelliJ for invoking test generation on classes/methods.
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - While Cover offers features like Guided Coverage Improvement and Test Asset Insights, it does not expose user-definable "modes" in the sense of switchable chat/assistant personas.
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Diffblue's architecture may include internal components for analysis and generation, but it does not expose configurable AI subagents for end-users.
 
 ## Ungrouped Criteria
 
@@ -170,15 +128,5 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
   - CLI access is available in paid/teams tiers for CI and automation use-cases.
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- 
+  - No explicit integrations with the listed Spec Driven Development toolkits; Cover focuses on generating runnable JUnit/TestNG tests and integrates with standard Java build and CI tooling.

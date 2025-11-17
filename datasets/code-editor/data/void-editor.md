@@ -17,7 +17,7 @@ v0.1 (2025-01 beta)
 - [4] Rapidly evolving; Beta early UX rough edges
 
 ### Short Description
-<!-- ToDo -->
+- Privacy-first fork of Visual Studio Code with built-in AI-assisted coding that connects directly to user-configured LLMs (local or cloud) without routing data through a private backend.
 
 -
 
@@ -34,9 +34,7 @@ Void is an open-source, privacy-focused AI code editor that forks the Visual Stu
 - Good choice for teams or individuals who need AI assistance but require data residency or on-prem constraints.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-11-15
 
 ## Licensing
 
@@ -56,28 +54,16 @@ Void is an open-source, privacy-focused AI code editor that forks the Visual Stu
 - Yes
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Prompts are editable and savable; users can customize system/user messages and reuse prompt templates for Chat, Agent, and Gather modes.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Built-in AI tools include inline Quick Edit, Tab autocomplete, Chat (multi-mode), Agent Mode (multi-file edits), Gather Mode (read-only analysis), model integrations (Ollama, local runtimes), and terminal command execution for Agent workflows.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Documentation, examples, model adapter configs, and community guides available via the project repository and website; includes sample prompts and setup instructions for local model runtimes.
 
 ## Deployment
 
@@ -126,12 +112,8 @@ Void is an open-source, privacy-focused AI code editor that forks the Visual Stu
   - Because Void is a VS Code fork, it inherits the extension/plugin model. In addition to built-in integrations (Ollama, DocSearch, etc.), developers can add extensions or propose new integrations via the project's plugin/extension mechanisms. This allows bundling commands, AI integrations, and UI elements into installable packages.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Exposes VS Code-compatible extension hooks and lifecycle events; extension API and built-in AI workflows provide event points for actions like command invocation, file edits, and agent lifecycle (permission prompts, start/stop).
 
 ### SlashCommands
 - Yes

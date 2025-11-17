@@ -7,23 +7,17 @@
 - Code/Other
 
 ### Version
-<!-- ToDo -->
-<!-- Latest version used for update -->
--
+- 0.11.23
+  - PyPI: jupyter-cogram 0.11.23 (2022-01-24)
 
 ### Repo
 -
 
 ### Rating
-<!-- ToDo -->
-<!-- Avg rating based on review comments -->
-<!-- Provide the rating value for Rating or remove if unknown. -->
 -
 
 ### Short Description
-<!-- ToDo -->
-
--
+- AI coding assistant for Jupyter Notebooks that generates Python code from natural-language comments and provides context-aware autocompletions for data-science workflows.
 
 ### Description
 Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyter Notebooks. It generates or autocompletes Python code from natural-language comments, offers code explanations, and can help convert English queries into SQL. The tool is distributed as a Jupyter extension (pip-installable) and requires an API token obtained by signing up on cogram.ai.
@@ -38,9 +32,8 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
 - No official open-source repository for cogram.ai discovered; community/test repos exist but appear unofficial.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2022-01-24
+  - Date of latest PyPI release (jupyter-cogram 0.11.23)
 
 ## Licensing
 
@@ -48,19 +41,8 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
 - No
 
 ### License
-<!-- ToDo -->
-<!-- Opensource specific license or Proprietary for other commercial licenses -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- MIT
-- Apache-2.0
 - Proprietary
-- FSL
-- GPL-3.0
-- AGPL-3.0
-- BSD-3-Clause
-- ISC
-- MPL-2.0
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - PyPI-distributed package; no official public source repository located. Licensing appears to be commercial/proprietary rather than an OSS license.
 
 ### FreeTrial
 - Yes
@@ -69,84 +51,46 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
 ## MCP-Client
 
 ### MCP-Client
-<!-- ToDo -->
-<!-- Coding tool has built-in MCP client so can connect to MCP servers -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No evidence that the Jupyter extension includes a built-in MCP client for connecting to MCP servers.
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports natural-language comments in notebook cells to produce code (manual Tab-triggered completions and an autosuggest mode).
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The extension provides inline code completions and generation, but does not expose a separate "tools" panel or toolchain within the extension.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No evidence of bundled resource management (e.g., dataset indexing or separate resource browser) in public docs for the jupyter-cogram package.
 
 ## Deployment
 
 ### BYOK
-<!-- ToDo -->
-<!-- Bring Your Own LLM API Key supported -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### LocalOffline
 - No
-  - (appears cloud-hosted; no documented offline/local inference option found)
+  - Appears cloud-hosted; no documented offline/local inference option found for the jupyter-cogram extension.
 
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Uses the notebook execution and cell history (code above the cursor) as context to generate more accurate suggestions.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No indication the extension provides its own checkpointing/undo system; relies on Jupyter's native checkpoints and notebook infrastructure.
 
 ### GitSupport
-<!-- ToDo -->
-<!-- Coding tool is aware of GIT and can work/integrate with GIT repos -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No explicit Git integration documented for the jupyter-cogram extension.
 
 ## Extensible
 
@@ -154,44 +98,24 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
 - Plugins / Jupyter extension
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The product is distributed as a Jupyter nbextension; there is no public documentation describing a plugin marketplace or third-party plugin mechanism within the extension itself.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No documentation found describing lifecycle hooks exposed for custom integrations.
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No evidence of slash-commands support in the Jupyter extension.
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No public documentation about creating specialist/custom modes for the assistant beyond autosuggest/manual completion settings.
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No evidence of definable subagents or specialized agent workflows in the jupyter-cogram public docs.
 
 ## Ungrouped Criteria
 
@@ -199,15 +123,5 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
 - No
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+- 

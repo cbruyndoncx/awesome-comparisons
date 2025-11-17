@@ -17,7 +17,7 @@ v0.9 (2024-05)
 - [3] Early-stage platform; limited public tooling and ecosystem
 
 ### Short Description
-<!-- ToDo -->
+A web-native autonomous agent that uses a compact planning LLM and a vision-language model to perform multi-step, visually grounded web tasks from simple natural-language instructions.
 
 -
 
@@ -38,8 +38,7 @@ Runner H (from H Company) is an "action-oriented" autonomous web agent designed 
 - Related projects: H Company also released Tester H (an AI testing agent) and Holo-1 (open-source VLM) which are part of the same ecosystem.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
+2025-11-15
 -
 
 ## Licensing
@@ -61,28 +60,20 @@ Runner H (from H Company) is an "action-oriented" autonomous web agent designed 
 - No
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Uses structured prompt templates for planner + subagents (system and user instructions).
+  - Supports programmatic function-calling and templated prompts for connectors and QA/validation agents.
+  - Prompts are used to steer visual grounding, action sequencing, error recovery, and human-in-the-loop confirmations.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Function-calling interfaces to browser automation, visual element detectors (VLM), and connector APIs (Google Workspace, Slack, Notion, Zapier).
+  - Internal tooling for run orchestration: planner, subagents (browsing, extraction, QA), and retry/error-recovery modules.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Published materials and docs for Holo-1 (open-source VLM) plus product docs and connector guides for Runner H (limited public SDK during early releases).
+  - Cloud-hosted APIs and connector endpoints used as runtime resources; some enterprise customers reported integration guides and onboarding docs.
 
 ## Deployment
 

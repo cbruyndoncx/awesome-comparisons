@@ -7,13 +7,14 @@ A local-first, agentic IDE focused on taking projects from idea to production wi
 <!-- ToDo -->
 <!-- AI Native Dev ainativedev.io Classification -->
 <!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- AIE/Model
-- Code/Autonomous agent
 - Code/Editor
-- Code/Other
-- Code/Terminal
+- Code/Autonomous agent
 - Product/Prototyping
+- Code/Terminal
+- AIE/Model
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Local-first, agentic IDE optimized for Next.js + Supabase
+- Ships as a standalone Flow IDE with VS Code and JetBrains integrations; provides agentic workflows and project-wide context management
 
 ### Version
 v1.0 (2025-10-19)
@@ -29,7 +30,7 @@ v1.0 (2025-10-19)
 ### Short Description
 <!-- ToDo -->
 
--
+- Local-first, AI-driven IDE and VS Code/JetBrains integrations that guide projects from planning through implementation and deployment, opinionated around Next.js + Supabase.
 
 ### Description
 EasyCode is a local-first AI-powered development environment that emphasizes finishing applications rather than only generating prototypes. It pairs an opinionated full-stack (Next.js + Supabase) with agentic features: project-wide context management, a planning workflow, file-by-file implementation suggestions, an integrated visual/data-flow debugger, and one-click deployment tooling. The product runs primarily on the user machine (local-first), keeping code and data under developer control and reducing cloud-credit surprises.
@@ -47,7 +48,7 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 ### Last Update
 <!-- ToDo -->
 <!-- Note Date last updated -->
--
+- 2025-11-15
 
 ## Licensing
 
@@ -62,8 +63,8 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 <!-- Free access (like opensource), or free (potentially limited) trial available -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Freemium model: free tier with limited daily credits (e.g. a free plan with daily credits for model usage); paid tiers unlock more credits/models.
 
 ## MCP-Client
 
@@ -71,33 +72,33 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 <!-- ToDo -->
 <!-- Coding tool has built-in MCP client so can connect to MCP servers -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Integrates with external LLM providers via user API keys; no documented dedicated MCP client/service.
 
 ### Prompts
 <!-- ToDo -->
 <!-- Default description for Prompts -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Provides built-in system prompts, planning prompts (/Plan), and contextual prompt templates. Supports user-specified prompts and file-tagging to control context.
 
 ### Tools
 <!-- ToDo -->
 <!-- Default description for Tools -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Ships with integrated debugger/tracer, project analyzers, deployment helpers and quick-edit tooling (CMD/CTRL+E) exposed in the IDE and extensions.
 
 ### Resources
 <!-- ToDo -->
 <!-- Default description for Resources -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Documentation, tutorials and examples for Flow IDE, VS Code and JetBrains integrations are available on the EasyCode site and docs.
 
 ## Deployment
 
@@ -115,24 +116,24 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 <!-- Methods for managing and updating the context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Project-wide context awareness, automatic file relevance analysis, and manual file/tag selection (e.g., @file references) to scope prompts and implementations.
 
 ### DirectFileReferences
 <!-- ToDo -->
 <!-- Can with @file or similar provide context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Supports manual file tagging and contextual references to include files in prompts and implementation tasks.
 
 ### Checkpoints
 <!-- ToDo -->
 <!-- A way to undo using checkpoints or if autocommitted git history -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Integrates with local git repositories and provides edition checkpoints and undo flows within the IDE; supports human review before commits.
 
 ### GitSupport
 - Yes
@@ -149,40 +150,40 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 <!-- A method of bundling together commands, agents and hooks (claude). -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Offers VS Code and JetBrains plugins/extensions; the Flow IDE acts as a native application with plugin-style integrations.
 
 ### Hooks
 <!-- ToDo -->
 <!-- Lifecycle events for the agent. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- No public documentation of lifecycle hook system; primary extensibility surfaces are editor extensions and planner/implementation workflows.
 
 ### SlashCommands
 <!-- ToDo -->
 <!-- Re-usable commands that can be manually triggered by the user. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Includes slash commands such as /Plan for planning workflows and quick-edit triggers in the IDE and extensions.
 
 ### CustomModes
 <!-- ToDo -->
 <!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Distinct Planning, Implementation and Debugging modes that change how the agent reasons about the codebase and produces outputs.
 
 ### Subagents
 <!-- ToDo -->
 <!-- Define specialized AI subagents for task-specific workflows. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Agentic workflows and task decomposition suggest subagent-like behavior (automated planners, implementation workers and debug tracers); exposes multi-step task orchestration.
 
 ## Ungrouped Criteria
 
@@ -190,20 +191,15 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 <!-- ToDo -->
 <!-- Coding tool can operate in a terminal/cli environment -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Primary interfaces are the Flow GUI and editor extensions (VS Code/JetBrains); no documented standalone CLI-only workflow.
 
 ### SpecDrivenDevelopment
 <!-- ToDo -->
 <!-- Has support for these Spec Driven Development methodologies: -->
 <!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
+
+- No explicit integrations
+- No public documentation indicating first-class support for BMAD, SpecKit, Tessl or other spec-driven frameworks; EasyCode focuses on planning/implementation flows rather than formal spec tooling.
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->

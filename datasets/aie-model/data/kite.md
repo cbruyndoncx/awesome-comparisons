@@ -10,9 +10,9 @@ A desktop AI code-completion assistant focused initially on Python, later multi-
 Archived (2022-12-31)
 
 ### Repo
-<!-- ToDo -->
-<!-- Associated Github repository -->
--
+- https://github.com/kiteco/kiteco
+- https://github.com/kiteco
+
 
 ### Rating
 - [4] Strong historical accuracy for Python completions (context-aware compared to older alphabetical completions)
@@ -21,9 +21,8 @@ Archived (2022-12-31)
 - [2] Business viability: failed to monetize sufficiently
 
 ### Short Description
-<!-- ToDo -->
+- Former AI-powered code-completion assistant that ran local ML models for low-latency, privacy-first context-aware completions and inline documentation across popular editors; company ceased operations in late 2022 and released parts of its codebase as open source.
 
--
 
 ### Description
 Kite was an early AI-assisted coding tool (founded 2014) that provided context-aware code completions, documentation lookups, and inline examples inside editors. Its core differentiator was processing code and ML inference locally on the developer's machine to reduce latency and address privacy concerns. Kite trained models on large bodies of open-source code and tuned them for code prediction tasks rather than using plain NLP models. Despite strong technical work and a sizeable user base, Kite shut down operations in late 2022 and open-sourced a portion of its codebase.
@@ -43,9 +42,8 @@ Kite was an early AI-assisted coding tool (founded 2014) that provided context-a
 - As of 2025 the company is inactive; repositories remain as historical artifacts and starting points for community forks and research.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-11-16
+
 
 ## Licensing
 

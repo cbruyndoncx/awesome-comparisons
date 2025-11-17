@@ -7,9 +7,7 @@ Cline is an open-source AI coding assistant implemented as a Visual Studio Code 
 - Code/Editor
 
 ### Version
-<!-- ToDo -->
-<!-- Latest version used for update -->
--
+- v3.34.1 (2025-10-27)
 
 ### Repo
 - https://github.com/cline/cline
@@ -20,9 +18,7 @@ Cline is an open-source AI coding assistant implemented as a Visual Studio Code 
 - [4] Powerful features (browser automation, checkpoints) but depends on model capabilities
 
 ### Short Description
-<!-- ToDo -->
-
--
+- VS Code extension AI coding assistant with file editing, terminal and browser automation, MCP plugin support, and checkpointed human-in-the-loop workflows.
 
 ### Description
 Cline is designed to act as a development partner rather than a simple autocomplete. It can create and edit files with diff previews, run terminal commands, launch browsers and interact with pages (for testing or debugging), and install or use custom MCP tools. It keeps a structured memory bank (projectbrief.md, activeContext.md, progress.md) and uses checkpointing to snapshot steps so users can compare or restore states. Work is performed in a human-in-the-loop manner: Cline proposes changes and requests confirmation before saving.
@@ -40,9 +36,7 @@ Cline is designed to act as a development partner rather than a simple autocompl
 - Good fit for developers wanting an integrated AI assistant inside VS Code with extensible tooling and local model support.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-11-15
 
 ## Licensing
 
@@ -61,28 +55,20 @@ Cline is designed to act as a development partner rather than a simple autocompl
 - Yes
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Provides built-in prompt templates and plan/act mode prompts
+  - Users can supply custom prompts and templates via MCP tools or extension settings
+  - Community prompt presets available in the repo and docs
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrates MCP tools (custom tool servers), terminal execution, browser automation, and file-editing operations
+  - Supports adding third-party MCP servers to extend functionality (CI hooks, cloud APIs, issue trackers)
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Official docs at https://cline.bot and extensive README and examples on the GitHub repo
+  - CLI, extension, and MCP server examples included in the repository and community-contributed prompts
 
 ## Deployment
 

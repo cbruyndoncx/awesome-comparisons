@@ -17,7 +17,7 @@ v1.0 (2025-10-19)
 - [4] Rapid prototyping and migration use-cases
 
 ### Short Description
-<!-- ToDo -->
+Bolt.diy is a browser-based, open-source AI-assisted full-stack development IDE that uses StackBlitz WebContainers and a multi-LLM, Model Context Protocol (MCP) architecture to generate, run, edit, and deploy Node.js web applications from natural-language prompts.
 
 -
 
@@ -37,9 +37,7 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 - Export options: ZIP export, deploy to Netlify/Cloudflare, Docker image.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-11-15
 
 ## Licensing
 
@@ -58,28 +56,16 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 - Yes
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports attaching images and files to prompts and provides prompt-enhancement features and reusable prompt templates.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Exposes MCP tools (tool-calling) allowing the assistant to call external services, run functions, and interact with resources.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - MCP Resources expose file-like and API-backed data (files, API responses, DB results). Integrations (e.g., Supabase) surface as MCP resources.
 
 ## Deployment
 
@@ -94,28 +80,16 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Context is managed via MCP, attachments to prompts (files/images), and provider/session context mechanisms to supply code and project state to models.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Allows attaching files to prompts and direct file editing in the browser editor; prompts and AI actions can reference project files.
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Git integration, automatic commits for major operations, and revert/versioning support provide checkpoint-like workflows.
 
 ### GitSupport
 - Yes
@@ -126,44 +100,25 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 - Yes
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Provider classes, MCP servers and modular provider architecture let you extend functionality with custom integrations.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - MCP lifecycle and provider hooks allow tool/lifecycle integrations and custom server behaviors.
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No explicit slash-command system documented; interactive actions are performed via the conversational assistant and UI controls rather than chat-style slash commands.
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Bolt.diy supports specialized modes via provider configurations, project templates and MCP-driven tool sets that enable tailored assistant behaviour for tasks like scaffolding, refactoring, or deployment.
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - MCP tooling and provider integrations enable multi-step workflows where assistants can call external tools and services (effectively subagents) to perform specialized tasks (e.g., DB migrations, deploy pipelines).  Not described as named "subagents" in docs but the behavior is supported via MCP tool-calls.
+
 
 ## Ungrouped Criteria
 
@@ -171,15 +126,6 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 - Yes
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- No
+  - Bolt.diy does not natively implement a Spec-Driven Development (SDD) framework such as Tessl or GitHub Spec Kit. It is an AI-powered IDE focused on prompt-driven code generation and interactive editing. Teams can adopt SDD practices on top of bolt.diy (for example by keeping spec files in the repository and using the assistant to follow them), but there is no built-in SDD enforcement or formal spec workflow in the documented features.
+

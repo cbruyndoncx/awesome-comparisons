@@ -18,7 +18,7 @@ unknown (2025-10-19)
 - [3] Enterprise security posture (SOC2) but limited public docs on on-prem options
 
 ### Short Description
-<!-- ToDo -->
+CodeRabbit is an AI-first code review platform that provides automated, codebase-aware pull request reviews, IDE feedback, and one-click fixes, combining LLM reasoning with static analysis and AST/code-graph insights.
 
 -
 
@@ -50,9 +50,7 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
   - Primary offering is SaaS. Vendor materials mention a self-hosted option for enterprises but public details (architecture, BYOK, on-prem instructions, air-gapped support) are limited—contact vendor for enterprise requirements.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-10-19
 
 ## Licensing
 
@@ -72,28 +70,16 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
 - No
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - CodeRabbit exposes a conversational chat interface and vendor-provided review/workflow templates; raw prompt templates are not publicly published but the product uses prompt engineering internally to drive review behaviors.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrates and orchestrates many static-analysis tools, linters, and security scanners alongside LLM reasoning; offers CLI and IDE tooling and one-click fix actions.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Public documentation, blog posts, and integration guides are available on the vendor site; further enterprise / on-prem deployment docs may require contacting sales/support.
 
 ## Deployment
 
@@ -108,28 +94,16 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Performs codebase-aware reviews: analyzes diffs in the context of repository files, builds a code graph/AST to reason about cross-file impacts, and keeps contextual state for PR and IDE sessions.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Comments and suggestions reference files and line ranges in PRs; IDE extensions surface file-scoped feedback directly inside editors.
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - There is no public documentation of a dedicated "checkpoint" feature; suggested changes are surfaced as PR comments or suggested commits which remain under developer control via normal Git history.
 
 ### GitSupport
 - Yes
@@ -142,61 +116,33 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
   - Plugins / integrations for IDEs and VCS platforms
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Vendor provides IDE extensions (VS Code, Cursor, Windsurf, JetBrains) and VCS integrations (GitHub/GitLab apps); plugin mechanism details for third-party extension development are not widely documented.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrates via platform webhooks and app permissions; triggers reviews on PR creation, pushes, and CI events (standard Git provider lifecycle hooks).
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No public documentation of custom slash-command support inside PR comment threads; interactions are primarily via automated comments and the chat UI.
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Offers focused review modes (e.g., security scans, quality/style checks, or full "codebase-aware" reviews) and configurable rule sets through the UI and integrations.
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Provides agentic workflows and a conversational assistant for multi-step tasks (generate tests, propose fixes, create release notes) though internal subagent architecture details are not public.
 
 ## Ungrouped Criteria
 
 ### Terminal
 - No
-  - no general-purpose CLI for offline reviews documented
+  - no general-purpose CLI for offline reviews documented (there is CLI tooling for in-terminal feedback but primary offering is cloud-hosted analysis)
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- No
+  - No explicit support or integration with Spec Driven Development frameworks (BMAD, Tessl, SpecKit etc.) is documented publicly; teams can still use CodeRabbit alongside SDD processes but native SDD features are not advertised.
+
+---

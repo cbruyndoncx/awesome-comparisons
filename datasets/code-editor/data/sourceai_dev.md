@@ -16,7 +16,7 @@ v (2025-10-19)
 -
 
 ### Short Description
-<!-- ToDo -->
+AI web code generator that converts plain-language prompts into runnable code across many programming languages via a simple web UI; proprietary SaaS focused on fast, one-click code generation.
 
 -
 
@@ -33,9 +33,9 @@ SourceAI is a web-based AI code generation tool that accepts natural language re
 - Example (from site marketing): Python factorial generator for a user-input number (simple, illustrative use case).
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-11-15
+
+## Licensing
 
 ## Licensing
 
@@ -54,29 +54,16 @@ SourceAI is a web-based AI code generation tool that accepts natural language re
 -
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - SourceAI accepts natural-language prompts as the primary input mechanism for code generation (any human language), per vendor marketing and product descriptions.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No public documentation indicates integrated developer tools or toolkits (e.g., linters, formatters, code execution sandboxes) available to users beyond generated code samples returned in the UI.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
+  - There is no public documentation describing downloadable SDKs, CLIs, or local runtimes. The product appears to be web-hosted-only without published SDKs or resource packages.
 ## Deployment
 
 ### BYOK

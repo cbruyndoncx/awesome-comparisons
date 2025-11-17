@@ -17,7 +17,7 @@ N/A (2025-10-19)
 - [3] Limited offline / local-only workflows
 
 ### Short Description
-<!-- ToDo -->
+Bolt.new is an AI-powered, browser-first full‑stack IDE that scaffolds, runs, edits, and deploys web applications using StackBlitz WebContainers and an integrated LLM assistant.
 
 -
 
@@ -38,9 +38,7 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
 - Good integration for teams wanting fast iteration cycles, but teams that require self‑hosted or open‑source tooling may find limitations.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-10-19
 
 ## Licensing
 
@@ -60,28 +58,19 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
 - No
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Natural-language prompts are the primary interaction model; includes an "Enhance prompt" feature and supports iterative prompt refinement.
+  - The assistant can inspect and modify project files, run terminal commands, and interact with the browser environment to execute requested tasks.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Exposes terminal, package manager, server controls, and deployment actions which the assistant can invoke.
+  - Diff viewer and file editing functions act as tools for code modification and review.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Includes project templates, example apps, documentation, and built-in integrations (examples: Supabase, Netlify, Cloudflare).
+  - The open-source bolt.diy variant provides additional provider integrations and model-selection configuration for self-hosted workflows.
 
 ## Deployment
 
@@ -95,28 +84,16 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Project snapshots, file locking, and diff views are used to manage changes and context; snapshot restoration on reload and Git integration provide history.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The assistant can read and edit project files directly; the UI surfaces file-level diffs and targeted edits for review.
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Project snapshot/restore and automatic persistence in WebContainers provide rollback points; optional Git integration supports commits and history.
 
 ### GitSupport
 - Yes
@@ -129,44 +106,24 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
   - Supports npm packages and integrations (can install libraries and use third-party APIs)
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports integrations with third-party services, but there is no documented user-facing plugin system for bundling custom agent plugins as of the last update.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No public lifecycle hook API for user-defined agent hooks is documented; automation is primarily through the assistant and built-in actions.
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Users can run CLI commands in the integrated terminal, but there is no distinct slash-command system exposed for the assistant.
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Bolt includes predefined workflows (scaffold, edit, deploy) but does not expose user-created custom chat modes for the assistant.
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The platform and the bolt.diy roadmap mention multi-step agent architectures as an evolution, but there is no user-facing subagent definition system documented.
 
 ## Ungrouped Criteria
 
@@ -175,15 +132,6 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
   - In‑browser terminal via WebContainers that can run npm, Node.js servers, and CLI tooling.
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+
+### End of file

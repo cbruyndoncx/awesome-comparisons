@@ -17,7 +17,7 @@ v1.0 (2025-10-19)
 - [3] Proprietary platform with limited offline/local options compared with fully open-source alternatives
 
 ### Short Description
-<!-- ToDo -->
+A cloud-hosted agentic IDE that understands entire repositories and performs multi-file edits and iterative AI-driven development flows.
 
 -
 
@@ -38,9 +38,8 @@ Windsurf is an AI-powered, agentic development environment (IDE-like) designed t
 - Community artifacts: there are community-driven helper files and rules (e.g., .windsurfrules) circulated to help guide AI assistants on code style and project rules; these can be found in various GitHub repos but the main product is not open-source.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-11-15
+
 
 ## Licensing
 
@@ -59,28 +58,20 @@ Windsurf is an AI-powered, agentic development environment (IDE-like) designed t
 - Yes
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports prompt templates and customizable system/user prompts within Cascade flows.
+  - Memories and AI Rules provide persistent prompt-like behavior across sessions.
+  - Compatible with Model Context Protocol (MCP) for structured prompt/context passing.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Includes inline code actions, multi-file refactoring tools, image-to-code generator, and an AI terminal for executing commands.
+  - Integrates with VS Code extensions and external linters/formatters via plugin architecture.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Documentation and tutorials available on the Windsurf website and in-product guidance (Cascade walkthroughs, Supercomplete demos).
+  - Community examples and helper files (.windsurfrules) hosted in community GitHub repositories.
 
 ## Deployment
 

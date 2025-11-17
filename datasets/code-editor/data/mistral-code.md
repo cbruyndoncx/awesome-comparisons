@@ -17,7 +17,7 @@ v1 (2025-06-04)
 - [4] Broad language coverage (80+ languages) and multi-model architecture
 
 ### Short Description
-<!-- ToDo -->
+Mistral Code is an enterprise-grade AI developer assistant that integrates specialized models for code completion, semantic search, and agentic multi-step automation into IDEs with on-prem, cloud, and air-gapped deployment options.
 
 -
 
@@ -36,9 +36,7 @@ Mistral Code is a packaged AI developer assistant designed for enterprise adopti
 - Useful where governance, observability, and private-model customization are required for regulated codebases.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-07-30
 
 ## Licensing
 
@@ -56,31 +54,19 @@ Mistral Code is a packaged AI developer assistant designed for enterprise adopti
 
 ### MCP-Client
 - Yes
-  - Assuming continue.dev functionality is kept - doublecheck
+  - Integrates with Continue.dev for IDE plugin functionality (private beta for VSCode and JetBrains); enterprise deployments expose admin console and integration points for enterprise management.
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports chat-style prompts (Mistral Medium) and natural-language agent instructions for Devstral workflows; prompts can be composed from IDE context (open files, diffs, terminal output) and indexed repository snippets.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Provides tool-like capabilities via Devstral (agent actions: scan, edit, test, draft PR), Codestral-powered completions, and Codestral Embed semantic search; IDE integrations expose these as actionable UI commands and workflows.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Embedding/indexing (Codestral Embed), IDE plugins (Continue.dev integrations), and admin/observability console (Mistral Console). Enterprise deployments include APIs/management surfaces for indexing, policy, and usage telemetry.
 
 ## Deployment
 
@@ -129,28 +115,16 @@ Mistral Code is a packaged AI developer assistant designed for enterprise adopti
   - Integration with Continue.dev and the plugin model enables embedding Mistral Code features into IDE/tooling workflows and connecting to enterprise infrastructure (SSO, audit logs).
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Continue.dev plugin lifecycle and agent workflows allow integration points for CI/CD and enterprise automation; admin console and agent APIs provide eventing and approval hooks for governance and observability.
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - IDE-exposed commands and quick actions (e.g., invoke Devstral task, run semantic search, create draft PR) available in VS Code and JetBrains plugins.
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Preset agent modes and Devstral workflows for common specialist tasks (code review, refactor, documentation, testing) and configurable behavior via admin settings and fine-tuning.
 
 ### Subagents
 - Yes

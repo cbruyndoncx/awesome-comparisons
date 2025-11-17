@@ -17,7 +17,7 @@ v (2025-10-19)
 - [5] Active open-source community and increasingly capable AI features
 
 ### Short Description
-<!-- ToDo -->
+Open-source low-code internal app builder for rapidly creating internal tools, dashboards, and admin panels with a visual drag-and-drop UI, 75+ connectors, a built-in Postgres-backed "ToolJet Database", and optional AI-assisted app generation and agent automation.
 
 -
 
@@ -69,9 +69,7 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
   - GitHub: https://github.com/ToolJet/ToolJet
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-11-15
 
 ## Licensing
 
@@ -91,28 +89,18 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
 - No
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - ToolJet supports natural-language prompting via its "Build with AI" app generation, AI Query Builder, and AI Debugging features. Users can provide prompts to scaffold apps, generate and refine queries (SQL/NoSQL), and receive AI-assisted debugging and suggestions. ToolJet integrates with LLM providers (e.g., OpenAI) allowing prompt templates and parameter controls. See the official docs for examples and guidance: https://docs.tooljet.com/
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - ToolJet exposes callable building blocks that function as "tools" for automations and agents: Agent Builder/automation workflows, server-side actions, queries, connectors (databases, REST/GraphQL, SaaS), and custom connectors/components. These can be orchestrated by AI agents or triggered from generated apps.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Official docs: https://docs.tooljet.com/
+  - GitHub repo and examples: https://github.com/ToolJet/ToolJet
+  - Community tutorials, sample apps, and videos demonstrating AI features and prompt examples.
 
 ## Deployment
 

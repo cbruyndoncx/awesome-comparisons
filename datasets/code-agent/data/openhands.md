@@ -18,7 +18,7 @@ v (2025-10-19)
 - [4] Ambitious functionality: autonomous coding, planning, sandboxed execution
 
 ### Short Description
-<!-- ToDo -->
+OpenHands (formerly OpenDevin) is an open-source platform that provides autonomous AI software engineer agents capable of planning, writing, debugging, and executing code within an isolated workspace. The project includes a web UI/chat interface, a terminal/sandbox for executing commands, and integrations for multiple LLM backends.
 
 -
 
@@ -35,9 +35,7 @@ OpenDevin is an open-source project that implements an autonomous AI software en
 - Current status: alpha — rapidly changing; default agents have limited capabilities but roadmap includes more robust agent types, evaluation pipelines, and improved UI.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-11-15
 
 ## Licensing
 
@@ -45,19 +43,9 @@ OpenDevin is an open-source project that implements an autonomous AI software en
 - Yes
 
 ### License
-<!-- ToDo -->
-<!-- Opensource specific license or Proprietary for other commercial licenses -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - MIT
-- Apache-2.0
-- Proprietary
-- FSL
-- GPL-3.0
-- AGPL-3.0
-- BSD-3-Clause
-- ISC
-- MPL-2.0
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Core OpenHands repositories are published under the permissive MIT license.
+  - Some ecosystem components use different licenses (notably OpenHands-Cloud uses a Polyform Free Trial-style license for the cloud product), so verify individual repo LICENSE files for specific components.
 
 ### FreeTrial
 - Yes
@@ -65,36 +53,19 @@ OpenDevin is an open-source project that implements an autonomous AI software en
 ## MCP-Client
 
 ### MCP-Client
-<!-- ToDo -->
-<!-- Coding tool has built-in MCP client so can connect to MCP servers -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports prompt templates and repository-level microagents. Repository customization via a .openhands directory (e.g. .openhands/microagents/ and repo.md) is supported for providing guidance and triggerable microagent prompts.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Includes interfaces for executing shell commands in sandboxes, web browsing (agent-assisted browsing), Git operations, LLM provider connectors and other extendable tool hooks.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Provides repo-level customization (.openhands), example microagents, setup.sh for repo setup, and documentation for running locally and with Docker.
 
 ## Deployment
 
@@ -103,33 +74,21 @@ OpenDevin is an open-source project that implements an autonomous AI software en
 
 ### LocalOffline
 - Yes
-  - Can be run locally via Docker; supports local LLM backends where available (may still require internet for some models).
+  - Can be run locally via Docker; supports local LLM backends where available (may still require internet for some models/providers).
 
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Repository-level context via .openhands/repo.md and microagents, in-memory/session context in agent runtime, and workspace file mounting for deterministic file access.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Agents can read and modify workspace files; repository customization and microagents support pointing agents at specific files and locations.
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Typical workflows rely on Git for commits/branches (agents can create commits and branches). Runtime isolation via Docker provides sandbox snapshots; users can revert via Git or recreate containers to rollback changes.
 
 ### GitSupport
 - Yes
@@ -140,44 +99,23 @@ OpenDevin is an open-source project that implements an autonomous AI software en
 - Yes
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Extension points via microagents and repository configuration; ecosystem includes additional repos (actions, resolvers, operator tooling) that integrate with the core system.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Repo-level setup hooks (e.g. .openhands/setup.sh) and microagent trigger files provide lifecycle and customization hooks.
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports creating custom agent types, microagents and specialized workflows to tailor behavior for specific tasks.
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports multi-agent coordination and microagent patterns to compose specialized subagents for task-specific workflows.
 
 ## Ungrouped Criteria
 
@@ -185,15 +123,5 @@ OpenDevin is an open-source project that implements an autonomous AI software en
 - Yes
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+- 

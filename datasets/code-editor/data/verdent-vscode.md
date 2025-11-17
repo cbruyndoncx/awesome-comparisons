@@ -18,9 +18,7 @@ Verdent for VS Code is the Visual Studio Code extension for Verdent AI — an ag
 - [3] Early-stage product with commercial/paid tiers
 
 ### Short Description
-<!-- ToDo -->
-
--
+Verdent for VS Code brings Verdent AI's plan-first, multi-agent coding assistant into Visual Studio Code — offering parallel subagents, isolated git worktrees, DiffLens line-level explanations, built-in verification and testing, and integrated commit/PR workflows.
 
 ### Description
 Verdent is designed around a "Plan First, Verify Early" methodology. The VS Code extension brings Verdent's orchestration and verification features into the editor so developers can:
@@ -60,28 +58,24 @@ The extension is intended to reduce context switching by letting developers rema
 - -
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Verdent converts vague developer prompts into structured, executable plans via guided dialogue (Plan Mode). The extension surfaces templates and guided prompts to help scope tasks, decompose features into subtasks, and set collaborator permissions and verification strategies.
+  - Prompts can include high-level goals, desired testing/verification steps, and policy/rule constraints to guide subagent behavior.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Verdent exposes a set of integrated tools to support plan-first development and verification workflows, including:
+    - Browser action / browser capture tools for automated web interaction, screenshot capture, console/XHR logging, and DOM inspection used by Verifier subagents.
+    - Worktree management controls to create isolated git worktrees per agent/session, enabling safe parallel development and easy rollback.
+    - DiffLens for line-level natural-language explanations of changes and clickable diffs for quick inspection.
+    - Built-in code review and verifier tooling (configurable model choice) to automatically review security, quality, and style with each change.
+    - Project configuration and rule enforcement UI to define project-level context, build commands, deny-lists, and permission modes for agents.
+  - Tools are accessible from the VS Code extension UI and Verdent Deck; some features are desktop-first and may be available earlier in the Deck app.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Public product announcements, demo videos, and press coverage (2024–2025) describe Verdent's Plan-First and Verify-Early methodology, Deck desktop app, and the VS Code extension. These sources are the primary publicly available resources and provide feature overviews, architecture descriptions, and demonstrations.
+  - Official documentation, detailed prompt templates, and enterprise deployment guides appear to be available to customers and early access users; they were not publicly accessible in full at the time of the last update.
 
 ## Deployment
 

@@ -11,22 +11,20 @@ A research-preview, agentic AI coding assistant from Sourcegraph that focuses on
 (2025-10-19)
 
 ### Repo
-<!-- ToDo -->
-<!-- Associated Github repository -->
--
+- https://ampcode.com
+  - https://github.com/sourcegraph/amp-demo (example/demo repository)
+  - Related Sourcegraph repos: https://github.com/sourcegraph/cra-github (Amp Code Review app)
 
 ### Rating
 - [4] Interface / UX (user-reported)
 - [4] Code quality
-- [4]] Input processing (understanding intent)
+- [4] Input processing (understanding intent)
 - [3] Accuracy
 - [3] Documentation / Community support
 - [3] Update cadence / shipping
 
 ### Short Description
-<!-- ToDo -->
-
--
+- Agentic AI coding assistant (VS Code extension + CLI) from Sourcegraph that performs multi-step autonomous code reasoning and coordinated repository edits using high-quality models and project-aware context.
 
 ### Description
 Amp is designed as an "agentic" coding assistant that can autonomously reason through multi-step programming tasks, propose and apply coordinated code edits, and collaborate via shared conversation threads. It prioritises quality over token limits, dynamically selects high-quality models (e.g., Claude Sonnet 4 where available), and exposes both an IDE extension and a CLI for flexible workflows.
@@ -46,61 +44,39 @@ Amp is designed as an "agentic" coding assistant that can autonomously reason th
 - Market position: Positioned as a next-generation, high-quality AI coding agent for teams wanting autonomous assistance beyond standard completion tools.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-10-19
 
 ## Licensing
 
 ### Opensource
 - No
+  - Amp is offered as a commercial Sourcegraph product; related example/demo repositories under the Sourcegraph org may be MIT or other OSS licenses, but the primary product is proprietary.
 
 ### License
-<!-- ToDo -->
-<!-- Opensource specific license or Proprietary for other commercial licenses -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- MIT
-- Apache-2.0
 - Proprietary
-- FSL
-- GPL-3.0
-- AGPL-3.0
-- BSD-3-Clause
-- ISC
-- MPL-2.0
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Related Sourcegraph example repositories (e.g., cra-github, amp-demo) may carry permissive licenses such as MIT; confirm per-repo LICENSE files for specifics.
 
 ### FreeTrial
 - Yes
+  - Sourcegraph provides trial/pricing info for Amp; consult Sourcegraph sales/docs for details.
 
 ## MCP-Client
 
 ### MCP-Client
 - Yes
+  - Amp integrates with the Model Context Protocol (MCP) and can operate with MCP-compatible model/context providers.
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Amp uses structured prompts and prompt engineering under the hood; supports configurable prompts and project-level AGENT.md guidance.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports CLI operations, file/system actions, and integrations (e.g., running tests, git operations) with allowlisting controls.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Can surface and use repo resources, external docs, and model-provided context as part of multi-step reasoning.
 
 ## Deployment
 
@@ -114,28 +90,16 @@ Amp is designed as an "agentic" coding assistant that can autonomously reason th
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Manages repo context via code search, AGENT.md, and project-aware context windows; supports extended context budgets and multi-repo reasoning.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - CLI and extension workflows can reference and operate on specific files; supports tracing and applying edits to particular files.
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Tracks file changes during sessions and provides mechanisms to review and revert edits (per-session change tracking, git-based workflows).
 
 ### GitSupport
 - Yes
@@ -146,44 +110,24 @@ Amp is designed as an "agentic" coding assistant that can autonomously reason th
 - Yes
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Editor integrations (VS Code extension, Neovim plugin, JetBrains support) and example integrations demonstrate extensibility points; repository-level hooks/integrations available.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integration points exist for CI/automation and repo lifecycle events via CLI and AGENT.md-driven workflows.
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - CLI and extension expose reusable commands and interactive command palette entries for common operations.
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Provides operational modes (e.g., smart vs fast) and configurable thinking budgets.
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Specialized agents/components (Librarian, review agents, task-specific helpers) enable task decomposition and targeted workflows.
 
 ## Ungrouped Criteria
 
@@ -191,15 +135,6 @@ Amp is designed as an "agentic" coding assistant that can autonomously reason th
 - Yes
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+
+---

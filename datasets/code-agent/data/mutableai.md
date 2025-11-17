@@ -18,7 +18,7 @@ N/A
 - [3] Enterprise/on-prem features, but limited public pricing and roadmap visibility
 
 ### Short Description
-<!-- ToDo -->
+AI-native developer platform that creates a living, editable code wiki (Auto Wiki), provides conversational codebase search/chat, generates architecture diagrams, and performs one-click or prompt-driven code transforms/refactors across files. Integrates with IDEs (VS Code), GitHub, CLI and offers on-premises deployment for enterprises.
 
 -
 
@@ -40,9 +40,7 @@ The platform is positioned for both individual developer workflows (autocomplete
 - Pricing: Not publicly listed in detail; offers standard and enterprise tiers with on-prem/enterprise support — contact sales for pricing.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-11-15
 
 ## Licensing
 
@@ -61,28 +59,16 @@ The platform is positioned for both individual developer workflows (autocomplete
 -
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports natural-language prompt-driven edits, refactors and code generation; users can describe desired changes and the assistant applies multi-file modifications with previews.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Includes automated refactor/transform tools (one-click transforms), architecture/diagram generation, and CLI tooling for local workflows.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Public documentation, API/CLI, IDE extensions (VS Code), and integration guides are available to onboard and integrate MutableAI into development workflows.
 
 ## Deployment
 
@@ -96,28 +82,16 @@ The platform is positioned for both individual developer workflows (autocomplete
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Auto Wiki creates and maintains structured documentation of the codebase and the system updates documentation/context when code changes; this improves contextual answers in the chat and during transformations.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Documentation and chat responses include file/line citations and clickable links that reference specific files and locations in the repository (integrations available for IDEs and GitHub).
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrates with Git workflows: changes are previewed, applied in branches or via pull requests, and can be reverted/undone using standard VCS history.
 
 ### GitSupport
 - Yes
@@ -126,47 +100,27 @@ The platform is positioned for both individual developer workflows (autocomplete
 
 ### Extensible
 - Yes
-  - API, CLI, and integrations (VS Code, GitHub, Jupyter reported)
+  - Provides API, CLI and IDE extensions (VS Code, GitHub, Jupyter) to extend workflows and integrate with existing toolchains.
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No public plugin marketplace documented; extensibility is provided primarily via APIs, CLI and first-party IDE extensions rather than a user-facing plugin bundling system.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No public lifecycle hook/plugin system clearly documented; integrations are typically via API/CLI and GitHub/CI workflows rather than explicit agent lifecycle hooks.
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No documented slash-command system; IDE extensions expose commands through the editor command palette rather than an in-app slash command interface.
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No public documentation describing user-defined specialist chat modes or configurable built-in modes beyond prompt-driven behavior and configurable project settings.
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No public documentation indicating user-definable subagents or multi-agent orchestration; functionality is delivered via feature-focused components (docs, chat, transforms) rather than user-configured subagents.
 
 ## Ungrouped Criteria
 
@@ -175,15 +129,14 @@ The platform is positioned for both individual developer workflows (autocomplete
   - CLI available to integrate local workflows with the MutableAI service
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
+
+
+### SpecDrivenDevelopment
 <!-- Has support for these Spec Driven Development methodologies: -->
 <!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
+
+
+
+
+
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->

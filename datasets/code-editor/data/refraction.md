@@ -17,7 +17,7 @@ A small, practical AI assistant for developers focused on refactoring, test gene
 - [4] Value for money (budget-friendly paid tier)
 
 ### Short Description
-<!-- ToDo -->
+A focused web-first AI assistant for developers that automates small, practical code tasks: refactors, unit test generation, documentation, regex creation, and snippet translations. Optimized for discrete generations rather than streaming in-editor completion.
 
 -
 
@@ -35,9 +35,7 @@ Refraction is a web-first AI development assistant (refraction.dev) which helps 
 - Use-cases: adding unit tests, documenting legacy code, refactoring for clarity or minor performance improvements, generating regexes and language-to-language snippet translations.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-11-15
 
 ## Licensing
 
@@ -54,47 +52,26 @@ Refraction is a web-first AI development assistant (refraction.dev) which helps 
 ## MCP-Client
 
 ### MCP-Client
-<!-- ToDo -->
-<!-- Coding tool has built-in MCP client so can connect to MCP servers -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - There is no public documentation or indication that Refraction includes an MCP (Model Control Plane) client for connecting directly to external MCP servers.
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Refraction accepts natural-language prompts for discrete generations (e.g., "generate unit tests for this function", "add types", "refactor this code").
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The product exposes focused tooling for specific code tasks (refactors, tests, docs, regex generation) via the web UI and the Sublime Text extension.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Refraction provides a history feature storing previous generations and may include documentation and usage guides on the web app (refer to refraction.dev for details).
 
 ## Deployment
 
 ### BYOK
-<!-- ToDo -->
-<!-- Bring Your Own LLM API Key supported -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
+  - There is no public documentation indicating that Refraction supports a Bring Your Own Key (BYOK) model for connecting external LLM API keys or selecting self-hosted models. Enterprise customers should contact Refraction sales/support for precise details.
 ### LocalOffline
 - No
 
@@ -113,12 +90,8 @@ Refraction is a web-first AI development assistant (refraction.dev) which helps 
   - There is no documented checkpoint or undo system for reverting actions; Refraction stores generation history for user review, but this is not presented as a versioned checkpoint/rollback mechanism.
 
 ### GitSupport
-<!-- ToDo -->
-<!-- Coding tool is aware of GIT and can work/integrate with GIT repos -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Refraction provides GitHub integration features, including an "Autoreview" GitHub Marketplace plugin that can generate PR descriptions and automated reviews. It also offers IDE/editor extensions (Sublime Text, VS Code) and a Terminal extension to facilitate working with repositories. There is limited public documentation about a full-featured REST API or advanced repo management features; contact Refraction for enterprise or API access details.
 
 ## Extensible
 

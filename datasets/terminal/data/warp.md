@@ -17,7 +17,7 @@ v2.0 (2025-09-xx)
 - [4] Commercial/proprietary product; some enterprise privacy controls but limited public BYOK/local-offline detail
 
 ### Short Description
-<!-- ToDo -->
+- AI-powered terminal and Agentic Development Environment (ADE) that combines natural-language Agent Mode, Warp Code (live diffing and stepwise code edits), and Warp Drive (shared Workflows, Notebooks, prompts and environment variables) to enable collaborative, model-driven development workflows within the terminal.
 
 -
 
@@ -35,9 +35,7 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 - Recommended when: you want a first-class terminal with integrated AI agents and team sharing (Drive), and you prefer an opinionated, commercial product with enterprise privacy controls rather than an open-source self-hosted solution.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-11-16
 
 ## Licensing
 
@@ -57,38 +55,22 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
   - Warp supports selecting/modeling different hosted LLM providers and includes enterprise features like zero-data-retention guarantees and proxying; it exposes autonomy controls for when agents may call MCP servers without human approval.
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports natural-language input as the primary interface; stored prompt templates and reusable prompts are persisted in Warp Drive and can seed Workflows and agents. Agents present a plan before execution and prompts can be edited or parameterized per Workflow.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Agents can invoke shell commands as tools, interact with Git, run code edits via Warp Code, call selected LLM providers via configured MCP/model integrations, and execute Drive Workflows.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Warp Drive stores shared resources (Workflows, Notebooks, commands, prompts, and environment variables) that agents can access as contextual artifacts.
 
 ## Deployment
 
 ### BYOK
-<!-- ToDo -->
-<!-- Bring Your Own LLM API Key supported -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Warp allows configuration of LLM providers and supports enterprise proxy/BYOK arrangements (customer-supplied API keys or proxying) in enterprise plans. Public documentation is limited on fully self-hosted/on-prem BYOK flows; contact sales/enterprise docs for details.
 
 ### LocalOffline
 - No
@@ -97,28 +79,16 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Methods include attaching files and images, referencing file paths, persisting Drive artifacts (Workflows/Notebooks/Env vars), and allowing agents to request additional context interactively during multi-step plans.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - You can reference and attach specific files/paths as context for agents; Warp Code surfaces file-level diffs and agents can propose edits to particular files which are shown in the live diff UI.
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Warp provides live diff review and approval before applying changes; edits from agents can be accepted, rejected or modified and then committed to Git. Drive artifacts also provide shared versions and history for collaborative workflows.
 
 ### GitSupport
 - Yes
@@ -128,47 +98,27 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 
 ### Extensible
 - Yes
-  - Support for Workflows, Notebooks, Drive-based sharing and agent configuration
+  - Support for Workflows, Notebooks, Drive-based sharing and agent configuration enables extensibility of team knowledge and repeatable automation patterns.
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No public plugin marketplace or documented plugin API; extensibility is primarily via Drive Workflows, Notebook artifacts, and model/agent configuration.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No documented lifecycle hook API for agents; control is provided via agent permissions, allowlists/denylists and approval workflows.
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No public global slash-command system documented; parameterized Workflows serve as invocable shortcuts and templates.
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Built-in modes include Command Mode, Agent Mode, and Planning Mode. Agent autonomy and behavior can be tuned per agent/Workflow (pause-for-approval, review diffs, allowlists/denylists).
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Warp supports running multiple agents and orchestrating multi-agent workflows. While there is multi-agent orchestration and task chaining, there is no widely-published "subagent API" name — orchestration is handled via the agent management UI and planning features.
 
 ## Ungrouped Criteria
 
@@ -176,15 +126,5 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 - Yes
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- No
+  - Warp does not natively implement specific Spec Driven Development frameworks (BMAD, SpecKit, Tessl, etc.). Teams can encode processes in Drive Workflows and use Drive artifacts to approximate SDD practices, but there is no built-in, first-class support for the listed SDD frameworks.

@@ -18,8 +18,7 @@ v2.0 (2025-10-29)
 - [3] Maturing ecosystem and enterprise features (good fit for teams ready to adopt agentic workflows)
 
 ### Short Description
-<!-- ToDo -->
--
+- AI-first code editor that treats AI agents as first-class collaborators; features Cursor's low-latency Composer model, multi-agent parallel worktrees for isolated experiments, an embedded browser and testing tools, and enterprise-focused sandboxing and admin controls.
 
 ### Description
 Cursor reimagines the developer workflow by making AI agents first-class collaborators. It combines conventional editor capabilities (file navigation, syntax highlighting, terminals) with chat-driven Composer and Agent modes that can generate, refactor, and test code across a repository. Cursor 2.0 focuses on low-latency, production-oriented AI tooling (Composer) and parallel agent execution for exploring multiple implementations safely.

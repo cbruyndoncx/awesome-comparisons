@@ -10,18 +10,15 @@ Open-source code generation model with strong C-language performance
 v2.7B (2022-03-01)
 
 ### Repo
-<!-- ToDo -->
-<!-- Associated Github repository -->
--
+- https://github.com/VHellendoorn/Code-LMs
 
 ### Rating
 - [4] Excellent open-source alternative for systems-level code (C/C++).
 - [3] Not competitive with 2024/2025 largest commercial models on all-language benchmarks.
 
 ### Short Description
-<!-- ToDo -->
+- Open-source GPT-2-style autoregressive code model (160M/405M/2.7B) with particularly strong performance on C/C++ code; includes checkpoints, training scripts, and tokenizer configs under the MIT license for reproducible research and on-prem deployments.
 
--
 
 ### Description
 PolyCoder is an open-source autoregressive code model developed by researchers at Carnegie Mellon University. Built on a GPT-2 style decoder-only transformer, PolyCoder was trained on approximately 249GB of GitHub-sourced code across a dozen languages and published in early 2022. The project ships model checkpoints, preprocessing scripts, tokenizer configs and evaluation notebooks under a permissive MIT license, enabling reproducible research, self-hosting, and fine-tuning.
@@ -49,9 +46,8 @@ PolyCoder was released in multiple sizes (160M, 405M and 2.7B parameters). The 2
 - Keep expectations realistic: PolyCoder is a 2022-era model and does not match the capabilities of later multi-hundred-billion-parameter code-specialized models, though it remains valuable for C/C++ and systems-level use-cases.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-11-16
+
 
 ## Licensing
 
@@ -62,9 +58,5 @@ PolyCoder was released in multiple sizes (160M, 405M and 2.7B parameters). The 2
 - MIT
 
 ### FreeTrial
-<!-- ToDo -->
-<!-- Free access (like opensource), or free (potentially limited) trial available -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Model checkpoints, code, and training artifacts are freely available under the MIT license (Zenodo archive and GitHub repo). Hugging Face mirrors provide easy download and Transformers compatibility.

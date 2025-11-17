@@ -17,9 +17,7 @@ v (2025-10-19)
 - [3] Generated code often needs manual hardening for production
 
 ### Short Description
-<!-- ToDo -->
-
--
+- Role-specific autonomous "AI Employees" for business automation plus an AI app builder that scaffolds full‑stack React/Node projects from prompts.
 
 ### Description
 Marblism provides two complementary offerings: (1) a suite of role-specific "AI Employees" (Eva, Penny, Sonny, Stan, Cara, Linda) that autonomously handle business tasks such as inbox/calendar triage, SEO blog writing, social scheduling, lead generation/outreach, customer support, and basic legal document review; and (2) an AI app builder that scaffolds full‑stack React + Node applications (DB schema, backend endpoints, front-end pages, auth, basic integrations) from prompts. The platform focuses on fast onboarding and autonomous operation for non-technical founders and small teams.
@@ -37,9 +35,7 @@ Marblism provides two complementary offerings: (1) a suite of role-specific "AI 
 - Limitations: not enterprise-grade (compliance, on-premises), limited tech stack (React/Node), generated code usually needs manual review/hardening for production, documentation/support primarily community/Discord.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-11-15
 
 ## Licensing
 
@@ -58,28 +54,16 @@ Marblism provides two complementary offerings: (1) a suite of role-specific "AI 
 - No
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Marblism exposes and uses prompt templates during onboarding and role configuration; the AI Employees and app builder accept and store prompt/configuration inputs to shape agent behavior and generated projects.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrations and platform tools include GitHub repository creation/push, Amazon S3 uploads, Mail integrations (e.g., Mailjet), Gmail/Outlook account connections, social integrations (Instagram, Facebook, X/Twitter, LinkedIn), and authentication helpers (JWT, Google Login) used by the app builder.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - User-facing resources include onboarding guides, documentation pages, community/Discord support, and access to generated GitHub repositories for code inspection and iteration.
 
 ## Deployment
 

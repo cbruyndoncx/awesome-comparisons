@@ -18,7 +18,7 @@ v (2025-10-19)
 - [4] Actively developed community project with wide model compatibility
 
 ### Short Description
-<!-- ToDo -->
+An open-source agentic software engineer (Devika / Opcode) that performs end-to-end development tasks: plans, researches, generates, and modifies code across projects using multi-LLM support and local runtimes.
 
 -
 
@@ -41,8 +41,7 @@ Key capabilities include automated planning (breaking objectives into actionable
 - Community & contribution: open-source repo on GitHub encourages contributions; check repository for issues, contribution guidelines and exact license details.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
+2025-10-19
 -
 
 ## Licensing
@@ -63,28 +62,16 @@ Key capabilities include automated planning (breaking objectives into actionable
 - Yes
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Uses configurable prompt templates and system messages for task decomposition, planning, and code generation. Prompts are exposed in configuration and can be tuned per-project.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrates with external tools and runtimes (Playwright for browsing/research, Git, shell execution, Bun for UI, Ollama for local models, and other model adapters). Tooling is pluggable via adapters.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Ships with documentation, example projects, model adapter configs, and tooling scripts (setup, Playwright, Dockerfiles) to assist deployments and experimentation.
 
 ## Deployment
 
@@ -98,28 +85,16 @@ Key capabilities include automated planning (breaking objectives into actionable
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Project-based workspace model with persistent task and agent state. Context and project history are maintained across sessions to enable progressive work on repositories.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Agent can read and write repository files, operate on project workspaces, and reference files when executing tasks or generating patches.
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrates with Git for commits and repository operations; workflows commonly use Git commits as checkpoints and the agent can make/revert commits as part of tasks.
 
 ### GitSupport
 - Yes
@@ -132,44 +107,24 @@ Key capabilities include automated planning (breaking objectives into actionable
   - Modular architecture designed to add new model adapters, tools, and integrations
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports adapter-based extensions for new models and integrations; community contributions extend functionality via adapters and custom scripts.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Provides lifecycle hooks and integration points in workflows (configuration files and adapter interfaces allow injecting behavior during planning and execution).
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Offers CLI and web UI commands for common operations (start/stop agent, create projects, run tasks); extensible via configuration and scripts.
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Configurable modes and profiles (model selection, search/backoff strategies, and task verbosity) to tailor the agent's behavior for different workflows.
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports decomposing work into sub-tasks/agents (planner, researcher, executor) and orchestrates them to complete complex jobs; architecture enables parallel or staged task execution.
 
 ## Ungrouped Criteria
 
@@ -178,15 +133,11 @@ Key capabilities include automated planning (breaking objectives into actionable
   - Provides CLI and web UI components; integrates with local runtimes (Bun, Ollama) and shells for execution.
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+- 
+
+---
+
+### Notes on Spec Driven Development
+- No explicit support for Tessl/Spec-driven frameworks is documented; Devika/Opcode focuses on agentic workflows and project orchestration rather than a specific spec-driven tooling standard.
+

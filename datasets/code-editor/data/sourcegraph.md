@@ -19,7 +19,7 @@ vN/A (2025-10-19)
 - [3] License and governance concerns after relicensing/private repo move
 
 ### Short Description
-<!-- ToDo -->
+- Enterprise-grade universal code search, cross-repository navigation, large-scale automated refactors, and an AI assistant (Cody) for multi-repo code understanding and developer productivity.
 
 -
 
@@ -54,9 +54,7 @@ Sourcegraph is a platform that provides precise, scalable code search and code n
   - You need an AI assistant that can reason across multiple repositories and provide actionable code suggestions (Cody), and you can accept the vendor/license model.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-11-15
 
 ## Licensing
 
@@ -79,28 +77,16 @@ Sourcegraph is a platform that provides precise, scalable code search and code n
   - Cody and the AI integrations support bringing multi-repo and file-context into model prompts (context-enhanced chat); suitable for advanced, model-backed code assistance workflows.
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Cody and AI integrations support RAG-style prompts that include search and embedding results (multi-repo file snippets, symbols, and metadata) into model inputs. Prompts can be provided via the web UI, IDE extensions, and APIs; deployments expose configuration for context size and prompt templates.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Cody supports actionable code generation and code actions (patch generation), integration with Batch Changes for large-scale edits, IDE extension commands, and the src CLI for scripted workflows.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Provides indexed repository content, embeddings, symbol graph, search results, Code Insights, and APIs for retrieving context and content for assistant prompts and automation.
 
 ## Deployment
 
@@ -150,8 +136,7 @@ Sourcegraph is a platform that provides precise, scalable code search and code n
 
 ### SlashCommands
 - Yes
-  - Sourcegraph supports CLI tooling (the `src` CLI and other developer tools) and IDE/browser extension commands that can be triggered by users; while not "slash commands" in the chat app sense, integrations and the Cody assistant expose actionable commands and workflows inside IDEs and the web UI.
-- No
+  - Sourcegraph supports CLI tooling (e.g., src CLI / developer tools) and integrations that allow scripted interactions and automation. While not "slash commands" in the chat app sense, IDE and extension commands plus the CLI offer similar actionable command workflows.
 
 ### CustomModes
 - Yes

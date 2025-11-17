@@ -8,9 +8,7 @@ A lightweight open-source AI developer agent for generating small projects and p
 - Code/Autonomous agent
 
 ### Version
-<!-- ToDo -->
-<!-- Latest version used for update -->
--
+- No official releases; repository is commit-driven (latest observed activity: 2025-09-26)
 
 ### Repo
 - https://github.com/smol-ai/developer
@@ -20,9 +18,7 @@ A lightweight open-source AI developer agent for generating small projects and p
 - [3] Powerful for small whole-program synthesis tasks but not a full IDE replacement
 
 ### Short Description
-<!-- ToDo -->
-
--
+- Lightweight Python library/agent that generates small, runnable codebases and prototypes from markdown or natural-language specifications. Focused on whole-program synthesis and rapid prototyping rather than acting as a full IDE.
 
 ### Description
 Smol Developer is an opinionated, small-footprint AI "developer" agent that aims to turn high-level product descriptions or markdown specs into runnable, small codebases. It is implemented in Python and designed for experimentation and rapid prototyping: you can run it as a library, as a git-repo driven workflow, or call it via an API-like interface. The project focuses on whole-program synthesis (generating multiple coordinated files rather than isolated snippets) and uses prompt engineering patterns (Markdown specs, planning + implementation steps) to keep results coherent across files.
@@ -41,9 +37,7 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
 - Limitations: quality and speed depend heavily on the chosen LLM (GPT-4 is common but slower/costly). The tool is experimental — outputs require human review, testing, and iteration. Not designed as a drop-in replacement for full IDE/code-review workflows.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-09-26 (latest observed commit activity)
 
 ## Licensing
 
@@ -51,61 +45,36 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
 - Yes
 
 ### License
-<!-- ToDo -->
-<!-- Opensource specific license or Proprietary for other commercial licenses -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - MIT
-- Apache-2.0
-- Proprietary
-- FSL
-- GPL-3.0
-- AGPL-3.0
-- BSD-3-Clause
-- ISC
-- MPL-2.0
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Repository distributed under the MIT license (per GitHub repository metadata and LICENSE file).
 
 ### FreeTrial
 - Yes
+  - Project is open-source and free to use; using cloud LLMs (e.g., OpenAI) may incur costs depending on provider usage.
 
 ## MCP-Client
 
 ### MCP-Client
-<!-- ToDo -->
-<!-- Coding tool has built-in MCP client so can connect to MCP servers -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Smol Developer does not include a built-in MCP (Tessl) client; it is a standalone Python library/repo workflow. Integration with MCP-style servers would need to be added by consumers.
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Prompts and markdown specs are central to the workflow; users provide specs in Markdown which drive the generation process.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Smol integrates with LLM providers (commonly OpenAI) and uses Modal for runtime/dependency orchestration in some deployment patterns.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The repository provides documentation, examples, and workflow recipes in the GitHub README.
 
 ## Deployment
 
 ### BYOK
 - Yes
+  - Users bring their own LLM API keys (e.g., OpenAI) for generation.
 
 ### LocalOffline
 - Yes
@@ -114,77 +83,46 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Context is managed via repository-driven workflows and the Markdown spec + plan structure; users iterate against a git repo and can pass file/dir context into generation steps.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - In repo mode the agent operates on files in the checked-out repository and can reference/modify files directly as part of the workflow.
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Checkpoints are provided by Git (git commits) when using repo mode; users can review, revert, and manage history through standard VCS operations.
 
 ### GitSupport
 - Yes
-  - The repo includes a "git repo mode" workflow that operates on a repository, enabling human-in-the-loop prototyping and iteration.
+  - The primary interactive workflow is git-repo driven, enabling human-in-the-loop development, commits, diffs and review.
 
 ## Extensible
 
 ### Extensible
 - Yes
+  - Designed to be lightweight and modifiable; users can adapt prompts, model integration, and workflows.
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The project does not ship a formal plugin system; extensibility is achieved by forking or modifying the Python code and prompts.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No documented lifecycle hook system; automation is typically orchestrated externally (scripts, CI, or user code).
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Not applicable to the core project (these concepts belong to other developer platforms/environments).
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Smol provides usage modes (repo/library/api) but not a formal custom-mode framework or built-in specialized chat modes.
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The repo does not implement a subagent orchestration framework; parallel specialized agents would need to be composed externally.
 
 ## Ungrouped Criteria
 
@@ -193,15 +131,9 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
   - Usable as a Python library and in repo-driven workflows; CLI/recipe-style usage patterns exist for iterative development.
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- None
+  - Smol uses simple Markdown-spec driven workflows for generation but does not natively implement named SDD frameworks (e.g., Tessl, SpecKit). Users author specs in Markdown which act as the canonical source for generation.
+
+## Notes
+- Primary references: GitHub repository https://github.com/smol-ai/developer, project README and LICENSE.
+- Practical considerations: while the project is open-source, effective usage requires access to a capable LLM. Modal is used in some deployment examples and can simplify dependency/runtime packaging.

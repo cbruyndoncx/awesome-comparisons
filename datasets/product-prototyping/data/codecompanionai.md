@@ -7,22 +7,18 @@ A desktop AI coding assistant that exposes a ChatGPT-powered chatbot for working
 - Product/Prototyping
 
 ### Version
-<!-- ToDo -->
-<!-- Latest version used for update -->
+
 -
 
 ### Repo
-<!-- ToDo -->
-<!-- Associated Github repository -->
+
 -
 
 ### Rating
 -
 
 ### Short Description
-<!-- ToDo -->
-
--
+A desktop, local-first AI coding assistant (chat-driven) that reads and edits local code, runs shell commands, integrates with Git, and can translate natural language to SQL.
 
 ### Description
 CodeCompanion.ai (desktop) is described in third-party write-ups as a local-first AI coding assistant powered by OpenAI's ChatGPT. It provides a chat interface that can read and reason about a user's codebase, generate and update files, run shell commands, assist with project setup and dependency installation, and translate natural language to SQL for database queries. The application emphasizes developer productivity by automating repetitive tasks and allowing commands to be executed from within the app.
@@ -39,9 +35,7 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 - Research summary based on multiple third-party write-ups and product summaries; authoritative vendor documentation and pricing were not found in the search results available.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-11-15
 
 ## Licensing
 
@@ -49,57 +43,30 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 - No
 
 ### License
-<!-- ToDo -->
-<!-- Opensource specific license or Proprietary for other commercial licenses -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- MIT
-- Apache-2.0
 - Proprietary
-- FSL
-- GPL-3.0
-- AGPL-3.0
-- BSD-3-Clause
-- ISC
-- MPL-2.0
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No authoritative public source indicates an open-source license or public repository for the desktop product; third-party write-ups describe it as a proprietary desktop application.
 
 ### FreeTrial
 - Yes
-  - [The product is often described as using the user's own OpenAI API key (BYOK) which enables usage without a separate paid tier from the vendor; however any model usage will consume the user's OpenAI quota which may incur cost.]
+  - The product is often described as using the user's own OpenAI API key (BYOK) which enables usage without a separate paid tier from the vendor; however any model usage will consume the user's OpenAI quota which may incur cost.
 
 ## MCP-Client
 
 ### MCP-Client
-<!-- ToDo -->
-<!-- Coding tool has built-in MCP client so can connect to MCP servers -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The desktop product is described as running locally and making API calls to OpenAI using the user's key (BYOK). There is no documentation indicating a built-in MCP client connecting to external MCP servers.
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Chat-based prompt interface: natural-language prompts are the primary interaction model for coding tasks, code edits, and queries.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Built-in tools reported include: terminal/shell execution, Git integration, file-system access, and natural-language-to-SQL database querying.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrated resources reported: embedded terminal, browser/preview for documentation, and the ability to scan and index local project files for context.
 
 ## Deployment
 
@@ -108,33 +75,21 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 
 ### LocalOffline
 - No
-  - [All user data (code, DBs, etc.) is described as being stored locally on the user's machine, but the assistant makes API calls to OpenAI for model inference — so it is not fully offline.]
+  - All user data (code, DBs, etc.) is described as being stored locally on the user's machine, but the assistant makes API calls to OpenAI for model inference — so it is not fully offline.
 
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Reported features include dynamic context management: project scanning, selective file inclusion/exclusion, and optimisations to reduce token usage for large codebases.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The assistant can open and reference local files directly and include file contents into the chat context for targeted edits and reasoning.
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Git integration is reported; users can rely on repository history/checkouts as checkpoints. An explicit in-app checkpoint UI is not documented in publicly-available third-party write-ups.
 
 ### GitSupport
 - Yes
@@ -142,44 +97,20 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 ## Extensible
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Third-party summaries and release notes report parallel multi-agent research/task execution capabilities to allow the assistant to research and plan across a project before executing tasks.
 
 ## Ungrouped Criteria
 
@@ -187,15 +118,5 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 - Yes
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+- 

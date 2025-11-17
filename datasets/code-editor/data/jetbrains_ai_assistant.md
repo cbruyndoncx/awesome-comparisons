@@ -18,7 +18,7 @@ v2025.2 (2025-08-25)
 - [3] Feature parity between cloud and local models is limited
 
 ### Short Description
-<!-- ToDo -->
+IDE-integrated AI assistant providing project-aware code completions, conversational chat, refactorings, multi-file edits, automated test and documentation generation, and autonomous agent workflows with support for cloud and local models.
 
 -
 
@@ -50,9 +50,7 @@ JetBrains AI Assistant embeds AI workflows directly inside JetBrains IDEs and le
 - Good fit for teams already standardized on JetBrains IDEs or for users needing strong on-device privacy controls via local model hosting.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-11-15
 
 ## Licensing
 
@@ -72,12 +70,12 @@ JetBrains AI Assistant embeds AI workflows directly inside JetBrains IDEs and le
 -
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - JetBrains provides a Prompt Library (Settings → Tools | AI Assistant | Prompt Library) for creating, editing and organizing custom prompts.
+  - Supports variables such as `$SELECTION` (inserts the selected code plus language) and `$GIT_BRANCH_NAME` (current VCS branch).
+  - Prompt options include "Wait for additional user input" and "Show in AI Actions popup" to control behavior and visibility.
+  - Built-in prompts can be customized; prompts can be reordered, copied, and deleted.
+  - Custom prompts are accessible from the AI chat, the AI Actions popup (Alt+Enter), editor context menus, and commit/Documentation actions.
 
 ### Tools
 <!-- ToDo -->

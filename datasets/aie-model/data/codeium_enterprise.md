@@ -10,9 +10,10 @@ Secure, enterprise-grade AI coding assistant with on-prem and air-gapped deploym
 n/a
 
 ### Repo
-<!-- ToDo -->
-<!-- Associated Github repository -->
--
+<!-- Associated Github repositories (public components) -->
+- https://github.com/exafunction/codeium.el
+- https://github.com/exafunction/codeium-react-code-editor
+- Note: The core Codeium Enterprise server and model infrastructure are proprietary; no public GitHub repo for the full enterprise/server distribution is published by the vendor.
 
 ### Rating
 - [4] Strong enterprise deployment options (air-gapped, self-hosted VPC)
@@ -20,9 +21,7 @@ n/a
 - [3] Proprietary product — some key compliance details (e.g. BYOK) require vendor confirmation
 
 ### Short Description
-<!-- ToDo -->
-
--
+Commercial enterprise edition of Codeium providing SaaS, self-hosted VPC, and fully air-gapped on-prem deployments with enterprise security controls, audit logging, admin analytics, and private-code personalization.
 
 ### Description
 Codeium Enterprise is the commercial, enterprise-oriented edition of Codeium that focuses on security, privacy, and deployment flexibility for organizations. It supports SaaS, self-hosted VPC, and fully air-gapped on-premises deployments, enabling customers to keep code and model inference inside their network perimeter while delivering AI-assisted code completion, multi-file editing, and contextual suggestions informed by private codebases.
@@ -43,9 +42,7 @@ References & further reading
 - https://codeium.com/enterprise (vendor enterprise overview)
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-11-16
 
 ## Licensing
 

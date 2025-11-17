@@ -17,7 +17,7 @@ v1.0 (2025-10-19)
 - [3] Limited for advanced/custom full‑stack apps
 
 ### Short Description
-<!-- ToDo -->
+No-code builder for embeddable AI micro‑tools (calculators, generators, chatbots) focused on SEO-driven engagement and lead capture. Create tools from a short description, style to match your brand, and deploy via embed or shareable link with built-in analytics and integrations.
 
 -
 
@@ -37,8 +37,7 @@ Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you c
 - Security: Platform claims encrypted transmission and secure storage for collected leads (standard for SaaS tools) — verify for specific compliance needs.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
+2025-10-19
 -
 
 ## Licensing
@@ -59,28 +58,22 @@ Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you c
 - No
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Configurable prompt templates in the visual builder; edit prompt text, variables and templates per tool.
+  - Support for multi-step prompt flows and conditional prompts within a tool.
+  - Ability to bind uploaded documents or datasets (CSV/JSON/TXT) as context for prompts.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Provides pre-built tool types: calculators, content generators, chat widgets and other micro‑apps.
+  - Tools are created via the visual builder and can be customized (inputs, outputs, styling, behavior).
+  - External tool-like integrations possible via webhooks and Zapier for chaining functionality.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Documentation, templates and onboarding guides available from the dashboard/website.
+  - Built-in analytics and exportable data for tool interactions and lead captures.
+  - Integrations: Zapier (7,000+ apps), webhooks, and basic API endpoints (contact support for full API specs).
 
 ## Deployment
 

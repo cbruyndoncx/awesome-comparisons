@@ -18,9 +18,8 @@ v1.3.0 (2025-04-xx)
 - [4] Rapid feature development but proprietary with privacy considerations
 
 ### Short Description
-<!-- ToDo -->
 
--
+- AI-first IDE (VS Code fork) providing multimodel AI assistants, planning-first Builder and autonomous SOLO modes, integrated deploys (Vercel), and multimodal inputs for end-to-end web development workflows.
 
 ### Description
 Trae is an AI-first IDE intended to act as a full software engineering partner rather than only a completion tool. It is a fork of Visual Studio Code, so extensions, shortcuts and editor familiarity carry over. Trae provides multimodel access (examples: Claude 3.7 Sonnet, GPT-4o, Gemini 2.5 Pro in early releases), integrated chat, builder/agent modes that plan and execute multi-file changes, SOLO mode for autonomous project delivery, and one-click web deployment (Vercel). It emphasizes planning-first workflows (Builder Mode) and agent-driven automation (SOLO and custom agents), plus multimodal inputs (screenshots/designs) and a bilingual interface (English and Simplified Chinese).
@@ -37,9 +36,7 @@ Trae is an AI-first IDE intended to act as a full software engineering partner r
 - Competitive positioning: Targets Cursor and GitHub Copilot users but differentiates on zero-cost premium-model access, autonomous agent flows, and built-in deployment tooling.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-04-22 (v1.3.0 release; MCP support, Builder/SOLO enhancements)
 
 ## Licensing
 
@@ -60,28 +57,18 @@ Trae is an AI-first IDE intended to act as a full software engineering partner r
   - Model Context Protocol support added in v1.3.0 to enable custom agents and richer context handling
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Trae exposes reusable prompt templates via its MCP implementation; Builder and SOLO flows include prebuilt prompts for planning, multi-file change generation, and deployment workflows.
+  - Prompts are editable within the IDE and can be invoked or customized by clients/agents before execution to enforce project conventions or coding standards.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Trae exposes tool integrations through MCP: common tools include search (#Web), run/test commands, Vercel deployment, and repository actions (commit/push). Tools can be invoked from planned execution flows or by agents during interactive sessions.
+  - Tool execution requires user confirmation in Builder mode by default; SOLO mode can be configured for automated execution with safety constraints.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Trae exposes Resources through MCP servers for project files, indexed codebase snippets, web search (#Web), and persistent project metadata (.rules files). These resources are used to assemble prompts and provide grounding data for agents' planning and code generation.
 
 ## Deployment
 

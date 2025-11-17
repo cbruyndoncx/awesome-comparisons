@@ -7,9 +7,7 @@ Open-source/Source-available AI developer companion that generates full-stack ap
 - Code/Editor
 
 ### Version
-<!-- ToDo -->
-<!-- Latest version used for update -->
--
+- 0.2.x (referenced in project docs for "load existing project" support; repository has limited formal release tags)
 
 ### Repo
 - https://github.com/Pythagora-io/gpt-pilot
@@ -19,9 +17,7 @@ Open-source/Source-available AI developer companion that generates full-stack ap
 - [3] Requires active human oversight for correctness, design and edge cases
 
 ### Short Description
-<!-- ToDo -->
-
--
+- AI developer assistant that orchestrates multiple specialized agents to generate, test, and iterate on full-stack application features with CLI and VS Code integration.
 
 ### Description
 GPT Pilot (by Pythagora) is a source-available AI developer assistant designed to automate large parts of the software development lifecycle. It uses a multi-agent workflow to: clarify requirements, design architecture, break work into tasks, generate code, run tests, and iterate with human reviews. It targets generating production-ready features (not just snippets) and integrates with developer tooling like a VS Code extension and a CLI.
@@ -45,9 +41,7 @@ GPT Pilot (by Pythagora) is a source-available AI developer assistant designed t
   - PyPI package: https://pypi.org/project/gpt-pilot/
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-11-03 (VS Code extension update; project active through 2024–2025)
 
 ## Licensing
 
@@ -69,28 +63,16 @@ GPT Pilot (by Pythagora) is a source-available AI developer assistant designed t
 -
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Uses prompt templates and multi-agent orchestration; prompts are central to the workflow and agent roles.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrates with developer tooling (git, Docker, test runners) and can execute shell/CLI tasks; supports configuring LLM backends and local inference.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Includes example-config.json, .env templates, docker-compose examples, documentation, and a PyPI package for installation.
 
 ## Deployment
 
@@ -125,36 +107,19 @@ GPT Pilot (by Pythagora) is a source-available AI developer assistant designed t
 - Yes
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No documented plugin marketplace or plugin API; extensibility is provided via code/config changes and the VS Code extension.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No documented lifecycle hooks API for third-party integrations; customization is achieved by editing agent/orchestration code.
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Not documented as a chat platform with slash-command interfaces; primary interfaces are CLI and VS Code extension.
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### Subagents
 - Yes

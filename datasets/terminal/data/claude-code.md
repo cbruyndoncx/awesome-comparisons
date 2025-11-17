@@ -18,7 +18,7 @@ v1.0 (2025-10-18)
 - [4] Excellent for multi-file refactors and end-to-end developer workflows
 
 ### Short Description
-<!-- ToDo -->
+Claude Code is a terminal-first CLI that exposes Anthropic's Claude models to developer workflows for interactive code generation, multi-file refactors, automated testing, and scripted agentic tasks. It lets developers run prompts, apply edits, execute shell commands, and integrate with git from the terminal while preserving interactive safeguards (permission prompts and commit/checkpoint workflows).
 
 -
 
@@ -38,12 +38,10 @@ The tool is focused on large-context reasoning, multi-file code transformations,
 - Use cases: automated refactors, multi-file PR generation, test generation and repair, code review assistance, automated CI hooks, developer productivity automation.
 - Safety & controls: interactive permission prompts, enterprise controls for data handling, and options to route through organization-managed endpoints.
 - Ecosystem: community tooling and integrations exist (context engineers, wrappers, "awesome" lists) though the official product is closed-source.
-- Further reading: consult the official Claude documentation at https://claude.ai/ and Anthropic's product pages for up-to-date pricing, model names, and deployment options.
+- Further reading: consult the official Claude documentation at <https://claude.ai/> and the Claude Code overview at <https://claude.ai/code> for up-to-date pricing, model names, and deployment options.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-11-16
 
 ## Licensing
 
@@ -62,28 +60,18 @@ The tool is focused on large-context reasoning, multi-file code transformations,
 - Yes
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Claude Code is prompt-driven and exposes CLI flags and short-form prompts for interactive and scripted use. The root project file (CLAUDE.md) is automatically included in session context and is used to encode project conventions, common commands, and guardrails. See: <https://claude.ai/code>
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The CLI supports running shell commands, file edits, git operations, and configurable "allowed tools" for scripted agent runs. It can be configured to allow or require confirmation before making changes.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Official documentation and overview: <https://claude.ai/code>
+  - Anthropic developer docs and API references: <https://www.anthropic.com/> and the Anthropic docs pages
+  - Community examples and third-party wrappers are available in blog posts and community repos (search "Claude Code CLI").
 
 ## Deployment
 
@@ -92,33 +80,21 @@ The tool is focused on large-context reasoning, multi-file code transformations,
 
 ### LocalOffline
 - No
-  - Any additional details like Ollama: Claude Code relies on remote model endpoints by default. Anthropic and enterprise customers can route requests through cloud provider-hosted model deployments, but a fully offline/local model runtime is not provided as a standard option.
+  - Claude Code relies on remote model endpoints by default. Anthropic and enterprise customers can route requests through cloud provider-hosted model deployments or organization-managed endpoints, but a fully offline/local model runtime is not provided as a standard option.
 
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Claude Code manages context via large-model context windows, automatic inclusion of a repository-level CLAUDE.md, and explicit file-injection/piping. Users can also supply files via stdin or configure the CLI to read specific paths into the session context.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The CLI can read files from the working tree, and its workflow includes asking permission to edit files or run commands. Project conventions (CLAUDE.md and .claude command files) are used to teach the assistant about frequently referenced files and commands.
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Claude Code integrates with git workflows and presents interactive prompts before making edits; typical usage includes creating commits, reviewable patches, or requiring user confirmation to apply changes so that git history acts as a checkpoint/undo mechanism.
 
 ### GitSupport
 - Yes
@@ -129,44 +105,24 @@ The tool is focused on large-context reasoning, multi-file code transformations,
 - Yes
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Claude Code supports project-level extensibility via the .claude directory (custom commands and scripts). Users can author reusable command files that become slash-style commands in the CLI, enabling repeatable automations.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Project configuration and command files allow lifecycle-like behaviors (preflight instructions and custom scripts) that the CLI will surface during interactive sessions. Users can document expected behaviors in CLAUDE.md and trigger scripted sequences via custom commands.
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Custom project commands placed under .claude/commands are surfaced as slash-style commands and can be invoked from the CLI to run specialized workflows (for example, /project:fix-github-issue).
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The CLI allows model selection and configurable behaviors (e.g., read-only analysis, aggressive edit mode, or restricted tool sets). Users can create and store project-specific command templates and flags to emulate specialist modes for common tasks.
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Claude Code supports agentic, multi-step workflows where the assistant can run sequences of commands, apply edits, run tests, and re-evaluate results. Project scripts and MCP-style integrations can be used to orchestrate more complex subagent behaviors.
 
 ## Ungrouped Criteria
 
@@ -174,15 +130,8 @@ The tool is focused on large-context reasoning, multi-file code transformations,
 - Yes
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- No
+  - Claude Code does not ship with built-in support for any single spec-driven development framework by default. It is a general-purpose CLI assistant that can be integrated into spec-driven workflows (Tessl, SpecKit, etc.) via custom project files and scripts, but there is no official, first-class integration shipped with the CLI itself.
+
+### End
+

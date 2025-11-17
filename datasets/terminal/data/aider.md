@@ -18,7 +18,7 @@ tbd (2025-10-18)
 - [4] Strong Git integration and multi-LLM support; good for whole-repo edits
 
 ### Short Description
-<!-- ToDo -->
+A terminal-first AI pair-programming CLI (with optional browser UI) that provides repo-aware, multi-file edits, automatic Git commits, and support for multiple remote and local LLM backends.
 
 -
 
@@ -39,8 +39,7 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 - Limitations/considerations: Aider is a thin orchestration layer — actual model behavior, costs, and availability depend on chosen LLM provider or local runtime; evaluate model performance and token costs for your use case before large-scale adoption.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
+- 2025-10-18
 -
 
 ## Licensing
@@ -61,28 +60,18 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 - No
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports configurable prompt templates, system-level prompts, and prompt caching to reduce costs and speed up repeated tasks.
+  - Prompts can be adjusted during chat and model selection is switchable in-session.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - In-chat commands and workflow tooling: runs linters/tests, shows diffs, and commits changes to Git automatically.
+  - Common in-chat commands include: /add (include files), /drop (remove files from context), /model (switch model), /undo (revert last AI change), and /reasoning-effort (control model reasoning depth).
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Builds a repo code-map for contextual awareness and can ingest files, folders, URLs and images to provide rich contextual resources to the model.
 
 ## Deployment
 
@@ -96,28 +85,17 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Maintains a repository code-map to provide broad context and supports targeted context injection via @file, @folder, URLs, and by adding files to the chat.
+  - Supports prompt caching and selective file inclusion to manage token usage and focus the model.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Use @file / @folder references and the in-chat /add command to include specific files or folders in the session for precise edits.
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Uses Git commits as checkpoints; Aider auto-commits changes with sensible messages and provides /undo and standard git tooling to revert or inspect history.
 
 ### GitSupport
 - Yes
@@ -129,44 +107,24 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
   - Supports multiple LLM backends and local model adapters; configurable via model adapters and API-key settings
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No formal plugin marketplace or plugin API; extensibility is achieved through model adapters, configuration, and local runtime integrations.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No documented lifecycle hooks API for third-party plugins; automation is typically handled via configuration, scripts and Git workflows.
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Provides reusable in-chat slash commands for workflow control (e.g., /add, /drop, /model, /undo, /reasoning-effort, /help).
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Built-in chat modes to tailor behavior: code (direct edits), architect (design/planning), ask (questions about code), help (explain Aider features).
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Does not expose a named subagent framework; supports autonomous execution modes (auto-approve) but not first-class subagent definitions.
 
 ## Ungrouped Criteria
 
@@ -174,15 +132,5 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 - Yes
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+

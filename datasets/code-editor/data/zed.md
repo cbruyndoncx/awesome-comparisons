@@ -17,7 +17,7 @@ vN/A (2025-10-19)
 - [4] Strong collaboration and AI integration, extension ecosystem still growing
 
 ### Short Description
-<!-- ToDo -->
+A GPU-rendered, Rust-based code editor focused on ultra-low-latency typing, real-time collaboration, and integrated AI assistance (Assistant Panel with editable prompts and inline AI-generated diffs).
 
 -
 
@@ -37,7 +37,11 @@ Zed is a modern code editor engineered for low latency and smooth UX. It renders
 - Good fit: Developers who prioritize low-latency editing, collaboration-first workflows, and integrated AI (especially teams wanting local model hosting) will find Zed compelling. If you depend on a very mature extension marketplace, account for that gap today.
 
 ### Last Update
-<!-- ToDo -->
+- 2025-11-06 (notable: Agent Server Extensions announced)
+- 2025-10-30 (Codex AI agent announced)
+- 2025-10-20 (stable release 0.208.6)
+- 2025-10-15 (Windows support announced)
+
 <!-- Note Date last updated -->
 -
 

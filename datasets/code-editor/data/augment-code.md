@@ -10,19 +10,16 @@ AI-powered developer platform focused on deep codebase understanding and autonom
 vN.N (yyyy-mm-dd)
 
 ### Repo
-<!-- ToDo -->
-<!-- Associated Github repository -->
--
+- https://augmentcode.com
+- GitHub: https://github.com/augmentcode
+  - https://github.com/augmentcode/augment-swebench-agent
+  - https://github.com/augmentcode/review-pr
 
 ### Rating
-<!-- ToDo -->
-<!-- Avg rating based on review comments -->
-<!-- Provide the rating value for Rating or remove if unknown. -->
--
+- Not publicly available; no aggregated public user rating found.
 
 ### Short Description
-<!-- ToDo -->
--
+- AI-first developer platform for deep codebase understanding, large-context completions (~200k tokens), autonomous agents, and multi-file "Next Edit" workflows.
 
 ### Description
 Augment Code is an AI-first development platform built to help professional engineers work with large, complex codebases. It uses a high-capacity context engine (advertised ~200k tokens of context), continuous embeddings of code and docs, and persistent "Memories" to provide deeply contextual completions, autonomous agents, and stepwise "Next Edit" navigation through multi-file changes. It supports autonomous agents that can plan, build, and open pull requests, and integrates with many developer tools and infra via MCP and native integrations.
@@ -35,8 +32,6 @@ Augment Code is an AI-first development platform built to help professional engi
 - Industry benchmark claims (HWE Bench top-ranked, e.g., 65.4% on HWE)
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
 -
 
 ## Licensing
@@ -56,28 +51,18 @@ Augment Code is an AI-first development platform built to help professional engi
 - Yes
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports reusable prompt templates and agent configurations for chat and autonomous agent workflows.
+  - Prompts are used to drive "Next Edit" suggestions, Smart Apply flows, and agent planning.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Provides MCP connectors and tool integrations for external systems (VCS, issue trackers, CI, documentation).
+  - Native integrations and editor plugins enable file-level operations and terminal/CLI tooling.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Public documentation, blog posts, demo materials, and example GitHub repositories under the augmentcode org.
 
 ## Deployment
 

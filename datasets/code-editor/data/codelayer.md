@@ -18,7 +18,7 @@ codelayer-0.1.0-20251003-140552-nightly (2025-10-03)
 - [5] Innovative AI-agent orchestration and productivity gains reported by users
 
 ### Short Description
-<!-- ToDo -->
+Keyboard-first open-source IDE and orchestration layer for AI coding agents (HumanLayer CodeLayer) built around Claude Code; provides MULTICLAUDE parallel sessions, worktree-aware git integration, and advanced context engineering for team-scale agent workflows.
 
 -
 
@@ -39,9 +39,7 @@ CodeLayer is an open-source, keyboard-first IDE and orchestration layer for AI c
 - Repo contains legacy HumanLayer SDK and documentation for historical context and SDK features.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-10-03 (matches codelayer-0.1.0-20251003-140552-nightly release date)
 
 ## Licensing
 
@@ -57,46 +55,26 @@ CodeLayer is an open-source, keyboard-first IDE and orchestration layer for AI c
 ## MCP-Client
 
 ### MCP-Client
-<!-- ToDo -->
-<!-- Coding tool has built-in MCP client so can connect to MCP servers -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Built-in MCP client and HumanLayer SDK enable tool/function calls, approvals, and lifecycle events (e.g., function_call.*, human_contact.*). Sessions can surface tool metadata and perform approved side-effecting operations via the platform's tool integrations.
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports prompt templates, session templates, and engineered prompt artifacts; prompts can be stored and loaded via configuration and shared across teams (prompt workshop/examples in repo/docs).
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrates tool calling and function-style tools (Claude Code tool capabilities), webhooks, and SDK-driven tool definitions; supports approvals and human-in-the-loop function calls.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Official documentation, GitHub repo with examples, CLI, community channels (Discord/X), and demo/tutorial materials are available in the project repository and docs site.
 
 ## Deployment
 
 ### BYOK
-<!-- ToDo -->
-<!-- Bring Your Own LLM API Key supported -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Environment and Claude settings support supplying external LLM API keys and configuring provider settings (e.g., ~/.claude/settings.json, env vars). CLI/desktop app can inherit shell environment variables so teams can use their own provider keys (AWS Bedrock, Anthropic, etc.).
 
 ### LocalOffline
 - No

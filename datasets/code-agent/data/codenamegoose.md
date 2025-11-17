@@ -18,9 +18,7 @@ v1.10.3 (2025-10-19)
 - [4] Powerful automation features; maturity depends on ecosystem of extensions
 
 ### Short Description
-<!-- ToDo -->
-
--
+Lightweight open-source agent framework for automating developer workflows and productivity tasks on-machine. Extensible via the Model Context Protocol (MCP); supports Recipes, .goosehints, subagents, and local/offline operation.
 
 ### Description
 Codename Goose is an open-source, on-machine AI agent framework created to automate multi-step tasks (initial focus on software engineering workflows). It is designed around an extensible tool system (Model Context Protocol / MCP) that lets the agent discover and interact with external services and developer tools (file systems, git, IDEs, CLIs, cloud APIs) through standardized interfaces. Goose supports multiple LLM providers and can operate via CLI or desktop interfaces, enabling both interactive assistance and autonomous workflows via shareable "Recipes" and project-level ".goosehints" guidance files.
@@ -36,9 +34,8 @@ Codename Goose is an open-source, on-machine AI agent framework created to autom
 - Adoption and usefulness will depend on the growth of a healthy extension ecosystem (MCP servers) and high-quality recipes for common workflows.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-10-19
+- Released v1.10.3 on 2025-10-19 (per repository release tag).
 
 ## Licensing
 
@@ -46,19 +43,8 @@ Codename Goose is an open-source, on-machine AI agent framework created to autom
 - Yes
 
 ### License
-<!-- ToDo -->
-<!-- Opensource specific license or Proprietary for other commercial licenses -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- MIT
 - Apache-2.0
-- Proprietary
-- FSL
-- GPL-3.0
-- AGPL-3.0
-- BSD-3-Clause
-- ISC
-- MPL-2.0
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Repository licensed under Apache-2.0 (per project GitHub license).
 
 ### FreeTrial
 - Yes
@@ -71,28 +57,16 @@ Codename Goose is an open-source, on-machine AI agent framework created to autom
   - Built around and interoperable with the Model Context Protocol (MCP) for tool discovery and standardized tool RPC.
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Recipes include system instructions and initial prompts; Recipes and sub-recipes provide prompt templates and parameterization for structured agent behavior.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Interacts with external tools via MCP servers; built-in extensions and a growing MCP ecosystem expose capabilities like file-system access, git, browser control, and cloud integrations.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Documentation, example recipes, built-in extensions and a catalog of MCP servers are provided to help bootstrap agent capabilities and integrations.
 
 ## Deployment
 
@@ -101,33 +75,21 @@ Codename Goose is an open-source, on-machine AI agent framework created to autom
 
 ### LocalOffline
 - Yes
-  - Can run on-machine and integrate with local/self-hosted model providers via MCP-compatible bridges.
+  - Can run on-machine and integrate with local/self-hosted model providers via MCP-compatible bridges; Dockerized self-contained deployments are supported.
 
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Context is managed via Recipes and sub-recipes, conversation state, and configuration files (e.g. .goosehints). Recipe parameters, sub-recipes and extension scopes are used to control and scope context passed to LLMs.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports reading/writing code and project files through file-system and git MCP servers; recipes and extensions can reference files for context or patching changes.
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrates with git workflows (read/write/commit/branch) and includes Approve Mode for human review before making irreversible changes, enabling checkpoint-like workflows.
 
 ### GitSupport
 - Yes
@@ -139,44 +101,24 @@ Codename Goose is an open-source, on-machine AI agent framework created to autom
 - Yes
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Extensions (MCP servers) act as a plugin mechanism to bundle commands, tools and integrations; Goose ships with built-in extensions and supports adding custom MCP servers.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No explicit lifecycle hook system is documented; users implement lifecycle behaviors via Recipes, extensions and approve/confirm flows.
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The project provides a CLI for interactive and scripted control, but chat-style slash-commands are not a documented feature.
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Built-in modes include Auto, Approve and Chat; recipes and configuration allow customizing agent behavior for specialized workflows.
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports sub-recipes and subagents to delegate specialized work and compose larger workflows from smaller agent units.
 
 ## Ungrouped Criteria
 
@@ -185,15 +127,5 @@ Codename Goose is an open-source, on-machine AI agent framework created to autom
   - Provides a CLI for scripting and interactive control.
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- No explicit support for the listed third-party spec frameworks
+  - Goose uses Recipes and sub-recipes as its primary method for specifying workflows and behavior rather than formal spec frameworks like Tessl or AgentOS.

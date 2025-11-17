@@ -17,9 +17,9 @@ v1.0 (2025-09-01)
 - [5] Highly productive autonomous agents for routine engineering tasks
 
 ### Short Description
-<!-- ToDo -->
+Ona is the rebranded Gitpod: an AI-first cloud development platform combining preconfigured, sandboxed cloud development environments with autonomous AI engineering agents and enterprise-grade guardrails.
 
--
+
 
 ### Description
 Ona is the rebrand and strategic evolution of Gitpod into an AI-first software engineering platform. Building on Gitpod's one-click, preconfigured cloud development environments, Ona layers autonomous AI "agents" that can plan, implement, test, review, and (with guardrails) deploy code inside secure, sandboxed environments. The platform is organized around three core pillars: Ona Environments (declarative, API-first dev environments with sandboxing and VPC deployment options), Ona Agents (autonomous AI collaborators that operate via natural language, IDE integrations, or automation pipelines), and Ona Guardrails (RBAC, audit trails, command controls, and compliance features for enterprise governance). Ona targets developer productivity at scale for both individual teams and large regulated enterprises.
@@ -37,9 +37,8 @@ Ona is the rebrand and strategic evolution of Gitpod into an AI-first software e
 - Recommended evaluation steps: trial with a sandbox project, configure guardrails and VPC options, measure agent outputs against existing PR and review metrics, and validate audit/compliance reporting.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-09-01
+
 
 ## Licensing
 
@@ -60,28 +59,19 @@ Ona is the rebrand and strategic evolution of Gitpod into an AI-first software e
 - Yes
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Repository-level AGENTS.md lets teams define prompt templates and instruction blocks that Ona agents load at session start.
+  - Agents support interactive prompts via chat, slash-commands, and workspace automation manifests (e.g., automations.yml).
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrates with LLM providers (Anthropic Claude Sonnet by default; other models optional) and exposes automation/command execution primitives inside workspaces.
+  - Supports editor integrations (VS Code, JetBrains, Zed, Cursor) and automation manifests for reusable toolchains.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Official Ona (Gitpod) documentation and blog posts; open-source Gitpod repository: <https://github.com/gitpod-io/gitpod>.
+  - Enterprise docs for VPC, RBAC, and guardrails; onboarding guides and automation manifest examples in the docs site.
 
 ## Deployment
 

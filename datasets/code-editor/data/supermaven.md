@@ -17,8 +17,7 @@ v (2025-10-19)
 - [4] Context awareness & long-range understanding (very large context window enables whole-repo reasoning)
 
 ### Short Description
-<!-- ToDo -->
-
+AI-first code completion assistant for very large code contexts, offering low-latency (sub-300ms) completions, whole-repo reasoning, and "next location" predictions to jump to suggested edit locations.
 -
 
 ### Description
@@ -36,8 +35,7 @@ Supermaven is an AI-powered code completion and developer-assistant platform bui
 - Limitations/considerations: proprietary/cloud-hosted service (no confirmed fully offline/self-hosted option), potential privacy and compliance considerations for sensitive code — review enterprise offerings and data handling policies before adoption.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
+2025-11-15
 -
 
 ## Licensing
@@ -57,28 +55,20 @@ Supermaven is an AI-powered code completion and developer-assistant platform bui
 - No
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supermaven Chat supports attaching files and recent edits to prompts, enabling context-rich requests (e.g., "fix this failing test" with compiler errors attached).
+  - Free-tier users can use the chat by providing their own OpenAI/Anthropic API key; Pro users often have integrated chat access.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Editor integrations expose hotkeys and actions such as request-edit, apply-change, show-diff, jump-to-file, and model switching.
+  - The Neovim plugin exposes an API (e.g., start, stop, restart, toggle, is_running, use_free_version, use_pro, logout, show_log, clear_log) for programmatic control.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Official integrations and documentation pages (site and plugin repositories) provide setup instructions for VS Code, JetBrains and Neovim.
+  - Supermaven provides model-selection and account settings inside the editor UI; logs and usage metrics accessible via plugin settings.
+  - Code policy and privacy documentation available on the Supermaven website for enterprise customers (review before onboarding sensitive codebases).
 
 ## Deployment
 

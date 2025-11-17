@@ -10,16 +10,15 @@ An open-source large language model for code, developed by the BigCode community
 v1 / 15.5B (initial: 2023)
 
 ### Repo
-<!-- ToDo -->
-<!-- Associated Github repository -->
--
+- https://github.com/bigcode-project/starcoder
+- Hugging Face: https://huggingface.co/bigcode/starcoder
 
 ### Rating
 - [5] Strong open-source code generation baseline
 - [4] Excellent multilingual code coverage and long context
 
 ### Short Description
-<!-- ToDo -->
+- Open-source 15.5B-parameter decoder-only transformer for code generation and infilling, trained on permissively licensed GitHub code (The Stack). Optimized for code completion, infilling, translation between languages, and code-aware QA.
 
 -
 
@@ -42,9 +41,8 @@ The project emphasizes responsible open-source release practices (dataset opt-ou
 - Integration tips: use temperature/top-p tuning for generation quality, provide clear prompts (function signatures, tests) for best results, and prefer fp16/bf16 runtime on GPU for performance.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2023-05-04 (original StarCoder release on Hugging Face / GitHub)
+- 2024-02-28 (StarCoder2 announced / successor family)
 
 ## Licensing
 

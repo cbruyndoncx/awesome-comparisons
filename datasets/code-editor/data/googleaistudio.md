@@ -8,12 +8,13 @@ Browser-based development environment from Google for prototyping and experiment
 <!-- AI Native Dev ainativedev.io Classification -->
 <!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - AIE/Model
-- Code/Autonomous agent
 - Code/Editor
-- Code/Other
-- Code/Terminal
 - Product/Prototyping
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Code/Autonomous agent
+
+- First-class access to Gemini models (AIE/Model) and an interactive web IDE for building multimodal apps (Code/Editor).
+- Focused on prototyping and experimentation (Product/Prototyping).
+- Supports agentic workflows, function-calling and tool integrations for building autonomous behaviours (Code/Autonomous agent).
 
 ### Version
  (2025-10-19)
@@ -27,9 +28,7 @@ Browser-based development environment from Google for prototyping and experiment
 - [3] Limited transparency on enterprise pricing / BYOK / offline hosting
 
 ### Short Description
-<!-- ToDo -->
-
--
+Browser-hosted IDE and playground for building, iterating and exporting multimodal apps that use Google's Gemini family (text, vision, audio/video and Live) with built-in media tools and integrations for moving prototypes toward Vertex AI.
 
 ### Description
 Google AI Studio is a web-based IDE and playground from Google that exposes the Gemini family of models (text, multimodal/vision, and Live/voice-enabled variants) through a unified, multimodal workflow. It aims to let developers, researchers and product teams prototype interactions that combine text, images, voice, screen-sharing and external context (URLs, Maps grounding) and then export working client/server snippets to accelerate production integration. The environment is primarily browser-hosted and intended for quick iteration, A/B style model comparisons, and as a stepping stone into Google Cloud's Vertex AI for enterprise scale.
@@ -50,9 +49,7 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
 - BYOK / data residency: no public documentation found indicating BYOK or self-hosted Gemini; expect data to be processed in Google Cloud unless an enterprise contract or Vertex AI offering provides specific guarantees.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-11-15
 
 ## Licensing
 
@@ -73,33 +70,33 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
 <!-- ToDo -->
 <!-- Coding tool has built-in MCP client so can connect to MCP servers -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+- AI Studio itself is a hosted Google product and does not expose a general-purpose built-in MCP client for connecting to arbitrary external MCP servers. Integration with MCP-style workflows is possible via community projects (e.g. an aistudio-mcp-server) and via the Gemini API / Vertex AI SDKs, but the hosted Studio UI expects Google-managed Gemini endpoints.
 
 ### Prompts
 <!-- ToDo -->
 <!-- Default description for Prompts -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+- Studio provides prompt templates, editable prompt playgrounds and tools for A/B style prompt comparison. Prompts can be saved, reused and (where applicable) exported with projects and code snippets. Vertex AI prompt management can be used for production lifecycle.
 
 ### Tools
 <!-- ToDo -->
 <!-- Default description for Tools -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+- Supports function-calling / tool integrations, media tools (Nano Banana image editor, Veo video generator), and connectors to Google services (Search, Maps) and the Gemini API. Tools are surfaced in the Build/Playground flows and can be composed in multi-step apps.
 
 ### Resources
 <!-- ToDo -->
 <!-- Default description for Resources -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+- Files and datasets can be uploaded to projects (UI upload and Files API); Studio integrates with Google Drive for persistent storage and collaboration. Uploaded files include text, PDFs, images, audio and video and can be referenced programmatically via file URIs.
 
 ## Deployment
 
@@ -107,9 +104,9 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
 <!-- ToDo -->
 <!-- Bring Your Own LLM API Key supported -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+- The hosted AI Studio environment runs on Google's Gemini models; you cannot plug arbitrary third‑party LLMs directly into the Studio UI. Developers using the Gemini API or the aistudio-mcp-server can supply their own Gemini API key when running self-hosted adapters, but that is separate from the hosted Studio experience.
 
 ### LocalOffline
 - No
@@ -122,24 +119,24 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
 <!-- Methods for managing and updating the context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+- Studio provides chat history, project-level saved snapshots/versions, and file-based context (uploaded files and Drive links). The Build workflows and prompt playground allow inserting files and adjusting context windows for multimodal prompts.
 
 ### DirectFileReferences
 <!-- ToDo -->
 <!-- Can with @file or similar provide context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+- Uploaded files receive stable file URIs (Files API) that can be referenced in prompts. The UI enables attaching files to prompts and the API supports reusing file identifiers so uploads do not need to be repeated.
 
 ### Checkpoints
 <!-- ToDo -->
 <!-- A way to undo using checkpoints or if autocommitted git history -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+- Studio maintains saved snapshots / project history (visible via the history UI) and creates Drive-backed versions for files. Users can restore prior snapshots, though community reports have documented occasional issues with snapshot previews or restores; project files also appear in Drive version history which can be used as a fallback.
 
 ### GitSupport
 - No
@@ -149,47 +146,47 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
 
 ### Extensible
 - Yes
-  - Integrates with Vertex AI and supports function-calling/tool integrations
+  - Integrates with Vertex AI and supports function-calling/tool integrations and programmatic access via the Gemini API and Files API.
 
 ### Plugins
 <!-- ToDo -->
 <!-- A method of bundling together commands, agents and hooks (claude). -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+- Studio surfaces tool integrations and connectors; while there isn't a public "plugin marketplace" identical to ChatGPT plugins, Studio/Vertex workflows allow registering connectors and tool adapters (function-calling) and community projects provide MCP adapters.
 
 ### Hooks
 <!-- ToDo -->
 <!-- Lifecycle events for the agent. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+- There is no documented, user-facing lifecycle hook system for embedding custom callbacks inside the hosted Studio UI. Integration points are provided via the Gemini API / Vertex AI and by exporting code to run custom hooks externally.
 
 ### SlashCommands
 <!-- ToDo -->
 <!-- Re-usable commands that can be manually triggered by the user. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+- The Studio UI does not advertise a dedicated slash-command palette for chat prompts; workflows rely on templates, saved prompts and the Build UI.
 
 ### CustomModes
 <!-- ToDo -->
 <!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+- Studio provides specialized workflows and modes (Build, Generate, Edit, Live/Voice) and templates tailored to tasks such as image editing, video generation, voice apps and multimodal experiments.
 
 ### Subagents
 <!-- ToDo -->
 <!-- Define specialized AI subagents for task-specific workflows. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+- Studio supports composing multi-step apps via function-calling and tool integrations; integrations and MCP-style adapters enable creating specialised tool pipelines that act as subagents for tasks like transcription + summarization + extraction.
 
 ## Ungrouped Criteria
 
@@ -201,6 +198,10 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
 <!-- ToDo -->
 <!-- Has support for these Spec Driven Development methodologies: -->
 <!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
+
+- None
+  - No explicit, first-class support for community Spec‑Driven frameworks (Tessl, BMAD, SpecKit, AgentOS, etc.) is documented; teams typically export code and integrate with their own SDLC and spec tools outside Studio.
+
 - BMAD
 - SpecKit
 - OpenSpec
@@ -209,4 +210,4 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
 - ClaudeFlow
 - SPARC
 - SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+<!-- Add any supporting notes as indented '- ' entries beneath the kept values. -->

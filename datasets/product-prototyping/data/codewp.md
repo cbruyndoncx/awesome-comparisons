@@ -19,7 +19,7 @@ N/A (2025-10-19)
 - [4] Value for WP-specific tasks — free tier + paid plans tuned for agency workloads
 
 ### Short Description
-<!-- ToDo -->
+CodeWP is an AI code-generation platform tailored for WordPress developers that turns natural-language prompts into ready-to-use PHP, JavaScript, and theme/plugin code snippets, with features like conversational editing, live WordPress preview, and plugin export.
 
 -
 
@@ -50,11 +50,10 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
 - Sources & further reading:
   - https://codewp.ai/
   - https://codewp.ai/snippets/
+  - CodeWP v2.5 release notes / walkthroughs (public posts and videos, 2024-2025)
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-11-15
 
 ## Licensing
 
@@ -74,28 +73,22 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
 - No
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - CodeWP is prompt-first: natural-language prompts drive snippet generation and conversational edits.
+  - The assistant supports follow-up/clarifying questions and iterative refinement of generated code.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Live WordPress preview (in-browser WP instance)
+  - Export as plugin/packaging for deployment
+  - Conversational chat assistant for code editing
+  - Public snippets library and dashboard tooling (Snippets, Packages, Sites)
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Searchable snippets library: https://codewp.ai/snippets/
+  - Documentation and tutorials on the CodeWP site
+  - Public walkthroughs and release notes for major updates (v2.5+)
 
 ## Deployment
 
@@ -108,28 +101,14 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - CodeWP supports passing external context and conversational context to refine generation; includes dashboard "Sites" and "Packages" to organize project context.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### GitSupport
 - No
@@ -138,47 +117,23 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
 
 ### Extensible
 - Yes
-  - Offers specialized "modes" for plugins (ACF, Elementor, WooCommerce, Gravity Forms, etc.) and an API for integration
+  - Offers specialized "modes" for plugins (ACF, Elementor, WooCommerce, Gravity Forms, etc.) and an API/exports for integration
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Provides targeted modes/presets for common WordPress ecosystems and builders; v2.5 added more advanced modes and presets.
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 
 ## Ungrouped Criteria
 
@@ -186,15 +141,14 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
 - No
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- 
+  - BMAD
+  - SpecKit
+  - OpenSpec
+  - Tessl
+  - AgentOS
+  - ClaudeFlow
+  - SPARC
+  - SuperClaude
+  -
+  - Note: CodeWP is not primarily a spec-driven development tool; the above list is left as-is from the template but not confirmed as supported features.

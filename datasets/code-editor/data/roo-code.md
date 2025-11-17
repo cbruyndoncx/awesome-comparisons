@@ -17,7 +17,7 @@ v3.3 (2024-10-18)
 - [3] Experimental parts (VS Code LLM API, some provider integrations) can be rough
 
 ### Short Description
-<!-- ToDo -->
+RooCode is an autonomous AI coding assistant VS Code extension offering customizable personas (modes), multi-model provider support, workspace file read/write, terminal and browser automation via MCP, and configurable autonomy (auto-approve, checkpoints).
 
 -
 
@@ -37,8 +37,7 @@ RooCode is designed to be more than an autocomplete plugin — it functions as a
 - Considerations: while powerful, RooCode’s autonomy features require careful configuration (auto-approve actions, file restrictions) to avoid unintended changes. Local/offline model support exists but may require additional setup and offers different capabilities than cloud models.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
+2024-10-18
 -
 
 ## Licensing
@@ -60,28 +59,22 @@ RooCode is designed to be more than an autocomplete plugin — it functions as a
   - MCP servers extend RooCode beyond the editor to interact with Docker, databases, browsers and other external tooling.
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Built-in personas: Code, Architect, Ask, Debug; modes can define system prompts and auto-switching rules.
+  - Users can create custom modes with tailored instructions, file restrictions, permission boundaries, and pre/post actions.
+  - Supports including files/ranges in prompts via @ mentions and passing terminal output or file snippets into context.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports MCP-exposed tools such as `search_engine` and `scrape_as_markdown` (Web MCP); Pro/extended MCP setups unlock browser automation, structured extractors and other web tools.
+  - Editor-level capabilities: file read/write, diffs, checkpoints, terminal command execution, and experimental editing tools (e.g., insert_content, search_and_replace introduced in recent 3.3.x updates).
+  - Integrates with multiple model providers (OpenAI, Anthropic, Google Gemini, OpenRouter, DeepSeek) and can route specific models per mode.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Cost/token tracking, usage reports, and model selection UI are available in the extension settings to help manage API spending.
+  - Documentation and install instructions are available on the Visual Studio Marketplace and the GitHub repository; community forks and examples provide additional resources.
+  - MCP servers can be configured to extend capabilities to Docker, databases, browsers; Bright Data and Web MCP communities have example integrations.
 
 ## Deployment
 

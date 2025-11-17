@@ -18,7 +18,7 @@ vN/A (2025-10-19)
 - [3] Proprietary service with privacy/enterprise trade-offs
 
 ### Short Description
-<!-- ToDo -->
+GitHub Copilot is an AI pair-programmer from GitHub/Microsoft that provides inline code completions, whole-function and multi-file suggestions, a conversational Copilot Chat, and autonomous coding agent features integrated across IDEs and github.com.
 
 -
 
@@ -49,9 +49,8 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
 - Privacy/data usage: Enterprise tiers offer stronger controls and indemnity options; evaluate data residency and IP policies if using Copilot on proprietary codebases.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-11-04
+- Based on public GitHub/Microsoft Copilot documentation and product announcements (Oct–Nov 2025).
 
 ## Licensing
 
@@ -71,34 +70,22 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
 - Yes
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports Copilot Chat prompts, custom instructions, repository-level prompt files (e.g., copilot-instructions.md), and chat variables/file anchors for grounding requests.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports multi-file edits, agent-suggested terminal commands, integration with linters and CodeQL for analysis, and actions that can create PRs and commits for review.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Organization knowledge bases (Copilot Spaces), repository docs, and Copilot Spaces can be attached as grounding context for chat and multi-file edits.
 
 ## Deployment
 
 ### BYOK
 - No
-  - No public, general-purpose "bring your own key" option for the cloud-hosted Copilot service. Enterprise plans provide data controls and policy management but do not expose a documented BYOK for model keys as of 2025-10-19.
+  - No public, general-purpose "bring your own key" option for the cloud-hosted Copilot service. Enterprise plans provide data controls and policy management but do not expose a documented BYOK for model keys as of the last update.
 
 ### LocalOffline
 - No
@@ -177,15 +164,10 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
   - Copilot Chat is available in supported terminals (Windows Terminal Canary, GitHub CLI integrations) and can be used from the command line in supported environments.
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
+
 <!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+
+### SpecDrivenDevelopment
+- No
+  - Copilot can assist in authoring specifications and code artifacts but does not provide explicit, built-in integrations or native support for specific Spec Driven Development frameworks (e.g., BMAD, SpecKit, OpenSpec, Tessl, AgentOS, ClaudeFlow, SPARC, SuperClaude) as of the last update (2025-11-04).

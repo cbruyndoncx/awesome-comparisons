@@ -4,16 +4,12 @@ Open-source AI coding assistant / VS Code extension
 ## General Info
 
 ### Classification
-<!-- ToDo -->
 <!-- AI Native Dev ainativedev.io Classification -->
 <!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- AIE/Model
-- Code/Autonomous agent
 - Code/Editor
-- Code/Other
+- Code/Autonomous agent
 - Code/Terminal
-- Product/Prototyping
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Open-source VS Code (and JetBrains) extension with CLI support, agent orchestration, and project-scoped memory stored under .kilocode/
 
 ### Version
 (2025-10-19)
@@ -27,9 +23,7 @@ Open-source AI coding assistant / VS Code extension
   - note: active community -> frequent updates
 
 ### Short Description
-<!-- ToDo -->
-
--
+- Open-source AI coding assistant and IDE extension (VS Code / JetBrains) that combines natural-language code generation, multi-mode workflows (Architect, Coder, Debugger), project memory, automation, and an MCP marketplace for pluggable tools and integrations. Supports BYOK and local model runtimes.
 
 ### Description
 Kilo Code is an open-source AI coding assistant implemented primarily as a Visual Studio Code extension. It combines natural-language code generation, multi-mode workflows (Architect, Coder, Debugger), and task automation to help developers plan, implement, and debug code within the editor. Kilo Code emphasizes context-awareness (project-level memory and indexing), extensibility via an MCP marketplace, and multi-model support so teams can choose models that match their needs for cost, latency, and privacy.
@@ -46,9 +40,7 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
 - Strengths: Open-source, highly extensible (MCP), strong context-awareness and project memory, multi-model support including offline options.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-10-19
 
 ## Licensing
 
@@ -70,28 +62,22 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
   - supports MCP Server Marketplace (JSON-based tool integrations / extensions)
 
 ### Prompts
-<!-- ToDo -->
 <!-- Default description for Prompts -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Full prompts are user-visible and editable; Kilo surfaces prompt templates and allows inspection/adjustment of the prompts used for requests.
 
 ### Tools
-<!-- ToDo -->
 <!-- Default description for Tools -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - MCP marketplace lets you add tools (e.g., Context7) that the agent can call to fetch docs, run commands, or perform external lookups. Includes terminal and browser automation tool integrations.
 
 ### Resources
-<!-- ToDo -->
 <!-- Default description for Resources -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Documentation, blog posts, YouTube tutorials, Discord community, Reddit, GitHub repo & changelog, and web docs available from the official site.
 
 ## Deployment
 
@@ -106,28 +92,20 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
 <!-- Methods for managing and updating the context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Project-scoped Memory Bank (.kilocode/) stores persistent notes and preferences; Kilo automatically searches and indexes project context and shows the context window size per request.
 
 ### DirectFileReferences
-<!-- ToDo -->
 <!-- Can with @file or similar provide context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The agent can reference and include project files as context (file-level context selection and indexing), and integrates with the editor to surface file contents to the assistant.
 
 ### Checkpoints
-<!-- ToDo -->
 <!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### GitSupport
 - Yes
@@ -140,44 +118,28 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
   - MCP (Model Context Protocol) Server Marketplace for custom tools and integrations
 
 ### Plugins
-<!-- ToDo -->
 <!-- A method of bundling together commands, agents and hooks (claude). -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Plugins and tool integrations are delivered via the MCP marketplace (JSON-based integrations / tools).
 
 ### Hooks
-<!-- ToDo -->
 <!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### SlashCommands
-<!-- ToDo -->
 <!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### CustomModes
-<!-- ToDo -->
 <!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Ships with Architect, Coder, Debugger and Orchestrator modes; supports creating custom modes for tailored workflows.
 
 ### Subagents
-<!-- ToDo -->
 <!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Orchestrator and parallel agents allow Kilo to break down work into subtasks and run multiple agents/subagents concurrently to coordinate complex workflows.
 
 ## Ungrouped Criteria
 
@@ -186,15 +148,6 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
   - incorporates terminal/CLI execution capabilities (inherited from Cline-style tooling) for running commands and automations
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
 <!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+

@@ -7,25 +7,16 @@ Open-source multilingual code generation model from Tsinghua University (THUDM).
 - AIE/Model
 
 ### Version
-<!-- ToDo -->
-<!-- Latest version used for update -->
--
+- CodeGeeX v1 (13B, released Sep 2022); CodeGeeX2 (follow-up, released 2023-07-24)
 
 ### Repo
-<!-- ToDo -->
-<!-- Associated Github repository -->
--
+- https://github.com/THUDM/CodeGeeX
 
 ### Rating
-<!-- ToDo -->
-<!-- Avg rating based on review comments -->
-<!-- Provide the rating value for Rating or remove if unknown. -->
--
+- N/A
 
 ### Short Description
-<!-- ToDo -->
-
--
+- Multilingual large-scale code generation model (13B) from Tsinghua University (THUDM) for code generation, translation, completion, summarization, and IDE integration.
 
 ### Description
 CodeGeeX is a large-scale multilingual code generation model and toolkit developed by THUDM. It was trained on a massive corpus covering source code and natural language across many programming languages to support code generation, translation (cross‑language), completion, summarization, and explanation. The project provides model checkpoints (for research use), inference scripts, and IDE integrations (for example, a VS Code extension).
@@ -41,9 +32,7 @@ CodeGeeX is a large-scale multilingual code generation model and toolkit develop
 - See also: CodeGeeX2 (follow-up) and related THUDM releases which may have differing licenses or access requirements.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2024-07-24
 
 ## Licensing
 

@@ -18,9 +18,7 @@ v1.65 (2025-10-19)
 - [3] AI-native features matured rapidly in 2025 but still evolving for some production scenarios
 
 ### Short Description
-<!-- ToDo -->
-
--
+- A modular, extensible open-source IDE framework for desktop and cloud, built with TypeScript and the Monaco editor; uses LSP for language support and provides compatibility with VS Code extensions via Open VSX.
 
 ### Description
 Eclipse Theia is an open-source, modular IDE framework maintained under the Eclipse Foundation. It targets both desktop and cloud IDE scenarios and is designed to be embedded and extended to build tailored developer tools. Theia uses the Monaco editor and the Language Server Protocol (LSP) for language support, is implemented primarily in TypeScript/Node, and aims to provide a vendor-neutral alternative to commercial IDEs while offering compatibility with much of the VS Code extension ecosystem.
@@ -61,28 +59,16 @@ Eclipse Theia is an open-source, modular IDE framework maintained under the Ecli
 - Yes
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Theia AI includes a prompt management system with editable prompt templates, prompt fragments, workspace-specific prompts and prompt variants. The chat UI and extension APIs allow viewing and editing prompts; 1.65 added persistent prompt history and 1.66 added slash-command style invocations.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Theia exposes APIs and extension points for integrating external developer tools and LSP-based services. Theia AI bundles utilities for tools like code generators, test agents, image and artifact viewers, and provides extension contributions for registering custom tools and task runners.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Theia maintains documentation, example extensions, and release notes in its GitHub repo and website. Theia AI includes sample prompt fragments, agent examples, and integration guides for common LLM providers and deployment scenarios.
 
 ## Deployment
 

@@ -13,14 +13,10 @@ AIXcoder (often styled aiXcoder or Aix Coder) is an AI-powered code-completion a
 -
 
 ### Rating
-<!-- ToDo -->
-<!-- Avg rating based on review comments -->
-<!-- Provide the rating value for Rating or remove if unknown. -->
 -
 
 ### Short Description
-<!-- ToDo -->
--
+- AI-powered code completion and method-level code generation assistant with local-first (offline) model support and IDE integrations.
 
 ### Description
 AIXcoder is designed as a developer productivity tool that lives inside the IDE and can operate in local/offline mode so that source code does not leave the developer's machine. It offers context-aware code completion (single- and multi-line), method-level code generation from natural-language prompts, intelligent code search across repositories, and features intended to help with refactoring, debugging and finding relevant APIs. A key differentiator is a quantized local model (reported as a ~7B parameter model) that the vendor positions as performant enough to run on commodity hardware (e.g., laptops with ~8–16GB RAM) while delivering low-latency completions.
@@ -35,89 +31,47 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
 - Features: Method-level code generation (generate a complete function from a description), multi-line/context-aware completions, code search across repos, and refactoring/debugging assistance.
 - Resource profile: Because the local model is quantized, vendors indicate it can run on modest hardware (4–8GB for very small setups, better experience with 8–16GB and/or modest GPUs), though exact requirements depend on the chosen deployment mode and model precision.
 - Enterprise options: There are team/enterprise offerings with custom intelligence, private deployment, and analytics for developer efficiency; details and pricing vary by vendor engagement.
-- Unclear / not publicly confirmed: specific license details for the model and tooling, BYOK (bring-your-own-key) support for cloud features, explicit terminal/CLI tooling support, and whether the project or models are fully open-source. If these are critical, verify with the vendor or product documentation before selecting the tool.
+- Unclear / not publicly confirmed: specific license details for the whole product, BYOK (bring-your-own-key) support for cloud features, explicit terminal/CLI tooling support across all distributions, and whether every component is fully open-source. If these are critical, verify with the vendor or product documentation before selecting the tool.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-10-19
 
 ## Licensing
 
 ### Opensource
-<!-- ToDo -->
-<!-- Coding tool is released under opensource license -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - aiXcoder's commercial product is proprietary; however, the aiXcoder-7B model code and weights are published on GitHub under an open-source license (see notes).
 
 ### License
-<!-- ToDo -->
-<!-- Opensource specific license or Proprietary for other commercial licenses -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- MIT
-- Apache-2.0
 - Proprietary
-- FSL
-- GPL-3.0
-- AGPL-3.0
-- BSD-3-Clause
-- ISC
-- MPL-2.0
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - aiXcoder product/distribution is commercially licensed.
+  - Note: The aiXcoder-7B model repository is available under Apache-2.0 (model code and weights) on GitHub.
 
 ### FreeTrial
-<!-- ToDo -->
-<!-- Free access (like opensource), or free (potentially limited) trial available -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Some distribution channels and IDE marketplace entries list free access or free tiers for the plugin; enterprise features are commercial. Confirm current trial/pricing on the vendor site or marketplace.
 
 ## MCP-Client
 
 ### MCP-Client
-<!-- ToDo -->
-<!-- Coding tool has built-in MCP client so can connect to MCP servers -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports natural-language prompts for method-level generation and NL-to-code workflows.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - IDE plugins for VS Code, JetBrains, and Eclipse; local inference tooling and quantization examples available in model repositories.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Official documentation, IDE marketplace entries, and a public GitHub repository for aiXcoder-7B (model and usage examples).
 
 ## Deployment
 
 ### BYOK
-<!-- ToDo -->
-<!-- Bring Your Own LLM API Key supported -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### LocalOffline
 - Yes
@@ -134,12 +88,7 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
   - The IDE integrations surface repository and file-level examples; agent can reference files from the open repo search features and local workspace context when running locally.
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### GitSupport
 - Yes
@@ -163,12 +112,7 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
   - Within supported IDEs, aiXcoder exposes quick actions and command palette entries (e.g., trigger generation, search) that act like reusable commands; exact support depends on the IDE plugin.
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### Subagents
 - Yes
@@ -177,23 +121,10 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
 ## Ungrouped Criteria
 
 ### Terminal
-<!-- ToDo -->
-<!-- Coding tool can operate in a terminal/cli environment -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Model repositories and examples include command-line and Python script usage for local inference; some distributions expose CLI tools for local model runs.
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+
+---

@@ -17,7 +17,7 @@ v (2025-10-19)
 - [3] May be less suitable for engineering-first teams that require deep technical customization
 
 ### Short Description
-<!-- ToDo -->
+AI-powered SaaS for product definition that generates structured PRDs, prioritized MVPs, user journeys, wireframes, suggested tech stacks, API/data models, and exportable tickets or AI prompts for developer tools.
 
 -
 
@@ -37,9 +37,7 @@ The platform emphasizes a structured process (uses MoSCoW prioritization) and ta
 - Competitors / context: positioned near other AI-assisted product tools (e.g., ChatPRD) but focuses on structured customization and exportable developer artifacts rather than fully automatic summaries.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-11-15
 
 ## Licensing
 
@@ -59,38 +57,21 @@ The platform emphasizes a structured process (uses MoSCoW prioritization) and ta
 - No
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - From021 generates and exports AI-optimized prompts for code assistants and AI tooling (examples: v0, Lovable, Cursor).
+  - Prompts are exportable as part of the project handoff to improve results from downstream AI code assistants.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Provides export connectors to project management and AI code-assistant tools (Trello, JIRA, v0, Lovable, Cursor) rather than offering an in-app developer runtime or code execution environment.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Includes PRD templates, wireframe and user-journey artifacts, suggested tech stacks, API and data model sketches, and exportable tickets/user stories for development workflows.
 
 ## Deployment
 
 ### BYOK
-<!-- ToDo -->
-<!-- Bring Your Own LLM API Key supported -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 
 ### LocalOffline
 - No

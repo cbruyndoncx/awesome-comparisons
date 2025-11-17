@@ -10,19 +10,16 @@ Code Llama is Meta's open-source family of large language models optimized for c
 v1 (2023-08)
 
 ### Repo
-<!-- ToDo -->
-<!-- Associated Github repository -->
--
+- https://github.com/meta-llama/codellama
 
 ### Rating
 - [4] Strong open-source code generation model family with multiple sizes
 - [3] Community ecosystem and tooling matured but still behind some proprietary offerings
 
 ### Short Description
-<!-- ToDo -->
+Code Llama is Meta's open-source family of LLMs optimized for code generation, completion, and debugging. It provides multiple model sizes (7B, 13B, 34B, 70B) and specialized variants (Instruct, Python) for different coding tasks and deployment constraints.
 
 -
-
 ### Description
 Code Llama is Meta's open-source family of large language models optimized for code generation, completion, and reasoning about code. It ships in multiple sizes (7B, 13B, 34B and larger variants) and in specialized flavors such as Code Llama-Instruct (instruction-tuned) and Code Llama-Python (further fine-tuned on Python). The models use a decoder-only transformer architecture with optimizations tuned for code tasks and support fill-in-the-middle style completions and larger context windows than many older public models.
 
@@ -38,9 +35,9 @@ Code Llama is Meta's open-source family of large language models optimized for c
 - Limitations: still requires careful prompt engineering for complex multi-file project reasoning; ecosystem tooling (IDE/product integrations) is smaller than some commercial competitors but growing quickly.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- Initial release: August 24, 2023
+- 70B release: January 29, 2024
+
 
 ## Licensing
 

@@ -17,7 +17,7 @@ v0.x (2025-10-19)
 - [4] Good IDE integration and model flexibility, still maturing UX compared to large commercial offerings
 
 ### Short Description
-<!-- ToDo -->
+A self-hosted, repository-aware AI coding assistant providing low-latency code completion, inline chat, and knowledge-base (Answer Engine) features for secure, on-prem developer workflows.
 
 -
 
@@ -40,9 +40,7 @@ Tabby is a self-hosted, open-source AI coding assistant that provides code compl
 - Best experience with access to GPU-backed inference or fast local model runners; smaller models usable for lightweight setups.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-10-19
 
 ## Licensing
 
@@ -62,28 +60,19 @@ Tabby is a self-hosted, open-source AI coding assistant that provides code compl
 - Yes
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports system and assistant prompts, chat message templates, and configurable prompt behavior via server configuration and the Answer Engine (Pages).
+  - Saved prompts / templates and server-side prompt tuning available through configs and documentation pages.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Provides developer-facing tools such as repository indexing, Answer Engine (knowledge pages), code actions via IDE extensions, and integrations (GitHub/GitLab indexing, MR context).
+  - Tooling surface is extended by editor plugins and server integrations.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Can index repository files, documentation, and external sources (e.g., GitLab Merge Requests) for context.
+  - Supports connectors and pages (Answer Engine) to expose curated knowledge and documentation to the assistant.
 
 ## Deployment
 
@@ -97,28 +86,17 @@ Tabby is a self-hosted, open-source AI coding assistant that provides code compl
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Uses Tree-sitter based parsing and repository indexing to surface relevant context for completions and chat.
+  - Adaptive caching and context windowing to reduce latency and improve relevance.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Repository-aware chat and editor integrations allow referencing files, filenames and providing file-context in prompts; editor plugins can open or point to specific files.
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Relies on external version control (git) and server logs rather than built-in transactional checkpoints or automatic undo snapshots.
 
 ### GitSupport
 - Yes
@@ -129,44 +107,24 @@ Tabby is a self-hosted, open-source AI coding assistant that provides code compl
 - Yes
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Extensible via editor plugins (official and community) and server integrations; community contributions add connectors and feature integrations.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Server and integration configuration allow lifecycle behaviors and custom integrations (e.g., indexing pipelines, webhooks for external systems).
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Editor integrations and chat interfaces expose command-like interactions (mentions/slash-style commands) in supported clients.
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Server-side presets, Answer Engine pages, and configurable chat/system prompts enable tailored modes for different workflows (e.g., review, refactor, docs lookup).
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Does not provide an out-of-the-box subagent orchestration system for multi-agent workflows; workflows are typically achieved via integrations and custom tooling.
 
 ## Ungrouped Criteria
 
@@ -175,15 +133,9 @@ Tabby is a self-hosted, open-source AI coding assistant that provides code compl
   - Server and agent provide CLI tools; Docker image and direct binary available for server usage.
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
+
 <!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
+
+- 
+
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->

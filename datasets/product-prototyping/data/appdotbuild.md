@@ -17,7 +17,7 @@ v1.31.3 (2025-07-??)
 - [4] Strong engineering UX; some limitations around custom model choices and enterprise integrations
 
 ### Short Description
-<!-- ToDo -->
+Open-source AI agent that converts a single natural-language prompt (CLI or web) into a complete, deployable full-stack application, including frontend, backend, database provisioning, authentication, tests, GitHub repository creation, and automated deployment.
 
 -
 
@@ -42,8 +42,8 @@ The default generated stacks commonly include React on the frontend and Fastify 
 - Sources: coverage gathered from platform README and third-party posts about app.build (Neon/Koyeb posts, GitHub repo).
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
+2025-07
+- Release series: v1.31.x published in July 2025 (referenced in project release notes / changelog)
 -
 
 ## Licensing
@@ -55,46 +55,31 @@ The default generated stacks commonly include React on the frontend and Fastify 
 - Apache-2.0
 
 ### FreeTrial
-<!-- ToDo -->
-<!-- Free access (like opensource), or free (potentially limited) trial available -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The project is open-source and can be self-hosted without cost via the GitHub repository.
+  - A hosted app.build service may offer paid tiers or usage limits for hosted generation; confirm on the project's website for current hosted pricing/limits.
 
 ## MCP-Client
 
 ### MCP-Client
-<!-- ToDo -->
-<!-- Coding tool has built-in MCP client so can connect to MCP servers -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - app.build's primary UX is a single natural-language prompt (CLI or web) that describes the desired application; the system also uses internal staged prompt templates and guided prompts during generation to produce models, ORM, handlers, and tests.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrations commonly observed or documented: Anthropic/Google LLM providers (configurable), Neon (serverless Postgres + Neon Auth), Koyeb (deployments), GitHub (repo creation & CI), GitHub Actions (CI/CD), Vite, Fastify, Drizzle ORM.
+  - The platform orchestrates external infrastructure tooling (DB provisioning, deployments) as part of its pipeline rather than exposing a general-purpose tool marketplace.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Primary repository: https://github.com/appdotbuild/platform
+  - Documentation and README in the repo provide usage examples, stack choices, and CLI/web instructions.
+  - Example/template apps and CI/deploy pipeline code are included in the project repo for reference and self-hosting.
+  - Community/support via GitHub issues; project may link to additional channels (Discord/Slack) from the repo landing page.
 
 ## Deployment
 

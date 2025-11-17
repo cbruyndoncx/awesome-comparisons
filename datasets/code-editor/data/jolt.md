@@ -17,7 +17,7 @@ AI assistant for making multi-file, large-codebase changes and code understandin
 - [4] Strong for large, production codebases with multi-file edits and deep context
 
 ### Short Description
-<!-- ToDo -->
+- Commercial AI coding assistant focused on global "HyperContext" for large, multi-repo codebases, enabling coherent multi-file edits, implementation plans, refactors, and code comprehension across enterprise projects.
 
 -
 
@@ -55,8 +55,7 @@ Jolt is a commercial AI coding assistant designed for large production codebases
   - Docs / support: https://docs.usejolt.ai
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
+- 2025-10-19
 -
 
 ## Licensing
@@ -74,46 +73,29 @@ Jolt is a commercial AI coding assistant designed for large production codebases
 ## MCP-Client
 
 ### MCP-Client
-<!-- ToDo -->
-<!-- Coding tool has built-in MCP client so can connect to MCP servers -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports editable implementation plans and prompt tuning for multi-file changes and refactors.
+  - Exposes prompt-driven workflows in the web app and IDE integrations for iterative plan edits.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Produces git-style patches and can apply multi-file edits via IDE extensions (VS Code, JetBrains, Neovim).
+  - Integrates with repo workflows to export patches for review and apply changes through IDE plugins.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Public documentation and support resources via the web app and docs.usejolt.ai.
+  - Web and desktop clients plus IDE extensions provide in-product guidance and help resources.
 
 ## Deployment
 
 ### BYOK
-<!-- ToDo -->
-<!-- Bring Your Own LLM API Key supported -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No public documentation found indicating Bring-Your-Own-Key support for LLM encryption keys.
 
 ### LocalOffline
 
@@ -143,7 +125,7 @@ Jolt is a commercial AI coding assistant designed for large production codebases
 
 ### GitSupport
 - Yes
-  - Can produce git patches and integrate with repositories; IDE extensions apply changes directly]
+  - Can produce git patches and integrate with repositories; IDE extensions apply changes directly
 
 ## Extensible
 
@@ -169,12 +151,15 @@ Jolt is a commercial AI coding assistant designed for large production codebases
 ## Ungrouped Criteria
 
 ### Terminal
-<!-- ToDo -->
-<!-- Coding tool can operate in a terminal/cli environment -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Neovim plugin provides terminal-based integration; no standalone CLI is prominently advertised in public docs.
+
+### SpecDrivenDevelopment
+
+
+- 
+
+## Project Hints
 
 ### SpecDrivenDevelopment
 <!-- ToDo -->

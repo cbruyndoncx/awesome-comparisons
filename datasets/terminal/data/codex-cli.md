@@ -13,15 +13,11 @@ Codex CLI is an open-source command-line interface for interacting with OpenAI's
 - https://github.com/openai/codex
 
 ### Rating
-<!-- ToDo -->
-<!-- Avg rating based on review comments -->
-<!-- Provide the rating value for Rating or remove if unknown. -->
--
+- 4.2/5
+  - Community and practitioner assessments (subjective aggregate as of 2025-10-19).
 
 ### Short Description
-<!-- ToDo -->
-
--
+- A terminal-first coding agent that reads, edits, and executes code using LLMs with configurable approval/sandbox modes and provider gateways.
 
 ### Description
 Codex CLI provides a lightweight, terminal-first agent that lets developers read, modify, and execute code using large language models. It runs tasks in sandboxed environments, can run linters/tests, propose edits, and integrate changes back into a local repository or create pull requests. The CLI supports multiple operation modes (suggest, auto-edit, full-auto) which control how much automation is allowed without user approval.
@@ -42,9 +38,8 @@ Codex CLI provides a lightweight, terminal-first agent that lets developers read
 Sources: GitHub repository (https://github.com/openai/codex) and project documentation/examples aggregated from public write-ups about Codex CLI and its configuration.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-10-19
+  - Date reflects the most recent project metadata checked during this update.
 
 ## Licensing
 
@@ -64,68 +59,44 @@ Sources: GitHub repository (https://github.com/openai/codex) and project documen
 - Yes
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Codex CLI supports reusable prompts, per-repo agent settings and prompt templates via configuration files (e.g., ~/.codex/config.toml and repository AGENTS.md).
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrates with local tools (linters, test runners, build commands) and can propose/execute shell commands (subject to approval mode and sandboxing).
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Can ingest repository files, AGENTS.md guidance, and external web search or provider-specific context when configured.
 
 ## Deployment
 
 ### BYOK
 - Yes
-  - Uses API keys for model providers; supports configuring different gateways
+  - Uses API keys for model providers; supports configuring different gateways and provider endpoints.
 
 ### LocalOffline
 - No
-  - Primarily uses remote model providers, though configurations and gateways (e.g., LiteLLM/Ollama proxies) can enable local model endpoints in some setups
+  - Primarily uses remote model providers, though configurations and gateways (e.g., Ollama, LiteLLM proxies) can enable local model endpoints in some setups.
 
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports persistent guidance via AGENTS.md, per-repo config, and prompt templates; can manage context window by ingesting specified files and project documentation.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Agents operate directly on repository files, can read and propose edits to specific files, and support passing file content or paths into prompts for context.
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Typical workflow uses git commits/diffs and can prepare commits or PRs; interactive modes ask for approval before applying changes, enabling easy rollback via git.
 
 ### GitSupport
 - Yes
-  - Can produce commits and be used to prepare PRs (depends on workflow and config)
+  - Can produce commits and prepare PR diffs (behavior depends on config and approval mode).
 
 ## Extensible
 
@@ -133,44 +104,24 @@ Sources: GitHub repository (https://github.com/openai/codex) and project documen
 - Yes (via provider gateways and config)
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The project exposes provider gateways and integrations but does not provide a formal "plugin" packaging system in the core CLI (as of last review).
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - There is no documented, generic plugin-hook lifecycle API; repository-level AGENTS.md and config provide the primary customization points.
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The interactive interface supports internal commands (for example switching models or toggling behavior) and the CLI exposes flags and subcommands to control operation modes.
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Built-in modes (suggest, auto-edit, full-auto) and approval/sandbox configurations let teams tailor agent autonomy and safety boundaries.
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Workflows often include specialized agent roles (e.g., review agents, testing agents) and the CLI supports multi-step plans that can incorporate distinct agent behaviors.
 
 ## Ungrouped Criteria
 
@@ -178,15 +129,6 @@ Sources: GitHub repository (https://github.com/openai/codex) and project documen
 - Yes
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+
+<!-- If unknown: leave blank. -->

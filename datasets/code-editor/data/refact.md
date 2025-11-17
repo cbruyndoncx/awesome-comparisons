@@ -18,7 +18,7 @@ An open-source autonomous AI coding assistant with RAG-powered completions and i
 - [4] Good documentation and deployment guides
 
 ### Short Description
-<!-- ToDo -->
+Refact.ai is an open-source autonomous AI coding assistant and engineering agent that provides repository-grounded code completion, refactoring, in-IDE chat, test generation, and autonomous repository operations using retrieval-augmented generation (RAG).
 
 -
 
@@ -37,9 +37,9 @@ Refact.ai is an open-source AI coding assistant and autonomous engineering agent
 - Security & privacy: Self-hosted option allows code to remain inside your network; BYOK gives control over which LLMs and keys are used.
 
 ### Last Update
-<!-- ToDo -->
+- 2025-06-17 (latest public release: server/v1.11.2)
+
 <!-- Note Date last updated -->
--
 
 ## Licensing
 
@@ -55,31 +55,33 @@ Refact.ai is an open-source AI coding assistant and autonomous engineering agent
 ## MCP-Client
 
 ### MCP-Client
--
+Refact.ai includes support for the Model Context Protocol (MCP) ecosystem. The platform can act as an MCP client/consumer to request structured context from MCP servers and to integrate external tools and data sources into agent workflows. MCP integration enables richer, streamable, and structured context delivery (e.g., database rows, code search results, tool outputs) to the agent, improving grounding and long-context operations.
+
+- Implementation notes:
+  - Refact's architecture exposes connectors and integrations that can be used to surface external information to the agent; MCP support is used to standardize these exchanges.
+  - MCP usage in Refact allows dynamic discovery of tools and data sources and can be configured in self-hosted deployments.
 
 ### Prompts
-<!-- ToDo -->
 <!-- Default description for Prompts -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Refact.ai supports custom system prompts, prompt templates, and saved prompt libraries inside workspace settings and the IDE plugins (VS Code/JetBrains/Neovim).
+  - In-IDE commands and @-style directives (e.g., @file, @web, @definition, @references, @tree) allow users to attach or restrict context for a given prompt and create reproducible agent behaviors.
+  - Users can store and reuse prompt templates for common workflows (refactors, tests, PR generation).
 
 ### Tools
-<!-- ToDo -->
 <!-- Default description for Tools -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Refact.ai agents can be granted access to tools such as Git, shell/Docker, CI, and external connectors (GitHub/GitLab, databases) when deployed with appropriate permissions.
+  - Plugins and connectors expose actions (run tests, create branches, commit changes, open PRs) which the agent can invoke as part of autonomous workflows.
 
 ### Resources
-<!-- ToDo -->
 <!-- Default description for Resources -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Refact.ai uses RAG with a repo index and symbol-aware retrieval to ground responses in repository files; it also supports external knowledge connectors and searchable indexes.
+  - Documentation, example configs, and deployment guides are provided in the project's GitHub repository and self-hosting docs.
 
 ## Deployment
 

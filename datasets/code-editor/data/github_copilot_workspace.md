@@ -18,7 +18,7 @@ Archived v0.1 (2025-05-30)
 - [2] Limited availability — technical preview ended / not generally available
 
 ### Short Description
-<!-- ToDo -->
+A cloud-hosted experimental agentic IDE from GitHub that used spec-driven, multi-agent workflows (Task → Spec → Plan → Code) integrated with Codespaces and VS Code to generate and apply repository-wide edits from natural-language task descriptions.
 
 -
 
@@ -36,9 +36,7 @@ GitHub Copilot Workspace was an experimental "agentic" IDE hosted by GitHub that
 - Useful when comparing AI coding environments for enterprise adoption: strong UX for large-scope edits and planning, but lack of on-prem/local model options and the preview's discontinuation reduce viability for locked-down environments.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-11-15
 
 ## Licensing
 
@@ -57,28 +55,17 @@ GitHub Copilot Workspace was an experimental "agentic" IDE hosted by GitHub that
 - No
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Natural language task descriptions (GitHub Issues, feature requests, or freeform goals) were the primary input method for initiating workspaces and steering generation.
+  - Two-stage steering (editable Specification + editable Plan) let users refine intent and control generation outcomes.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrated terminal for builds/tests, Codespaces compute backend, VS Code extension for session continuity, Git/PR creation and diff application, and workspace-provided code diffs for review and editing.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Official GitHub feature pages, blog announcements, and preview documentation were available during the technical preview; some content was archived after the preview sunset.
 
 ## Deployment
 

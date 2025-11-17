@@ -17,7 +17,7 @@ v (2024)
 - [4] Active open-source presence but ecosystem maturity varies by microapp
 
 ### Short Description
-<!-- ToDo -->
+- Hybrid AI-powered no-code/low-code/pro-code platform featuring a Micro‑App architecture and a marketplace for composing full‑stack web and mobile applications.
 
 -
 
@@ -39,9 +39,8 @@ MarsX is an open-source development platform and marketplace that combines AI as
   - https://github.com/MarsX-dev/devhunt
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2024-10-01
+  - Verified project and website activity during 2024 (GitHub devhunt repo and official site updated in 2024)
 
 ## Licensing
 
@@ -59,46 +58,27 @@ MarsX is an open-source development platform and marketplace that combines AI as
 ## MCP-Client
 
 ### MCP-Client
-<!-- ToDo -->
-<!-- Coding tool has built-in MCP client so can connect to MCP servers -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No public documentation found for a generic "MCP client" implementation. MarsX manages AI through its platform orchestrator and per‑micro‑app model workflows rather than exposing a documented standalone MCP client.
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - MarsX exposes conversational and prompt-driven interfaces in the cloud IDE for UI generation, micro‑app scaffolding and developer assistance. The platform supports natural‑language inputs to drive UI/code generation and micro‑app interactions.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The platform includes a cloud IDE with visual builders, code editor, Git integration, and deployment tooling. Micro‑Apps provide packaged tooling for UI, backend, and schema, and the marketplace/community provides additional developer utilities.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Official website: https://marsx.dev/
+  - GitHub: https://github.com/MarsX-dev/devhunt
+  - Documentation and examples available on the site and repo; community contributions and marketplace micro‑apps provide additional resources.
 
 ## Deployment
 
 ### BYOK
-<!-- ToDo -->
-<!-- Bring Your Own LLM API Key supported -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### LocalOffline
 - No

@@ -19,8 +19,7 @@ vN/A (2025-10-19)
 - [4] Extensibility (MCP/plugins and third-party integrations)
 
 ### Short Description
-<!-- ToDo -->
--
+- AWS's developer-focused generative-AI assistant embedded in IDEs and the AWS Console, providing workspace-aware chat, inline code actions, documentation generation, security scanning, and MCP-based integrations.
 
 ### Description
 Amazon Q Developer is an AWS-hosted generative-AI assistant for developers that embeds into IDEs (VS Code, JetBrains family, Eclipse, Visual Studio) and the AWS Console. It provides:
@@ -48,9 +47,7 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
 - Related: Amazon CodeWhisperer functionality was consolidated into Amazon Q Developer around April 2024; for legacy references check CodeWhisperer docs (https://aws.amazon.com/codewhisperer/).
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-10-19
 
 ## Licensing
 
@@ -71,29 +68,27 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
   - Notes: Supports Model Context Protocol / MCP server connections to bring external context into conversations and agent workflows.
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
+  - Centralized prompt management available: local (workspace), global (user), and MCP-provided prompts.
+  - CLI and UI commands: `/prompts list`, `/prompts create`, `/prompts edit`, `/prompts details` and content preview before execution.
+  - Invocation: prompts can be invoked in chat with the `@` prefix (e.g., `@code-review`).
+  - Storage locations: local prompts saved under `.amazonq/prompts/`, user/global prompts under `~/.aws/amazonq/prompts/`, MCP prompts surfaced from configured MCP servers.
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Editor integrations: inline actions (Explain, Refactor, Fix, Optimize, Generate Tests, Send to Prompt, Inline Chat) available in VS Code, JetBrains IDEs, Eclipse, and Visual Studio (feature parity varies).
+  - CLI & agent commands: `/prompts` management, `/doc`, `/dev`, `/transform`, `/review`, `/test` and other slash/agent commands for multi-step workflows and automation.
+  - Security & QA tooling: built-in security scanning, license/reference tracking, automated code review and unit-test generation workflows.
+  - MCP & plugin integrations: supports MCP server connectors and AWS Console plugin aliases (e.g., CloudZero, Datadog, Wiz) to surface external data and actions inside chats.
+  - Model & infra integrations: integrates with Amazon Bedrock/Titan models and AWS services (CodeCatalyst, SageMaker, CloudShell) to enable workspace-aware assistance and ML/infra tasks.
+  - Automation/agents: agentic workflows that can orchestrate changes across multiple files, generate documentation, run transformations, and apply code fixes.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-
+  - Official docs & guides: AWS product documentation and Getting Started guides covering IDE installation, Builder ID/IAM authentication, and feature walkthroughs.
+  - Tutorials & blog posts: step-by-step tutorials (e.g., generating documentation, test generation) and example walkthroughs demonstrating real-world usage patterns.
+  - Community prompt libraries: Promptz and community repos (e.g., awesome-q-developer) for shared prompts, agents, and rules.
+  - Videos & quick-starts: short videos and demos showing setup and common workflows for IDEs like VS Code and JetBrains.
+  - Examples & samples: sample projects showing /doc usage, code refactoring, test generation, and transformation workflows.
 ## Deployment
 
 ### BYOK
@@ -178,15 +173,5 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
   - Primary surface: IDE plugins and AWS Console chat. There is no official terminal-only interactive CLI assistant equivalent documented as the main surface.
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- No
+  - No documented, built-in support or official integrations for specific Spec Driven Development frameworks (BMAD, SpecKit, OpenSpec, Tessl, AgentOS, ClaudeFlow, SPARC, SuperClaude). Amazon Q provides workspace analysis, prompts, and MCP integrations that can be incorporated into spec-driven workflows, but there is no evidence of first-class adapters or direct support for these named frameworks.

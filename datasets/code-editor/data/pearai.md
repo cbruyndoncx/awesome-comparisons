@@ -17,7 +17,7 @@ v1.x (active; releases during 2024-2025)
 - [3] Early-stage rough edges; initial licensing controversy
 
 ### Short Description
-<!-- ToDo -->
+- Open-source, AI-first, VSCode-like code editor and framework that integrates multiple AI models and tools (BYOK) with model routing (PearAI Router), contextual @-commands, inline edits with diffs, and agentic automation (RooCode/Cline).
 
 -
 
@@ -38,9 +38,7 @@ PearAI provides a unified AI-first IDE experience by combining the familiarity o
 - Audience: developers who want an open-source, AI-first IDE experience with strong project context awareness and extensibility
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-11-15 — researched and updated: clarified Short Description, Prompts, Tools, Resources, Router, BYOK, licensing and history.
 
 ## Licensing
 
@@ -60,28 +58,20 @@ PearAI provides a unified AI-first IDE experience by combining the familiarity o
 - No
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Built-in slash/command prompts and templates; configurable via config.json/config.ts
+  - Supports selection-to-chat prompts (CMD/CTRL+L), inline edit prompts (CMD/CTRL+I), and reusable prompt shortcuts
+  - Teams can create custom prompts and natural-language command mappings
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrated tools: terminal, git, diff/inline-edit preview, file/folder attachments, @commands, model provider integrations (BYOK), PearAI Router, agent integrations (RooCode/Cline), third-party connectors (Continue, Perplexity, Mem0)
+  - Extensible via plugin/extension system
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Documentation, configuration examples (config.json/config.ts), demo videos and blog posts
+  - Open-source repositories and community discussions (GitHub issues/PRs); roadmap and changelog available
 
 ## Deployment
 

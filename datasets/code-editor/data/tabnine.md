@@ -7,7 +7,7 @@ AI-powered code completion and developer assistant focused on privacy and enterp
 - Code/Editor
 
 ### Version
-v(enterprise/cloud) (2025-10-19)
+v(enterprise/cloud) (2025-10-29)
 
 ### Repo
 -
@@ -17,7 +17,7 @@ v(enterprise/cloud) (2025-10-19)
 - [3] Good code-completion quality; real-world accuracy varies by codebase
 
 ### Short Description
-<!-- ToDo -->
+Tabnine is an AI-driven code completion and in-IDE assistant that prioritizes enterprise-grade privacy, flexible deployment (cloud, private VPC, on-prem, air-gapped), and broad IDE support. It provides context-aware inline completions, an in-IDE chat assistant with apply/patch capabilities, and organization-aware suggestions that learn from your repositories while offering administrative controls for governance and compliance.
 
 -
 
@@ -43,8 +43,8 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
 - Ideal for: regulated industries (finance, healthcare, government, defense) and organizations that need data residency guarantees and enterprise governance.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
+2025-11-15
+- Notable recent releases and highlights: v5.24.4 (2025-10-29) improvements to VS Code binary updates, chat Apply function and Agent robustness; v5.24.0 (2025-10-16) added hybrid search, markdown-from-remote codebase context, switchable/self-hosted model support (Qwen, Gemma), and Podman support. Multiple 2025 releases added SCIM/IdP sync, remote context scope (remote files/folders, terminal), and CSV usage reports.
 -
 
 ## Licensing
@@ -62,46 +62,27 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
 ## MCP-Client
 
 ### MCP-Client
-<!-- ToDo -->
-<!-- Coding tool has built-in MCP client so can connect to MCP servers -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Tabnine/Tabnine Agent supports Model Context Protocol (MCP) servers configured via an mcp_servers.json file. The Agent can launch local STDIO MCP servers, connect to remote MCP endpoints (HTTP/SSE), and manage server lifecycle for integrations that expose external tooling and data to the assistant.
+  - Examples: local STDIO servers (command + args), remote HTTP endpoints with JWT/API key headers, and transport detection based on configuration.
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Tabnine offers an in-IDE chat interface that accepts freeform prompts and supports shared custom commands, concise chat modes, and @mentions. Users can paste or open file contents into the chat to provide explicit context; the chat can also accept custom commands and templates in enterprise deployments.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Tabnine exposes actionable tooling via its chat and Agent features: Apply (patch/apply edits), shared custom commands, Agent-driven automations, and integration with MCP servers to surface external tools (e.g., CI/CD, databases, cloud APIs) into the assistant workflow.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Tabnine consumes indexed workspace files, open-file contents, remote-repo contexts (when configured), and terminal context (optional). Enterprise/local deployments can restrict which files are indexed and whether content is sent to cloud models; MCP servers can expose additional structured resources.
 
 ## Deployment
 
 ### BYOK
-<!-- ToDo -->
-<!-- Bring Your Own LLM API Key supported -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Tabnine supports OpenAI API-compatible endpoints and private certificate authorities for enterprise integrations, and allows organizations to configure custom model endpoints or self-hosted model deployments (Gemma, Qwen, etc.). These capabilities let enterprises use their own model endpoints and credentials in managed/private deployments.
 
 ### LocalOffline
 - Yes
@@ -129,12 +110,11 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
 - No
 
 ### GitSupport
-<!-- ToDo -->
-<!-- Coding tool is aware of GIT and can work/integrate with GIT repos -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Tabnine is repository-aware and supports multi-repo indexing and context. Notable integrations and capabilities:
+    - Multi-repo awareness: Tabnine can index and reason across multiple repositories to provide cross-repo completions.
+    - Perforce support: Local indexing support for Perforce (p4config/p4ignore) was added in 2025.
+    - Indexing controls: Admins and users can configure which repositories and folders are indexed to meet privacy and performance requirements.
 
 ## Extensible
 
@@ -152,11 +132,7 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
 
 ### CustomModes
 - Yes
-  - While Tabnine does not provide a user-facing "create-your-own-agent" framework, it exposes configurable modes and behavior controls that let teams tailor the assistant experience:
-    - Completion behaviour settings: Options for whole-line vs single-token suggestions, multiline completions, and acceptance behavior.
-    - Model & deployment choices: Switch between local, private cloud, or vendor-hosted models; enterprise customers can enable organizational/model training or restrict to local models.
-    - Policy & privacy settings: Admin-enforced policies (data-sharing, telemetry, model training opt-outs) alter how the assistant behaves across projects.
-    - Workspace configuration: Per-project settings (exclude paths, language-level tuning) effectively produce different operational "modes" per repo.
+  - While Tabnine does not provide a full agent-creation framework, it exposes many configurable modes and admin controls including completion behaviour settings (whole-line vs token, multiline), model & deployment choices, policy & privacy settings, and per-workspace configuration that produce different operational modes per repo.
 
 ### Subagents
 - No

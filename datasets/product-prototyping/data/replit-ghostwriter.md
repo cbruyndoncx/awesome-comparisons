@@ -17,9 +17,7 @@ vN/A (2025-10-19)
 - [3] Limited for privacy-sensitive or offline-first workflows due to cloud-only architecture
 
 ### Short Description
-<!-- ToDo -->
-
--
+- AI coding assistant built into Replit's cloud IDE providing inline completions, natural-language code generation, explanations and refactoring tools for rapid prototyping and learning.
 
 ### Description
 Replit Ghostwriter is a proprietary, cloud-based AI coding assistant built into the Replit online IDE. It offers inline code completions and suggestions, natural-language code generation, explainers that walk through code, and transformation/refactor capabilities. Ghostwriter is tightly integrated with Replit features (editor, shell, deployments, collaboration) so developers can iterate, share, and deploy from the browser with minimal setup.
@@ -48,9 +46,7 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 - Recommendation: for teams with strict compliance needs, engage Replit Enterprise sales to confirm options (SSO, data handling, contractual terms). For individual users, Core provides a convenient integrated experience with monthly usage credits.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-11-15
 
 ## Licensing
 
@@ -61,12 +57,8 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 - Proprietary
 
 ### FreeTrial
-<!-- ToDo -->
-<!-- Free access (like opensource), or free (potentially limited) trial available -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Replit offers a free Starter plan with limited access to Replit AI and a trial of Replit Agent. Ghostwriter's full features require a paid Replit Core subscription or purchase of AI credits/cycles.
 
 ## MCP-Client
 
@@ -74,28 +66,19 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 - No
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Ghostwriter supports natural-language prompts through its chat interface and inline commands. Users craft prompts to generate code, refactor, and explain snippets. Replit recommends concise, context-rich prompts and breaking complex tasks into smaller steps for best results.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Ghostwriter provides inline editor tools: Complete Code, Explain Code, Transform Code, and Generate Code. It integrates with the Replit workspace, terminal, version history, and deployment tooling. There is no public Ghostwriter SDK; integrations rely on Replit platform APIs and Agent features.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Official documentation: <https://docs.replit.com/> and <https://replit.com/learn/> with tutorials and guides covering Ghostwriter and Replit Agent.
+  - Blog and community resources: Replit Blog (<https://blog.replit.com/>), Replit Community forums, and YouTube tutorials demonstrating Ghostwriter workflows.
+  - API and integration docs: Replit API documentation and platform docs for workspace integrations and deploy/webhook features.
+  - Example projects and tutorials: sample repls and walkthroughs (e.g., Ghostwriter/Agent tutorials) available from the docs and community.
 
 ## Deployment
 
@@ -120,12 +103,8 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
   - Checkpoints/rollback functionality is part of Replit Agent (project history, diffs, and rollback to previous checkpoints). Replit's general workspace history (snapshots, version history) and Agent both provide mechanisms to revert or inspect prior states. Ghostwriter's generated edits can be undone via standard editor undo and Replit's version history.
 
 ### GitSupport
-<!-- ToDo -->
-<!-- Coding tool is aware of GIT and can work/integrate with GIT repos -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Replit provides integrated Git and GitHub support via a visual Git pane and CLI access in the Shell. Developers can clone, commit, push, pull, and manage branches. Replit handles GitHub authentication securely, but warns against sharing tokens in Multiplayer sessions.
 
 ## Extensible
 
@@ -156,12 +135,9 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 ## Ungrouped Criteria
 
 ### Terminal
-<!-- ToDo -->
-<!-- Coding tool can operate in a terminal/cli environment -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Replit includes an integrated Shell/terminal in the web IDE where developers can run CLI tools, Git commands, and build scripts. Ghostwriter itself is not provided as a standalone CLI, but generated code and Agent workflows can be executed via the terminal in a Replit workspace.
+
 
 ### SpecDrivenDevelopment
 - Other

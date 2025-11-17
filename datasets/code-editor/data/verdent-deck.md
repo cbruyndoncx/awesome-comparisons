@@ -20,9 +20,7 @@ Verdent Deck is a desktop agent control center from Verdent AI that enables deve
 - [3] Early-stage product with commercial pricing model
 
 ### Short Description
-<!-- ToDo -->
-
--
+- Desktop control center for Verdent AI that orchestrates plan-first autonomous coding agents, runs parallel subagents with repository-wide indexing, validates changes, and manages commits/rollbacks via Git worktrees from a native desktop interface.
 
 ### Description
 Verdent (Verdent AI) is a recent, outcome-driven developer tooling platform that focuses on agentic workflows rather than line-level code completions. Verdent Deck is the desktop application counterpart to Verdent's VS Code integration — a visual control center for running multiple isolated agent sessions, assigning tasks, reviewing diffs, and committing or rolling back changes. It emphasizes an iterative plan-first approach where developers provide high-level goals, Verdent decomposes them into executable plans, runs specialized subagents (often in parallel), and returns validated results for developer review.

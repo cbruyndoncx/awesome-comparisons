@@ -18,9 +18,7 @@ v0.1 (2025-04-22 preview)
 - [3] Vendor lock-in concerns; not open-source
 
 ### Short Description
-<!-- ToDo -->
-
--
+- Rapid, AI-powered cloud IDE for prototyping and deploying full‑stack web and mobile apps with Gemini-powered conversational prototyping, a Code OSS (VS Code-compatible) workspace, and one-click Firebase backend provisioning.
 
 ### Description
 Firebase Studio is an integrated, agentic development workspace built to speed application development by combining an App Prototyping agent (natural-language and image-driven app creation), a CodeOSS-based IDE (VS Code-compatible experience), and automatic Firebase service provisioning (Authentication, Firestore, Hosting, etc.). It uses Google's Gemini models to power conversational prototyping, contextual code assistance, and in-IDE help. Typical workflows include "describe an app in plain language → prototype generated app → switch to code to refine → one-click deploy to Firebase Hosting." The service is optimized for rapid MVPs, full-stack AI apps, and teams that want managed infrastructure with minimal setup.
@@ -45,9 +43,7 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
 - Limitations: Cloud-only, proprietary, potential vendor lock-in to Firebase/GCP services; enterprises with strict BYOK or on-prem requirements should validate security/compliance.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+- 2025-11-15
 
 ## Licensing
 
@@ -67,20 +63,19 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
 -
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Gemini-powered prompt enhancements and an "Enhance your prompt" feature help refine natural-language prompts.
+  - Best practices: be specific about features, data models, authentication needs, UI expectations; iterate rather than ask for the entire app in a single prompt.
+  - Supports multimodal prompts (text, images, Figma imports) for richer prototypes.
+  - Examples: requests to add Firestore, Authentication, or generate a Next.js scaffold are common and supported.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - App Prototyping agent (natural-language & image-driven generator).
+  - Code OSS (VS Code-compatible) IDE with Gemini extension and in-IDE chat.
+  - Preview/Hosting tools (live preview, QR codes, one-click deploy to Firebase Hosting).
+  - Terminal, Git integration, Firebase CLI and Emulator Suite access.
+  - Figma/Builder.io import, template gallery, Genkit integration, and Terraform deployment options.
 
 ### Resources
 <!-- ToDo -->
@@ -129,20 +124,14 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
   - Firebase Studio exposes integrations and plugin-like extensions in the preview (examples: Builder.io Figma import, Genkit integration, template gallery, and Git provider integrations). These are enabled/configured through the workspace UI (import plugin/integration or select templates) and by provisioning AI resources (Gemini/Genkit) into the workspace; developer-facing documentation for authoring third-party plugins or bundling commands/agents/hooks is not publicly detailed in the preview documentation.
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Other
+  - Firebase Extensions lifecycle events (onInstall, onUpdate, onConfigure) are used for extension-level hooks, but Firebase Studio does not publish a developer-facing agent lifecycle hook API in the preview documentation. Use cases like backfills and configuration-time tasks are handled via Cloud Functions and Cloud Tasks when authoring Firebase Extensions.
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Firebase Studio (Gemini in Firebase) supports slash commands for common tasks such as /fixError, /helpWithError, /addComments, /explain, /transform, and /generate. These commands accelerate common code edits, explanations, and refactors.
+  - Use `/` in the chat to see available commands; many commands are surfaced contextually based on selected code or active files.
+  - The Firebase MCP server provides pre-written prompts surfaced as slash commands (e.g., /firebase:init) in some tool integrations.
 
 ### CustomModes
 <!-- ToDo -->

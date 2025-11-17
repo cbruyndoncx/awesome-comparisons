@@ -17,7 +17,7 @@ v0.1 (2025-10-19)
 - [3] Desktop-first UI and GPL-3.0 licensing may be tradeoffs for some teams
 
 ### Short Description
-<!-- ToDo -->
+An open-source, Java desktop application that provides compiler-grade, workspace-driven AI assistance for large repositories—featuring Deep Scan, Agentic Search, and focused Code/Ask/Architect agent workflows.
 
 -
 
@@ -43,9 +43,7 @@ v0.1 (2025-10-19)
 - Not an IDE plugin: Brokk is a separate application (designed intentionally), though it can work alongside IDEs and version control workflows.]
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-11-15
 
 ## Licensing
 
@@ -56,46 +54,27 @@ v0.1 (2025-10-19)
 - GNU General Public License v3.0 (GPL-3.0)
 
 ### FreeTrial
-<!-- ToDo -->
-<!-- Free access (like opensource), or free (potentially limited) trial available -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Open-source; free to run locally under the GPL-3.0 license (no hosted trial required to use the client).
+  - No public hosted SaaS offering documented in the repo as of 2025-11-15; commercial/hosted options, if any, are not clearly listed in the OSS repository.
 
 ## MCP-Client
 
 ### MCP-Client
-<!-- ToDo -->
-<!-- Coding tool has built-in MCP client so can connect to MCP servers -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
 - No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - No evidence in the public repository or official docs of a built-in "MCP" client integration as of 2025-11-15.
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Brokk exposes action-specific prompts/templates and configurable model/prompt settings for different workflows (Code, Ask, Search, Architect), enabling tailored instructions per action.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Brokk integrates operational tools such as Run-in-Shell, build/test execution, dependency decompilation, Deep Scan automation, and Git-aware patch/diff management exposed as agent actions.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - The Workspace can include decompiled dependency sources, compiled artifacts, summaries, and VCS history; these resources become first-class context for agent workflows.
 
 ## Deployment
 

@@ -18,7 +18,7 @@ v1 (2024-03)
 - [3] Early-stage product: impressive demos but requires human oversight for correctness, security, and architecture decisions.
 
 ### Short Description
-<!-- ToDo -->
+An autonomous agent from Cognition Labs that accepts high-level natural-language engineering tasks and executes end-to-end software workflows inside a sandboxed IDE (terminal, editor, browser), including planning, coding, testing, debugging, and Git integration.
 
 -
 
@@ -37,9 +37,7 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 - Industry context: Part of a broader shift toward autonomous AI agents that take direct action, not just provide suggestions; competes conceptually with other agent-style developer tools but remains distinct from open-source code assistants.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-02 (Devin 2.0 announcement / agent-native IDE updates)
 
 ## Licensing
 
@@ -58,28 +56,19 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 -
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Accepts high-level natural-language task prompts (e.g., "Implement feature X", "Fix failing tests for Y") and uses multi-step planning prompts internally.
+  - Supports iterative, clarifying prompts and mid-execution feedback from users.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrated terminal, code editor, and browser within its sandboxed IDE
+  - Git/GitHub integration (branches, commits, PR creation)
+  - Dependency management and test runners accessible via the terminal
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Public documentation, demos, blog posts and changelogs (Devin 2.0 announcement), plus in-product features like Devin Wiki and built-in search/indexing
 
 ## Deployment
 
@@ -93,28 +82,16 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
-<!-- Methods for managing and updating the context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Performs project-wide codebase analysis, maintains session context across steps, and uses interactive planning to scope work before execution.
 
 ### DirectFileReferences
-<!-- ToDo -->
-<!-- Can with @file or similar provide context. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Operates on exact repository files (opens/edits specific files), not just isolated snippets.
 
 ### Checkpoints
-<!-- ToDo -->
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Integrates with Git (creates branches/commits/PRs) and runs changes in sandboxed environments; users can review and revert via normal Git workflows.
 
 ### GitSupport
 - Yes
@@ -127,44 +104,21 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
   - Integrations (GitHub, VS Code, Slack) and plugin-like connectors for repos and CI/CD
 
 ### Plugins
-<!-- ToDo -->
-<!-- A method of bundling together commands, agents and hooks (claude). -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Supports integrations and connectors for common developer tooling (GitHub, editor integrations, CI hooks)
 
 ### Hooks
-<!-- ToDo -->
-<!-- Lifecycle events for the agent. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### SlashCommands
-<!-- ToDo -->
-<!-- Re-usable commands that can be manually triggered by the user. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Features and modes highlighted in product updates include Interactive Planning (plan-first workflows), Devin Search (codebase search), and Devin Wiki (knowledge base/documentation)
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 
 ## Ungrouped Criteria
 
@@ -173,15 +127,6 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
   - Provides an interactive shell in its UI so the agent can run commands and manage environments
 
 ### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+
+---

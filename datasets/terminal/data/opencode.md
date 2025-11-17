@@ -18,7 +18,7 @@ v (2025-10-19)
 - [4] Rich toolset for file, shell, and repo operations
 
 ### Short Description
-<!-- ToDo -->
+A terminal-native, local-first AI coding assistant with a TUI for interactive planning and building; supports local and cloud LLMs, LSP integration, git-aware editing, and extensible skills/actions.
 
 -
 
@@ -38,9 +38,7 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
 - Main website: https://opencode.ai — repo and docs live at https://github.com/sst/opencode
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2025-10-19
 
 ## Licensing
 
@@ -59,28 +57,24 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
 - Yes
 
 ### Prompts
-<!-- ToDo -->
-<!-- Default description for Prompts -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+  - Includes built-in prompt templates and system prompts used by agents (Plan, Build) and subagents.
+  - Supports user-customizable prompts/skills and slash-style commands for common workflows (e.g. /init, /undo, /redo).
+  - Prompts and agent configurations can be saved and reused as part of session state.
 
 ### Tools
-<!-- ToDo -->
-<!-- Default description for Tools -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+  - Provides a programmatic toolset for repository operations: file read/write/patch, grep/glob, shell execution, diagnostics via LSP, fetch/http, Sourcegraph search, and git-aware actions.
+  - Tools are exposed to the assistant for robust, repeatable edits and automated workflows.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+  - Official docs and usage guides: https://opencode.ai/docs
+  - Repository with examples, configuration and adapters: https://github.com/sst/opencode
+  - Community and changelog available via the repo's issues and releases pages.
 
 ## Deployment
 
