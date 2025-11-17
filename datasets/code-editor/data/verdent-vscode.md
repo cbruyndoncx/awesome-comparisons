@@ -50,12 +50,14 @@ The extension is intended to reduce context switching by letting developers rema
 - Proprietary
 
 ### FreeTrial
-- -
+- Unknown
+  - No public pricing or trial information available; product may be in early access/beta with limited availability
 
 ## MCP-Client
 
 ### MCP-Client
-- -
+- Unknown
+  - No public documentation found regarding MCP (Model Context Protocol) support; check with vendor for current capabilities
 
 ### Prompts
 - Yes
@@ -80,7 +82,8 @@ The extension is intended to reduce context switching by letting developers rema
 ## Deployment
 
 ### BYOK
-- -
+- Unknown
+  - No public information found about bring-your-own-key support; enterprise deployment options may be available
 
 ### LocalOffline
 - No
@@ -115,13 +118,16 @@ The extension is intended to reduce context switching by letting developers rema
   - Verdent provides a VS Code extension to bring Deck-style agent capabilities into the editor
 
 ### Hooks
-- -
+- Unknown
+  - No public documentation found for lifecycle hooks; product uses specialized subagents which may provide hook-like capabilities
 
 ### SlashCommands
-- -
+- Unknown
+  - No public documentation found for slash commands; product uses guided prompts and Plan Mode instead
 
 ### CustomModes
-- -
+- Yes
+  - Plan Mode provides structured, verification-first workflows; product is built around specialized modes and subagent orchestration
 
 ### Subagents
 - Yes
@@ -134,4 +140,5 @@ The extension is intended to reduce context switching by letting developers rema
   - Integrates with developer workflows and git; focused on high-level orchestration.
 
 ### SpecDrivenDevelopment
-- -
+- Other
+  - Verdent uses a proprietary "Plan-First" methodology; not tied to community spec-driven development frameworks
