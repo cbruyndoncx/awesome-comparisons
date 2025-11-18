@@ -8,6 +8,7 @@
     --grouping-expanded-foreground: var(--uc-accent, #1e88e5);
     --grouping-expanded-background: var(--accent-surface-strong, #e3f2fd);
     --grouping-expanded-header-text: #fdfcff;
+    --group-header-height: 36px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -88,12 +89,49 @@ th > button,
     width: 100%;
 }
 
-table th {
+.group-header-row th {
     position: sticky;
-    top: 0px;
+    top: 0;
+    background: var(--grouping-expanded-background);
+    color: var(--grouping-expanded-header-text);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+    padding: 0 4px;
+    height: var(--group-header-height, 32px);
+    line-height: var(--group-header-height, 32px);
+    z-index: 5000;
+}
+
+.group-header--primary {
+    text-transform: none;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+.group-header--ungrouped {
+    color: var(--grouping-expanded-header-text);
+}
+
+.group-header--excluded {
+    opacity: 0.6;
+}
+
+.group-header--spacer {
+    min-width: 60px;
+    background: var(--grouping-expanded-background);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+    z-index: 5000;
+}
+
+.criteria-header-row th {
+    position: sticky;
+    top: var(--group-header-height, 32px);
     background: var(--grouping-expanded-foreground);
     color: var(--grouping-expanded-header-text);
-    z-index: 4998;
+    z-index: 4999;
     border-bottom: 1px solid rgba(255, 255, 255, 0.28);
 }
 

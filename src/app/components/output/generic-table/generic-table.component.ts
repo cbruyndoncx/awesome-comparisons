@@ -6,6 +6,14 @@ import { Criteria, CriteriaData, DataElement, Label } from '../../../../../lib/g
 import { FeatureGroupingService } from '../feature-grouping.service';
 import { FeatureGroupView } from '../../../models/feature-grouping.model';
 
+interface ColumnGroupSpan {
+    groupKey: string | null;
+    displayName: string;
+    span: number;
+    isExcluded: boolean;
+    isPrimaryColumn: boolean;
+}
+
 @Component({
     selector: 'generictable',
     templateUrl: './generic-table.component.html',
@@ -38,6 +46,7 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
 
     public groups$: Observable<FeatureGroupView[]>;
     public columnGroupMap$: Observable<Record<string, string>>;
+    public groupLookup$: Observable<Record<string, FeatureGroupView>>;
     public visibleCriteriaMap$: Observable<Record<string, Criteria>>;
 
     private table;
@@ -48,6 +57,13 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
                 private featureGroupingService: FeatureGroupingService) {
         this.groups$ = this.featureGroupingService.getGroups();
         this.columnGroupMap$ = this.featureGroupingService.getColumnGroupMap();
+        this.groupLookup$ = this.groups$.pipe(
+            map(groups => groups.reduce((acc, group) => {
+                acc[group.key] = group;
+                return acc;
+            }, {} as Record<string, FeatureGroupView>)),
+            startWith({} as Record<string, FeatureGroupView>)
+        );
         this.visibleCriteriaMap$ = this.featureGroupingService.getVisibleCriteria().pipe(
             map(criteriaList => criteriaList.reduce((acc, criteria) => {
                 if (criteria?.id) {
@@ -128,6 +144,33 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
         }
         const description = typeof criteria.description === 'string' ? criteria.description.trim() : '';
         return description;
+    }
+
+    public getGroupHeaderSpans(columnGroupMap: Record<string, string>, groupLookup: Record<string, FeatureGroupView>): ColumnGroupSpan[] {
+        const spans: ColumnGroupSpan[] = [];
+        if (!Array.isArray(this.columnKeys) || this.columnKeys.length === 0) {
+            return spans;
+        }
+        const map = columnGroupMap || {};
+        const lookup = groupLookup || {};
+        this.columnKeys.forEach((columnKey, index) => {
+            const isPrimaryColumn = index === 0;
+            const groupKey = (!isPrimaryColumn && columnKey) ? map[columnKey] || null : null;
+            const last = spans[spans.length - 1];
+            if (last && !isPrimaryColumn && !last.isPrimaryColumn && last.groupKey === groupKey) {
+                last.span += 1;
+                return;
+            }
+            const group = groupKey ? lookup[groupKey] : undefined;
+            spans.push({
+                groupKey,
+                displayName: isPrimaryColumn ? '' : (group?.displayName || ''),
+                span: 1,
+                isExcluded: group?.isExcluded ?? false,
+                isPrimaryColumn
+            });
+        });
+        return spans;
     }
 
     public resolveEditLink(rowIndex: number): string | null {

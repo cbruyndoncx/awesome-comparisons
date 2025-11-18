@@ -47,8 +47,27 @@
     <div class="group-panel__table">
         <table class="table-hover">
             <thead>
+            <ng-container *ngIf="columnGroupMap$ | async as columnGroupMap">
+                <ng-container *ngIf="groupLookup$ | async as groupLookup">
+                    <ng-container *ngIf="getGroupHeaderSpans(columnGroupMap, groupLookup) as groupSpans">
+                        <tr class="group-header-row" *ngIf="groupSpans.length > 0">
+                            <th *ngFor="let span of groupSpans"
+                                class="group-header"
+                                [class.group-header--excluded]="span.isExcluded"
+                                [class.group-header--ungrouped]="!span.groupKey"
+                                [class.group-header--primary]="span.isPrimaryColumn"
+                                [attr.colspan]="span.span">
+                                <ng-container *ngIf="!span.isPrimaryColumn">
+                                    {{ span.displayName || 'Ungrouped' }}
+                                </ng-container>
+                            </th>
+                            <th class="group-header group-header--spacer"></th>
+                        </tr>
+                    </ng-container>
+                </ng-container>
+            </ng-container>
             <ng-container *ngIf="visibleCriteriaMap$ | async as visibleCriteria">
-                <tr>
+                <tr class="criteria-header-row">
                     <ng-template ngFor let-column [ngForOf]="columns" let-i="index">
                         <th>
                             <ng-container *ngIf="getColumnDescription(visibleCriteria, getColumnKey(i)) as columnDescription; else plainHeaderButton">
