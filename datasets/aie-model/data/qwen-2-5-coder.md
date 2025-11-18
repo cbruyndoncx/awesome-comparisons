@@ -8,34 +8,44 @@ Latest coding-focused model from Alibaba's Qwen family, featuring major upgrades
 - AIE/Model
 
 ### Version
-- 2.5 (2025)
+- 2.5 (September 2024), Qwen2.5-Max (January 2025)
 
 ### Repo
 - https://github.com/QwenLM/Qwen-Code
 
 ### Rating
-- -
+- HumanEval: 88.4% (Qwen 2.5 Coder 7B)
+- Spider: 82.0% (Qwen 2.5 Coder 7B)
+- LiveCodeBench: 38.7 (Qwen2.5-Max)
 
 ### Short Description
-- Advanced open-source coding model from Alibaba with enhanced code understanding, generation, and multi-language support.
+- Alibaba Cloud's family of specialized coding models (1.5B-32B parameters) with state-of-the-art performance on code generation and debugging benchmarks.
 
 ### Description
-Qwen 2.5 Coder is the latest iteration of Alibaba's Qwen coding model series, representing a major upgrade released in 2025. The model features significantly improved code understanding, generation capabilities, and support for a wide range of programming languages. As an open-source model, it can be deployed locally or used through various inference platforms, making it accessible to developers and organizations looking for alternatives to proprietary coding models. The 2.5 release focuses on improved reasoning, better context handling, and enhanced multi-language code generation.
+Qwen 2.5 Coder is a family of coding-specialized language models developed by Alibaba Cloud, released on September 19, 2024. The series includes models ranging from 1.5B to 32B parameters, targeting performance levels closer to closed-source models.
+
+The flagship Qwen 2.5 Coder 7B model achieves 88.4% on the HumanEval benchmark, surpassing both Codestral (81.1%) and DeepSeek Coder v2 Lite (81.1%). On the Spider benchmark for SQL generation, Qwen 2.5 Coder leads with 82.0% compared to Codestral's 76.6%.
+
+In January 2025, Alibaba released Qwen2.5-Max, their most advanced model available through Alibaba Cloud's Model Studio and the Qwen Chat platform. This model excels in code generation and debugging with a LiveCodeBench score of 38.7, slightly behind Claude Sonnet's 38.9. Qwen2.5-Max is positioned to compete with models like DeepSeek R3 in the enterprise coding space.
 
 ### Languages
 - Any
 
 ### Notes
-- Major 2025 upgrade: Significant improvements over previous Qwen coding models.
-- Open source: Available for local deployment and customization.
-- Enhanced reasoning: Improved code understanding and problem-solving capabilities.
-- Multi-language support: Strong performance across multiple programming languages.
-- Alibaba Cloud integration: Can be used through Alibaba's cloud services or self-hosted.
-- Community-driven: Active open-source community and regular updates.
-- Competitive performance: Benchmarks showing strong results compared to other coding models.
+- Model Family: 1.5B, 3B, 7B, 14B, 32B parameters
+- Release: Qwen 2.5 Coder (September 2024), Qwen2.5-Max (January 2025)
+- Benchmarks:
+  - HumanEval: 88.4% (7B model)
+  - Spider: 82.0% (7B model)
+  - LiveCodeBench: 38.7 (Max model)
+- Strengths: Code generation, debugging, SQL generation
+- Availability: Alibaba Cloud Model Studio, Qwen Chat platform
+- Competition: Positioned against DeepSeek R3, Codestral, Claude Sonnet
+- Open source: Qwen 2.5 Coder series available for local deployment
+- Developer: Alibaba Cloud
 
 ### Last Update
-- 2025
+- 2025-11-18
 
 ## Licensing
 
