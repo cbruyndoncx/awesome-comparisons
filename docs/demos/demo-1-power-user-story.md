@@ -13,7 +13,7 @@
 > "I need an AI code editor that works offline, supports my own API keys (BYOK), and has strong Git integration. I want to compare my top choices and share the results with my team."
 
 **What This Demonstrates:**
-- Intuitive search functionality
+- Intuitive filtering interface
 - Multi-criteria filtering
 - Detail view exploration
 - Export capabilities
@@ -66,68 +66,70 @@
 
 ---
 
-### STEP 1: Start with Search (30 seconds)
+### STEP 1: Apply First Filter - Offline Capability (30 seconds)
 
 **Say:**
-> "First, I know I need offline capability. Let's search for 'offline'."
+> "First, I know I need offline capability. Let me filter by that criterion."
 
 **Do:**
-1. Click in the search box at the top
-2. Type: `offline`
-3. Press Enter (or wait for auto-search)
+1. Locate the filter controls (sidebar or dropdown filters)
+2. Find "Local/Offline" or similar criterion in the filter panel
+3. Select "Yes" or "Supported" from the dropdown/checkbox
 4. Pause to show results
 
 **Screen Shows:**
-- Table filters to show only items mentioning "offline"
-- Highlighted search term (if implemented)
+- Table filters to show only items with offline capability
+- Filter indicator showing "Local/Offline: Yes"
 - Reduced number of items (from 30+ to ~8-10)
 
 **Tip the Audience:**
-> "Notice how the search looks across all criteria, not just the name. It found tools that mention offline in their features, descriptions, or capabilities."
+> "Notice how the table instantly updates to show only tools that support offline mode. We've already narrowed down from over 30 tools to just about 8 candidates."
 
 ---
 
-### STEP 2: Add First Filter - BYOK (30 seconds)
+### STEP 2: Add Second Filter - BYOK (30 seconds)
 
 **Say:**
-> "Now I need tools that support 'Bring Your Own Key' - meaning I can use my own API keys. Let me filter by BYOK."
+> "Now I need tools that support 'Bring Your Own Key' - meaning I can use my own API keys. Let me add that filter."
 
 **Do:**
-1. Look for the "BYOK" or "Deployment" criteria column
-2. Click on column header or use filter panel
-3. Select "Yes" for BYOK
+1. In the filter panel, find "BYOK" or "Bring Your Own Key" criterion
+2. Select "Yes" from the dropdown or check the checkbox
+3. Pause as the table updates
 4. Show the filtered results
 
-**Alternative** (if filter UI differs):
-- Use the filter sidebar
-- Expand "Deployment" or "Features" group
-- Check "BYOK = Yes"
+**Alternative** (depending on UI):
+- Expand "Deployment" or "Features" filter group
+- Select "BYOK = Yes" option
+- Apply filter
 
 **Screen Shows:**
 - Further reduced list (now ~5-7 items)
-- All remaining items have BYOK = Yes
+- Multiple filter indicators visible: "Local/Offline: Yes" and "BYOK: Yes"
+- All remaining items have both features
 
 **Tip the Audience:**
-> "We're now down to just the tools that support both offline mode AND bring-your-own-key."
+> "We're now down to just the tools that support both offline mode AND bring-your-own-key. Stacking filters like this quickly narrows down our options."
 
 ---
 
-### STEP 3: Add Second Filter - Git Support (30 seconds)
+### STEP 3: Add Third Filter - Git Support (30 seconds)
 
 **Say:**
 > "Finally, I need strong Git integration. Let's add that filter."
 
 **Do:**
-1. Find "Git Support" criterion
-2. Filter for "Full integration" or "Yes" (depending on data)
-3. Show final filtered results
+1. In the filter panel, find "Git Support" criterion
+2. Select "Full integration" or "Yes" from the dropdown
+3. Pause as table updates to show final filtered results
 
 **Screen Shows:**
 - Final list of ~3-5 tools
-- All match all three criteria
+- Three filter indicators visible: "Local/Offline: Yes", "BYOK: Yes", "Git Support: Yes"
+- All remaining tools match all three criteria
 
 **Tip the Audience:**
-> "Perfect! Now we're down to just 3-4 tools that match all our requirements. Let's take a closer look."
+> "Perfect! Now we're down to just 3-4 tools that match all our requirements. Three filters applied, and we went from 30+ tools to our perfect shortlist."
 
 ---
 
@@ -202,7 +204,7 @@
 
 1. **Speed**: "Notice how fast this is - no page reloads, instant filtering"
 
-2. **Flexibility**: "You can search for anything - features, names, descriptions"
+2. **Intuitive Interface**: "Clear filter options let you narrow down by any criterion"
 
 3. **Multiple Filters**: "Stack as many filters as you need - the system handles complex queries"
 
@@ -230,12 +232,12 @@
 
 ## Troubleshooting During Demo
 
-### Issue: Search Returns No Results
-- **Fix**: Clear search and try a synonym
-- **Say**: "Looks like we need to adjust our search term..."
+### Issue: No Results After Filtering
+- **Fix**: Remove one filter to see if it's too restrictive
+- **Say**: "Looks like these criteria are too specific. Let me adjust one filter..."
 
 ### Issue: Filters Don't Seem to Work
-- **Fix**: Refresh page, try again
+- **Fix**: Refresh page, clear all filters, try again
 - **Say**: "Let me reset the filters and start fresh..."
 
 ### Issue: Export Doesn't Download
@@ -317,14 +319,14 @@ You'll know the demo was successful if:
 
 **Timeline:**
 - 0:00-0:15 - Introduction
-- 0:15-0:45 - Search for "offline"
+- 0:15-0:45 - Filter by Offline capability
 - 0:45-1:15 - Filter by BYOK
 - 1:15-1:45 - Filter by Git Support
 - 1:45-2:30 - Review top 3 in detail
 - 2:30-3:00 - Export and conclusion
 
 **Key Actions:**
-1. Search: `offline`
+1. Filter: Local/Offline = Yes
 2. Filter: BYOK = Yes
 3. Filter: Git Support = Yes
 4. View details for 2-3 items

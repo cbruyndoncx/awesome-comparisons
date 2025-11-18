@@ -57,20 +57,20 @@
 
 ---
 
-### Scene 2: First Search - "Offline" (0:35 - 1:05)
-**On Screen:** Search box at top of page
+### Scene 2: First Filter - Offline Capability (0:35 - 1:05)
+**On Screen:** Filter panel showing available criteria
 **Voiceover:**
-> "First, I need offline capability. I'll search for 'offline' in the search box. Watch how the table automatically filters to show only tools that mention offline in any of their criteria."
+> "First, I need offline capability. I'll use the filter panel to narrow down to tools that support offline mode. Watch how the table automatically updates to show only matching tools."
 
 **Action:**
-1. Click in search box (cursor visible)
-2. Type "offline" slowly and clearly
-3. Pause after typing
-4. Press Enter or wait for auto-filter
+1. Locate the filter panel (sidebar or dropdown)
+2. Find "Local/Offline" or similar criterion
+3. Click the dropdown or expand the filter
+4. Select "Yes" or "Supported" option
 5. Watch table filter
 
 **Timing:**
-- Type at natural speed (not too fast)
+- Clear demonstration of filter selection (3 seconds)
 - Pause 2 seconds after filtering completes
 
 **Voiceover (continued):**
@@ -78,28 +78,30 @@
 
 **Action:**
 - Briefly scroll through filtered results
-- Highlight or hover over "offline" mentions in descriptions
+- Show filter indicator/tag showing "Local/Offline: Yes"
 
 **Camera/Cursor Notes:**
-- Slow, deliberate cursor movement
-- Highlight search results visually if possible
+- Slow, deliberate cursor movement to filter control
+- Clear demonstration of dropdown selection
+- Show filter indicator after selection
 
 ---
 
-### Scene 3: Add Filter - BYOK (1:05 - 1:35)
+### Scene 3: Add Second Filter - BYOK (1:05 - 1:35)
 **On Screen:** Filtered table showing ~8 items
 **Voiceover:**
-> "Next, I need 'Bring Your Own Key' support, often abbreviated as BYOK. This means I can use my own API keys instead of the provider's. Let me add this filter."
+> "Next, I need 'Bring Your Own Key' support, often abbreviated as BYOK. This means I can use my own API keys instead of the provider's. Let me add this second filter."
 
 **Action:**
-1. Look for BYOK column in table
-2. Click on column header or filter control
-3. Select "Yes" from filter dropdown
+1. In the filter panel, find "BYOK" or "Bring Your Own Key"
+2. Click the dropdown or checkbox
+3. Select "Yes" option
+4. Watch table update
 
 **Alternative (if UI differs):**
-1. Open filter sidebar
-2. Find "Deployment" or "BYOK" section
-3. Check "Yes" option
+1. Expand "Deployment" or "Features" filter group
+2. Find "BYOK" option
+3. Select "Yes"
 
 **Timing:**
 - Show the filter UI clearly (2-3 seconds)
@@ -107,26 +109,28 @@
 - Pause as table updates
 
 **Voiceover (continued):**
-> "Now we're down to just 5 tools that support both offline mode and bring-your-own-key. We're getting close."
+> "Now we're down to just 5 tools that support both offline mode and bring-your-own-key. We're getting close. Notice the filter indicators showing both filters are active."
 
 **Action:**
-- Brief count of remaining items (show count if visible)
+- Show both filter indicators/tags: "Local/Offline: Yes" and "BYOK: Yes"
+- Brief count of remaining items
 - Scroll through filtered list slowly
 
 **Camera/Cursor Notes:**
-- Clear demonstration of filter application
-- Show before and after states
+- Clear demonstration of adding second filter
+- Show multiple filter indicators visible
+- Emphasize narrowing effect
 
 ---
 
-### Scene 4: Add Second Filter - Git Support (1:35 - 2:05)
+### Scene 4: Add Third Filter - Git Support (1:35 - 2:05)
 **On Screen:** Table with 5 items showing
 **Voiceover:**
-> "Finally, I need strong Git integration. Let's add one more filter for Git support."
+> "Finally, I need strong Git integration. Let's add this third filter for Git support."
 
 **Action:**
-1. Find "Git Support" column or filter
-2. Apply filter for "Full integration" or "Yes"
+1. In the filter panel, find "Git Support"
+2. Click dropdown and select "Full integration" or "Yes"
 3. Watch table update to final results
 
 **Timing:**
@@ -134,15 +138,17 @@
 - Pause as results update
 
 **Voiceover (continued):**
-> "Perfect! Now we have just 3 tools that meet all our requirements. Let's take a closer look at these top candidates."
+> "Perfect! Now we have just 3 tools that meet all our requirements. You can see all three filter indicators active: Offline, BYOK, and Git Support. Let's take a closer look at these top candidates."
 
 **Action:**
+- Show all three filter indicators/tags visible
 - Show the final 3 tools clearly
 - Briefly hover over each one
 
 **Camera/Cursor Notes:**
 - Ensure all 3 tools visible on screen
-- Highlight each one briefly
+- Show three filter indicators clearly
+- Emphasize the final narrowed results
 
 ---
 
@@ -303,11 +309,8 @@ Try it yourself!
 ### Introduction
 > "Hey there! Let me show you how to find the perfect code editor using Awesome Comparisons. I'm looking for something that works offline, supports my own API keys, and has great Git integration. Let's do this!"
 
-### Search
-> "Okay, so we've got like 30+ editors here. That's a lot! Let me search for 'offline' first... *[typing]* ...and boom! Down to 8. Much better."
-
 ### Filters
-> "Now let's filter for BYOK - that's Bring Your Own Key... *[filtering]* ...nice, we're down to 5. One more filter for Git support... *[filtering]* ...and we've got our top 3!"
+> "Okay, so we've got like 30+ editors here. That's a lot! Let me filter for offline capability first... *[clicking]* ...and boom! Down to 8. Much better. Now let's add BYOK - that's Bring Your Own Key... *[clicking]* ...nice, we're down to 5. One more filter for Git support... *[clicking]* ...and we've got our top 3!"
 
 ### Details
 > "Let me check out this first one... *[clicking]* ...oh nice, 4.5 stars, has everything we need plus some cool extras. Let me peek at the next one too... *[clicking]* ...yeah, this is great for comparison."
@@ -341,9 +344,9 @@ Try it yourself!
 00:00 - 00:05: Demo 1: The Power User Story
 00:05 - 00:20: [Voiceover intro]
 00:20 - 00:35: Viewing full comparison table
-00:35 - 01:05: Searching for "offline"
-01:05 - 01:35: Filtering by BYOK
-01:35 - 02:05: Filtering by Git Support
+00:35 - 01:05: Filtering by Offline capability
+01:05 - 01:35: Adding second filter - BYOK
+01:35 - 02:05: Adding third filter - Git Support
 02:05 - 02:35: Viewing details of first tool
 02:35 - 02:55: Comparing multiple tools
 02:55 - 03:15: Exporting to Excel
@@ -359,17 +362,17 @@ Try it yourself!
 🎯 Demo 1: Finding the Perfect Tool with Awesome Comparisons
 
 In this 3-minute demo, I show you how to use Awesome Comparisons to find the perfect AI code editor by:
-✅ Searching across 30+ tools
-✅ Filtering by specific criteria (offline, BYOK, Git support)
+✅ Filtering across 30+ tools by multiple criteria
+✅ Narrowing down by offline capability, BYOK, and Git support
 ✅ Reviewing detailed information
 ✅ Exporting results for team sharing
 
 ⏱️ Timestamps:
 0:00 - Introduction
 0:20 - Initial view
-0:35 - Searching for "offline"
-1:05 - Adding BYOK filter
-1:35 - Adding Git Support filter
+0:35 - First filter: Offline capability
+1:05 - Second filter: BYOK
+1:35 - Third filter: Git Support
 2:05 - Viewing details
 2:55 - Exporting to Excel
 3:15 - Conclusion
