@@ -87,6 +87,30 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
         return group.isExpanded ? '−' : '+';
     }
 
+    public describeGroupCriteria(group: FeatureGroupView | null | undefined): string {
+        if (!group) {
+            return '';
+        }
+        const names: string[] = [];
+        const appendName = (criteria?: Criteria | null) => {
+            if (!criteria) {
+                return;
+            }
+            const parts: Array<string | undefined> = [
+                typeof criteria.name === 'string' ? criteria.name.trim() : undefined,
+                typeof criteria.id === 'string' ? criteria.id.trim() : undefined,
+                typeof (criteria as any).key === 'string' ? String((criteria as any).key).trim() : undefined
+            ];
+            const label = parts.find(part => !!part);
+            if (label && !names.includes(label)) {
+                names.push(label);
+            }
+        };
+        appendName(group.primaryCriteria ?? null);
+        (group.children || []).forEach(child => appendName(child));
+        return names.join(', ');
+    }
+
     public getColumnKey(index: number): string | null {
         if (!Array.isArray(this.columnKeys) || index < 0 || index >= this.columnKeys.length) {
             return null;
