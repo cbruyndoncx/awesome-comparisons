@@ -88,6 +88,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "patch-package": "^8.0.0",
+    "playwright-core": "^1.56.1",
     "sass": "^1.79.0",
     "typescript": "~5.2.2"
   }
