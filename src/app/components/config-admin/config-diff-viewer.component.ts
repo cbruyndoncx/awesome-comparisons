@@ -3,7 +3,8 @@
 // (spec:acd08023) (code:9d344f36)
 
 import { Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChanges } from '@angular/core';
-import { DomSanitizer, SafeHtml, SecurityContext } from '@angular/platform-browser';
+import { SecurityContext } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { Clipboard } from '@angular/cdk/clipboard';
 import * as Diff2Html from 'diff2html';
 import hljs from 'highlight.js';
