@@ -7,6 +7,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Observable, BehaviorSubject, Subject, throwError, of, timer, combineLatest, forkJoin } from 'rxjs';
 import { catchError, retry, debounceTime, map, tap, switchMap, retryWhen, take, delay, concatMap, finalize, shareReplay, distinctUntilChanged } from 'rxjs/operators';
 import { stringify, parse, parseDocument, Document } from 'yaml';
+import { environment } from '../../../environments/environment';
 
 import {
   ConfigCatalogItem,
@@ -135,7 +136,9 @@ export class ConfigWorkspaceService {
       return null;
     }
 
-    console.log('[DEBUG] buildGroupsViaBlueprint: Starting with', blueprint.sources.length, 'sources and', definitions.size, 'document definitions');
+    if (environment.debug) {
+      console.log('[DEBUG] buildGroupsViaBlueprint: Starting with', blueprint.sources.length, 'sources and', definitions.size, 'document definitions');
+    }
 
     const assignedChildren = new Set<string>();
     const groups: CriteriaGroupModel[] = [];
@@ -153,7 +156,9 @@ export class ConfigWorkspaceService {
       }
 
       const blueprintDefinitions = this.flattenCriteriaDefinitions(criteriaNode);
-      console.log('[DEBUG] buildGroupsViaBlueprint: Blueprint source', source.path, 'has', blueprintDefinitions.size, 'definitions');
+      if (environment.debug) {
+        console.log('[DEBUG] buildGroupsViaBlueprint: Blueprint source', source.path, 'has', blueprintDefinitions.size, 'definitions');
+      }
       blueprintDefinitions.forEach((definition, key) => {
         if (!Array.isArray(definition.children) || definition.children.length === 0) {
           return;
@@ -168,7 +173,9 @@ export class ConfigWorkspaceService {
         }
 
         const groupName = definition.name || key;
-        console.log('[DEBUG] buildGroupsViaBlueprint: Resolving group', groupName, 'with', definition.children.length, 'child references');
+        if (environment.debug) {
+          console.log('[DEBUG] buildGroupsViaBlueprint: Resolving group', groupName, 'with', definition.children.length, 'child references');
+        }
         const children = this.resolveGroupChildren(
           groupId,
           definition.children,
@@ -177,7 +184,9 @@ export class ConfigWorkspaceService {
           groupName,
           missingReferences
         );
-        console.log('[DEBUG] buildGroupsViaBlueprint: Resolved', children.length, 'children for group', groupName);
+        if (environment.debug) {
+          console.log('[DEBUG] buildGroupsViaBlueprint: Resolved', children.length, 'children for group', groupName);
+        }
         resolvedChildrenCount += children.length;
 
         if (children.length === 0) {
@@ -201,7 +210,9 @@ export class ConfigWorkspaceService {
       });
     });
 
-    console.log('[DEBUG] buildGroupsViaBlueprint: Completed with', groups.length, 'groups,', resolvedChildrenCount, 'resolved children,', missingReferences.length, 'missing references');
+    if (environment.debug) {
+      console.log('[DEBUG] buildGroupsViaBlueprint: Completed with', groups.length, 'groups,', resolvedChildrenCount, 'resolved children,', missingReferences.length, 'missing references');
+    }
 
     if (groups.length === 0) {
       console.warn(
@@ -924,7 +935,9 @@ export class ConfigWorkspaceService {
         }
 
         const criteriaPaths = this.extractCriteriaDefaults(entry);
-        console.log('[DEBUG] ensureDatasetCriteria: Found', criteriaPaths.length, 'criteria files for', datasetId);
+        if (environment.debug) {
+          console.log('[DEBUG] ensureDatasetCriteria: Found', criteriaPaths.length, 'criteria files for', datasetId);
+        }
 
         if (criteriaPaths.length === 0) {
           const blueprint: DatasetCriteriaBlueprint = {
@@ -947,7 +960,9 @@ export class ConfigWorkspaceService {
             results.forEach(result => {
               if (result?.parsedDocument?.criteria) {
                 const defs = this.flattenCriteriaDefinitions(result.parsedDocument.criteria);
-                console.log('[DEBUG] ensureDatasetCriteria: Loaded', defs.size, 'definitions from', result.path);
+                if (environment.debug) {
+                  console.log('[DEBUG] ensureDatasetCriteria: Loaded', defs.size, 'definitions from', result.path);
+                }
                 defs.forEach((def, key) => {
                   sharedCriteria.set(key, def);
                 });
@@ -962,7 +977,9 @@ export class ConfigWorkspaceService {
             this.datasetCriteriaCache.set(datasetId, blueprint);
             this.activeCriteriaBlueprint = blueprint;
 
-            console.log('[DEBUG] ensureDatasetCriteria: Total shared criteria for', datasetId, ':', sharedCriteria.size);
+            if (environment.debug) {
+              console.log('[DEBUG] ensureDatasetCriteria: Total shared criteria for', datasetId, ':', sharedCriteria.size);
+            }
             return blueprint;
           })
         );
@@ -1510,11 +1527,15 @@ export class ConfigWorkspaceService {
   }
 
   private buildCriteriaGroups(rawCriteria: any): CriteriaGroupModel[] {
-    console.log('[DEBUG] buildCriteriaGroups: Starting, enableBlueprintGrouping=', this.enableBlueprintGrouping);
+    if (environment.debug) {
+      console.log('[DEBUG] buildCriteriaGroups: Starting, enableBlueprintGrouping=', this.enableBlueprintGrouping);
+    }
 
     // Load dataset-specific definitions
     const datasetDefinitions = this.flattenCriteriaDefinitions(rawCriteria);
-    console.log('[DEBUG] buildCriteriaGroups: Flattened', datasetDefinitions.size, 'definitions from document');
+    if (environment.debug) {
+      console.log('[DEBUG] buildCriteriaGroups: Flattened', datasetDefinitions.size, 'definitions from document');
+    }
 
     // Merge with shared definitions if blueprint grouping enabled
     let allDefinitions = datasetDefinitions;
@@ -1522,13 +1543,17 @@ export class ConfigWorkspaceService {
     if (this.enableBlueprintGrouping && this.activeCriteriaBlueprint) {
       // Start with shared criteria
       allDefinitions = new Map(this.activeCriteriaBlueprint.sharedCriteria);
-      console.log('[DEBUG] buildCriteriaGroups: Loaded', allDefinitions.size, 'shared criteria definitions');
+      if (environment.debug) {
+        console.log('[DEBUG] buildCriteriaGroups: Loaded', allDefinitions.size, 'shared criteria definitions');
+      }
 
       // Dataset definitions override shared
       datasetDefinitions.forEach((def, key) => {
         allDefinitions.set(key, def);
       });
-      console.log('[DEBUG] buildCriteriaGroups: After merge:', allDefinitions.size, 'total definitions');
+      if (environment.debug) {
+        console.log('[DEBUG] buildCriteriaGroups: After merge:', allDefinitions.size, 'total definitions');
+      }
     }
 
     if (allDefinitions.size === 0) {
@@ -1553,7 +1578,9 @@ export class ConfigWorkspaceService {
       : null;
 
     if (blueprintResult) {
-      console.log('[DEBUG] buildCriteriaGroups: Using blueprint result');
+      if (environment.debug) {
+        console.log('[DEBUG] buildCriteriaGroups: Using blueprint result');
+      }
       return this.appendUngroupedEntries(
         blueprintResult.groups,
         allDefinitions,
@@ -1562,7 +1589,9 @@ export class ConfigWorkspaceService {
       );
     }
 
-    console.log('[DEBUG] buildCriteriaGroups: Using document-defined groups');
+    if (environment.debug) {
+      console.log('[DEBUG] buildCriteriaGroups: Using document-defined groups');
+    }
     return this.buildGroupsFromDocumentDefinitions(allDefinitions, groupDefinitionKeys);
   }
 

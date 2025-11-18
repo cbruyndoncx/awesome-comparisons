@@ -381,8 +381,13 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
         if (typeof html === 'string' && html.trim().length > 0) {
             if (this.document) {
                 const container = this.document.createElement('div');
-                container.innerHTML = html;
-                return container.textContent ? container.textContent.trim() : '';
+                // Use textContent assignment instead of innerHTML for safer text extraction
+                const tempDiv = this.document.createElement('div');
+                tempDiv.textContent = html;
+                // Parse as DOM to extract text without executing scripts
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                return doc.body.textContent ? doc.body.textContent.trim() : '';
             }
             return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
         }

@@ -6,6 +6,7 @@
 
 export const environment = {
     production: true,
+    debug: false,  // Disable debug logging in production
     // GitHub repository URL (source code)
     repositoryUrl: 'https://github.com/cbruyndoncx/awesome-comparisons',
     // GitHub Pages URL (published site/docs)

@@ -150,5 +150,6 @@ fi
 
 for filename in "${selected[@]}"; do
   echo "Processing: $filename"
-  goose run --recipe update_recipe.yaml --params "filename=$filename" --no-session
+  # Use proper quoting to prevent command injection
+  goose run --recipe update_recipe.yaml --params "filename=${filename}" --no-session
 done

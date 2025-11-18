@@ -1,6 +1,6 @@
 # Package Configuration
 
-Package.json configuration file that defines project metadata, scripts, and dependencies for the Ultimate Comparison framework. This package provides both a library framework and a CLI tool for creating comparison websites.
+Package.json configuration file that defines project metadata, scripts, and dependencies for the Awesome Comparisons framework. This package provides both a library framework and a CLI tool for creating comparison websites.
 
 ## Target
 

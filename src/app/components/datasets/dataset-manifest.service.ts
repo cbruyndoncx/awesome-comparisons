@@ -182,7 +182,8 @@ export class DatasetManifestService {
       return (
         this.document.defaultView?.localStorage.getItem(this.STORAGE_KEY) || null
       );
-    } catch {
+    } catch (error) {
+      console.warn('Failed to read from localStorage:', error);
       return null;
     }
   }
@@ -190,16 +191,16 @@ export class DatasetManifestService {
   private saveToLocalStorage(id: string): void {
     try {
       this.document.defaultView?.localStorage.setItem(this.STORAGE_KEY, id);
-    } catch {
-      // ignore write errors
+    } catch (error) {
+      console.warn('Failed to write to localStorage:', error);
     }
   }
 
   private clearLocalStorage(): void {
     try {
       this.document.defaultView?.localStorage.removeItem(this.STORAGE_KEY);
-    } catch {
-      // ignore clear errors
+    } catch (error) {
+      console.warn('Failed to remove from localStorage:', error);
     }
   }
 
