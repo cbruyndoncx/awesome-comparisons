@@ -3,7 +3,7 @@
 // (spec:acd08023) (code:9d344f36)
 
 import { Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChanges } from '@angular/core';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { DomSanitizer, SafeHtml, SecurityContext } from '@angular/platform-browser';
 import { Clipboard } from '@angular/cdk/clipboard';
 import * as Diff2Html from 'diff2html';
 import hljs from 'highlight.js';
@@ -40,7 +40,7 @@ export class ConfigDiffViewerComponent implements OnInit, OnChanges {
   @Output() optionsChange = new EventEmitter<DiffOptions>();
   
   // Component state
-  diffHtml: SafeHtml = '' as SafeHtml;
+  diffHtml: string = '';
   diffStats: DiffStats = { additions: 0, deletions: 0, lineCount: 0 };
   isError: boolean = false;
   errorMessage: string = '';
@@ -110,7 +110,10 @@ export class ConfigDiffViewerComponent implements OnInit, OnChanges {
       };
 
       const diffHtml = Diff2Html.html(diffString, diffConfig as Diff2Html.Diff2HtmlConfig);
-      this.diffHtml = this.domSanitizer.bypassSecurityTrustHtml(diffHtml);
+      // Diff2Html is a trusted library generating diff HTML from configuration files
+      // Sanitize the output for additional security
+      const sanitized = this.domSanitizer.sanitize(SecurityContext.HTML, diffHtml);
+      this.diffHtml = sanitized || '';
       
       // Compute statistics
       this.diffStats = this.computeDiffStats(diffString);

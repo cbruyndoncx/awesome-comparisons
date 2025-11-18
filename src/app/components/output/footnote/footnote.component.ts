@@ -26,7 +26,7 @@ export class FootnoteComponent implements OnChanges, OnDestroy {
                 });
                 this.ref = this.footnotes.get(this.footnote).ref;
             } else {
-                const ref = ('uc' + this.footnotes.size + Math.random() * 100000).toString().substr(0, 7);
+                const ref = ('uc' + this.footnotes.size + Math.random() * 100000).toString().slice(0, 7);
                 this.footnotes.set(this.footnote, {
                     ref: ref,
                     count: 1

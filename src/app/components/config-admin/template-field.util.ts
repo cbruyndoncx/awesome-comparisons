@@ -23,7 +23,8 @@ export function serializeStructuredText(value: any): string {
 
     try {
       return JSON.stringify(value);
-    } catch {
+    } catch (error) {
+      console.warn('Failed to stringify value:', error);
       return '';
     }
   }

@@ -6,6 +6,7 @@
 // To customize URLs for your deployment, edit these values directly or create a custom environment file
 export const environment = {
     production: false,
+    debug: true,  // Enable debug logging in development
     // GitHub repository URL (source code)
     repositoryUrl: 'https://github.com/cbruyndoncx/awesome-comparisons',
     // GitHub Pages URL (published site/docs)

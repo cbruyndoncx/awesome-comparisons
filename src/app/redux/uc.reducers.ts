@@ -419,7 +419,7 @@ function putStateIntoURL(state: IUCAppState) {
             }
             query += `${encodeURIComponent(crit)};`;
         }
-        query = query.substr(0, query.length - 1);
+        query = query.slice(0, -1);
     }
     const totalElements = ConfigurationService.data?.dataElements?.length || state.elementsEnabled.length;
     if (totalElements > 0) {
@@ -444,7 +444,7 @@ function putStateIntoURL(state: IUCAppState) {
         for (const filter of state.currentFilter) {
             query += `${filter},`;
         }
-        query = query.substr(0, query.length - 1);
+        query = query.slice(0, -1);
     }
     if (state.currentColumns.length > 0) {
         if (query.length > 0) {
@@ -454,7 +454,7 @@ function putStateIntoURL(state: IUCAppState) {
         for (const column of state.currentColumns) {
             query += `${encodeURIComponent(column)},`;
         }
-        query = query.substr(0, query.length - 1);
+        query = query.slice(0, -1);
     }
     if (state.currentlyMaximized) {
         if (query.length > 0) {
@@ -470,7 +470,7 @@ function putStateIntoURL(state: IUCAppState) {
         for (const order of state.currentOrder) {
             query += `${encodeURIComponent(order)},`;
         }
-        query = query.substr(0, query.length - 1);
+        query = query.slice(0, -1);
     }
     const expandedGroups = Object.keys(state.groupExpanded || {}).filter(key => state.groupExpanded[key]);
     if (expandedGroups.length > 0) {
@@ -481,7 +481,7 @@ function putStateIntoURL(state: IUCAppState) {
         expandedGroups.forEach(groupKey => {
             query += `${encodeURIComponent(groupKey)},`;
         });
-        query = query.substr(0, query.length - 1);
+        query = query.slice(0, -1);
     }
     if (state.viewMode === 'sheet') {
         if (query.length > 0) {
