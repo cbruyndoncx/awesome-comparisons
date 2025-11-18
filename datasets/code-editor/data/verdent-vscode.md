@@ -1,4 +1,4 @@
-# Verdent for VS Code
+# Verdent for VS Code - https://www.verdent.ai/
 
 Verdent for VS Code is the Visual Studio Code extension for Verdent AI — an agentic, plan-first coding assistant which orchestrates parallel subagents to design, implement, and verify code changes with built-in git worktree isolation and DiffLens visualizations.
 
