@@ -19,7 +19,12 @@
     "release:prepare": "npm run build:prod && npm run release:stamp",
     "templates:export": "node ./lib/comparison-template/export-all-templates.js",
     "test": "ng test",
-    "release": "npm run release:prepare"
+    "release": "npm run release:prepare",
+    "screenshots:track-a": "node scripts/capture-screenshots-track-a.js",
+    "screenshots:track-b": "node scripts/capture-screenshots-track-b.js",
+    "screenshots:track-c": "node scripts/capture-screenshots-track-c.js",
+    "screenshots:track-d": "node scripts/capture-screenshots-track-d.js",
+    "screenshots:all": "npm run screenshots:track-a && npm run screenshots:track-b && npm run screenshots:track-c && npm run screenshots:track-d"
   },
   "files": [
     "dist",
@@ -88,6 +93,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "patch-package": "^8.0.0",
+    "playwright-core": "^1.56.1",
     "sass": "^1.79.0",
     "typescript": "~5.2.2"
   }
