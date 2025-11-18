@@ -7,7 +7,8 @@ AI-powered code completion and developer assistant focused on privacy and enterp
 - Code/Editor
 
 ### Version
-v(enterprise/cloud) (2025-10-29)
+- Unknown (last checked 2025-10-29)
+  - Tabnine uses different versioning for enterprise/cloud deployments; contact vendor for specific version information
 
 ### Repo
 -

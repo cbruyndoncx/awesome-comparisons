@@ -12,7 +12,8 @@ Open-source AI coding assistant / VS Code extension
   - Open-source VS Code (and JetBrains) extension with CLI support, agent orchestration, and project-scoped memory stored under .kilocode/
 
 ### Version
-(2025-10-19)
+- Unknown (last checked 2025-10-19)
+  - Check GitHub releases for current version
 
 ### Repo
 - https://github.com/Kilo-Org/kilocode
@@ -148,6 +149,5 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
   - incorporates terminal/CLI execution capabilities (inherited from Cline-style tooling) for running commands and automations
 
 ### SpecDrivenDevelopment
-<!-- Has support for these Spec Driven Development methodologies: -->
-
-
+- Other
+  - No specific spec-driven development framework documented; focuses on agent-based coding assistance

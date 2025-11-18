@@ -19,7 +19,6 @@ v1 (2023-08)
 ### Short Description
 Code Llama is Meta's open-source family of LLMs optimized for code generation, completion, and debugging. It provides multiple model sizes (7B, 13B, 34B, 70B) and specialized variants (Instruct, Python) for different coding tasks and deployment constraints.
 
--
 ### Description
 Code Llama is Meta's open-source family of large language models optimized for code generation, completion, and reasoning about code. It ships in multiple sizes (7B, 13B, 34B and larger variants) and in specialized flavors such as Code Llama-Instruct (instruction-tuned) and Code Llama-Python (further fine-tuned on Python). The models use a decoder-only transformer architecture with optimizations tuned for code tasks and support fill-in-the-middle style completions and larger context windows than many older public models.
 
@@ -48,5 +47,5 @@ Code Llama is Meta's open-source family of large language models optimized for c
 - Meta / Code Llama license (permits research and commercial use — see repository for exact terms)
 
 ### FreeTrial
-- Yes
-  - The models and weights are available for download (open-source) for research and commercial use under Meta's license terms.
+- N/A
+  - Open-source model: weights freely available for download for research and commercial use under Meta's license terms, not a time-limited trial.

@@ -4,7 +4,7 @@
 ## General Info
 
 ### Classification
-- AIE/Model
+- AIE/Infrastructure
 
 ### Version
 - -
@@ -14,7 +14,7 @@
 - https://github.com/fauxpilot/fauxpilot
 
 ### Rating
--
+- N/A
 
 ### Short Description
 - Open-source, locally-hosted code-completion server providing a privacy-focused alternative to cloud-based assistants like GitHub Copilot.
@@ -47,4 +47,5 @@ FauxPilot is an open-source code-completion server designed to run on-premises o
 - MIT
 
 ### FreeTrial
-- Yes
+- N/A
+  - Open-source software: freely available under MIT license, not a time-limited trial.

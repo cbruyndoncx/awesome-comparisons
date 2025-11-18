@@ -60,7 +60,8 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
 ## MCP-Client
 
 ### MCP-Client
--
+- Unknown
+  - Firebase Studio uses Gemini models; no public documentation found for general MCP client support
 
 ### Prompts
 - Yes
@@ -78,12 +79,8 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
   - Figma/Builder.io import, template gallery, Genkit integration, and Terraform deployment options.
 
 ### Resources
-<!-- ToDo -->
-<!-- Default description for Resources -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Can access workspace files, repositories, and Firebase resources for context
 
 ## Deployment
 
@@ -134,20 +131,12 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
   - The Firebase MCP server provides pre-written prompts surfaced as slash commands (e.g., /firebase:init) in some tool integrations.
 
 ### CustomModes
-<!-- ToDo -->
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - Provides specialized workflows through App Prototyping agent and Gemini in-IDE chat for different development tasks
 
 ### Subagents
-<!-- ToDo -->
-<!-- Define specialized AI subagents for task-specific workflows. -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+  - App Prototyping agent handles specialized tasks for app generation and scaffolding
 
 ## Ungrouped Criteria
 

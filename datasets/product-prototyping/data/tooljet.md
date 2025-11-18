@@ -7,7 +7,8 @@ Open-source, low-code internal app builder with visual drag-and-drop authoring, 
 - Product/Prototyping
 
 ### Version
-v (2025-10-19)
+- Unknown (2025-10-19)
+  - Check https://github.com/ToolJet/ToolJet for current version
 
 ### Repo
 - https://github.com/ToolJet/ToolJet
@@ -70,6 +71,7 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
 
 ### Last Update
 - 2025-11-15
+  - Note: This date may reflect documentation update; actively maintained open-source project
 
 ## Licensing
 
@@ -163,13 +165,5 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
   - Supports JavaScript/Python snippets inside apps and provides a CLI for developers.
 
 ### SpecDrivenDevelopment
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
 - Other
-  - ToolJet does not natively implement a specific spec-driven development framework. It can be used as the execution/runtime layer for apps produced by spec-driven workflows, and can integrate with CI/Git-based workflows; but there is no built-in, opinionated Spec-DSL like Tessl listed above. Teams can adopt Tessl, OpenSpec or other SDD tools alongside ToolJet to manage specs, then implement/generate apps that run in ToolJet.
+  - ToolJet does not natively implement a specific spec-driven development framework. It can be used as the execution/runtime layer for apps produced by spec-driven workflows, and can integrate with CI/Git-based workflows; but there is no built-in, opinionated Spec-DSL. Teams can adopt Tessl, OpenSpec or other SDD tools alongside ToolJet to manage specs, then implement/generate apps that run in ToolJet

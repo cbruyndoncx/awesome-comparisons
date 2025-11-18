@@ -7,7 +7,8 @@ AI pair-programmer and code assistant integrated across popular IDEs and GitHub.
 - Code/Editor
 
 ### Version
-vN/A (2025-10-19)
+- Unknown (last checked 2025-10-19)
+  - GitHub Copilot uses rolling updates without public version numbers; features evolve continuously
 
 ### Repo
 -
@@ -162,11 +163,6 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
 ### Terminal
 - Yes
   - Copilot Chat is available in supported terminals (Windows Terminal Canary, GitHub CLI integrations) and can be used from the command line in supported environments.
-
-### SpecDrivenDevelopment
-
-<!-- Has support for these Spec Driven Development methodologies: -->
-
 
 ### SpecDrivenDevelopment
 - No

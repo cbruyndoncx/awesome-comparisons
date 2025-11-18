@@ -7,7 +7,8 @@
 - Code/Editor
 
 ### Version
-v (2025-10-19)
+- Unknown (last checked 2025-10-19)
+  - No public version number documented
 
 ### Repo
 -

@@ -37,7 +37,8 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 - Export options: ZIP export, deploy to Netlify/Cloudflare, Docker image.
 
 ### Last Update
-2025-11-15
+- 2025-11-15
+  - Note: This date may reflect documentation update rather than product release; actively maintained open-source project
 
 ## Licensing
 
@@ -49,6 +50,7 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 
 ### FreeTrial
 - Yes
+  - Open-source project - freely available without time limits or paid tiers
 
 ## MCP-Client
 

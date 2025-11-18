@@ -7,7 +7,8 @@ A development platform that blends AI, no-code/low-code and traditional pro-code
 - Code/Editor
 
 ### Version
-v (2024)
+- Unknown (last checked 2024)
+  - No public version number documented
 
 ### Repo
 - https://github.com/MarsX-dev/devhunt
@@ -78,8 +79,8 @@ MarsX is an open-source development platform and marketplace that combines AI as
 ## Deployment
 
 ### BYOK
-
-
+- Unknown
+  - No public documentation found for bring-your-own-key support; platform uses integrated AI services
 ### LocalOffline
 - No
   - MarsX is primarily a cloud platform with a web-based IDE and Micro AppStore.

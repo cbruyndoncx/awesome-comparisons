@@ -7,7 +7,8 @@ Amazon Q Developer (sometimes shortened to "Amazon Q") is AWS's developer-facing
 - Code/Editor
 
 ### Version
-vN/A (2025-10-19)
+- Unknown (last checked 2025-10-19)
+  - AWS service with rolling updates; no traditional version numbers published
 
 ### Repo
 - https://aws.amazon.com/q/ (service documentation)

@@ -7,7 +7,8 @@ AI-assisted code generator focused on WordPress development: generates PHP/JS sn
 - Product/Prototyping
 
 ### Version
-N/A (2025-10-19)
+- Unknown (2025-10-19)
+  - Proprietary SaaS product; version information not publicly available
 
 ### Repo
 -
@@ -53,7 +54,8 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
   - CodeWP v2.5 release notes / walkthroughs (public posts and videos, 2024-2025)
 
 ### Last Update
-2025-11-15
+- 2025-11-15
+  - Note: This date may reflect documentation update; actively maintained SaaS product
 
 ## Licensing
 
@@ -141,14 +143,5 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
 - No
 
 ### SpecDrivenDevelopment
-- 
-  - BMAD
-  - SpecKit
-  - OpenSpec
-  - Tessl
-  - AgentOS
-  - ClaudeFlow
-  - SPARC
-  - SuperClaude
-  -
-  - Note: CodeWP is not primarily a spec-driven development tool; the above list is left as-is from the template but not confirmed as supported features.
+- No
+  - CodeWP is not primarily a spec-driven development tool; it is an AI code generator focused on WordPress development

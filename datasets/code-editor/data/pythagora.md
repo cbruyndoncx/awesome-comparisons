@@ -7,7 +7,8 @@ A developer-focused AI platform that generates full-stack applications and autom
 - Code/Editor
 
 ### Version
-(2025-10-19)
+- Unknown (last checked 2025-10-19)
+  - No public version information available
 
 ### Repo
 -
@@ -82,7 +83,8 @@ Pythagora is an AI-driven development assistant that can generate full-stack web
 ## MCP-Client
 
 ### MCP-Client
--
+- Unknown
+  - No public documentation found regarding MCP (Model Context Protocol) support
 
 ### Prompts
 - Yes

@@ -1,4 +1,4 @@
-# Codename Goose - https://goose.ai/
+# Codename Goose - https://github.com/block/goose
 Lightweight open-source agent framework for automating development and productivity workflows on-machine.
 
 ## General Info
@@ -105,8 +105,8 @@ Codename Goose is an open-source, on-machine AI agent framework created to autom
   - Extensions (MCP servers) act as a plugin mechanism to bundle commands, tools and integrations; Goose ships with built-in extensions and supports adding custom MCP servers.
 
 ### Hooks
-- No
-  - No explicit lifecycle hook system is documented; users implement lifecycle behaviors via Recipes, extensions and approve/confirm flows.
+- Yes (via Recipes and extensions)
+  - No explicit lifecycle hook system, but users can implement lifecycle behaviors via Recipes, extensions and approve/confirm flows.
 
 ### SlashCommands
 - No

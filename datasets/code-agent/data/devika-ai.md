@@ -1,5 +1,5 @@
-# Opcode (Devika AI) - https://opcode.sh
-An open-source agentic AI software engineer for end-to-end code generation, research, and project automation.
+# Devika AI - https://github.com/stitionai/devika
+An open-source agentic AI software engineer for end-to-end code generation, research, and project automation. (Note: Relationship to "Opcode" brand/website unclear)
 
 ## General Info
 
@@ -8,7 +8,7 @@ An open-source agentic AI software engineer for end-to-end code generation, rese
 - Code/Autonomous agent
 
 ### Version
-v (2025-10-19)
+Unknown (last checked 2025-10-19)
 
 ### Repo
 - https://github.com/stitionai/devika
@@ -28,9 +28,9 @@ Devika AI is an open-source "software engineer" agent that accepts high-level in
 Key capabilities include automated planning (breaking objectives into actionable steps), web research (browse and extract relevant docs), code generation across multiple languages/stack contexts, repository/Git integration, and deployment helpers (for example, static site deployment to Netlify).
 
 ### Languages
-- JavaScript / TypeScript
-- Python
-- Shell
+- Multi-language code generation support
+  - Implementation: Python (backend), JavaScript/TypeScript (UI)
+  - Generates code across multiple languages/stacks (specific list not documented)
 
 ### Notes
 - Multi-model support: commonly used with Claude 3, GPT-4, Gemini, Mistral, Groq and local models via Ollama.

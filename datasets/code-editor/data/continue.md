@@ -7,7 +7,8 @@ Open-source AI coding assistant focused on developer control, model choice, and 
 - Code/Editor
 
 ### Version
-v (2025-10-19)
+- Unknown (last checked 2025-10-19)
+  - Check GitHub releases for current version; project uses frequent updates
 
 ### Repo
 - https://github.com/continuedev/continue

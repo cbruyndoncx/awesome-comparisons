@@ -4,7 +4,7 @@ A desktop AI code-completion assistant focused initially on Python, later multi-
 ## General Info
 
 ### Classification
-- AIE/Model
+- AIE/Agent
 
 ### Version
 Archived (2022-12-31)
@@ -42,7 +42,7 @@ Kite was an early AI-assisted coding tool (founded 2014) that provided context-a
 - As of 2025 the company is inactive; repositories remain as historical artifacts and starting points for community forks and research.
 
 ### Last Update
-- 2025-11-16
+- 2022-12-31
 
 
 ## Licensing
@@ -55,4 +55,5 @@ Kite was an early AI-assisted coding tool (founded 2014) that provided context-a
 - Mixed / see repository
 
 ### FreeTrial
-- Yes
+- N/A
+  - Open-source (post-shutdown): repositories freely available, not a time-limited trial.

@@ -133,9 +133,5 @@ Tabby is a self-hosted, open-source AI coding assistant that provides code compl
   - Server and agent provide CLI tools; Docker image and direct binary available for server usage.
 
 ### SpecDrivenDevelopment
-
-<!-- Has support for these Spec Driven Development methodologies: -->
-
-- 
-
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Other
+  - No explicit spec-driven development framework support; Tabby focuses on code completion and chat assistance

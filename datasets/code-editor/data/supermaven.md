@@ -7,7 +7,8 @@ AI-first code completion assistant focused on very large context windows, low-la
 - Code/Editor
 
 ### Version
-v (2025-10-19)
+- Unknown (last checked 2025-10-19)
+  - No public version number documented; service may use rolling updates
 
 ### Repo
 -

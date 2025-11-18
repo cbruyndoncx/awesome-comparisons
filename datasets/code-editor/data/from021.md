@@ -4,10 +4,11 @@ An AI-powered product definition platform that helps teams convert ideas into im
 ## General Info
 
 ### Classification
-- Code/Editor
+- Product/Prototyping
 
 ### Version
-v (2025-10-19)
+- Unknown (last checked 2025-10-19)
+  - Web service with continuous updates; no traditional version numbers published
 
 ### Repo
 -
@@ -72,7 +73,8 @@ The platform emphasizes a structured process (uses MoSCoW prioritization) and ta
 ## Deployment
 
 ### BYOK
-
+- Unknown
+  - No public documentation found for BYOK support; commercial SaaS with integrated AI services
 ### LocalOffline
 - No
   - From021 is a hosted web service (cloud SaaS)

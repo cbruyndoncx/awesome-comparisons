@@ -5,10 +5,10 @@ AI-powered unit test generation for Java
 
 ### Classification
 
-- Code/Autonomous agent
+- Test Generation Tool (Java)
 
 ### Version
-vN/A (2025-10-19)
+N/A (last checked 2025-10-19)
 
 ### Repo
 -
@@ -53,7 +53,8 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
 ## MCP-Client
 
 ### MCP-Client
--
+- No
+  - No Model Context Protocol (MCP) integration; uses IDE plugins and CLI for integration.
 
 ### Prompts
 - No
@@ -74,10 +75,12 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
 ## Deployment
 
 ### BYOK
--
+- Unknown (likely available for Enterprise)
+  - No public documentation; Teams/Enterprise editions mention on-prem deployment options.
 
 ### LocalOffline
--
+- Partial (Enterprise on-prem option available)
+  - Standard offering is cloud-based; Enterprise customers can deploy on-premises.
 
 ## Developer Experience
 
@@ -110,8 +113,8 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
   - There are no widely documented lifecycle hook APIs for Cover; integrations are achieved via standard CI/CD hooks and the CLI rather than a bespoke lifecycle hook system.
 
 ### SlashCommands
-- Yes
-  - CLI subcommands (e.g., test generation and diagnostic commands such as `dcover issues`), and IDE actions exposed in IntelliJ for invoking test generation on classes/methods.
+- No
+  - Diffblue Cover provides CLI subcommands (e.g., `dcover test`, `dcover issues`) and IDE actions, but does not have chat-style slash commands like "/review" or "/test" in an interactive agent interface.
 
 ### CustomModes
 - No

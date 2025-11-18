@@ -7,7 +7,8 @@
 - Product/Prototyping
 
 ### Version
-vN/A (2025-10-19)
+- Unknown (2025-10-19)
+  - Integrated into Replit IDE; no separate version tracking
 
 ### Repo
 -
@@ -47,6 +48,7 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 
 ### Last Update
 - 2025-11-15
+  - Note: This date may reflect documentation update; actively maintained SaaS product integrated into Replit IDE
 
 ## Licensing
 
@@ -122,7 +124,6 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 ### SlashCommands
 - Yes
   - Within the Replit IDE chat/command palette, Ghostwriter supports in-editor chat interactions and may accept slash-like quick commands in the chat UI for common tasks (e.g., refactor, explain, generate). Public docs do not provide a formal, documented slash-command syntax; behavior is primarily UI-driven rather than command-driven.
-- No
 
 ### CustomModes
 - Yes

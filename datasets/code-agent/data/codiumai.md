@@ -5,7 +5,7 @@ AI-powered test generation and code integrity platform (rebranded to Qodo)
 
 ### Classification
 
-- Code/Autonomous agent
+- Test Generation & PR Review Tool
 
 ### Version
 <!-- ToDo -->
@@ -32,6 +32,7 @@ CodiumAI (rebranded to Qodo) is an AI-first code quality platform focused on aut
 ### Languages
 - Python
 - JavaScript / TypeScript
+- Additional languages likely supported (check official documentation for complete list)
 
 ### Notes
 - Rebranded to Qodo in 2024; platform and docs may be under either the Codium AI or Qodo name.
@@ -72,12 +73,8 @@ CodiumAI (rebranded to Qodo) is an AI-first code quality platform focused on aut
 ## MCP-Client
 
 ### MCP-Client
-<!-- ToDo -->
-<!-- Coding tool has built-in MCP client so can connect to MCP servers -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- Yes
-
-- Qodo/Codium integrates with the Model Context Protocol (MCP) and supports MCP-style agentic workflows and tool discovery. Qodo Gen and related components expose MCP-compatible tooling and can act as MCP clients for agentic integrations.
+- Unknown (needs verification)
+  - No public documentation found confirming Model Context Protocol (MCP) integration; requires verification from vendor.
 
 ### Prompts
 <!-- ToDo -->

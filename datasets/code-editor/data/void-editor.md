@@ -7,7 +7,8 @@ Open-source, privacy-first AI code editor built as a fork of Visual Studio Code 
 - Code/Editor
 
 ### Version
-v0.1 (2025-01 beta)
+- v0.1 (2025-01 beta)
+  - Note: Beta version from January 2025; Last Update (2025-11-15) reflects continued development without version number change
 
 ### Repo
 - https://github.com/voideditor/void

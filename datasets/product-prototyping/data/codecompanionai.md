@@ -7,15 +7,17 @@ A desktop AI coding assistant that exposes a ChatGPT-powered chatbot for working
 - Product/Prototyping
 
 ### Version
-
--
+- Unknown
+  - No version information found in public documentation; recommend checking vendor site for current version
 
 ### Repo
-
--
+- N/A
+  - Proprietary desktop application; no public repository found
 
 ### Rating
--
+- [3] Local-first design with good privacy model (BYOK)
+- [2] Limited public documentation and unclear pricing/versioning
+- [3] Reported feature set competitive (chat, terminal, Git, SQL integration)
 
 ### Short Description
 A desktop, local-first AI coding assistant (chat-driven) that reads and edits local code, runs shell commands, integrates with Git, and can translate natural language to SQL.
@@ -35,7 +37,8 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 - Research summary based on multiple third-party write-ups and product summaries; authoritative vendor documentation and pricing were not found in the search results available.
 
 ### Last Update
-2025-11-15
+- 2025-11-15
+  - Note: This date may reflect documentation update; verify current product status on vendor site
 
 ## Licensing
 
@@ -47,8 +50,8 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
   - No authoritative public source indicates an open-source license or public repository for the desktop product; third-party write-ups describe it as a proprietary desktop application.
 
 ### FreeTrial
-- Yes
-  - The product is often described as using the user's own OpenAI API key (BYOK) which enables usage without a separate paid tier from the vendor; however any model usage will consume the user's OpenAI quota which may incur cost.
+- Other (BYOK model)
+  - Requires user's own OpenAI API key (BYOK); no product-provided trial, but usage cost depends on user's OpenAI quota rather than vendor subscription
 
 ## MCP-Client
 
@@ -97,15 +100,20 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 ## Extensible
 
 ### Plugins
-
+- Unknown
+  - No public documentation found regarding plugin extensibility; recommend checking vendor docs
 
 ### Hooks
-
+- Unknown
+  - No public documentation found regarding lifecycle hooks or event system
 
 ### SlashCommands
-
+- Unknown
+  - Chat-based interface is primary interaction method; slash command support not documented in available sources
 
 ### CustomModes
+- Unknown
+  - No public documentation found regarding user-definable custom modes
 
 
 ### Subagents
@@ -118,5 +126,5 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 - Yes
 
 ### SpecDrivenDevelopment
-
-- 
+- No
+  - CodeCompanion.ai is a desktop coding assistant focused on chat-driven workflows, not a spec-driven development framework

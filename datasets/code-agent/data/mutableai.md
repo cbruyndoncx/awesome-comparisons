@@ -56,7 +56,8 @@ The platform is positioned for both individual developer workflows (autocomplete
 ## MCP-Client
 
 ### MCP-Client
--
+- Unknown
+  - No public documentation found indicating Model Context Protocol (MCP) support.
 
 ### Prompts
 - Yes
@@ -73,7 +74,8 @@ The platform is positioned for both individual developer workflows (autocomplete
 ## Deployment
 
 ### BYOK
--
+- Unknown
+  - No public documentation found regarding BYOK support; enterprise deployment options may vary.
 
 ### LocalOffline
 - No
@@ -129,14 +131,19 @@ The platform is positioned for both individual developer workflows (autocomplete
   - CLI available to integrate local workflows with the MutableAI service
 
 ### SpecDrivenDevelopment
-
-
-### SpecDrivenDevelopment
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
-
-
-
-
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+- Tessl
+  - Unknown
+- SpecKit
+  - Unknown
+- OpenSpec
+  - Unknown
+- BMAD
+  - Unknown
+- AgentOS
+  - Unknown
+- ClaudeFlow
+  - Unknown
+- SPARC
+  - Unknown
+- SuperClaude
+  - Unknown

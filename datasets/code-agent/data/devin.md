@@ -26,8 +26,9 @@ An autonomous agent from Cognition Labs that accepts high-level natural-language
 Devin is designed as an autonomous software engineering agent created by Cognition Labs. Unlike code-completion assistants, Devin accepts high-level natural-language tasks, decomposes them into step-by-step plans, and executes those plans inside a sandboxed environment (editor, shell, browser). It can install dependencies, modify code, run tests, search documentation, iterate on failures, and create pull requests. The product is aimed at accelerating engineering teams or acting as a junior developer to complete discrete tasks with minimal supervision.
 
 ### Languages
-- Python
-- JavaScript/TypeScript
+- Multi-language support (specific languages not publicly documented)
+  - Demos primarily showcase Python and JavaScript/TypeScript
+  - As a general-purpose autonomous agent, likely supports additional languages
 
 ### Notes
 - Distinguishing features: autonomous multi-step planning and execution, long-horizon reasoning across thousands of micro-steps, ability to research (browse docs) and iteratively debug.
@@ -48,12 +49,14 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 - Proprietary
 
 ### FreeTrial
--
+- Unknown
+  - No public information available about free trial availability; contact Cognition Labs for access.
 
 ## MCP-Client
 
 ### MCP-Client
--
+- Unknown
+  - No public documentation available for Model Context Protocol (MCP) support.
 
 ### Prompts
 - Yes
@@ -73,7 +76,8 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 ## Deployment
 
 ### BYOK
--
+- Unknown
+  - No public documentation available regarding BYOK support.
 
 ### LocalOffline
 - No
@@ -108,9 +112,13 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
   - Supports integrations and connectors for common developer tooling (GitHub, editor integrations, CI hooks)
 
 ### Hooks
+- Unknown
+  - No public documentation available regarding lifecycle hooks or custom event handlers.
 
 
 ### SlashCommands
+- Unknown
+  - No public documentation available regarding slash-command style interface.
 
 
 ### CustomModes
@@ -118,6 +126,8 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
   - Features and modes highlighted in product updates include Interactive Planning (plan-first workflows), Devin Search (codebase search), and Devin Wiki (knowledge base/documentation)
 
 ### Subagents
+- Unknown
+  - No public documentation available regarding subagent or multi-agent architecture.
 
 
 ## Ungrouped Criteria

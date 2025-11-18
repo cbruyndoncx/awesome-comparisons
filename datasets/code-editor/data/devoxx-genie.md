@@ -60,17 +60,14 @@ DevoxxGenie is an IntelliJ IDEA plugin (100% Java-based) that provides an LLM-po
 - Yes
   - DevoxxGenie provides built-in prompt templates and allows users to create, save and manage custom prompts via the Prompts settings page.
   - The `/init` slash command can generate a DEVOXXGENIE.md project descriptor and add it to the system prompt for improved contextual responses.
-- No
 
 ### Tools
 - Yes
   - DevoxxGenie integrates RAG tooling (ChromaDB) and local model runners (Ollama, GPT4All) to provide semantic search and local LLM execution. It also supports cloud provider tools via API connectors (OpenAI, Anthropic, Gemini, etc.).
-- No
 
 ### Resources
 - Yes
   - Project README and JetBrains Marketplace listing provide usage docs and release notes. Community videos and blog posts (Devoxx talks, YouTube demos) supplement official docs.
-- No
 
 ## Deployment
 
@@ -124,7 +121,6 @@ DevoxxGenie is an IntelliJ IDEA plugin (100% Java-based) that provides an LLM-po
 - Yes
   - Supports prompt-style slash commands from the input field (notably `/init` to create a DEVOXXGENIE.md project descriptor).
   - Commands and shortcuts are entered directly in the chat input and can be combined with context selections (files, images, project scanner options).
-- No
 
 ### CustomModes
 - Yes

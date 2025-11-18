@@ -1,50 +1,75 @@
 version: 1.0.0
 title: Update AI Coding Comparison note
 description: Research and summarize software/tools using web sources, updating notes using a provided markdown template
-prompt: Research the topic from {{ filename }} and focus on the ToDo sections and update markdown file {{ filename }} 
+prompt: |
+  Research the AI coding tool documented in {{ filename }}.
+  Focus on sections containing [TODO] markers or incomplete fields (empty dashes "-").
+  Update the markdown file {{ filename }} with researched information while preserving the existing template structure. 
 instructions: |
 
-  Research with reputable sources, and summarize software/tools using web sources.
-  For each item: 
-    (1) research with reputable sources, 
-    (2) update the note using the provided template as used in {{ filename }} 
-    CRITICAL Do not add any other heading sections. 
-     
-  The template depends heavily on heading 2 grouping and heading 3 criteria declarations and unordered indented lists. 
-  For Yes/No only one value is valid. Any comments must be added as unordered indented list items.
-  If you do not know the answer, leave the section blank.
+  # Research Guidelines
+  Research with reputable sources (official documentation, technical blogs, GitHub repositories).
+
+  # Update Process
+  For each AI coding tool or section marked [TODO] or incomplete:
+    (1) Research using at least 2-3 reputable sources
+    (2) Update the corresponding section in {{ filename }} using the existing template structure
+
+  # Template Structure (DO NOT modify heading structure)
+  The markdown template uses:
+    - ## (Heading 2) for major category grouping
+    - ### (Heading 3) for specific criteria/fields
+    - Unordered lists (- item) for values and explanations
+
+  IMPORTANT: Do not add, remove, or modify any heading sections (## or ###).
+  Only update content within existing sections.
+
+  # Formatting Rules
+
+  For Yes/No fields:
+    - Use only "Yes" or "No" (capitalized)
+    - Add clarifications as indented bullet points below:
+      - Yes
+        - Additional context as bullet point
+    - Leave blank (empty dash: "-") if unknown
+
+  For all other fields:
+    - Follow the format shown in existing completed sections
+    - Use "-" for empty/unknown fields
+    - Add explanatory notes as indented bullet points when needed
+
   Do not include any additional explanations for the user, only fill out the provided sections.
 
 extensions:
 - type: builtin
   name: developer
   display_name: Developer
-  description: null
+  description: Built-in developer extension for code analysis and file operations
   timeout: 300
   bundled: true
-  available_tools: []
+  available_tools: []  # All tools available by default
 
 - type: stdio
   name: perplexityai
-  cmd: node
+  cmd: node  # Requires: Node.js 18.0.0+ installed and in PATH
   args:
-  - /home/cb/TOOLBOX/MCP/perplexity-mcp/build/index.js
+  - ${PERPLEXITY_MCP_PATH:-./mcp/perplexity-mcp/build/index.js}  # Requires: Set PERPLEXITY_MCP_PATH env var or install to ./mcp/perplexity-mcp/build/index.js
   envs: {}
   env_keys: []
   timeout: 300
   description: use perplexity for extensive web research, gathering all data and references
-  bundled: null
-  available_tools: []
+  bundled: false
+  available_tools: []  # MCP-provided tools loaded dynamically
 
 settings:
   goose_provider: openai
-  goose_model: gpt-5-mini
+  goose_model: gpt-4o  # Valid models: gpt-4o, gpt-4-turbo, gpt-4, gpt-3.5-turbo
   temperature: 0.1
 
 parameters:
   - key: filename
     input_type: string
-    requirement: required 
+    requirement: required
     description: the filename of the note to complete research for and update
 
 activities:

@@ -4,10 +4,11 @@ A terminal-native, open-source AI coding assistant that brings LLM-powered code 
 ## General Info
 
 ### Classification
-- Code/Editor
+- Code/Terminal
 
 ### Version
-v (2025-10-19)
+- Unknown (2025-10-19)
+  - Version information not available; check repository for current version
 
 ### Repo
 - https://github.com/sst/opencode
@@ -19,8 +20,6 @@ v (2025-10-19)
 
 ### Short Description
 A terminal-native, local-first AI coding assistant with a TUI for interactive planning and building; supports local and cloud LLMs, LSP integration, git-aware editing, and extensible skills/actions.
-
--
 
 ### Description
 OpenCode is an open-source AI assistant designed for use from the terminal. It provides a conversational interface and a suite of programmatic tools (file operations, grep/glob, patch/apply, diagnostics, shell execution, fetch, Sourcegraph search, etc.) that allow the assistant to read, explain, modify and create code in the context of a repository. OpenCode supports both cloud and local LLMs (through Models.dev and adapters such as Ollama), can initialize project context, produce implementation plans, and then switch to a build mode to apply edits. Its architecture supports extensible actions/skills and hierarchical agents for complex tasks.
@@ -49,7 +48,8 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
 - MIT
 
 ### FreeTrial
-- Yes
+- N/A
+  - Open-source software (permanently free), not a time-limited trial
 
 ## MCP-Client
 
@@ -135,6 +135,3 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
 ### SpecDrivenDevelopment
 - Other
   - OpenCode is not bundled with or tied to specific spec-driven frameworks (BMAD, SpecKit, OpenSpec, Tessl, AgentOS, ClaudeFlow, SPARC, SuperClaude). It can, however, support spec-driven workflows through Plan Mode and scripted skills—developers would integrate their preferred SDD tooling themselves rather than rely on a built-in spec framework.
-
-## Classification
-- Code/Terminal

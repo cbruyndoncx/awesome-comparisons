@@ -33,8 +33,8 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
 - Go
 - C#
 - Ruby
-- Other
-  - Other common languages (multi-language support via static analysis and AST parsing)
+- Multi-language support via static analysis and AST parsing
+  - Supports additional common languages beyond those listed above
 
 ### Notes
 - Key features:
@@ -87,9 +87,9 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
 - Not publicly documented
 
 ### LocalOffline
-- No 
-  - cloud SaaS by default
-  - A self-hosted option is referenced by the vendor, but detailed on-prem / air-gapped support and offline capabilities are not publicly documented.
+- Yes (Enterprise self-hosted option available)
+  - Cloud SaaS by default
+  - Self-hosted option is referenced by the vendor for enterprise customers, but detailed on-prem / air-gapped support and offline capabilities are not publicly documented.
 
 ## Developer Experience
 

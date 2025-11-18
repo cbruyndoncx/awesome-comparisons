@@ -7,7 +7,8 @@ An open-source autonomous AI coding assistant with RAG-powered completions and i
 - Code/Editor
 
 ### Version
-(2025-10-19)
+- Unknown (last checked 2025-10-19)
+  - Check GitHub releases for current version
 
 ### Repo
 - https://github.com/smallcloudai/refact
