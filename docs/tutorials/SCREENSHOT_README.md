@@ -12,8 +12,14 @@ npm start
 
 # 2. Wait for server to be ready at http://localhost:4200
 
-# 3. Run the automated capture script
-node scripts/capture-screenshots-track-a.js
+# 3. Run screenshot capture for specific track
+npm run screenshots:track-a  # End User Guide
+npm run screenshots:track-b  # Content Editor Guide
+npm run screenshots:track-c  # Administrator Guide
+npm run screenshots:track-d  # Developer Guide
+
+# OR capture all tracks at once
+npm run screenshots:all
 ```
 
 ### Option 2: Manual
@@ -28,11 +34,9 @@ Follow the detailed checklist:
 ### For Automated Capture
 
 1. **Node.js and npm** (already installed)
-2. **Puppeteer** (install if needed):
-   ```bash
-   npm install puppeteer
-   ```
-3. **Running dev server**:
+2. **Playwright** (already installed as dev dependency)
+3. **Chrome browser** (or Chromium) installed on your system
+4. **Running dev server** (for web-based screenshots):
    ```bash
    npm start
    # Wait for: http://localhost:4200
@@ -69,7 +73,7 @@ Follow the detailed checklist:
 9. table-sorted-by-rating.png
 10. mobile-comparison-view.png (optional)
 
-**Status:** ✅ Automated script available
+**Status:** ✅ Automated Playwright script available
 
 ### Track B: Content Editor Guide
 **Total:** 5 screenshots
@@ -83,7 +87,7 @@ Follow the detailed checklist:
 14. create-new-markdown-file.png
 15. git-commit-new-entry.png
 
-**Status:** ⏳ Manual capture required (file system + editor)
+**Status:** ✅ Guidance script available (manual capture with detailed instructions)
 
 ### Track C: Administrator Guide
 **Total:** 9 screenshots
@@ -91,17 +95,17 @@ Follow the detailed checklist:
 **Topics:** Admin interface, configuration, inheritance
 
 **Screenshots:**
-16. admin-interface-overview.png
-17. catalog-tree-expanded.png
-18. criteria-form-filled.png
-19. groups-section.png
-20. diff-viewer-add-criterion.png
-21. save-confirmation.png
-22. datasets-manifest.png
-23. comparison-default-yml.png
-24. dataset-specific-config.png
+16. admin-interface-overview.png (automated)
+17. catalog-tree-expanded.png (automated)
+18. criteria-form-filled.png (automated)
+19. groups-section.png (automated)
+20. diff-viewer-add-criterion.png (automated)
+21. save-confirmation.png (automated)
+22. datasets-manifest.png (manual - file editor)
+23. comparison-default-yml.png (manual - file editor)
+24. dataset-specific-config.png (manual - file editor)
 
-**Status:** ⏳ Automated script TODO
+**Status:** ✅ Automated Playwright script (6/9 automated, 3 require manual file editor screenshots)
 
 ### Track D: Developer Guide
 **Total:** 5 screenshots
@@ -115,28 +119,25 @@ Follow the detailed checklist:
 28. build-output.png
 29. dev-server-running.png
 
-**Status:** ⏳ Manual capture required (IDE + terminal)
+**Status:** ✅ Guidance script available (manual capture with detailed instructions)
 
 ---
 
-## Using the Automated Script
+## Using the Automated Scripts
 
-### Track A Script
+All screenshot scripts use **Playwright** for browser automation. Prerequisites:
+- Dev server must be running (`npm start`)
+- Chrome or Chromium browser installed
 
-The automated script (`scripts/capture-screenshots-track-a.js`) will:
-- Launch headless Chrome
-- Navigate to all required pages
-- Apply filters and interactions
-- Capture screenshots with proper naming
-- Save to correct directories
+### Track A Script (End User)
+
+**Automated:** 8/10 screenshots
+- Captures all main comparison interactions
+- Requires manual: excel-export-example.png, groups-expanded-collapsed.png
 
 **Run it:**
 ```bash
-# Make sure dev server is running first!
-npm start
-
-# In another terminal:
-node scripts/capture-screenshots-track-a.js
+npm run screenshots:track-a
 ```
 
 **Output:**
@@ -154,6 +155,54 @@ Starting Track A screenshot capture...
 ✅ Track A screenshot capture complete!
 📁 Screenshots saved to: docs/tutorials/images/track-a
 ```
+
+### Track B Script (Content Editor)
+
+**Manual guidance:** All 5 screenshots require manual capture
+- File system views (VS Code Explorer)
+- Markdown editor screenshots
+- Terminal git commands
+
+**Run it:**
+```bash
+npm run screenshots:track-b
+```
+
+Provides detailed instructions for each screenshot.
+
+### Track C Script (Administrator)
+
+**Automated:** 6/9 screenshots
+- Admin interface navigation
+- Criteria forms, diff viewer, etc.
+- Requires manual: 3 file editor screenshots
+
+**Run it:**
+```bash
+npm run screenshots:track-c
+```
+
+### Track D Script (Developer)
+
+**Manual guidance:** All 5 screenshots require manual capture
+- Code structure views (VS Code)
+- Terminal build output
+- Component code examples
+
+**Run it:**
+```bash
+npm run screenshots:track-d
+```
+
+Provides detailed instructions for each screenshot.
+
+### Run All Tracks
+
+```bash
+npm run screenshots:all
+```
+
+Executes all four track scripts sequentially.
 
 ### What the Script Can't Do
 
@@ -385,17 +434,24 @@ git push -u origin HEAD
 
 ### Automated Script Issues
 
-**Problem:** `Cannot find module 'puppeteer'`
+**Problem:** `Cannot find module 'playwright-core'`
 ```bash
-# Solution: Install Puppeteer
-npm install puppeteer
+# Solution: Playwright is a dev dependency, install it
+npm install
+```
+
+**Problem:** Browser not found / executable path error
+```bash
+# Solution: Set CHROME_PATH environment variable
+export CHROME_PATH=/path/to/your/chrome
+# Or install Chrome/Chromium on your system
 ```
 
 **Problem:** Script hangs or times out
 ```bash
 # Solution: Increase timeouts in script
-# Edit: scripts/capture-screenshots-track-a.js
-# Change: await waitForLoad(page, 3000); // Increase to 5000
+# Edit: scripts/capture-screenshots-track-{a,b,c,d}.js
+# Change: await page.waitForTimeout(3000); // Increase to 5000
 ```
 
 **Problem:** Screenshots are blank or incomplete
@@ -409,6 +465,7 @@ npm install puppeteer
 ```bash
 # Solution: Update selectors in script to match your UI
 # Check browser DevTools to find correct selectors
+# Playwright locators are flexible - see docs
 ```
 
 ### Manual Capture Issues
@@ -464,11 +521,13 @@ npm install puppeteer
 
 | Track | Screenshots | Automated | Manual | Total |
 |-------|-------------|-----------|--------|-------|
-| A | 10 | 5 min | 30 min | 35 min |
-| B | 5 | N/A | 20 min | 20 min |
-| C | 9 | TBD | 40 min | 40 min |
-| D | 5 | N/A | 15 min | 15 min |
-| **Total** | **29** | - | - | **~2 hours** |
+| A | 10 | 5 min | 10 min (2 manual) | 15 min |
+| B | 5 | N/A | 20 min (all manual) | 20 min |
+| C | 9 | 5 min | 15 min (3 manual) | 20 min |
+| D | 5 | N/A | 15 min (all manual) | 15 min |
+| **Total** | **29** | **~10 min** | **~60 min** | **~70 min** |
+
+**Automation Coverage:** 14/29 screenshots (48%) can be automated
 
 ---
 
@@ -511,7 +570,7 @@ npm install puppeteer
 - [Tutorial Track D](track-d-developer.md) - Developer tutorial
 
 ### Tools
-- **Puppeteer:** https://pptr.dev/
+- **Playwright:** https://playwright.dev/
 - **Chrome DevTools:** https://developer.chrome.com/docs/devtools/
 - **TinyPNG:** https://tinypng.com
 - **Squoosh:** https://squoosh.app
