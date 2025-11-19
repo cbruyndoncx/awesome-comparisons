@@ -200,15 +200,3 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
   - Sources:
     - dynamic_task__create_task and subagent__execute_task tool descriptions
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - The `cn` CLI provides an interactive TUI and a headless mode for scripted and CI uses.
-
-### SpecDrivenDevelopment
-- Tessl
-  - This project explicitly uses Tessl for Spec Driven Development. See .tessl/framework/agents.md and the project's Spec Driven Development documentation for detailed workflows and rules.
-  - Sources:
-    - .tessl/framework/agents.md
-    - docs/spec-driven-development.md

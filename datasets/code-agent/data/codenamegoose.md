@@ -120,12 +120,3 @@ Codename Goose is an open-source, on-machine AI agent framework created to autom
 - Yes
   - Supports sub-recipes and subagents to delegate specialized work and compose larger workflows from smaller agent units.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Provides a CLI for scripting and interactive control.
-
-### SpecDrivenDevelopment
-- No explicit support for the listed third-party spec frameworks
-  - Goose uses Recipes and sub-recipes as its primary method for specifying workflows and behavior rather than formal spec frameworks like Tessl or AgentOS.

@@ -104,10 +104,3 @@ AiderDesk is a sophisticated desktop application that brings all the power of Ai
 ### Subagents
 - Yes
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Other

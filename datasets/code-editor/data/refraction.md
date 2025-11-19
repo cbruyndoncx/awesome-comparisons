@@ -120,11 +120,3 @@ Refraction is a web-first AI development assistant (refraction.dev) which helps 
 - No
   - Refraction does not document any capability to define or orchestrate specialized AI subagents for task-specific workflows; its model is centered on discrete generation tasks (refactors, tests, docs) per request.
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Other
-  - None — Refraction is a focused developer productivity assistant (refactors, tests, docs) and is not a spec-driven development framework

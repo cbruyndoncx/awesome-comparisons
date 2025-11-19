@@ -124,16 +124,3 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
 - No
   - The repo does not implement a subagent orchestration framework; parallel specialized agents would need to be composed externally.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Usable as a Python library and in repo-driven workflows; CLI/recipe-style usage patterns exist for iterative development.
-
-### SpecDrivenDevelopment
-- None
-  - Smol uses simple Markdown-spec driven workflows for generation but does not natively implement named SDD frameworks (e.g., Tessl, SpecKit). Users author specs in Markdown which act as the canonical source for generation.
-
-## Notes
-- Primary references: GitHub repository https://github.com/smol-ai/developer, project README and LICENSE.
-- Practical considerations: while the project is open-source, effective usage requires access to a capable LLM. Modal is used in some deployment examples and can simplify dependency/runtime packaging.

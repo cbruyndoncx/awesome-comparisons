@@ -99,10 +99,3 @@ GPTutor is a Visual Studio Code extension launched in 2025 that specializes in e
 ### Subagents
 - No
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Other

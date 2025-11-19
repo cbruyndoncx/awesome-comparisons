@@ -167,12 +167,3 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
     - MCP-enabled connectors: MCP servers act as specialized tool connectors (Jira, Figma, EKS server) that the assistant can query as part of an orchestrated workflow.
     - Automated test/code-review agents: built-in units for generating tests and performing code reviews behave like task-specialist agents executed within the IDE.
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-  - Primary surface: IDE plugins and AWS Console chat. There is no official terminal-only interactive CLI assistant equivalent documented as the main surface.
-
-### SpecDrivenDevelopment
-- No
-  - No documented, built-in support or official integrations for specific Spec Driven Development frameworks (BMAD, SpecKit, OpenSpec, Tessl, AgentOS, ClaudeFlow, SPARC, SuperClaude). Amazon Q provides workspace analysis, prompts, and MCP integrations that can be incorporated into spec-driven workflows, but there is no evidence of first-class adapters or direct support for these named frameworks.

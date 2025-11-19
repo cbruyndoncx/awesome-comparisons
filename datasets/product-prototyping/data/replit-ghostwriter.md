@@ -133,13 +133,3 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 - Yes
   - Ghostwriter is complemented by Replit Agent, which provides multi-step planning, execution, and autonomous behaviors. While Ghostwriter itself is primarily an assistant for inline edits and chat, Agent can be considered a higher-level subagent for orchestrating builds, checkpoints and deployment workflows. There is no public API for defining custom subagents within Ghostwriter as of available documentation.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Replit includes an integrated Shell/terminal in the web IDE where developers can run CLI tools, Git commands, and build scripts. Ghostwriter itself is not provided as a standalone CLI, but generated code and Agent workflows can be executed via the terminal in a Replit workspace.
-
-
-### SpecDrivenDevelopment
-- Other
-  - Replit does not advertise a specific spec-driven development framework in its public Ghostwriter documentation. Replit Agent and workspace features can be used to implement spec-driven workflows, but no branded SDD method is documented.

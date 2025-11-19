@@ -131,14 +131,3 @@ Void is an open-source, privacy-focused AI code editor that forks the Visual Stu
   - Void supports autonomous "Agent Mode" which runs multi-step workflows where the model can read files, propose changes, and run terminal commands. While not described as a formal multi-agent framework, Agent Mode functions as a specialized subagent that can be granted permissions (read/write/terminal) and operate semi-autonomously.
   - Users can select models for Agent Mode (local or cloud) and control behavior through editable prompts and configuration, enabling task-specific agent behaviors (e.g., code-rewrite agent, audit agent via Gather Mode).
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-- Other
-  - Void Editor is not itself a spec-driven-development tool; it is an AI-powered code editor. There is no native mapping to the named SDD frameworks (BMAD, SpecKit, OpenSpec, Tessl, AgentOS, ClaudeFlow, SPARC, SuperClaude). However, Void's prompt-editing, workspace awareness and Agent/Gather modes can be combined with external SDD tooling (e.g., Tessl or a spec runner) by using extensions or workspace scripts to enforce spec-driven workflows.
-
-
-<!-- Appended research note: sources used during research: Void project website and docs, public blog posts and community coverage (Hacker News, product posts). -->

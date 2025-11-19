@@ -124,12 +124,3 @@ Sources: GitHub repository (https://github.com/openai/codex) and project documen
 - Yes
   - Workflows often include specialized agent roles (e.g., review agents, testing agents) and the CLI supports multi-step plans that can incorporate distinct agent behaviors.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-
-
-<!-- If unknown: leave blank. -->

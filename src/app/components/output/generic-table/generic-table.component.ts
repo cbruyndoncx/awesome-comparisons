@@ -14,6 +14,13 @@ interface ColumnGroupSpan {
     isPrimaryColumn: boolean;
 }
 
+interface VisibleColumnDefinition {
+    key: string | null;
+    name: string;
+    type: string | null;
+    index: number;
+}
+
 @Component({
     selector: 'generictable',
     templateUrl: './generic-table.component.html',
@@ -146,14 +153,17 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
         return description;
     }
 
-    public getGroupHeaderSpans(columnGroupMap: Record<string, string>, groupLookup: Record<string, FeatureGroupView>): ColumnGroupSpan[] {
+    public getGroupHeaderSpans(columnGroupMap: Record<string, string>, groupLookup: Record<string, FeatureGroupView>, columnDefs?: Array<{ key: string | null }>): ColumnGroupSpan[] {
         const spans: ColumnGroupSpan[] = [];
-        if (!Array.isArray(this.columnKeys) || this.columnKeys.length === 0) {
+        const sourceKeys: Array<string | null> = Array.isArray(columnDefs) && columnDefs.length > 0
+            ? columnDefs.map(def => def?.key ?? null)
+            : (Array.isArray(this.columnKeys) ? this.columnKeys : []);
+        if (sourceKeys.length === 0) {
             return spans;
         }
         const map = columnGroupMap || {};
         const lookup = groupLookup || {};
-        this.columnKeys.forEach((columnKey, index) => {
+        sourceKeys.forEach((columnKey, index) => {
             const isPrimaryColumn = index === 0;
             const groupKey = (!isPrimaryColumn && columnKey) ? map[columnKey] || null : null;
             const last = spans[spans.length - 1];
@@ -171,6 +181,52 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
             });
         });
         return spans;
+    }
+
+    public getVisibleColumns(columnGroupMap: Record<string, string>, groupLookup: Record<string, FeatureGroupView>): VisibleColumnDefinition[] {
+        const visible: VisibleColumnDefinition[] = [];
+        const keys = Array.isArray(this.columnKeys) ? this.columnKeys : [];
+        const names = Array.isArray(this.columns) ? this.columns : [];
+        const types = Array.isArray(this.types) ? this.types : [];
+        keys.forEach((columnKey, index) => {
+            const columnName = names[index] ?? '';
+            if (this.shouldHideColumnLabel(columnKey, columnName, columnGroupMap, groupLookup)) {
+                return;
+            }
+            visible.push({
+                key: columnKey,
+                name: columnName,
+                type: types[index] ?? null,
+                index
+            });
+        });
+        return visible;
+    }
+
+    public shouldHideColumnLabel(columnKey: string | null, columnName: string | null | undefined, columnGroupMap: Record<string, string>, groupLookup: Record<string, FeatureGroupView>): boolean {
+        if (!columnName) {
+            return false;
+        }
+        const effectiveColumnName = String(columnName).trim();
+        if (!effectiveColumnName) {
+            return false;
+        }
+        if (columnKey && columnGroupMap && columnGroupMap[columnKey]) {
+            return false;
+        }
+        const normalizedName = effectiveColumnName.toLowerCase();
+        if (columnKey && groupLookup && groupLookup[columnKey] && groupLookup[columnKey].displayName && groupLookup[columnKey].displayName.trim().toLowerCase() === normalizedName) {
+            return true;
+        }
+        if (groupLookup) {
+            for (const key of Object.keys(groupLookup)) {
+                const group = groupLookup[key];
+                if (group?.displayName && group.displayName.trim().toLowerCase() === normalizedName) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     public resolveEditLink(rowIndex: number): string | null {

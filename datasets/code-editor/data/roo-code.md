@@ -129,12 +129,3 @@ RooCode is designed to be more than an autocomplete plugin — it functions as a
 - Yes
   - RooCode supports composing multi-step workflows (Boomerang tasks) and persona-driven sub-workflows that act like subagents. MCP servers and custom modes can delegate specific responsibilities (running tests, managing containers, calling external APIs), enabling specialized subagent-like behavior for task-specific automation.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Supports running terminal commands and automation as part of tasks and modes.
-
-### SpecDrivenDevelopment
-- Other
-  - RooCode is an AI coding assistant/IDE extension rather than a spec-driven development framework. It does not ship with a native SDD framework, though it can be used alongside any spec-driven workflow (including Tessl or custom spec tools) by operating on the same workspace files and automating edits based on spec requirements.

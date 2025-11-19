@@ -124,12 +124,3 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
 - No
   - Diffblue's architecture may include internal components for analysis and generation, but it does not expose configurable AI subagents for end-users.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - CLI access is available in paid/teams tiers for CI and automation use-cases.
-
-### SpecDrivenDevelopment
-- 
-  - No explicit integrations with the listed Spec Driven Development toolkits; Cover focuses on generating runnable JUnit/TestNG tests and integrates with standard Java build and CI tooling.

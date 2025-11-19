@@ -170,12 +170,3 @@ Pythagora is an AI-driven development assistant that can generate full-stack web
   - Pythagora is designed around multiple specialized agents (publicly discussed as ~14 agents) that coordinate to plan, generate, review, test, debug and deploy applications. These subagents cover distinct roles such as planning, frontend generation, backend generation, test generation, and debugging.
   - The architecture appears to be orchestrated so that agents pass artifacts and logs among themselves; however, there is no public API documented for creating custom subagents or directly wiring new agent types (the system is opinionated and prebuilt agents do the heavy lifting).
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Offers CLI commands (e.g. npx pythagora ...) to generate tests and scaffold code.
-
-### SpecDrivenDevelopment
-- Other
-  - Pythagora does not advertise adherence to the named spec-driven development frameworks. Its workflow centers on iterative generation, testing, and deployment powered by multi-agent orchestration rather than a formal SDD methodology. If integrating with a spec-driven process (for example Tessl), teams would rely on exporting the generated code and tests into their spec tooling and version control rather than integrate directly with a Pythagora-native SDD system.

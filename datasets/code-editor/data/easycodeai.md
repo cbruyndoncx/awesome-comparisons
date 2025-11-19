@@ -185,16 +185,3 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 - Agentic workflows and task decomposition suggest subagent-like behavior (automated planners, implementation workers and debug tracers); exposes multi-step task orchestration.
 
-## Ungrouped Criteria
-
-### Terminal
-<!-- ToDo -->
-<!-- Coding tool can operate in a terminal/cli environment -->
-<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
-- No
-<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-- Primary interfaces are the Flow GUI and editor extensions (VS Code/JetBrains); no documented standalone CLI-only workflow.
-
-### SpecDrivenDevelopment
-- Other
-  - No public documentation indicating first-class support for BMAD, SpecKit, Tessl or other spec-driven frameworks; EasyCode focuses on planning/implementation flows rather than formal spec tooling

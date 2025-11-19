@@ -158,12 +158,3 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
 - Yes
   - ToolJet provides AI/automation capabilities (Agent Builder / automation workflows in enterprise editions) that act like specialized subagents: they can orchestrate queries, connectors, and LLM calls to automate tasks or respond to prompts. Additionally, integrations with LLMs and MCP enable external AI assistants to interact with ToolJet programmatically.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Supports JavaScript/Python snippets inside apps and provides a CLI for developers.
-
-### SpecDrivenDevelopment
-- Other
-  - ToolJet does not natively implement a specific spec-driven development framework. It can be used as the execution/runtime layer for apps produced by spec-driven workflows, and can integrate with CI/Git-based workflows; but there is no built-in, opinionated Spec-DSL. Teams can adopt Tessl, OpenSpec or other SDD tools alongside ToolJet to manage specs, then implement/generate apps that run in ToolJet

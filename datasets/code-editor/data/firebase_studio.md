@@ -138,12 +138,3 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
 - Yes
   - App Prototyping agent handles specialized tasks for app generation and scaffolding
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Full coding workspace includes terminal access for builds, package managers, and CLI workflows.
-
-### SpecDrivenDevelopment
-- Other
-  - Firebase Studio does not advertise a named spec-driven development framework in public previews; its development patterns are centered on templates, App Blueprints, and the App Prototyping agent rather than a formal SDD framework like Tessl or SpecKit.

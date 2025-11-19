@@ -128,28 +128,3 @@ Designed for Pro, Max, Team and Enterprise customers, Claude Desktop aims to mak
   - Subagents are specialized AI assistants for task-specific workflows. They can be invoked by commands or Skills and run in isolated contexts to perform planning, analysis, or tool orchestration.
 
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Tessl
-  - Unknown - Claude Desktop does not have documented first-class support for Tessl workflows.
-- SpecKit
-  - Unknown - No documented SpecKit integration for Claude Desktop.
-- OpenSpec
-  - Unknown
-- BMAD
-  - Unknown
-- AgentOS
-  - Unknown
-- ClaudeFlow
-  - Unknown
-- SPARC
-  - Unknown
-- SuperClaude
-  - Unknown
-  - Notes:
-    - Claude Desktop is a general-purpose AI assistant focused on productivity and file workflows rather than coding-specific spec-driven development. For formal spec-driven development workflows that require tight VCS and build integrations, consider using dedicated coding agents.
-

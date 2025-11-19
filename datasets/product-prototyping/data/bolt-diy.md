@@ -122,12 +122,3 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
   - MCP tooling and provider integrations enable multi-step workflows where assistants can call external tools and services (effectively subagents) to perform specialized tasks (e.g., DB migrations, deploy pipelines).  Not described as named "subagents" in docs but the behavior is supported via MCP tool-calls.
 
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-- No
-  - Bolt.diy does not natively implement a Spec-Driven Development (SDD) framework such as Tessl or GitHub Spec Kit. It is an AI-powered IDE focused on prompt-driven code generation and interactive editing. Teams can adopt SDD practices on top of bolt.diy (for example by keeping spec files in the repository and using the assistant to follow them), but there is no built-in SDD enforcement or formal spec workflow in the documented features.
-

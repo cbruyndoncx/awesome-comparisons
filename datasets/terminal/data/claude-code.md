@@ -125,14 +125,3 @@ The tool is focused on large-context reasoning, multi-file code transformations,
 - Yes
   - Claude Code supports agentic, multi-step workflows where the assistant can run sequences of commands, apply edits, run tests, and re-evaluate results. Project scripts and MCP-style integrations can be used to orchestrate more complex subagent behaviors.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-- No
-  - Claude Code does not ship with built-in support for any single spec-driven development framework by default. It is a general-purpose CLI assistant that can be integrated into spec-driven workflows (Tessl, SpecKit, etc.) via custom project files and scripts, but there is no official, first-class integration shipped with the CLI itself.
-
-### End
-

@@ -130,13 +130,3 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
   - No public documentation available regarding subagent or multi-agent architecture.
 
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Provides an interactive shell in its UI so the agent can run commands and manage environments
-
-### SpecDrivenDevelopment
-
-
----

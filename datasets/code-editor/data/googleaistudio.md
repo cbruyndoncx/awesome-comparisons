@@ -184,12 +184,3 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
 
 - Studio supports composing multi-step apps via function-calling and tool integrations; integrations and MCP-style adapters enable creating specialised tool pipelines that act as subagents for tasks like transcription + summarization + extraction.
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-  - Interaction is through the web UI (Playground, chat, multimodal inputs) and exported code; no integrated shell/terminal is advertised.
-
-### SpecDrivenDevelopment
-- None
-  - No explicit, first-class support for community Spec‑Driven frameworks (Tessl, BMAD, SpecKit, AgentOS, etc.) is documented; teams typically export code and integrate with their own SDLC and spec tools outside Studio.

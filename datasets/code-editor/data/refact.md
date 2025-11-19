@@ -144,12 +144,3 @@ Refact.ai includes support for the Model Context Protocol (MCP) ecosystem. The p
   - Refact.ai supports autonomous agent workflows that can be configured to run multi-step tasks (e.g., run tests, create branches, commit changes, open PRs) and integrate with external tools (Git, Docker, DBs, shell) when enabled.
   - Agents leverage the repo index + tool integrations to execute actions, follow-up on results, and iterate (plan→execute→verify) across the codebase.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Agent can execute shell commands, interact with Docker, run tests and debuggers (e.g., pdb) when permitted by deployment configuration.
-
-### SpecDrivenDevelopment
-- Other
-  - None : Refact.ai is a code-assistant / autonomous-engineering agent and does not itself prescribe a specific spec-driven development framework

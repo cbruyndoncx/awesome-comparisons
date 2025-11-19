@@ -104,10 +104,3 @@ CodeLLM is a revolutionary AI code editor by Abacus.AI that helps developers 10x
 ### Subagents
 - Yes
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Other

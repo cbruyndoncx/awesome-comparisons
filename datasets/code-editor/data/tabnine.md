@@ -138,11 +138,3 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
 ### Subagents
 - No
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Other
-  - Tabnine does not natively implement a spec-driven development framework. It is workflow-agnostic and can be used alongside SDD tools (Tessl, OpenSpec, etc.) but offers no built-in spec-to-code or spec-management features. Enterprise customers can integrate Tabnine into their development workflows (including spec-driven ones) by configuring model training, repository indexing, and IDE settings to align with SDD practices.

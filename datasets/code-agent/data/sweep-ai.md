@@ -112,10 +112,3 @@ Sweep is an intelligent open-source AI assistant that automates typical develope
 ### Subagents
 - No
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Other

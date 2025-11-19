@@ -122,11 +122,3 @@ CodeLayer is an open-source, keyboard-first IDE and orchestration layer for AI c
 - Yes
   - CodeLayer is built for multi-agent orchestration: MULTICLAUDE enables running multiple Claude Code sessions in parallel (effectively specialized subagents) bound to separate worktrees or tasks. The HumanLayer SDK pattern also encourages defining specialized agent/tool functions (including "human as a tool") that act as subagents for task-specific workflows and human-in-the-loop approvals.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-- Other
-  - HumanLayer / CodeLayer does not advertise a named spec-driven development framework like Tessl or BMAD; instead it emphasizes "context engineering" and battle-tested multi-agent workflows. Teams typically codify workflows via session templates, prompt engineering artifacts, and SDK-driven approval specs rather than a formalized external SDD framework.

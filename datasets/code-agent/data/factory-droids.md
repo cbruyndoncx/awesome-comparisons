@@ -105,10 +105,3 @@ Factory introduced "Droids" as autonomous software development agents that becam
 ### Subagents
 - Yes
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-- Other

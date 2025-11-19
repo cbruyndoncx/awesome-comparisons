@@ -126,18 +126,3 @@ Key capabilities include automated planning (breaking objectives into actionable
 - Yes
   - Supports decomposing work into sub-tasks/agents (planner, researcher, executor) and orchestrates them to complete complex jobs; architecture enables parallel or staged task execution.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Provides CLI and web UI components; integrates with local runtimes (Bun, Ollama) and shells for execution.
-
-### SpecDrivenDevelopment
-
-- 
-
----
-
-### Notes on Spec Driven Development
-- No explicit support for Tessl/Spec-driven frameworks is documented; Devika/Opcode focuses on agentic workflows and project orchestration rather than a specific spec-driven tooling standard.
-

@@ -120,11 +120,3 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 - Yes
   - Warp supports running multiple agents and orchestrating multi-agent workflows. While there is multi-agent orchestration and task chaining, there is no widely-published "subagent API" name — orchestration is handled via the agent management UI and planning features.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-- No
-  - Warp does not natively implement specific Spec Driven Development frameworks (BMAD, SpecKit, Tessl, etc.). Teams can encode processes in Drive Workflows and use Drive artifacts to approximate SDD practices, but there is no built-in, first-class support for the listed SDD frameworks.

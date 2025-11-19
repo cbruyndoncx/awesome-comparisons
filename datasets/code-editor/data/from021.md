@@ -124,11 +124,3 @@ The platform emphasizes a structured process (uses MoSCoW prioritization) and ta
 - No
   - From021 does not document the ability to define specialized AI subagents or task-specific agent workflows; AI appears to be built-in to the product flows.
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Other
-  - Not applicable — From021 is a SaaS product focused on product definition and does not advertise using the listed spec-driven development frameworks.

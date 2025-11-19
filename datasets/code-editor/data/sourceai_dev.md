@@ -115,11 +115,3 @@ SourceAI is a web-based AI code generation tool that accepts natural language re
 - No
   - No documentation or feature descriptions indicate support for defining or orchestrating specialized subagents for task-specific workflows.
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Other
-  - No public evidence that SourceAI integrates with or promotes any formal spec-driven development frameworks (Tessl, SpecKit, OpenSpec, etc.). The product is positioned as a quick natural-language-to-code generator rather than a spec-driven development platform.

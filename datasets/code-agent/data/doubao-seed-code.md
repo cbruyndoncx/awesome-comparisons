@@ -105,10 +105,3 @@ Doubao-Seed-Code is ByteDance's professional code generation AI, launched by Vol
 ### Subagents
 - Yes
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-- Other

@@ -101,10 +101,3 @@ Lovable.dev is a 2025 release that combines AI-powered code generation with an i
 ### Subagents
 - No
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Other

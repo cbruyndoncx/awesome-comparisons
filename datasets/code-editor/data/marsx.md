@@ -135,12 +135,3 @@ MarsX is an open-source development platform and marketplace that combines AI as
   - MarsX's per-Micro‑App AI models act like specialized subagents: each microapp carries a model fine-tuned to its domain and usage, serving as a focused assistant for that micro-app's features.
   - The AI orchestrator coordinates between Micro‑App models when they are composed, effectively creating runtime subagent interactions where the parent microapp model delegates to child microapp models.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Cloud IDE typically exposes developer tooling; advanced users can work with code directly.
-
-### SpecDrivenDevelopment
-- Other
-  - MarsX follows a Micro‑App driven composition model rather than a named external spec-driven framework; the platform relies on self-contained Micro‑App manifests/specs (UI + API + DB schema) as the canonical unit of composition and reuse.

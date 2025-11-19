@@ -133,11 +133,3 @@ Windsurf is an AI-powered, agentic development environment (IDE-like) designed t
   - Specialized flows & model selection: Cascade supports creating distinct AI flows with specific settings (model choice, memory, rules) to act like specialized subagents for task-specific workflows (e.g., refactor agent, test-generator agent).
   - Autonomous vs. assistant modes: Write Mode runs more autonomously (multi-step execution), effectively letting a sub-flow perform a sequence of edits and terminal actions under supervision.
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Other
-  - Windsurf is not tied to a single, opinionated spec-driven development framework. Instead it provides flexible automation primitives (flows, rules, memories, extensions) that teams can use to implement SDD processes such as Tessl or other internal spec workflows.

@@ -127,11 +127,3 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
 - Yes
   - The architecture supports hierarchical agents and the spawning of sub-agents (subtasks/skills) for decomposing complex work into smaller steps; custom actions/skills can act as specialized subagents for domain tasks.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-- Other
-  - OpenCode is not bundled with or tied to specific spec-driven frameworks (BMAD, SpecKit, OpenSpec, Tessl, AgentOS, ClaudeFlow, SPARC, SuperClaude). It can, however, support spec-driven workflows through Plan Mode and scripted skills—developers would integrate their preferred SDD tooling themselves rather than rely on a built-in spec framework.

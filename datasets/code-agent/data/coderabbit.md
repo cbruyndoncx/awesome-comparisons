@@ -135,14 +135,3 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
 - Yes
   - Provides agentic workflows and a conversational assistant for multi-step tasks (generate tests, propose fixes, create release notes) though internal subagent architecture details are not public.
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-  - no general-purpose CLI for offline reviews documented (there is CLI tooling for in-terminal feedback but primary offering is cloud-hosted analysis)
-
-### SpecDrivenDevelopment
-- No
-  - No explicit support or integration with Spec Driven Development frameworks (BMAD, Tessl, SpecKit etc.) is documented publicly; teams can still use CodeRabbit alongside SDD processes but native SDD features are not advertised.
-
----

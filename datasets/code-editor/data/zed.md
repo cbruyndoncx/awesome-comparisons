@@ -140,12 +140,3 @@ Zed is a modern code editor engineered for low latency and smooth UX. It renders
 - No
   - There is no explicit public documentation describing named "subagents" you can define and register. Zed does provide an Agent Panel with tool calling, profiles that restrict or grant tool access, and MCP server integration for custom tools — these enable agentic workflows, but the term "subagent" (as separately definable autonomous agents) is not documented in the sources used.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Built-in integrated terminal and task runner.
-
-### SpecDrivenDevelopment
-- Other
-  - Zed itself does not ship a built-in spec-driven development framework (none of the listed frameworks are bundled with the editor). Zed is an extensible editor and can be used alongside spec-driven workflows or external tools (including Tessl, SpecKit, or custom tooling) via its extension system, Agent Panel tools, or external integrations, but no first-class, editor-native SDD framework is documented in the available sources.

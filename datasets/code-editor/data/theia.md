@@ -124,12 +124,3 @@ Eclipse Theia is an open-source, modular IDE framework maintained under the Ecli
 - Yes
   - While Theia does not mandate a specific "AI subagent" framework, it fully supports implementing specialized subagents via extensions: backend services or microservices (HTTP/WebSocket/RPC) that host LLMs or agent orchestration, frontend contributions that present agent UIs (views, webviews, quick-open), and integration points for multi-agent workflows (task APIs, terminals, debug adapters). Projects like Theia AI (and other community extensions) demonstrate how to implement multi-agent assistants and orchestrate them from Theia extensions.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Integrated terminal available (desktop & web). AI features add inline assistance in terminals in recent AI-enabled builds.
-
-### SpecDrivenDevelopment
-- Tessl
-  - Theia itself is an IDE framework and does not enforce a particular spec-driven development tool, but it is compatible with SDD workflows. In projects that use Tessl (like this repo), Theia can be extended to surface Tessl specs, run Tessl tools via tasks/terminals, and provide editor integrations (syntax highlighting, quick actions) for Tessl-managed specs.

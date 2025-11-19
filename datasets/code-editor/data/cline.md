@@ -133,11 +133,3 @@ Cline is designed to act as a development partner rather than a simple autocompl
   - Through the Model Context Protocol (MCP) Cline can add and integrate custom tools/services ("add a tool" flow) that act as specialized subagents for task-specific workflows.
   - These MCP-backed tools can fetch external data (Jira, PagerDuty, cloud APIs), perform operations, and be invoked from plans, effectively functioning as domain-specific subagents.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-- Other
-  - Cline's approach centers on the Model Context Protocol (MCP), memory-bank files and checkpoint-driven iterations (plan → act → checkpoint → review). These mechanisms serve a spec-like governance model for automated changes and tool integrations rather than a named external SDD framework.

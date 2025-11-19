@@ -105,10 +105,3 @@ Manus AI is recognized as the world's first fully autonomous AI agent, developed
 ### Subagents
 - Yes
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-- Other

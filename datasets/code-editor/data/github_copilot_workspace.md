@@ -126,11 +126,3 @@ GitHub Copilot Workspace was an experimental "agentic" IDE hosted by GitHub that
   - These agents coordinated to propose specs, generate concrete plans, produce code diffs, run tests, and attempt repairs when failures occurred.
   - There was no public surface documented for users to author or register their own custom agents; the agent set and behavior were provided by the Workspace service.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-- Other
-  - GitHub Copilot Workspace implemented its own spec-driven workflow (Task → Spec → Plan → Code). This built-in approach functions as an internal spec-driven development method distinct from the listed frameworks; it produces editable specifications and concrete file-level plans which are then applied as code diffs and PRs.

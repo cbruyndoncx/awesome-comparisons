@@ -139,12 +139,3 @@ JetBrains AI Assistant embeds AI workflows directly inside JetBrains IDEs and le
 - Yes
   - JetBrains provides an autonomous "agent" capability (often referenced as Junie or Agent mode) that can plan and execute multistep tasks: run tests or terminal commands, make multi-file edits, and report progress. This functions as a specialized subagent for complex workflows where the assistant performs a sequence of actions with user review points.
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-  - AI Assistant is provided inside JetBrains IDE UIs; there is no native terminal-only assistant shipped as a separate TUI (some IDE features can be used alongside integrated terminals).
-
-### SpecDrivenDevelopment
-- Other
-  - None specific: JetBrains AI Assistant is not tied to a named spec-driven development framework in public documentation. It integrates with IDE workflows rather than prescribing a particular spec-driven development methodology.

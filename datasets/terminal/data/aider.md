@@ -124,11 +124,3 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 - No
   - Does not expose a named subagent framework; supports autonomous execution modes (auto-approve) but not first-class subagent definitions.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-- No
-  - Aider is a terminal-based coding assistant focused on interactive chat workflows, not a spec-driven development framework

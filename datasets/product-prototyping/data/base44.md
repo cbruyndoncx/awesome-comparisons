@@ -105,10 +105,3 @@ Base44 is an AI-powered application development platform that enables users to c
 ### Subagents
 - No
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Other

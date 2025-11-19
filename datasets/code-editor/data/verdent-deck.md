@@ -125,12 +125,3 @@ Key capabilities include project-wide code indexing, plan decomposition, paralle
 - Yes
   - Work is decomposed and routed to specialized subagents that execute in parallel where appropriate.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Integrates with developer workflows and git; Deck is focused on high-level orchestration rather than being a terminal IDE replacement.
-
-### SpecDrivenDevelopment
-- Tessl
-  - Conceptually aligns with outcome-driven planning and spec-to-code workflows
