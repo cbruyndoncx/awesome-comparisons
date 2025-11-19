@@ -119,11 +119,3 @@ OpenDevin is an open-source project that implements an autonomous AI software en
 - Yes
   - Supports multi-agent coordination and microagent patterns to compose specialized subagents for task-specific workflows.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-
-- 

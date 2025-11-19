@@ -111,6 +111,10 @@ th > button,
     text-align: left;
 }
 
+.group-header__label {
+    display: inline-block;
+}
+
 .group-header--ungrouped {
     color: var(--grouping-expanded-header-text);
 }
@@ -128,7 +132,7 @@ th > button,
 
 .criteria-header-row th {
     position: sticky;
-    top: var(--group-header-height, 32px);
+    top: var(--group-header-height, 36px);
     background: var(--grouping-expanded-foreground);
     color: var(--grouping-expanded-header-text);
     z-index: 4999;

@@ -118,12 +118,3 @@ Augment Code is an AI-first development platform built to help professional engi
 - Yes
   - Augment supports specialized autonomous agents or agent modes for task-specific workflows: local/IDE agents and remote/cloud agents that can plan, execute edits, run tests, and open PRs. Agents can be configured with different permissions, memories, and tool access via MCP connectors to create focused subagents for e.g., security fixes, refactors, or dependency upgrades.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes 
-  - CLI and TUI available
-
-### SpecDrivenDevelopment
-- Other
-  - Augment also demonstrates spec-aware behaviors (e.g., checking edits against OpenAPI specs and service contracts) but does not publish a single public SDD framework name. For projects using Tessl (this repository), Augment's features (Next Edit, checkpoints, spec/contract checks) complement a Tessl-style spec-driven workflow.

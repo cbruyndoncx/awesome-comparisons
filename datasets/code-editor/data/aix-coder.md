@@ -121,13 +121,3 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
 - Yes
   - aiXcoder supports specialized workflows (search, generation, repair) that behave like subagents; enterprise/custom models or fine-tuned variants can be deployed to handle task-specific flows (e.g., network automation script generation).
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Model repositories and examples include command-line and Python script usage for local inference; some distributions expose CLI tools for local model runs.
-
-### SpecDrivenDevelopment
-- Other
-  - No specific spec-driven development framework documented; focuses on code completion and generation workflows
----

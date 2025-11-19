@@ -124,11 +124,3 @@ Ona is the rebrand and strategic evolution of Gitpod into an AI-first software e
 - Yes
   - Ona is explicitly positioned as "mission control for your personal team of software engineering agents," allowing multiple specialized agents (roles/agents) to be defined and orchestrated for different tasks — e.g., code-gen agents, review agents, release agents — under centralized governance.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-- Other
-  - There is no public indication that Ona (Gitpod/Ona) is built around or prescribes a specific external spec-driven development framework such as Tessl or the others listed. Ona provides environment and automation primitives but does not appear to mandate a particular spec-driven methodology.

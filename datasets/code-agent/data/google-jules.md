@@ -100,10 +100,3 @@ Google Jules is a 2025 release representing Google's entry into autonomous AI co
 ### Subagents
 - Yes
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Other

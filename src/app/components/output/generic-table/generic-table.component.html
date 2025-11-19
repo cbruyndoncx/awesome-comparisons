@@ -45,179 +45,191 @@
 
 <div class="group-panel">
     <div class="group-panel__table">
-        <table class="table-hover">
-            <thead>
-            <ng-container *ngIf="columnGroupMap$ | async as columnGroupMap">
-                <ng-container *ngIf="groupLookup$ | async as groupLookup">
-                    <ng-container *ngIf="getGroupHeaderSpans(columnGroupMap, groupLookup) as groupSpans">
-                        <tr class="group-header-row" *ngIf="groupSpans.length > 0">
-                            <th *ngFor="let span of groupSpans"
-                                class="group-header"
-                                [class.group-header--excluded]="span.isExcluded"
-                                [class.group-header--ungrouped]="!span.groupKey"
-                                [class.group-header--primary]="span.isPrimaryColumn"
-                                [attr.colspan]="span.span">
-                                <ng-container *ngIf="!span.isPrimaryColumn">
-                                    {{ span.displayName || 'Ungrouped' }}
-                                </ng-container>
-                            </th>
-                            <th class="group-header group-header--spacer"></th>
-                        </tr>
-                    </ng-container>
-                </ng-container>
-            </ng-container>
-            <ng-container *ngIf="visibleCriteriaMap$ | async as visibleCriteria">
-                <tr class="criteria-header-row">
-                    <ng-template ngFor let-column [ngForOf]="columns" let-i="index">
-                        <th>
-                            <ng-container *ngIf="getColumnDescription(visibleCriteria, getColumnKey(i)) as columnDescription; else plainHeaderButton">
-                                <ptooltip class="table-header-tooltip"
-                                          [tooltip]="columnDescription"
-                                          [position]="'s'">
-                                    <button (click)="orderClick($event, i)">
-                                        <iicon icon="keyboard-arrow-up" *ngIf="order[i]===-1; else elseif1">{{column}}</iicon>
-                                        <ng-template #elseif1>
-                                            <iicon icon="keyboard-arrow-down" *ngIf="order[i]===1; else elseif2">{{column}}</iicon>
-                                        </ng-template>
-                                        <ng-template #elseif2>
-                                            <iicon>{{column}}</iicon>
-                                        </ng-template>
-                                    </button>
-                                </ptooltip>
-                            </ng-container>
-                            <ng-template #plainHeaderButton>
-                                <button (click)="orderClick($event, i)">
-                                    <iicon icon="keyboard-arrow-up" *ngIf="order[i]===-1; else elseif1">{{column}}</iicon>
-                                    <ng-template #elseif1>
-                                        <iicon icon="keyboard-arrow-down" *ngIf="order[i]===1; else elseif2">{{column}}</iicon>
-                                    </ng-template>
-                                    <ng-template #elseif2>
-                                        <iicon>{{column}}</iicon>
-                                    </ng-template>
-                                </button>
-                            </ng-template>
-                        </th>
-                    </ng-template>
-                    <th name="details" width="60px">
-                        <div class="row-actions__header">
-                            <picon-button class="row-actions__icon" icon="file_download" [showTooltip]="false" title="Download XLSX" aria-label="Download XLSX"
-                                          (click)="xlsxDownload.emit({ columns: columns, columnKeys: columnKeys, items: items, index: index, types: types, dataElements: dataElements })"></picon-button>
-                            <picon-button class="row-actions__icon" icon="settings" [showTooltip]="false" title="Settings" aria-label="Settings"
-                                          (click)="settingsCallback.emit()"></picon-button>
-                        </div>
-                    </th>
-                </tr>
-            </ng-container>
-            </thead>
-            <tbody>
-            <ng-template ngFor let-item [ngForOf]="items" let-itemIndex="index">
-                <tr>
-                    <ng-template ngFor let-entry [ngForOf]="item" let-i="index">
-                        <td *ngIf="types[i] === 'NAME_URL'">
-                            <a class="anchored"
-                               [href]="entry?.link || entry?.url || '#'"
-                               target="_blank"
-                               rel="noopener noreferrer">
-                                {{entry?.text || '—'}}
-                            </a>
-                        </td>
-                        <td *ngIf="types[i] === 'TEXT'">
-                            {{entry?.tableText || entry?.summaryText || entry?.text || entry?.content}}
-                        </td>
-                        <td *ngIf="types[i] ===  'LABEL' || types[i] === 'REPOSITORY'"
-                            class="label-cell"
-                            [class.label-cell--label]="types[i] === 'LABEL'"
-                            [class.label-cell--repository]="types[i] === 'REPOSITORY'"
-                            [class.label-cell--colored]="types[i] === 'LABEL' && hasLabelFill(entry)"
-                            [style.background]="types[i] === 'LABEL' ? resolveLabelCellFill(entry) : null">
-                            <ng-container *ngIf="entry?.labelArray?.length; else missingLabelBlock">
-                                <ng-container *ngFor="let label of entry?.labelArray">
-                                    <ng-container *ngIf="label.tooltip?.text || label.tooltip?.html; else plainLabel">
-                                        <ptooltip [tooltip]="label.tooltip.text"
-                                                  [tooltipHtml]="label.tooltip.html" [position]="'n'">
-                                            <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
-                                                 [style.color]="labelColorsEnabled ? label.color : null"
-                                                 [style.background-color]="labelColorsEnabled ? label.backgroundColor : null"
-                                                 (click)="labelClick($event, label, i)">
-                                                <ng-container *ngIf="label.displayHtml; else labelDisplayTextTooltip">
-                                                    <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
-                                                </ng-container>
-                                                <ng-template #labelDisplayTextTooltip>
-                                                    {{labelDisplay(label)}}
+        <ng-container *ngIf="columnGroupMap$ | async as columnGroupMap">
+            <ng-container *ngIf="groupLookup$ | async as groupLookup">
+                <ng-container *ngIf="getVisibleColumns(columnGroupMap, groupLookup) as visibleColumns">
+                    <table class="table-hover">
+                        <thead>
+                        <ng-container *ngIf="getGroupHeaderSpans(columnGroupMap, groupLookup, visibleColumns) as groupSpans">
+                            <tr class="group-header-row" *ngIf="groupSpans.length > 0">
+                                <th *ngFor="let span of groupSpans"
+                                    class="group-header"
+                                    [class.group-header--excluded]="span.isExcluded"
+                                    [class.group-header--ungrouped]="!span.groupKey"
+                                    [class.group-header--primary]="span.isPrimaryColumn"
+                                    [attr.colspan]="span.span">
+                                    <ng-container *ngIf="!span.isPrimaryColumn && span.displayName">
+                                        <span class="group-header__label">{{ span.displayName }}</span>
+                                        <span class="sr-only">{{ span.displayName }}</span>
+                                    </ng-container>
+                                </th>
+                                <th class="group-header group-header--spacer"></th>
+                            </tr>
+                        </ng-container>
+                    <ng-container *ngIf="visibleCriteriaMap$ | async as visibleCriteria">
+                        <tr class="criteria-header-row">
+                            <ng-template ngFor let-column [ngForOf]="visibleColumns">
+                                <th>
+                                    <ng-container *ngIf="getColumnDescription(visibleCriteria, column.key) as columnDescription; else plainHeaderButton">
+                                        <ptooltip class="table-header-tooltip"
+                                                  [tooltip]="columnDescription"
+                                                  [position]="'s'">
+                                            <button (click)="orderClick($event, column.index)">
+                                                <iicon icon="keyboard-arrow-up" *ngIf="order[column.index]===-1; else elseif1">{{column.name}}</iicon>
+                                                <ng-template #elseif1>
+                                                    <iicon icon="keyboard-arrow-down" *ngIf="order[column.index]===1; else elseif2">{{column.name}}</iicon>
                                                 </ng-template>
-                                            </div>
+                                                <ng-template #elseif2>
+                                                    <iicon>{{column.name}}</iicon>
+                                                </ng-template>
+                                            </button>
                                         </ptooltip>
                                     </ng-container>
-                                    <ng-template #plainLabel>
-                                        <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
-                                             [style.color]="labelColorsEnabled ? label.color : null"
-                                             [style.background-color]="labelColorsEnabled ? label.backgroundColor : null"
-                                             (click)="labelClick($event, label, i)">
-                                            <ng-container *ngIf="label.displayHtml; else labelDisplayTextPlain">
-                                                <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
-                                            </ng-container>
-                                            <ng-template #labelDisplayTextPlain>
-                                                {{labelDisplay(label)}}
+                                    <ng-template #plainHeaderButton>
+                                        <button (click)="orderClick($event, column.index)">
+                                            <iicon icon="keyboard-arrow-up" *ngIf="order[column.index]===-1; else elseif1">{{column.name}}</iicon>
+                                            <ng-template #elseif1>
+                                                <iicon icon="keyboard-arrow-down" *ngIf="order[column.index]===1; else elseif2">{{column.name}}</iicon>
                                             </ng-template>
-                                        </div>
+                                            <ng-template #elseif2>
+                                                <iicon>{{column.name}}</iicon>
+                                            </ng-template>
+                                        </button>
                                     </ng-template>
+                                </th>
+                            </ng-template>
+                            <th name="details" width="60px">
+                                <div class="row-actions__header">
+                                    <picon-button class="row-actions__icon" icon="file_download" [showTooltip]="false" title="Download XLSX" aria-label="Download XLSX"
+                                                  (click)="xlsxDownload.emit({ columns: columns, columnKeys: columnKeys, items: items, index: index, types: types, dataElements: dataElements })"></picon-button>
+                                    <picon-button class="row-actions__icon" icon="settings" [showTooltip]="false" title="Settings" aria-label="Settings"
+                                                  (click)="settingsCallback.emit()"></picon-button>
+                                </div>
+                            </th>
+                        </tr>
+                    </ng-container>
+                    </thead>
+                        <tbody>
+                        <ng-container *ngFor="let item of items; let itemIndex = index">
+                            <tr>
+                                <ng-container *ngFor="let column of visibleColumns">
+                                    <td *ngIf="column.type === 'NAME_URL'">
+                                        <a class="anchored"
+                                           [href]="item[column.index]?.link || item[column.index]?.url || '#'"
+                                           target="_blank"
+                                           rel="noopener noreferrer">
+                                            {{item[column.index]?.text || '—'}}
+                                        </a>
+                                    </td>
+                                    <td *ngIf="column.type === 'TEXT'">
+                                        {{item[column.index]?.tableText || item[column.index]?.summaryText || item[column.index]?.text || item[column.index]?.content}}
+                                    </td>
+                                    <td *ngIf="column.type === 'LABEL' || column.type === 'REPOSITORY'"
+                                        class="label-cell"
+                                        [class.label-cell--label]="column.type === 'LABEL'"
+                                        [class.label-cell--repository]="column.type === 'REPOSITORY'"
+                                        [class.label-cell--colored]="column.type === 'LABEL' && hasLabelFill(item[column.index])"
+                                        [style.background]="column.type === 'LABEL' ? resolveLabelCellFill(item[column.index]) : null">
+                                        <ng-container *ngIf="item[column.index]?.labelArray?.length; else missingLabelBlock">
+                                            <ng-container *ngFor="let label of item[column.index]?.labelArray">
+                                                <ng-container *ngIf="label.tooltip?.text || label.tooltip?.html; else plainLabel">
+                                                    <ptooltip [tooltip]="label.tooltip.text"
+                                                              [tooltipHtml]="label.tooltip.html" [position]="'n'">
+                                                        <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
+                                                             [style.color]="labelColorsEnabled ? label.color : null"
+                                                             [style.background-color]="labelColorsEnabled ? label.backgroundColor : null"
+                                                             (click)="labelClick($event, label, column.index)">
+                                                            <ng-container *ngIf="label.displayHtml; else labelDisplayTextTooltip">
+                                                                <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
+                                                            </ng-container>
+                                                            <ng-template #labelDisplayTextTooltip>
+                                                                {{labelDisplay(label)}}
+                                                            </ng-template>
+                                                        </div>
+                                                    </ptooltip>
+                                                </ng-container>
+                                                <ng-template #plainLabel>
+                                                    <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
+                                                         [style.color]="labelColorsEnabled ? label.color : null"
+                                                         [style.background-color]="labelColorsEnabled ? label.backgroundColor : null"
+                                                         (click)="labelClick($event, label, column.index)">
+                                                        <ng-container *ngIf="label.displayHtml; else labelDisplayTextPlain">
+                                                            <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
+                                                        </ng-container>
+                                                        <ng-template #labelDisplayTextPlain>
+                                                            {{labelDisplay(label)}}
+                                                        </ng-template>
+                                                    </div>
+                                                </ng-template>
+                                            </ng-container>
+                                        </ng-container>
+                                        <ng-template #missingLabelBlock>
+                                            <div *ngIf="showMissingIndicators" class="label mylabel label--missing">Missing</div>
+                                        </ng-template>
+                                        <div class="repository-links" *ngIf="item[column.index]?.type === 'REPOSITORY' && item[column.index]?.urlList?.length">
+                                            <a *ngFor="let link of item[column.index]?.urlList" [href]="link" target="_blank" rel="noopener noreferrer">{{link}}</a>
+                                        </div>
+                                    </td>
+                                    <td *ngIf="column.type === 'MARKDOWN'"
+                                        class="markdown-cell"
+                                        [class.markdown-cell--expanded]="isMarkdownExpanded(itemIndex, column.index)">
+                                        <ng-template #markdownContent>
+                                            <ng-container *ngIf="item[column.index]?.tableText; else markdownHtml">
+                                                {{item[column.index]?.tableText}}
+                                            </ng-container>
+                                        </ng-template>
+                                        <div class="markdown-cell__content"
+                                             [class.markdown-cell__content--clamped]="shouldTruncateMarkdown(item[column.index]) && !isMarkdownExpanded(itemIndex, column.index)">
+                                            <ng-container *ngTemplateOutlet="markdownContent"></ng-container>
+                                        </div>
+                                        <button type="button"
+                                                class="markdown-cell__toggle"
+                                                *ngIf="shouldTruncateMarkdown(item[column.index])"
+                                                (click)="toggleMarkdownExpansion(itemIndex, column.index)"
+                                                [attr.aria-expanded]="isMarkdownExpanded(itemIndex, column.index)">
+                                            {{isMarkdownExpanded(itemIndex, column.index) ? 'Show less' : 'Show more'}}
+                                        </button>
+                                        <ng-template #markdownHtml>
+                                            <div [innerHtml]="item[column.index]?.html | sanitizeHtml"></div>
+                                        </ng-template>
+                                    </td>
+                                    <td *ngIf="column.type === 'RATING'">
+                                        <iicon icon="star" *ngIf="item[column.index]?.rating !== undefined && item[column.index]?.rating !== null">{{item[column.index]?.rating}}</iicon>
+                                    </td>
+                                    <td *ngIf="column.type === 'RAW_HTML'">
+                                        <div [innerHtml]="item[column.index]?.html | sanitizeHtml"></div>
+                                    </td>
+                                <td *ngIf="column.type === 'ICON_LINK'">
+                                    <ng-container *ngFor="let icon of item[column.index]?.icons">
+                                        <a [href]="icon.url" [title]="icon.tooltip" target="_blank" rel="noopener noreferrer">
+                                            <iicon [icon]="icon.name"></iicon>
+                                        </a>
+                                    </ng-container>
+                                </td>
                                 </ng-container>
-                            </ng-container>
-                            <ng-template #missingLabelBlock>
-                                <div *ngIf="showMissingIndicators" class="label mylabel label--missing">Missing</div>
-                            </ng-template>
-                            <div class="repository-links" *ngIf="entry?.type === 'REPOSITORY' && entry?.urlList?.length">
-                                <a *ngFor="let link of entry.urlList" [href]="link" target="_blank" rel="noopener noreferrer">{{link}}</a>
-                            </div>
-                        </td>
-
-                        <td *ngIf="types[i] === 'MARKDOWN'" class="markdown-cell"
-                            [class.markdown-cell--expanded]="isMarkdownExpanded(itemIndex, i)">
-                            <ng-template #markdownContent>
-                                <ng-container *ngIf="entry?.tableText; else markdownHtml">
-                                    {{entry?.tableText}}
-                                </ng-container>
-                            </ng-template>
-                            <div class="markdown-cell__content"
-                                 [class.markdown-cell__content--clamped]="shouldTruncateMarkdown(entry) && !isMarkdownExpanded(itemIndex, i)">
-                                <ng-container *ngTemplateOutlet="markdownContent"></ng-container>
-                            </div>
-                            <button type="button"
-                                    class="markdown-cell__toggle"
-                                    *ngIf="shouldTruncateMarkdown(entry)"
-                                    (click)="toggleMarkdownExpansion(itemIndex, i)"
-                                    [attr.aria-expanded]="isMarkdownExpanded(itemIndex, i)">
-                                {{isMarkdownExpanded(itemIndex, i) ? 'Show less' : 'Show more'}}
-                            </button>
-                            <ng-template #markdownHtml>
-                                <div [innerHtml]="entry?.html | sanitizeHtml"></div>
-                            </ng-template>
-                        </td>
-                        <td *ngIf="types[i] === 'RATING'">
-                            <iicon icon="star" *ngIf="entry?.rating !== undefined && entry?.rating !== null">{{entry.rating}}
-                            </iicon>
-                        </td>
-                    </ng-template>
-                    <td class="row-actions">
-                        <ng-container *ngIf="resolveEditLink(getRowIndex(itemIndex)) as editLink; else noEdit">
-                            <a class="row-actions__link"
-                               [href]="editLink"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               title="Edit source"
-                               aria-label="Edit source">
-                                <picon-button icon="edit" [showTooltip]="false"></picon-button>
-                            </a>
+                                <td class="row-actions">
+                                    <ng-container *ngIf="resolveEditLink(getRowIndex(itemIndex)) as editLink; else noEdit">
+                                        <a class="row-actions__link"
+                                           [href]="editLink"
+                                           target="_blank"
+                                           rel="noopener noreferrer"
+                                           title="Edit source"
+                                           aria-label="Edit source">
+                                            <picon-button icon="edit" [showTooltip]="false"></picon-button>
+                                        </a>
+                                    </ng-container>
+                                    <ng-template #noEdit>
+                                        <picon-button icon="edit" [showTooltip]="false" title="Edit source" (click)="openEdit(itemIndex)"></picon-button>
+                                    </ng-template>
+                                    <picon-button icon="info" [showTooltip]="false" title="Details"
+                                                  (click)="showDetails.emit(index[itemIndex])"></picon-button>
+                                </td>
+                            </tr>
                         </ng-container>
-                        <ng-template #noEdit>
-                            <picon-button icon="edit" [showTooltip]="false" title="Edit source" (click)="openEdit(itemIndex)"></picon-button>
-                        </ng-template>
-                        <picon-button icon="info" [showTooltip]="false" title="Details"
-                                      (click)="showDetails.emit(index[itemIndex])"></picon-button>
-                    </td>
-                </tr>
-            </ng-template>
-            </tbody>
-        </table>
+                        </tbody>
+                    </table>
+                </ng-container>
+            </ng-container>
+        </ng-container>
     </div>
 </div>

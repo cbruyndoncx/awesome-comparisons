@@ -134,11 +134,3 @@ DevoxxGenie is an IntelliJ IDEA plugin (100% Java-based) that provides an LLM-po
   - RAG and embedding pipelines function as retrieval subagents (local embedding provider + Chroma DB) to augment generation.
   - The architecture (Langchain4J + Java) enables integration with external model servers and agent-like workflows.
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Other
-  - No specific spec-driven development framework is used by DevoxxGenie upstream; development follows standard JetBrains plugin practices (Java, Langchain4J) and conventional release/versioning workflows.

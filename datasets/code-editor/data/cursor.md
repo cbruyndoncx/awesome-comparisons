@@ -122,12 +122,3 @@ Cursor reimagines the developer workflow by making AI agents first-class collabo
 - Yes
   - Multi-agent workflows act like subagents — multiple independent agents can be launched in parallel, each producing candidate changes in isolated worktrees for comparison and review.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Integrated terminals and sandboxed terminal features (secure command execution for agent-run commands) are part of the 2.0 feature set.
-
-### SpecDrivenDevelopment
-- Other
-  - Cursor does not ship a native spec-driven framework. It can be used alongside external spec-driven tools and workflows (Tessl, SpecKit, etc.) but does not provide a first-class SDD framework out-of-the-box.

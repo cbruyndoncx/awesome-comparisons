@@ -134,11 +134,3 @@ An open-source, Java desktop application that provides compiler-grade, workspace
   - Brokk provides distinct agent roles (Ask, Code, Architect) that act like specialized subagents for question answering, direct code edits, and multi-step autonomous planning/execution.
   - Architect enables multi-stage task planning and execution where the system composes sequences of agent actions and can iterate on results under human supervision.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-- Other
-  - Not directly applicable to Brokk; Brokk is an AI-native code-assistant and does not prescribe a specific spec-driven development framework.

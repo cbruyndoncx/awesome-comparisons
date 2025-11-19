@@ -125,11 +125,3 @@ Runner H (from H Company) is an "action-oriented" autonomous web agent designed 
 - Yes
   - Runner H is explicitly built as a multi-agent stack: a master planner (orchestrator) plus specialized sub-agents (browsing, extraction, QA, error-recovery, integrations). Each subagent is optimized for a domain task and the orchestrator coordinates them to complete complex multi-step workflows.
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Other
-  - No specific public spec-driven development framework (e.g., Tessl, BMAD, SpecKit) is documented for Runner H. The platform follows an agent- and workflow-driven architecture rather than a published spec-driven development methodology.

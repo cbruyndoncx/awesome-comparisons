@@ -126,12 +126,3 @@ PearAI provides a unified AI-first IDE experience by combining the familiarity o
 - Yes
   - PearAI surfaces agent-like automation features (PearAI Agent is listed as planned/early) and routes tasks to specialized models or toolsets (Aider, Supermaven, Continue, Perplexity, Mem0). Users can achieve subagent-like workflows by combining model routing, tool integrations, and scripted command sequences; PearAI's router automatically selects the best-performing model for each task.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Built on VSCode fork; includes integrated terminal and @terminal context command
-
-### SpecDrivenDevelopment
-- Other
-  - PearAI does not appear to target or natively implement a specific spec-driven development framework. It is an AI-first IDE focused on contextual coding assistance, model routing, and extensibility rather than a spec-driven code-generation lifecycle. If teams use PearAI in a spec-driven workflow, they typically map their own specs/docs into the workspace via the @docs and project context features.

@@ -123,12 +123,3 @@ Supermaven is an AI-powered code completion and developer-assistant platform bui
 - No
   - Supermaven provides multi-model chat and specialized behaviors (completion vs. chat) but does not document a facility for users to define autonomous subagents/workflows. There is no public API for composing persistent task-specific subagents.
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-  - Primary integrations are editor/IDE plugins; Supermaven also provides its own editor/IDE experience rather than a terminal-first tool
-
-### SpecDrivenDevelopment
-- Other
-  - Not applicable — Supermaven is a developer productivity/code-completion platform, not a spec-driven development framework. It does not advertise alignment with or tooling for the listed spec-driven development systems.

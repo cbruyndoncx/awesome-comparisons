@@ -130,11 +130,3 @@ The default generated stacks commonly include React on the frontend and Fastify 
 - Yes
   - The project architecture explicitly describes specialized "actors" and a parallel tree-search driven orchestration. These actors behave like subagents with narrow responsibilities (data modelling, ORM generation, test/handler creation). The FSM + parallel tree search coordinates multiple actor traces and enables exploration and selection of candidate solutions, effectively implementing a subagent-based workflow.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-- Other
-  - app.build follows an "FSM-driven generation" approach rather than one of the named spec-driven frameworks listed. The platform uses a finite-state-machine + parallel tree-search + specialized-actors pattern to encode generation specs and orchestrate synthesis, validation, and repair of generated code.

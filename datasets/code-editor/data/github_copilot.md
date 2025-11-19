@@ -158,12 +158,3 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
     - Copilot's extensibility distinguishes lightweight skillsets (task-focused handlers) from full agents, enabling developers to build specialized capabilities that act as subagents for constrained workflows.
     - Skillsets encapsulate routing, prompt templates, function evaluation and response shaping for focused tasks; agents provide custom logic and broader orchestration and may call other services or models.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Copilot Chat is available in supported terminals (Windows Terminal Canary, GitHub CLI integrations) and can be used from the command line in supported environments.
-
-### SpecDrivenDevelopment
-- No
-  - Copilot can assist in authoring specifications and code artifacts but does not provide explicit, built-in integrations or native support for specific Spec Driven Development frameworks (e.g., BMAD, SpecKit, OpenSpec, Tessl, AgentOS, ClaudeFlow, SPARC, SuperClaude) as of the last update (2025-11-04).

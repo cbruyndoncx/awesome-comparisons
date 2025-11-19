@@ -147,12 +147,3 @@ Sourcegraph is a platform that provides precise, scalable code search and code n
 - Yes
   - Sourcegraph/Cody architecture supports specialized retrieval and LLM components that act like subagents: semantic retrievers (embeddings), keyword search, and completion-tuned LLMs for chat, code action generation, and multi-repo reasoning. Enterprises can deploy dedicated Cody instances (e.g., self-hosted Cody Enterprise) for tailored workflows.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - CLI tooling (e.g., src CLI / developer tools) and integrations that allow scripted interactions and automation.
-
-### SpecDrivenDevelopment
-- Other
-  - ["Sourcegraph uses a combination of RAG, embeddings and long-context experiments rather than a single spec-driven tool."]

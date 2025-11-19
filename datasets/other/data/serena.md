@@ -108,11 +108,3 @@ Serena is an innovative open-source coding agent toolkit that emerged in 2025, p
 ### Subagents
 - No
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Can execute shell commands and integrate with terminal workflows
-
-### SpecDrivenDevelopment
-- Other

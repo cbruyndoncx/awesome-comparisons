@@ -116,11 +116,3 @@ Marblism provides two complementary offerings: (1) a suite of role-specific "AI 
 - Yes
   - Marblism's "AI Employees" are functionally specialized subagents tailored to distinct business roles (e.g., inbox/calendar assistant, SEO/blog writer, sales outreach, customer support). Users pick and configure these agents for task-specific workflows; the app builder similarly scaffolds role-specific modules and endpoints for generated apps. The platform therefore supports the concept of specialized subagents, though details about exposing developer-level subagent creation or a public SDK are not documented.
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Other
-  - Marblism does not publicly advertise adherence to a named spec-driven development methodology from the list above. Its product model centers on role templates, prompt-driven scaffolding and generated repositories rather than an explicit spec-driven framework like Tessl.

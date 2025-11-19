@@ -99,10 +99,3 @@ Kiro is a new command-line coding utility that focuses on speed and simplicity f
 ### Subagents
 - No
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-- Other

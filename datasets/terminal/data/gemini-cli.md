@@ -98,10 +98,3 @@ Gemini CLI is Google's command-line interface for AI-assisted coding, bringing t
 ### Subagents
 - No
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-- Other

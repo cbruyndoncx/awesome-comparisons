@@ -125,13 +125,3 @@ GPT Pilot (by Pythagora) is a source-available AI developer assistant designed t
 - Yes
   - GPT Pilot implements a multi-agent/subagent architecture with specialized roles (Product Owner, Specification Writer, Software Architect, DevOps, Tech Lead, Developer, Code Monkey, Reviewer, Troubleshooter, Debugger, Technical Writer). These agents are orchestrated to break down requirements into tasks/steps, generate pseudocode, implement code, run tests, and request human review. The agent behaviours and orchestration are implemented in the codebase and can be inspected/extended by modifying the project's agent orchestration/configuration (i.e., adding or changing agent logic requires code/config edits).
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - CLI-driven project creation and workspace management are supported.
-
-### SpecDrivenDevelopment
-
-- Other
-  - GPT Pilot does not advertise one of the named spec frameworks; instead it uses a task/spec decomposition model combined with TDD and multi-agent roles (product-owner/spec-writer → architect → task decomposition → implementation steps + programmatic test goals). The workflow is spec-like (clear programmatic goals, user_review_goals, and auto-test generation) but implemented within the project-specific agent/task framework rather than a published spec-driven framework listed above.

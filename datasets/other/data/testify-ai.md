@@ -100,10 +100,3 @@ Testify AI is a fast-growing open-source project that brings AI-powered test aut
 ### Subagents
 - No
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-- Other

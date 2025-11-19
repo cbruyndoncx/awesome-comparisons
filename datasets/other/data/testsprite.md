@@ -99,10 +99,3 @@ TestSprite is an AI-powered test automation platform that leverages machine lear
 ### Subagents
 - No
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Other

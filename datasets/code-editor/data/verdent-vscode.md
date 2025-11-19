@@ -133,12 +133,3 @@ The extension is intended to reduce context switching by letting developers rema
 - Yes
   - Specialized subagents (e.g., Researcher, Verifier) execute tasks in parallel
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Integrates with developer workflows and git; focused on high-level orchestration.
-
-### SpecDrivenDevelopment
-- Other
-  - Verdent uses a proprietary "Plan-First" methodology; not tied to community spec-driven development frameworks

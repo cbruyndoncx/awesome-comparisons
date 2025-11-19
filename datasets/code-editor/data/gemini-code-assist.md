@@ -99,10 +99,3 @@ Gemini Code Assist is Google's AI-powered coding assistant that leverages the Ge
 ### Subagents
 - No
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Other

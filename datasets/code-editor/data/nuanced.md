@@ -130,12 +130,3 @@ Nuanced is an MCP (Model Context Protocol) server and code-intelligence layer th
 - No
   - Nuanced itself exposes analysis endpoints rather than managing subagent workflows; higher-level orchestration is left to the client agent.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Provides an npm package / Python package and CLI for setup/configuration; integrates with developer workflows.
-
-### SpecDrivenDevelopment
-- None
-  - No explicit support or built-in integrations with spec-driven development frameworks (Tessl, SpecKit, etc.) documented; treat as orthogonal to spec tooling.

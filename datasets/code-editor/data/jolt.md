@@ -148,19 +148,3 @@ Jolt is a commercial AI coding assistant designed for large production codebases
 ### Subagents
 - No
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Neovim plugin provides terminal-based integration; no standalone CLI is prominently advertised in public docs.
-
-### SpecDrivenDevelopment
-
-
-- 
-
-## Project Hints
-
-### SpecDrivenDevelopment
-- Other
-  - No specific spec-driven development framework is documented for Jolt; the tool focuses on natural-language workflows and code generation without formally prescribing a particular SDD methodology.

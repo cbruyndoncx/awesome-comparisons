@@ -188,18 +188,3 @@ CodiumAI (rebranded to Qodo) is an AI-first code quality platform focused on aut
 
 - MCP-based integrations and Qodo agentic tooling enable orchestrating specialized subagents/tools for task-specific pipelines.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-
-### SpecDrivenDevelopment
-<!-- ToDo -->
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
-
-- No explicit public support for the listed Spec Driven Development frameworks (BMAD, SpecKit, Tessl, etc.) was found in product documentation. Qodo's workflows focus on test generation, behavior coverage, and agentic integrations rather than any single SDD framework.
-
----
-
-

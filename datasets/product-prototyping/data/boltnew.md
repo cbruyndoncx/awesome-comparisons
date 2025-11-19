@@ -125,12 +125,3 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
 - No
   - The platform and the bolt.diy roadmap mention multi-step agent architectures as an evolution, but there is no user-facing subagent definition system documented.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - In‑browser terminal via WebContainers that can run npm, Node.js servers, and CLI tooling.
-
-### SpecDrivenDevelopment
-- No
-  - Bolt.new is an AI-powered fullstack development tool focused on prompt-driven application generation, not a spec-driven development framework

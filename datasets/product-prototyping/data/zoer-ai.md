@@ -104,10 +104,3 @@ Zoer.ai is a comprehensive AI-powered platform launched in September 2025 that b
 ### Subagents
 - No
 
-## Ungrouped Criteria
-
-### Terminal
-- No
-
-### SpecDrivenDevelopment
-- Other

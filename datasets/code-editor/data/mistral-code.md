@@ -131,12 +131,3 @@ Mistral Code is a packaged AI developer assistant designed for enterprise adopti
   - Devstral provides agentic workflows (specialized agents) that perform multi-step, multi-file engineering tasks: scanning a repo, making edits, running tests, and drafting PRs.
   - Agents can be composed to chain retrieval → reasoning → edit → verification steps; enterprise flows include approval/authorization gates before applying changes.
 
-## Ungrouped Criteria
-
-### Terminal
-- Yes
-  - Agentic capabilities can reason over terminal output, run commands, and propose diffs under configurable approval flows
-
-### SpecDrivenDevelopment
-- Other
-  - Mistral Code is not tied to a single spec-driven development framework; it is designed to integrate with existing engineering workflows and can be used alongside SDD approaches (Tessl, SpecKit, etc.) via agentic automation and code generation, but it does not natively implement a particular SDD toolchain.
