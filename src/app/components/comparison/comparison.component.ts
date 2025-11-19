@@ -11,6 +11,11 @@ import { Criteria, DataElement, Label } from '../../../../lib/gulp/model/model.m
 import { FeatureGroupView } from '../../models/feature-grouping.model';
 import { ComparisonTemplateExportService } from './settings/comparison-template-export.service';
 import { environment } from '../../../environments/environment';
+import { MatDialog } from '@angular/material/dialog';
+import { AddEntryModalComponent } from './add-entry/add-entry-modal.component';
+import { DatasetManifestService } from '../datasets/dataset-manifest.service';
+import { FeatureGroupingService } from '../output/feature-grouping.service';
+import { take } from 'rxjs/operators';
 
 @Component({
     selector: 'comparison',
@@ -39,7 +44,10 @@ export class ComparisonComponent {
     constructor(public configurationService: ConfigurationService,
                 private templateExportService: ComparisonTemplateExportService,
                 private cd: ChangeDetectorRef,
-                public store: Store<IUCAppState>) {
+                public store: Store<IUCAppState>,
+                private dialog: MatDialog,
+                private datasetManifestService: DatasetManifestService,
+                private featureGroupingService: FeatureGroupingService) {
         if (isNullOrUndefined(ComparisonComponent.instance)) {
             ComparisonComponent.instance = this;
         }
@@ -487,5 +495,42 @@ export class ComparisonComponent {
 
     private relevantFilterGroups(groups: FeatureGroupView[] = []): FeatureGroupView[] {
         return (groups || []).filter(group => !!group && !group.isExcluded && this.groupHasSearchableChildren(group));
+    }
+
+    public openAddEntryModal(): void {
+        this.datasetManifestService.getActiveDataset()
+            .pipe(take(1))
+            .subscribe(dataset => {
+                if (!dataset) {
+                    console.error('No active dataset found');
+                    return;
+                }
+
+                this.store.pipe(take(1)).subscribe(state => {
+                    const featureGroups = state.featureGroups || [];
+
+                    const dialogRef = this.dialog.open(AddEntryModalComponent, {
+                        width: '90vw',
+                        maxWidth: '1200px',
+                        maxHeight: '90vh',
+                        data: {
+                            dataset,
+                            criteria: this.configurationService.criteria || [],
+                            featureGroups,
+                            repository: {
+                                owner: 'cbruyndoncx',
+                                repo: 'awesome-comparisons',
+                                branch: 'main'
+                            }
+                        }
+                    });
+
+                    dialogRef.afterClosed().subscribe(result => {
+                        if (result?.action === 'submitted') {
+                            console.log('Entry submitted to GitHub');
+                        }
+                    });
+                });
+            });
     }
 }

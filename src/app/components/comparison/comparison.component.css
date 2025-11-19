@@ -434,3 +434,54 @@ pdialog {
     white-space: nowrap;
     border: 0;
 }
+
+/* FAB Button for Add Entry */
+.fab-add-entry {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--primary-color, #007bff);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fab-add-entry:hover {
+    background: var(--primary-hover, #0056b3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25), 0 8px 24px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.fab-add-entry:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95);
+}
+
+.fab-add-entry iron-icon {
+    --iron-icon-width: 24px;
+    --iron-icon-height: 24px;
+}
+
+/* Responsive adjustments for FAB */
+@media (max-width: 768px) {
+    .fab-add-entry {
+        bottom: 20px;
+        right: 20px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .fab-add-entry iron-icon {
+        --iron-icon-width: 20px;
+        --iron-icon-height: 20px;
+    }
+}

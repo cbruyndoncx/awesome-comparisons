@@ -1,6 +1,6 @@
 criteria:
   - Terminal:
-      type: MARKDOWN
+      type: LABEL
       values:
         'Yes': {}
         'No': {}
@@ -31,6 +31,7 @@ criteria:
         Permissive (check repository LICENSE): {}
         Public materials describe the project as permissively licensed; confirm exact license (MIT/Apache-2.0/etc.) by inspecting the repo's LICENSE file before using in license-sensitive contexts.: {}
         core open-source components: {}
+        '-': {}
         BSD-3: {}
         Sourcegraph Enterprise (formerly Apache 2.0 for much of the codebase prior to relicensing): {}
         Apache License 2.0: {}
@@ -54,6 +55,7 @@ criteria:
         'Notes: AWS has offered free tiers or developer-friendly access for prior services (CodeWhisperer) and provides Builder ID sign-in options; enterprise pricing & feature bundles for Amazon Q are documented in AWS pricing/docs.': {}
         Open-source; free to run locally under the GPL-3.0 license (no hosted trial required to use the client).: {}
         'No public hosted SaaS offering documented in the repo as of 2025-11-15; commercial/hosted options, if any, are not clearly listed in the OSS repository.': {}
+        '-': {}
         A free/solo tier exists (open-source extensions + hub access for public/shared blocks). Paid team/enterprise tiers add governance and private deployment options.: {}
         Free Hobby tier available with limited agent requests; Pro trial options are commonly offered for evaluation.: {}
         Available during preview; typical Firebase usage quotas and billing apply once services are provisioned beyond free tier limits.: {}
@@ -68,6 +70,7 @@ criteria:
         Private beta availability; general availability and trial terms may vary: {}
         Core project is open-source and available to use without payment. Commercial/enterprise add-ons (if offered) may be paid — check project or vendor pages for details.: {}
         Free tier available with basic features and BYOK support; paid tiers unlock advanced features: {}
+        Open source and freely available: {}
         New users get a limited number of free generations (commonly reported as ~10 free uses) and a short trial period to evaluate the service.: {}
         The extension itself is free/open-source; model usage costs depend on the API keys/providers you supply.: {}
         Limited beta access was offered during initial launch windows.: {}
@@ -76,7 +79,6 @@ criteria:
         'Any additional details: Tabnine sunset its free Basic plan in 2025; access is primarily through paid tiers or enterprise licensing. Trial or pilot options may still be available via sales.': {}
         Theia is free/open-source (no trials); commercial services built on top of it may have separate licensing/pricing.: {}
         As of early 2025 Trae was distributed free with access to several premium models included: {}
-        '-': {}
         Unknown: {}
         No public pricing or trial information available; product may be in early access/beta with limited availability: {}
         Core editor is free and open-source.: {}
@@ -90,6 +92,7 @@ criteria:
         No public documentation found regarding MCP (Model Context Protocol) support; primarily focuses on local model inference: {}
         'Notes: Supports Model Context Protocol / MCP server connections to bring external context into conversations and agent workflows.': {}
         No evidence in the public repository or official docs of a built-in "MCP" client integration as of 2025-11-15.: {}
+        Extends capabilities with MCP ecosystem tools: {}
         'Built-in MCP client and HumanLayer SDK enable tool/function calls, approvals, and lifecycle events (e.g., function_call.*, human_contact.*). Sessions can surface tool metadata and perform approved side-effecting operations via the platform''s tool integrations.': {}
         'Integrates with Model Context Protocols for adding context providers (GitHub, Jira, etc.) and usable via the hub.': {}
         Not documented as an MCP client in the same style as some other editor integrations.: {}
@@ -207,6 +210,8 @@ criteria:
         'Provides MCP connectors and tool integrations for external systems (VCS, issue trackers, CI, documentation).': {}
         Native integrations and editor plugins enable file-level operations and terminal/CLI tooling.: {}
         'Brokk integrates operational tools such as Run-in-Shell, build/test execution, dependency decompilation, Deep Scan automation, and Git-aware patch/diff management exposed as agent actions.': {}
+        MCP ecosystem integration: {}
+        deepResearch integration for plan mode: {}
         'Integrates MCP tools (custom tool servers), terminal execution, browser automation, and file-editing operations': {}
         'Supports adding third-party MCP servers to extend functionality (CI hooks, cloud APIs, issue trackers)': {}
         'Integrates tool calling and function-style tools (Claude Code tool capabilities), webhooks, and SDK-driven tool definitions; supports approvals and human-in-the-loop function calls.': {}
@@ -237,6 +242,7 @@ criteria:
         Extensible via plugin/extension system: {}
         VS Code extension (primary integration) and a CLI (`npx pythagora`).: {}
         'Debugging primitives (logs, breakpoints, step-debugging), Git integration, DB connectors, and deployment integrations.': {}
+        Element selection and context extraction tool: {}
         'Refact.ai agents can be granted access to tools such as Git, shell/Docker, CI, and external connectors (GitHub/GitLab, databases) when deployed with appropriate permissions.': {}
         'Plugins and connectors expose actions (run tests, create branches, commit changes, open PRs) which the agent can invoke as part of autonomous workflows.': {}
         'The product exposes focused tooling for specific code tasks (refactors, tests, docs, regex generation) via the web UI and the Sublime Text extension.': {}
@@ -279,6 +285,7 @@ criteria:
         'Documentation and guides on askcodi.com, an OpenAI-compatible API, GitHub repositories for editor extensions (e.g., Sublime), and marketplace listings (VS Code, Package Control).': {}
         'Public documentation, blog posts, demo materials, and example GitHub repositories under the augmentcode org.': {}
         'The Workspace can include decompiled dependency sources, compiled artifacts, summaries, and VCS history; these resources become first-class context for agent workflows.': {}
+        'Website: https://cheetahai.co/': {}
         'Official docs at https://cline.bot and extensive README and examples on the GitHub repo': {}
         'CLI, extension, and MCP server examples included in the repository and community-contributed prompts': {}
         'Official documentation, GitHub repo with examples, CLI, community channels (Discord/X), and demo/tutorial materials are available in the project repository and docs site.': {}
@@ -307,6 +314,8 @@ criteria:
         Open-source repositories and community discussions (GitHub issues/PRs); roadmap and changelog available: {}
         Official website/documentation (pythagora.ai) and VS Code Marketplace listing for the extension.: {}
         'Blog posts, demos and community write-ups; underlying GPT Pilot project and related GitHub resources for the multi-agent framework.': {}
+        'GitHub repository: https://github.com/aidenybai/react-grab': {}
+        Documentation in repository: {}
         Refact.ai uses RAG with a repo index and symbol-aware retrieval to ground responses in repository files; it also supports external knowledge connectors and searchable indexes.: {}
         'Documentation, example configs, and deployment guides are provided in the project''s GitHub repository and self-hosting docs.': {}
         Refraction provides a history feature storing previous generations and may include documentation and usage guides on the web app (refer to refraction.dev for details).: {}
@@ -337,6 +346,7 @@ criteria:
       values:
         Unknown: {}
         Local-first model runs offline without API keys; BYOK for cloud features not publicly documented: {}
+        '-': {}
         'Environment and Claude settings support supplying external LLM API keys and configuring provider settings (e.g., ~/.claude/settings.json, env vars). CLI/desktop app can inherit shell environment variables so teams can use their own provider keys (AWS Bedrock, Anthropic, etc.).': {}
         'You can configure and use your own API keys and model endpoints, and switch between local/remote models.': {}
         'Cursor supports bring-your-own API keys / model endpoints so teams can choose preferred providers (OpenAI, Anthropic, Google, self-hosted endpoints where supported) and reduce exposure of secrets to the Cursor cloud where applicable.': {}
@@ -354,7 +364,6 @@ criteria:
         Sourcegraph Cloud does not publicly advertise a generic BYOK feature; however self-hosted deployments give organizations full control over their infrastructure and encryption boundaries.: {}
         'Tabnine supports OpenAI API-compatible endpoints and private certificate authorities for enterprise integrations, and allows organizations to configure custom model endpoints or self-hosted model deployments (Gemma, Qwen, etc.). These capabilities let enterprises use their own model endpoints and credentials in managed/private deployments.': {}
         'Theia AI and integrations follow a bring-your-own-key / bring-your-own-model philosophy: you can configure external LLM providers or self-hosted models (e.g., Ollama, LlamaFile, hosted Anthropic/OpenAI keys) depending on deployment and data-control needs.': {}
-        '-': {}
         No public information found about bring-your-own-key support; enterprise deployment options may be available: {}
         'Zed supports OpenAI-compatible providers and can be configured to use local LLM hosts (e.g., Ollama) so you can run models with your own keys or entirely offline.': {}
         'Yes': {}
@@ -385,6 +394,7 @@ criteria:
         'Local-first MCP server: analysis runs on the user''s machine or infrastructure; code/context does not need to be uploaded to external APIs.': {}
         Ona supports private VPC and on-prem/private-hosted deployments for enterprises but is not a fully offline/local-only product.: {}
         Requires cloud access to LLMs; not designed for fully offline usage.: {}
+        Runs locally as part of development environment: {}
         Self-hosted Docker deployment and on-prem options. Can be run without sending code to third-party services when configured to use local/private models and infrastructure.: {}
         Can be configured to use local model runtimes via Ollama / LM Studio or other locally-hosted model endpoints (support and experience depends on provider and model compatibility). Fully offline workflows may be limited compared to cloud API usage.: {}
         Self-hosted deployments support offline/private hosting and do not require sending code to Sourcegraph cloud. This is a common choice for enterprises with strict data residency or security requirements.: {}
@@ -417,6 +427,7 @@ criteria:
         'Deep Scan: semantic, compiler-aware analysis recommends additional files and symbols to include based on the instruction and dataflow, reducing manual context selection.': {}
         'Dependency summaries/decompilation: third-party libraries can be imported, summarized or decompiled into the Workspace so the assistant understands external APIs.': {}
         'Build & history-aware context: Brokk infers build system details and can incorporate compiled artifacts and VCS history to provide richer, correct context for edits.': {}
+        deepResearch integration for detailed project specifications: {}
         'Cline maintains a structured "memory bank" (projectbrief.md, activeContext.md, progress.md) to persist and rebuild project understanding across sessions.': {}
         'Checkpoint management creates snapshots at each step and tool call, allowing comparison, restore, and safe experimentation.': {}
         Plan & Act modes separate strategic planning from execution so context updates can be staged and reviewed before being committed.: {}
@@ -478,6 +489,7 @@ criteria:
         'A project-level config.json (Pythagora Core) where LLM keys, development mode (local/cloud), and other settings are declared.': {}
         'Agent session logs and action traces (visibility into what the AI agents did during a run), which developers can review to understand and update context.': {}
         Git integration (the usual source-control history acts as a record of context changes).: {}
+        Extracts and provides element context to AI assistants: {}
         'Refact.ai uses Retrieval-Augmented Generation (RAG) to maintain and update contextual state across a repository: whole-repo indexing, symbol-aware retrieval, and context windows sourced from the repo index.': {}
         In-IDE session/chat history is preserved and combined with retrieved artifacts to form answers; users can create custom system prompts to influence context.: {}
         'Explicit context controls: @-commands (e.g., @file, @web, @definition, @references, @tree) let users attach or restrict specific sources of context for a given query.': {}
@@ -621,6 +633,7 @@ criteria:
         'The platform provides change checkpoints and snapshotting for safe experimentation: automatic change tracking, named checkpoints before applying edits, easy rollback/restore, and Git/PR-backed snapshots for human review. Checkpoints are central to Smart Apply / Next Edit flows.': {}
         'Edits are produced as diffs/patches and Brokk is Git-aware; users can review changes, commit, or revert using standard VCS workflows.': {}
         'The edit/build/test loop preserves build/test results and incremental revisions, allowing iterative rollback or refinement of agent-produced changes.': {}
+        '-': {}
         'Built-in checkpointing snapshots workspace state at steps and tool calls; users can compare changes, restore previous snapshots, or revert risky edits.': {}
         File Timeline and standard Git history complement checkpointing for undo/rollback workflows.: {}
         'Checkpoints are supported via git/worktree integration (explicit worktrees per session, diffs, and commits) plus session archiving and approval audit logs. Because CodeLayer operates alongside git, standard git workflows (commits, branches, resets) provide reversible checkpoints; HumanLayer also records approval histories and function-call traces for audit and rollback reasoning.': {}
@@ -755,6 +768,7 @@ criteria:
         'Augment offers an extensibility model via editor plugins (VS Code, JetBrains, Vim/Neovim), MCP connectors and native integrations (GitHub, Jira, Confluence, Notion, Linear). These bundle commands, agent capabilities, and integration hooks so teams can compose workflows and connect external tools.': {}
         'Extensibility via the open-source client: Brokk''s codebase and configuration enable integration points (model providers, build system adapters, dependency importers) and teams can extend behavior by modifying or contributing to the client.': {}
         BYOK and configurable model/provider integrations let organizations plug in their preferred LLMs and key management approaches.: {}
+        MCP ecosystem support: {}
         'MCP provides a mechanism to bundle commands, tools and integrations: developers create MCP servers/tools and install them into Cline to extend functionality.': {}
         'The VS Code extension model plus community MCP servers enables packaging sets of capabilities (commands, hooks, tool endpoints) that behave like plugins.': {}
         'The platform is extensible: CodeLayer is open-source and designed to be extended via configuration, model selection, and SDK integrations. HumanLayer''s SDK and webhooks let teams bundle commands, agent behaviors, and approval hooks into higher-level integrations (e.g., repo automation, CI hooks, Slack routing). The repo and SDK patterns enable building custom integrations or plugins that orchestrate agents and human approvals.': {}
@@ -814,6 +828,7 @@ criteria:
         'There is no public documentation describing a lifecycle-events/hooks API for attaching custom agent lifecycle callbacks inside Amazon Q Developer plugins. MCP enables external context providers and tool integrations, but explicit lifecycle hook APIs for agent-generated events (e.g., "onBeforeChange", "onAfterApply", or persistent event subscriptions") are not documented in the available sources.': {}
         'No public documentation found describing lifecycle hooks (webhooks, pre/post-generation hooks, or plugin lifecycle events) for AskCodi; if required for automation, confirm with AskCodi support or enterprise docs.': {}
         'Augment exposes lifecycle-style events and checkpoints that can be observed or acted on: plan/intent creation, edit proposal generation, Smart Apply execution, checkpoint creation, rollback/restore, PR opened/merged, and terminal command execution (with approval). Integrations and MCP connectors surface these events to external systems (e.g., CI, issue trackers) for automation and auditing.': {}
+        '-': {}
         'MCP tools act as attachable integrations with lifecycle-like behaviors (tool installation, invocation, and result handling).': {}
         Checkpoint creation/restore and Plan→Act transitions behave as lifecycle events developers can rely on when orchestrating multi-step workflows.: {}
         'Terminal execution and browser automation steps emit outputs (terminal output, screenshots, logs) that can be observed and reacted to as event-like signals.': {}
@@ -853,7 +868,6 @@ criteria:
         'Server and integration configuration allow lifecycle behaviors and custom integrations (e.g., indexing pipelines, webhooks for external systems).': {}
         'Theia provides lifecycle and contribution hooks via well-known contribution interfaces: FrontendApplicationContribution (initialize, onStart, onStop), BackendApplicationContribution, CommandContribution, MenuContribution, KeybindingContribution, and LanguageClient contributions. Extensions register disposables and use activation events (commands, file types, workspace events) to run code at specific lifecycle points. There are also workspace events (onDidChangeWorkspace, onWillSaveTextDocument, onDidChangeTextDocument) and backend/frontend RPC lifecycle hooks.': {}
         '[Trae exposes lifecycle checkpoints in its planning+execution model: planning / preview ("think-before-doing"), execution (apply changes), deploy, and error/rollback. Through MCP-custom agents and the Builder API, users can attach pre-plan constraints, intercept previews, validate planned modifications, and trigger post-execution actions (e.g., run tests or create commits). While exact hook names/SDK methods depend on Trae''s MCP client implementation, these lifecycle attachment points are available conceptually and via custom agents.]': {}
-        '-': {}
         No public documentation found for lifecycle hooks; product uses specialized subagents which may provide hook-like capabilities: {}
         'Exposes VS Code-compatible extension hooks and lifecycle events; extension API and built-in AI workflows provide event points for actions like command invocation, file edits, and agent lifecycle (permission prompts, start/stop).': {}
         'AI Flows lifecycle: Cascade''s flows have explicit stages (plan -> generate -> request approval -> execute commands -> iterate) that can be treated like lifecycle events and instrumented with rules and approvals.': {}
@@ -871,6 +885,7 @@ criteria:
         'AWS Console plugin alias prefixing: in the AWS console chat, prefixing questions with a plugin alias triggers calls to third-party plugin APIs (CloudZero, Datadog, Wiz) and surfaces provider data inline.': {}
         'There is no clear, public reference to a Slack-style or chat-slash-command system in AskCodi''s public docs. IDE integrations do expose commands via editor command palettes, but an explicit "slash command" interface in the chat is not documented.': {}
         'The platform supports re-usable, user-triggered commands across interfaces: editor commands (VS Code/JetBrains), CLI/TUI invocations, and chat actions (apply, propose, create checkpoint). These act like reusable operations users can invoke to apply agent capabilities consistently.': {}
+        '-': {}
         'Cline exposes VS Code commands accessible via the command palette (e.g., open Cline, add a tool, invoke actions) which act as reusable user-triggered commands.': {}
         The project also documents a CLI reference (docs.cline.bot/cline-cli/cli-reference) for command-line interactions tied to the extension's features.: {}
         'The product supports reusable, user-triggered commands in two forms: (1) a keyboard-driven command palette / keybindings inside the CodeLayer IDE for launching common actions, sessions, or agent flows; and (2) integrations with messaging channels (Slack/email) where HumanLayer can surface approval prompts or trigger agents via message-based interactions (including Slack workflows or command-like interactions).': {}
@@ -916,7 +931,6 @@ criteria:
         Editor integrations and chat interfaces expose command-like interactions (mentions/slash-style commands) in supported clients.: {}
         'Theia has a first-class commands system. Extensions declare commands via CommandContribution and register handlers with CommandRegistry; commands appear in the Command Palette and can be bound to keybindings or menus. Users can manually trigger commands from the palette, context menus, or keybindings. Commands can be enabled/disabled via context expressions and can execute either frontend logic or delegate work to the backend/container.': {}
         '[Trae supports natural-language command syntax and special inline/directives (examples reported: @Agent, #Context) and provides chat/command surfaces (sidebar/inline). These act like reusable, user-invoked commands and can be used to scope agent behavior, request specific actions, or switch modes (e.g., invoking Builder or SOLO).]': {}
-        '-': {}
         No public documentation found for slash commands; product uses guided prompts and Plan Mode instead: {}
         'Void provides keyboard-driven commands and a command palette (similar to VS Code) and exposes shortcuts for AI actions (examples: Ctrl+K for inline edits, Ctrl+L for chat). These commands are manually triggerable and reusable via the palette or keybindings.': {}
         'Command palette & inline commands: Windsurf provides contextual command suggestions (including terminal commands) and an inline/command-palette style interface for invoking reusable commands or code transformations.': {}
@@ -943,6 +957,7 @@ criteria:
         'Users can create specialist modes / profiles that tailor the assistant for particular tasks or styles: project profiles, role-specific modes (reviewer, maintainer, refactorer), model and memory selection, and policy/permission presets. These modes adjust agent behavior, allowed actions, and context-scope.': {}
         'Interaction modes: Ask vs Code (different behavior and permissions for read-only exploration vs direct edits) and Architect (orchestration mode) let users tailor the level of automation.': {}
         'Model/config overrides: Brokk allows configuring default models per action and selecting overrides for specific tasks, enabling cost/quality tradeoffs and task-specific tuning.': {}
+        Dedicated plan mode with deepResearch: {}
         Toggleable rulesets (.clinerules) and Plan vs Act modes let teams define specialist behavior profiles and switch modes to tailor the assistant for different tasks or policies.: {}
         'Teams and projects can configure provider/backends (BYOK, local models) that change runtime behavior and constraints for the assistant.': {}
         'Users can create specialist session modes by configuring models, prompt templates, and session settings (e.g., model type, temperature, tool access). The IDE and SDK permit different session types/workflows (review, refactor, PR authoring, exploratory), and CodeLayer''s session-forking and template features let teams codify repeatable modes for specific developer tasks.': {}
@@ -1011,6 +1026,7 @@ criteria:
         'Augment supports specialized autonomous agents or agent modes for task-specific workflows: local/IDE agents and remote/cloud agents that can plan, execute edits, run tests, and open PRs. Agents can be configured with different permissions, memories, and tool access via MCP connectors to create focused subagents for e.g., security fixes, refactors, or dependency upgrades.': {}
         'Brokk provides distinct agent roles (Ask, Code, Architect) that act like specialized subagents for question answering, direct code edits, and multi-step autonomous planning/execution.': {}
         Architect enables multi-stage task planning and execution where the system composes sequences of agent actions and can iterate on results under human supervision.: {}
+        '-': {}
         Through the Model Context Protocol (MCP) Cline can add and integrate custom tools/services ("add a tool" flow) that act as specialized subagents for task-specific workflows.: {}
         'These MCP-backed tools can fetch external data (Jira, PagerDuty, cloud APIs), perform operations, and be invoked from plans, effectively functioning as domain-specific subagents.': {}
         'CodeLayer is built for multi-agent orchestration: MULTICLAUDE enables running multiple Claude Code sessions in parallel (effectively specialized subagents) bound to separate worktrees or tasks. The HumanLayer SDK pattern also encourages defining specialized agent/tool functions (including "human as a tool") that act as subagents for task-specific workflows and human-in-the-loop approvals.': {}
@@ -1082,6 +1098,7 @@ criteria:
         React (frontend): {}
         Node.js / Express (backend): {}
         'SQLite, PostgreSQL': {}
+        Specifically for React applications: {}
         Many other popular languages (wide IDE/language support): {}
         'Python, JavaScript/TypeScript, Go, Java, Ruby, C#, and most common programming languages (broad support via language-agnostic indexing)': {}
         Any: {}
@@ -1105,6 +1122,43 @@ criteria:
         C/C++: {}
         Scala: {}
         GraphQL: {}
+  - UngroupedCriteria:
+      name: Ungrouped Criteria
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      description: ''
+      placeholder: ''
+      order: ''
+      andSearch: false
+      rangeSearch: false
+      children:
+        - Terminal
+        - SpecDrivenDevelopment
+  - SpecDrivenDevelopment:
+      name: SpecDrivenDevelopment
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description:
+        template: 'Default description for {}'
+        variables:
+          - name
+      placeholder:
+        template: 'Select {} ...'
+        variables:
+          - name
+      order: ''
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+          display: ✅
+        'No':
+          displayHtml: <span class="status status-no">✖</span>
+        '-': {}
   - Classification:
       type: LABEL
       values:

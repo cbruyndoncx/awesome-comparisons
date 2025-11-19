@@ -1,0 +1,202 @@
+<div class="add-entry-modal">
+  <div class="modal-header">
+    <h2 mat-dialog-title>Add New Entry to {{ data.dataset.displayLabel }}</h2>
+    <button type="button" class="close-button" (click)="close()" aria-label="Close">
+      ×
+    </button>
+  </div>
+
+  <mat-dialog-content class="modal-content">
+    <div class="content-layout">
+      <!-- Form Section -->
+      <div class="form-section" [class.hidden]="showPreview">
+        <form [formGroup]="entryForm">
+          <!-- Basic Info -->
+          <div class="section basic-info">
+            <h3 class="section-title">Basic Information</h3>
+
+            <div class="form-group">
+              <label for="entry-name">Name *</label>
+              <input
+                id="entry-name"
+                type="text"
+                formControlName="_name"
+                placeholder="e.g., Cursor IDE"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="entry-url">URL *</label>
+              <input
+                id="entry-url"
+                type="url"
+                formControlName="_url"
+                placeholder="https://example.com"
+                class="form-control"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="entry-description">Description</label>
+              <textarea
+                id="entry-description"
+                formControlName="_description"
+                placeholder="Brief description of the product..."
+                class="form-control"
+                rows="3"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Feature Groups -->
+          <div *ngFor="let group of data.featureGroups" class="section feature-group">
+            <h3 class="section-title">{{ group.displayName || group.key }}</h3>
+
+            <div *ngFor="let criteriaControl of groupedCriteria.get(group.displayName || group.key)" class="criteria-item">
+              <ng-container [ngSwitch]="criteriaControl.criteria.type">
+
+                <!-- LABEL Type -->
+                <div *ngSwitchCase="CriteriaTypes.LABEL" class="criteria-label">
+                  <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+                  <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
+                    {{ criteriaControl.criteria.description }}
+                  </p>
+                  <div class="label-options">
+                    <button
+                      *ngFor="let labelValue of getLabelValues(criteriaControl.criteria)"
+                      type="button"
+                      class="label-chip"
+                      [class.selected]="isLabelSelected(criteriaControl.criteria.id, labelValue)"
+                      (click)="toggleLabel(criteriaControl.criteria.id, labelValue)"
+                    >
+                      {{ labelValue }}
+                    </button>
+                  </div>
+                </div>
+
+                <!-- TEXT Type -->
+                <div *ngSwitchCase="CriteriaTypes.TEXT" class="criteria-text">
+                  <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+                  <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
+                    {{ criteriaControl.criteria.description }}
+                  </p>
+                  <input
+                    type="text"
+                    [formControlName]="getFormControlName(criteriaControl.criteria.id)"
+                    [placeholder]="criteriaControl.criteria.placeholder || 'Enter value...'"
+                    class="form-control"
+                  />
+                </div>
+
+                <!-- MARKDOWN Type -->
+                <div *ngSwitchCase="CriteriaTypes.MARKDOWN" class="criteria-markdown">
+                  <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+                  <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
+                    {{ criteriaControl.criteria.description }}
+                  </p>
+                  <textarea
+                    [formControlName]="getFormControlName(criteriaControl.criteria.id)"
+                    [placeholder]="criteriaControl.criteria.placeholder || 'Enter markdown content...'"
+                    class="form-control"
+                    rows="4"
+                  ></textarea>
+                </div>
+
+                <!-- RATING Type -->
+                <div *ngSwitchCase="CriteriaTypes.RATING" class="criteria-rating">
+                  <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+                  <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
+                    {{ criteriaControl.criteria.description }}
+                  </p>
+                  <input
+                    type="text"
+                    [formControlName]="getFormControlName(criteriaControl.criteria.id)"
+                    placeholder="e.g., [4] Excellent features"
+                    class="form-control"
+                  />
+                </div>
+
+                <!-- REPOSITORY Type -->
+                <div *ngSwitchCase="CriteriaTypes.REPOSITORY" class="criteria-repository">
+                  <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+                  <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
+                    {{ criteriaControl.criteria.description }}
+                  </p>
+                  <input
+                    type="url"
+                    [formControlName]="getFormControlName(criteriaControl.criteria.id)"
+                    placeholder="https://github.com/..."
+                    class="form-control"
+                  />
+                </div>
+
+                <!-- Default/Fallback -->
+                <div *ngSwitchDefault class="criteria-default">
+                  <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+                  <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
+                    {{ criteriaControl.criteria.description }}
+                  </p>
+                  <input
+                    type="text"
+                    [formControlName]="getFormControlName(criteriaControl.criteria.id)"
+                    [placeholder]="criteriaControl.criteria.placeholder || 'Enter value...'"
+                    class="form-control"
+                  />
+                </div>
+
+              </ng-container>
+            </div>
+          </div>
+
+          <!-- Ungrouped Criteria -->
+          <div *ngIf="ungroupedCriteria.length > 0" class="section feature-group">
+            <h3 class="section-title">Additional Information</h3>
+
+            <div *ngFor="let criteriaControl of ungroupedCriteria" class="criteria-item">
+              <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+              <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
+                {{ criteriaControl.criteria.description }}
+              </p>
+              <input
+                type="text"
+                [formControlName]="getFormControlName(criteriaControl.criteria.id)"
+                [placeholder]="criteriaControl.criteria.placeholder || 'Enter value...'"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Preview Section -->
+      <div class="preview-section" [class.hidden]="!showPreview">
+        <div class="preview-header">
+          <h3>Markdown Preview</h3>
+          <p class="preview-filename">Filename: <code>{{ filename }}</code></p>
+        </div>
+        <pre class="markdown-preview">{{ markdownPreview }}</pre>
+      </div>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions class="modal-actions">
+    <div class="actions-left">
+      <button type="button" class="btn btn-secondary" (click)="togglePreview()">
+        {{ showPreview ? 'Show Form' : 'Show Preview' }}
+      </button>
+    </div>
+
+    <div class="actions-right">
+      <button type="button" class="btn btn-secondary" (click)="downloadMarkdown()">
+        Download .md
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="copyToClipboard()">
+        Copy
+      </button>
+      <button type="button" class="btn btn-primary" (click)="submitToGitHub()">
+        Submit to GitHub
+      </button>
+    </div>
+  </mat-dialog-actions>
+</div>
