@@ -400,8 +400,8 @@
   }
 }
 
-// Dark mode support
-@media (prefers-color-scheme: dark) {
+// Dark mode support - using class-based theme instead of media query
+:host-context(.uc-dark-theme) {
   .add-entry-modal {
     background: #0f172a;
   }
@@ -440,22 +440,22 @@
 
   .form-group label,
   .criteria-item .criteria-name {
-    color: #f1f5f9;
+    color: #f1f5f9 !important;
   }
 
   .form-group .form-control,
   .criteria-item .form-control {
-    background: #0f172a;
-    border-color: #334155;
-    color: #f1f5f9;
+    background: #0f172a !important;
+    border-color: #334155 !important;
+    color: #f1f5f9 !important;
 
     &::placeholder {
-      color: #64748b;
+      color: #64748b !important;
     }
 
     &:focus {
-      border-color: var(--primary-color, #3b82f6);
-      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+      border-color: var(--primary-color, #3b82f6) !important;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
     }
   }
 
@@ -506,9 +506,9 @@
   }
 
   .markdown-preview {
-    background: #1e293b;
-    border-color: #334155;
-    color: #f1f5f9;
+    background: #1e293b !important;
+    border-color: #334155 !important;
+    color: #f1f5f9 !important;
 
     &::-webkit-scrollbar-track {
       background: #0f172a;
@@ -524,8 +524,8 @@
   }
 
   .modal-actions {
-    background: #1e293b;
-    border-top-color: rgba(255, 255, 255, 0.1);
+    background: #1e293b !important;
+    border-top-color: rgba(255, 255, 255, 0.1) !important;
 
     .btn-secondary {
       background: #0f172a;
