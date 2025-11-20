@@ -40,3 +40,20 @@ pre {
     background: rgba(124, 58, 237, 0.16);
     color: var(--dark, #0f172a);
 }
+/* Material Dialog z-index override to appear above table headers */
+.cdk-overlay-container {
+    z-index: 10000 !important;
+}
+
+.cdk-overlay-backdrop {
+    z-index: 9999 !important;
+}
+
+.cdk-overlay-pane {
+    z-index: 10001 !important;
+}
+
+.mat-dialog-container,
+.mat-mdc-dialog-container {
+    z-index: 10002 !important;
+}
