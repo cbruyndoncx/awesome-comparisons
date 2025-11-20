@@ -43,17 +43,30 @@ pre {
 /* Material Dialog z-index override to appear above table headers */
 .cdk-overlay-container {
     z-index: 10000 !important;
+    pointer-events: none;
 }
 
 .cdk-overlay-backdrop {
-    z-index: 9999 !important;
+    pointer-events: auto;
 }
 
 .cdk-overlay-pane {
-    z-index: 10001 !important;
+    pointer-events: auto;
+    position: relative;
 }
 
-.mat-dialog-container,
-.mat-mdc-dialog-container {
-    z-index: 10002 !important;
+/* Specific styling for add-entry dialog */
+.add-entry-dialog-panel {
+    position: relative;
+    z-index: 1;
+}
+
+.add-entry-dialog-panel .mat-mdc-dialog-container,
+.add-entry-dialog-panel .mat-dialog-container {
+    padding: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
+                0 24px 38px 3px rgba(0, 0, 0, 0.14),
+                0 9px 46px 8px rgba(0, 0, 0, 0.12);
 }

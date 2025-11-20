@@ -513,6 +513,9 @@ export class ComparisonComponent {
                         width: '90vw',
                         maxWidth: '1200px',
                         maxHeight: '90vh',
+                        disableClose: true,
+                        hasBackdrop: true,
+                        panelClass: 'add-entry-dialog-panel',
                         data: {
                             dataset,
                             criteria: this.configurationService.criteria || [],
