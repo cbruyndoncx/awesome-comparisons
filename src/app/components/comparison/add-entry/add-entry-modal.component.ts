@@ -78,21 +78,17 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
   }
 
   private buildForm(): void {
+    // Always create basic form controls first
+    this.entryForm.addControl('_name', new FormControl('', Validators.required));
+    this.entryForm.addControl('_url', new FormControl('', Validators.required));
+    this.entryForm.addControl('_description', new FormControl(''));
+
     // Create form controls for each criteria
     const systemCriteriaIds = new Set(['id', 'description', 'RepositoryActive', 'Rating-Criteria']);
 
     this.data.criteria.forEach(criteria => {
       if (systemCriteriaIds.has(criteria.id)) {
-        // Handle system criteria separately
-        if (criteria.id === 'id') {
-          const nameControl = new FormControl('', Validators.required);
-          const urlControl = new FormControl('', Validators.required);
-          this.entryForm.addControl('_name', nameControl);
-          this.entryForm.addControl('_url', urlControl);
-        } else if (criteria.id === 'description') {
-          const descControl = new FormControl('');
-          this.entryForm.addControl('_description', descControl);
-        }
+        // Skip system criteria - already handled above
         return;
       }
 
@@ -253,7 +249,7 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
 
     switch (criteria.type) {
       case CriteriaTypes.LABEL:
-        const selectedLabels = value || [];
+        const selectedLabels = Array.isArray(value) ? value : (value ? [value] : []);
         if (selectedLabels.length > 0) {
           selectedLabels.forEach((label: string) => {
             section += `- ${label}\n`;
@@ -266,7 +262,7 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
       case CriteriaTypes.TEXT:
       case CriteriaTypes.MARKDOWN:
       case CriteriaTypes.REPOSITORY:
-        if (value && value.trim()) {
+        if (value && typeof value === 'string' && value.trim()) {
           const lines = value.split('\n');
           lines.forEach((line: string) => {
             section += `- ${line}\n`;
@@ -277,7 +273,7 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
         break;
 
       case CriteriaTypes.RATING:
-        if (value && value.trim()) {
+        if (value && typeof value === 'string' && value.trim()) {
           section += `- ${value}\n`;
         } else {
           section += `- \n`;
@@ -285,7 +281,7 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
         break;
 
       default:
-        if (value && value.trim()) {
+        if (value && typeof value === 'string' && value.trim()) {
           section += `- ${value}\n`;
         } else {
           section += `- \n`;
