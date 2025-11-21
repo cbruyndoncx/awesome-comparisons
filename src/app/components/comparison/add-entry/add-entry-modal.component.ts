@@ -51,6 +51,7 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    console.log('Feature groups passed to modal:', this.data.featureGroups);
     this.buildForm();
     this.updateFilename();
     this.updateMarkdown();
@@ -140,9 +141,12 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
   private findGroupForCriteria(criteriaId: string): string | undefined {
     for (const group of this.data.featureGroups) {
       if (group.children && group.children.some((child: any) => child.id === criteriaId)) {
-        return group.displayName || group.key;
+        const groupKey = group.displayName || group.key;
+        console.log(`Found group "${groupKey}" for criteria "${criteriaId}"`);
+        return groupKey;
       }
     }
+    console.log(`No group found for criteria "${criteriaId}"`);
     return undefined;
   }
 
