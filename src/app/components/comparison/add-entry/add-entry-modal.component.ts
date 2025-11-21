@@ -51,14 +51,20 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    console.log('=== Modal Initialization ===');
     console.log('Feature groups passed to modal:', this.data.featureGroups);
+    console.log('Feature groups count:', this.data.featureGroups?.length);
+    console.log('Total criteria:', this.data.criteria?.length);
+
     this.buildForm();
     this.updateFilename();
     this.updateMarkdown();
 
+    console.log('=== After Form Build ===');
     console.log('Form initialized with controls:', Object.keys(this.entryForm.controls));
     console.log('Grouped criteria:', this.groupedCriteria);
-    console.log('Ungrouped criteria:', this.ungroupedCriteria);
+    console.log('Grouped criteria count:', Array.from(this.groupedCriteria.values()).reduce((sum, arr) => sum + arr.length, 0));
+    console.log('Ungrouped criteria count:', this.ungroupedCriteria.length);
 
     // Update markdown preview when form changes
     this.entryForm.valueChanges
@@ -140,13 +146,20 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
 
   private findGroupForCriteria(criteriaId: string): string | undefined {
     for (const group of this.data.featureGroups) {
+      console.log(`Checking group "${group.displayName || group.key}" for criteria "${criteriaId}"`, {
+        hasChildren: !!group.children,
+        childrenCount: group.children?.length,
+        childrenIds: group.children?.map((c: any) => c.id),
+        children: group.children
+      });
+
       if (group.children && group.children.some((child: any) => child.id === criteriaId)) {
         const groupKey = group.displayName || group.key;
-        console.log(`Found group "${groupKey}" for criteria "${criteriaId}"`);
+        console.log(`✓ Found group "${groupKey}" for criteria "${criteriaId}"`);
         return groupKey;
       }
     }
-    console.log(`No group found for criteria "${criteriaId}"`);
+    console.log(`✗ No group found for criteria "${criteriaId}"`);
     return undefined;
   }
 
