@@ -55,13 +55,18 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
     this.updateFilename();
     this.updateMarkdown();
 
+    console.log('Form initialized with controls:', Object.keys(this.entryForm.controls));
+    console.log('Grouped criteria:', this.groupedCriteria);
+    console.log('Ungrouped criteria:', this.ungroupedCriteria);
+
     // Update markdown preview when form changes
     this.entryForm.valueChanges
       .pipe(
         takeUntil(this.destroy$),
         debounceTime(300)
       )
-      .subscribe(() => {
+      .subscribe((values) => {
+        console.log('Form values changed:', values);
         this.updateMarkdown();
         this.updateFilename();
       });
@@ -145,7 +150,7 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
     return undefined;
   }
 
-  private getFormControlName(criteriaId: string): string {
+  getFormControlName(criteriaId: string): string {
     return `criteria_${criteriaId}`;
   }
 
@@ -178,8 +183,13 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
   }
 
   getLabelValues(criteria: Criteria): string[] {
-    if (!criteria.values) return [];
-    return Array.from(criteria.values.keys());
+    if (!criteria.values) {
+      console.warn('No values found for criteria:', criteria.id, criteria);
+      return [];
+    }
+    const values = Array.from(criteria.values.keys());
+    console.log('Label values for', criteria.id, ':', values);
+    return values;
   }
 
   private updateFilename(): void {
@@ -237,6 +247,7 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
 
   private buildCriteriaSection(criteria: Criteria): string {
     const value = this.getControlValue(criteria.id);
+    console.log(`Building section for ${criteria.id} (${criteria.type}):`, value);
 
     let section = `### ${criteria.name || criteria.id}\n`;
 
