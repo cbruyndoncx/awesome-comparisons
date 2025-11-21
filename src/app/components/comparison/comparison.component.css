@@ -469,6 +469,7 @@ pdialog {
 .fab-add-entry iron-icon {
     --iron-icon-width: 24px;
     --iron-icon-height: 24px;
+    color: white;
 }
 
 /* Responsive adjustments for FAB */
@@ -484,4 +485,20 @@ pdialog {
         --iron-icon-width: 20px;
         --iron-icon-height: 20px;
     }
+}
+
+/* Dark mode support for FAB */
+:host-context(.uc-dark-theme) .fab-add-entry {
+    background: var(--primary-color, #3b82f6);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+:host-context(.uc-dark-theme) .fab-add-entry:hover {
+    background: var(--primary-hover, #2563eb);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+:host-context(.uc-dark-theme) .fab-add-entry iron-icon {
+    color: white;
 }
