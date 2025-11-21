@@ -466,9 +466,11 @@ pdialog {
     transform: scale(0.95);
 }
 
-.fab-add-entry iron-icon {
-    --iron-icon-width: 24px;
-    --iron-icon-height: 24px;
+.fab-add-entry mat-icon {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
     color: white;
 }
 
@@ -481,9 +483,11 @@ pdialog {
         height: 48px;
     }
 
-    .fab-add-entry iron-icon {
-        --iron-icon-width: 20px;
-        --iron-icon-height: 20px;
+    .fab-add-entry mat-icon {
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
     }
 }
 
@@ -499,6 +503,6 @@ pdialog {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
-:host-context(.uc-dark-theme) .fab-add-entry iron-icon {
+:host-context(.uc-dark-theme) .fab-add-entry mat-icon {
     color: white;
 }
