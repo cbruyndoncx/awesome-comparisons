@@ -223,15 +223,17 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
     const url = this.entryForm.get('_url')?.value || '';
     const description = this.entryForm.get('_description')?.value || '';
 
-    let markdown = `# ${this.data.dataset.displayLabel}\n\n`;
+    // Header with entry name and URL (not dataset name)
+    let markdown = '';
 
     // Add instruction for name/URL if empty
     if (!name && !url) {
       markdown += `<!-- Add the comparison entry name plus canonical URL. -->\n\n`;
     }
-    markdown += `- ${name}${url ? ' - ' + url : ''}\n\n`;
 
-    // Add instruction for description
+    markdown += `# ${name}${url ? ' - ' + url : ''}\n\n`;
+
+    // Add instruction for description if empty
     if (!description) {
       markdown += `<!-- Describe this comparison entry using one or two paragraphs. -->\n\n`;
     }
@@ -239,8 +241,6 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
     if (description) {
       markdown += `${description}\n\n`;
     }
-
-    markdown += `**Dataset ID:** ${this.data.dataset.id}\n\n`;
 
     // Process feature groups
     this.data.featureGroups.forEach(group => {
