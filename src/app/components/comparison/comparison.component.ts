@@ -506,11 +506,13 @@ export class ComparisonComponent {
                     return;
                 }
 
-                this.store.pipe(take(1)).subscribe(vm => {
-                    // Access nested state structure: vm.state.featureGroups
-                    const featureGroups = vm.state?.featureGroups || [];
+                this.store.pipe(take(1)).subscribe((raw: any) => {
+                    // Handle both wrapped ({ state: IUCAppState }) and unwrapped (IUCAppState) formats
+                    const state = raw && raw.state ? raw.state as IUCAppState : raw as IUCAppState;
+                    const featureGroups = state.featureGroups || [];
 
                     console.log('Opening modal with feature groups:', featureGroups.length);
+                    console.log('Feature groups:', featureGroups);
 
                     const dialogRef = this.dialog.open(AddEntryModalComponent, {
                         width: '90vw',
