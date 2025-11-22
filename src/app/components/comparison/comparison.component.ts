@@ -506,8 +506,11 @@ export class ComparisonComponent {
                     return;
                 }
 
-                this.store.pipe(take(1)).subscribe(state => {
-                    const featureGroups = state.featureGroups || [];
+                this.store.pipe(take(1)).subscribe(vm => {
+                    // Access nested state structure: vm.state.featureGroups
+                    const featureGroups = vm.state?.featureGroups || [];
+
+                    console.log('Opening modal with feature groups:', featureGroups.length);
 
                     const dialogRef = this.dialog.open(AddEntryModalComponent, {
                         width: '90vw',
