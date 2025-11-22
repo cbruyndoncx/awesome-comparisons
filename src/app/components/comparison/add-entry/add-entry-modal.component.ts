@@ -223,11 +223,24 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
     const url = this.entryForm.get('_url')?.value || '';
     const description = this.entryForm.get('_description')?.value || '';
 
-    let markdown = `# ${name}${url ? ' - ' + url : ''}\n\n`;
+    let markdown = `# ${this.data.dataset.displayLabel}\n\n`;
+
+    // Add instruction for name/URL if empty
+    if (!name && !url) {
+      markdown += `<!-- Add the comparison entry name plus canonical URL. -->\n\n`;
+    }
+    markdown += `- ${name}${url ? ' - ' + url : ''}\n\n`;
+
+    // Add instruction for description
+    if (!description) {
+      markdown += `<!-- Describe this comparison entry using one or two paragraphs. -->\n\n`;
+    }
 
     if (description) {
       markdown += `${description}\n\n`;
     }
+
+    markdown += `**Dataset ID:** ${this.data.dataset.id}\n\n`;
 
     // Process feature groups
     this.data.featureGroups.forEach(group => {
@@ -235,6 +248,12 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
       if (!groupControls || groupControls.length === 0) return;
 
       markdown += `## ${group.displayName || group.key}\n\n`;
+
+      // Add group description/tooltip as comment if available
+      if (group.label?.tooltip || group.label?.value) {
+        const groupDesc = group.label.tooltip || group.label.value;
+        markdown += `<!-- ${groupDesc} -->\n\n`;
+      }
 
       groupControls.forEach(({ criteria }) => {
         const section = this.buildCriteriaSection(criteria);
@@ -264,21 +283,65 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
 
     let section = `### ${criteria.name || criteria.id}\n`;
 
+    // Add description as HTML comment if available
+    if (criteria.description) {
+      section += `<!-- ${criteria.description} -->\n`;
+    }
+
     switch (criteria.type) {
       case CriteriaTypes.LABEL:
         const selectedLabels = Array.isArray(value) ? value : (value ? [value] : []);
+
+        // Add instruction comment for LABEL types
+        const labelValues = this.getLabelValues(criteria);
+        const hasYes = labelValues.some(v => v.toLowerCase() === 'yes');
+        const hasNo = labelValues.some(v => v.toLowerCase() === 'no');
+
+        if (hasYes && hasNo) {
+          section += `<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->\n`;
+        } else {
+          section += `<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->\n`;
+        }
+
         if (selectedLabels.length > 0) {
           selectedLabels.forEach((label: string) => {
             section += `- ${label}\n`;
+          });
+        } else {
+          // If no values selected, show all available options
+          labelValues.forEach((label: string) => {
+            section += `- ${label}\n`;
+          });
+        }
+
+        section += `<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->\n`;
+        break;
+
+      case CriteriaTypes.TEXT:
+        section += `<!-- Provide written details for ${criteria.name || criteria.id}. -->\n`;
+        if (value && typeof value === 'string' && value.trim()) {
+          const lines = value.split('\n');
+          lines.forEach((line: string) => {
+            section += `- ${line}\n`;
           });
         } else {
           section += `- \n`;
         }
         break;
 
-      case CriteriaTypes.TEXT:
       case CriteriaTypes.MARKDOWN:
+        if (value && typeof value === 'string' && value.trim()) {
+          const lines = value.split('\n');
+          lines.forEach((line: string) => {
+            section += `- ${line}\n`;
+          });
+        } else {
+          section += `- \n`;
+        }
+        break;
+
       case CriteriaTypes.REPOSITORY:
+        section += `<!-- List the relevant repository links for ${criteria.name || criteria.id} or remove if not applicable. -->\n`;
         if (value && typeof value === 'string' && value.trim()) {
           const lines = value.split('\n');
           lines.forEach((line: string) => {
@@ -290,6 +353,7 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
         break;
 
       case CriteriaTypes.RATING:
+        section += `<!-- Provide the rating value for ${criteria.name || criteria.id} or remove if unknown. -->\n`;
         if (value && typeof value === 'string' && value.trim()) {
           section += `- ${value}\n`;
         } else {
@@ -298,6 +362,7 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
         break;
 
       default:
+        section += `<!-- Add the appropriate content for ${criteria.name || criteria.id}. -->\n`;
         if (value && typeof value === 'string' && value.trim()) {
           section += `- ${value}\n`;
         } else {
