@@ -219,6 +219,14 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
   }
 
   private generateMarkdown(): string {
+    return this.generateMarkdownInternal(true); // With comments for preview/download
+  }
+
+  private generateMarkdownForSubmission(): string {
+    return this.generateMarkdownInternal(false); // Without comments for GitHub
+  }
+
+  private generateMarkdownInternal(includeComments: boolean): string {
     const name = this.entryForm.get('_name')?.value || '';
     const url = this.entryForm.get('_url')?.value || '';
     const description = this.entryForm.get('_description')?.value || '';
@@ -227,14 +235,14 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
     let markdown = '';
 
     // Add instruction for name/URL if empty
-    if (!name && !url) {
+    if (includeComments && !name && !url) {
       markdown += `<!-- Add the comparison entry name plus canonical URL. -->\n\n`;
     }
 
     markdown += `# ${name}${url ? ' - ' + url : ''}\n\n`;
 
     // Add instruction for description if empty
-    if (!description) {
+    if (includeComments && !description) {
       markdown += `<!-- Describe this comparison entry using one or two paragraphs. -->\n\n`;
     }
 
@@ -250,13 +258,13 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
       markdown += `## ${group.displayName || group.key}\n\n`;
 
       // Add group description/tooltip as comment if available
-      if (group.label?.tooltip || group.label?.value) {
+      if (includeComments && (group.label?.tooltip || group.label?.value)) {
         const groupDesc = group.label.tooltip || group.label.value;
         markdown += `<!-- ${groupDesc} -->\n\n`;
       }
 
       groupControls.forEach(({ criteria }) => {
-        const section = this.buildCriteriaSection(criteria);
+        const section = this.buildCriteriaSection(criteria, includeComments);
         if (section) {
           markdown += section;
         }
@@ -267,7 +275,7 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
     if (this.ungroupedCriteria.length > 0) {
       markdown += `## Additional Information\n\n`;
       this.ungroupedCriteria.forEach(({ criteria }) => {
-        const section = this.buildCriteriaSection(criteria);
+        const section = this.buildCriteriaSection(criteria, includeComments);
         if (section) {
           markdown += section;
         }
@@ -277,14 +285,14 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
     return markdown;
   }
 
-  private buildCriteriaSection(criteria: Criteria): string {
+  private buildCriteriaSection(criteria: Criteria, includeComments: boolean = true): string {
     const value = this.getControlValue(criteria.id);
     console.log(`Building section for ${criteria.id} (${criteria.type}):`, value);
 
     let section = `### ${criteria.name || criteria.id}\n`;
 
     // Add description as HTML comment if available
-    if (criteria.description) {
+    if (includeComments && criteria.description) {
       section += `<!-- ${criteria.description} -->\n`;
     }
 
@@ -293,32 +301,43 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
         const selectedLabels = Array.isArray(value) ? value : (value ? [value] : []);
 
         // Add instruction comment for LABEL types
-        const labelValues = this.getLabelValues(criteria);
-        const hasYes = labelValues.some(v => v.toLowerCase() === 'yes');
-        const hasNo = labelValues.some(v => v.toLowerCase() === 'no');
+        if (includeComments) {
+          const labelValues = this.getLabelValues(criteria);
+          const hasYes = labelValues.some(v => v.toLowerCase() === 'yes');
+          const hasNo = labelValues.some(v => v.toLowerCase() === 'no');
 
-        if (hasYes && hasNo) {
-          section += `<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->\n`;
-        } else {
-          section += `<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->\n`;
+          if (hasYes && hasNo) {
+            section += `<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->\n`;
+          } else {
+            section += `<!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->\n`;
+          }
         }
 
         if (selectedLabels.length > 0) {
+          // Only show selected labels
           selectedLabels.forEach((label: string) => {
             section += `- ${label}\n`;
           });
-        } else {
-          // If no values selected, show all available options
+        } else if (includeComments) {
+          // If no values selected and comments enabled, show all available options for guidance
+          const labelValues = this.getLabelValues(criteria);
           labelValues.forEach((label: string) => {
             section += `- ${label}\n`;
           });
+        } else {
+          // For submission without selection, just add empty placeholder
+          section += `- \n`;
         }
 
-        section += `<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->\n`;
+        if (includeComments) {
+          section += `<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->\n`;
+        }
         break;
 
       case CriteriaTypes.TEXT:
-        section += `<!-- Provide written details for ${criteria.name || criteria.id}. -->\n`;
+        if (includeComments) {
+          section += `<!-- Provide written details for ${criteria.name || criteria.id}. -->\n`;
+        }
         if (value && typeof value === 'string' && value.trim()) {
           const lines = value.split('\n');
           lines.forEach((line: string) => {
@@ -341,7 +360,9 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
         break;
 
       case CriteriaTypes.REPOSITORY:
-        section += `<!-- List the relevant repository links for ${criteria.name || criteria.id} or remove if not applicable. -->\n`;
+        if (includeComments) {
+          section += `<!-- List the relevant repository links for ${criteria.name || criteria.id} or remove if not applicable. -->\n`;
+        }
         if (value && typeof value === 'string' && value.trim()) {
           const lines = value.split('\n');
           lines.forEach((line: string) => {
@@ -353,7 +374,9 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
         break;
 
       case CriteriaTypes.RATING:
-        section += `<!-- Provide the rating value for ${criteria.name || criteria.id} or remove if unknown. -->\n`;
+        if (includeComments) {
+          section += `<!-- Provide the rating value for ${criteria.name || criteria.id} or remove if unknown. -->\n`;
+        }
         if (value && typeof value === 'string' && value.trim()) {
           section += `- ${value}\n`;
         } else {
@@ -362,7 +385,9 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
         break;
 
       default:
-        section += `<!-- Add the appropriate content for ${criteria.name || criteria.id}. -->\n`;
+        if (includeComments) {
+          section += `<!-- Add the appropriate content for ${criteria.name || criteria.id}. -->\n`;
+        }
         if (value && typeof value === 'string' && value.trim()) {
           section += `- ${value}\n`;
         } else {
@@ -380,7 +405,8 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
       return;
     }
 
-    const markdown = this.generateMarkdown();
+    // Use version without HTML comments to reduce URL length
+    const markdown = this.generateMarkdownForSubmission();
     const name = this.entryForm.get('_name')?.value;
 
     // Determine repository info
