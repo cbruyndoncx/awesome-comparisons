@@ -466,12 +466,13 @@ pdialog {
     transform: scale(0.95);
 }
 
-.fab-add-entry mat-icon {
+.fab-add-entry .fab-icon {
     font-size: 24px;
     width: 24px;
     height: 24px;
     line-height: 24px;
     color: white;
+    display: inline-block;
 }
 
 /* Responsive adjustments for FAB */
@@ -483,7 +484,7 @@ pdialog {
         height: 48px;
     }
 
-    .fab-add-entry mat-icon {
+    .fab-add-entry .fab-icon {
         font-size: 20px;
         width: 20px;
         height: 20px;
@@ -503,6 +504,6 @@ pdialog {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
-:host-context(.uc-dark-theme) .fab-add-entry mat-icon {
+:host-context(.uc-dark-theme) .fab-add-entry .fab-icon {
     color: white;
 }
