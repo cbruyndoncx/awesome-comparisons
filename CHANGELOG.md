@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Removed
 
-- Java/Gradle md-to-json pipeline retired in favor of the MD_TO_JSON_COMMAND-driven Python workflow.
+- Java/Gradle md-to-json pipeline retired in favor of the built-in TypeScript md2json CLI at `lib/md2json/dist/cli.js` (no Java dependency).
 - lib/md-to-json directory has been removed.
 
 ## [v2.0.0-alpha.32] – 2020-02-21

@@ -8,6 +8,7 @@ prompt: |
 instructions: |
 
   # Research Guidelines
+  Make extensive use of Perplexity to gather background info for the research.
   Research with reputable sources (official documentation, technical blogs, GitHub repositories).
 
   # Update Process
@@ -47,23 +48,23 @@ extensions:
   description: Built-in developer extension for code analysis and file operations
   timeout: 300
   bundled: true
-  available_tools: []  # All tools available by default
+  available_tools: [] 
 
 - type: stdio
   name: perplexityai
-  cmd: node  # Requires: Node.js 18.0.0+ installed and in PATH
+  cmd: node
   args:
-  - ${PERPLEXITY_MCP_PATH:-./mcp/perplexity-mcp/build/index.js}  # Requires: Set PERPLEXITY_MCP_PATH env var or install to ./mcp/perplexity-mcp/build/index.js
+  - /home/cb/TOOLBOX/MCP/perplexity-mcp/build/index.js
   envs: {}
   env_keys: []
   timeout: 300
   description: use perplexity for extensive web research, gathering all data and references
   bundled: false
-  available_tools: []  # MCP-provided tools loaded dynamically
+  available_tools: []  
 
 settings:
   goose_provider: openai
-  goose_model: gpt-4o  # Valid models: gpt-4o, gpt-4-turbo, gpt-4, gpt-3.5-turbo
+  goose_model: gpt-5-mini
   temperature: 0.1
 
 parameters:

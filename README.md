@@ -11,6 +11,8 @@ Built with [Angular](https://angular.io/). Read the original paper: [The Ultimat
 ```bash
 npm install
 npm run dev -- --dataset aie-model
+## or launch the business strategy dataset
+npm run dev -- --dataset business-competition
 ```
 
 Then open `http://localhost:4200` (comparison) or `http://localhost:4200/admin` (config editor).
@@ -33,6 +35,7 @@ Then open `http://localhost:4200` (comparison) or `http://localhost:4200/admin` 
 - [Migration from v2](docs/uc-v3/Migration_From_v2.md) - Upgrade guide
 - [Admin Config Interface](docs/uc-v3/Admin_Config_Interface.md) - Visual editor guide
 - [Shared Configuration](docs/uc-v3/Shared_Configuration.md) - Inheritance system
+- [Business Toolkit](docs/uc-v3/Business_Toolkit.md) - Strategy frameworks + data authoring guide
 - [FAQ](docs/uc-v3/FAQ.md) & [Troubleshooting](docs/uc-v3/Troubleshooting.md)
 
 ## Development

@@ -13,7 +13,7 @@ Documentation for dependencies and processes can be found in the [Knowledge Inde
 ALWAYS create [plan files](.tessl/framework/plan-files.md) when planning: @.tessl/framework/plan-files.md
 
 ## Project Bootstrapping <!-- tessl-managed -->
-Use Node 20+, then run `npm install` to populate `node_modules/`. Development targets Angular 17 with TypeScript 5 and NgRx 17, Gulp 4, and Angular CLI for build tooling. Build distributables with `npm run build` (invokes Angular CLI); publish with `npm run release`. Note that `MD_TO_JSON_COMMAND` must point at the Python converter before running the data preparation scripts. Review `.tessl/framework/bootstrap.md` for automation notes.
+Use Node 20+, then run `npm install` to populate `node_modules/`. Development targets Angular 17 with TypeScript 5 and NgRx 17, Gulp 4, and Angular CLI for build tooling. Build distributables with `npm run build` (invokes Angular CLI); publish with `npm run release`. Gulp now uses the built-in TypeScript md2json CLI located at `lib/md2json/dist/cli.js` for markdown-to-JSON conversion, eliminating the need for Python converter environment variables. Review `.tessl/framework/bootstrap.md` for automation notes.
 
 ## Project Structure & Module Organization
 Core Angular code lives in `src/app`, feature modules sit under `components/**`, and ngrx state is in `redux/**`. Global entry points (`main.ts`, `polyfills.ts`, `vendor.ts`) plus HTML remain in `src/`. Comparison content lives in `data/`, YAML config in `configuration/`, and tooling (gulp, webpack, CLI) in `lib/`. Docs and static assets are under `docs/` and `src/assets/`.
@@ -24,7 +24,7 @@ Core Angular code lives in `src/app`, feature modules sit under `components/**`,
 - `npm run build`: production bundle into `dist/`; always run before commits to surface TypeScript or template errors.
 - `npm run release`: invokes `lib/gulp/publish.js` to package and publish to npm.
 
-**Environment Setup for Data Processing**: The gulp data steps require a Python converter defined by the `MD_TO_JSON_COMMAND` environment variable (with optional `MD_TO_JSON_ARGS` for converter arguments). These environment variables must be set before running `data:prepare` or `data:watch` commands.
+**Environment Setup for Data Processing**: The gulp data steps (`npm run data:prepare` and `npm run data:watch`) automatically invoke the TypeScript md2json CLI at `lib/md2json/dist/cli.js`. No environment variables are required - only Node 20+ needs to be installed and `npm install` run to set up the development environment.
 
 ## Coding Style & Naming Conventions
 Follow `tslint.json`: four-space indentation, single quotes, semicolons, `prefer-const`, and max 140 columns. Angular selectors carry the `uc-` prefix, and component files stay co-located (`foo.component.ts/html/css`). Keep ngrx artifacts grouped by feature (`*.actions.ts`, `*.reducers.ts`). Avoid `console.debug/info/time` per lint rules; use PascalCase classes with camelCase members.

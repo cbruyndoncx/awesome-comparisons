@@ -52,6 +52,27 @@
       }
     },
     {
+      "id": "business-competition",
+      "displayLabel": "Business Strategy",
+      "shortDescription": "SWOT, Porter, BCG, Gartner insights",
+      "description": "Enterprise strategy toolkit covering SWOT analysis, Porter's Five Forces, BCG matrix, and Gartner MQ positioning.",
+      "assetDirectory": "assets/generated/business-competition/",
+      "accentColor": "#0f4c81",
+      "icon": "default-icon.svg",
+      "preferredTheme": "light",
+      "isDefault": false,
+      "sources": {
+        "dataDir": "datasets/business-competition/data",
+        "config": "datasets/business-competition/config/comparison.yml",
+        "style": "configuration/style.css",
+        "configDefaults": [
+          "configuration/defaults/value-displays.yml",
+          "configuration/defaults/business-groups.yml",
+          "configuration/defaults/business-value-displays.yml"
+        ]
+      }
+    },
+    {
       "id": "terminal",
       "displayLabel": "Terminal CLI",
       "shortDescription": "Editors and tools with integrated terminal/CLI features",

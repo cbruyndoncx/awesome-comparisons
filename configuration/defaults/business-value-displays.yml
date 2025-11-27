@@ -1,0 +1,59 @@
+# GENERATED FROM SPEC - DO NOT EDIT
+# @generated with Tessl v0.28.0 from ../../specs/config/business-value-displays.spec.md
+# (spec:012c1ca9) (code:451368da)
+
+criteria:
+  - SupplierPower: &hmlChip
+      values:
+        'High':
+          display: '🔴 High'
+        'Medium':
+          display: '🟡 Medium'
+        'Low':
+          display: '🟢 Low'
+  - BuyerPower:
+      <<: *hmlChip
+  - NewEntrants:
+      <<: *hmlChip
+  - Substitutes:
+      <<: *hmlChip
+  - Rivalry:
+      <<: *hmlChip
+  - MarketGrowthRate:
+      <<: *hmlChip
+  - RelativeMarketShare:
+      <<: *hmlChip
+  - AbilityToExecute:
+      <<: *hmlChip
+  - CompletenessOfVision:
+      <<: *hmlChip
+  - RiskLevel:
+      values:
+        'Low':
+          display: '🟢 Low'
+        'Moderate':
+          display: '🟡 Moderate'
+        'High':
+          display: '🟠 High'
+        'Critical':
+          display: '🔴 Critical'
+  - GartnerQuadrant:
+      values:
+        'Leader':
+          display: '⭐ Leader'
+        'Challenger':
+          display: '🗺️ Challenger'
+        'Visionary':
+          display: '🔭 Visionary'
+        'Niche Player':
+          display: '🧭 Niche Player'
+  - BCGQuadrant:
+      values:
+        'Star':
+          display: '🌟 Star'
+        'Cash Cow':
+          display: '💰 Cash Cow'
+        'Question Mark':
+          display: '❓ Question Mark'
+        'Dog':
+          display: '🐾 Dog'

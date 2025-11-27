@@ -32,6 +32,30 @@ Includes a `sources` object per dataset listing the markdown directory plus conf
 
 Datasets can reference one or more shared configuration YAML files through `sources.configDefaults`, enabling central maintenance of criteria groups or other configuration fragments.
 
+### Business Strategy dataset entry
+
+Defines a new dataset with id `business-competition` for the Business Strategy toolkit.  
+- Must be inserted into the `datasets` array in alphabetical order by `id`, between existing `"all"` and `"terminal"` entries.  
+- Fields required:  
+  - `id`: "business-competition"  
+  - `displayLabel`: "Business Strategy"  
+  - `shortDescription`: "SWOT, Porter, BCG, Gartner insights"  
+  - `description`: "Enterprise strategy toolkit covering SWOT analysis, Porter’s Five Forces, BCG matrix, and Gartner MQ positioning."  
+  - `assetDirectory`: "assets/generated/business-competition/"  
+  - `accentColor`: "#0f4c81"  
+  - `icon`: "default-icon.svg"  
+  - `preferredTheme`: "light"  
+  - `isDefault`: false  
+  - `sources` object with:  
+    - `dataDir`: "datasets/business-competition/data"  
+    - `config`: "datasets/business-competition/config/comparison.yml"  
+    - `style`: "configuration/style.css"  
+    - `configDefaults`: ordered array with  
+      - "configuration/defaults/value-displays.yml"  
+      - "configuration/defaults/business-groups.yml"  
+      - "configuration/defaults/business-value-displays.yml"  
+- Must use 2-space JSON indentation consistent with existing entries.
+
 ## API
 
 ```json { .api }
@@ -59,7 +83,7 @@ Datasets can reference one or more shared configuration YAML files through `sour
       }
     },
     {
-      "id": "example", 
+      "id": "example",
       "displayLabel": "Example Dataset",
       "shortDescription": "Lightweight sample dataset",
       "description": "A starter dataset rendered from data_example/ using the shared comparison-default.yml configuration.",

@@ -13,6 +13,8 @@ criteria:
         Studio and Gemini are proprietary Google services; there are no public source repositories for the hosted Studio environment.: {}
         The project is distributed under a Functional Source License (FSL) / "Fair Source" style license (source-available) rather than an OSI-approved open-source license.: {}
         'source available on GitHub, community contributions encouraged': {}
+        'Public repository: https://github.com/coder/mux': {}
+        Distributed under AGPL-3.0 (see LICENSE in repo): {}
         Nuanced is published as an open-source project on GitHub; users should check the repository's LICENSE file for the canonical license text.: {}
         Core Gitpod components remain open-source; some agent and enterprise-grade features are commercial/proprietary.: {}
         'Holo-1 (the VLM) has open-source releases, but Runner H’s orchestration and hosted agent product is closed-source as of initial public information.': {}
@@ -28,6 +30,7 @@ criteria:
         GNU General Public License v3.0 (GPL-3.0): {}
         'Functional Source License (FSL) / Fair Source (source-available, not MIT/Apache/GPL)': {}
         'Core engine: MIT (varies by individual micro-app)': {}
+        'GNU Affero General Public License v3.0 (see https://github.com/coder/mux/blob/main/LICENSE)': {}
         Permissive (check repository LICENSE): {}
         Public materials describe the project as permissively licensed; confirm exact license (MIT/Apache-2.0/etc.) by inspecting the repo's LICENSE file before using in license-sensitive contexts.: {}
         core open-source components: {}
@@ -68,6 +71,7 @@ criteria:
         new users get onboarding credits via the platform (also can operate with your own keys): {}
         'MarsX offers a usable free plan and the core Mars engine is available as open-source.]': {}
         Private beta availability; general availability and trial terms may vary: {}
+        Open-source project and pre-built preview binaries available on GitHub Releases.: {}
         Core project is open-source and available to use without payment. Commercial/enterprise add-ons (if offered) may be paid — check project or vendor pages for details.: {}
         Free tier available with basic features and BYOK support; paid tiers unlock advanced features: {}
         Open source and freely available: {}
@@ -101,6 +105,7 @@ criteria:
         supports MCP Server Marketplace (JSON-based tool integrations / extensions): {}
         No public documentation found for a generic "MCP client" implementation. MarsX manages AI through its platform orchestrator and per‑micro‑app model workflows rather than exposing a documented standalone MCP client.: {}
         Integrates with Continue.dev for IDE plugin functionality (private beta for VSCode and JetBrains); enterprise deployments expose admin console and integration points for enterprise management.: {}
+        'mux uses model adapters (Ollama, OpenRouter, etc.) rather than an MCP-specific client.': {}
         Nuanced is explicitly implemented as an MCP server to deliver structured code context to LLM-based agents.: {}
         No public documentation found regarding MCP (Model Context Protocol) support: {}
         'Implementation notes:': {}
@@ -158,6 +163,7 @@ criteria:
         Marblism exposes and uses prompt templates during onboarding and role configuration; the AI Employees and app builder accept and store prompt/configuration inputs to shape agent behavior and generated projects.: {}
         'MarsX exposes conversational and prompt-driven interfaces in the cloud IDE for UI generation, micro‑app scaffolding and developer assistance. The platform supports natural‑language inputs to drive UI/code generation and micro‑app interactions.': {}
         'Supports chat-style prompts (Mistral Medium) and natural-language agent instructions for Devstral workflows; prompts can be composed from IDE context (open files, diffs, terminal output) and indexed repository snippets.': {}
+        'Supports mode prompts, instruction-files, and Plan/Exec interaction modes; includes slash-style commands (e.g. /compact) and custom mode prompts.': {}
         'The project includes prompt templates / example prompts for common code-analysis tasks (e.g. analyze_function, impact analysis, dependency prompts) used by MCP clients to structure model queries.': {}
         Repository-level AGENTS.md lets teams define prompt templates and instruction blocks that Ona agents load at session start.: {}
         'Agents support interactive prompts via chat, slash-commands, and workspace automation manifests (e.g., automations.yml).': {}
@@ -235,6 +241,7 @@ criteria:
         'Integrations and platform tools include GitHub repository creation/push, Amazon S3 uploads, Mail integrations (e.g., Mailjet), Gmail/Outlook account connections, social integrations (Instagram, Facebook, X/Twitter, LinkedIn), and authentication helpers (JWT, Google Login) used by the app builder.': {}
         'The platform includes a cloud IDE with visual builders, code editor, Git integration, and deployment tooling. Micro‑Apps provide packaged tooling for UI, backend, and schema, and the marketplace/community provides additional developer utilities.': {}
         'Provides tool-like capabilities via Devstral (agent actions: scan, edit, test, draft PR), Codestral-powered completions, and Codestral Embed semantic search; IDE integrations expose these as actionable UI commands and workflows.': {}
+        'Integrations for local model runtimes (Ollama), OpenRouter, git, and VS Code; agent tooling includes rich markdown rendering and terminal access for workspaces.': {}
         'Exposed tools include initialize_graph, switch_repository, list_repositories, get_function_call_graph, analyze_dependencies, analyze_change_impact and related helpers used by clients to request specific analyses.': {}
         Integrates with LLM providers (Anthropic Claude Sonnet by default; other models optional) and exposes automation/command execution primitives inside workspaces.: {}
         'Supports editor integrations (VS Code, JetBrains, Zed, Cursor) and automation manifests for reusable toolchains.': {}
@@ -307,6 +314,7 @@ criteria:
         'GitHub: https://github.com/MarsX-dev/devhunt': {}
         Documentation and examples available on the site and repo; community contributions and marketplace micro‑apps provide additional resources.: {}
         'Embedding/indexing (Codestral Embed), IDE plugins (Continue.dev integrations), and admin/observability console (Mistral Console). Enterprise deployments include APIs/management surfaces for indexing, policy, and usage telemetry.': {}
+        'Extensive documentation available at <https://cmux.io>, GitHub repo with README and AGENTS.md for development guidance, and release binaries on GitHub Releases.': {}
         'Queryable resources (graph:// style) exist for summaries and function-level data, for example graph://summary, graph://repo/{repo_path}/summary, graph://function/{file_path}/{function_name}.': {}
         'Official Ona (Gitpod) documentation and blog posts; open-source Gitpod repository: <https://github.com/gitpod-io/gitpod>.': {}
         'Enterprise docs for VPC, RBAC, and guardrails; onboarding guides and automation manifest examples in the docs site.': {}
@@ -358,6 +366,7 @@ criteria:
         supports connecting your own model/provider credentials when desired: {}
         No public documentation found for bring-your-own-key support; platform uses integrated AI services: {}
         Supports private deployments and enterprise key management practices through on-prem/air-gapped setups: {}
+        Supports configuring API keys/endpoints for OpenRouter and other cloud providers; local runtimes (Ollama) can be pointed at local model servers.: {}
         'Nuanced provides context to LLMs but does not manage LLM API keys itself; bring-your-own-LLM/API-key is handled by the client (e.g., Claude Desktop, Cursor) rather than the MCP server.': {}
         'Users can supply their own API keys for models (BYOK), enabling use with different model providers and preserving control over credentials.': {}
         There is no public documentation indicating that Refraction supports a Bring Your Own Key (BYOK) model for connecting external LLM API keys or selecting self-hosted models. Enterprise customers should contact Refraction sales/support for precise details.: {}
@@ -391,6 +400,7 @@ criteria:
         can be used with local model runtimes such as Ollama / LM Studio for offline or on-prem usage: {}
         MarsX is primarily a cloud platform with a web-based IDE and Micro AppStore.: {}
         Supports air-gapped on-premises GPU deployment for fully offline operation: {}
+        Ollama adapter enables local model usage; repository/docs describe local and SSH workspace modes.: {}
         'Local-first MCP server: analysis runs on the user''s machine or infrastructure; code/context does not need to be uploaded to external APIs.': {}
         Ona supports private VPC and on-prem/private-hosted deployments for enterprises but is not a fully offline/local-only product.: {}
         Requires cloud access to LLMs; not designed for fully offline usage.: {}
@@ -481,6 +491,7 @@ criteria:
         'IDE-based context aggregation: open-file buffers, git diffs, terminal history and static-analysis metadata are used by the plugin to build contextual prompts for completions and agent tasks.': {}
         'Agent session state for multi-step workflows (Devstral): agents persist task state across steps (scan → edit → test → PR) and Mistral Console exposes usage/acceptance metrics.': {}
         'Admin controls to configure which context sources are allowed (repo indexing, terminal, local files) in enterprise/on‑prem deployments.': {}
+        'Features like opportunistic compaction, instruction-files, and mode prompts help manage and compact context during long-running agent sessions.': {}
         Nuanced supports on-demand subgraphs and focused context slices to control what is provided to the model as context.: {}
         'Ona provides explicit context management for its AI agents via a repository-level AGENTS.md that the agent loads at the start of a session. Additional context sources include workspace definitions (devcontainer.json), automation manifests (e.g. automations.yml / automation configs), environment variables and prebuild metadata, and repository files the agent can read on demand. These artifacts together let teams define project conventions, commands, and policies that are consistently applied by agents.': {}
         'PearAI provides multiple methods for managing and updating context: project-aware @commands (e.g. @codebase, @code, @filename, @foldername, @docs, @terminal, @diff, @problems), a local codebase index for retrieving relevant snippets, inline selection-to-chat flows (CMD+L / CTRL+L), and a memory layer (Mem0) for persisting conversational or developer-specific context. Users can also add documentation manually to the chat context and supply local files for the assistant to reference.': {}
@@ -585,6 +596,7 @@ criteria:
         Files can be directly referenced via the embedding index and semantic search (path-based results and file snippets returned to the assistant).: {}
         'IDE plugin and agentic workflows operate on explicit files: open/edit staged changes, create draft pull requests, and include file paths in diffs/commits.': {}
         Private/on‑prem deployments keep repository indexing local so file references never leave the customer environment.: {}
+        Workspaces map to git worktrees or SSH clones so agents have direct access to repository files; VS Code extension enables jumping into workspace files.: {}
         'Function- and file-level resources allow direct references (file paths, function names) so clients can request precise code locations.': {}
         'AGENTS.md is designed to reference other files in the repo; Ona agents will read files referenced there and can access repository files directly in the sandboxed workspace. This enables pointing to style guides, architecture docs, and specific source files rather than duplicating their contents in the main agent config.': {}
         'PearAI supports directly referencing files and folders in prompts and chats via commands like @filename and @foldername, attaching files/docs to chats, and including selected code from open editor tabs. The @diff and @code commands enable referencing specific changes and functions across the repo.': {}
@@ -663,6 +675,7 @@ criteria:
         'Micro‑App versioning and marketplace releases provide another checkpoint mechanism: published microapps can be versioned and rolled back to prior published releases.': {}
         Agentic edits are surfaced as draft changes / pull requests and pass through configurable approval workflows; audit logs record actions so changes can be reviewed and reversed via normal git history.: {}
         'On‑prem deployments and RBAC reduce risk of unwanted auto-commits; standard VCS workflows (branches, PRs) serve as checkpoints for undoing agent actions.': {}
+        'Integrates with git (worktrees and divergence view) allowing standard git-based checkpoints, branches, and revert workflows.': {}
         No built-in checkpoint/undo system documented; versioning or undo workflows should be handled with VCS (git) or client tooling.: {}
         'Ona/Gitpod workflows provide workspace snapshots, prebuilds and the normal git history as mechanisms to revert or recover from agent actions. For enterprise users, Guardrails and audit trails further enable tracing and, where necessary, rolling back changes using standard VCS or snapshot workflows.': {}
         'PearAI presents diffs for inline edits before applying changes, supports local undo in the editor, and integrates with Git so changes can be committed and reverted. The @diff workflow and preview/accept model provide checkpoints prior to committing AI-generated edits; standard Git operations (revert/reset) and editor undo serve as recovery mechanisms.': {}
@@ -708,6 +721,7 @@ criteria:
         'deep Git/GitHub integration patterns for generating commit messages, searching codebase, and automating repo tasks': {}
         Generates/clones GitHub repositories for created apps: {}
         'Integrates with repositories for retrieval-augmented generation, code search, and fine-tuning': {}
+        'First-class git integration: local worktrees, SSH clones, git divergence UI and review workflow.': {}
         Designed to integrate with developer workflows; commonly used alongside git-based repositories for initialization and analysis.: {}
         Integrates with Git workflows; offers @diff referencing of branch changes and commit workflow helpers: {}
         'Refraction provides GitHub integration features, including an "Autoreview" GitHub Marketplace plugin that can generate PR descriptions and automated reviews. It also offers IDE/editor extensions (Sublime Text, VS Code) and a Terminal extension to facilitate working with repositories. There is limited public documentation about a full-featured REST API or advanced repo management features; contact Refraction for enterprise or API access details.': {}
@@ -796,6 +810,7 @@ criteria:
         'Micro‑Apps function as self-contained extensions that can be shared, versioned, monetized (free/premium) and composed together, similar to a plugin ecosystem for full‑stack features.': {}
         'Official IDE plugins for VS Code and JetBrains (private beta/GA progression) integrate completions, semantic search and one-click automations into the editor UI.': {}
         'Integration with Continue.dev and the plugin model enables embedding Mistral Code features into IDE/tooling workflows and connecting to enterprise infrastructure (SSO, audit logs).': {}
+        There is no documented third-party plugin marketplace; extensibility is primarily through adapters and the VS Code extension.: {}
         No documented plugin bundling system; extension is achieved by wrapping or adding MCP tool endpoints rather than an internal plugin marketplace.: {}
         'Ona integrates with IDE extensions and editor platforms (e.g., VS Code, JetBrains, Cursor, Zed) and exposes automation/extension points; bundling commands and automation into reusable packages is done via workspace/automation configuration and editor extension packs rather than a single "plugin store" model.': {}
         'PearAI is extensible and built on a VSCode-like architecture; it supports plugins/integrations that can bundle commands, tooling, and integrations. Developers can extend behavior by adding integrations (model providers via BYOK, documentation sources, or custom tooling) and packaging those as extensions/plugins compatible with the environment.': {}
@@ -855,6 +870,7 @@ criteria:
         Unknown: {}
         'The public materials describe microapps, AI models and marketplace mechanics, but do not provide an explicit list of lifecycle hooks or plugin hooks exposed to developers (e.g., pre-deploy, post-install hooks). Detailed hook semantics are not available in public docs discovered.': {}
         Continue.dev plugin lifecycle and agent workflows allow integration points for CI/CD and enterprise automation; admin console and agent APIs provide eventing and approval hooks for governance and observability.: {}
+        'Instruction-files, mode prompts and the agent loop provide lifecycle-style configuration points for agent behavior.': {}
         No documented lifecycle hook system in the core project; integration points are via MCP tool calls and external orchestration.: {}
         'Public docs for Gitpod historically exposed lifecycle hooks for workspaces (prebuilds, init/tasks) and Ona surface-level documentation references automation triggers; however, a clearly documented agent lifecycle hooks API (for attaching arbitrary external listeners to agent start/stop events) was not found in the available documentation. If you need explicit agent lifecycle hooks, verify in the Ona docs or with support for the latest agent API.': {}
         'There are no widely documented, first-class "agent lifecycle" hook events (e.g., onRequest, onResponse, onApplyPatch) exposed in PearAI''s public docs. Extensibility via the VSCode-like extension/plugin model may permit custom integrations that observe editor events, but explicit agent lifecycle hook APIs are not documented.': {}
@@ -914,6 +930,7 @@ criteria:
         Unknown: {}
         'There''s no explicit public documentation indicating the presence of a slash-command interface inside the MarsX IDE or chat interfaces. The platform does have a conversational AI interface for Micro‑App interactions, but whether it supports user-defined slash commands is not documented.': {}
         'IDE-exposed commands and quick actions (e.g., invoke Devstral task, run semantic search, create draft PR) available in VS Code and JetBrains plugins.': {}
+        'UI supports slash-style commands (examples: /compact) and vim-style inputs for efficient interactions.': {}
         Not a chat-platform agent; no documented slash-command set. Client-side integrations may map commands to MCP calls.: {}
         'Ona agents support slash-command style interactions to trigger automations and common engineering tasks from chat or IDE integrations. These commands are intended to quickly invoke tests, CI-like automations, or agent behaviours and are integrated into the agent UX across browser and IDE clients.': {}
         'PearAI includes reusable slash/command-style actions (examples in product docs include /edit and other command triggers), keyboard shortcuts (CMD/CTRL+I, CMD/CTRL+L, CMD/CTRL+SHIFT+L) and an @-command system to invoke contextual behaviors. These can be reused across chats and workflows to trigger editing, context injection, diffs and more.': {}
@@ -982,6 +999,7 @@ criteria:
         Unknown: {}
         'There is no clear public documentation showing a user-facing "modes" system for switching the IDE or AI into different specialist modes. The platform does support hybrid No-Code/Code workflows and per-microapp model tuning which effectively create contextual modes, but explicit custom-mode APIs or user-creatable modes are not documented.': {}
         'Preset agent modes and Devstral workflows for common specialist tasks (code review, refactor, documentation, testing) and configurable behavior via admin settings and fine-tuning.': {}
+        'Mode prompts and instruction-files enable creating tailored modes for different workflows (e.g., code-review, refactor, new-feature).': {}
         No documented custom chat modes; clients may implement specialized prompts or modes when calling the server.: {}
         'Agent behaviour and operating modes can be tailored via repository-level configuration (AGENTS.md), environment definitions, and automation manifests; teams can create specialized profiles/workspace configs that produce distinct agent behaviours or permissions for particular workflows.': {}
         'Users can create tailored workflows by configuring model routing, toggling built-in tools, supplying BYOK keys, and using custom command sequences. Because PearAI is a VSCode fork and supports extensions/plugins, teams can implement specialist modes (e.g., a Web3 mode that loads specific docs, models, and snippets) through configuration and extensions.': {}
@@ -1056,6 +1074,7 @@ criteria:
         'The AI orchestrator coordinates between Micro‑App models when they are composed, effectively creating runtime subagent interactions where the parent microapp model delegates to child microapp models.': {}
         'Devstral provides agentic workflows (specialized agents) that perform multi-step, multi-file engineering tasks: scanning a repo, making edits, running tests, and drafting PRs.': {}
         Agents can be composed to chain retrieval → reasoning → edit → verification steps; enterprise flows include approval/authorization gates before applying changes.: {}
+        Designed to run multiple independent agent workspaces in parallel; supports multi-model orchestration and A/B experiments.: {}
         Nuanced itself exposes analysis endpoints rather than managing subagent workflows; higher-level orchestration is left to the client agent.: {}
         'Ona is explicitly positioned as "mission control for your personal team of software engineering agents," allowing multiple specialized agents (roles/agents) to be defined and orchestrated for different tasks — e.g., code-gen agents, review agents, release agents — under centralized governance.': {}
         'PearAI surfaces agent-like automation features (PearAI Agent is listed as planned/early) and routes tasks to specialized models or toolsets (Aider, Supermaven, Continue, Perplexity, Mem0). Users can achieve subagent-like workflows by combining model routing, tool integrations, and scripted command sequences; PearAI''s router automatically selects the best-performing model for each task.': {}
@@ -1094,6 +1113,7 @@ criteria:
         Protocol Buffers: {}
         Markdown / MDX: {}
         SCSS / LESS: {}
+        'General-purpose IDE/agent: supports any language the connected LLMs or local toolchains can handle; UI and integrations are language-agnostic.': {}
         'advertised: total support for 8 languages; TypeScript and Python are prominent': {}
         React (frontend): {}
         Node.js / Express (backend): {}
@@ -1166,6 +1186,8 @@ criteria:
         'Supports agentic workflows, function-calling and tool integrations for building autonomous behaviors (Code/Autonomous agent)': {}
         'Note: While it has IDE-like features for building multimodal apps, it''s primarily a model experimentation environment rather than a general-purpose code editor': {}
         'Open-source VS Code (and JetBrains) extension with CLI support, agent orchestration, and project-scoped memory stored under .kilocode/': {}
+        IDE: {}
+        Desktop application focused on managing multiple agentic workspaces in parallel.: {}
         Developer Tools (Code Intelligence/MCP Server): {}
         Code/Autonomous agent (Web Automation): {}
         AIE/Model: {}
