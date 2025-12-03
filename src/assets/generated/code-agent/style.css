@@ -1,0 +1,14 @@
+.label-black {
+    color: white;
+    background-color: black;
+}
+
+.label-blue {
+    /*color: white; */
+    background-color: transparent;
+}
+
+.label-blue-original{
+    color: white;
+    background-color: #1082ef;
+}

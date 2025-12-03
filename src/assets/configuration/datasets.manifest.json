@@ -60,6 +60,7 @@
       "accentColor": "#0f4c81",
       "icon": "default-icon.svg",
       "preferredTheme": "light",
+      "enabled": false,
       "isDefault": false,
       "sources": {
         "dataDir": "datasets/business-competition/data",

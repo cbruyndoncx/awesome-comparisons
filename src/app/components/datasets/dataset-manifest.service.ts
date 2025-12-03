@@ -19,6 +19,7 @@ export interface DatasetManifestEntry {
   icon?: string;
   preferredTheme?: 'light' | 'dark';
   isDefault?: boolean;
+  enabled?: boolean;
   sources?: {
     dataDir?: string;
     dataDirs?: string[];
@@ -110,9 +111,18 @@ export class DatasetManifestService {
             icon: entry.icon,
             preferredTheme: entry.preferredTheme,
             isDefault: entry.isDefault,
+            enabled: entry.enabled,
             sources: entry.sources
           }))
         ),
+        map(entries => {
+          const filtered = entries.filter(entry => entry.enabled !== false);
+          if (filtered.length > 0) {
+            return filtered;
+          }
+          console.warn('All datasets were disabled; using manifest entries as-is.');
+          return entries;
+        }),
         map(entries =>
           entries.sort((a, b) => a.displayLabel.localeCompare(b.displayLabel))
         ),
