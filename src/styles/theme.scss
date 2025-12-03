@@ -141,16 +141,12 @@ $dark-theme: mat.define-dark-theme((
   density: 0,
 ));
 
-// Include core styles
+// Include core Material styles and emit the base (light) theme globally
 @include mat.core();
-
-// Base styles for both themes
 @include mat.all-component-themes($light-theme);
 
 // Light theme styles
 .uc-light-theme {
-  @include mat.all-component-colors($light-theme);
-
   // Custom light theme variables
   --font-body: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-heading: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -204,6 +200,7 @@ $dark-theme: mat.define-dark-theme((
 
 // Dark theme styles
 .uc-dark-theme {
+  // Scope Material color styles to the dark theme container
   @include mat.all-component-colors($dark-theme);
 
   // Custom dark theme variables
