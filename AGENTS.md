@@ -16,15 +16,16 @@ ALWAYS create [plan files](.tessl/framework/plan-files.md) when planning: @.tess
 Use Node 20+, then run `npm install` to populate `node_modules/`. Development targets Angular 17 with TypeScript 5 and NgRx 17, Gulp 4, and Angular CLI for build tooling. Build distributables with `npm run build` (invokes Angular CLI); publish with `npm run release`. Gulp now uses the built-in TypeScript md2json CLI located at `lib/md2json/dist/cli.js` for markdown-to-JSON conversion, eliminating the need for Python converter environment variables. Review `.tessl/framework/bootstrap.md` for automation notes.
 
 ## Project Structure & Module Organization
-Core Angular code lives in `src/app`, feature modules sit under `components/**`, and ngrx state is in `redux/**`. Global entry points (`main.ts`, `polyfills.ts`, `vendor.ts`) plus HTML remain in `src/`. Comparison content lives in `data/`, YAML config in `configuration/`, and tooling (gulp, webpack, CLI) in `lib/`. Docs and static assets are under `docs/` and `src/assets/`.
+Core Angular code lives in `src/app`, feature modules sit under `components/**`, and ngrx state is in `redux/**`. Global entry points (`main.ts`, `polyfills.ts`) plus HTML remain in `src/`. Comparison content lives in `data/`, YAML config in `configuration/`, and tooling (gulp, webpack, CLI) in `lib/`. Docs and static assets are under `docs/` and `src/assets/`.
 
 ## Build, Test, and Development Commands
-- `npm run dev`: concurrent watch mode (gulp data rebuild + webpack-dev-server on http://localhost:3000).
-- `npm run start`: single precompile with `gulp:compile`, then launch the dev server.
-- `npm run build`: production bundle into `dist/`; always run before commits to surface TypeScript or template errors.
-- `npm run release`: invokes `lib/gulp/publish.js` to package and publish to npm.
+- `npm run dev -- --dataset <id>`: concurrent watch mode (gulp data rebuild + config workspace at http://localhost:3100 via proxy + Angular dev server on http://localhost:4200).
+- `npm run start -- --dataset <id>`: one-time data prepare, start config workspace server, then launch Angular dev server.
+- `npm run build`: dataset-aware production build into `dist/` (use `--dataset <id>` and/or `--clean` as needed).
+- `npm run build:prod`: production configuration build (runs environment generation).
+- `npm run release`: build + stamp version metadata for release.
 
-**Environment Setup for Data Processing**: The gulp data steps (`npm run data:prepare` and `npm run data:watch`) automatically invoke the TypeScript md2json CLI at `lib/md2json/dist/cli.js`. No environment variables are required - only Node 20+ needs to be installed and `npm install` run to set up the development environment.
+**Environment Setup for Data Processing**: The gulp data steps (`npm run data:prepare` and `npm run data:watch`) automatically invoke the TypeScript md2json CLI at `lib/md2json/dist/cli.js`. No environment variables are required—install Node 20+ and run `npm install`.
 
 ## Coding Style & Naming Conventions
 Follow `tslint.json`: four-space indentation, single quotes, semicolons, `prefer-const`, and max 140 columns. Angular selectors carry the `uc-` prefix, and component files stay co-located (`foo.component.ts/html/css`). Keep ngrx artifacts grouped by feature (`*.actions.ts`, `*.reducers.ts`). Avoid `console.debug/info/time` per lint rules; use PascalCase classes with camelCase members.

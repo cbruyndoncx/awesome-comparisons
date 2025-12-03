@@ -6,8 +6,8 @@ import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
-import { BehaviorSubject, Observable, throwError, combineLatest } from 'rxjs';
-import { map, shareReplay, catchError, tap } from 'rxjs/operators';
+import { BehaviorSubject, Observable, throwError, combineLatest, forkJoin, of } from 'rxjs';
+import { map, shareReplay, catchError, tap, switchMap } from 'rxjs/operators';
 
 export interface DatasetManifestEntry {
   id: string;
@@ -116,7 +116,8 @@ export class DatasetManifestService {
         map(entries =>
           entries.sort((a, b) => a.displayLabel.localeCompare(b.displayLabel))
         ),
-        tap(sorted => (this.currentDatasets = sorted)),
+        switchMap(sorted => this.filterDatasetsWithData(sorted)),
+        tap(filtered => (this.currentDatasets = filtered)),
         shareReplay(1),
         catchError(error => {
           const message =
@@ -126,6 +127,45 @@ export class DatasetManifestService {
           return throwError(() => new Error(message));
         })
       );
+  }
+
+  private filterDatasetsWithData(entries: DatasetManifestEntry[]): Observable<DatasetManifestEntry[]> {
+    if (!entries || entries.length === 0) {
+      return of([]);
+    }
+    const checks = entries.map(entry =>
+      this.http
+        .head(this.buildAssetUrl(entry.assetDirectory, 'data.json'), {
+          observe: 'response'
+        })
+        .pipe(
+          map(() => ({ entry, available: true })),
+          catchError(error => {
+            console.warn(`Dataset ${entry.id} data missing or unreachable`, error);
+            return of({ entry, available: false });
+          })
+        )
+    );
+
+    return forkJoin(checks).pipe(
+      map(results => {
+        const available = results
+          .filter(result => result.available)
+          .map(result => result.entry);
+        if (available.length > 0) {
+          return available;
+        }
+        console.warn('No dataset assets were reachable; falling back to manifest list.');
+        return entries;
+      })
+    );
+  }
+
+  private buildAssetUrl(assetDirectory: string | undefined, fileName: string): string {
+    const base = (assetDirectory || 'assets/generated')
+      .replace(/\\/g, '/')
+      .replace(/\/+$/, '');
+    return `${base}/${fileName}`;
   }
 
   private validateManifest(data: any[]): void {

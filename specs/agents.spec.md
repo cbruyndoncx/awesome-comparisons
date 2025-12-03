@@ -36,8 +36,9 @@ Documents the organization of code, assets, and configuration files within the p
 - Feature modules located under `components/**` structure
 - State management in `redux/**` directory
 - Global entry points in `src/` root
-- Comparison data stored in `data/` directory
-- Configuration files in `configuration/` directory
+- Dataset content stored under `datasets/<id>/data/`
+- Dataset configs stored under `datasets/<id>/config/`
+- Shared configuration files in `configuration/` directory
 - Build tooling located in `lib/` directory
 - Documentation and static assets organized appropriately
 
@@ -45,8 +46,8 @@ Documents the organization of code, assets, and configuration files within the p
 
 Provides comprehensive build, development, and deployment command documentation with environment requirements.
 
-- `npm run dev` command for concurrent watch mode with gulp data rebuild and webpack-dev-server on localhost:3000
-- `npm run start` command for single precompile with `gulp:compile` followed by dev server launch
+- `npm run dev -- --dataset <id>` command for concurrent watch mode with gulp data rebuild, config workspace backend on http://localhost:3100 (proxied), and Angular dev server on http://localhost:4200
+- `npm run start -- --dataset <id>` command for a one-time data prepare, starting the config workspace, and launching the dev server
 - `npm run build` command invokes Angular CLI for production bundling to `dist/` directory
 - `npm run release` command for package publishing via `lib/gulp/publish.js`
 - `npm run data:prepare` and `npm run data:watch` automatically invoke the TypeScript md2json CLI at `lib/md2json/dist/cli.js`; no environment variables are required
@@ -106,13 +107,14 @@ ALWAYS create [plan files](.tessl/framework/plan-files.md) when planning: @.tess
 Use Node 20+, then run `npm install` to populate `node_modules/`. Development targets Angular 17 with TypeScript 5/NgRx 17, Gulp 4, and Angular CLI build. Build distributables with `npm run build`; publish with `npm run release`. Review `.tessl/framework/bootstrap.md` for automation notes.
 
 ## Project Structure & Module Organization
-Core Angular code lives in `src/app`, feature modules sit under `components/**`, and NgRx state is in `redux/**`. Global entry points (`main.ts`, `polyfills.ts`, `vendor.ts`) plus HTML remain in `src/`. Comparison content lives in `data/`, YAML config in `configuration/`, and tooling (gulp, webpack, CLI) in `lib/`. Docs and static assets are under `docs/` and `src/assets/`.
+Core Angular code lives in `src/app`, feature modules sit under `components/**`, and NgRx state is in `redux/**`. Global entry points (`main.ts`, `polyfills.ts`) plus HTML remain in `src/`. Dataset content lives in `datasets/<id>/data/`, dataset configs in `datasets/<id>/config/`, shared YAML config in `configuration/`, and tooling (gulp, webpack, CLI) in `lib/`. Docs and static assets are under `docs/` and `src/assets/`.
 
 ## Build, Test, and Development Commands
-- `npm run dev`: concurrent watch mode (gulp data rebuild + webpack-dev-server on http://localhost:3000).
-- `npm run start`: single precompile with `gulp:compile`, then launch the dev server.
-- `npm run build`: production bundle into `dist/`; always run before commits to surface TypeScript or template errors.
-- `npm run release`: invokes `lib/gulp/publish.js` to package and publish to npm.
+- `npm run dev -- --dataset <id>`: concurrent watch mode (gulp data rebuild + config workspace on http://localhost:3100 via proxy + Angular dev server on http://localhost:4200).
+- `npm run start -- --dataset <id>`: one-time data prepare, start config workspace server, then launch Angular dev server.
+- `npm run build`: dataset-aware production bundle into `dist/` (supports `--dataset <id>` and `--clean`).
+- `npm run build:prod`: production build with environment generation.
+- `npm run release`: build + version stamping.
 - Data preparation (`npm run data:prepare`/`npm run data:watch`) uses the built-in TypeScript md2json CLI at `lib/md2json/dist/cli.js`, no environment variables required.
 
 ## Coding Style & Naming Conventions

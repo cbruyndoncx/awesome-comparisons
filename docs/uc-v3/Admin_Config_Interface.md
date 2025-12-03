@@ -4,14 +4,14 @@ The Admin Configuration Interface is a visual configuration editor that allows y
 
 ## Accessing the Admin Interface
 
-When running the development server, navigate to `/admin` in your browser:
+When running the development server, navigate to `/admin/config` in your browser:
 
 ```bash
 npm run dev
-# Then open http://localhost:4200/admin
+# Then open http://localhost:4200/admin/config
 ```
 
-The admin interface is available in development mode and can optionally be deployed to production if needed.
+The admin interface is available in development mode and can optionally be deployed to production if needed. The backend for the config workspace runs at `http://localhost:3100` and is automatically started by `npm run dev`/`npm run start`. Requests are proxied from the Angular dev server via `proxy.config.json`.
 
 ## Interface Overview
 

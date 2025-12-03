@@ -72,8 +72,8 @@ Defines a new dataset with id `business-competition` for the Business Strategy t
       "preferredTheme": "light",
       "isDefault": true,
       "sources": {
-        "dataDir": "data",
-        "config": "configuration/comparison.yml",
+        "dataDir": "datasets/default/data",
+        "config": "datasets/default/config/comparison.yml",
         "style": "configuration/style.css",
         "configDefaults": [
           "configuration/comparison-default.yml",
@@ -86,15 +86,15 @@ Defines a new dataset with id `business-competition` for the Business Strategy t
       "id": "example",
       "displayLabel": "Example Dataset",
       "shortDescription": "Lightweight sample dataset",
-      "description": "A starter dataset rendered from data_example/ using the shared comparison-default.yml configuration.",
+      "description": "A starter dataset rendered from datasets/example/data using the shared comparison-default.yml configuration.",
       "assetDirectory": "assets/generated/example/",
       "accentColor": "#28a745",
       "icon": "experimental-icon.svg",
       "preferredTheme": "dark",
       "isDefault": false,
       "sources": {
-        "dataDir": "data_example",
-        "config": "configuration/comparison-default.yml",
+        "dataDir": "datasets/example/data",
+        "config": "datasets/example/config/comparison.yml",
         "style": "configuration/style.css",
         "configDefaults": [
           "configuration/comparison-default.yml",

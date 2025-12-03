@@ -241,7 +241,8 @@ valueDisplays:
    ```
 
 2. **Open in browser:**
-   - Navigate to: `http://localhost:4200/admin`
+   - Navigate to: `http://localhost:4200/admin/config`
+   - The config workspace backend runs at `http://localhost:3100` and is proxied by the Angular dev server.
 
 3. **You'll see three panels:**
    - **Left:** Catalog Tree (file browser)

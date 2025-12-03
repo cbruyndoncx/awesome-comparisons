@@ -23,11 +23,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
     - name: Install
       run: npm ci
     - name: Build & prepare data for datasets
       run: |
-        for ds in "default" "other"; do
+        for ds in "code-editor" "other"; do
           # prepare data (compiles converter and generates JSON) for the dataset
           npm run data:prepare -- --dataset "$ds"
           # build the site for the dataset
@@ -54,7 +58,7 @@ Adjust dataset list generation dynamically by scanning `configuration/datasets.m
 ## Verification steps
 
 - After publishing, open `https://<org>.github.io/<repo>/` and confirm the dataset selector shows entries.
-- Verify per-dataset pages are reachable (e.g., `docs/default/index.html`).
+- Verify per-dataset pages are reachable (e.g., `docs/code-editor/index.html`).
 
 ## Troubleshooting
 

@@ -8,6 +8,8 @@ Built with [Angular](https://angular.io/). Read the original paper: [The Ultimat
 
 ## Quick Start
 
+Requires Node 20+.
+
 ```bash
 npm install
 npm run dev -- --dataset aie-model
@@ -15,14 +17,14 @@ npm run dev -- --dataset aie-model
 npm run dev -- --dataset business-competition
 ```
 
-Then open `http://localhost:4200` (comparison) or `http://localhost:4200/admin` (config editor).
+Then open `http://localhost:4200` (comparison) or `http://localhost:4200/admin/config` (config editor).
 
 **→ Full guide:** [Creating Your Comparison](docs/uc-v3/Update_YOUR_Comparison.md)
 
 ## Key Features
 
 - **Multi-dataset support** - Host multiple comparisons in one repository → [Learn more](docs/uc-v3/Overview.md)
-- **Visual config editor** - Edit YAML at `/admin` with live preview → [Learn more](docs/uc-v3/Admin_Config_Interface.md)
+- **Visual config editor** - Edit YAML at `/admin/config` with live preview → [Learn more](docs/uc-v3/Admin_Config_Interface.md)
 - **Shared configuration** - Define criteria once, reuse across datasets → [Learn more](docs/uc-v3/Shared_Configuration.md)
 
 ## Documentation
@@ -47,14 +49,15 @@ npm install
 # Run dev server
 npm run dev -- --dataset <dataset-id>
 
-# Build for production
+# Build for production (add --clean to wipe outputs first)
 npm run build:prod
+npm run build -- --dataset <dataset-id> --clean # optional clean build for a subset
 
 # Release (stamps version)
 npm run release
 ```
 
-**Admin interface:** Navigate to `/admin` when dev server is running.
+**Admin interface:** Navigate to `/admin/config` when the dev server is running. The config workspace backend runs on `http://localhost:3100` and is auto-started by `npm run dev`/`npm run start`.
 
 See [docs/release-workflow.md](docs/release-workflow.md) for release process.
 

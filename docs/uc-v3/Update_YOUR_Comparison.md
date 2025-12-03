@@ -9,15 +9,32 @@ This guide explains how to set up or update a comparison to work with v3 of the 
 ```bash
 mkdir -p datasets/my-comparison
 cd datasets/my-comparison
-# create description.md and a comparison.yml or dataset.yaml as required
+# create description.md and a config/comparison.yml
 # See datasets/aie-model/ for a working example
 ```
 
-2. Add your comparison data files (markdown entries) under the dataset directory.
+2. Add your comparison data files (markdown entries) under `datasets/my-comparison/data/`.
 
-3. Add a `dataset.yaml` (or `dataset.json`) descriptor with at least `id` and `path`.
+3. Register the dataset in `configuration/datasets.manifest.json` by adding an entry like:
 
-4. Add an entry at the top level `datasets:` config pointing to your dataset so tools can discover it.
+```json
+{
+  "id": "my-comparison",
+  "displayLabel": "My Comparison",
+  "assetDirectory": "assets/generated/my-comparison/",
+  "sources": {
+    "dataDir": "datasets/my-comparison/data",
+    "config": "datasets/my-comparison/config/comparison.yml",
+    "style": "configuration/style.css",
+    "configDefaults": [
+      "configuration/comparison-default.yml",
+      "configuration/defaults/general-licensing.yml"
+    ]
+  }
+}
+```
+
+4. Save and run with dataset targeting (see below).
 
 ## Configuration overview
 
