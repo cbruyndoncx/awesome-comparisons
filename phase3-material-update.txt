@@ -1,0 +1,31 @@
+Repository is not clean. Update changes will be mixed with pre-existing changes.
+Using package manager: npm
+Collecting installed dependencies...
+Found 56 dependencies.
+Fetching dependency metadata from registry...
+    Updating package.json with dependency @angular/cdk @ "20.2.14" (was "19.2.19")...
+    Updating package.json with dependency @angular/material @ "20.2.14" (was "19.2.19")...
+UPDATE package.json (4188 bytes)
+❯ Cleaning node modules directory
+✔ Cleaning node modules directory
+❯ Installing packages
+✔ Installing packages
+** Executing migrations of package '@angular/cdk' **
+
+❯ Updates the Angular CDK to v20.
+    
+      ✓  Updated Angular CDK to version 20
+    
+  Migration completed (No changes made).
+
+** Executing migrations of package '@angular/material' **
+
+❯ Updates Angular Material to v20.
+    
+      ✓  Updated Angular Material to version 20
+    
+UPDATE dist/ultimate-comparison/index.html (51159 bytes)
+UPDATE dist/ultimate-comparison/styles.css (170766 bytes)
+UPDATE src/app/components/config-admin/config-catalog-tree.component.css (3550 bytes)
+  Migration completed (3 files modified).
+

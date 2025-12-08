@@ -11,7 +11,7 @@
     "noFallthroughCasesInSwitch": true,
     "useDefineForClassFields": false,
     "module": "es2020",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "target": "es2022",
     "lib": [
       "es2022",

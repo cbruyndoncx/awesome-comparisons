@@ -1,5 +1,5 @@
-import { AfterViewChecked, ChangeDetectionStrategy, Component, EventEmitter, Inject, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { AfterViewChecked, ChangeDetectionStrategy, Component, EventEmitter, Inject, Input, OnChanges, Output, SimpleChanges, DOCUMENT } from '@angular/core';
+
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { Criteria, CriteriaData, DataElement, Label } from '../../../../../lib/gulp/model/model.module';

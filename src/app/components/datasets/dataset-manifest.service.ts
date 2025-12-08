@@ -2,10 +2,10 @@
 // @generated with Tessl v0.28.0 from ../../../../specs/app/components/datasets/dataset-manifest-service.spec.md
 // (spec:1180367f) (code:78c7ec8a)
 
-import { Injectable, Inject } from '@angular/core';
+import { Injectable, Inject, DOCUMENT } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router, ActivatedRoute } from '@angular/router';
-import { DOCUMENT } from '@angular/common';
+
 import { BehaviorSubject, Observable, throwError, combineLatest, forkJoin, of } from 'rxjs';
 import { map, shareReplay, catchError, tap, switchMap } from 'rxjs/operators';
 
