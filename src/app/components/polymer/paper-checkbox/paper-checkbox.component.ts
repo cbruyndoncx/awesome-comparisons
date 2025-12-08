@@ -12,7 +12,8 @@ import {
     selector: 'pcheckbox',
     templateUrl: './paper-checkbox.component.html',
     styleUrls: ['./paper-checkbox.component.css'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class PaperCheckboxComponent {
     @Input() label: string = '';

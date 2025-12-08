@@ -22,7 +22,8 @@ interface SelectOption {
     styleUrls: [
         'select2.component.css'
     ],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class Select2Component implements InputInterface, OnChanges {
     @Input() options: Array<SelectOption | string> = [];

@@ -23,9 +23,10 @@ export interface DiffStats {
 }
 
 @Component({
-  selector: 'uc-config-diff-viewer',
-  templateUrl: './config-diff-viewer.component.html',
-  styleUrls: ['./config-diff-viewer.component.css']
+    selector: 'uc-config-diff-viewer',
+    templateUrl: './config-diff-viewer.component.html',
+    styleUrls: ['./config-diff-viewer.component.css'],
+    standalone: false
 })
 export class ConfigDiffViewerComponent implements OnInit, OnChanges {
   // Input properties

@@ -25,7 +25,8 @@ interface VisibleColumnDefinition {
     selector: 'generictable',
     templateUrl: './generic-table.component.html',
     styleUrls: ['./generic-table.component.css'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class GenericTableComponent implements AfterViewChecked, OnChanges {
     @Output() xlsxDownload: EventEmitter<any> = new EventEmitter();

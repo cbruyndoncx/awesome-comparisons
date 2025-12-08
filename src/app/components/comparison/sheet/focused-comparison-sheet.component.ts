@@ -19,7 +19,8 @@ interface SheetElementHeader {
     selector: 'focused-comparison-sheet',
     templateUrl: './focused-comparison-sheet.component.html',
     styleUrls: ['./focused-comparison-sheet.component.css'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class FocusedComparisonSheetComponent implements OnChanges {
     @Input() criteriaNames: string[] = [];

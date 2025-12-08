@@ -3,7 +3,8 @@ import { Component, EventEmitter, HostBinding, HostListener, Input, Output } fro
 @Component({
     selector: 'pdialog',
     templateUrl: './paper-dialog.component.html',
-    styleUrls: ['./paper-dialog.component.css']
+    styleUrls: ['./paper-dialog.component.css'],
+    standalone: false
 })
 export class PaperDialogComponent {
     @Input() opened = false;

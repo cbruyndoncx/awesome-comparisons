@@ -20,7 +20,8 @@ import { take } from 'rxjs/operators';
 @Component({
     selector: 'comparison',
     templateUrl: './comparison.template.html',
-    styleUrls: ['./comparison.component.css']
+    styleUrls: ['./comparison.component.css'],
+    standalone: false
 })
 export class ComparisonComponent {
     public repository: string;

@@ -11,7 +11,8 @@ import { ThemeService, Theme } from '../../theme/theme.service';
 @Component({
     selector: 'uc-dataset-shell',
     templateUrl: './dataset-shell.component.html',
-    styleUrls: ['./dataset-shell.component.css']
+    styleUrls: ['./dataset-shell.component.css'],
+    standalone: false
 })
 export class DatasetShellComponent implements OnInit {
     datasets$!: Observable<DatasetManifestEntry[]>;

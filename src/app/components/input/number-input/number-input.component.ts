@@ -8,7 +8,8 @@ import { Criteria } from '../../../../../lib/gulp/model/model.module';
 @Component({
     templateUrl: './number-input.template.html',
     selector: 'number-input',
-    styleUrls: ['./number-input.component.css']
+    styleUrls: ['./number-input.component.css'],
+    standalone: false
 })
 export class NumberInputComponent implements InputInterface {
     public static components: Array<NumberInputComponent> = [];

@@ -22,9 +22,10 @@ interface CriteriaFormControl {
 }
 
 @Component({
-  selector: 'uc-add-entry-modal',
-  templateUrl: './add-entry-modal.component.html',
-  styleUrls: ['./add-entry-modal.component.scss']
+    selector: 'uc-add-entry-modal',
+    templateUrl: './add-entry-modal.component.html',
+    styleUrls: ['./add-entry-modal.component.scss'],
+    standalone: false
 })
 export class AddEntryModalComponent implements OnInit, OnDestroy {
   entryForm: FormGroup;

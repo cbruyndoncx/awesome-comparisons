@@ -4,7 +4,8 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
     selector: 'pbutton',
     templateUrl: './paper-button.component.html',
     styleUrls: ['./paper-button.component.css'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class PaperButtonComponent {
     @Input() text: string = '';

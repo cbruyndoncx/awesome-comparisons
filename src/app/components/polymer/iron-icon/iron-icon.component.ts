@@ -4,7 +4,8 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
     selector: 'iicon',
     templateUrl: './iron-icon.component.html',
     styleUrls: ['./iron-icon.component.css'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class IronIconComponent {
     @Input() icon: string = '';

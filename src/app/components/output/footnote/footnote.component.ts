@@ -6,7 +6,8 @@ import {
 @Component({
     selector: 'footnote',
     templateUrl: './footnote.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class FootnoteComponent implements OnChanges, OnDestroy {
     @Input() footnote: string = '';

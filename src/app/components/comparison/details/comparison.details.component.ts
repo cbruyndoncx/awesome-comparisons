@@ -21,7 +21,8 @@ interface DetailGroup {
 @Component({
     selector: 'comparison-details',
     templateUrl: './comparison.details.template.html',
-    styleUrls: ['./comparison.details.component.css']
+    styleUrls: ['./comparison.details.component.css'],
+    standalone: false
 })
 export class ComparisonDetailsComponent implements OnChanges {
     @Input() data: DataElement | null = new DataElement('placeholder', '', '', new Map());

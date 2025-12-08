@@ -6,7 +6,8 @@ import { UCNewStateAction } from './redux/uc.action';
 @Component({
     selector: 'myapp',
     template: '<router-outlet></router-outlet>',
-    encapsulation: ViewEncapsulation.None
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class AppComponent {
     constructor(private store: Store<IUCAppState>) {}
