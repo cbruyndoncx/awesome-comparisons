@@ -44,6 +44,7 @@ export function clickReducer(state: IUCAppState, action: UCClickAction): IUCAppS
 export function searchReducer(state: IUCAppState = new UcAppState(), action: UCSearchUpdateAction): IUCAppState {
     // Create immutable copies of Maps and Sets for proper change detection
     const newCurrentSearch = new Map(state.currentSearch);
+    let hasChanges = false;
     
     for (const [key, value] of action.criterias) {
         const elements = newCurrentSearch.get(key) || new Set<string>();
@@ -53,15 +54,35 @@ export function searchReducer(state: IUCAppState = new UcAppState(), action: UCS
         }
 
         if (value === null) {
-            newCurrentSearch.delete(key);
+            if (newCurrentSearch.has(key)) {
+                newCurrentSearch.delete(key);
+                hasChanges = true;
+            }
             continue;
         }
 
         if (criteria.rangeSearch) {
-            if (value.length === 0) {
-                newCurrentSearch.delete(key);
+            const currentValue = newCurrentSearch.get(key);
+            if (!currentValue || currentValue.size === 0) {
+                if (value.length === 0) {
+                    if (newCurrentSearch.has(key)) {
+                        newCurrentSearch.delete(key);
+                        hasChanges = true;
+                    }
+                } else {
+                    newCurrentSearch.set(key, new Set([value]));
+                    hasChanges = true;
+                }
             } else {
-                newCurrentSearch.set(key, new Set([value]));
+                const singleValue = Array.from(currentValue)[0];
+                if (singleValue !== value) {
+                    if (value.length === 0) {
+                        newCurrentSearch.delete(key);
+                    } else {
+                        newCurrentSearch.set(key, new Set([value]));
+                    }
+                    hasChanges = true;
+                }
             }
             continue;
         }
@@ -73,19 +94,30 @@ export function searchReducer(state: IUCAppState = new UcAppState(), action: UCS
             newElements.delete(value);
             // If empty after removal, remove the key entirely
             if (newElements.size === 0) {
-                newCurrentSearch.delete(key);
+                if (newCurrentSearch.has(key)) {
+                    newCurrentSearch.delete(key);
+                    hasChanges = true;
+                }
             } else {
                 newCurrentSearch.set(key, newElements);
+                hasChanges = true;
             }
         } else {
             const existing = newCurrentSearch.get(key);
             if (isNullOrUndefined(existing)) {
                 newCurrentSearch.set(key, new Set([value]));
+                hasChanges = true;
             } else if (existing) {
                 newElements.add(value);
                 newCurrentSearch.set(key, newElements);
+                hasChanges = true;
             }
         }
+    }
+    
+    // Only return new state if there were actual changes
+    if (!hasChanges) {
+        return state;
     }
     
     // Return new state with immutable search data
