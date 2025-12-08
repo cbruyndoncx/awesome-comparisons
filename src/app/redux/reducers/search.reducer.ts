@@ -8,10 +8,14 @@ export function clickReducer(state: IUCAppState, action: UCClickAction): IUCAppS
     if (!criteria) {
         return state;
     }
-    const search = state.currentSearch.get(criteria.id);
+    
+    // Create immutable copies for proper change detection
+    const newCurrentSearch = new Map(state.currentSearch);
+    const search = newCurrentSearch.get(criteria.id);
+    
     if (criteria.rangeSearch) {
         if (search === undefined) {
-            state.currentSearch.set(criteria.id, new Set([action.val]));
+            newCurrentSearch.set(criteria.id, new Set([action.val]));
         } else {
             const s = search.values().next().value;
             if (s && (s.trim() === action.val || s.trim().startsWith(action.val + ',') ||
@@ -19,51 +23,74 @@ export function clickReducer(state: IUCAppState, action: UCClickAction): IUCAppS
                 s.endsWith(',' + action.val))) {
                 return state;
             }
-            state.currentSearch.set(criteria.id, new Set([s + ',' + action.val]));
+            newCurrentSearch.set(criteria.id, new Set([s + ',' + action.val]));
         }
     } else {
         if (search === undefined) {
-            state.currentSearch.set(criteria.id, new Set([action.val]));
+            newCurrentSearch.set(criteria.id, new Set([action.val]));
         } else {
-            search.add(action.val);
-            state.currentSearch.set(criteria.id, search);
+            const newSearch = new Set(search);
+            newSearch.add(action.val);
+            newCurrentSearch.set(criteria.id, newSearch);
         }
     }
-    return state;
+    
+    return {
+        ...state,
+        currentSearch: newCurrentSearch
+    };
 }
 
 export function searchReducer(state: IUCAppState = new UcAppState(), action: UCSearchUpdateAction): IUCAppState {
+    // Create immutable copies of Maps and Sets for proper change detection
+    const newCurrentSearch = new Map(state.currentSearch);
+    
     for (const [key, value] of action.criterias) {
-        const elements = state.currentSearch.get(key) || new Set<string>();
+        const elements = newCurrentSearch.get(key) || new Set<string>();
         const criteria = state.criterias ? state.criterias.get(key) : undefined;
         if (!criteria) {
             continue;
         }
 
         if (value === null) {
-            state.currentSearch.delete(key);
+            newCurrentSearch.delete(key);
             continue;
         }
 
         if (criteria.rangeSearch) {
             if (value.length === 0) {
-                state.currentSearch.delete(key);
+                newCurrentSearch.delete(key);
             } else {
-                state.currentSearch.set(key, new Set([value]));
+                newCurrentSearch.set(key, new Set([value]));
             }
             continue;
         }
 
-        if (elements.has(value)) {
-            elements.delete(value);
+        // Create immutable Set for proper change detection
+        const newElements = new Set(elements);
+        
+        if (newElements.has(value)) {
+            newElements.delete(value);
+            // If empty after removal, remove the key entirely
+            if (newElements.size === 0) {
+                newCurrentSearch.delete(key);
+            } else {
+                newCurrentSearch.set(key, newElements);
+            }
         } else {
-            const existing = state.currentSearch.get(key);
+            const existing = newCurrentSearch.get(key);
             if (isNullOrUndefined(existing)) {
-                state.currentSearch.set(key, new Set([value]));
+                newCurrentSearch.set(key, new Set([value]));
             } else if (existing) {
-                existing.add(value);
+                newElements.add(value);
+                newCurrentSearch.set(key, newElements);
             }
         }
     }
-    return state;
+    
+    // Return new state with immutable search data
+    return {
+        ...state,
+        currentSearch: newCurrentSearch
+    };
 }
