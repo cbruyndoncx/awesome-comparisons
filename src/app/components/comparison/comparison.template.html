@@ -1,7 +1,7 @@
-<div class="grid-container" *ngIf="(store | async) as state">
+<div class="grid-container" *ngIf="(store | async)?.state as state">
     <div class="grid-header">
-        <h1>{{configurationService.configuration?.title}}
-            <small>{{configurationService.configuration?.subtitle}}</small>
+        <h1>{{configurationService.configuration!.title}}
+            <small>{{configurationService.configuration!.subtitle}}</small>
         </h1>
     </div>
 
@@ -244,9 +244,9 @@
                 rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img
                 alt="Creative Commons License CC-BY-SA 4.0" style="border-width:0"
                 src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/></a> | <a
-                [href]="getVersionInformation()?.tagLink"
-                [title]="'Built on ' + (getVersionInformation()?.tagDate | date: ('yyyy-MM-dd'))">
-                {{getVersionInformation()?.tag}}
+                [href]="getVersionInformation().tagLink"
+                [title]="'Built on ' + (getVersionInformation().tagDate | date: ('yyyy-MM-dd'))">
+                {{getVersionInformation().tag}}
             </a>
         </div>
     </div>

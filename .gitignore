@@ -306,3 +306,6 @@ gradle-app.setting
 
 # Auto-generated environment file
 src/environments/environment.prod.ts
+
+.nx/cache
+.nx/workspace-data

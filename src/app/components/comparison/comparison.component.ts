@@ -42,7 +42,7 @@ export class ComparisonComponent {
     constructor(public configurationService: ConfigurationService,
                 private templateExportService: ComparisonTemplateExportService,
                 private cd: ChangeDetectorRef,
-                public store: Store<IUCAppState>,
+                public store: Store<{ state: IUCAppState }>,
                 private dialog: MatDialog,
                 private datasetManifestService: DatasetManifestService,
                 private featureGroupingService: FeatureGroupingService) {

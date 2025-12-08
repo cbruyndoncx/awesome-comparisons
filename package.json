@@ -24,7 +24,8 @@
     "screenshots:track-b": "node scripts/capture-screenshots-track-b.js",
     "screenshots:track-c": "node scripts/capture-screenshots-track-c.js",
     "screenshots:track-d": "node scripts/capture-screenshots-track-d.js",
-    "screenshots:all": "npm run screenshots:track-a && npm run screenshots:track-b && npm run screenshots:track-c && npm run screenshots:track-d"
+    "screenshots:all": "npm run screenshots:track-a && npm run screenshots:track-b && npm run screenshots:track-c && npm run screenshots:track-d",
+    "lint": "ng lint"
   },
   "files": [
     "dist",
@@ -80,12 +81,20 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.3.8",
+    "@angular-eslint/builder": "17.5.3",
+    "@angular-eslint/eslint-plugin": "17.5.3",
+    "@angular-eslint/eslint-plugin-template": "17.5.3",
+    "@angular-eslint/schematics": "17.5.3",
+    "@angular-eslint/template-parser": "17.5.3",
     "@angular/cli": "^17.3.8",
     "@angular/compiler-cli": "^17.3.8",
     "@angular/language-service": "^17.3.8",
     "@types/diff": "^7.0.2",
     "@types/jasmine": "~5.1.4",
     "@types/node": "^20.11.30",
+    "@typescript-eslint/eslint-plugin": "7.11.0",
+    "@typescript-eslint/parser": "7.11.0",
+    "eslint": "^8.57.0",
     "gh-pages": "^6.3.0",
     "jasmine-core": "~5.1.1",
     "karma": "~6.4.2",

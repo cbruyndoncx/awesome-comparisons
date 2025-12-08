@@ -174,7 +174,7 @@
         [viewMode]="diffViewMode"
         [theme]="diffTheme"
         [isBusy]="(isLoading$ | async) || false"
-        [lastSavedTimestamp]="document.metadata?.lastModified"
+        [lastSavedTimestamp]="document.metadata.lastModified"
         (viewModeChange)="onDiffViewModeChange($event)"
         (optionsChange)="onDiffOptionsChange($event)">
       </uc-config-diff-viewer>

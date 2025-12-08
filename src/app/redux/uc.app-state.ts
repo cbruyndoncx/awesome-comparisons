@@ -65,7 +65,7 @@ export interface IUCAppState {
     /**
      * Which elements should be shown after the filter and the search are applied.
      */
-    currentElements: Array<Array<CriteriaData>>;
+    currentElements: Array<Array<CriteriaData | null | undefined>>;
 
     /**
      * True if one of the current* properties was changed
@@ -146,7 +146,7 @@ export class UcAppState implements IUCAppState {
     columnTypes: Array<CriteriaTypes> = [];
     columnOrder: Array<number> = [];
     rowIndexes: Array<number> = [];
-    currentElements: Array<Array<CriteriaData>> = [];
+    currentElements: Array<Array<CriteriaData | null | undefined>> = [];
     currentChanged = false;
 
     internalLink = '';

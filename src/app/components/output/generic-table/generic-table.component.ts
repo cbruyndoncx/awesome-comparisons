@@ -39,7 +39,7 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
     @Input() columns: Array<string> = [];
     @Input() columnKeys: Array<string> = [];
     @Input() types: Array<string> = [];
-    @Input() items: Array<Array<CriteriaData>> = [];
+    @Input() items: Array<Array<CriteriaData | null | undefined>> = [];
     @Input() index: Array<number> = [];
     @Input() order: Array<number> = [];
     @Input() labelColorsEnabled: boolean = true;

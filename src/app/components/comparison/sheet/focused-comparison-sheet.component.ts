@@ -25,7 +25,7 @@ export class FocusedComparisonSheetComponent implements OnChanges {
     @Input() criteriaNames: string[] = [];
     @Input() criteriaKeys: string[] = [];
     @Input() criteriaTypes: string[] = [];
-    @Input() items: Array<Array<CriteriaData>> = [];
+    @Input() items: Array<Array<CriteriaData | null | undefined>> = [];
     @Input() rowIndexes: Array<number> = [];
     @Input() elementData: Array<DataElement> = [];
     @Input() labelColorsEnabled: boolean = true;
