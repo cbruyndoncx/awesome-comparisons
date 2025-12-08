@@ -161,8 +161,7 @@
                   <button type="button"
                     class="applied-filters__pill"
                     (click)="removeFilter(filter.id, value)"
-                    aria-label="Remove filter"
-                    [title]="'Remove filter ' + filter.label + ' equals ' + value">
+                    aria-label="Remove filter">
                     <span class="applied-filters__pill-text">{{filter.label}}: {{value}}</span>
                     <span class="applied-filters__pill-close" aria-hidden="true">×</span>
                   </button>

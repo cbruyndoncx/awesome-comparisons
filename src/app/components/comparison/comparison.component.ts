@@ -24,6 +24,9 @@ import { take } from 'rxjs/operators';
     standalone: false
 })
 export class ComparisonComponent {
+    private activeFiltersCache: Array<{ id: string; label: string; values: string[] }> | null = null;
+    private lastSearchState: Map<string, Set<string>> | null = null;
+    
     public repository: string;
     public collapsedFilterGroups: { [groupKey: string]: boolean } = {};
     public ungroupedCollapsed: boolean = false;
@@ -447,6 +450,15 @@ export class ComparisonComponent {
     }
 
     public getActiveFilters(searchState: Map<string, Set<string>>): Array<{ id: string; label: string; values: string[] }> {
+        // Memoize to prevent unnecessary re-computation and template changes
+        if (!this.activeFiltersCache || !this.lastSearchState || !this.mapsEqual(searchState, this.lastSearchState)) {
+            this.activeFiltersCache = this.computeActiveFilters(searchState);
+            this.lastSearchState = new Map(searchState);
+        }
+        return this.activeFiltersCache;
+    }
+
+    private computeActiveFilters(searchState: Map<string, Set<string>>): Array<{ id: string; label: string; values: string[] }> {
         if (!searchState) {
             return [];
         }
@@ -464,6 +476,22 @@ export class ComparisonComponent {
         });
         results.sort((a, b) => a.label.localeCompare(b.label));
         return results;
+    }
+
+    private mapsEqual(map1: Map<string, Set<string>> | null, map2: Map<string, Set<string>> | null): boolean {
+        if (map1 === map2) return true;
+        if (!map1 || !map2) return false;
+        if (map1.size !== map2.size) return false;
+        
+        for (const [key, value] of map1.entries()) {
+            const otherValue = map2.get(key);
+            if (!otherValue) return false;
+            if (value.size !== otherValue.size) return false;
+            for (const item of value) {
+                if (!otherValue.has(item)) return false;
+            }
+        }
+        return true;
     }
 
     public removeFilter(criteriaId: string, value: string): void {
