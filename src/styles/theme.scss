@@ -6,7 +6,7 @@
 @use 'sass:map';
 
 // Typography tuned to ThirdBrain visual identity
-$typography: mat.define-typography-config(
+$typography: mat.m2-define-typography-config(
   $font-family: 'Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
 );
 
@@ -111,16 +111,16 @@ $thirdbrain-amber-palette: (
 );
 
 // Define color palettes aligned with the ThirdBrain look
-$light-primary: mat.define-palette($thirdbrain-blue-palette, 600, 400, 800);
-$light-accent: mat.define-palette($thirdbrain-violet-palette, 600, 400, 800);
-$light-warn: mat.define-palette($thirdbrain-amber-palette, 500, 400, 700);
+$light-primary: mat.m2-define-palette($thirdbrain-blue-palette, 600, 400, 800);
+$light-accent: mat.m2-define-palette($thirdbrain-violet-palette, 600, 400, 800);
+$light-warn: mat.m2-define-palette($thirdbrain-amber-palette, 500, 400, 700);
 
-$dark-primary: mat.define-palette($thirdbrain-blue-palette, 500, 300, 700);
-$dark-accent: mat.define-palette($thirdbrain-violet-palette, 500, 300, 700);
-$dark-warn: mat.define-palette($thirdbrain-amber-palette, 500, 300, 700);
+$dark-primary: mat.m2-define-palette($thirdbrain-blue-palette, 500, 300, 700);
+$dark-accent: mat.m2-define-palette($thirdbrain-violet-palette, 500, 300, 700);
+$dark-warn: mat.m2-define-palette($thirdbrain-amber-palette, 500, 300, 700);
 
 // Create light theme
-$light-theme: mat.define-light-theme((
+$light-theme: mat.m2-define-light-theme((
   color: (
     primary: $light-primary,
     accent: $light-accent,
@@ -131,7 +131,7 @@ $light-theme: mat.define-light-theme((
 ));
 
 // Create dark theme
-$dark-theme: mat.define-dark-theme((
+$dark-theme: mat.m2-define-dark-theme((
   color: (
     primary: $dark-primary,
     accent: $dark-accent,
@@ -169,18 +169,18 @@ $dark-theme: mat.define-dark-theme((
   --gray: #64748b;
   --darkgray: #1e293b;
   --dark: #0f172a;
-  --secondary: #{mat.get-color-from-palette($light-primary, 600)};
-  --tertiary: #{mat.get-color-from-palette($light-accent, 600)};
+  --secondary: #{mat.m2-get-color-from-palette($light-primary, 600)};
+  --tertiary: #{mat.m2-get-color-from-palette($light-accent, 600)};
   --highlight: #2563eb14;
   --text-highlight: #fbbf24;
-  --uc-accent: #{mat.get-color-from-palette($light-primary, 600)};
-  --uc-accent-contrast: #{mat.get-contrast-color-from-palette($light-primary, 600)};
-  --accent-surface: #{rgba(mat.get-color-from-palette($light-primary, 600), 0.12)};
-  --accent-surface-strong: #{rgba(mat.get-color-from-palette($light-primary, 600), 0.18)};
-  --link-color: #{mat.get-color-from-palette($light-primary, 600)};
-  --warn-color: #{mat.get-color-from-palette($light-warn, 500)};
-  --warn-contrast: #{mat.get-contrast-color-from-palette($light-warn, 500)};
-  --warn-surface: #{rgba(mat.get-color-from-palette($light-warn, 400), 0.18)};
+  --uc-accent: #{mat.m2-get-color-from-palette($light-primary, 600)};
+  --uc-accent-contrast: #{mat.m2-get-contrast-color-from-palette($light-primary, 600)};
+  --accent-surface: #{rgba(mat.m2-get-color-from-palette($light-primary, 600), 0.12)};
+  --accent-surface-strong: #{rgba(mat.m2-get-color-from-palette($light-primary, 600), 0.18)};
+  --link-color: #{mat.m2-get-color-from-palette($light-primary, 600)};
+  --warn-color: #{mat.m2-get-color-from-palette($light-warn, 500)};
+  --warn-contrast: #{mat.m2-get-contrast-color-from-palette($light-warn, 500)};
+  --warn-surface: #{rgba(mat.m2-get-color-from-palette($light-warn, 400), 0.18)};
   --shadow-color: rgba(15, 23, 42, 0.08);
 
   background-color: var(--background-color);
@@ -225,18 +225,18 @@ $dark-theme: mat.define-dark-theme((
   --gray: #71717a;
   --darkgray: #d1d5db;
   --dark: #f9fafb;
-  --secondary: #{mat.get-color-from-palette($dark-primary, 500)};
-  --tertiary: #{mat.get-color-from-palette($dark-accent, 500)};
+  --secondary: #{mat.m2-get-color-from-palette($dark-primary, 500)};
+  --tertiary: #{mat.m2-get-color-from-palette($dark-accent, 500)};
   --highlight: #3b82f61f;
   --text-highlight: #f59e0b;
-  --uc-accent: #{mat.get-color-from-palette($dark-primary, 500)};
-  --uc-accent-contrast: #{mat.get-contrast-color-from-palette($dark-primary, 500)};
-  --accent-surface: #{rgba(mat.get-color-from-palette($dark-primary, 500), 0.24)};
-  --accent-surface-strong: #{rgba(mat.get-color-from-palette($dark-primary, 500), 0.32)};
-  --link-color: #{mat.get-color-from-palette($dark-primary, 300)};
-  --warn-color: #{mat.get-color-from-palette($dark-warn, 400)};
-  --warn-contrast: #{mat.get-contrast-color-from-palette($dark-warn, 400)};
-  --warn-surface: #{rgba(mat.get-color-from-palette($dark-warn, 300), 0.28)};
+  --uc-accent: #{mat.m2-get-color-from-palette($dark-primary, 500)};
+  --uc-accent-contrast: #{mat.m2-get-contrast-color-from-palette($dark-primary, 500)};
+  --accent-surface: #{rgba(mat.m2-get-color-from-palette($dark-primary, 500), 0.24)};
+  --accent-surface-strong: #{rgba(mat.m2-get-color-from-palette($dark-primary, 500), 0.32)};
+  --link-color: #{mat.m2-get-color-from-palette($dark-primary, 300)};
+  --warn-color: #{mat.m2-get-color-from-palette($dark-warn, 400)};
+  --warn-contrast: #{mat.m2-get-contrast-color-from-palette($dark-warn, 400)};
+  --warn-surface: #{rgba(mat.m2-get-color-from-palette($dark-warn, 300), 0.28)};
   --shadow-color: rgba(8, 11, 19, 0.6);
 
   background-color: var(--background-color);

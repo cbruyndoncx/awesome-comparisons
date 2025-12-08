@@ -1,0 +1,29 @@
+Repository is not clean. Update changes will be mixed with pre-existing changes.
+Using package manager: npm
+Collecting installed dependencies...
+Found 56 dependencies.
+Fetching dependency metadata from registry...
+    Updating package.json with dependency @angular/cdk @ "18.2.14" (was "17.3.10")...
+    Updating package.json with dependency @angular/material @ "18.2.14" (was "17.3.10")...
+UPDATE package.json (4182 bytes)
+❯ Cleaning node modules directory
+✔ Cleaning node modules directory
+❯ Installing packages
+✔ Installing packages
+** Executing migrations of package '@angular/cdk' **
+
+❯ Updates the Angular CDK to v18.
+    
+      ✓  Updated Angular CDK to version 18
+    
+  Migration completed (No changes made).
+
+** Executing migrations of package '@angular/material' **
+
+❯ Updates Angular Material to v18.
+    
+      ✓  Updated Angular Material to version 18
+    
+UPDATE src/styles/theme.scss (8767 bytes)
+  Migration completed (1 file modified).
+
