@@ -101,7 +101,7 @@
       <uc-config-catalog-tree
         [catalog]="vm.catalog"
         [selectedEncodedPath]="(selectedDocument$ | async)?.encodedPath || null"
-        [isSaving]="isSaving$ | async"
+        [isSaving]="(isSaving$ | async) || false"
         [loading]="vm.isLoading"
         (select)="onCatalogSelect($event)"
         (retry)="loadCatalog()"
@@ -173,8 +173,8 @@
         [modifiedYaml]="currentYaml"
         [viewMode]="diffViewMode"
         [theme]="diffTheme"
-        [isBusy]="isLoading$ | async"
-        [lastSavedTimestamp]="document.metadata?.lastModified | date:'medium'"
+        [isBusy]="(isLoading$ | async) || false"
+        [lastSavedTimestamp]="document.metadata?.lastModified"
         (viewModeChange)="onDiffViewModeChange($event)"
         (optionsChange)="onDiffOptionsChange($event)">
       </uc-config-diff-viewer>

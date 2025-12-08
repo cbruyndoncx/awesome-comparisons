@@ -7,7 +7,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PaperCardComponent {
-    @Input() heading: string;
+    @Input() heading: string = '';
     @Input() symbol = false;
     @Input() expand = false;
     @Output() expandChange: EventEmitter<any> = new EventEmitter();

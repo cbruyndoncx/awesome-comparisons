@@ -14,7 +14,7 @@ import {
 import { ConfigCatalogItem } from '../../models/config-document.model';
 
 type CatalogViewEntry =
-  | { isHeader: true; label: string; datasetId?: string }
+  | { isHeader: true; label: string; datasetId?: string | null }
   | { isHeader: false; item: ConfigCatalogItem; fileName: string };
 
 function isItemEntry(entry: CatalogViewEntry): entry is { isHeader: false; item: ConfigCatalogItem; fileName: string } {

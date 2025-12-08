@@ -11,7 +11,10 @@ export class SanitizerPipe implements PipeTransform {
     constructor(private _sanitizer: DomSanitizer) {
     }
 
-    transform(v: string): string {
+    transform(v: string | null | undefined): string {
+        if (!v) {
+            return '';
+        }
         // Pre-process to handle specific pattern if needed
         let processedValue = v;
         if (/^<p>\d+\./.test(v)) {

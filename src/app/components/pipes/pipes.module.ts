@@ -1,16 +1,19 @@
 import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
+import { CommonModule } from "@angular/common";
 import { SanitizerPipe } from "./sanitizer-pipe/sanitizer.pipe";
+import { AsAnyPipe } from "./as-any.pipe";
 
 @NgModule({
     imports: [
-        BrowserModule
+        CommonModule
     ],
     exports: [
-        SanitizerPipe
+        SanitizerPipe,
+        AsAnyPipe
     ],
     declarations: [
-        SanitizerPipe
+        SanitizerPipe,
+        AsAnyPipe
     ],
     providers: [
         SanitizerPipe

@@ -15,8 +15,9 @@ import {
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PaperCheckboxComponent {
-    @Input() label: string;
+    @Input() label: string = '';
     @Input() checked = false;
+    @Input() disabled = false;
     @Output() checkedChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
     @HostBinding('attr.role') role = 'checkbox';

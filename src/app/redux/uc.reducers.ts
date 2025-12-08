@@ -76,8 +76,10 @@ export function masterReducer(state: IUCAppState = new UcAppState(), action: UCA
                     state = filterColumns(state);
                     break;
                 case 'ColumnChange':
-                    state = columnDisplayChange(state, act.value);
-                    state = filterColumns(state);
+                    if (act.value !== undefined) {
+                        state = columnDisplayChange(state, act.value);
+                        state = filterColumns(state);
+                    }
                     break;
                 case 'ElementDisplayAll':
                     state.elementsEnabled = state.elementsEnabled.map(() => act.enable);
@@ -85,9 +87,11 @@ export function masterReducer(state: IUCAppState = new UcAppState(), action: UCA
                     state.currentChanged = true;
                     break;
                 case 'ElementChange':
-                    state.elementsEnabled[act.value] = !state.elementsEnabled[act.value];
-                    state.elementDisplayAll = state.elementsEnabled.filter(value => value).length === state.elementNames.length;
-                    state.currentChanged = true;
+                    if (act.value !== undefined) {
+                        state.elementsEnabled[act.value] = !state.elementsEnabled[act.value];
+                        state.elementDisplayAll = state.elementsEnabled.filter(value => value).length === state.elementNames.length;
+                        state.currentChanged = true;
+                    }
                     break;
                 case 'TableExpand':
                     if (act.enable) {
@@ -154,16 +158,19 @@ export function masterReducer(state: IUCAppState = new UcAppState(), action: UCA
 
 function clickReducer(state: IUCAppState, action: UCClickAction) {
     const column = state.currentColumns[action.index];
-    const criteria = state.criterias.get(column);
+    const criteria = state.criterias ? state.criterias.get(column) : undefined;
+    if (!criteria) {
+        return state;
+    }
     const search = state.currentSearch.get(criteria.id);
     if (criteria.rangeSearch) {
         if (search === undefined) {
             state.currentSearch.set(criteria.id, new Set([action.val]));
         } else {
             const s = search.values().next().value;
-            if (s.trim() === action.val || s.trim().startsWith(action.val + ',') ||
+            if (s && (s.trim() === action.val || s.trim().startsWith(action.val + ',') ||
                 s.indexOf(',' + action.val + ',') > -1 ||
-                s.endsWith(',' + action.val)) {
+                s.endsWith(',' + action.val))) {
                 return state;
             }
             state.currentSearch.set(criteria.id, new Set([s + ',' + action.val]));
@@ -292,13 +299,15 @@ function initColumn(state: IUCAppState): IUCAppState {
     const columnNames: Array<string> = [];
     const columnsEnabled: Array<boolean> = [];
     const columnsEnabledCache: Array<boolean> = [];
-    state.criterias.forEach((value, key) => {
-        const name: string = value.id.length !== 0 ? key : value.name;
-        columnKeys.push(key);
-        columnNames.push(name);
-        columnsEnabled.push(value.table);
-        columnsEnabledCache.push(value.table);
-    });
+    if (state.criterias) {
+        state.criterias.forEach((value, key) => {
+            const name: string = value.id.length !== 0 ? key : value.name;
+            columnKeys.push(key);
+            columnNames.push(name);
+            columnsEnabled.push(value.table);
+            columnsEnabledCache.push(value.table);
+        });
+    }
     state.columnKeys = columnKeys;
     state.columnNames = columnNames;
     state.columnsEnabled = columnsEnabled;
@@ -330,7 +339,7 @@ function initColumn(state: IUCAppState): IUCAppState {
 }
 
 function applyGrouping(state: IUCAppState, grouping?: GroupedCriteriaStructure): IUCAppState {
-    if (isNullOrUndefined(grouping)) {
+    if (isNullOrUndefined(grouping) || !grouping) {
         state.featureGroups = [];
         state.groupColumnLookup = {};
         state.groupExpanded = {};
@@ -371,7 +380,7 @@ function toggleGroup(state: IUCAppState, action: UCToggleGroupAction): IUCAppSta
         state.groupExpanded = {};
     }
     const group = (state.featureGroups || []).find(g => g.key === action.groupKey);
-    if (isNullOrUndefined(group) || group.isExcluded) {
+    if (isNullOrUndefined(group) || !group || group.isExcluded) {
         return state;
     }
 
@@ -387,22 +396,24 @@ function toggleGroup(state: IUCAppState, action: UCToggleGroupAction): IUCAppSta
     });
 
     // Enable/disable columns based on group expansion
-    const groupChildKeys = new Set((group.children || []).map(c => c.id));
-    if (group.primaryCriteria) {
-        groupChildKeys.add(group.primaryCriteria.id);
-    }
-
-    state.columnKeys.forEach((colKey, index) => {
-        if (groupChildKeys.has(colKey)) {
-            const criteria = state.criterias.get(colKey);
-            // Only enable the column if it has table: true in its configuration
-            if (action.expanded) {
-                state.columnsEnabled[index] = criteria?.table === true;
-            } else {
-                state.columnsEnabled[index] = false;
-            }
+    if (group) {
+        const groupChildKeys = new Set((group.children || []).map(c => c.id));
+        if (group.primaryCriteria) {
+            groupChildKeys.add(group.primaryCriteria.id);
         }
-    });
+
+        state.columnKeys.forEach((colKey, index) => {
+            if (groupChildKeys.has(colKey)) {
+                const criteria = state.criterias ? state.criterias.get(colKey) : undefined;
+                // Only enable the column if it has table: true in its configuration
+                if (action.expanded) {
+                    state.columnsEnabled[index] = criteria?.table === true;
+                } else {
+                    state.columnsEnabled[index] = false;
+                }
+            }
+        });
+    }
 
     state.currentChanged = true;
     return state;
@@ -525,7 +536,10 @@ function filterColumns(state: IUCAppState, columns: Map<string, boolean> = new M
         if (!state.columnsEnabled[index]) {
             return;
         }
-        const criteria = state.criterias.get(value);
+        const criteria = state.criterias ? state.criterias.get(value) : undefined;
+        // If criteria not found, skip? Or keep? Original code crashed if null.
+        if (!criteria) return;
+
         const groupKey = groupLookup[value];
         if (!isNullOrUndefined(groupKey)) {
             const isExcluded = excludedGroups.has(groupKey);
@@ -539,17 +553,19 @@ function filterColumns(state: IUCAppState, columns: Map<string, boolean> = new M
     });
     state.currentColumns = currentColumns;
 
-    const columnNames = [];
-    const columnTypes = [];
+    const columnNames: string[] = [];
+    const columnTypes: CriteriaTypes[] = [];
     state.currentColumns.forEach(key => {
-        const criteria: Criteria = state.criterias.get(key);
-        columnNames.push(criteria.name);
-        columnTypes.push(criteria.type);
+        const criteria: Criteria | undefined = state.criterias?.get(key);
+        if (criteria) {
+            columnNames.push(criteria.name);
+            columnTypes.push(criteria.type);
+        }
     });
     state.currentColumnNames = columnNames;
     state.columnTypes = columnTypes;
 
-    const columnOrder = [];
+    const columnOrder: number[] = [];
     state.currentOrder.forEach(pk => {
         let index;
         if (pk.startsWith('-') && (index = state.currentColumns.indexOf(pk.substring(1))) !== -1) {
@@ -565,7 +581,7 @@ function filterColumns(state: IUCAppState, columns: Map<string, boolean> = new M
     return state;
 }
 
-function filterElements(state: IUCAppState, criterias: Map<string, Criteria> = null) {
+function filterElements(state: IUCAppState, criterias: Map<string, Criteria> | null = null) {
     // Initialize state.criteria if null
     if (state.criterias === null && criterias !== null) {
         state.criterias = criterias;
@@ -594,16 +610,17 @@ function filterElements(state: IUCAppState, criterias: Map<string, Criteria> = n
 
         let includeData = true;
         state.currentSearch.forEach((filterValueSet, filterCriteriaKey) => {
-            const filterCriteria = state.criterias.get(filterCriteriaKey);
+            const filterCriteria = state.criterias ? state.criterias.get(filterCriteriaKey) : undefined;
             if (isNullOrUndefined(filterCriteria)) {
                 return;
             }
 
             // Filter for number label columns
-            if (filterCriteria.rangeSearch) {
-                if (state.currentSearch.get(filterCriteriaKey).size > 0) {
+            if (filterCriteria && filterCriteria.rangeSearch) {
+                const currentSearchSet = state.currentSearch.get(filterCriteriaKey);
+                if (currentSearchSet && currentSearchSet.size > 0) {
                     // take the field or an empty string (to prevent null pointer errors)
-                    const queries = (state.currentSearch.get(filterCriteriaKey).values().next().value || '').trim()
+                    const queries = (currentSearchSet.values().next().value || '').trim()
                     // replace spaces with empty strings
                         .replace(' ', '')
                         // remove elements that contain letters.
@@ -611,7 +628,7 @@ function filterElements(state: IUCAppState, criterias: Map<string, Criteria> = n
                         // the second group is the same only with a comma at the end
                         // the third group is if there is no comma at all
                         .replace(/,[^,]*[a-zA-Z][^,]*|[^,]*[a-zA-Z][^,]*,|[^,]*[a-zA-Z][^,]*/g, '').split(',');
-                    if (queries.length === 0 || queries.map(y => y.length === 0).reduce((p, c) => p && c)) {
+                    if (queries.length === 0 || queries.map((y: string) => y.length === 0).reduce((p: boolean, c: boolean) => p && c)) {
                         return;
                     }
                     let includeElement = false;
@@ -662,12 +679,14 @@ function filterElements(state: IUCAppState, criterias: Map<string, Criteria> = n
                         if (isNullOrUndefined(criteriaData)) {
                             includeElement = includeElement = false;
                         } else {
-                            criteriaData.labels.forEach(label => {
-                                const numberValue = Number.parseInt(label.name);
-                                if (a <= numberValue && numberValue <= b) {
-                                    includeElement = true;
-                                }
-                            });
+                            if (criteriaData && criteriaData.labels) {
+                                criteriaData.labels.forEach(label => {
+                                    const numberValue = Number.parseInt(label.name);
+                                    if (a <= numberValue && numberValue <= b) {
+                                        includeElement = true;
+                                    }
+                                });
+                            }
                         }
                     }
                     includeData = includeData && includeElement;
@@ -676,7 +695,7 @@ function filterElements(state: IUCAppState, criterias: Map<string, Criteria> = n
             // filter for Label columns
             else {
                 // fulfills query if filter set is empty
-                let fulfillsField = filterCriteria.andSearch || isNullOrUndefined(filterValueSet) || filterValueSet.size === 0;
+                let fulfillsField = (filterCriteria && filterCriteria.andSearch) || isNullOrUndefined(filterValueSet) || filterValueSet.size === 0;
                 // Check for each value in filter if
                 filterValueSet.forEach(filterValue => {
                     // if criteria data has one label
@@ -685,12 +704,14 @@ function filterElements(state: IUCAppState, criterias: Map<string, Criteria> = n
                     if (isNullOrUndefined(criteriaData)) {
                         fulfillsQuery = false;
                     } else {
-                        criteriaData.labels.forEach((label, labelKey) => {
-                            fulfillsQuery = fulfillsQuery || (labelKey === filterValue)
-                        });
+                        if (criteriaData && criteriaData.labels) {
+                            criteriaData.labels.forEach((label, labelKey) => {
+                                fulfillsQuery = fulfillsQuery || (labelKey === filterValue)
+                            });
+                        }
                     }
 
-                    if (filterCriteria.andSearch) {
+                    if (filterCriteria && filterCriteria.andSearch) {
                         fulfillsField = fulfillsField && fulfillsQuery;
                     } else {
                         fulfillsField = fulfillsField || fulfillsQuery;
@@ -702,11 +723,11 @@ function filterElements(state: IUCAppState, criterias: Map<string, Criteria> = n
 
         if (includeData) {
             const dataElement: DataElement = data[i];
-            const criteriaDataArray = [];
+            const criteriaDataArray: (CriteriaData | undefined)[] = [];
             state.currentColumns.forEach(key => {
                 criteriaDataArray.push(dataElement.getCriteriaData(decodeURIComponent(key)));
             });
-            dataElements.push(criteriaDataArray);
+            dataElements.push(criteriaDataArray as any); // Casting to any or CriteriaData[] if strictness allows undefined in currentElements
             indexes.push(i);
         }
     });
@@ -876,7 +897,7 @@ function routeReducer(state: IUCAppState = new UcAppState(), action: UCRouterAct
     const viewParam = (params.view || params['?view'] || '').toString().toLowerCase();
     state.internalLink = params.sectionLink;
 
-    search.split(';').map(x => x.trim()).forEach(x => {
+    search.split(';').map((x: string) => x.trim()).forEach((x: string) => {
         const splits = x.split(':');
         if (splits.length > 1) {
             // at least one filter is active
@@ -885,11 +906,11 @@ function routeReducer(state: IUCAppState = new UcAppState(), action: UCRouterAct
         }
     });
     state.currentFilter = filter.split(',')
-        .filter(x => x.trim().length > 0)
-        .filter(x => Number.isInteger(Number.parseFloat(x.trim())))
-        .map(x => Number.parseInt(x.trim()));
+        .filter((x: string) => x.trim().length > 0)
+        .filter((x: string) => Number.isInteger(Number.parseFloat(x.trim())))
+        .map((x: string) => Number.parseInt(x.trim()));
     state.currentColumns = columns.split(',')
-        .filter(x => x.trim().length > 0);
+        .filter((x: string) => x.trim().length > 0);
     state.routeColumnsPending = state.currentColumns.length > 0 ? [...state.currentColumns] : null;
     state.routeElementsPending = null;
     state.routeGroupsPending = null;
@@ -918,7 +939,7 @@ function routeReducer(state: IUCAppState = new UcAppState(), action: UCRouterAct
         const values = state.criterias.values();
         let crit = values.next().value;
         while (!isNullOrUndefined(crit)) {
-            if (crit.table === true) {
+            if (crit && crit.table === true) {
                 state.currentColumns.push(crit.id);
             }
             crit = values.next().value;
@@ -1003,8 +1024,8 @@ function detailsReducer(state: IUCAppState = new UcAppState(), action: UCAction)
 function searchReducer(state: IUCAppState = new UcAppState(), action: UCSearchUpdateAction) {
     for (const [key, value] of action.criterias) {
         const elements = state.currentSearch.get(key) || new Set<string>();
-        const criteria = state.criterias.get(key);
-        if (isNullOrUndefined(criteria)) {
+        const criteria = state.criterias ? state.criterias.get(key) : undefined;
+        if (!criteria) {
             continue;
         }
 
@@ -1028,7 +1049,7 @@ function searchReducer(state: IUCAppState = new UcAppState(), action: UCSearchUp
             const existing = state.currentSearch.get(key);
             if (isNullOrUndefined(existing)) {
                 state.currentSearch.set(key, new Set([value]));
-            } else {
+            } else if (existing) {
                 existing.add(value);
             }
         }

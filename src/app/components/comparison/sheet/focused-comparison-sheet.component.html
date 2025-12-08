@@ -88,7 +88,7 @@
                             </ng-container>
                             <ng-container *ngSwitchCase="'REPOSITORY'">
                                 <div class="repository-links" *ngIf="entry?.urlList?.length; else repoPlain">
-                                    <a *ngFor="let link of entry.urlList"
+                                    <a *ngFor="let link of entry?.urlList"
                                        [href]="link"
                                        target="_blank"
                                        rel="noopener noreferrer">{{link}}</a>

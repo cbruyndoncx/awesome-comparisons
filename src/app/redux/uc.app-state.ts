@@ -40,7 +40,7 @@ export interface IUCAppState {
      * Current uc configuration
      * Used for currentColumns|currentOrder
      */
-    criterias: Map<string, Criteria>;
+    criterias: Map<string, Criteria> | null;
 
     /**
      * List of columns that should be shown.
@@ -90,7 +90,7 @@ export interface IUCAppState {
     groupColumnLookup: { [columnId: string]: string };
 
     detailsOpen: boolean;
-    detailsData: DataElement;
+    detailsData: DataElement | null;
 
     detailsDisplayTooltips: boolean;
     labelColorsEnabled: boolean;
@@ -126,7 +126,7 @@ export class UcAppState implements IUCAppState {
     groupColumnLookup: { [columnId: string]: string } = {};
 
     detailsOpen = false;
-    detailsData = null;
+    detailsData: DataElement | null = null;
 
     detailsDisplayTooltips = false;
     labelColorsEnabled = true;
@@ -141,7 +141,7 @@ export class UcAppState implements IUCAppState {
     currentColumns: Array<string> = [];
     currentlyMaximized = false;
     currentOrder = ['+id'];
-    criterias: Map<string, Criteria> = null;
+    criterias: Map<string, Criteria> | null = null;
     currentColumnNames: Array<string> = [];
     columnTypes: Array<CriteriaTypes> = [];
     columnOrder: Array<number> = [];

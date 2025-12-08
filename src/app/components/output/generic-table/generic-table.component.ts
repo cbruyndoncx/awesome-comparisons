@@ -56,7 +56,7 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
     public groupLookup$: Observable<Record<string, FeatureGroupView>>;
     public visibleCriteriaMap$: Observable<Record<string, Criteria>>;
 
-    private table;
+    private table: any;
     private anchorsInitialised = false;
     private expandedMarkdownCells = new Set<string>();
 

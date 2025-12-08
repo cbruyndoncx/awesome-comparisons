@@ -7,7 +7,7 @@ import { Component, EventEmitter, HostBinding, HostListener, Input, Output } fro
 })
 export class PaperDialogComponent {
     @Input() opened = false;
-    @Input() heading: string;
+    @Input() heading: string = '';
 
     @Output() openedChange: EventEmitter<boolean> = new EventEmitter();
 
@@ -15,7 +15,7 @@ export class PaperDialogComponent {
         return this.opened ? 'grid' : 'none';
     }
 
-    @HostListener('click', ['$event.target']) onClick(target) {
+    @HostListener('click', ['$event.target']) onClick(target: any) {
         if (target.localName === 'pdialog') {
             this.close();
         }
@@ -26,7 +26,7 @@ export class PaperDialogComponent {
         this.openedChange.emit(false);
     }
 
-    @HostListener('window:keydown', ['$event']) onKeydown(event) {
+    @HostListener('window:keydown', ['$event']) onKeydown(event: KeyboardEvent) {
         if (this.opened && event.key.toLowerCase() === 'escape') {
             this.close();
         }

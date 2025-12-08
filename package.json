@@ -83,6 +83,7 @@
     "@angular/cli": "^17.3.8",
     "@angular/compiler-cli": "^17.3.8",
     "@angular/language-service": "^17.3.8",
+    "@types/diff": "^7.0.2",
     "@types/jasmine": "~5.1.4",
     "@types/node": "^20.11.30",
     "gh-pages": "^6.3.0",

@@ -1,3 +1,4 @@
+<ng-container *ngIf="data">
 <div class="pheader">
     <h2>{{data.name}}
         <ng-template ngFor let-label [ngForOf]="headerLabels">
@@ -28,7 +29,7 @@
                 </ng-container>
                 <ng-template #headerTooltipPopover>
                     <ptooltip [tooltip]="label.tooltip.text"
-                              [tooltipHtml]="prefixInternalLink(label.tooltip.html)" [position]="'s'">
+                              [tooltipHtml]="(prefixInternalLink(label.tooltip.html) | asAny)" [position]="'s'">
                         <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
                              [style.color]="labelColorsEnabled ? label.color : null"
                              [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
@@ -89,7 +90,7 @@
                     <ng-container *ngFor="let label of section.data?.labelArray">
                         <ptooltip *ngIf="!tooltipAsText"
                                   [tooltip]="label.tooltip.text"
-                                  [tooltipHtml]="prefixInternalLink(label.tooltip.html)" [position]="'n'">
+                                  [tooltipHtml]="(prefixInternalLink(label.tooltip.html) | asAny)" [position]="'n'">
                             <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
                                  [style.color]="labelColorsEnabled ? label.color : null"
                                  [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
@@ -172,3 +173,4 @@
     </ng-container>
 
 </div>
+</ng-container>

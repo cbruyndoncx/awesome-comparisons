@@ -1,5 +1,7 @@
 import { Component, HostListener, ViewEncapsulation } from '@angular/core';
-import { ComparisonComponent } from './components/comparison/comparison.component';
+import { Store } from '@ngrx/store';
+import { IUCAppState } from './redux/uc.app-state';
+import { UCNewStateAction } from './redux/uc.action';
 
 @Component({
     selector: 'myapp',
@@ -7,8 +9,12 @@ import { ComparisonComponent } from './components/comparison/comparison.componen
     encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
+    constructor(private store: Store<IUCAppState>) {}
+
     @HostListener('window:popstate', ['$event'])
     popState(ev: PopStateEvent) {
-        ComparisonComponent.instance.dispatchNewState(ev.state);
+        if (ev.state) {
+            this.store.dispatch(new UCNewStateAction(<IUCAppState>ev.state));
+        }
     }
 }

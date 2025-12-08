@@ -22,7 +22,7 @@ export class ConfigurationService {
     public configuration: Configuration = Configuration.empty();
 
     public tableColumns: Array<string> = [];
-    public criteriaValues: Array<Array<{ id: string, text: string, criteriaValue: CriteriaValue }>>;
+    public criteriaValues: Array<Array<{ id: string, text: string, criteriaValue: CriteriaValue }>> = [];
     public dataElements: Array<DataElement> = [];
 
     private datasetSubscription: Subscription | null = null;
@@ -45,7 +45,7 @@ export class ConfigurationService {
             const variables = Array.isArray(value.variables) ? value.variables : [];
             if (template.length > 0) {
                 let result = template;
-                variables.forEach(variable => {
+                variables.forEach((variable: string) => {
                     const replacement = !isNullOrUndefined(context[variable]) ? String(context[variable]) : '';
                     if (result.indexOf('{}') !== -1) {
                         result = result.replace("{}", replacement);

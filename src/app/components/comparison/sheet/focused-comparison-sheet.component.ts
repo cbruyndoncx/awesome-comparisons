@@ -11,8 +11,8 @@ interface SheetRow {
 interface SheetElementHeader {
     index: number;
     name: string;
-    url?: string;
-    description?: string;
+    url?: string | null;
+    description?: string | null;
 }
 
 @Component({
@@ -56,7 +56,7 @@ export class FocusedComparisonSheetComponent implements OnChanges {
             return Array.from(rawLabels.values()).filter((label: Label | null | undefined): label is Label => !!label);
         }
         if (typeof rawLabels === 'object') {
-            return Object.values(rawLabels).filter((label: Label | null | undefined): label is Label => !!label);
+            return (Object.values(rawLabels) as any[]).filter((label: Label | null | undefined): label is Label => !!label);
         }
         return [];
     }

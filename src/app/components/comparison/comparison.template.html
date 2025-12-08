@@ -1,4 +1,4 @@
-<div class="grid-container" *ngIf="store | async as vm">
+<div class="grid-container" *ngIf="(store | async) as state">
     <div class="grid-header">
         <h1>{{configurationService.configuration?.title}}
             <small>{{configurationService.configuration?.subtitle}}</small>
@@ -22,14 +22,14 @@
                 <div class="select-toolbar__subactions" *ngIf="!filtersCollapsed">
                     <button type="button"
                             class="select-toolbar__button"
-                            (click)="setAllGroupCollapse(vm.state.featureGroups, true)"
-                            [disabled]="safeAreAllGroupsCollapsed(vm.state.featureGroups)">
+                            (click)="setAllGroupCollapse(state.featureGroups, true)"
+                            [disabled]="safeAreAllGroupsCollapsed(state.featureGroups)">
                         Collapse all
                     </button>
                     <button type="button"
                             class="select-toolbar__button"
-                            (click)="setAllGroupCollapse(vm.state.featureGroups, false)"
-                            [disabled]="areAllFilterGroupsExpanded(vm.state.featureGroups)">
+                            (click)="setAllGroupCollapse(state.featureGroups, false)"
+                            [disabled]="areAllFilterGroupsExpanded(state.featureGroups)">
                         Expand all
                     </button>
                 </div>
@@ -37,20 +37,20 @@
             <div class="select-toolbar__side select-toolbar__side--actions">
                 <button type="button"
                         class="select-toolbar__button"
-                        (click)="setViewMode(vm.state.viewMode === 'sheet' ? 'table' : 'sheet')"
-                        [attr.aria-pressed]="vm.state.viewMode === 'sheet'">
-                    {{vm.state.viewMode === 'sheet' ? 'Standard view' : 'Focused sheet view'}}
+                        (click)="setViewMode(state.viewMode === 'sheet' ? 'table' : 'sheet')"
+                        [attr.aria-pressed]="state.viewMode === 'sheet'">
+                    {{state.viewMode === 'sheet' ? 'Standard view' : 'Focused sheet view'}}
                 </button>
                 <button type="button"
                         class="select-toolbar__button"
                         (click)="resetCriteriaSelections()"
-                        [disabled]="!hasActiveFilters(vm.state.currentSearch)">
+                        [disabled]="!hasActiveFilters(state.currentSearch)">
                     Reset selections
                 </button>
             </div>
 
             <div class="select-grid" *ngIf="!filtersCollapsed">
-                <ng-container *ngFor="let group of vm.state.featureGroups">
+                <ng-container *ngFor="let group of state.featureGroups">
                     <ng-container *ngIf="groupHasSearchableChildren(group)">
                         <div class="search-group"
                              [class.search-group--excluded]="group.isExcluded"
@@ -80,13 +80,13 @@
                                                  [placeholder]="getPlaceholder(primary)"
                                                  [name]="primary.name"
                                                  [tag]="primary.id"
-                                                 [active]="getActive(vm, primary)"
+                                                 [active]="getActive(state, primary)"
                                                  (result)="criteriaChanged($event, primary)">
                                         </select2>
                                         <number-input *ngIf="primary.rangeSearch"
                                                       [comparisonComponent]="this"
                                                       [name]="primary.name"
-                                                      [active]="getActive(vm, primary)"
+                                                      [active]="getActive(state, primary)"
                                                       (result)="criteriaChanged($event, primary)"
                                                       [criteria]="primary"
                                                       [tag]="primary.id">
@@ -116,13 +116,13 @@
                                              [placeholder]="getPlaceholder(child)"
                                              [name]="child.name"
                                              [tag]="child.id"
-                                             [active]="getActive(vm, child)"
+                                             [active]="getActive(state, child)"
                                              (result)="criteriaChanged($event, child)">
                                     </select2>
                                     <number-input *ngIf="child.rangeSearch"
                                                   [comparisonComponent]="this"
                                                   [name]="child.name"
-                                                  [active]="getActive(vm, child)"
+                                                  [active]="getActive(state, child)"
                                                   (result)="criteriaChanged($event, child)"
                                                   [criteria]="child"
                                                   [tag]="child.id">
@@ -135,7 +135,7 @@
             </div>
         </div>
 
-        <ng-container *ngIf="getActiveFilters(vm.state.currentSearch) as activeFilters">
+        <ng-container *ngIf="getActiveFilters(state.currentSearch) as activeFilters">
             <div class="applied-filters" *ngIf="activeFilters.length > 0">
                 <span class="applied-filters__label">Active filters:</span>
                 <ng-container *ngFor="let filter of activeFilters">
@@ -152,28 +152,28 @@
                 <button type="button"
                         class="applied-filters__pill applied-filters__pill--clear"
                         (click)="resetCriteriaSelections()"
-                        [disabled]="!hasActiveFilters(vm.state.currentSearch)">
+                        [disabled]="!hasActiveFilters(state.currentSearch)">
                     Clear all
                 </button>
             </div>
         </ng-container>
     </div>
 
-    <div class="grid-large-content" [class.grid-large-content--expanded]="vm.state.tableExpand">
-        <ng-container [ngSwitch]="vm.state.viewMode">
+    <div class="grid-large-content" [class.grid-large-content--expanded]="state.tableExpand">
+        <ng-container [ngSwitch]="state.viewMode">
             <generictable *ngSwitchCase="'table'"
-                          [items]="vm.state.currentElements"
-                          [columns]="vm.state.currentColumnNames"
-                          [columnKeys]="vm.state.currentColumns"
-                          [types]="vm.state.columnTypes"
-                          [index]="vm.state.rowIndexes"
-                          [order]="vm.state.columnOrder"
-                          [changeNum]="configurationService.tableColumns.length + vm.state.currentColumnNames.length + (settingsOpen ? 0 : 1) + changed"
-                          [labelColorsEnabled]="vm.state.labelColorsEnabled"
-                          [showMissingIndicators]="vm.state.showMissingIndicators"
+                          [items]="state.currentElements"
+                          [columns]="state.currentColumnNames"
+                          [columnKeys]="state.currentColumns"
+                          [types]="state.columnTypes"
+                          [index]="state.rowIndexes"
+                          [order]="state.columnOrder"
+                          [changeNum]="configurationService.tableColumns.length + state.currentColumnNames.length + (settingsOpen ? 0 : 1) + changed"
+                          [labelColorsEnabled]="state.labelColorsEnabled"
+                          [showMissingIndicators]="state.showMissingIndicators"
                           [dataElements]="configurationService.dataElements"
-                          [tableExpanded]="vm.state.tableExpand"
-                          [viewMode]="vm.state.viewMode"
+                          [tableExpanded]="state.tableExpand"
+                          [viewMode]="state.viewMode"
                           (toggleExpand)="toggleTableExpand($event)"
                           (viewModeChange)="setViewMode($event)"
                           (settingsCallback)="settingsOpen = true"
@@ -182,26 +182,26 @@
                           (searchFor)="criteriaClicked($event)"
                           (xlsxDownload)="downloadXlsxFromTable($event)"></generictable>
             <focused-comparison-sheet *ngSwitchCase="'sheet'"
-                                      [criteriaNames]="vm.state.currentColumnNames"
-                                      [criteriaKeys]="vm.state.currentColumns"
-                                      [criteriaTypes]="vm.state.columnTypes"
-                                      [items]="vm.state.currentElements"
-                                      [rowIndexes]="vm.state.rowIndexes"
+                                      [criteriaNames]="state.currentColumnNames"
+                                      [criteriaKeys]="state.currentColumns"
+                                      [criteriaTypes]="state.columnTypes"
+                                      [items]="state.currentElements"
+                                      [rowIndexes]="state.rowIndexes"
                                       [elementData]="configurationService.dataElements"
-                                      [labelColorsEnabled]="vm.state.labelColorsEnabled"
-                                      [showMissingIndicators]="vm.state.showMissingIndicators"
-                                      [tableExpanded]="vm.state.tableExpand"
-                                      [viewMode]="vm.state.viewMode"
+                                      [labelColorsEnabled]="state.labelColorsEnabled"
+                                      [showMissingIndicators]="state.showMissingIndicators"
+                                      [tableExpanded]="state.tableExpand"
+                                      [viewMode]="state.viewMode"
                                       (toggleExpand)="toggleTableExpand($event)"
                                       (viewModeChange)="setViewMode($event)"></focused-comparison-sheet>
         </ng-container>
     </div>
-    <pdialog [opened]="vm.state.detailsOpen" *ngIf="vm.state.detailsOpen"
+    <pdialog [opened]="state.detailsOpen" *ngIf="state.detailsOpen"
              (openedChange)="closeDetails()">
-        <comparison-details [data]="vm.state.detailsData"
-                            [tooltipAsText]="vm.state.detailsDisplayTooltips"
-                            [labelColorsEnabled]="vm.state.labelColorsEnabled"
-                            [showMissingIndicators]="vm.state.showMissingIndicators"></comparison-details>
+        <comparison-details [data]="state.detailsData"
+                            [tooltipAsText]="state.detailsDisplayTooltips"
+                            [labelColorsEnabled]="state.labelColorsEnabled"
+                            [showMissingIndicators]="state.showMissingIndicators"></comparison-details>
     </pdialog>
 
     <pdialog *ngIf="settingsOpen"
@@ -209,18 +209,18 @@
              (openedChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'SettingsOpenChange'}); settingsOpen = !settingsOpen"
              [heading]="'Table Settings'">
         <comparison-settings
-            [columnDisplayAll]="vm.state.columnDisplayAll"
-            [columnNames]="vm.state.columnNames"
-            [columnKeys]="vm.state.columnKeys"
-            [columnsEnabled]="vm.state.columnsEnabled"
-            [featureGroups]="vm.state.featureGroups"
-            [groupColumnLookup]="vm.state.groupColumnLookup"
-            [elementDisplayAll]="vm.state.elementDisplayAll"
-            [elementNames]="vm.state.elementNames"
-            [elementsEnabled]="vm.state.elementsEnabled"
-            [detailsDisplayTooltips]="vm.state.detailsDisplayTooltips"
-            [labelColorsEnabled]="vm.state.labelColorsEnabled"
-            [showMissingIndicators]="vm.state.showMissingIndicators"
+            [columnDisplayAll]="state.columnDisplayAll"
+            [columnNames]="state.columnNames"
+            [columnKeys]="state.columnKeys"
+            [columnsEnabled]="state.columnsEnabled"
+            [featureGroups]="state.featureGroups"
+            [groupColumnLookup]="state.groupColumnLookup"
+            [elementDisplayAll]="state.elementDisplayAll"
+            [elementNames]="state.elementNames"
+            [elementsEnabled]="state.elementsEnabled"
+            [detailsDisplayTooltips]="state.detailsDisplayTooltips"
+            [labelColorsEnabled]="state.labelColorsEnabled"
+            [showMissingIndicators]="state.showMissingIndicators"
             [templateDownloadDisabled]="isComparisonTemplateDownloadDisabled()"
             (columnsDisplayAllChange)="store.dispatch({type: 'UPDATE_SETTINGS', enable: $event, operation: 'ColumnDisplayAll'})"
             (columnChange)="store.dispatch({type: 'UPDATE_SETTINGS', value: $event, operation: 'ColumnChange'})"

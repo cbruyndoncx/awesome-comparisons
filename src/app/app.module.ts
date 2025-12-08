@@ -49,7 +49,7 @@ import { CustomRouterStateSerializer } from './redux/custom-router-state-seriali
   providers: [
     {
       provide: APP_BASE_HREF,
-      useValue: window['_app_base'] || '/'
+      useValue: (window as any)['_app_base'] || '/'
     },
     {
       provide: RouterStateSerializer,

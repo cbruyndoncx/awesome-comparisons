@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 // Provider imports
-import { BrowserModule, Title } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { Title } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -19,7 +20,7 @@ import { GitHubIntentService } from '../../shared/services/github-intent.service
 
 @NgModule({
     imports: [
-        BrowserModule,
+        CommonModule,
         HttpClientModule,
         ReactiveFormsModule,
         MatDialogModule,

@@ -14,11 +14,11 @@ import { ThemeService, Theme } from '../../theme/theme.service';
     styleUrls: ['./dataset-shell.component.css']
 })
 export class DatasetShellComponent implements OnInit {
-    datasets$: Observable<DatasetManifestEntry[]>;
-    activeDataset$: Observable<DatasetManifestEntry>;
-    currentTheme$: Observable<Theme>;
-    resolvedTheme$: Observable<'light' | 'dark'>;
-    selectedDatasetIndex$: Observable<number>;
+    datasets$!: Observable<DatasetManifestEntry[]>;
+    activeDataset$!: Observable<DatasetManifestEntry>;
+    currentTheme$!: Observable<Theme>;
+    resolvedTheme$!: Observable<'light' | 'dark'>;
+    selectedDatasetIndex$!: Observable<number>;
 
     constructor(private manifestService: DatasetManifestService,
                 private themeService: ThemeService) {}

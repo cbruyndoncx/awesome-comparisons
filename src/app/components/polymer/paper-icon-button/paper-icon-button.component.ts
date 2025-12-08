@@ -7,7 +7,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PaperIconButtonComponent {
-    @Input() icon: string;
-    @Input() title: string;
+    @Input() icon: string = '';
+    @Input() title: string = '';
     @Input() showTooltip: boolean = true;
 }

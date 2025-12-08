@@ -12,7 +12,7 @@ export class TooltipComponent {
     @Input() tooltipHtml = '';
     @HostBinding('class') positionClass = 'n';
 
-    constructor(private _sanitizer: DomSanitizer) {
+    constructor(public _sanitizer: DomSanitizer) {
     }
 
     @Input() set position(p: string) {
