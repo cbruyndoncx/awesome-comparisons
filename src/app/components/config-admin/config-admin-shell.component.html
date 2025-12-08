@@ -9,17 +9,17 @@
   @if (selectedDocument$ | async; as document) {
     <div class="config-admin-shell__metadata">
       <mat-chip-set>
-        @if (document.metadata?.datasetId) {
+        @if (document.metadata.datasetId) {
           <mat-chip>
             {{ document.metadata.datasetId }}
           </mat-chip>
         }
-        @if (document.metadata?.isSharedDefault) {
+        @if (document.metadata.isSharedDefault) {
           <mat-chip color="accent">
             Shared Default
           </mat-chip>
         }
-        @if (document.metadata?.isDatasetConfig) {
+        @if (document.metadata.isDatasetConfig) {
           <mat-chip color="primary">
             Dataset Config
           </mat-chip>

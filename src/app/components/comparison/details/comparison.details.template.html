@@ -50,7 +50,7 @@
         }
       }
       <small class="details-links">
-        @if (data?.url) {
+        @if (data.url) {
           <a
             class="details-links__primary"
             [href]="data.url"
@@ -59,7 +59,7 @@
             {{data.url}}
           </a>
         }
-        @if (data?.editLink) {
+        @if (data.editLink) {
           <a
             class="details-links__edit"
             [href]="data.editLink"

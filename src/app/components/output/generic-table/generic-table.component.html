@@ -132,7 +132,7 @@
                                         [style.background]="column.type === 'LABEL' ? resolveLabelCellFill(item[column.index]) : null">
                                         <ng-container *ngIf="item[column.index]?.labelArray?.length; else missingLabelBlock">
                                             <ng-container *ngFor="let label of item[column.index]?.labelArray">
-                                                <ng-container *ngIf="label.tooltip?.text || label.tooltip?.html; else plainLabel">
+                                                <ng-container *ngIf="label.tooltip && (label.tooltip.text || label.tooltip.html); else plainLabel">
                                                     <ptooltip [tooltip]="label.tooltip.text"
                                                               [tooltipHtml]="label.tooltip.html" [position]="'n'">
                                                         <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
