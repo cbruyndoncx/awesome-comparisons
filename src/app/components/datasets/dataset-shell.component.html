@@ -4,71 +4,80 @@
 
 <div class="dataset-shell">
   <!-- Selector region -->
-  <section class="dataset-shell__selector" *ngIf="(datasets$ | async) as datasets; else datasetLoading">
-    <div class="dataset-shell__header" *ngIf="datasets.length">
-      <mat-tab-group class="dataset-tabs-group"
-                     mat-stretch-tabs
-                     [selectedIndex]="(selectedDatasetIndex$ | async) ?? 0"
-                     (selectedIndexChange)="onTabIndexChange($event, datasets)"
-                     aria-label="Dataset selection">
-        <mat-tab *ngFor="let dataset of datasets">
-          <ng-template mat-tab-label>
-            <span class="dataset-tab__label">
-              <span class="dataset-tab__accent"
-                    *ngIf="dataset.accentColor"
-                    [style.backgroundColor]="dataset.accentColor"></span>
-              {{dataset.displayLabel}}
-            </span>
-          </ng-template>
-        </mat-tab>
-      </mat-tab-group>
-      <div class="dataset-theme-toggle" role="group" aria-label="Color theme"
-           *ngIf="(currentTheme$ | async) as currentTheme">
-        <button type="button"
+  @if ((datasets$ | async); as datasets) {
+    <section class="dataset-shell__selector">
+      @if (datasets.length) {
+        <div class="dataset-shell__header">
+          <mat-tab-group class="dataset-tabs-group"
+            mat-stretch-tabs
+            [selectedIndex]="(selectedDatasetIndex$ | async) ?? 0"
+            (selectedIndexChange)="onTabIndexChange($event, datasets)"
+            aria-label="Dataset selection">
+            @for (dataset of datasets; track dataset) {
+              <mat-tab>
+                <ng-template mat-tab-label>
+                  <span class="dataset-tab__label">
+                    @if (dataset.accentColor) {
+                      <span class="dataset-tab__accent"
+                      [style.backgroundColor]="dataset.accentColor"></span>
+                    }
+                    {{dataset.displayLabel}}
+                  </span>
+                </ng-template>
+              </mat-tab>
+            }
+          </mat-tab-group>
+          @if ((currentTheme$ | async); as currentTheme) {
+            <div class="dataset-theme-toggle" role="group" aria-label="Color theme"
+              >
+              <button type="button"
                 class="dataset-theme-toggle__button"
                 [class.is-active]="currentTheme === 'light'"
                 [attr.aria-pressed]="currentTheme === 'light'"
                 title="Switch to light theme"
                 (click)="onThemeSelected('light')">
-          <span aria-hidden="true">☀️</span>
-          <span class="sr-only">Light theme</span>
-        </button>
-        <button type="button"
+                <span aria-hidden="true">☀️</span>
+                <span class="sr-only">Light theme</span>
+              </button>
+              <button type="button"
                 class="dataset-theme-toggle__button"
                 [class.is-active]="currentTheme === 'dark'"
                 [attr.aria-pressed]="currentTheme === 'dark'"
                 title="Switch to dark theme"
                 (click)="onThemeSelected('dark')">
-          <span aria-hidden="true">🌙</span>
-          <span class="sr-only">Dark theme</span>
-        </button>
-        <button type="button"
+                <span aria-hidden="true">🌙</span>
+                <span class="sr-only">Dark theme</span>
+              </button>
+              <button type="button"
                 class="dataset-theme-toggle__button"
                 [class.is-active]="currentTheme === 'system'"
                 [attr.aria-pressed]="currentTheme === 'system'"
                 title="Follow system theme"
                 (click)="onThemeSelected('system')">
-          <span aria-hidden="true">🖥️</span>
-          <span class="sr-only">System theme</span>
-        </button>
-      </div>
-    </div>
-    <p class="dataset-theme-status sr-only" aria-live="polite">
-      Theme: {{(currentTheme$ | async) || 'system'}}
-    </p>
-  </section>
-  <ng-template #datasetLoading>
+                <span aria-hidden="true">🖥️</span>
+                <span class="sr-only">System theme</span>
+              </button>
+            </div>
+          }
+        </div>
+      }
+      <p class="dataset-theme-status sr-only" aria-live="polite">
+        Theme: {{(currentTheme$ | async) || 'system'}}
+      </p>
+    </section>
+  } @else {
     <p class="dataset-empty" aria-live="polite">Loading datasets…</p>
-  </ng-template>
-  
+  }
+
   <!-- Content region -->
-  <section *ngIf="(activeDataset$ | async) as active; else errorState" class="dataset-content">
-    <comparison></comparison>
-  </section>
-  
-  <ng-template #errorState>
+  @if ((activeDataset$ | async); as active) {
+    <section class="dataset-content">
+      <comparison></comparison>
+    </section>
+  } @else {
     <div class="dataset-error" role="alert">
       No dataset available. Please check configuration/datasets.manifest.json.
     </div>
-  </ng-template>
+  }
+
 </div>

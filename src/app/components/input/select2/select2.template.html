@@ -1,11 +1,14 @@
 <div class="select2-container" role="listbox" [attr.aria-label]="placeholder || name">
-    <span class="select2-placeholder" *ngIf="placeholder && selectedIds.size === 0">{{ placeholder }}</span>
+  @if (placeholder && selectedIds.size === 0) {
+    <span class="select2-placeholder">{{ placeholder }}</span>
+  }
+  @for (option of options; track trackByOption($index, option)) {
     <button
-        type="button"
-        class="select2-option"
-        *ngFor="let option of options; trackBy: trackByOption"
-        [class.select2-option--active]="isSelected(option)"
-        (click)="toggleOption(option)">
-        {{ getOptionText(option) }}
+      type="button"
+      class="select2-option"
+      [class.select2-option--active]="isSelected(option)"
+      (click)="toggleOption(option)">
+      {{ getOptionText(option) }}
     </button>
+  }
 </div>

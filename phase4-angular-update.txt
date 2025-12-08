@@ -1,0 +1,92 @@
+Repository is not clean. Update changes will be mixed with pre-existing changes.
+The installed Angular CLI version is outdated.
+Installing a temporary Angular CLI versioned 21.0.2 to perform the update.
+Repository is not clean. Update changes will be mixed with pre-existing changes.
+Using package manager: npm
+Collecting installed dependencies...
+Found 56 dependencies.
+Fetching dependency metadata from registry...
+                  Package "@angular/forms" has a missing peer dependency of "@standard-schema/spec" @ "^1.0.0".
+    Updating package.json with dependency @angular-devkit/build-angular @ "21.0.2" (was "20.3.13")...
+    Updating package.json with dependency @angular/cli @ "21.0.2" (was "20.3.13")...
+    Updating package.json with dependency @angular/compiler-cli @ "21.0.3" (was "20.3.15")...
+    Updating package.json with dependency @angular/language-service @ "21.0.3" (was "20.3.15")...
+    Updating package.json with dependency @angular/animations @ "21.0.3" (was "20.3.15")...
+    Updating package.json with dependency @angular/common @ "21.0.3" (was "20.3.15")...
+    Updating package.json with dependency @angular/compiler @ "21.0.3" (was "20.3.15")...
+    Updating package.json with dependency @angular/core @ "21.0.3" (was "20.3.15")...
+    Updating package.json with dependency @angular/forms @ "21.0.3" (was "20.3.15")...
+    Updating package.json with dependency @angular/platform-browser @ "21.0.3" (was "20.3.15")...
+    Updating package.json with dependency @angular/platform-browser-dynamic @ "21.0.3" (was "20.3.15")...
+    Updating package.json with dependency @angular/router @ "21.0.3" (was "20.3.15")...
+UPDATE package.json (4176 bytes)
+❯ Cleaning node modules directory
+✔ Cleaning node modules directory
+❯ Installing packages
+✔ Installing packages
+** Executing migrations of package '@angular/cli' **
+
+❯ Remove any karma configuration files that only contain the default content.
+  The default configuration is automatically available without a specific project file.
+  Migration completed (No changes made).
+
+❯ Update 'moduleResolution' to 'bundler' in TypeScript configurations.
+  You can read more about this, here: https://www.typescriptlang.org/tsconfig/#moduleResolution
+  Migration completed (No changes made).
+
+❯ Updates the 'lib' property in tsconfig files to use 'es2022' or a more modern version.
+UPDATE tsconfig.json (782 bytes)
+  Migration completed (1 file modified).
+
+** Optional migrations of package '@angular/cli' **
+
+This package has 1 optional migration that can be executed.
+❯ Migrate application projects to the new build system.
+  ng update @angular/cli --name use-application-builder
+
+** Executing migrations of package '@angular/core' **
+
+❯ Adds `BootstrapContext` to `bootstrapApplication` calls in `main.server.ts` to support server rendering.
+  Migration completed (No changes made).
+
+❯ Moves imports of `ApplicationConfig` from `@angular/platform-browser` to `@angular/core`.
+  Migration completed (No changes made).
+
+❯ Migrates deprecated bootstrap options to providers.
+UPDATE src/main.ts (978 bytes)
+  Migration completed (1 file modified).
+
+❯ Converts the entire application to block control flow syntax.
+    WARNING: 1 errors occurred during your migration:
+    
+    Template "/home/cb/projects/github/ultimate/awesome-comparisons/src/app/components/output/generic-table/generic-table.component.html" encountered 1 errors during migration:
+     - template: Error: A duplicate ng-template name "#elseif1" was found. The control flow migration requires unique ng-template names within a component.
+    
+UPDATE src/app/components/datasets/dataset-shell.component.html (3331 bytes)
+UPDATE src/app/components/config-admin/config-catalog-tree.component.html (2498 bytes)
+UPDATE src/app/components/config-admin/config-admin-shell.component.html (7195 bytes)
+UPDATE src/app/components/config-admin/config-diff-viewer.component.html (5059 bytes)
+UPDATE src/app/components/config-admin/config-criteria-form.component.html (20596 bytes)
+UPDATE src/app/components/comparison/sheet/focused-comparison-sheet.component.html (5878 bytes)
+UPDATE src/app/components/comparison/settings/comparison.settings.template.html (4163 bytes)
+UPDATE src/app/components/polymer/paper-checkbox/paper-checkbox.component.html (161 bytes)
+UPDATE src/app/components/polymer/paper-dialog/paper-dialog.component.html (286 bytes)
+UPDATE src/app/components/polymer/paper-icon-button/paper-icon-button.component.html (174 bytes)
+UPDATE src/app/components/polymer/tooltip/tooltip.component.html (277 bytes)
+UPDATE src/app/components/input/select2/select2.template.html (484 bytes)
+UPDATE src/app/components/comparison/comparison.template.html (14395 bytes)
+UPDATE src/app/components/comparison/add-entry/add-entry-modal.component.html (14940 bytes)
+UPDATE src/app/components/polymer/paper-card/paper-card.component.html (430 bytes)
+UPDATE src/app/components/comparison/details/comparison.details.template.html (8874 bytes)
+  Migration completed (16 files modified).
+
+❯ Ensures that the Router.lastSuccessfulNavigation signal is now invoked.
+  Migration completed (No changes made).
+
+** Optional migrations of package '@angular/core' **
+
+This package has 1 optional migration that can be executed.
+❯ Replaces usages of the deprecated Router.getCurrentNavigation method with the Router.currentNavigation signal.
+  ng update @angular/core --name router-current-navigation
+
+Angular update exit code: 0

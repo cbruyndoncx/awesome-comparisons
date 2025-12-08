@@ -35,7 +35,7 @@ export class PaperCheckboxComponent {
 
     @HostListener('keydown.enter', ['$event'])
     @HostListener('keydown.space', ['$event'])
-    public handleKey(event: KeyboardEvent): void {
+    public handleKey(event: Event): void {
         event.preventDefault();
         this.toggle();
     }

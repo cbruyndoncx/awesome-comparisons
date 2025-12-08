@@ -1,0 +1,19 @@
+
+added 4 packages, and audited 1500 packages in 2s
+
+214 packages are looking for funding
+  run `npm fund` for details
+
+12 vulnerabilities (6 moderate, 6 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+npm install exit code: 0

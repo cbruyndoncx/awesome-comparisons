@@ -1,0 +1,34 @@
+-rw-r--r-- 1 cb cb  978 Dec  8 15:41 src/main.ts
+
+src/app/redux/:
+total 40
+drwxr-xr-x 4 cb cb 4096 Dec  8 09:46 .
+drwxr-xr-x 7 cb cb 4096 Nov 10 19:22 ..
+-rw-r--r-- 1 cb cb  853 Dec  7 23:44 custom-router-state-serializer.ts
+drwxr-xr-x 2 cb cb 4096 Dec  8 09:50 reducers
+-rw-r--r-- 1 cb cb 2017 Dec  8 00:11 uc.action.ts
+-rw-r--r-- 1 cb cb 4808 Dec  8 09:37 uc.app-state.ts
+-rw-r--r-- 1 cb cb 6954 Dec  8 09:53 uc.reducers.ts
+drwxr-xr-x 2 cb cb 4096 Dec  8 09:49 utils
+11:import { StoreModule } from '@ngrx/store';
+36:    StoreModule.forRoot(
+9:import { RouterModule } from '@angular/router';
+28:    RouterModule.forRoot(
+src/app/redux/reducers/:
+total 32
+drwxr-xr-x 2 cb cb 4096 Dec  8 09:50 .
+drwxr-xr-x 4 cb cb 4096 Dec  8 09:46 ..
+-rw-r--r-- 1 cb cb  954 Dec  8 09:50 data.reducer.ts
+-rw-r--r-- 1 cb cb 1033 Dec  8 09:50 details.reducer.ts
+-rw-r--r-- 1 cb cb 6274 Dec  8 09:57 route.reducer.ts
+-rw-r--r-- 1 cb cb 2459 Dec  8 09:50 search.reducer.ts
+-rw-r--r-- 1 cb cb 2246 Dec  8 09:50 settings.reducer.ts
+
+src/app/redux/utils/:
+total 40
+drwxr-xr-x 2 cb cb  4096 Dec  8 09:49 .
+drwxr-xr-x 4 cb cb  4096 Dec  8 09:46 ..
+-rw-r--r-- 1 cb cb 11165 Dec  8 09:57 filtering.util.ts
+-rw-r--r-- 1 cb cb  5571 Dec  8 09:57 initialization.util.ts
+-rw-r--r-- 1 cb cb  5148 Dec  8 09:57 sorting.util.ts
+-rw-r--r-- 1 cb cb  3726 Dec  8 09:57 state-url.util.ts
