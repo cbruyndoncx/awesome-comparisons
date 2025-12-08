@@ -22,9 +22,10 @@ interface CriteriaFormControl {
 }
 
 @Component({
-  selector: 'uc-add-entry-modal',
-  templateUrl: './add-entry-modal.component.html',
-  styleUrls: ['./add-entry-modal.component.scss']
+    selector: 'uc-add-entry-modal',
+    templateUrl: './add-entry-modal.component.html',
+    styleUrls: ['./add-entry-modal.component.scss'],
+    standalone: false
 })
 export class AddEntryModalComponent implements OnInit, OnDestroy {
   entryForm: FormGroup;
@@ -416,7 +417,8 @@ export class AddEntryModalComponent implements OnInit, OnDestroy {
       branch: 'main'
     };
 
-    const filepath = `${this.data.dataset.sources.dataDir}/${this.filename}`;
+    const dataDir = this.data.dataset.sources?.dataDir || '';
+    const filepath = `${dataDir}/${this.filename}`;
     const message = `Add ${name} to ${this.data.dataset.displayLabel} comparisons`;
     const description = `This PR adds a new entry for ${name} to the ${this.data.dataset.displayLabel} dataset.`;
 

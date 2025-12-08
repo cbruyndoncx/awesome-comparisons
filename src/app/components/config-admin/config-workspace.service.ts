@@ -1143,7 +1143,7 @@ export class ConfigWorkspaceService {
       return normalized;
     } catch (error) {
       console.error('Failed to generate preview YAML:', error);
-      return `# Error generating YAML preview: ${error.message}`;
+      return `# Error generating YAML preview: ${(error as Error).message}`;
     }
   }
 
@@ -1152,10 +1152,10 @@ export class ConfigWorkspaceService {
     
     try {
       parseDocument(yaml);
-    } catch (error) {
+    } catch (error: any) {
       errors.push({
         field: 'yaml',
-        message: error.message,
+        message: error?.message || String(error),
         value: yaml
       });
     }
@@ -1262,7 +1262,7 @@ export class ConfigWorkspaceService {
           result = {
             success: false,
             message: 'Failed to save configuration. Please try again.',
-            errors: [{ field: 'network', message: error.message }]
+            errors: [{ field: 'network', message: (error as Error).message }]
           };
         }
         

@@ -1,0 +1,81 @@
+
+> awesome-comparisons-v3@3.0.0-251029 prebuild
+> rm -f tmp/*/comparison-auto-config.yml
+
+
+> awesome-comparisons-v3@3.0.0-251029 build
+> node ./scripts/run-build.js
+
+
+> awesome-comparisons-v3@3.0.0-251029 data:prepare
+> npm run md2json:compile && node ./node_modules/gulp/bin/gulp.js default --gulpfile=./lib/gulp/gulpfile.js
+
+
+> awesome-comparisons-v3@3.0.0-251029 md2json:compile
+> tsc -p ./lib/md2json/tsconfig.json
+
+[22:07:13] Working directory changed to ~/projects/github/ultimate/awesome-comparisons/lib/gulp
+Installation directory resolved to: /home/cb/projects/github/ultimate/awesome-comparisons/
+Building datasets: code-editor, all, terminal, other, aie-model, code-agent, product-prototyping
+[22:07:13] Using gulpfile ~/projects/github/ultimate/awesome-comparisons/lib/gulp/gulpfile.js
+[22:07:13] Starting 'default'...
+[22:07:13] Starting 'copyDist'...
+[22:07:13] Finished 'copyDist' after 766 μs
+[22:07:13] Starting 'markdown'...
+node "/home/cb/projects/github/ultimate/awesome-comparisons/lib/md2json/dist/cli.js" --input "/home/cb/projects/github/ultimate/awesome-comparisons/datasets/code-editor/data" --output "/home/cb/projects/github/ultimate/awesome-comparisons/dist/data.json" --tmp "/home/cb/projects/github/ultimate/awesome-comparisons/tmp/code-editor/data"
+
+
+node "/home/cb/projects/github/ultimate/awesome-comparisons/lib/md2json/dist/cli.js" --input "/home/cb/projects/github/ultimate/awesome-comparisons/tmp/all/merged-data" --output "/home/cb/projects/github/ultimate/awesome-comparisons/dist/all/data.json" --tmp "/home/cb/projects/github/ultimate/awesome-comparisons/tmp/all/data"
+
+
+node "/home/cb/projects/github/ultimate/awesome-comparisons/lib/md2json/dist/cli.js" --input "/home/cb/projects/github/ultimate/awesome-comparisons/datasets/terminal/data" --output "/home/cb/projects/github/ultimate/awesome-comparisons/dist/terminal/data.json" --tmp "/home/cb/projects/github/ultimate/awesome-comparisons/tmp/terminal/data"
+
+
+node "/home/cb/projects/github/ultimate/awesome-comparisons/lib/md2json/dist/cli.js" --input "/home/cb/projects/github/ultimate/awesome-comparisons/datasets/other/data" --output "/home/cb/projects/github/ultimate/awesome-comparisons/dist/other/data.json" --tmp "/home/cb/projects/github/ultimate/awesome-comparisons/tmp/other/data"
+
+
+node "/home/cb/projects/github/ultimate/awesome-comparisons/lib/md2json/dist/cli.js" --input "/home/cb/projects/github/ultimate/awesome-comparisons/datasets/aie-model/data" --output "/home/cb/projects/github/ultimate/awesome-comparisons/dist/aie-model/data.json" --tmp "/home/cb/projects/github/ultimate/awesome-comparisons/tmp/aie-model/data"
+
+
+node "/home/cb/projects/github/ultimate/awesome-comparisons/lib/md2json/dist/cli.js" --input "/home/cb/projects/github/ultimate/awesome-comparisons/datasets/code-agent/data" --output "/home/cb/projects/github/ultimate/awesome-comparisons/dist/code-agent/data.json" --tmp "/home/cb/projects/github/ultimate/awesome-comparisons/tmp/code-agent/data"
+
+
+node "/home/cb/projects/github/ultimate/awesome-comparisons/lib/md2json/dist/cli.js" --input "/home/cb/projects/github/ultimate/awesome-comparisons/datasets/product-prototyping/data" --output "/home/cb/projects/github/ultimate/awesome-comparisons/dist/product-prototyping/data.json" --tmp "/home/cb/projects/github/ultimate/awesome-comparisons/tmp/product-prototyping/data"
+
+
+[22:07:14] Finished 'markdown' after 367 ms
+[22:07:14] Starting 'changeCriteria'...
+[22:07:14] Finished 'changeCriteria' after 137 ms
+[22:07:14] Starting 'development-column'...
+[22:07:14] Finished 'development-column' after 58 ms
+[22:07:14] Starting 'assets'...
+[22:07:14] Finished 'assets' after 1.93 ms
+[22:07:14] Starting 'config'...
+[22:07:14] Finished 'config' after 29 ms
+[22:07:14] Finished 'default' after 597 ms
+- Generating browser application bundles (phase: setup)...
+✔ Browser application bundle generation complete.
+✔ Browser application bundle generation complete.
+- Copying assets...
+✔ Copying assets complete.
+- Generating index html...
+✔ Index html generation complete.
+
+Initial chunk files | Names         |  Raw size | Estimated transfer size
+main.js             | main          |   2.66 MB |               570.43 kB
+styles.css          | styles        | 175.88 kB |                11.31 kB
+polyfills.js        | polyfills     |  34.90 kB |                11.34 kB
+runtime.js          | runtime       |   2.76 kB |                 1.26 kB
+
+                    | Initial total |   2.87 MB |               594.34 kB
+
+Lazy chunk files    | Names         |  Raw size | Estimated transfer size
+288.js              | xlsx          | 423.04 kB |               118.67 kB
+
+Build at: 2025-12-08T21:07:38.084Z - Hash: c43f93f6ed87dd23 - Time: 22195ms
+
+Warning: /home/cb/projects/github/ultimate/awesome-comparisons/node_modules/diff2html/lib-esm/hoganjs-utils.js depends on 'hogan.js'. CommonJS or AMD dependencies can cause optimization bailouts.
+For more info see: https://angular.dev/tools/cli/build#configuring-commonjs-dependencies
+
+
+Build exit code: 0

@@ -8,16 +8,17 @@ import { Criteria } from '../../../../../lib/gulp/model/model.module';
 @Component({
     templateUrl: './number-input.template.html',
     selector: 'number-input',
-    styleUrls: ['./number-input.component.css']
+    styleUrls: ['./number-input.component.css'],
+    standalone: false
 })
 export class NumberInputComponent implements InputInterface {
     public static components: Array<NumberInputComponent> = [];
-    @Input() comparisonComponent: ComparisonComponent;
-    @Input() criteria: Criteria;
-    @Input() tag: string;
-    @Input() name: string;
+    @Input() comparisonComponent!: ComparisonComponent;
+    @Input() criteria!: Criteria;
+    @Input() tag: string = '';
+    @Input() name: string = '';
     @Input() active: Array<{ id: string, text: string }> = [];
-    @ViewChild('content') content: ElementRef;
+    @ViewChild('content') content!: ElementRef;
     @Output() result: EventEmitter<Array<string>> = new EventEmitter<Array<string>>();
 
     public constructor() {

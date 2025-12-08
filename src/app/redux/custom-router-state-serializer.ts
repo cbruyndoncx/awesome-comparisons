@@ -4,7 +4,7 @@ import { Params, RouterStateSnapshot } from '@angular/router';
 export interface RouterStateUrl {
     url: string;
     queryParams: Params;
-    sectionLink: string
+    sectionLink: string | null;
 }
 
 export class CustomRouterStateSerializer implements RouterStateSerializer<RouterStateUrl> {

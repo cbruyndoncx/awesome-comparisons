@@ -18,9 +18,10 @@ import { ConfigCriteriaFormComponent } from './config-criteria-form.component';
 import { DiffOptions } from './config-diff-viewer.component';
 
 @Component({
-  selector: 'uc-config-admin-shell',
-  templateUrl: './config-admin-shell.component.html',
-  styleUrls: ['./config-admin-shell.component.css']
+    selector: 'uc-config-admin-shell',
+    templateUrl: './config-admin-shell.component.html',
+    styleUrls: ['./config-admin-shell.component.css'],
+    standalone: false
 })
 export class ConfigAdminShellComponent implements OnInit, OnDestroy {
   private readonly destroy$ = new Subject<void>();

@@ -15,7 +15,7 @@ import { GroupedCriteriaStructure } from '../models/feature-grouping.model';
 
 export class UCAction implements Action {
     type!: string;
-    value: number;
+    value?: number;
 }
 
 export class UCRouterAction extends UCAction {
@@ -73,7 +73,7 @@ export class UCNewStateAction extends UCAction {
 export class UCDetailsAction extends UCAction {
     override type = TOGGLE_DETAILS_ACTION;
 
-    constructor(public data: DataElement) {
+    constructor(public data: DataElement | null) {
         super();
     }
 }

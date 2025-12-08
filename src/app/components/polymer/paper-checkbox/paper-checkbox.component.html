@@ -1,4 +1,6 @@
 <div class="pcheckbox" [class.pcheckbox--checked]="checked">
-    <div class="pcheckmark" *ngIf="checked"></div>
+  @if (checked) {
+    <div class="pcheckmark"></div>
+  }
 </div>
 <div class="plabel">{{label}}</div>

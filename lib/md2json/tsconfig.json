@@ -10,7 +10,8 @@
     "sourceMap": false,
     "types": [
       "node"
-    ]
+    ],
+    "strict": false
   },
   "include": [
     "./*.ts"

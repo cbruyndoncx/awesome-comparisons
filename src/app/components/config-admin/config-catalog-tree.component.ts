@@ -14,7 +14,7 @@ import {
 import { ConfigCatalogItem } from '../../models/config-document.model';
 
 type CatalogViewEntry =
-  | { isHeader: true; label: string; datasetId?: string }
+  | { isHeader: true; label: string; datasetId?: string | null }
   | { isHeader: false; item: ConfigCatalogItem; fileName: string };
 
 function isItemEntry(entry: CatalogViewEntry): entry is { isHeader: false; item: ConfigCatalogItem; fileName: string } {
@@ -22,9 +22,10 @@ function isItemEntry(entry: CatalogViewEntry): entry is { isHeader: false; item:
 }
 
 @Component({
-  selector: 'uc-config-catalog-tree',
-  templateUrl: './config-catalog-tree.component.html',
-  styleUrls: ['./config-catalog-tree.component.css']
+    selector: 'uc-config-catalog-tree',
+    templateUrl: './config-catalog-tree.component.html',
+    styleUrls: ['./config-catalog-tree.component.css'],
+    standalone: false
 })
 export class ConfigCatalogTreeComponent implements OnInit {
   private _catalog: ConfigCatalogItem[] = [];

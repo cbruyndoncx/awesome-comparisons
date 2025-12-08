@@ -23,9 +23,10 @@ export interface DiffStats {
 }
 
 @Component({
-  selector: 'uc-config-diff-viewer',
-  templateUrl: './config-diff-viewer.component.html',
-  styleUrls: ['./config-diff-viewer.component.css']
+    selector: 'uc-config-diff-viewer',
+    templateUrl: './config-diff-viewer.component.html',
+    styleUrls: ['./config-diff-viewer.component.css'],
+    standalone: false
 })
 export class ConfigDiffViewerComponent implements OnInit, OnChanges {
   // Input properties
@@ -34,7 +35,7 @@ export class ConfigDiffViewerComponent implements OnInit, OnChanges {
   @Input() viewMode: 'unified' | 'split' = 'unified';
   @Input() theme: 'light' | 'dark' = 'light';
   @Input() isBusy: boolean = false;
-  @Input() lastSavedTimestamp?: Date;
+  @Input() lastSavedTimestamp?: Date | string | number;
   
   // Output events
   @Output() viewModeChange = new EventEmitter<'unified' | 'split'>();
@@ -71,7 +72,7 @@ export class ConfigDiffViewerComponent implements OnInit, OnChanges {
       if (this.diffComputationTimeout) {
         clearTimeout(this.diffComputationTimeout);
       }
-      this.diffComputationTimeout = setTimeout(() => {
+      this.diffComputationTimeout = window.setTimeout(() => {
         this.renderDiff();
       }, 300);
     }
@@ -269,13 +270,14 @@ export class ConfigDiffViewerComponent implements OnInit, OnChanges {
   }
 
   // Utility methods
-  formatTimestamp(timestamp: Date): string {
+  formatTimestamp(timestamp: Date | string | number): string {
     if (!timestamp) {
       return '';
     }
     
+    const dateObj = timestamp instanceof Date ? timestamp : new Date(timestamp);
     const now = new Date();
-    const diff = now.getTime() - timestamp.getTime();
+    const diff = now.getTime() - dateObj.getTime();
     const minutes = Math.floor(diff / 60000);
     const hours = Math.floor(minutes / 60);
     const days = Math.floor(hours / 24);

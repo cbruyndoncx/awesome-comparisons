@@ -2,8 +2,8 @@
 <!-- @generated with Tessl v0.28.0 from ../../../../specs/app/components/config-admin/config-diff-viewer-component.html.spec.md -->
 <!-- (spec:7cb26172) (code:650a0182) -->
 
-<section class="config-diff" role="region" aria-label="YAML diff preview" 
-         [class.config-diff--dark]="theme === 'dark'">
+<section class="config-diff" role="region" aria-label="YAML diff preview"
+  [class.config-diff--dark]="theme === 'dark'">
   <!-- Toolbar with controls -->
   <div class="config-diff__toolbar">
     <!-- View mode toggles -->
@@ -21,14 +21,14 @@
     <!-- Options menu -->
     <div class="config-diff__options">
       <mat-slide-toggle [checked]="diffOptions.showWhitespace"
-                        (change)="toggleWhitespace()"
-                        matTooltip="Show whitespace changes">
+        (change)="toggleWhitespace()"
+        matTooltip="Show whitespace changes">
         Whitespace
       </mat-slide-toggle>
-      
+
       <mat-slide-toggle [checked]="diffOptions.ignoreCase"
-                        (change)="toggleIgnoreCase()"
-                        matTooltip="Ignore case differences">
+        (change)="toggleIgnoreCase()"
+        matTooltip="Ignore case differences">
         Ignore Case
       </mat-slide-toggle>
     </div>
@@ -38,33 +38,35 @@
       <button mat-icon-button matTooltip="Expand all sections" (click)="expandAllSections()">
         <mat-icon>expand_more</mat-icon>
       </button>
-      
+
       <button mat-icon-button matTooltip="Collapse all sections" (click)="collapseAllSections()">
         <mat-icon>expand_less</mat-icon>
       </button>
-      
-      <button mat-icon-button matTooltip="Copy diff to clipboard" 
-              [disabled]="!modifiedYaml" (click)="copyToClipboard()">
+
+      <button mat-icon-button matTooltip="Copy diff to clipboard"
+        [disabled]="!modifiedYaml" (click)="copyToClipboard()">
         <mat-icon>content_copy</mat-icon>
       </button>
-      
-      <button mat-icon-button matTooltip="Download diff as file" 
-              [disabled]="!modifiedYaml" (click)="downloadYaml()">
+
+      <button mat-icon-button matTooltip="Download diff as file"
+        [disabled]="!modifiedYaml" (click)="downloadYaml()">
         <mat-icon>download</mat-icon>
       </button>
-      
+
       <button mat-icon-button matTooltip="Previous change" (click)="focusPreviousHunk()">
         <mat-icon>keyboard_arrow_up</mat-icon>
       </button>
-      
+
       <button mat-icon-button matTooltip="Next change" (click)="focusNextHunk()">
         <mat-icon>keyboard_arrow_down</mat-icon>
       </button>
-      
-      <button *ngIf="isError" mat-icon-button matTooltip="Retry diff generation" 
-              (click)="retryDiffGeneration()">
-        <mat-icon>refresh</mat-icon>
-      </button>
+
+      @if (isError) {
+        <button mat-icon-button matTooltip="Retry diff generation"
+          (click)="retryDiffGeneration()">
+          <mat-icon>refresh</mat-icon>
+        </button>
+      }
     </div>
 
     <!-- Metadata chips -->
@@ -74,66 +76,71 @@
         <mat-chip>{{ diffStats.deletions }} deletions</mat-chip>
         <mat-chip>{{ diffStats.lineCount }} lines</mat-chip>
       </mat-chip-listbox>
-      
-      <span class="config-diff__timestamp" *ngIf="lastSavedTimestamp">
-        Last saved: {{ lastSavedTimestamp | date:'medium' }}
-      </span>
+
+      @if (lastSavedTimestamp) {
+        <span class="config-diff__timestamp">
+          Last saved: {{ lastSavedTimestamp | date:'medium' }}
+        </span>
+      }
     </div>
   </div>
-  
+
   <!-- Main content area -->
   <div class="config-diff__content">
     <!-- Error state with retry option -->
-    <div *ngIf="isError" class="config-diff__error">
-      <mat-card class="error-card">
-        <mat-card-header>
-          <mat-card-title>
-            <mat-icon>error</mat-icon>
-            Error generating diff
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p>{{ errorMessage || 'An error occurred while generating the diff.' }}</p>
-          
-          <!-- Fallback textarea -->
-          <div class="config-diff__fallback">
-            <label for="fallback-yaml">Current YAML content:</label>
-            <textarea id="fallback-yaml" 
-                      class="config-diff__fallback-textarea"
-                      readonly
-                      [value]="modifiedYaml"
-                      rows="20"></textarea>
-          </div>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-raised-button color="primary" (click)="retryDiffGeneration()">
-            <mat-icon>refresh</mat-icon>
-            Retry
-          </button>
-        </mat-card-actions>
-      </mat-card>
-    </div>
-    
+    @if (isError) {
+      <div class="config-diff__error">
+        <mat-card class="error-card">
+          <mat-card-header>
+            <mat-card-title>
+              <mat-icon>error</mat-icon>
+              Error generating diff
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{ errorMessage || 'An error occurred while generating the diff.' }}</p>
+            <!-- Fallback textarea -->
+            <div class="config-diff__fallback">
+              <label for="fallback-yaml">Current YAML content:</label>
+              <textarea id="fallback-yaml"
+                class="config-diff__fallback-textarea"
+                readonly
+                [value]="modifiedYaml"
+              rows="20"></textarea>
+            </div>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="retryDiffGeneration()">
+              <mat-icon>refresh</mat-icon>
+              Retry
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    }
+
     <!-- Normal diff display -->
-    <div *ngIf="!isError" class="config-diff__viewport" role="document">
-      <ng-container *ngIf="diffHtml; else emptyDiff">
-        <div class="config-diff__diff-content" [innerHTML]="diffHtml"></div>
-      </ng-container>
-      
-      <ng-template #emptyDiff>
-        <div class="config-diff__empty" role="status" aria-live="polite">
-          <mat-icon>check_circle</mat-icon>
-          <p>No differences found between configurations.</p>
-        </div>
-      </ng-template>
-    </div>
+    @if (!isError) {
+      <div class="config-diff__viewport" role="document">
+        @if (diffHtml) {
+          <div class="config-diff__diff-content" [innerHTML]="diffHtml"></div>
+        } @else {
+          <div class="config-diff__empty" role="status" aria-live="polite">
+            <mat-icon>check_circle</mat-icon>
+            <p>No differences found between configurations.</p>
+          </div>
+        }
+      </div>
+    }
   </div>
-  
+
   <!-- Loading overlay -->
-  <div *ngIf="isBusy" class="config-diff__loading">
-    <div class="config-diff__loading-overlay">
-      <mat-progress-spinner mode="indeterminate" diameter="48"></mat-progress-spinner>
-      <p>Generating diff...</p>
+  @if (isBusy) {
+    <div class="config-diff__loading">
+      <div class="config-diff__loading-overlay">
+        <mat-progress-spinner mode="indeterminate" diameter="48"></mat-progress-spinner>
+        <p>Generating diff...</p>
+      </div>
     </div>
-  </div>
+  }
 </section>

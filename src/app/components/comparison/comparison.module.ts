@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 // Provider imports
-import { BrowserModule, Title } from '@angular/platform-browser';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { Title } from '@angular/platform-browser';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ClipboardModule } from '@angular/cdk/clipboard';
@@ -17,19 +18,7 @@ import { FocusedComparisonSheetComponent } from './sheet/focused-comparison-shee
 import { AddEntryModalComponent } from './add-entry/add-entry-modal.component';
 import { GitHubIntentService } from '../../shared/services/github-intent.service';
 
-@NgModule({
-    imports: [
-        BrowserModule,
-        HttpClientModule,
-        ReactiveFormsModule,
-        MatDialogModule,
-        ClipboardModule,
-        InputModule,
-        OutputModule,
-        PipesModule,
-        PolymerModule
-    ],
-    exports: [
+@NgModule({ exports: [
         ComparisonComponent
     ],
     declarations: [
@@ -38,13 +27,19 @@ import { GitHubIntentService } from '../../shared/services/github-intent.service
         ComparisonSettingsComponent,
         FocusedComparisonSheetComponent,
         AddEntryModalComponent
-    ],
-    providers: [
+    ], imports: [CommonModule,
+        ReactiveFormsModule,
+        MatDialogModule,
+        ClipboardModule,
+        InputModule,
+        OutputModule,
+        PipesModule,
+        PolymerModule], providers: [
         ConfigurationService,
         GitHubIntentService,
         Title,
-        HttpClient
-    ]
-})
+        HttpClient,
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class ComparisonModule {
 }

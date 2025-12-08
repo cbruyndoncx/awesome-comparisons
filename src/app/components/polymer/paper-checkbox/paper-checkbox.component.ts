@@ -12,11 +12,13 @@ import {
     selector: 'pcheckbox',
     templateUrl: './paper-checkbox.component.html',
     styleUrls: ['./paper-checkbox.component.css'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class PaperCheckboxComponent {
-    @Input() label: string;
+    @Input() label: string = '';
     @Input() checked = false;
+    @Input() disabled = false;
     @Output() checkedChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
     @HostBinding('attr.role') role = 'checkbox';
@@ -33,7 +35,7 @@ export class PaperCheckboxComponent {
 
     @HostListener('keydown.enter', ['$event'])
     @HostListener('keydown.space', ['$event'])
-    public handleKey(event: KeyboardEvent): void {
+    public handleKey(event: Event): void {
         event.preventDefault();
         this.toggle();
     }

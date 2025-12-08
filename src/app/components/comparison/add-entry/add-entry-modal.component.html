@@ -23,7 +23,7 @@
                 formControlName="_name"
                 placeholder="e.g., Cursor IDE"
                 class="form-control"
-              />
+                />
             </div>
 
             <div class="form-group">
@@ -34,7 +34,7 @@
                 formControlName="_url"
                 placeholder="https://example.com"
                 class="form-control"
-              />
+                />
             </div>
 
             <div class="form-group">
@@ -50,204 +50,246 @@
           </div>
 
           <!-- Feature Groups -->
-          <div *ngFor="let group of data.featureGroups" class="section feature-group">
-            <h3 class="section-title">{{ group.displayName || group.key }}</h3>
-
-            <div *ngFor="let criteriaControl of groupedCriteria.get(group.displayName || group.key)" class="criteria-item">
-              <ng-container [ngSwitch]="criteriaControl.criteria.type">
-
-                <!-- LABEL Type -->
-                <div *ngSwitchCase="CriteriaTypes.LABEL" class="criteria-label">
-                  <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
-                  <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
-                    {{ criteriaControl.criteria.description }}
-                  </p>
-                  <div class="label-options">
-                    <button
-                      *ngFor="let labelValue of getLabelValues(criteriaControl.criteria)"
-                      type="button"
-                      class="label-chip"
-                      [class.selected]="isLabelSelected(criteriaControl.criteria.id, labelValue)"
-                      (click)="toggleLabel(criteriaControl.criteria.id, labelValue)"
-                    >
-                      {{ labelValue }}
-                    </button>
-                  </div>
+          @for (group of data.featureGroups; track group) {
+            <div class="section feature-group">
+              <h3 class="section-title">{{ group.displayName || group.key }}</h3>
+              @for (criteriaControl of groupedCriteria.get(group.displayName || group.key); track criteriaControl) {
+                <div class="criteria-item">
+                  @switch (criteriaControl.criteria.type) {
+                    <!-- LABEL Type -->
+                    @case (CriteriaTypes.LABEL) {
+                      <div class="criteria-label">
+                        <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+                        @if (criteriaControl.criteria.description) {
+                          <p class="criteria-description">
+                            {{ criteriaControl.criteria.description }}
+                          </p>
+                        }
+                        <div class="label-options">
+                          @for (labelValue of getLabelValues(criteriaControl.criteria); track labelValue) {
+                            <button
+                              type="button"
+                              class="label-chip"
+                              [class.selected]="isLabelSelected(criteriaControl.criteria.id, labelValue)"
+                              (click)="toggleLabel(criteriaControl.criteria.id, labelValue)"
+                              >
+                              {{ labelValue }}
+                            </button>
+                          }
+                        </div>
+                      </div>
+                    }
+                    <!-- TEXT Type -->
+                    @case (CriteriaTypes.TEXT) {
+                      <div class="criteria-text">
+                        <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+                        @if (criteriaControl.criteria.description) {
+                          <p class="criteria-description">
+                            {{ criteriaControl.criteria.description }}
+                          </p>
+                        }
+                        <input
+                          type="text"
+                          [formControlName]="getFormControlName(criteriaControl.criteria.id)"
+                          [placeholder]="criteriaControl.criteria.placeholder || 'Enter value...'"
+                          class="form-control"
+                          />
+                      </div>
+                    }
+                    <!-- MARKDOWN Type -->
+                    @case (CriteriaTypes.MARKDOWN) {
+                      <div class="criteria-markdown">
+                        <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+                        @if (criteriaControl.criteria.description) {
+                          <p class="criteria-description">
+                            {{ criteriaControl.criteria.description }}
+                          </p>
+                        }
+                        <textarea
+                          [formControlName]="getFormControlName(criteriaControl.criteria.id)"
+                          [placeholder]="criteriaControl.criteria.placeholder || 'Enter markdown content...'"
+                          class="form-control"
+                          rows="4"
+                        ></textarea>
+                      </div>
+                    }
+                    <!-- RATING Type -->
+                    @case (CriteriaTypes.RATING) {
+                      <div class="criteria-rating">
+                        <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+                        @if (criteriaControl.criteria.description) {
+                          <p class="criteria-description">
+                            {{ criteriaControl.criteria.description }}
+                          </p>
+                        }
+                        <input
+                          type="text"
+                          [formControlName]="getFormControlName(criteriaControl.criteria.id)"
+                          placeholder="e.g., [4] Excellent features"
+                          class="form-control"
+                          />
+                      </div>
+                    }
+                    <!-- REPOSITORY Type -->
+                    @case (CriteriaTypes.REPOSITORY) {
+                      <div class="criteria-repository">
+                        <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+                        @if (criteriaControl.criteria.description) {
+                          <p class="criteria-description">
+                            {{ criteriaControl.criteria.description }}
+                          </p>
+                        }
+                        <input
+                          type="url"
+                          [formControlName]="getFormControlName(criteriaControl.criteria.id)"
+                          placeholder="https://github.com/..."
+                          class="form-control"
+                          />
+                      </div>
+                    }
+                    <!-- Default/Fallback -->
+                    @default {
+                      <div class="criteria-default">
+                        <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+                        @if (criteriaControl.criteria.description) {
+                          <p class="criteria-description">
+                            {{ criteriaControl.criteria.description }}
+                          </p>
+                        }
+                        <input
+                          type="text"
+                          [formControlName]="getFormControlName(criteriaControl.criteria.id)"
+                          [placeholder]="criteriaControl.criteria.placeholder || 'Enter value...'"
+                          class="form-control"
+                          />
+                      </div>
+                    }
+                  }
                 </div>
-
-                <!-- TEXT Type -->
-                <div *ngSwitchCase="CriteriaTypes.TEXT" class="criteria-text">
-                  <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
-                  <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
-                    {{ criteriaControl.criteria.description }}
-                  </p>
-                  <input
-                    type="text"
-                    [formControlName]="getFormControlName(criteriaControl.criteria.id)"
-                    [placeholder]="criteriaControl.criteria.placeholder || 'Enter value...'"
-                    class="form-control"
-                  />
-                </div>
-
-                <!-- MARKDOWN Type -->
-                <div *ngSwitchCase="CriteriaTypes.MARKDOWN" class="criteria-markdown">
-                  <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
-                  <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
-                    {{ criteriaControl.criteria.description }}
-                  </p>
-                  <textarea
-                    [formControlName]="getFormControlName(criteriaControl.criteria.id)"
-                    [placeholder]="criteriaControl.criteria.placeholder || 'Enter markdown content...'"
-                    class="form-control"
-                    rows="4"
-                  ></textarea>
-                </div>
-
-                <!-- RATING Type -->
-                <div *ngSwitchCase="CriteriaTypes.RATING" class="criteria-rating">
-                  <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
-                  <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
-                    {{ criteriaControl.criteria.description }}
-                  </p>
-                  <input
-                    type="text"
-                    [formControlName]="getFormControlName(criteriaControl.criteria.id)"
-                    placeholder="e.g., [4] Excellent features"
-                    class="form-control"
-                  />
-                </div>
-
-                <!-- REPOSITORY Type -->
-                <div *ngSwitchCase="CriteriaTypes.REPOSITORY" class="criteria-repository">
-                  <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
-                  <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
-                    {{ criteriaControl.criteria.description }}
-                  </p>
-                  <input
-                    type="url"
-                    [formControlName]="getFormControlName(criteriaControl.criteria.id)"
-                    placeholder="https://github.com/..."
-                    class="form-control"
-                  />
-                </div>
-
-                <!-- Default/Fallback -->
-                <div *ngSwitchDefault class="criteria-default">
-                  <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
-                  <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
-                    {{ criteriaControl.criteria.description }}
-                  </p>
-                  <input
-                    type="text"
-                    [formControlName]="getFormControlName(criteriaControl.criteria.id)"
-                    [placeholder]="criteriaControl.criteria.placeholder || 'Enter value...'"
-                    class="form-control"
-                  />
-                </div>
-
-              </ng-container>
+              }
             </div>
-          </div>
+          }
 
           <!-- Ungrouped Criteria -->
-          <div *ngIf="ungroupedCriteria.length > 0" class="section feature-group">
-            <h3 class="section-title">Additional Information</h3>
-
-            <div *ngFor="let criteriaControl of ungroupedCriteria" class="criteria-item">
-              <ng-container [ngSwitch]="criteriaControl.criteria.type">
-
-                <!-- LABEL Type -->
-                <div *ngSwitchCase="CriteriaTypes.LABEL" class="criteria-label">
-                  <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
-                  <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
-                    {{ criteriaControl.criteria.description }}
-                  </p>
-                  <div class="label-options">
-                    <button
-                      *ngFor="let labelValue of getLabelValues(criteriaControl.criteria)"
-                      type="button"
-                      class="label-chip"
-                      [class.selected]="isLabelSelected(criteriaControl.criteria.id, labelValue)"
-                      (click)="toggleLabel(criteriaControl.criteria.id, labelValue)"
-                    >
-                      {{ labelValue }}
-                    </button>
-                  </div>
+          @if (ungroupedCriteria.length > 0) {
+            <div class="section feature-group">
+              <h3 class="section-title">Additional Information</h3>
+              @for (criteriaControl of ungroupedCriteria; track criteriaControl) {
+                <div class="criteria-item">
+                  @switch (criteriaControl.criteria.type) {
+                    <!-- LABEL Type -->
+                    @case (CriteriaTypes.LABEL) {
+                      <div class="criteria-label">
+                        <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+                        @if (criteriaControl.criteria.description) {
+                          <p class="criteria-description">
+                            {{ criteriaControl.criteria.description }}
+                          </p>
+                        }
+                        <div class="label-options">
+                          @for (labelValue of getLabelValues(criteriaControl.criteria); track labelValue) {
+                            <button
+                              type="button"
+                              class="label-chip"
+                              [class.selected]="isLabelSelected(criteriaControl.criteria.id, labelValue)"
+                              (click)="toggleLabel(criteriaControl.criteria.id, labelValue)"
+                              >
+                              {{ labelValue }}
+                            </button>
+                          }
+                        </div>
+                      </div>
+                    }
+                    <!-- TEXT Type -->
+                    @case (CriteriaTypes.TEXT) {
+                      <div class="criteria-text">
+                        <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+                        @if (criteriaControl.criteria.description) {
+                          <p class="criteria-description">
+                            {{ criteriaControl.criteria.description }}
+                          </p>
+                        }
+                        <input
+                          type="text"
+                          [formControlName]="getFormControlName(criteriaControl.criteria.id)"
+                          [placeholder]="criteriaControl.criteria.placeholder || 'Enter value...'"
+                          class="form-control"
+                          />
+                      </div>
+                    }
+                    <!-- MARKDOWN Type -->
+                    @case (CriteriaTypes.MARKDOWN) {
+                      <div class="criteria-markdown">
+                        <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+                        @if (criteriaControl.criteria.description) {
+                          <p class="criteria-description">
+                            {{ criteriaControl.criteria.description }}
+                          </p>
+                        }
+                        <textarea
+                          [formControlName]="getFormControlName(criteriaControl.criteria.id)"
+                          [placeholder]="criteriaControl.criteria.placeholder || 'Enter markdown content...'"
+                          class="form-control"
+                          rows="4"
+                        ></textarea>
+                      </div>
+                    }
+                    <!-- RATING Type -->
+                    @case (CriteriaTypes.RATING) {
+                      <div class="criteria-rating">
+                        <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+                        @if (criteriaControl.criteria.description) {
+                          <p class="criteria-description">
+                            {{ criteriaControl.criteria.description }}
+                          </p>
+                        }
+                        <input
+                          type="text"
+                          [formControlName]="getFormControlName(criteriaControl.criteria.id)"
+                          placeholder="e.g., [4] Excellent features"
+                          class="form-control"
+                          />
+                      </div>
+                    }
+                    <!-- REPOSITORY Type -->
+                    @case (CriteriaTypes.REPOSITORY) {
+                      <div class="criteria-repository">
+                        <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+                        @if (criteriaControl.criteria.description) {
+                          <p class="criteria-description">
+                            {{ criteriaControl.criteria.description }}
+                          </p>
+                        }
+                        <input
+                          type="url"
+                          [formControlName]="getFormControlName(criteriaControl.criteria.id)"
+                          placeholder="https://github.com/..."
+                          class="form-control"
+                          />
+                      </div>
+                    }
+                    <!-- Default/Fallback -->
+                    @default {
+                      <div class="criteria-default">
+                        <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
+                        @if (criteriaControl.criteria.description) {
+                          <p class="criteria-description">
+                            {{ criteriaControl.criteria.description }}
+                          </p>
+                        }
+                        <input
+                          type="text"
+                          [formControlName]="getFormControlName(criteriaControl.criteria.id)"
+                          [placeholder]="criteriaControl.criteria.placeholder || 'Enter value...'"
+                          class="form-control"
+                          />
+                      </div>
+                    }
+                  }
                 </div>
-
-                <!-- TEXT Type -->
-                <div *ngSwitchCase="CriteriaTypes.TEXT" class="criteria-text">
-                  <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
-                  <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
-                    {{ criteriaControl.criteria.description }}
-                  </p>
-                  <input
-                    type="text"
-                    [formControlName]="getFormControlName(criteriaControl.criteria.id)"
-                    [placeholder]="criteriaControl.criteria.placeholder || 'Enter value...'"
-                    class="form-control"
-                  />
-                </div>
-
-                <!-- MARKDOWN Type -->
-                <div *ngSwitchCase="CriteriaTypes.MARKDOWN" class="criteria-markdown">
-                  <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
-                  <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
-                    {{ criteriaControl.criteria.description }}
-                  </p>
-                  <textarea
-                    [formControlName]="getFormControlName(criteriaControl.criteria.id)"
-                    [placeholder]="criteriaControl.criteria.placeholder || 'Enter markdown content...'"
-                    class="form-control"
-                    rows="4"
-                  ></textarea>
-                </div>
-
-                <!-- RATING Type -->
-                <div *ngSwitchCase="CriteriaTypes.RATING" class="criteria-rating">
-                  <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
-                  <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
-                    {{ criteriaControl.criteria.description }}
-                  </p>
-                  <input
-                    type="text"
-                    [formControlName]="getFormControlName(criteriaControl.criteria.id)"
-                    placeholder="e.g., [4] Excellent features"
-                    class="form-control"
-                  />
-                </div>
-
-                <!-- REPOSITORY Type -->
-                <div *ngSwitchCase="CriteriaTypes.REPOSITORY" class="criteria-repository">
-                  <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
-                  <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
-                    {{ criteriaControl.criteria.description }}
-                  </p>
-                  <input
-                    type="url"
-                    [formControlName]="getFormControlName(criteriaControl.criteria.id)"
-                    placeholder="https://github.com/..."
-                    class="form-control"
-                  />
-                </div>
-
-                <!-- Default/Fallback -->
-                <div *ngSwitchDefault class="criteria-default">
-                  <label class="criteria-name">{{ criteriaControl.criteria.name }}</label>
-                  <p *ngIf="criteriaControl.criteria.description" class="criteria-description">
-                    {{ criteriaControl.criteria.description }}
-                  </p>
-                  <input
-                    type="text"
-                    [formControlName]="getFormControlName(criteriaControl.criteria.id)"
-                    [placeholder]="criteriaControl.criteria.placeholder || 'Enter value...'"
-                    class="form-control"
-                  />
-                </div>
-
-              </ng-container>
+              }
             </div>
-          </div>
+          }
         </form>
       </div>
 

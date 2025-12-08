@@ -1,5 +1,7 @@
 <ng-content></ng-content>
-<div class="ptooltiptext" *ngIf="tooltip&&tooltip!=''||tooltipHtml&&tooltipHtml!=''">
+@if (tooltip&&tooltip!=''||tooltipHtml&&tooltipHtml!='') {
+  <div class="ptooltiptext">
     <div [innerHtml]="_sanitizer.bypassSecurityTrustHtml(tooltip)"></div>
     <div [innerHtml]="_sanitizer.bypassSecurityTrustHtml(tooltipHtml)"></div>
-</div>
+  </div>
+}

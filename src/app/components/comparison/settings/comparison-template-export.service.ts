@@ -2,9 +2,9 @@
 // @generated with Tessl v0.28.0 from ../../../../../specs/app/components/comparison/comparison-template-export.spec.md
 // (spec:578718f1) (code:e73a4798)
 
-import { Injectable, Inject } from '@angular/core';
+import { Injectable, Inject, DOCUMENT } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { DOCUMENT } from '@angular/common';
+
 import { firstValueFrom } from 'rxjs';
 
 import { ConfigurationService } from '../configuration/configuration.service';

@@ -2,8 +2,8 @@
 // @generated with Tessl v0.28.0 from ../../../app/theme/theme-service.spec.md
 // (spec:5d15bf74) (code:53d4507b)
 
-import { Injectable, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { Injectable, Inject, DOCUMENT } from '@angular/core';
+
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';

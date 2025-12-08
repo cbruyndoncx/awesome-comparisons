@@ -1,119 +1,136 @@
 <div class="focused-sheet__controls">
-    <div class="focused-sheet__controls-left">
-        <button type="button"
-                class="focused-sheet__button"
-                (click)="viewModeChange.emit(viewMode === 'sheet' ? 'table' : 'sheet')"
-                [attr.aria-pressed]="viewMode === 'sheet'"
-                [attr.title]="viewMode === 'sheet' ? 'Switch to standard table view' : 'Switch to focused sheet view'">
-            <iicon icon="view-column"></iicon>
-            <span class="sr-only">{{ viewMode === 'sheet' ? 'Standard view' : 'Focused sheet view' }}</span>
-        </button>
-        <button type="button"
-                class="focused-sheet__button"
-                (click)="toggleExpand.emit(!tableExpanded)"
-                [attr.aria-pressed]="tableExpanded"
-                [attr.title]="tableExpanded ? 'Collapse table view' : 'Expand table view'">
-            <iicon [icon]="tableExpanded ? 'resize-small' : 'resize-full'"></iicon>
-            <span class="sr-only">{{ tableExpanded ? 'Collapse table view' : 'Expand table view' }}</span>
-        </button>
-    </div>
+  <div class="focused-sheet__controls-left">
     <button type="button"
-            class="focused-sheet__print"
-            (click)="triggerPrint()">
-        <span aria-hidden="true">🖨️</span>
-        <span>Print / Save as PDF</span>
+      class="focused-sheet__button"
+      (click)="viewModeChange.emit(viewMode === 'sheet' ? 'table' : 'sheet')"
+      [attr.aria-pressed]="viewMode === 'sheet'"
+      [attr.title]="viewMode === 'sheet' ? 'Switch to standard table view' : 'Switch to focused sheet view'">
+      <iicon icon="view-column"></iicon>
+      <span class="sr-only">{{ viewMode === 'sheet' ? 'Standard view' : 'Focused sheet view' }}</span>
     </button>
+    <button type="button"
+      class="focused-sheet__button"
+      (click)="toggleExpand.emit(!tableExpanded)"
+      [attr.aria-pressed]="tableExpanded"
+      [attr.title]="tableExpanded ? 'Collapse table view' : 'Expand table view'">
+      <iicon [icon]="tableExpanded ? 'resize-small' : 'resize-full'"></iicon>
+      <span class="sr-only">{{ tableExpanded ? 'Collapse table view' : 'Expand table view' }}</span>
+    </button>
+  </div>
+  <button type="button"
+    class="focused-sheet__print"
+    (click)="triggerPrint()">
+    <span aria-hidden="true">🖨️</span>
+    <span>Print / Save as PDF</span>
+  </button>
 </div>
 
 <div class="focused-sheet">
-    <div class="focused-sheet__table-wrapper">
-        <table class="focused-sheet__table">
-            <thead>
-                <tr>
-                    <th scope="col" class="focused-sheet__criteria-heading">Criteria</th>
-                    <th scope="col"
-                        *ngFor="let header of elementHeaders"
-                        class="focused-sheet__element-heading">
-                        <div class="focused-sheet__element-name">{{header.name}}</div>
-                        <div class="focused-sheet__element-description" *ngIf="header.description">{{header.description}}</div>
-                        <a *ngIf="header.url" [href]="header.url" target="_blank" rel="noopener noreferrer">View</a>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let row of sheetRows">
-                    <th scope="row" class="focused-sheet__criteria">{{row.label}}</th>
-                    <td *ngFor="let entry of row.values"
-                        class="focused-sheet__value"
-                        [class.focused-sheet__value--label]="row.type === 'LABEL'"
-                        [class.focused-sheet__value--markdown]="row.type === 'MARKDOWN'">
-                        <ng-container [ngSwitch]="row.type">
-                            <ng-container *ngSwitchCase="'LABEL'">
-                                <ng-container *ngIf="extractLabels(entry).length; else sheetMissing">
-                                    <div class="label mylabel {{label.clazz}}"
-                                         *ngFor="let label of extractLabels(entry)"
-                                         [class.label--plain]="!labelColorsEnabled"
-                                         [style.color]="labelColorsEnabled ? label.color : null"
-                                         [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
-                                        <ng-container *ngIf="label.displayHtml; else sheetLabelText">
-                                            <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
-                                        </ng-container>
-                                        <ng-template #sheetLabelText>{{labelDisplay(label)}}</ng-template>
-                                    </div>
-                                </ng-container>
-                            </ng-container>
-                            <ng-container *ngSwitchCase="'NAME_URL'">
-                                <ng-container *ngIf="entry?.link || entry?.url; else nameUrlPlain">
-                                    <a [href]="entry?.link || entry?.url"
-                                       target="_blank"
-                                       rel="noopener noreferrer">
-                                        {{entry?.text || entry?.tableText || entry?.summaryText || entry?.link || entry?.url}}
-                                    </a>
-                                </ng-container>
-                                <ng-template #nameUrlPlain>
-                                    <span>{{entry?.tableText || entry?.summaryText || entry?.text || entry?.content}}</span>
-                                </ng-template>
-                            </ng-container>
-                            <ng-container *ngSwitchCase="'URL'">
-                                <ng-container *ngIf="entry?.url; else urlPlain">
-                                    <a [href]="entry?.url"
-                                       target="_blank"
-                                       rel="noopener noreferrer">
-                                        {{entry?.url}}
-                                    </a>
-                                </ng-container>
-                                <ng-template #urlPlain>
-                                    <span>{{entry?.tableText || entry?.summaryText || entry?.text || entry?.content}}</span>
-                                </ng-template>
-                            </ng-container>
-                            <ng-container *ngSwitchCase="'REPOSITORY'">
-                                <div class="repository-links" *ngIf="entry?.urlList?.length; else repoPlain">
-                                    <a *ngFor="let link of entry.urlList"
-                                       [href]="link"
-                                       target="_blank"
-                                       rel="noopener noreferrer">{{link}}</a>
-                                </div>
-                                <ng-template #repoPlain>
-                                    <span>{{entry?.tableText || entry?.summaryText || entry?.text || entry?.content}}</span>
-                                </ng-template>
-                            </ng-container>
-                            <ng-container *ngSwitchCase="'MARKDOWN'">
-                                <div [innerHtml]="entry?.html | sanitizeHtml"></div>
-                            </ng-container>
-                            <ng-container *ngSwitchCase="'RATING'">
-                                <span *ngIf="entry?.rating !== undefined && entry?.rating !== null">★ {{entry?.rating}}</span>
-                            </ng-container>
-                            <ng-container *ngSwitchDefault>
-                                <span>{{entry?.tableText || entry?.summaryText || entry?.text || entry?.content}}</span>
-                            </ng-container>
-                        </ng-container>
-                        <ng-template #sheetMissing>
-                            <span *ngIf="shouldShowMissing(entry)" class="label mylabel label--missing">Missing</span>
-                        </ng-template>
-                        <span *ngIf="!entry && !showMissingIndicators" class="focused-sheet__value--dash">—</span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+  <div class="focused-sheet__table-wrapper">
+    <table class="focused-sheet__table">
+      <thead>
+        <tr>
+          <th scope="col" class="focused-sheet__criteria-heading">Criteria</th>
+          @for (header of elementHeaders; track header) {
+            <th scope="col"
+              class="focused-sheet__element-heading">
+              <div class="focused-sheet__element-name">{{header.name}}</div>
+              @if (header.description) {
+                <div class="focused-sheet__element-description">{{header.description}}</div>
+              }
+              @if (header.url) {
+                <a [href]="header.url" target="_blank" rel="noopener noreferrer">View</a>
+              }
+            </th>
+          }
+        </tr>
+      </thead>
+      <tbody>
+        @for (row of sheetRows; track row) {
+          <tr>
+            <th scope="row" class="focused-sheet__criteria">{{row.label}}</th>
+            @for (entry of row.values; track entry) {
+              <td
+                class="focused-sheet__value"
+                [class.focused-sheet__value--label]="row.type === 'LABEL'"
+                [class.focused-sheet__value--markdown]="row.type === 'MARKDOWN'">
+                @switch (row.type) {
+                  @case ('LABEL') {
+                    @if (extractLabels(entry).length) {
+                      @for (label of extractLabels(entry); track label) {
+                        <div class="label mylabel {{label.clazz}}"
+                          [class.label--plain]="!labelColorsEnabled"
+                          [style.color]="labelColorsEnabled ? label.color : null"
+                          [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
+                          @if (label.displayHtml) {
+                            <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
+                          } @else {
+                            {{labelDisplay(label)}}
+                          }
+                        </div>
+                      }
+                    } @else {
+                      @if (shouldShowMissing(entry)) {
+                        <span class="label mylabel label--missing">Missing</span>
+                      }
+                    }
+                  }
+                  @case ('NAME_URL') {
+                    @if (entry?.link || entry?.url) {
+                      <a [href]="entry?.link || entry?.url"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        {{entry?.text || entry?.tableText || entry?.summaryText || entry?.link || entry?.url}}
+                      </a>
+                    } @else {
+                      <span>{{entry?.tableText || entry?.summaryText || entry?.text || entry?.content}}</span>
+                    }
+                  }
+                  @case ('URL') {
+                    @if (entry?.url) {
+                      <a [href]="entry?.url"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        {{entry?.url}}
+                      </a>
+                    } @else {
+                      <span>{{entry?.tableText || entry?.summaryText || entry?.text || entry?.content}}</span>
+                    }
+                  }
+                  @case ('REPOSITORY') {
+                    @if (entry?.urlList?.length) {
+                      <div class="repository-links">
+                        @for (link of entry?.urlList; track link) {
+                          <a
+                            [href]="link"
+                            target="_blank"
+                          rel="noopener noreferrer">{{link}}</a>
+                        }
+                      </div>
+                    } @else {
+                      <span>{{entry?.tableText || entry?.summaryText || entry?.text || entry?.content}}</span>
+                    }
+                  }
+                  @case ('MARKDOWN') {
+                    <div [innerHtml]="entry?.html | sanitizeHtml"></div>
+                  }
+                  @case ('RATING') {
+                    @if (entry?.rating !== undefined && entry?.rating !== null) {
+                      <span>★ {{entry?.rating}}</span>
+                    }
+                  }
+                  @default {
+                    <span>{{entry?.tableText || entry?.summaryText || entry?.text || entry?.content}}</span>
+                  }
+                }
+                @if (!entry && !showMissingIndicators) {
+                  <span class="focused-sheet__value--dash">—</span>
+                }
+              </td>
+            }
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
 </div>

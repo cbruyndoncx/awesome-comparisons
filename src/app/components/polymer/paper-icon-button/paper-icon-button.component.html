@@ -1,5 +1,9 @@
-<ptooltip *ngIf="showTooltip" [tooltip]="title" [position]="'w'">
+@if (showTooltip) {
+  <ptooltip [tooltip]="title" [position]="'w'">
     <iicon [icon]="icon"></iicon>
-</ptooltip>
+  </ptooltip>
+}
 
-<iicon *ngIf="!showTooltip" [icon]="icon"></iicon>
+@if (!showTooltip) {
+  <iicon [icon]="icon"></iicon>
+}

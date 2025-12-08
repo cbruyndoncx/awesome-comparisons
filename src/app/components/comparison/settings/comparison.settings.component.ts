@@ -5,7 +5,8 @@ import { FeatureGroupingService } from '../../output/feature-grouping.service';
 @Component({
     selector: 'comparison-settings',
     templateUrl: './comparison.settings.template.html',
-    styleUrls: ['./comparison.settings.component.css']
+    styleUrls: ['./comparison.settings.component.css'],
+    standalone: false
 })
 export class ComparisonSettingsComponent {
     @Input() columnDisplayAll: boolean = false;

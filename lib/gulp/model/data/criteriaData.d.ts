@@ -9,6 +9,8 @@ export class CriteriaData {
   public detailLabels: Array<Label>;
   public type: CriteriaTypes;
   public url: string;
+  public link?: string;
+  public content?: string;
   public urlList: Array<string>;
   public rating: number;
   public html: string;

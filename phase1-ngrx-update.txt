@@ -1,0 +1,17 @@
+Repository is not clean. Update changes will be mixed with pre-existing changes.
+Using package manager: npm
+Collecting installed dependencies...
+Found 56 dependencies.
+Fetching dependency metadata from registry...
+    Updating package.json with dependency @ngrx/router-store @ "18.1.1" (was "17.2.0")...
+    Updating package.json with dependency @ngrx/store @ "18.1.1" (was "17.2.0")...
+UPDATE package.json (4182 bytes)
+❯ Cleaning node modules directory
+✔ Cleaning node modules directory
+❯ Installing packages
+✔ Installing packages
+** Executing migrations of package '@ngrx/store' **
+
+❯ As of NgRx v18, the `TypedAction` has been removed in favor of `Action`.
+  Migration completed (No changes made).
+

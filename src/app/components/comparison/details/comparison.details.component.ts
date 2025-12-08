@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { ConfigurationService } from '../configuration/configuration.service';
 import { SafeHtml } from '@angular/platform-browser';
-import { Criteria, CriteriaData, DataElement, Label } from '../../../../../lib/gulp/model/model.module';
+import { Criteria, CriteriaData, DataElement, Label, CriteriaTypes } from '../../../../../lib/gulp/model/model.module';
 
 interface DetailSection {
     criteria: Criteria;
@@ -21,14 +21,15 @@ interface DetailGroup {
 @Component({
     selector: 'comparison-details',
     templateUrl: './comparison.details.template.html',
-    styleUrls: ['./comparison.details.component.css']
+    styleUrls: ['./comparison.details.component.css'],
+    standalone: false
 })
 export class ComparisonDetailsComponent implements OnChanges {
-    @Input() data: DataElement = new DataElement('placeholder', '', '', new Map());
+    @Input() data: DataElement | null = new DataElement('placeholder', '', '', new Map());
     @Input() headerLabels: Array<Label> = [];
 
-    @Input() descriptionData: CriteriaData;
-    @Input() descriptionCriteria: Criteria;
+    @Input() descriptionData: CriteriaData = new CriteriaData('', '', new Map());
+    @Input() descriptionCriteria: Criteria = new Criteria('', CriteriaTypes.TEXT);
 
     @Input() bodyTitle: string = ''
 
@@ -152,10 +153,11 @@ export class ComparisonDetailsComponent implements OnChanges {
     public prefixInternalLink(safeHtml: SafeHtml): SafeHtml {
         const regex = RegExp('<a[^>]*href="#([^"]*)"[^>]*>\\[\\d+\\]</a>', 'g');
         let match;
-        const html = safeHtml['changingThisBreaksApplicationSecurity'];
+        const sh = safeHtml as any;
+        const html = sh['changingThisBreaksApplicationSecurity'];
         while ((match = regex.exec(html)) !== null) {
-            safeHtml['changingThisBreaksApplicationSecurity'] =
-                safeHtml['changingThisBreaksApplicationSecurity'].replace(match[1], 'details-' + match[1])
+            sh['changingThisBreaksApplicationSecurity'] =
+                sh['changingThisBreaksApplicationSecurity'].replace(match[1], 'details-' + match[1])
         }
         return safeHtml;
     }

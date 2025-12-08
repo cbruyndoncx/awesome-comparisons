@@ -1,5 +1,5 @@
-import { AfterViewChecked, ChangeDetectionStrategy, Component, EventEmitter, Inject, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { AfterViewChecked, ChangeDetectionStrategy, Component, EventEmitter, Inject, Input, OnChanges, Output, SimpleChanges, DOCUMENT } from '@angular/core';
+
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { Criteria, CriteriaData, DataElement, Label } from '../../../../../lib/gulp/model/model.module';
@@ -25,7 +25,8 @@ interface VisibleColumnDefinition {
     selector: 'generictable',
     templateUrl: './generic-table.component.html',
     styleUrls: ['./generic-table.component.css'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class GenericTableComponent implements AfterViewChecked, OnChanges {
     @Output() xlsxDownload: EventEmitter<any> = new EventEmitter();
@@ -39,7 +40,7 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
     @Input() columns: Array<string> = [];
     @Input() columnKeys: Array<string> = [];
     @Input() types: Array<string> = [];
-    @Input() items: Array<Array<CriteriaData>> = [];
+    @Input() items: Array<Array<CriteriaData | null | undefined>> = [];
     @Input() index: Array<number> = [];
     @Input() order: Array<number> = [];
     @Input() labelColorsEnabled: boolean = true;
@@ -56,7 +57,7 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
     public groupLookup$: Observable<Record<string, FeatureGroupView>>;
     public visibleCriteriaMap$: Observable<Record<string, Criteria>>;
 
-    private table;
+    private table: any;
     private anchorsInitialised = false;
     private expandedMarkdownCells = new Set<string>();
 

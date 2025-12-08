@@ -22,16 +22,17 @@ interface SelectOption {
     styleUrls: [
         'select2.component.css'
     ],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class Select2Component implements InputInterface, OnChanges {
     @Input() options: Array<SelectOption | string> = [];
     @Input() maximumSelectionLength = 0;
-    @Input() placeholder: string;
-    @Input() tag: string;
-    @Input() name: string;
-    @Input() active: Array<SelectOption>;
-    @Input() change: number;
+    @Input() placeholder: string = '';
+    @Input() tag: string = '';
+    @Input() name: string = '';
+    @Input() active: Array<SelectOption> = [];
+    @Input() change: number = 0;
 
     @Output() result: EventEmitter<string> = new EventEmitter();
 

@@ -45,9 +45,10 @@ interface LinkableEntryOption {
 }
 
 @Component({
-  selector: 'uc-config-criteria-form',
-  templateUrl: './config-criteria-form.component.html',
-  styleUrls: ['./config-criteria-form.component.css']
+    selector: 'uc-config-criteria-form',
+    templateUrl: './config-criteria-form.component.html',
+    styleUrls: ['./config-criteria-form.component.css'],
+    standalone: false
 })
 export class ConfigCriteriaFormComponent implements OnInit, OnDestroy, OnChanges {
   @Input() document: ConfigDocumentModel | null = null;

@@ -5,14 +5,15 @@ import { DomSanitizer } from '@angular/platform-browser';
     selector: 'ptooltip',
     templateUrl: './tooltip.component.html',
     styleUrls: ['./tooltip.component.css'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class TooltipComponent {
     @Input() tooltip = '';
     @Input() tooltipHtml = '';
     @HostBinding('class') positionClass = 'n';
 
-    constructor(private _sanitizer: DomSanitizer) {
+    constructor(public _sanitizer: DomSanitizer) {
     }
 
     @Input() set position(p: string) {

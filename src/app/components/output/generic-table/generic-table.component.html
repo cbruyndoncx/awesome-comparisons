@@ -115,14 +115,14 @@
                                 <ng-container *ngFor="let column of visibleColumns">
                                     <td *ngIf="column.type === 'NAME_URL'">
                                         <a class="anchored"
-                                           [href]="item[column.index]?.link || item[column.index]?.url || '#'"
+                                           [href]="(item[column.index] | asAny)?.link || item[column.index]?.url || '#'"
                                            target="_blank"
                                            rel="noopener noreferrer">
                                             {{item[column.index]?.text || '—'}}
                                         </a>
                                     </td>
                                     <td *ngIf="column.type === 'TEXT'">
-                                        {{item[column.index]?.tableText || item[column.index]?.summaryText || item[column.index]?.text || item[column.index]?.content}}
+                                        {{item[column.index]?.tableText || item[column.index]?.summaryText || item[column.index]?.text || (item[column.index] | asAny)?.content}}
                                     </td>
                                     <td *ngIf="column.type === 'LABEL' || column.type === 'REPOSITORY'"
                                         class="label-cell"
@@ -132,7 +132,7 @@
                                         [style.background]="column.type === 'LABEL' ? resolveLabelCellFill(item[column.index]) : null">
                                         <ng-container *ngIf="item[column.index]?.labelArray?.length; else missingLabelBlock">
                                             <ng-container *ngFor="let label of item[column.index]?.labelArray">
-                                                <ng-container *ngIf="label.tooltip?.text || label.tooltip?.html; else plainLabel">
+                                                <ng-container *ngIf="label.tooltip && (label.tooltip.text || label.tooltip.html); else plainLabel">
                                                     <ptooltip [tooltip]="label.tooltip.text"
                                                               [tooltipHtml]="label.tooltip.html" [position]="'n'">
                                                         <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
@@ -200,7 +200,7 @@
                                         <div [innerHtml]="item[column.index]?.html | sanitizeHtml"></div>
                                     </td>
                                 <td *ngIf="column.type === 'ICON_LINK'">
-                                    <ng-container *ngFor="let icon of item[column.index]?.icons">
+                                    <ng-container *ngFor="let icon of (item[column.index] | asAny)?.icons">
                                         <a [href]="icon.url" [title]="icon.tooltip" target="_blank" rel="noopener noreferrer">
                                             <iicon [icon]="icon.name"></iicon>
                                         </a>

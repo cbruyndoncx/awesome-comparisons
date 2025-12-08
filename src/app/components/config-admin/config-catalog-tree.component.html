@@ -6,56 +6,65 @@
   <!-- Main content area -->
   <div class="config-catalog__content">
     <!-- Loading state -->
-    <div *ngIf="loading" class="loading-container">
-      <mat-progress-spinner mode="indeterminate" diameter="48"></mat-progress-spinner>
-    </div>
+    @if (loading) {
+      <div class="loading-container">
+        <mat-progress-spinner mode="indeterminate" diameter="48"></mat-progress-spinner>
+      </div>
+    }
 
     <!-- Empty state -->
-    <div *ngIf="!loading && groupedCatalog.length === 0" class="config-catalog__empty">
-      <mat-icon class="empty-icon">folder_open</mat-icon>
-      <h3>No configurations found</h3>
-      <p>No configuration files match your current filters.</p>
-      <button mat-raised-button color="primary" (click)="onRetry()">
-        Retry
-      </button>
-    </div>
+    @if (!loading && groupedCatalog.length === 0) {
+      <div class="config-catalog__empty">
+        <mat-icon class="empty-icon">folder_open</mat-icon>
+        <h3>No configurations found</h3>
+        <p>No configuration files match your current filters.</p>
+        <button mat-raised-button color="primary" (click)="onRetry()">
+          Retry
+        </button>
+      </div>
+    }
 
     <!-- Catalog list -->
-    <div 
-      *ngIf="!loading && groupedCatalog.length > 0"
-      class="config-list"
-      role="listbox">
-      
-      <ng-container *ngFor="let group of groupedCatalog; trackBy: trackByEntry">
-        <!-- Group heading -->
-        <div class="group-header" *ngIf="group.isHeader">
-          <h4>{{ group.label }}</h4>
-          <mat-chip *ngIf="group.datasetId" class="dataset-chip">
-            {{ group.datasetId }}
-          </mat-chip>
-        </div>
-
-        <!-- Catalog item -->
-        <button
-          *ngIf="!group.isHeader"
-          mat-list-item
-          class="catalog-item"
-          [class.is-selected]="group.item.encodedPath === selectedEncodedPath"
-          [attr.aria-selected]="group.item.encodedPath === selectedEncodedPath"
-          [matTooltip]="group.item.relativePath"
-          role="option"
-          (click)="onSelectItem(group.item)">
-
-          <div class="item-content">
-            <div class="item-header">
-              <span class="item-name">{{ group.fileName }}</span>
+    @if (!loading && groupedCatalog.length > 0) {
+      <div
+        class="config-list"
+        role="listbox">
+        @for (group of groupedCatalog; track trackByEntry($index, group)) {
+          <!-- Group heading -->
+          @if (group.isHeader) {
+            <div class="group-header">
+              <h4>{{ group.label }}</h4>
+              @if (group.datasetId) {
+                <mat-chip class="dataset-chip">
+                  {{ group.datasetId }}
+                </mat-chip>
+              }
             </div>
-            <div class="item-meta" *ngIf="group.item.lastModified">
-              <span class="timestamp">{{ formatTimestamp(group.item.lastModified) }}</span>
-            </div>
-          </div>
-        </button>
-      </ng-container>
-    </div>
+          }
+          <!-- Catalog item -->
+          @if (!group.isHeader) {
+            <button
+              mat-list-item
+              class="catalog-item"
+              [class.is-selected]="group.item.encodedPath === selectedEncodedPath"
+              [attr.aria-selected]="group.item.encodedPath === selectedEncodedPath"
+              [matTooltip]="group.item.relativePath"
+              role="option"
+              (click)="onSelectItem(group.item)">
+              <div class="item-content">
+                <div class="item-header">
+                  <span class="item-name">{{ group.fileName }}</span>
+                </div>
+                @if (group.item.lastModified) {
+                  <div class="item-meta">
+                    <span class="timestamp">{{ formatTimestamp(group.item.lastModified) }}</span>
+                  </div>
+                }
+              </div>
+            </button>
+          }
+        }
+      </div>
+    }
   </div>
 </section>

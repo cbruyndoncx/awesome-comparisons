@@ -6,7 +6,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { DragDropModule } from '@angular/cdk/drag-drop';
@@ -33,44 +33,38 @@ import { ConfigCatalogTreeComponent } from './config-catalog-tree.component';
 import { ConfigCriteriaFormComponent } from './config-criteria-form.component';
 import { ConfigDiffViewerComponent } from './config-diff-viewer.component';
 
-@NgModule({
-  declarations: [
-    ConfigAdminShellComponent,
-    ConfigCatalogTreeComponent,
-    ConfigCriteriaFormComponent,
-    ConfigDiffViewerComponent
-  ],
-  imports: [
-    CommonModule,
-    HttpClientModule,
-    RouterModule,
-    ReactiveFormsModule,
-    FormsModule,
-    ClipboardModule,
-    ScrollingModule,
-    DragDropModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    MatTooltipModule,
-    MatProgressSpinnerModule,
-    MatButtonToggleModule,
-    MatChipsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatListModule,
-    MatSelectModule,
-    MatCardModule,
-    MatSlideToggleModule,
-    MatMenuModule,
-    MatExpansionModule,
-    MatTableModule,
-    MatDividerModule
-  ],
-  exports: [
-    ConfigAdminShellComponent,
-    RouterModule
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
-})
+@NgModule({ declarations: [
+        ConfigAdminShellComponent,
+        ConfigCatalogTreeComponent,
+        ConfigCriteriaFormComponent,
+        ConfigDiffViewerComponent
+    ],
+    exports: [
+        ConfigAdminShellComponent,
+        RouterModule
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA], imports: [CommonModule,
+        RouterModule,
+        ReactiveFormsModule,
+        FormsModule,
+        ClipboardModule,
+        ScrollingModule,
+        DragDropModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        MatTooltipModule,
+        MatProgressSpinnerModule,
+        MatButtonToggleModule,
+        MatChipsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatListModule,
+        MatSelectModule,
+        MatCardModule,
+        MatSlideToggleModule,
+        MatMenuModule,
+        MatExpansionModule,
+        MatTableModule,
+        MatDividerModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class ConfigAdminModule { }

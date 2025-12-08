@@ -20,17 +20,19 @@ import { take } from 'rxjs/operators';
 @Component({
     selector: 'comparison',
     templateUrl: './comparison.template.html',
-    styleUrls: ['./comparison.component.css']
+    styleUrls: ['./comparison.component.css'],
+    standalone: false
 })
 export class ComparisonComponent {
-    static instance;
-
+    private activeFiltersCache: Array<{ id: string; label: string; values: string[] }> | null = null;
+    private lastSearchState: Map<string, Set<string>> | null = null;
+    
     public repository: string;
     public collapsedFilterGroups: { [groupKey: string]: boolean } = {};
     public ungroupedCollapsed: boolean = false;
     public filtersCollapsed: boolean = true;
 
-    @ViewChild('genericTableHeader') genericTableHeader: PaperCardComponent;
+    @ViewChild('genericTableHeader') genericTableHeader!: PaperCardComponent;
     public activeRow: DataElement = new DataElement('placeholder', '', '', new Map());
 
     public detailsOpen: boolean = false;
@@ -44,13 +46,10 @@ export class ComparisonComponent {
     constructor(public configurationService: ConfigurationService,
                 private templateExportService: ComparisonTemplateExportService,
                 private cd: ChangeDetectorRef,
-                public store: Store<IUCAppState>,
+                public store: Store<{ state: IUCAppState }>,
                 private dialog: MatDialog,
                 private datasetManifestService: DatasetManifestService,
                 private featureGroupingService: FeatureGroupingService) {
-        if (isNullOrUndefined(ComparisonComponent.instance)) {
-            ComparisonComponent.instance = this;
-        }
         this.configurationService.loadComparison(this.cd);
         this.repository = this.configurationService.configuration.repository;
     }
@@ -67,21 +66,22 @@ export class ComparisonComponent {
         return environment.githubPagesUrl;
     }
 
-    public criteriaChanged(value: string, crit: Criteria) {
+    public criteriaChanged(value: string | string[], crit: Criteria) {
         const map = new Map<string, string | null>();
-        map.set(crit.id, value || null);
+        const val = Array.isArray(value) ? value.join(',') : value;
+        map.set(crit.id, val || null);
         this.store.dispatch(new UCSearchUpdateAction(map));
         this.cd.markForCheck();
     }
 
-    public getActive(state: { state: IUCAppState }, crit: Criteria) {
+    public getActive(state: IUCAppState | null, crit: Criteria) {
         if (isNullOrUndefined(state)) {
             return [];
         }
-        const active = state.state.currentSearch.get(crit.id);
+        const active = state!.currentSearch.get(crit.id);
 
         if (!isNullOrUndefined(active)) {
-            return Array.from(active).map(name => {
+            return Array.from(active!).map(name => {
                 return {
                     id: name,
                     text: name
@@ -102,7 +102,7 @@ export class ComparisonComponent {
         }, 100);
     }
 
-    public setViewMode(mode: 'table' | 'sheet') {
+    public setViewMode(mode: string) {
         this.store.dispatch({type: 'UPDATE_SETTINGS', operation: 'ViewMode', mode});
     }
 
@@ -450,6 +450,15 @@ export class ComparisonComponent {
     }
 
     public getActiveFilters(searchState: Map<string, Set<string>>): Array<{ id: string; label: string; values: string[] }> {
+        // Memoize to prevent unnecessary re-computation and template changes
+        if (!this.activeFiltersCache || !this.lastSearchState || !this.mapsEqual(searchState, this.lastSearchState)) {
+            this.activeFiltersCache = this.computeActiveFilters(searchState);
+            this.lastSearchState = new Map(searchState);
+        }
+        return this.activeFiltersCache;
+    }
+
+    private computeActiveFilters(searchState: Map<string, Set<string>>): Array<{ id: string; label: string; values: string[] }> {
         if (!searchState) {
             return [];
         }
@@ -467,6 +476,22 @@ export class ComparisonComponent {
         });
         results.sort((a, b) => a.label.localeCompare(b.label));
         return results;
+    }
+
+    private mapsEqual(map1: Map<string, Set<string>> | null, map2: Map<string, Set<string>> | null): boolean {
+        if (map1 === map2) return true;
+        if (!map1 || !map2) return false;
+        if (map1.size !== map2.size) return false;
+        
+        for (const [key, value] of map1.entries()) {
+            const otherValue = map2.get(key);
+            if (!otherValue) return false;
+            if (value.size !== otherValue.size) return false;
+            for (const item of value) {
+                if (!otherValue.has(item)) return false;
+            }
+        }
+        return true;
     }
 
     public removeFilter(criteriaId: string, value: string): void {

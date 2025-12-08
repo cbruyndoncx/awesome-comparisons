@@ -11,21 +11,22 @@ interface SheetRow {
 interface SheetElementHeader {
     index: number;
     name: string;
-    url?: string;
-    description?: string;
+    url?: string | null;
+    description?: string | null;
 }
 
 @Component({
     selector: 'focused-comparison-sheet',
     templateUrl: './focused-comparison-sheet.component.html',
     styleUrls: ['./focused-comparison-sheet.component.css'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class FocusedComparisonSheetComponent implements OnChanges {
     @Input() criteriaNames: string[] = [];
     @Input() criteriaKeys: string[] = [];
     @Input() criteriaTypes: string[] = [];
-    @Input() items: Array<Array<CriteriaData>> = [];
+    @Input() items: Array<Array<CriteriaData | null | undefined>> = [];
     @Input() rowIndexes: Array<number> = [];
     @Input() elementData: Array<DataElement> = [];
     @Input() labelColorsEnabled: boolean = true;
@@ -56,7 +57,7 @@ export class FocusedComparisonSheetComponent implements OnChanges {
             return Array.from(rawLabels.values()).filter((label: Label | null | undefined): label is Label => !!label);
         }
         if (typeof rawLabels === 'object') {
-            return Object.values(rawLabels).filter((label: Label | null | undefined): label is Label => !!label);
+            return (Object.values(rawLabels) as any[]).filter((label: Label | null | undefined): label is Label => !!label);
         }
         return [];
     }

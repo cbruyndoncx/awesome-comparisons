@@ -1,174 +1,213 @@
-<div class="pheader">
+@if (data) {
+  <div class="pheader">
     <h2>{{data.name}}
-        <ng-template ngFor let-label [ngForOf]="headerLabels">
-            <ng-container *ngIf="label; else missingHeaderLabel">
-                <ng-container *ngIf="tooltipAsText; else headerTooltipPopover">
-                    <div class="tt-container">
-                        <span class="label mylabel {{label.clazz}} tt-label" [class.label--plain]="!labelColorsEnabled"
-                              [style.color]="labelColorsEnabled ? label.color : null"
-                              [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
-                            <ng-container *ngIf="label.displayHtml; else headerLabelDisplayText">
-                                <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
-                            </ng-container>
-                            <ng-template #headerLabelDisplayText>
-                                {{label.display || label.name}}
-                            </ng-template>
-                        </span>
-                        <span class="tooltip-text tt-tooltip"
-                              *ngIf="label.tooltip.text"
-                              [innerHtml]="label.tooltip.text | sanitizeHtml"></span>
-                        <span class="tooltip-text tt-tooltip"
-                              *ngIf="!label.tooltip.text && label.tooltip.html"
-                              [innerHtml]="prefixInternalLink(label.tooltip.html | sanitizeHtml)"></span>
-                        <span class="tooltip-text tt-tooltip"
-                              *ngIf="!label.tooltip.text && !label.tooltip.html && label.tooltip.plain">
-                            {{label.tooltip.plain}}
-                        </span>
-                    </div>
-                </ng-container>
-                <ng-template #headerTooltipPopover>
-                    <ptooltip [tooltip]="label.tooltip.text"
-                              [tooltipHtml]="prefixInternalLink(label.tooltip.html)" [position]="'s'">
-                        <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
-                             [style.color]="labelColorsEnabled ? label.color : null"
-                             [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
-                            <ng-container *ngIf="label.displayHtml; else headerLabelDisplay">
-                                <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
-                            </ng-container>
-                            <ng-template #headerLabelDisplay>
-                                {{label.display || label.name}}
-                            </ng-template>
-                        </div>
-                    </ptooltip>
-                </ng-template>
-            </ng-container>
-        </ng-template>
-        <ng-template #missingHeaderLabel>
-            <div *ngIf="showMissingIndicators" class="label mylabel label--missing">Missing</div>
-        </ng-template>
-        <small class="details-links">
-            <a *ngIf="data?.url"
-               class="details-links__primary"
-               [href]="data.url"
-               target="_blank"
-               rel="noopener noreferrer">
-                {{data.url}}
-            </a>
-            <a *ngIf="data?.editLink"
-               class="details-links__edit"
-               [href]="data.editLink"
-               target="_blank"
-               rel="noopener noreferrer"
-               title="Edit source"
-               aria-label="Edit source">
-                <picon-button icon="edit" [showTooltip]="false"></picon-button>
-            </a>
-        </small>
+      @for (label of headerLabels; track label) {
+        @if (label) {
+          @if (tooltipAsText) {
+            <div class="tt-container">
+              <span class="label mylabel {{label.clazz}} tt-label" [class.label--plain]="!labelColorsEnabled"
+                [style.color]="labelColorsEnabled ? label.color : null"
+                [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
+                @if (label.displayHtml) {
+                  <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
+                } @else {
+                  {{label.display || label.name}}
+                }
+              </span>
+              @if (label.tooltip.text) {
+                <span class="tooltip-text tt-tooltip"
+                [innerHtml]="label.tooltip.text | sanitizeHtml"></span>
+              }
+              @if (!label.tooltip.text && label.tooltip.html) {
+                <span class="tooltip-text tt-tooltip"
+                [innerHtml]="prefixInternalLink(label.tooltip.html | sanitizeHtml)"></span>
+              }
+              @if (!label.tooltip.text && !label.tooltip.html && label.tooltip.plain) {
+                <span class="tooltip-text tt-tooltip"
+                  >
+                  {{label.tooltip.plain}}
+                </span>
+              }
+            </div>
+          } @else {
+            <ptooltip [tooltip]="label.tooltip.text"
+              [tooltipHtml]="(prefixInternalLink(label.tooltip.html) | asAny)" [position]="'s'">
+              <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
+                [style.color]="labelColorsEnabled ? label.color : null"
+                [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
+                @if (label.displayHtml) {
+                  <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
+                } @else {
+                  {{label.display || label.name}}
+                }
+              </div>
+            </ptooltip>
+          }
+        } @else {
+          @if (showMissingIndicators) {
+            <div class="label mylabel label--missing">Missing</div>
+          }
+        }
+      }
+      <small class="details-links">
+        @if (data.url) {
+          <a
+            class="details-links__primary"
+            [href]="data.url"
+            target="_blank"
+            rel="noopener noreferrer">
+            {{data.url}}
+          </a>
+        }
+        @if (data.editLink) {
+          <a
+            class="details-links__edit"
+            [href]="data.editLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Edit source"
+            aria-label="Edit source">
+            <picon-button icon="edit" [showTooltip]="false"></picon-button>
+          </a>
+        }
+      </small>
     </h2>
-</div>
-<div class="grid-content">
-    <pcard *ngIf="descriptionData" heading="{{bodyTitle}}" class="description">
-        <div *ngIf="descriptionCriteria.type === 'MARKDOWN'" [innerHTML]="descriptionData.html | sanitizeHtml"
-             class="description"></div>
-        <div *ngIf="descriptionCriteria.type === 'TEXT'" [innerHTML]="descriptionData.text | sanitizeHtml"
-             class="description"></div>
-    </pcard>
-
+  </div>
+  <div class="grid-content">
+    @if (descriptionData) {
+      <pcard heading="{{bodyTitle}}" class="description">
+        @if (descriptionCriteria.type === 'MARKDOWN') {
+          <div [innerHTML]="descriptionData.html | sanitizeHtml"
+          class="description"></div>
+        }
+        @if (descriptionCriteria.type === 'TEXT') {
+          <div [innerHTML]="descriptionData.text | sanitizeHtml"
+          class="description"></div>
+        }
+      </pcard>
+    }
     <ng-template #sectionContent let-section>
-        <div class="card-content">
-            <p *ngIf="(tooltipAsText && resolveCriteriaDescription(section.criteria)) as criteriaDescription"
-               class="criteria-description">
-                <em [innerHtml]="criteriaDescription | sanitizeHtml"></em>
-            </p>
-            <a *ngIf="section.type === 'NAME_URL' || section.type === 'URL'" class="anchored"
-               href="{{section.data.link}}"
-               target="_blank">{{section.data.text}}</a>
-
-            <ng-container *ngIf="section.type === 'LABEL' || section.type === 'REPOSITORY'">
-                <ng-container *ngIf="section.data?.labelArray?.length; else missingDetailLabel">
-                    <ng-container *ngFor="let label of section.data?.labelArray">
-                        <ptooltip *ngIf="!tooltipAsText"
-                                  [tooltip]="label.tooltip.text"
-                                  [tooltipHtml]="prefixInternalLink(label.tooltip.html)" [position]="'n'">
-                            <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
-                                 [style.color]="labelColorsEnabled ? label.color : null"
-                                 [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
-                                <ng-container *ngIf="label.displayHtml; else detailLabelDisplayTextTooltip">
-                                    <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
-                                </ng-container>
-                                <ng-template #detailLabelDisplayTextTooltip>
-                                    {{label.display || label.name}}
-                                </ng-template>
-                            </div>
-                        </ptooltip>
-                        <div *ngIf="tooltipAsText" class="tt-container">
-                            <span class="label mylabel {{label.clazz}} tt-label" [class.label--plain]="!labelColorsEnabled"
-                                  [style.color]="labelColorsEnabled ? label.color : null"
-                                  [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
-                                <ng-container *ngIf="label.displayHtml; else detailLabelDisplayTextPlain">
-                                    <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
-                                </ng-container>
-                                <ng-template #detailLabelDisplayTextPlain>
-                                    {{label.display || label.name}}
-                                </ng-template>
-                            </span>
-                            <span class="tooltip-text tt-tooltip"
-                                  *ngIf="label.tooltip.text"
-                                  [innerHtml]="label.tooltip.text | sanitizeHtml"></span>
-                            <span class="tooltip-text tt-tooltip"
-                                  *ngIf="!label.tooltip.text && label.tooltip.html"
-                                  [innerHtml]="prefixInternalLink(label.tooltip.html | sanitizeHtml)"></span>
-                            <span class="tooltip-text tt-tooltip"
-                                  *ngIf="!label.tooltip.text && !label.tooltip.html && label.tooltip.plain">
-                                {{label.tooltip.plain}}
-                            </span>
-                        </div>
-                    </ng-container>
-                </ng-container>
-                <ul *ngIf="section.data?.detailLabels?.length" class="detail-list">
-                    <li *ngFor="let detail of section.data.detailLabels">
-                        <ng-container *ngIf="detail.displayHtml; else detailListText">
-                            <span [innerHtml]="detail.displayHtml | sanitizeHtml"></span>
-                        </ng-container>
-                        <ng-template #detailListText>{{detail.display || detail.name}}</ng-template>
-                    </li>
-                </ul>
-                <div class="repository-links" *ngIf="section.data?.type === 'REPOSITORY' && section.data?.urlList?.length">
-                    <a *ngFor="let link of section.data.urlList" [href]="link" target="_blank" rel="noopener noreferrer">{{link}}</a>
+      <div class="card-content">
+        @if ((tooltipAsText && resolveCriteriaDescription(section.criteria)); as criteriaDescription) {
+          <p
+            class="criteria-description">
+            <em [innerHtml]="criteriaDescription | sanitizeHtml"></em>
+          </p>
+        }
+        @if (section.type === 'NAME_URL' || section.type === 'URL') {
+          <a class="anchored"
+            href="{{section.data.link}}"
+          target="_blank">{{section.data.text}}</a>
+        }
+        @if (section.type === 'LABEL' || section.type === 'REPOSITORY') {
+          @if (section.data?.labelArray?.length) {
+            @for (label of section.data?.labelArray; track label) {
+              @if (!tooltipAsText) {
+                <ptooltip
+                  [tooltip]="label.tooltip.text"
+                  [tooltipHtml]="(prefixInternalLink(label.tooltip.html) | asAny)" [position]="'n'">
+                  <div class="label mylabel {{label.clazz}}" [class.label--plain]="!labelColorsEnabled"
+                    [style.color]="labelColorsEnabled ? label.color : null"
+                    [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
+                    @if (label.displayHtml) {
+                      <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
+                    } @else {
+                      {{label.display || label.name}}
+                    }
+                  </div>
+                </ptooltip>
+              }
+              @if (tooltipAsText) {
+                <div class="tt-container">
+                  <span class="label mylabel {{label.clazz}} tt-label" [class.label--plain]="!labelColorsEnabled"
+                    [style.color]="labelColorsEnabled ? label.color : null"
+                    [style.background-color]="labelColorsEnabled ? label.backgroundColor : null">
+                    @if (label.displayHtml) {
+                      <span [innerHtml]="label.displayHtml | sanitizeHtml"></span>
+                    } @else {
+                      {{label.display || label.name}}
+                    }
+                  </span>
+                  @if (label.tooltip.text) {
+                    <span class="tooltip-text tt-tooltip"
+                    [innerHtml]="label.tooltip.text | sanitizeHtml"></span>
+                  }
+                  @if (!label.tooltip.text && label.tooltip.html) {
+                    <span class="tooltip-text tt-tooltip"
+                    [innerHtml]="prefixInternalLink(label.tooltip.html | sanitizeHtml)"></span>
+                  }
+                  @if (!label.tooltip.text && !label.tooltip.html && label.tooltip.plain) {
+                    <span class="tooltip-text tt-tooltip"
+                      >
+                      {{label.tooltip.plain}}
+                    </span>
+                  }
                 </div>
-            </ng-container>
-
-            <span *ngIf="section.type === 'TEXT'">{{section.data.content}}</span>
-
-            <span *ngIf="section.type === 'MARKDOWN'"
-                  [innerHtml]="prefixInternalLink(section.data?.html | sanitizeHtml)"></span>
-
-            <span *ngIf="section.type === 'RATING'" [innerHtml]="prefixInternalLink(section.data?.html | sanitizeHtml)"></span>
-        </div>
+              }
+            }
+          } @else {
+            @if (showMissingIndicators) {
+              <div class="label mylabel label--missing">Missing</div>
+            }
+          }
+          @if (section.data?.detailLabels?.length) {
+            <ul class="detail-list">
+              @for (detail of section.data.detailLabels; track detail) {
+                <li>
+                  @if (detail.displayHtml) {
+                    <span [innerHtml]="detail.displayHtml | sanitizeHtml"></span>
+                  } @else {
+                    {{detail.display || detail.name}}
+                  }
+                </li>
+              }
+            </ul>
+          }
+          @if (section.data?.type === 'REPOSITORY' && section.data?.urlList?.length) {
+            <div class="repository-links">
+              @for (link of section.data.urlList; track link) {
+                <a [href]="link" target="_blank" rel="noopener noreferrer">{{link}}</a>
+              }
+            </div>
+          }
+        }
+        @if (section.type === 'TEXT') {
+          <span>{{section.data.content}}</span>
+        }
+        @if (section.type === 'MARKDOWN') {
+          <span
+          [innerHtml]="prefixInternalLink(section.data?.html | sanitizeHtml)"></span>
+        }
+        @if (section.type === 'RATING') {
+          <span [innerHtml]="prefixInternalLink(section.data?.html | sanitizeHtml)"></span>
+        }
+      </div>
     </ng-template>
-
-    <ng-template #missingDetailLabel>
-        <div *ngIf="showMissingIndicators" class="label mylabel label--missing">Missing</div>
-    </ng-template>
-
-    <div class="grouped-sections" *ngIf="groupedSections.length">
-        <pcard class="group-card" *ngFor="let group of groupedSections" [heading]="group.name">
-            <div class="group-card__header" *ngIf="group.labelText">
+    @if (groupedSections.length) {
+      <div class="grouped-sections">
+        @for (group of groupedSections; track group) {
+          <pcard class="group-card" [heading]="group.name">
+            @if (group.labelText) {
+              <div class="group-card__header">
                 <span class="group-card__label" [attr.title]="group.labelTooltip || null">{{group.labelText}}</span>
-            </div>
+              </div>
+            }
             <div class="group-card__sections">
-                <div class="group-card__section" *ngFor="let section of group.sections">
-                    <h4 class="group-card__section-title">{{section.criteria.name || section.criteria.id}}</h4>
-                    <ng-container *ngTemplateOutlet="sectionContent; context: {$implicit: section}"></ng-container>
+              @for (section of group.sections; track section) {
+                <div class="group-card__section">
+                  <h4 class="group-card__section-title">{{section.criteria.name || section.criteria.id}}</h4>
+                  <ng-container *ngTemplateOutlet="sectionContent; context: {$implicit: section}"></ng-container>
                 </div>
+              }
             </div>
-        </pcard>
-    </div>
-
-    <ng-container *ngFor="let section of ungroupedSections">
-        <pcard [heading]="section.criteria.name || section.criteria.id">
-            <ng-container *ngTemplateOutlet="sectionContent; context: {$implicit: section}"></ng-container>
-        </pcard>
-    </ng-container>
-
-</div>
+          </pcard>
+        }
+      </div>
+    }
+    @for (section of ungroupedSections; track section) {
+      <pcard [heading]="section.criteria.name || section.criteria.id">
+        <ng-container *ngTemplateOutlet="sectionContent; context: {$implicit: section}"></ng-container>
+      </pcard>
+    }
+  </div>
+}

@@ -1,9 +1,13 @@
-<div class="dialog" *ngIf="opened">
-    <div class="paper-header" *ngIf="heading">{{heading}}</div>
+@if (opened) {
+  <div class="dialog">
+    @if (heading) {
+      <div class="paper-header">{{heading}}</div>
+    }
     <div class="paper-content">
-        <ng-content></ng-content>
+      <ng-content></ng-content>
     </div>
     <div class="buttons">
-        <pbutton (click)="close()">Close</pbutton>
+      <pbutton (click)="close()">Close</pbutton>
     </div>
-</div>
+  </div>
+}
