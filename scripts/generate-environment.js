@@ -42,6 +42,7 @@ const envContent = `// Auto-generated from package.json by scripts/generate-envi
 
 export const environment = {
     production: true,
+    debug: false,
     // GitHub repository URL (source code)
     repositoryUrl: '${finalRepoUrl}',
     // GitHub Pages URL (published site/docs)

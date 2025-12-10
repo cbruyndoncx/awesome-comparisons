@@ -48,7 +48,7 @@
           <button type="button"
             class="select-toolbar__button"
             (click)="resetCriteriaSelections()"
-            [disabled]="!hasActiveFilters(state.currentSearch)">
+            [disabled]="!hasActiveFiltersSignal()">
             Reset selections
           </button>
         </div>
@@ -152,11 +152,11 @@
             </div>
           }
         </div>
-        @if (getActiveFilters(state.currentSearch); as activeFilters) {
-          @if (activeFilters.length > 0) {
+        @if (activeFilters(); as filters) {
+          @if (filters.length > 0) {
             <div class="applied-filters">
               <span class="applied-filters__label">Active filters:</span>
-              @for (filter of activeFilters; track filter) {
+              @for (filter of filters; track filter) {
                 @for (value of filter.values; track value) {
                   <button type="button"
                     class="applied-filters__pill"
@@ -170,7 +170,7 @@
               <button type="button"
                 class="applied-filters__pill applied-filters__pill--clear"
                 (click)="resetCriteriaSelections()"
-                [disabled]="!hasActiveFilters(state.currentSearch)">
+                [disabled]="!hasActiveFiltersSignal()">
                 Clear all
               </button>
             </div>

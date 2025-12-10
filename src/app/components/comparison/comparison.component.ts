@@ -1,4 +1,5 @@
-import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, ViewChild, ChangeDetectionStrategy, computed, Signal } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { VersionInformation } from '../../../assets/VersionInformation';
 import { PaperCardComponent } from '../polymer/paper-card/paper-card.component';
 import { Store } from '@ngrx/store';
@@ -21,16 +22,45 @@ import { take } from 'rxjs/operators';
     selector: 'comparison',
     templateUrl: './comparison.template.html',
     styleUrls: ['./comparison.component.css'],
-    standalone: false
+    standalone: false,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ComparisonComponent {
-    private activeFiltersCache: Array<{ id: string; label: string; values: string[] }> | null = null;
-    private lastSearchState: Map<string, Set<string>> | null = null;
-    
     public repository: string;
     public collapsedFilterGroups: { [groupKey: string]: boolean } = {};
     public ungroupedCollapsed: boolean = false;
     public filtersCollapsed: boolean = true;
+
+    // Signal-based state
+    public state = toSignal(this.store);
+    
+    public activeFilters = computed(() => {
+        const rootState = this.state();
+        // Handle wrapped ({ state: IUCAppState }) vs unwrapped (IUCAppState) structure if needed
+        // The store is typed as Store<{ state: IUCAppState }>, so rootState should be { state: IUCAppState }
+        const searchState = rootState?.state?.currentSearch;
+
+        if (!searchState) {
+            return [];
+        }
+
+        const results: Array<{ id: string; label: string; values: string[] }> = [];
+        searchState.forEach((values, key) => {
+            if (values && values.size > 0) {
+                const criteria = this.configurationService.configuration?.getCriteria(key);
+                const label = criteria?.name || key;
+                results.push({
+                    id: key,
+                    label,
+                    values: Array.from(values)
+                });
+            }
+        });
+        results.sort((a, b) => a.label.localeCompare(b.label));
+        return results;
+    });
+
+    public hasActiveFiltersSignal = computed(() => this.activeFilters().length > 0);
 
     @ViewChild('genericTableHeader') genericTableHeader!: PaperCardComponent;
     public activeRow: DataElement = new DataElement('placeholder', '', '', new Map());
@@ -434,64 +464,6 @@ export class ComparisonComponent {
         const groupsExpanded = relevantGroups.length === 0 || relevantGroups.every(group => !this.isGroupCollapsed(group));
         const otherExpanded = !hasUngrouped || !this.isUngroupedCollapsed();
         return groupsExpanded && otherExpanded;
-    }
-
-
-    public hasActiveFilters(searchState: Map<string, Set<string>>): boolean {
-        if (!searchState) {
-            return false;
-        }
-        for (const [, values] of searchState.entries()) {
-            if (values && values.size > 0) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public getActiveFilters(searchState: Map<string, Set<string>>): Array<{ id: string; label: string; values: string[] }> {
-        // Memoize to prevent unnecessary re-computation and template changes
-        if (!this.activeFiltersCache || !this.lastSearchState || !this.mapsEqual(searchState, this.lastSearchState)) {
-            this.activeFiltersCache = this.computeActiveFilters(searchState);
-            this.lastSearchState = new Map(searchState);
-        }
-        return this.activeFiltersCache;
-    }
-
-    private computeActiveFilters(searchState: Map<string, Set<string>>): Array<{ id: string; label: string; values: string[] }> {
-        if (!searchState) {
-            return [];
-        }
-        const results: Array<{ id: string; label: string; values: string[] }> = [];
-        searchState.forEach((values, key) => {
-            if (values && values.size > 0) {
-                const criteria = this.configurationService.configuration?.getCriteria(key);
-                const label = criteria?.name || key;
-                results.push({
-                    id: key,
-                    label,
-                    values: Array.from(values)
-                });
-            }
-        });
-        results.sort((a, b) => a.label.localeCompare(b.label));
-        return results;
-    }
-
-    private mapsEqual(map1: Map<string, Set<string>> | null, map2: Map<string, Set<string>> | null): boolean {
-        if (map1 === map2) return true;
-        if (!map1 || !map2) return false;
-        if (map1.size !== map2.size) return false;
-        
-        for (const [key, value] of map1.entries()) {
-            const otherValue = map2.get(key);
-            if (!otherValue) return false;
-            if (value.size !== otherValue.size) return false;
-            for (const item of value) {
-                if (!otherValue.has(item)) return false;
-            }
-        }
-        return true;
     }
 
     public removeFilter(criteriaId: string, value: string): void {
