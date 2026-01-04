@@ -2,7 +2,7 @@
 
 ## Project Architecture
 
-The application is an Angular 17+ SPA that renders static comparison data. It uses NgRx for state management and Polymer/Material components for UI.
+The application is an Angular 21+ SPA that renders static comparison data. It uses NgRx 20+ for state management and Material components for UI.
 
 ### Key Directories
 - `src/app`: Core Angular application.
@@ -13,7 +13,7 @@ The application is an Angular 17+ SPA that renders static comparison data. It us
 
 ## State Management
 
-The application uses **NgRx** for state management. The state architecture was refactored in Dec 2025 to improve maintainability.
+The application uses **NgRx 20+** for state management. The state architecture was refactored in Dec 2025 to improve maintainability.
 
 ### Structure
 - **State Interface**: Defined in `src/app/redux/uc.app-state.ts`.

@@ -1,28 +1,19 @@
 # Repository Guidelines
 
-## Agent Rules
-This file is updated running `tessl registry install`. If a linked file is missing, make sure to run the command to download any missing tiles from the registry.
+## Tessl & Spec Driven Development <!-- tessl-managed -->
+This project uses the [Tessl spec driven development framework](.tessl/framework/agents.md) and toolkit for software development: @.tessl/framework/agents.md
 
-## Knowledge Index
-Documentation for dependencies and processes can be found in the [Knowledge Index](./KNOWLEDGE.md). The Knowledge Index is a centralized reference for documentation about dependencies and processes used in the project. It helps ensure consistency when selecting dependency versions and provides quick access to relevant documentation.
+## Agent Rules <!-- tessl-managed -->
+@RULES.md follow the [instructions](RULES.md)
 
-## Agent Workflow
-- **Interview the user**: Before making significant changes, interview the user to get details and clarify requirements. Ask one or two questions at a time.
-- **Provide feedback**: Ask for feedback on proposed plans before implementation. Highlight key choices or potential gaps.
-- **Iterative approach**: Work in small increments, focusing on a few files at a time. Start with a simple version and add features iteratively.
+## Knowledge Index <!-- tessl-managed -->
+Documentation for dependencies and processes can be found in the [Knowledge Index](./KNOWLEDGE.md)
 
-## Plan Files
-ALWAYS create plan files when planning. Create a new plan file in the `plans/` directory at the root of the project.
-- Plan filename format: `YYYY-MM-DD_HH-mm-ss_descriptive-name.plan.md`
-- Keep the plan file in sync with your native task tracking tool.
-- Update the plan file immediately after completing EACH task. Do NOT batch updates.
-- Plan File Structure:
-    1. **Header**: Overall goal and background context.
-    2. **Task List**: Markdown checkboxes for each task.
-    3. **Task Outputs**: Document results as blockquotes after each task, including tool names, parameters, and summaries of output.
+## Plan Files <!-- tessl-managed -->
+ALWAYS create [plan files](.tessl/framework/plan-files.md) when planning: @.tessl/framework/plan-files.md
 
-## Project Bootstrapping
-Use Node 20+, then run `npm install` to populate `node_modules/`. Development targets Angular 21 with TypeScript 5 and NgRx 20, Gulp 4, and Angular CLI for build tooling. Build distributables with `npm run build` (invokes Angular CLI); publish with `npm run release`. Gulp now uses the built-in TypeScript md2json CLI located at `lib/md2json/dist/cli.js` for markdown-to-JSON conversion.
+## Project Bootstrapping <!-- tessl-managed -->
+Use Node 20+, then run `npm install` to populate `node_modules/`. Development targets Angular 21 with TypeScript 5 and NgRx 20, Gulp 4, and Angular CLI for build tooling. Build distributables with `npm run build` (invokes Angular CLI); publish with `npm run release`. Gulp now uses the built-in TypeScript md2json CLI located at `lib/md2json/dist/cli.js` for markdown-to-JSON conversion, eliminating the need for Python converter environment variables. Review `.tessl/framework/bootstrap.md` for automation notes.
 
 ## Project Structure & Module Organization
 Core Angular code lives in `src/app`, feature modules sit under `components/**`, and ngrx state is in `redux/**`. Global entry points (`main.ts`, `polyfills.ts`) plus HTML remain in `src/`. Comparison content lives in `data/`, YAML config in `configuration/`, and tooling (gulp, webpack, CLI) in `lib/`. Docs and static assets are under `docs/` and `src/assets/`.
