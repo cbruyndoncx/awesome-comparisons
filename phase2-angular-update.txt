@@ -1,8 +1,0 @@
-Repository is not clean. Update changes will be mixed with pre-existing changes.
-Using package manager: npm
-Collecting installed dependencies...
-Found 56 dependencies.
-Fetching dependency metadata from registry...
-Package '@angular/core' is already up to date.
-Package '@angular/cli' is already up to date.
-Angular update exit code: 0

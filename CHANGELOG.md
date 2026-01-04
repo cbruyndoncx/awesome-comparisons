@@ -5,19 +5,37 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## Unreleased
+## [3.0.0] - 2025-10-28
 
-### v3 (draft)
+### Added
 
-- Forked to v3 to add multi-dataset support, dataset-aware tooling, and a TypeScript md2json converter (no Java dependency).
-- Updated demo & docs publishing to support dataset-scoped pages under `docs/` or `public/`.
-- Breaking changes: build outputs and internal APIs are dataset-aware. See `CHANGELOG_V3.md` and `RELEASE_NOTES_V3.md` for migration guidance.
+- Support for multiple datasets in a single repository.
+- Per-dataset configuration, metadata, and build targets.
+- Dataset selector UI (tab strip) in the demo app and dataset-aware filters/grouping.
+- New top-level config keys for dataset management under the `datasets:` namespace.
+- New CLI flags: `--dataset <id>` to target a specific dataset and `--all-datasets` for bulk operations.
+- New test fixtures for multi-dataset scenarios.
 
+### Changed
+
+- Reworked repository layout and discovery to allow multiple dataset definitions alongside each other.
+- Updated tools and demo pages to select and visualize specific datasets.
+- Refactored internal APIs to accept dataset context/identifiers.
+- Updated build/publish workflows to support per-dataset artifacts.
+- Organized tests to run per-dataset.
+- Updated documentation under `docs/` and the `demo/` app to reflect multi-dataset usage and migration.
+
+### Breaking Changes
+
+- Paths, imports, and build outputs are now dataset-aware. Existing v2 layouts require migration.
+- Some legacy single-repo configuration options have been renamed or removed in favor of the dataset model.
+- Internal functions now require a dataset context argument.
+- Build output path layout for artifacts has changed.
 
 ### Removed
 
 - Java/Gradle md-to-json pipeline retired in favor of the built-in TypeScript md2json CLI at `lib/md2json/dist/cli.js` (no Java dependency).
-- lib/md-to-json directory has been removed.
+- `lib/md-to-json` directory has been removed.
 
 ## [v2.0.0-alpha.32] – 2020-02-21
 
@@ -83,6 +101,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Rate Limit exceeded for GitHub for up to 60 elements.
 
-[Unreleased]: https://github.com/ultimate-comparisons/ultimate-comparison-BASE/compare/v2.0.0-alpha.32...HEAD
+[Unreleased]: https://github.com/cbruyndoncx/awesome-comparisons/compare/v3.0.0...HEAD
+[3.0.0]: https://github.com/cbruyndoncx/awesome-comparisons/compare/v2.0.0-alpha.32...v3.0.0
 [v2.0.0-alpha.32]: https://github.com/ultimate-comparisons/ultimate-comparison-BASE/compare/v2.0.0-alpha.31...v2.0.0-alpha.32
 [v2.0.0-alpha.31]: https://github.com/ultimate-comparisons/ultimate-comparison-BASE/compare/1.0.0...v2.0.0-alpha.31

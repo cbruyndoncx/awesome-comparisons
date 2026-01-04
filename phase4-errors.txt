@@ -1,2 +1,0 @@
-Error: src/app/components/polymer/paper-checkbox/paper-checkbox.component.ts:36:38 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'KeyboardEvent'.
-Error: src/app/components/polymer/paper-checkbox/paper-checkbox.component.ts:37:38 - error TS2345: Argument of type 'Event' is not assignable to parameter of type 'KeyboardEvent'.

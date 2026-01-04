@@ -1,6 +1,0 @@
--rw-r--r-- 1 cb cb 7569 Dec  8 15:45 ANGULAR_21_UPGRADE_SUMMARY.md
--rw-r--r-- 1 cb cb 2390 Dec  8 15:45 PERFORMANCE_COMPARISON.md
--rw-r--r-- 1 cb cb 1471 Dec  8 15:28 PHASE1_RESULTS.md
--rw-r--r-- 1 cb cb 1903 Dec  8 15:34 PHASE2_RESULTS.md
--rw-r--r-- 1 cb cb 2534 Dec  8 15:39 PHASE3_RESULTS.md
--rw-r--r-- 1 cb cb 6121 Dec  8 15:45 PHASE4_RESULTS.md

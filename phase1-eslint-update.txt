@@ -1,8 +1,0 @@
-Repository is not clean. Update changes will be mixed with pre-existing changes.
-The installed Angular CLI version is outdated.
-Installing a temporary Angular CLI versioned 19.2.19 to perform the update.
-Repository is not clean. Update changes will be mixed with pre-existing changes.
-Using package manager: npm
-Collecting installed dependencies...
-Found 0 dependencies.
-Package '@angular-eslint/schematics' is not a dependency.

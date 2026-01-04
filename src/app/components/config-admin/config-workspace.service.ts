@@ -59,6 +59,12 @@ interface DatasetCriteriaBlueprint {
   loadedAt: number;
 }
 
+interface DatasetValueDisplayBlueprint {
+  datasetId: string;
+  overrides: Map<string, ValueDisplayModel[]>;
+  loadedAt: number;
+}
+
 interface BlueprintBuildResult {
   groups: CriteriaGroupModel[];
   assignedChildren: Set<string>;
@@ -99,6 +105,8 @@ export class ConfigWorkspaceService {
   private activeGroupingBlueprint: DatasetGroupingBlueprint | null = null;
   private datasetCriteriaCache = new Map<string, DatasetCriteriaBlueprint>();
   private activeCriteriaBlueprint: DatasetCriteriaBlueprint | null = null;
+  private datasetValueDisplayCache = new Map<string, DatasetValueDisplayBlueprint>();
+  private activeValueDisplayBlueprint: DatasetValueDisplayBlueprint | null = null;
   
   // Observable streams
   readonly catalog$: Observable<ConfigCatalogItem[]> = this.catalogSubject.asObservable().pipe(
@@ -491,7 +499,8 @@ export class ConfigWorkspaceService {
     const load$ = useBlueprintGrouping
       ? forkJoin({
           criteria: this.ensureDatasetCriteria(catalogItem),
-          grouping: this.ensureDatasetBlueprint(catalogItem)
+          grouping: this.ensureDatasetBlueprint(catalogItem),
+          valueDisplay: this.ensureDatasetValueDisplay(catalogItem)
         }).pipe(
           switchMap(() => this.http.get<any>(`${this.apiBaseUrl}/${catalogItem.encodedPath}`))
         )
@@ -526,6 +535,7 @@ export class ConfigWorkspaceService {
     this.clearDirtyState();
     this.activeGroupingBlueprint = null;
     this.activeCriteriaBlueprint = null;
+    this.activeValueDisplayBlueprint = null;
   }
 
   revertDocument(): Observable<ConfigDocumentModel> {
@@ -995,6 +1005,84 @@ export class ConfigWorkspaceService {
     );
   }
 
+  private ensureDatasetValueDisplay(catalogItem: ConfigCatalogItem): Observable<DatasetValueDisplayBlueprint | null> {
+    if (!this.enableBlueprintGrouping) {
+      this.activeValueDisplayBlueprint = null;
+      return of(null);
+    }
+
+    const datasetId = catalogItem.datasetId;
+    if (!datasetId) {
+      this.activeValueDisplayBlueprint = null;
+      return of(null);
+    }
+
+    const cached = this.datasetValueDisplayCache.get(datasetId);
+    if (cached) {
+      this.activeValueDisplayBlueprint = cached;
+      return of(cached);
+    }
+
+    return this.loadDatasetManifest().pipe(
+      map(entries => entries.find(entry => entry.id === datasetId) || null),
+      switchMap(entry => {
+        if (!entry) {
+          this.activeValueDisplayBlueprint = null;
+          return of(null);
+        }
+
+        const paths = this.extractValueDisplayDefaults(entry);
+        if (paths.length === 0) {
+          const blueprint: DatasetValueDisplayBlueprint = {
+            datasetId,
+            overrides: new Map(),
+            loadedAt: Date.now()
+          };
+          this.datasetValueDisplayCache.set(datasetId, blueprint);
+          this.activeValueDisplayBlueprint = blueprint;
+          return of(blueprint);
+        }
+
+        const uniquePaths = Array.from(new Set(paths));
+        const fetchRequests = uniquePaths.map(path => this.fetchCriteriaDocument(path));
+
+        return forkJoin(fetchRequests).pipe(
+          map(results => {
+            const overrides = new Map<string, ValueDisplayModel[]>();
+
+            results.forEach(result => {
+              if (result?.parsedDocument?.valueDisplay) {
+                Object.entries(result.parsedDocument.valueDisplay).forEach(([criteriaId, rawOverrides]) => {
+                  const models = this.toValueDisplayModel(criteriaId, rawOverrides);
+                  if (models.length > 0) {
+                    overrides.set(criteriaId, models);
+                  }
+                });
+              }
+            });
+
+            const blueprint: DatasetValueDisplayBlueprint = {
+              datasetId,
+              overrides,
+              loadedAt: Date.now()
+            };
+            this.datasetValueDisplayCache.set(datasetId, blueprint);
+            this.activeValueDisplayBlueprint = blueprint;
+            return blueprint;
+          })
+        );
+      }),
+      catchError(error => {
+        console.error(
+          '[ConfigWorkspaceService] Failed to load dataset value display defaults:',
+          error
+        );
+        this.activeValueDisplayBlueprint = null;
+        return of(null);
+      })
+    );
+  }
+
   private fetchCriteriaDocument(relativePath: string): Observable<{ path: string; parsedDocument: any } | null> {
     const encodedPath = this.encodeRelativePath(relativePath);
     if (!encodedPath) {
@@ -1055,10 +1143,10 @@ export class ConfigWorkspaceService {
     return entry.sources.configDefaults.filter(
       (path): path is string =>
         typeof path === 'string' &&
-        path !== 'configuration/comparison-default.yml' &&  // Exclude system default
-        !path.includes('groups') &&           // Not a grouping file
-        !path.includes('value-display') &&    // Not a value display file
-        path.endsWith('.yml')                 // Is a YAML file
+        // Include comparison-default.yml as it contains core criteria
+        // Include grouping files too as they contain secondary criteria definitions
+        !path.includes('value-display') &&
+        path.endsWith('.yml')
     );
   }
 
@@ -1068,7 +1156,18 @@ export class ConfigWorkspaceService {
     }
     return entry.sources.configDefaults.filter(
       (path): path is string =>
-        typeof path === 'string' && /groups.*\.ya?ml$/i.test(path)
+        typeof path === 'string' &&
+        (/groups.*\.ya?ml$/i.test(path) || path.includes('licensing'))
+    );
+  }
+
+  private extractValueDisplayDefaults(entry: DatasetManifestEntry): string[] {
+    if (!entry.sources?.configDefaults) {
+      return [];
+    }
+    return entry.sources.configDefaults.filter(
+      (path): path is string =>
+        typeof path === 'string' && path.includes('value-display')
     );
   }
 
@@ -1474,7 +1573,14 @@ export class ConfigWorkspaceService {
       ...this.buildCriteriaGroups(response.parsedDocument?.criteria)
     );
 
-    // Extract value display overrides
+    // Merge blueprint value display overrides first
+    if (this.enableBlueprintGrouping && this.activeValueDisplayBlueprint) {
+      this.activeValueDisplayBlueprint.overrides.forEach((overrides, criteriaId) => {
+        valueDisplayOverrides.set(criteriaId, [...overrides]);
+      });
+    }
+
+    // Extract document-specific value display overrides (take precedence)
     if (response.parsedDocument?.valueDisplay) {
       Object.entries(response.parsedDocument.valueDisplay).forEach(([criteriaId, rawOverrides]) => {
         const overrides = this.toValueDisplayModel(criteriaId, rawOverrides);
