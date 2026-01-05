@@ -198,44 +198,26 @@ export class ConfigurationService {
             }
         }
         
-        this.configuration.criteria = ConfigurationService.sortCriteriaByOrder(processedCriteria);
+        const criteriaMap = new Map<string, Criteria>();
+        processedCriteria.forEach(c => criteriaMap.set(c.id, c));
 
-        const grouping = this.featureGroupingService.parseGroupedMarkdown({
-            configuration: this.configuration,
-            data: Data.loadJson(dataSource, this.configuration)
+        processedCriteria.forEach(c => {
+            if (c.children && c.children.length > 0) {
+                const parentOrder = ConfigurationService.parseOrder(c);
+                c.children.forEach(childId => {
+                    const child = criteriaMap.get(childId);
+                    if (child) {
+                        const childOrder = ConfigurationService.parseOrder(child);
+                        if (childOrder < parentOrder) {
+                            child.order = c.order;
+                        }
+                    }
+                });
+            }
         });
-
-        const groupOrder = grouping.groups.map(g => g.key);
-        const criteriaGroupMap = grouping.columnGroupMap;
-
-        const tableCriteria = this.configuration.criteria
-            .filter(criteria => criteria.table)
-            .sort((a, b) => {
-                const groupA = criteriaGroupMap[a.id] || '';
-                const groupB = criteriaGroupMap[b.id] || '';
-                const groupIndexA = groupOrder.indexOf(groupA);
-                const groupIndexB = groupOrder.indexOf(groupB);
-
-                if (groupIndexA !== -1 && groupIndexB !== -1 && groupIndexA !== groupIndexB) {
-                    return groupIndexA - groupIndexB;
-                }
-                if (groupIndexA !== -1 && groupIndexB === -1) {
-                    return -1;
-                }
-                if (groupIndexA === -1 && groupIndexB !== -1) {
-                    return 1;
-                }
-
-                const orderA = ConfigurationService.parseOrder(a);
-                const orderB = ConfigurationService.parseOrder(b);
-
-                if (orderA !== orderB) {
-                    return orderA - orderB;
-                }
-
-                return a.id.localeCompare(b.id);
-            });
-
+        
+        this.configuration.criteria = ConfigurationService.sortCriteriaByOrder(processedCriteria);
+        const tableCriteria = this.configuration.criteria.filter(criteria => criteria.table);
         const primaryColumns: Array<string> = [];
         const remainingColumns: Array<string> = [];
 
@@ -356,6 +338,11 @@ export class ConfigurationService {
             }
         );
         this.dataElements = ConfigurationService.data.dataElements;
+
+        const grouping = this.featureGroupingService.parseGroupedMarkdown({
+            configuration: this.configuration,
+            data: ConfigurationService.data
+        });
 
         // Dispatch redux store action
         this.store.dispatch(
