@@ -123,5 +123,3 @@ According to performance analyses, Cheetah AI delivers 230% ROI for engineering 
 ### Terminal
 - No
 
-### SpecDrivenDevelopment
-- -

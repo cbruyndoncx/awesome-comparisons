@@ -148,7 +148,3 @@ Jolt is a commercial AI coding assistant designed for large production codebases
 ### Subagents
 - No
 
-### SpecDrivenDevelopment
-- No
-  - Jolt is not a spec-driven development tool. It is a code assistant that helps with code understanding and multi-file edits.
-

@@ -119,7 +119,3 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 - Yes
   - Third-party summaries and release notes report parallel multi-agent research/task execution capabilities to allow the assistant to research and plan across a project before executing tasks.
 
-### SpecDrivenDevelopment
-- No
-  - CodeCompanion.ai is a desktop AI coding assistant, not a spec-driven development tool.
-

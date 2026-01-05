@@ -121,7 +121,3 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
 - Yes
   - aiXcoder supports specialized workflows (search, generation, repair) that behave like subagents; enterprise/custom models or fine-tuned variants can be deployed to handle task-specific flows (e.g., network automation script generation).
 
-### SpecDrivenDevelopment
-- No
-  - aiXcoder is not a spec-driven development tool. It is an AI-powered code-completion and generation assistant.
-

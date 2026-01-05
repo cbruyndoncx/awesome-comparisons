@@ -130,7 +130,3 @@ Key capabilities include project-wide code indexing, plan decomposition, paralle
 - Yes
   - Work is decomposed and routed to specialized subagents that execute in parallel where appropriate.
 
-### SpecDrivenDevelopment
-- No
-  - Verdent Deck is not a spec-driven development tool. It is a desktop agent control center for planning, running, and validating autonomous coding agents.
-

@@ -122,7 +122,3 @@ The platform is positioned for both individual developer workflows (autocomplete
 - No
   - No public documentation indicating user-definable subagents or multi-agent orchestration; functionality is delivered via feature-focused components (docs, chat, transforms) rather than user-configured subagents.
 
-### SpecDrivenDevelopment
-- No
-  - MutableAI is an AI-native developer platform, not a spec-driven development tool.
-

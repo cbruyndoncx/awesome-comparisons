@@ -158,7 +158,3 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
 - Yes
   - ToolJet provides AI/automation capabilities (Agent Builder / automation workflows in enterprise editions) that act like specialized subagents: they can orchestrate queries, connectors, and LLM calls to automate tasks or respond to prompts. Additionally, integrations with LLMs and MCP enable external AI assistants to interact with ToolJet programmatically.
 
-### SpecDrivenDevelopment
-- No
-  - ToolJet is a low-code internal app builder, not a spec-driven development tool.
-

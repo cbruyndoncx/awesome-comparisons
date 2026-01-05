@@ -199,6 +199,3 @@ Unified view across all comparisons
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 ## Ungrouped Criteria
 
-### SpecDrivenDevelopment
-
--

@@ -129,7 +129,3 @@ Amp is designed as an "agentic" coding assistant that can autonomously reason th
 - Yes
   - Specialized agents/components (Librarian, review agents, task-specific helpers) enable task decomposition and targeted workflows.
 
-### SpecDrivenDevelopment
-- No
-  - Amp is an agentic AI coding assistant, not a spec-driven development tool.
-

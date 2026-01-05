@@ -136,6 +136,3 @@ Google's payments platform team implemented the model to fix fragile UI tests, s
 - No
   - Operates through UI interaction, not terminal
 
-### SpecDrivenDevelopment
-- Unknown
-  - No public documentation found.

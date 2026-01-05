@@ -141,7 +141,3 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
 ### Subagents
 - No
 
-### SpecDrivenDevelopment
-- No
-  - CodeWP is an AI-assisted code generator, not a spec-driven development tool.
-

@@ -2,6 +2,7 @@ criteria:
   - Terminal:
       type: LABEL
       values:
+        The IDE has an integrated AI terminal for executing commands.: {}
         'Yes': {}
         'No': {}
   - Opensource:
@@ -61,6 +62,7 @@ criteria:
         '-': {}
         A free/solo tier exists (open-source extensions + hub access for public/shared blocks). Paid team/enterprise tiers add governance and private deployment options.: {}
         Free Hobby tier available with limited agent requests; Pro trial options are commonly offered for evaluation.: {}
+        'Freemium model: free tier with limited daily credits (e.g. a free plan with daily credits for model usage); paid tiers unlock more credits/models.': {}
         Available during preview; typical Firebase usage quotas and billing apply once services are provisioned beyond free tier limits.: {}
         The product advertises a free trial that does not require a credit card: {}
         Copilot has free tiers (e.g., Copilot Free for qualifying users) and trial/paid plans (Pro/Business/Enterprise) with different capabilities.: {}
@@ -78,13 +80,13 @@ criteria:
         New users get a limited number of free generations (commonly reported as ~10 free uses) and a short trial period to evaluate the service.: {}
         The extension itself is free/open-source; model usage costs depend on the API keys/providers you supply.: {}
         Limited beta access was offered during initial launch windows.: {}
+        Unknown: {}
         Free tier/self-hosted free edition for small teams and public code; paid Business/Enterprise plans for larger teams and advanced features.: {}
         Community edition is free & open-source; Team/Enterprise tiers exist commercially for additional features/support.: {}
         'Any additional details: Tabnine sunset its free Basic plan in 2025; access is primarily through paid tiers or enterprise licensing. Trial or pilot options may still be available via sales.': {}
         Theia is free/open-source (no trials); commercial services built on top of it may have separate licensing/pricing.: {}
         As of early 2025 Trae was distributed free with access to several premium models included: {}
-        Unknown: {}
-        No public pricing or trial information available; product may be in early access/beta with limited availability: {}
+        7-day free trial with 100 credits.: {}
         Core editor is free and open-source.: {}
         The editor and source are available openly; binaries are freely downloadable. (See "Notes" about binary EULA nuance.): {}
         'Yes': {}
@@ -100,6 +102,7 @@ criteria:
         Built-in MCP client and HumanLayer SDK enable tool/function calls, approvals, and lifecycle events (e.g., function_call.*, human_contact.*). Sessions can surface tool metadata and perform approved side-effecting operations via the platform's tool integrations.: {}
         Integrates with Model Context Protocols for adding context providers (GitHub, Jira, etc.) and usable via the hub.: {}
         Not documented as an MCP client in the same style as some other editor integrations.: {}
+        Integrates with external LLM providers via user API keys; no documented dedicated MCP client/service.: {}
         Firebase Studio uses Gemini models; no public documentation found for general MCP client support: {}
         No public documentation found for MCP (Model Context Protocol) client support; primarily uses direct LLM integrations: {}
         supports MCP Server Marketplace (JSON-based tool integrations / extensions): {}
@@ -108,6 +111,7 @@ criteria:
         mux uses model adapters (Ollama, OpenRouter, etc.) rather than an MCP-specific client.: {}
         Nuanced is explicitly implemented as an MCP server to deliver structured code context to LLM-based agents.: {}
         No public documentation found regarding MCP (Model Context Protocol) support: {}
+        Refact.ai includes support for the Model Context Protocol (MCP) ecosystem. The platform can act as an MCP client/consumer to request structured context from MCP servers and to integrate external tools and data sources into agent workflows. MCP integration enables richer, streamable, and structured context delivery (e.g., database rows, code search results, tool outputs) to the agent, improving grounding and long-context operations.: {}
         'Implementation notes:': {}
         Refact's architecture exposes connectors and integrations that can be used to surface external information to the agent; MCP support is used to standardize these exchanges.: {}
         MCP usage in Refact allows dynamic discovery of tools and data sources and can be configured in self-hosted deployments.: {}
@@ -117,7 +121,7 @@ criteria:
         Tabnine/Tabnine Agent supports Model Context Protocol (MCP) servers configured via an mcp_servers.json file. The Agent can launch local STDIO MCP servers, connect to remote MCP endpoints (HTTP/SSE), and manage server lifecycle for integrations that expose external tooling and data to the assistant.: {}
         'Examples: local STDIO servers (command + args), remote HTTP endpoints with JWT/API key headers, and transport detection based on configuration.': {}
         Model Context Protocol support added in v1.3.0 to enable custom agents and richer context handling: {}
-        No public documentation found regarding MCP (Model Context Protocol) support; check with vendor for current capabilities: {}
+        Verdent for VS Code includes "MCP Integration," meaning it can act as an MCP client.: {}
         MCP servers are integrated similar to other extensions like e.g. theming: {}
         'Yes': {}
         'No': {}
@@ -142,6 +146,7 @@ criteria:
         Prompts and building blocks can be shared via Continue Hub for reuse across teams: {}
         DevoxxGenie provides built-in prompt templates and allows users to create, save and manage custom prompts via the Prompts settings page.: {}
         The `/init` slash command can generate a DEVOXXGENIE.md project descriptor and add it to the system prompt for improved contextual responses.: {}
+        Provides built-in system prompts, planning prompts (/Plan), and contextual prompt templates. Supports user-specified prompts and file-tagging to control context.: {}
         Gemini-powered prompt enhancements and an "Enhance your prompt" feature help refine natural-language prompts.: {}
         'Best practices: be specific about features, data models, authentication needs, UI expectations; iterate rather than ask for the entire app in a single prompt.': {}
         Supports multimodal prompts (text, images, Figma imports) for richer prototypes.: {}
@@ -225,6 +230,7 @@ criteria:
         CLI (`cn`) provides headless automation and scripting; IDE extensions expose tool interactions in-editor: {}
         Supports configuring local and remote model endpoints (BYOK): {}
         DevoxxGenie integrates RAG tooling (ChromaDB) and local model runners (Ollama, GPT4All) to provide semantic search and local LLM execution. It also supports cloud provider tools via API connectors (OpenAI, Anthropic, Gemini, etc.).: {}
+        Ships with integrated debugger/tracer, project analyzers, deployment helpers and quick-edit tooling (CMD/CTRL+E) exposed in the IDE and extensions.: {}
         App Prototyping agent (natural-language & image-driven generator).: {}
         Code OSS (VS Code-compatible) IDE with Gemini extension and in-IDE chat.: {}
         Preview/Hosting tools (live preview, QR codes, one-click deploy to Firebase Hosting).: {}
@@ -300,6 +306,7 @@ criteria:
         Official docs at https://continue.dev and source at https://github.com/continuedev/continue: {}
         MCP integrations and context providers (GitHub, issue trackers, error monitoring) available as resources: {}
         Project README and JetBrains Marketplace listing provide usage docs and release notes. Community videos and blog posts (Devoxx talks, YouTube demos) supplement official docs.: {}
+        Documentation, tutorials and examples for Flow IDE, VS Code and JetBrains integrations are available on the EasyCode site and docs.: {}
         Can access workspace files, repositories, and Firebase resources for context: {}
         Includes PRD templates, wireframe and user-journey artifacts, suggested tech stacks, API and data model sketches, and exportable tickets/user stories for development workflows.: {}
         Official GitHub feature pages, blog announcements, and preview documentation were available during the technical preview; some content was archived after the preview sunset.: {}
@@ -373,7 +380,7 @@ criteria:
         Sourcegraph Cloud does not publicly advertise a generic BYOK feature; however self-hosted deployments give organizations full control over their infrastructure and encryption boundaries.: {}
         Tabnine supports OpenAI API-compatible endpoints and private certificate authorities for enterprise integrations, and allows organizations to configure custom model endpoints or self-hosted model deployments (Gemma, Qwen, etc.). These capabilities let enterprises use their own model endpoints and credentials in managed/private deployments.: {}
         'Theia AI and integrations follow a bring-your-own-key / bring-your-own-model philosophy: you can configure external LLM providers or self-hosted models (e.g., Ollama, LlamaFile, hosted Anthropic/OpenAI keys) depending on deployment and data-control needs.': {}
-        No public information found about bring-your-own-key support; enterprise deployment options may be available: {}
+        No public documentation found for BYOK support.: {}
         Zed supports OpenAI-compatible providers and can be configured to use local LLM hosts (e.g., Ollama) so you can run models with your own keys or entirely offline.: {}
         'Yes': {}
         'No': {}
@@ -382,7 +389,7 @@ criteria:
       values:
         AIXcoder emphasizes local/offline model operation so code and context can remain on-device. The product also offers cloud modes for extended functionality.: {}
         Cloud-first product; local/in-IDE operations likely use cloud model/augmentation: {}
-        '[Brokk''s client is open-source Java software; it ships with or can leverage Jlama for local/tiny-model inference and supports workflows that minimize cloud calls. Some advanced features may use hosted models depending on configuration.]': {}
+        Brokk's client is open-source Java software; it ships with or can leverage Jlama for local/tiny-model inference and supports workflows that minimize cloud calls. Some advanced features may use hosted models depending on configuration.: {}
         'Any additional details like Ollama: supports local model hosts (Ollama, LM Studio) as backends for offline/local use': {}
         Primarily designed to run with Claude Code / Anthropic-backed sessions rather than purely local model hosting]: {}
         Supports local model workflows (e.g. via Ollama/local LLMs) and headless/offline operation for air-gapped environments.: {}
@@ -459,6 +466,7 @@ criteria:
         'Chat memory configuration: configurable message history length (default ~10) stored locally.': {}
         'Include/exclude patterns and .gitignore awareness: filter files and directories with wildcards and respect .gitignore to avoid sending irrelevant or sensitive files.': {}
         'AST-aware context: automatic inclusion of parent class and related symbols to improve code-understanding prompts.': {}
+        Project-wide context awareness, automatic file relevance analysis, and manual file/tag selection (e.g., @file references) to scope prompts and implementations.: {}
         'Chat- and workspace-centered context: Gemini-in-Firebase chat + the Code OSS workspace provide the active context (open files, project settings, App Blueprints, Genkit configuration, and provisioned Firebase resources). Methods to update context include editing files in the IDE, committing to the integrated Git repo, changing project/settings in the workspace, re-running prototype prompts, and interacting with the in-IDE chat (Gemini) which reads workspace files to inform responses. There is no public programmatic "context API" documented in the preview — context is primarily managed via the workspace and chat.': {}
         Step-by-step product-definition UI (vision & goals, MVP prioritization, PRD generation) that captures and updates product context.: {}
         MoSCoW prioritization controls to manage feature importance within the project context.: {}
@@ -571,6 +579,7 @@ criteria:
         Drag-and-drop files or images directly into the input field to attach them to the prompt.: {}
         Explicitly add open files, specific files or directories via the Project Scanner or the UI to include them in context.: {}
         Copy/paste code snippets into the prompt; responses preserve syntax highlighting and can reference exact file paths when applicable.: {}
+        Supports manual file tagging and contextual references to include files in prompts and implementation tasks.: {}
         'Files can be directly referenced and accessed inside the workspace: open files in the Code OSS-based IDE, import repositories (GitHub/GitLab/Bitbucket), upload archives, and use plugins (e.g., Builder.io Figma import) to bring design files into the project. Gemini and the App Prototyping agent access the workspace files to provide contextual code generation and edits. There is no public external file-reference API documented beyond the workspace and VCS integration.': {}
         No public feature documented for directly referencing repository files or attaching arbitrary external files as "live" references in the product context; inputs are primarily web-form/text-driven with export connectors.: {}
         Plans explicitly list repository files that will be created, modified, or deleted; generated outputs are presented as file-level diffs.: {}
@@ -659,6 +668,7 @@ criteria:
         Agent edits and Composer changes are presented as diffs and create checkpoints or restore points so you can revert unwanted changes.: {}
         'While DevoxxGenie doesn''t provide a built-in "checkpoint/undo" system for code edits, typical IDE workflows provide recovery: IntelliJ Local History, VCS (Git) commits and rollbacks, and saved chat history to re-run decisions.': {}
         Chat history stored locally allows re-opening prior conversations and re-applying previously used prompts/contexts.: {}
+        Integrates with local git repositories and provides edition checkpoints and undo flows within the IDE; supports human review before commits.: {}
         'Undo and rollback are handled primarily via standard version control (Git) integration: commits, branches, and repo history allow reverting agent-made changes. Workspace share URLs, preview deployments and published app versions provide additional reference points, but there is no documented first-class "agent checkpoint" system independent of source control in the preview.': {}
         No explicit checkpoint/undo/versioning mechanism is documented publicly; inquire with the vendor for data retention, revision history, or rollback capabilities.: {}
         Workspace tracked session state and maintained a history of edits; generated changes were presented as diffs and could be revised, undone, or committed as PRs.: {}
@@ -670,6 +680,7 @@ criteria:
         The workflow explicitly includes human review checkpoints and automated test generation at two granularities (unit tests after steps, integration/e2e tests after tasks). Work is persisted in a workspace with Git support and a CLI/VS Code integration, enabling manual rollbacks or inspection. The system's "95% automated / 5% human oversight" model makes checkpoints first-class (stop-and-review before progressing).: {}
         The assistant supports review-before-apply for generated edits (preview diffs). Users can accept or reject changes. Additionally, JetBrains IDEs provide VCS integration (Git) and Local History, enabling undo/revert of applied changes even if the assistant makes edits. These mechanisms together act as checkpoints for recovery.: {}
         No public documentation of built-in checkpoint/undo features. Jolt supports exporting patches and integrates with git/IDE workflows, so rollbacks are typically handled via VCS (branches, commits) or IDE undo rather than an internal checkpoint system.: {}
+        Kilo Code automatically creates checkpoints (snapshots of your project's state) in a shadow Git repository. This allows for safe experimentation with AI-suggested changes, easy recovery from unwanted modifications, and reverting to previous project states.: {}
         Generated code and projects are pushed to GitHub repositories, which provides standard version-control checkpoints (commits, branches, revert). Because the platform writes to Git repos, users can undo or revert generated changes via normal Git workflows. There is no widely advertised separate "checkpoint/restore" feature beyond standard VCS usage in public product notes.: {}
         'Git integration and source control: MarsX exposes Git support for projects/microapps, enabling standard commit/rollback workflows and history-based recovery.': {}
         'Micro‑App versioning and marketplace releases provide another checkpoint mechanism: published microapps can be versioned and rolled back to prior published releases.': {}
@@ -724,7 +735,7 @@ criteria:
         'First-class git integration: local worktrees, SSH clones, git divergence UI and review workflow.': {}
         Designed to integrate with developer workflows; commonly used alongside git-based repositories for initialization and analysis.: {}
         Integrates with Git workflows; offers @diff referencing of branch changes and commit workflow helpers: {}
-        Refraction provides GitHub integration features, including an "Autoreview" GitHub Marketplace plugin that can generate PR descriptions and automated reviews. It also offers IDE/editor extensions (Sublime Text, VS Code) and a Terminal extension to facilitate working with repositories. There is limited public documentation about a full-featured REST API or advanced repo management features; contact Refraction for enterprise or API access details.: {}
+        Provides GitHub integration, including an "Autoreview" GitHub Marketplace plugin, and IDE/editor extensions (Sublime Text, VS Code) to work with repositories.: {}
         RooCode can run terminal/cli actions and operate on workspace files; many users run git commands through the integrated terminal or via custom MCP servers.: {}
         Deep integrations with Git-based hosts and workflows; built to index and search Git repositories at scale.: {}
         Integrates with IDEs and understands repository context; includes features that operate across the repo and work with recent edits: {}
@@ -797,6 +808,7 @@ criteria:
         Extension/integration points exist for model providers, team commands, and tooling integrations; the ecosystem is growing.: {}
         DevoxxGenie itself is a JetBrains plugin and can be extended by modifying its source or contributing upstream; it supports connectors to different model backends (local or cloud) and MCP servers.: {}
         Prompts, MCP connectors and embedding/RAG pipelines are the primary extensibility points exposed to users and integrators.: {}
+        Offers VS Code and JetBrains plugins/extensions; the Flow IDE acts as a native application with plugin-style integrations.: {}
         'Firebase Studio exposes integrations and plugin-like extensions in the preview (examples: Builder.io Figma import, Genkit integration, template gallery, and Git provider integrations). These are enabled/configured through the workspace UI (import plugin/integration or select templates) and by provisioning AI resources (Gemini/Genkit) into the workspace; developer-facing documentation for authoring third-party plugins or bundling commands/agents/hooks is not publicly detailed in the preview documentation.': {}
         'From021 does not expose a plugin system for bundling commands/agents/hooks. Integrations are provided as export connectors (examples: Trello, JIRA, v0, Lovable, Cursor) rather than a plugin marketplace or SDK.': {}
         While the Workspace integrated with developer tooling (Codespaces, VS Code extension) and could open sessions in those environments, there was no documented plugin system for bundling custom commands, agents, and hooks inside Workspace itself.: {}
@@ -857,6 +869,7 @@ criteria:
         dynamic_task__create_task and subagent__execute_task tool descriptions: {}
         No public lifecycle hook API documented for external integrations; Cursor focuses on agent tooling and dashboard-managed team commands.: {}
         The plugin does not expose a documented lifecycle hook system for third‑party attachments; integrations are done via MCP servers or by extending the plugin source (JetBrains plugin APIs).: {}
+        No public documentation of lifecycle hook system; primary extensibility surfaces are editor extensions and planner/implementation workflows.: {}
         Other: {}
         Firebase Extensions lifecycle events (onInstall, onUpdate, onConfigure) are used for extension-level hooks, but Firebase Studio does not publish a developer-facing agent lifecycle hook API in the preview documentation. Use cases like backfills and configuration-time tasks are handled via Cloud Functions and Cloud Tasks when authoring Firebase Extensions.: {}
         No public developer hooks or lifecycle event attachments are documented for From021.: {}
@@ -866,6 +879,7 @@ criteria:
         GitHub Apps and Copilot Extensions integrate via the Copilot Extensibility APIs which expose request/context arrival and response phases; developers implement handlers to process and respond to chat/agent requests.: {}
         No documented lifecycle hooks API for third-party integrations; customization is achieved by editing agent/orchestration code.: {}
         No public, documented lifecycle "hooks" specific to the AI Assistant (e.g., webhooks or plugin lifecycle events tied to assistant actions) are exposed in JetBrains' public AI Assistant documentation. However, JetBrains IDEs provide a plugin SDK with listener and extension points for IDE events, so plugin authors can hook into IDE lifecycle events and potentially integrate with or extend AI workflows via the general plugin API.: {}
+        Kilo Code does not expose a traditional "hooks" or "lifecycle events" API for external developers.: {}
         Integrations (GitHub repository creation/push, mail integrations, S3 uploads, and external account connections) imply event-driven interactions and integration endpoints that can function like hooks for automation. The product surface indicates output/actions (repo push, deployed app artifacts) that external systems can react to. There is no explicit public reference to a user-facing "webhooks management" UI or exhaustive lifecycle hook API in the available product notes.: {}
         Unknown: {}
         The public materials describe microapps, AI models and marketplace mechanics, but do not provide an explicit list of lifecycle hooks or plugin hooks exposed to developers (e.g., pre-deploy, post-install hooks). Detailed hook semantics are not available in public docs discovered.: {}
@@ -884,7 +898,8 @@ criteria:
         Server and integration configuration allow lifecycle behaviors and custom integrations (e.g., indexing pipelines, webhooks for external systems).: {}
         'Theia provides lifecycle and contribution hooks via well-known contribution interfaces: FrontendApplicationContribution (initialize, onStart, onStop), BackendApplicationContribution, CommandContribution, MenuContribution, KeybindingContribution, and LanguageClient contributions. Extensions register disposables and use activation events (commands, file types, workspace events) to run code at specific lifecycle points. There are also workspace events (onDidChangeWorkspace, onWillSaveTextDocument, onDidChangeTextDocument) and backend/frontend RPC lifecycle hooks.': {}
         '[Trae exposes lifecycle checkpoints in its planning+execution model: planning / preview ("think-before-doing"), execution (apply changes), deploy, and error/rollback. Through MCP-custom agents and the Builder API, users can attach pre-plan constraints, intercept previews, validate planned modifications, and trigger post-execution actions (e.g., run tests or create commits). While exact hook names/SDK methods depend on Trae''s MCP client implementation, these lifecycle attachment points are available conceptually and via custom agents.]': {}
-        No public documentation found for lifecycle hooks; product uses specialized subagents which may provide hook-like capabilities: {}
+        No public documentation found.: {}
+        While not explicitly called "hooks," Verdent provides "rule configuration" and "custom subagents" that can be used to achieve similar functionality.: {}
         Exposes VS Code-compatible extension hooks and lifecycle events; extension API and built-in AI workflows provide event points for actions like command invocation, file edits, and agent lifecycle (permission prompts, start/stop).: {}
         'AI Flows lifecycle: Cascade''s flows have explicit stages (plan -> generate -> request approval -> execute commands -> iterate) that can be treated like lifecycle events and instrumented with rules and approvals.': {}
         'Terminal/command approval hooks: Before executing terminal commands or making repo changes, Cascade prompts for confirmation and displays diffs, enabling an attachable checkpoint/approval step.': {}
@@ -916,6 +931,7 @@ criteria:
         Cursor's interaction model centers on Composer/Agent UIs rather than slash-command sets like some other editor assistants.: {}
         Supports prompt-style slash commands from the input field (notably `/init` to create a DEVOXXGENIE.md project descriptor).: {}
         Commands and shortcuts are entered directly in the chat input and can be combined with context selections (files, images, project scanner options).: {}
+        Includes slash commands such as /Plan for planning workflows and quick-edit triggers in the IDE and extensions.: {}
         Firebase Studio (Gemini in Firebase) supports slash commands for common tasks such as /fixError, /helpWithError, /addComments, /explain, /transform, and /generate. These commands accelerate common code edits, explanations, and refactors.: {}
         Use `/` in the chat to see available commands; many commands are surfaced contextually based on selected code or active files.: {}
         The Firebase MCP server provides pre-written prompts surfaced as slash commands (e.g., /firebase:init) in some tool integrations.: {}
@@ -926,6 +942,7 @@ criteria:
         In IDE integrations, extension commands (command palette, context menu, chat commands) let users trigger predefined behaviors or workflows.: {}
         Not documented as a chat platform with slash-command interfaces; primary interfaces are CLI and VS Code extension.: {}
         There is no widely-documented, global "slash command" mechanic inside JetBrains AI Chat analogous to chat-platform slash commands. Users invoke functionality through the chat UI, mode selection (Chat vs Agent), context buttons, and model/option menus rather than typed slash commands. Some quick actions (e.g., apply suggestion, accept completion, run tests) are exposed as UI controls rather than textual slash commands.: {}
+        Kilo Code utilizes slash commands for various functionalities, particularly for switching between specialized modes and managing tasks.: {}
         The platform exposes reusable role-driven actions via its AI Employees (pre-built role behaviours that can be triggered to perform tasks like inbox triage, social scheduling, outreach). While not literally described as "slash commands," these role actions act as repeatable, triggerable automation primitives in the product. There is no public mention of a chat-style slash-command syntax for end users.: {}
         Unknown: {}
         There's no explicit public documentation indicating the presence of a slash-command interface inside the MarsX IDE or chat interfaces. The platform does have a conversational AI interface for Micro‑App interactions, but whether it supports user-defined slash commands is not documented.: {}
@@ -948,7 +965,7 @@ criteria:
         Editor integrations and chat interfaces expose command-like interactions (mentions/slash-style commands) in supported clients.: {}
         Theia has a first-class commands system. Extensions declare commands via CommandContribution and register handlers with CommandRegistry; commands appear in the Command Palette and can be bound to keybindings or menus. Users can manually trigger commands from the palette, context menus, or keybindings. Commands can be enabled/disabled via context expressions and can execute either frontend logic or delegate work to the backend/container.: {}
         '[Trae supports natural-language command syntax and special inline/directives (examples reported: @Agent, #Context) and provides chat/command surfaces (sidebar/inline). These act like reusable, user-invoked commands and can be used to scope agent behavior, request specific actions, or switch modes (e.g., invoking Builder or SOLO).]': {}
-        No public documentation found for slash commands; product uses guided prompts and Plan Mode instead: {}
+        No public documentation found.: {}
         'Void provides keyboard-driven commands and a command palette (similar to VS Code) and exposes shortcuts for AI actions (examples: Ctrl+K for inline edits, Ctrl+L for chat). These commands are manually triggerable and reusable via the palette or keybindings.': {}
         'Command palette & inline commands: Windsurf provides contextual command suggestions (including terminal commands) and an inline/command-palette style interface for invoking reusable commands or code transformations.': {}
         'Zed supports a set of slash commands in the Assistant/Agent Panel for context injection:': {}
@@ -988,6 +1005,7 @@ criteria:
         'DEVOXXGENIE.md + saved prompts: create project-specific prompt templates and system prompts to tailor the assistant''s behaviour.': {}
         'Per-model settings: choose different LLM providers, model parameters, memory sizes and token cost constraints to create tailored working modes.': {}
         UI options (RAG on/off, project scanner scope, AST context inclusion) act as mode configuration switches.: {}
+        Distinct Planning, Implementation and Debugging modes that change how the agent reasons about the codebase and produces outputs.: {}
         Provides specialized workflows through App Prototyping agent and Gemini in-IDE chat for different development tasks: {}
         There is no public support documented for creating persistent custom "modes" that change agent behavior; users can adjust inputs and settings per project to influence generated outputs.: {}
         There was no documented feature for users to create specialist modes that change the overall chat/agent behavior beyond editing specs/plans and choosing when to regenerate.: {}
@@ -1020,8 +1038,8 @@ criteria:
         While Tabnine does not provide a full agent-creation framework, it exposes many configurable modes and admin controls including completion behaviour settings (whole-line vs token, multiline), model & deployment choices, policy & privacy settings, and per-workspace configuration that produce different operational modes per repo.: {}
         Theia supports custom "modes" through language/monaco registrations, custom editors, themes, keymaps, and preference scopes. Extensions can register language contributions (syntax, tokens, language IDs), Monaco editor modes, and view/editor behavior, enabling specialist modes tailored for tasks (e.g., embedded development, data science notebooks, AI copilots).: {}
         '[Trae provides multiple specialist modes out-of-the-box (Builder Mode, SOLO Mode, SOLO Builder) and supports creating tailored workflows via custom agents and MCP-driven sessions. Modes change how the agent plans, previews, and executes changes (manual-review vs autonomous execution), and can be switched by command or configuration.]': {}
-        '-': {}
-        Plan Mode provides structured, verification-first workflows; product is built around specialized modes and subagent orchestration: {}
+        No public documentation found.: {}
+        Verdent offers "collaboration modes" and allows configuration of AI models for different tasks.: {}
         'Void ships with specialized modes (Agent Mode, Gather Mode, Chat) and supports prompt and model configuration so users can create tailored workflows. Users can:': {}
         Save or edit prompts and model choices to approximate custom modes.: {}
         Use workspace settings and extensions (VS Code-compatible) to persist custom behavior per-project.: {}
@@ -1058,6 +1076,7 @@ criteria:
         'MCP (Model Context Protocol) integration: connect to external MCP servers which act as specialized agents/subagents for tool execution and richer workflows.': {}
         RAG and embedding pipelines function as retrieval subagents (local embedding provider + Chroma DB) to augment generation.: {}
         The architecture (Langchain4J + Java) enables integration with external model servers and agent-like workflows.: {}
+        Agentic workflows and task decomposition suggest subagent-like behavior (automated planners, implementation workers and debug tracers); exposes multi-step task orchestration.: {}
         App Prototyping agent handles specialized tasks for app generation and scaffolding: {}
         From021 does not document the ability to define specialized AI subagents or task-specific agent workflows; AI appears to be built-in to the product flows.: {}
         Copilot Workspace used specialized built-in agents (e.g., brainstorm agent, plan agent, repair agent, follow-up) to handle different stages of the Task→Spec→Plan→Code workflow.: {}
@@ -1155,35 +1174,13 @@ criteria:
       rangeSearch: false
       children:
         - Terminal
-        - SpecDrivenDevelopment
-  - SpecDrivenDevelopment:
-      name: SpecDrivenDevelopment
-      type: LABEL
-      search: true
-      table: true
-      detail: true
-      description:
-        template: Default description for {}
-        variables:
-          - name
-      placeholder:
-        template: Select {} ...
-        variables:
-          - name
-      order: ''
-      andSearch: false
-      rangeSearch: false
-      values:
-        'Yes':
-          display: ✅
-        'No':
-          displayHtml: <span class="status status-no">✖</span>
-        '-': {}
   - Classification:
       type: LABEL
       values:
+        Local-first, agentic IDE optimized for Next.js + Supabase: {}
+        Ships as a standalone Flow IDE with VS Code and JetBrains integrations; provides agentic workflows and project-wide context management: {}
         'Primary focus: Model prototyping and experimentation playground (AIE/Model, Product/Prototyping)': {}
-        Supports agentic workflows, function-calling and tool integrations for building autonomous behaviors (Code/Autonomous agent): {}
+        Supports agentic workflows, function-calling and tool integrations for building autonomous behaviors: {}
         'Note: While it has IDE-like features for building multimodal apps, it''s primarily a model experimentation environment rather than a general-purpose code editor': {}
         Open-source VS Code (and JetBrains) extension with CLI support, agent orchestration, and project-scoped memory stored under .kilocode/: {}
         IDE: {}

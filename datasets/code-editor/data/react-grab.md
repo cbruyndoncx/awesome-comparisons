@@ -122,5 +122,3 @@ React Grab is compatible with popular AI coding tools such as Cursor, Claude Cod
 ### Terminal
 - No
 
-### SpecDrivenDevelopment
-- -

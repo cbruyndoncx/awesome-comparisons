@@ -139,7 +139,3 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
 - Yes
   - Orchestrator and parallel agents allow Kilo to break down work into subtasks and run multiple agents/subagents concurrently to coordinate complex workflows.
 
-### SpecDrivenDevelopment
-- Yes
-  - Kilo Code's core functionality, including AI-driven code generation and task automation, directly supports the SDD approach of generating artifacts from specifications.
-

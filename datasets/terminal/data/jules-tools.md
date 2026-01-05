@@ -131,5 +131,3 @@ The tool integrates with existing repositories, understands full project context
 ### Terminal
 - Yes
 
-### SpecDrivenDevelopment
-- -

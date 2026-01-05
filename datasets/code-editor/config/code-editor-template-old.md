@@ -11,7 +11,6 @@ AI Native Dev Code Editor category
 - AIE/Model
 - Code/Autonomous agent
 - Code/Editor
-- Code/Spec Driven
 - Code/Terminal
 - Product/Prototyping
 
@@ -208,17 +207,6 @@ AI Native Dev Code Editor category
 ### Deployment
 -
 
-### SpecDrivenDevelopment
-<!-- Has support for these Spec Driven Development methodologies: -->
-<!-- Keep only the label values that apply to this comparison. -->
-- BMAD
-- SpecKit
-- OpenSpec
-- Tessl
-- AgentOS
-- ClaudeFlow
-- SPARC
-- SuperClaude
 
 ### Licensing
 -

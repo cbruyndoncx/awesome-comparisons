@@ -131,7 +131,3 @@ The extension is intended to reduce context switching by letting developers rema
 - Yes
   - Specialized subagents (e.g., Researcher, Verifier) execute tasks in parallel
 
-### SpecDrivenDevelopment
-- Yes
-  - Verdent aligns with the principles of Spec-Driven Development through its "Plan-first Alignment" and "Plan Mode."
-

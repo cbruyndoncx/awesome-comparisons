@@ -122,5 +122,3 @@ The tool features a large 128K token context window, making it suitable for work
 ### Terminal
 - Yes
 
-### SpecDrivenDevelopment
-- -

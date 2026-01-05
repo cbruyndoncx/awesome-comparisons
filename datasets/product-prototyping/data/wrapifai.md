@@ -129,7 +129,3 @@ Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you c
   - While Wrapifai does not expose a formal "subagent" authoring UI, you can implement task-specific flows by creating multiple focused tools, chaining calls via webhooks/APIs, and building multi-step prompt flows (conditional prompts, separate prompt templates per step)
   - Use webhooks or external functions to orchestrate multiple tools or processing stages, effectively enabling specialized agent-like workflows
 
-### SpecDrivenDevelopment
-- No
-  - Wrapifai is a no-code platform for building embeddable AI-powered micro-tools, not a spec-driven development tool.
-

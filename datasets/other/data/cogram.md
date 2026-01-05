@@ -127,7 +127,3 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
 - No
   - No evidence of definable subagents or specialized agent workflows in the jupyter-cogram public docs.
 
-### SpecDrivenDevelopment
-- No
-  - Cogram is an AI coding assistant for Jupyter Notebooks, not a spec-driven development tool.
-

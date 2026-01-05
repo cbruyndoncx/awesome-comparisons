@@ -126,5 +126,3 @@ The platform offers code completion, PR review suggestions, automated fixes, and
 ### Terminal
 - Yes
 
-### SpecDrivenDevelopment
-- -

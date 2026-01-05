@@ -121,5 +121,3 @@ Auggie can handle up to 10,000 commit histories, ensuring accurate code suggesti
 ### Terminal
 - Yes
 
-### SpecDrivenDevelopment
-- -
