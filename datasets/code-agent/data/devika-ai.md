@@ -20,15 +20,13 @@ Unknown (last checked 2025-10-19)
 ### Short Description
 An open-source agentic software engineer (Devika / Opcode) that performs end-to-end development tasks: plans, researches, generates, and modifies code across projects using multi-LLM support and local runtimes.
 
--
-
 ### Description
 Devika AI is an open-source "software engineer" agent that accepts high-level instructions, creates plans, researches needed information, and implements code across projects. It emphasizes multi-model support (cloud LLMs and local LLMs via Ollama), agentic planning and reasoning, project-based organization, and automation of development tasks including coding, testing, and deployment.
 
 Key capabilities include automated planning (breaking objectives into actionable steps), web research (browse and extract relevant docs), code generation across multiple languages/stack contexts, repository/Git integration, and deployment helpers (for example, static site deployment to Netlify).
 
 ### Languages
-- Multi-language code generation support
+- Multi-language code generation support (specific languages not publicly documented)
   - Implementation: Python (backend), JavaScript/TypeScript (UI)
   - Generates code across multiple languages/stacks (specific list not documented)
 
@@ -39,10 +37,10 @@ Key capabilities include automated planning (breaking objectives into actionable
 - Research and browsing: built-in research module for fetching and summarizing web documentation, API references, and examples.
 - Use cases: full-stack feature implementation, repo maintenance, automated testing, documentation generation, and static site deployment.
 - Community & contribution: open-source repo on GitHub encourages contributions; check repository for issues, contribution guidelines and exact license details.
+- Naming Confusion: The agent is referred to as both Devika and Opcode in different places. The exact relationship is unclear.
 
 ### Last Update
 2025-10-19
--
 
 ## Licensing
 

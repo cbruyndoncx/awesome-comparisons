@@ -7,8 +7,7 @@ AI-powered developer platform focused on deep codebase understanding and autonom
 - Code/Editor
 
 ### Version
-- Unknown
-  - No public version information available; check augmentcode.com for current release information
+- Unknown (last checked 2025-10-19)
 
 ### Repo
 - https://augmentcode.com
@@ -33,7 +32,7 @@ Augment Code is an AI-first development platform built to help professional engi
 - Industry benchmark claims (HWE Bench top-ranked, e.g., 65.4% on HWE)
 
 ### Last Update
--
+- 2025-10-19
 
 ## Licensing
 

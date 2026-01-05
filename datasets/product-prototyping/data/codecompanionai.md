@@ -7,7 +7,7 @@ A desktop AI coding assistant that exposes a ChatGPT-powered chatbot for working
 - Product/Prototyping
 
 ### Version
-- Unknown
+- Unknown (last checked 2025-11-15)
   - No version information found in public documentation; recommend checking vendor site for current version
 
 ### Repo
@@ -15,9 +15,8 @@ A desktop AI coding assistant that exposes a ChatGPT-powered chatbot for working
   - Proprietary desktop application; no public repository found
 
 ### Rating
-- [3] Local-first design with good privacy model (BYOK)
-- [2] Limited public documentation and unclear pricing/versioning
-- [3] Reported feature set competitive (chat, terminal, Git, SQL integration)
+- N/A
+  - No public aggregated review score found; project is a niche desktop tool with limited public reviews.
 
 ### Short Description
 A desktop, local-first AI coding assistant (chat-driven) that reads and edits local code, runs shell commands, integrates with Git, and can translate natural language to SQL.
@@ -119,4 +118,8 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 ### Subagents
 - Yes
   - Third-party summaries and release notes report parallel multi-agent research/task execution capabilities to allow the assistant to research and plan across a project before executing tasks.
+
+### SpecDrivenDevelopment
+- No
+  - CodeCompanion.ai is a desktop AI coding assistant, not a spec-driven development tool.
 

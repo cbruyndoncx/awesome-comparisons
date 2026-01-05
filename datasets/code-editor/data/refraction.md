@@ -92,7 +92,7 @@ Refraction is a web-first AI development assistant (refraction.dev) which helps 
 
 ### GitSupport
 - Yes
-  - Refraction provides GitHub integration features, including an "Autoreview" GitHub Marketplace plugin that can generate PR descriptions and automated reviews. It also offers IDE/editor extensions (Sublime Text, VS Code) and a Terminal extension to facilitate working with repositories. There is limited public documentation about a full-featured REST API or advanced repo management features; contact Refraction for enterprise or API access details.
+  - Provides GitHub integration, including an "Autoreview" GitHub Marketplace plugin, and IDE/editor extensions (Sublime Text, VS Code) to work with repositories.
 
 ## Extensible
 

@@ -20,8 +20,6 @@ N/A (last checked 2025-10-19)
 ### Short Description
 Diffblue Cover autonomously generates, executes and maintains Java unit tests (JUnit/TestNG) from source code, via IDE plugins, CLI and CI integrations to accelerate coverage and regression safety.
 
--
-
 ### Description
 Diffblue Cover is a commercial AI-driven product that automatically generates and maintains unit tests for Java code. It integrates into developer workflows (IntelliJ plugin for inner-loop use) and into CI/CD pipelines (CLI, CI plugins) for broader, project-level test generation. Cover uses ML techniques to produce compilable, runnable JUnit/TestNG tests to increase coverage, reduce manual test-writing toil, and help with regression testing and refactoring safety.
 

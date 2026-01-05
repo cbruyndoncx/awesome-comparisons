@@ -8,13 +8,14 @@ Open-source AI junior developer that transforms GitHub issues into pull requests
 - Code/Autonomous agent
 
 ### Version
-- 2025
+- Unknown (2025)
 
 ### Repo
 - https://github.com/sweepai/sweep
 
 ### Rating
-- -
+- N/A
+  - No public aggregated review score found.
 
 ### Short Description
 - AI assistant that automates developer tasks by reading codebases, understanding tickets, planning edits, and generating pull requests directly on GitHub without requiring an IDE.
@@ -46,7 +47,7 @@ Sweep is an intelligent open-source AI assistant that automates typical develope
 - Maintenance focus: Particularly effective for routine tasks, bug fixes, and small features.
 
 ### Last Update
-- 2025
+- Unknown (2025)
 
 ## Licensing
 

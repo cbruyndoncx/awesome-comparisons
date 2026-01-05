@@ -11,10 +11,12 @@ ByteDance's professional AI coding agent achieving 78.8% on SWE-Bench Verified (
 - 1.0 (2025-11)
 
 ### Repo
-- -
+- N/A
+  - Proprietary model; no public repository found.
 
 ### Rating
-- -
+- N/A
+  - No public aggregated review score found.
 
 ### Short Description
 - China's most affordable AI coding agent from ByteDance's Volcano Engine, achieving 78.8% on SWE-Bench Verified with TRAE integration, supporting 200+ programming languages at unprecedented $1.30/month pricing.

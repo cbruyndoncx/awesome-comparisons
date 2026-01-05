@@ -20,8 +20,6 @@ N/A
 ### Short Description
 AI-native developer platform that creates a living, editable code wiki (Auto Wiki), provides conversational codebase search/chat, generates architecture diagrams, and performs one-click or prompt-driven code transforms/refactors across files. Integrates with IDEs (VS Code), GitHub, CLI and offers on-premises deployment for enterprises.
 
--
-
 ### Description
 MutableAI (mutable.ai) is an AI-first developer productivity platform focused on code understanding, documentation, and automated code transformations. Its core capabilities include automatically generating a living wiki for a codebase (with citations to specific files/lines), conversational codebase search/chat, generated architecture diagrams, and one-click refactors/transformations to improve readability, add types, or move prototypes toward production. The product emphasizes keeping docs in sync with code by updating documentation on code changes and offering editable AI-generated articles.
 
@@ -123,4 +121,8 @@ The platform is positioned for both individual developer workflows (autocomplete
 ### Subagents
 - No
   - No public documentation indicating user-definable subagents or multi-agent orchestration; functionality is delivered via feature-focused components (docs, chat, transforms) rather than user-configured subagents.
+
+### SpecDrivenDevelopment
+- No
+  - MutableAI is an AI-native developer platform, not a spec-driven development tool.
 

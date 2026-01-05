@@ -11,10 +11,12 @@ Agent-native software development platform with Droids achieving 58.75% on Termi
 - GA (2025-05-28)
 
 ### Repo
-- -
+- N/A
+  - Proprietary model; no public repository found.
 
 ### Rating
-- -
+- N/A
+  - No public aggregated review score found.
 
 ### Short Description
 - Autonomous software development agents handling entire SDLC from coding to incident resolution, achieving state-of-the-art 58.75% on Terminal-Bench and beating Claude Code and Codex CLI.

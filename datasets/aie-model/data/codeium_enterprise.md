@@ -42,7 +42,8 @@ References & further reading
 - https://codeium.com/enterprise (vendor enterprise overview)
 
 ### Last Update
-- 2025-11-16
+- 2025-01-29
+  - Last known release date for the JetBrains extension. The previous date of 2025-11-16 was likely a documentation update.
 
 ## Licensing
 

@@ -104,6 +104,10 @@ Windsurf is an AI-powered, agentic development environment (IDE-like) designed t
 ### GitSupport
 - Yes
 
+### Terminal
+- Yes
+  - The IDE has an integrated AI terminal for executing commands.
+
 ## Extensible
 
 ### Extensible

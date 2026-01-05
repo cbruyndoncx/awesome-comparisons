@@ -22,7 +22,7 @@ instructions: |
     - ### (Heading 3) for specific criteria/fields
     - Unordered lists (- item) for values and explanations
 
-  IMPORTANT: Do not add, remove, or modify any heading sections (## or ###).
+IMPORTANT: Do not add, remove, or modify any heading sections (## or ###).
   Only update content within existing sections.
 
   # Formatting Rules
@@ -46,21 +46,21 @@ extensions:
   name: developer
   display_name: Developer
   description: Built-in developer extension for code analysis and file operations
-  timeout: 300
   bundled: true
-  available_tools: [] 
+  timeout: 300
+  available_tools: []
 
 - type: stdio
   name: perplexityai
   cmd: node
   args:
-  - /home/cb/TOOLBOX/MCP/perplexity-mcp/build/index.js
+  - /home/cb/TOOLBOX/MCP/perplexity-mcp/build/index.js> 
   envs: {}
   env_keys: []
   timeout: 300
   description: use perplexity for extensive web research, gathering all data and references
   bundled: false
-  available_tools: []  
+  available_tools: []
 
 settings:
   goose_provider: openai

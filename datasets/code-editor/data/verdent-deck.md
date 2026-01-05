@@ -59,7 +59,8 @@ Key capabilities include project-wide code indexing, plan decomposition, paralle
 - Proprietary
 
 ### FreeTrial
-- -
+- Yes
+  - 7-day free trial with 100 credits.
 
 ## MCP-Client
 
@@ -78,7 +79,8 @@ Key capabilities include project-wide code indexing, plan decomposition, paralle
 ## Deployment
 
 ### BYOK
-- -
+- No
+  - No public documentation found for BYOK support.
 
 ### LocalOffline
 - No
@@ -113,15 +115,22 @@ Key capabilities include project-wide code indexing, plan decomposition, paralle
   - Verdent provides a VS Code extension to bring Deck-style agent capabilities into the editor.
 
 ### Hooks
-- -
+- No
+  - No public documentation found.
 
 ### SlashCommands
-- -
+- No
+  - No public documentation found.
 
 ### CustomModes
-- -
+- No
+  - No public documentation found.
 
 ### Subagents
 - Yes
   - Work is decomposed and routed to specialized subagents that execute in parallel where appropriate.
+
+### SpecDrivenDevelopment
+- No
+  - Verdent Deck is not a spec-driven development tool. It is a desktop agent control center for planning, running, and validating autonomous coding agents.
 

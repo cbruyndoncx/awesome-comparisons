@@ -8,13 +8,15 @@ Google's 2025 cloud-centric coding agent that combines autonomous coding capabil
 - Code/Autonomous agent
 
 ### Version
-- 2025
+- Unknown (2025)
 
 ### Repo
-- -
+- N/A
+  - Proprietary model; no public repository found.
 
 ### Rating
-- -
+- N/A
+  - No public aggregated review score found.
 
 ### Short Description
 - Cloud-centric AI coding agent from Google with autonomous capabilities and deep integration with Google Cloud and workspace services.

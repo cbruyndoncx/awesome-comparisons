@@ -50,7 +50,7 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 
 ### FreeTrial
 - Yes
-  - Open-source project - freely available without time limits or paid tiers
+  - Open-source project - freely available, no time-limited trial.
 
 ## MCP-Client
 

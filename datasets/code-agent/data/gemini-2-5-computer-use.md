@@ -13,7 +13,8 @@ Gemini 2.5 Computer Use is Google's specialized model built on Gemini 2.5 Pro's 
 - 2.5 (October 2025)
 
 ### Repo
-- -
+- N/A
+  - Proprietary model; no public repository found.
 
 ### Rating
 - 18% performance increase on difficult evaluations (reported by Autotab)
@@ -102,7 +103,8 @@ Google's payments platform team implemented the model to fix fragile UI tests, s
   - Operates at UI level
 
 ### Checkpoints
-- -
+- Unknown
+  - No public documentation found.
 
 ### GitSupport
 - No
@@ -114,13 +116,15 @@ Google's payments platform team implemented the model to fix fragile UI tests, s
 - No
 
 ### Hooks
-- -
+- Unknown
+  - No public documentation found.
 
 ### SlashCommands
 - No
 
 ### CustomModes
-- -
+- Unknown
+  - No public documentation found.
 
 ### Subagents
 - Yes
@@ -133,4 +137,5 @@ Google's payments platform team implemented the model to fix fragile UI tests, s
   - Operates through UI interaction, not terminal
 
 ### SpecDrivenDevelopment
-- -
+- Unknown
+  - No public documentation found.

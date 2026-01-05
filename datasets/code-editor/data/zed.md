@@ -7,8 +7,7 @@ A next-generation, high-performance code editor focused on speed, real-time coll
 - Code/Editor
 
 ### Version
-- Unknown (last checked 2025-10-19)
-  - Zed uses rolling nightly builds; check GitHub releases for specific version tags
+- Unknown (2025-10-19)
 
 ### Repo
 - https://github.com/zed-industries/zed

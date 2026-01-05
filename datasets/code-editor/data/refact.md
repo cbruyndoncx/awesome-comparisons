@@ -54,13 +54,11 @@ Refact.ai is an open-source AI coding assistant and autonomous engineering agent
 - Yes
 
 ## MCP-Client
-
-### MCP-Client
-Refact.ai includes support for the Model Context Protocol (MCP) ecosystem. The platform can act as an MCP client/consumer to request structured context from MCP servers and to integrate external tools and data sources into agent workflows. MCP integration enables richer, streamable, and structured context delivery (e.g., database rows, code search results, tool outputs) to the agent, improving grounding and long-context operations.
-
-- Implementation notes:
-  - Refact's architecture exposes connectors and integrations that can be used to surface external information to the agent; MCP support is used to standardize these exchanges.
-  - MCP usage in Refact allows dynamic discovery of tools and data sources and can be configured in self-hosted deployments.
+- Yes
+  - Refact.ai includes support for the Model Context Protocol (MCP) ecosystem. The platform can act as an MCP client/consumer to request structured context from MCP servers and to integrate external tools and data sources into agent workflows. MCP integration enables richer, streamable, and structured context delivery (e.g., database rows, code search results, tool outputs) to the agent, improving grounding and long-context operations.
+  - Implementation notes:
+    - Refact's architecture exposes connectors and integrations that can be used to surface external information to the agent; MCP support is used to standardize these exchanges.
+    - MCP usage in Refact allows dynamic discovery of tools and data sources and can be configured in self-hosted deployments.
 
 ### Prompts
 <!-- Default description for Prompts -->

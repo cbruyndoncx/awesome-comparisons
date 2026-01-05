@@ -8,13 +8,12 @@ A research-preview, agentic AI coding assistant from Sourcegraph that focuses on
 - Code/Autonomous agent
 
 ### Version
-(2025-10-19)
+- Unknown (2025-10-19)
 
 ### Repo
 - Proprietary (no main public repository)
   - Example/demo: https://github.com/sourcegraph/amp-demo
   - Related: https://github.com/sourcegraph/cra-github (Amp Code Review app)
-  - Website: https://ampcode.com
 
 ### Rating
 - [4] Interface / UX (user-reported)
@@ -129,4 +128,8 @@ Amp is designed as an "agentic" coding assistant that can autonomously reason th
 ### Subagents
 - Yes
   - Specialized agents/components (Librarian, review agents, task-specific helpers) enable task decomposition and targeted workflows.
+
+### SpecDrivenDevelopment
+- No
+  - Amp is an agentic AI coding assistant, not a spec-driven development tool.
 

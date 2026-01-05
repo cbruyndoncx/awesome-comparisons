@@ -14,7 +14,7 @@
 -
 
 ### Rating
--
+- N/A
 
 ### Short Description
 AI web code generator that converts plain-language prompts into runnable code across many programming languages via a simple web UI; proprietary SaaS focused on fast, one-click code generation.
@@ -47,7 +47,7 @@ SourceAI is a web-based AI code generation tool that accepts natural language re
 - Proprietary
 
 ### FreeTrial
--
+- Unknown
 
 ## MCP-Client
 

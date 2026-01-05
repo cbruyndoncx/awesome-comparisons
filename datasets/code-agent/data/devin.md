@@ -20,8 +20,6 @@ v1 (2024-03)
 ### Short Description
 An autonomous agent from Cognition Labs that accepts high-level natural-language engineering tasks and executes end-to-end software workflows inside a sandboxed IDE (terminal, editor, browser), including planning, coding, testing, debugging, and Git integration.
 
--
-
 ### Description
 Devin is designed as an autonomous software engineering agent created by Cognition Labs. Unlike code-completion assistants, Devin accepts high-level natural-language tasks, decomposes them into step-by-step plans, and executes those plans inside a sandboxed environment (editor, shell, browser). It can install dependencies, modify code, run tests, search documentation, iterate on failures, and create pull requests. The product is aimed at accelerating engineering teams or acting as a junior developer to complete discrete tasks with minimal supervision.
 
@@ -115,11 +113,9 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 - Unknown
   - No public documentation available regarding lifecycle hooks or custom event handlers.
 
-
 ### SlashCommands
 - Unknown
   - No public documentation available regarding slash-command style interface.
-
 
 ### CustomModes
 - Yes
@@ -128,5 +124,3 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 ### Subagents
 - Unknown
   - No public documentation available regarding subagent or multi-agent architecture.
-
-

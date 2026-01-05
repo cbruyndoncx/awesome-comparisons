@@ -20,8 +20,6 @@ Unknown (last checked 2025-10-19)
 ### Short Description
 OpenHands (formerly OpenDevin) is an open-source platform that provides autonomous AI software engineer agents capable of planning, writing, debugging, and executing code within an isolated workspace. The project includes a web UI/chat interface, a terminal/sandbox for executing commands, and integrations for multiple LLM backends.
 
--
-
 ### Description
 OpenDevin is an open-source project that implements an autonomous AI software engineer: an agent capable of planning, writing, debugging, and executing code within a controlled workspace. The project provides a web UI, chat interface, terminal/sandbox for running bash commands, and integrations for large language model backends. The codebase is modular, container-first (Docker), and designed for community contributions and experimentation with autonomous developer agents.
 
@@ -109,7 +107,8 @@ OpenDevin is an open-source project that implements an autonomous AI software en
   - Repo-level setup hooks (e.g. .openhands/setup.sh) and microagent trigger files provide lifecycle and customization hooks.
 
 ### SlashCommands
-
+- No
+  - No public documentation found for slash commands.
 
 ### CustomModes
 - Yes

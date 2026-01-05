@@ -4,7 +4,6 @@ A local-first, agentic IDE focused on taking projects from idea to production wi
 ## General Info
 
 ### Classification
-<!-- ToDo -->
 <!-- AI Native Dev ainativedev.io Classification -->
 <!-- Keep only the label values that apply to this comparison. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Code/Editor
@@ -17,7 +16,7 @@ A local-first, agentic IDE focused on taking projects from idea to production wi
 - Ships as a standalone Flow IDE with VS Code and JetBrains integrations; provides agentic workflows and project-wide context management
 
 ### Version
-v1.0 (2025-10-19)
+Unknown (last checked 2025-10-19)
 
 ### Repo
 -
@@ -28,7 +27,6 @@ v1.0 (2025-10-19)
   - Tradeoff: deep integration and "finish-first" workflow vs flexibility
 
 ### Short Description
-<!-- ToDo -->
 
 - Local-first, AI-driven IDE and VS Code/JetBrains integrations that guide projects from planning through implementation and deployment, opinionated around Next.js + Supabase.
 
@@ -46,7 +44,6 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 - Use-case fit: excellent for new projects or MVPs that can accept the opinionated stack; less suitable for migrating large existing codebases using other technologies.
 
 ### Last Update
-<!-- ToDo -->
 <!-- Note Date last updated -->
 - 2025-11-15
 
@@ -59,7 +56,6 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 - Proprietary
 
 ### FreeTrial
-<!-- ToDo -->
 <!-- Free access (like opensource), or free (potentially limited) trial available -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -69,7 +65,6 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 ## MCP-Client
 
 ### MCP-Client
-<!-- ToDo -->
 <!-- Coding tool has built-in MCP client so can connect to MCP servers -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - No
@@ -77,7 +72,6 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 - Integrates with external LLM providers via user API keys; no documented dedicated MCP client/service.
 
 ### Prompts
-<!-- ToDo -->
 <!-- Default description for Prompts -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -85,7 +79,6 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 - Provides built-in system prompts, planning prompts (/Plan), and contextual prompt templates. Supports user-specified prompts and file-tagging to control context.
 
 ### Tools
-<!-- ToDo -->
 <!-- Default description for Tools -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -93,7 +86,6 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 - Ships with integrated debugger/tracer, project analyzers, deployment helpers and quick-edit tooling (CMD/CTRL+E) exposed in the IDE and extensions.
 
 ### Resources
-<!-- ToDo -->
 <!-- Default description for Resources -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -112,7 +104,6 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 ## Developer Experience
 
 ### ContextManagement
-<!-- ToDo -->
 <!-- Methods for managing and updating the context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -120,7 +111,6 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 - Project-wide context awareness, automatic file relevance analysis, and manual file/tag selection (e.g., @file references) to scope prompts and implementations.
 
 ### DirectFileReferences
-<!-- ToDo -->
 <!-- Can with @file or similar provide context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -128,7 +118,6 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 - Supports manual file tagging and contextual references to include files in prompts and implementation tasks.
 
 ### Checkpoints
-<!-- ToDo -->
 <!-- A way to undo using checkpoints or if autocommitted git history -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -146,7 +135,6 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
   - VS Code extension available (integrates chat, slash commands, inline quick edits)
 
 ### Plugins
-<!-- ToDo -->
 <!-- A method of bundling together commands, agents and hooks (claude). -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -154,7 +142,6 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 - Offers VS Code and JetBrains plugins/extensions; the Flow IDE acts as a native application with plugin-style integrations.
 
 ### Hooks
-<!-- ToDo -->
 <!-- Lifecycle events for the agent. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - No
@@ -162,7 +149,6 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 - No public documentation of lifecycle hook system; primary extensibility surfaces are editor extensions and planner/implementation workflows.
 
 ### SlashCommands
-<!-- ToDo -->
 <!-- Re-usable commands that can be manually triggered by the user. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -170,7 +156,6 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 - Includes slash commands such as /Plan for planning workflows and quick-edit triggers in the IDE and extensions.
 
 ### CustomModes
-<!-- ToDo -->
 <!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -178,7 +163,6 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 - Distinct Planning, Implementation and Debugging modes that change how the agent reasons about the codebase and produces outputs.
 
 ### Subagents
-<!-- ToDo -->
 <!-- Define specialized AI subagents for task-specific workflows. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes

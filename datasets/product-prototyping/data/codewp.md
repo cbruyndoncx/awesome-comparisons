@@ -107,10 +107,12 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
   - CodeWP supports passing external context and conversational context to refine generation; includes dashboard "Sites" and "Packages" to organize project context.
 
 ### DirectFileReferences
-
+- Yes
+  - CodeWP has a "package" system where the AI understands the context of the files within a package.
 
 ### Checkpoints
-
+- No
+  - Relies on the user's local version control.
 
 ### GitSupport
 - No
@@ -122,13 +124,15 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
   - Offers specialized "modes" for plugins (ACF, Elementor, WooCommerce, Gravity Forms, etc.) and an API/exports for integration
 
 ### Plugins
-
+- No
+  - CodeWP has extensions for VS Code and browsers, and can generate WordPress plugins, but it does not have a plugin system for extending its own functionality.
 
 ### Hooks
-
+- No
+  - CodeWP generates code that utilizes WordPress hooks, but it does not have its own hook system.
 
 ### SlashCommands
-
+- No
 
 ### CustomModes
 - Yes
@@ -136,4 +140,8 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
 
 ### Subagents
 - No
+
+### SpecDrivenDevelopment
+- No
+  - CodeWP is an AI-assisted code generator, not a spec-driven development tool.
 

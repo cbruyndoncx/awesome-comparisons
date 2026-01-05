@@ -50,14 +50,14 @@ The extension is intended to reduce context switching by letting developers rema
 - Proprietary
 
 ### FreeTrial
-- Unknown
-  - No public pricing or trial information available; product may be in early access/beta with limited availability
+- Yes
+  - 7-day free trial with 100 credits.
 
 ## MCP-Client
 
 ### MCP-Client
-- Unknown
-  - No public documentation found regarding MCP (Model Context Protocol) support; check with vendor for current capabilities
+- Yes
+  - Verdent for VS Code includes "MCP Integration," meaning it can act as an MCP client.
 
 ### Prompts
 - Yes
@@ -82,8 +82,7 @@ The extension is intended to reduce context switching by letting developers rema
 ## Deployment
 
 ### BYOK
-- Unknown
-  - No public information found about bring-your-own-key support; enterprise deployment options may be available
+- Yes
 
 ### LocalOffline
 - No
@@ -118,18 +117,21 @@ The extension is intended to reduce context switching by letting developers rema
   - Verdent provides a VS Code extension to bring Deck-style agent capabilities into the editor
 
 ### Hooks
-- Unknown
-  - No public documentation found for lifecycle hooks; product uses specialized subagents which may provide hook-like capabilities
+- Yes
+  - While not explicitly called "hooks," Verdent provides "rule configuration" and "custom subagents" that can be used to achieve similar functionality.
 
 ### SlashCommands
-- Unknown
-  - No public documentation found for slash commands; product uses guided prompts and Plan Mode instead
+- No
 
 ### CustomModes
 - Yes
-  - Plan Mode provides structured, verification-first workflows; product is built around specialized modes and subagent orchestration
+  - Verdent offers "collaboration modes" and allows configuration of AI models for different tasks.
 
 ### Subagents
 - Yes
   - Specialized subagents (e.g., Researcher, Verifier) execute tasks in parallel
+
+### SpecDrivenDevelopment
+- Yes
+  - Verdent aligns with the principles of Spec-Driven Development through its "Plan-first Alignment" and "Plan Mode."
 

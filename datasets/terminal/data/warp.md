@@ -7,7 +7,7 @@ Modern AI-powered terminal and agentic development environment focused on unifyi
 - Code/Terminal
 
 ### Version
-- v2.0
+- v2.0 (2025-09-01)
   - Specific release date unavailable; major v2.0 release occurred in September 2025
 
 ### Repo
@@ -18,9 +18,7 @@ Modern AI-powered terminal and agentic development environment focused on unifyi
 - [4] Commercial/proprietary product; some enterprise privacy controls but limited public BYOK/local-offline detail
 
 ### Short Description
-- AI-powered terminal and Agentic Development Environment (ADE) that combines natural-language Agent Mode, Warp Code (live diffing and stepwise code edits), and Warp Drive (shared Workflows, Notebooks, prompts and environment variables) to enable collaborative, model-driven development workflows within the terminal.
-
-### Description
+- AI-powered terminal and Agentic Development Environment (ADE) that combines natural-language Agent Mode, Warp Code (live diffing and stepwise code edits), and Warp Drive (shared Workflows, Notebooks, prompts and environment variables) to enable collaborative, model-driven development workflows within the terminal.### Description
 Warp is a modern terminal that has evolved into an "Agentic Development Environment" (ADE). It tightly integrates large language models and agent workflows with the command line, providing natural-language command generation, an interactive chat/agent interface (Agent Mode), collaborative Drive features (Workflows, Notebooks, shared Environment Variables), and code-focused tooling (Warp Code with diff-tracking). Warp's interface lets developers mix prompts and shell commands in a single input, run multi-step agent plans, review and accept diffs produced by agents, and share/run parameterized Workflows across teams.
 
 ### Languages

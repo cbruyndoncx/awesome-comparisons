@@ -6,10 +6,9 @@ Browser-based development environment from Google for prototyping and experiment
 ### Classification
 - AIE/Model
 - Product/Prototyping
-- Code/Autonomous agent
 
 - Primary focus: Model prototyping and experimentation playground (AIE/Model, Product/Prototyping)
-- Supports agentic workflows, function-calling and tool integrations for building autonomous behaviors (Code/Autonomous agent)
+- Supports agentic workflows, function-calling and tool integrations for building autonomous behaviors
 - Note: While it has IDE-like features for building multimodal apps, it's primarily a model experimentation environment rather than a general-purpose code editor
 
 ### Version

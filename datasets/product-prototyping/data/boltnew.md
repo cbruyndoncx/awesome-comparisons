@@ -125,3 +125,7 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
 - No
   - The platform and the bolt.diy roadmap mention multi-step agent architectures as an evolution, but there is no user-facing subagent definition system documented.
 
+### SpecDrivenDevelopment
+- No
+  - Bolt.new is a browser-first, AI-powered full-stack development environment, not a spec-driven development tool.
+

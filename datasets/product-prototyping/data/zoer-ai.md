@@ -8,7 +8,7 @@ AI-powered full-stack app builder that generates production-ready applications f
 - Product/Prototyping
 
 ### Version
-- 2025
+- Unknown (2025)
 
 ### Repo
 - -

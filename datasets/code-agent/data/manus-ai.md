@@ -11,10 +11,12 @@ World's first fully autonomous AI agent from Chinese startup Monica.im. Launched
 - 1.0 (2025-03)
 
 ### Repo
-- -
+- N/A
+  - Proprietary model; no public repository found.
 
 ### Rating
-- -
+- N/A
+  - No public aggregated review score found.
 
 ### Short Description
 - Fully autonomous AI agent with sandboxed execution environment featuring browser, Python interpreter, file system, and terminal access for independent task planning and execution without human supervision.

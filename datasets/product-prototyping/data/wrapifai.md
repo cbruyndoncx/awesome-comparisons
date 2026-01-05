@@ -19,8 +19,6 @@ v1.0 (2025-10-19)
 ### Short Description
 No-code builder for embeddable AI micro‑tools (calculators, generators, chatbots) focused on SEO-driven engagement and lead capture. Create tools from a short description, style to match your brand, and deploy via embed or shareable link with built-in analytics and integrations.
 
--
-
 ### Description
 Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you can embed into an existing website. Typical outputs are calculators, content generators, chat widgets and other micro‑apps designed to increase on‑site engagement and capture leads. The product emphasizes speed and SEO impact: build a tool from a short description, style it to match your brand, then deploy via embed or shareable link. Hosting, updates and basic analytics are handled by the platform.
 
@@ -130,4 +128,8 @@ Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you c
 - Yes
   - While Wrapifai does not expose a formal "subagent" authoring UI, you can implement task-specific flows by creating multiple focused tools, chaining calls via webhooks/APIs, and building multi-step prompt flows (conditional prompts, separate prompt templates per step)
   - Use webhooks or external functions to orchestrate multiple tools or processing stages, effectively enabling specialized agent-like workflows
+
+### SpecDrivenDevelopment
+- No
+  - Wrapifai is a no-code platform for building embeddable AI-powered micro-tools, not a spec-driven development tool.
 

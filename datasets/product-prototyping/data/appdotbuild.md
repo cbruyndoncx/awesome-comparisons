@@ -7,7 +7,7 @@
 - Product/Prototyping
 
 ### Version
-- v1.31.3
+- v1.31.3 (2025-07-01)
   - Release date details unavailable; check repository for specific date
 
 ### Repo
@@ -60,10 +60,8 @@ The default generated stacks commonly include React on the frontend and Fastify 
 ## MCP-Client
 
 ### MCP-Client
-
-
-
-### Prompts
+- Unknown
+  - No public documentation found regarding MCP (Model Context Protocol) support.### Prompts
 - Yes
   - app.build's primary UX is a single natural-language prompt (CLI or web) that describes the desired application; the system also uses internal staged prompt templates and guided prompts during generation to produce models, ORM, handlers, and tests.
 
@@ -86,7 +84,7 @@ The default generated stacks commonly include React on the frontend and Fastify 
 
 ### LocalOffline
 - No
-  - [app.build relies on remote LLMs and hosted infrastructure (Neon/Koyeb) for generation and deployment.]
+  - app.build relies on remote LLMs and hosted infrastructure (Neon/Koyeb) for generation and deployment.
 
 ## Developer Experience
 

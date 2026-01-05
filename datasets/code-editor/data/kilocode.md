@@ -105,9 +105,8 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
   - The agent can reference and include project files as context (file-level context selection and indexing), and integrates with the editor to surface file contents to the assistant.
 
 ### Checkpoints
-<!-- A way to undo using checkpoints or if autocommitted git history -->
-
-
+- Yes
+  - Kilo Code automatically creates checkpoints (snapshots of your project's state) in a shadow Git repository. This allows for safe experimentation with AI-suggested changes, easy recovery from unwanted modifications, and reverting to previous project states.
 ### GitSupport
 - Yes
   - deep Git/GitHub integration patterns for generating commit messages, searching codebase, and automating repo tasks
@@ -125,20 +124,22 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
   - Plugins and tool integrations are delivered via the MCP marketplace (JSON-based integrations / tools).
 
 ### Hooks
-<!-- Lifecycle events for the agent. -->
-
+- No
+  - Kilo Code does not expose a traditional "hooks" or "lifecycle events" API for external developers.
 
 ### SlashCommands
-<!-- Re-usable commands that can be manually triggered by the user. -->
-
+- Yes
+  - Kilo Code utilizes slash commands for various functionalities, particularly for switching between specialized modes and managing tasks.
 
 ### CustomModes
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
 - Yes
   - Ships with Architect, Coder, Debugger and Orchestrator modes; supports creating custom modes for tailored workflows.
 
 ### Subagents
-<!-- Define specialized AI subagents for task-specific workflows. -->
 - Yes
   - Orchestrator and parallel agents allow Kilo to break down work into subtasks and run multiple agents/subagents concurrently to coordinate complex workflows.
+
+### SpecDrivenDevelopment
+- Yes
+  - Kilo Code's core functionality, including AI-driven code generation and task automation, directly supports the SDD approach of generating artifacts from specifications.
 

@@ -8,7 +8,7 @@ AI-powered web builder and code editor focused on rapid web prototyping and deve
 - Product/Prototyping
 
 ### Version
-- 2025
+- Unknown (2025)
 
 ### Repo
 - -
