@@ -80,20 +80,20 @@ Brokk is a standalone, Java-based desktop application that rethinks AI-assisted 
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - Yes
   - Brokk's client is open-source Java software; it ships with or can leverage Jlama for local/tiny-model inference and supports workflows that minimize cloud calls. Some advanced features may use hosted models depending on configuration.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Workspace-driven context: users curate a Workspace containing selected files, generated summaries, diffs and dependency artifacts so the LLM receives only the focused context it needs (editable vs read-only panes).
   - Deep Scan: semantic, compiler-aware analysis recommends additional files and symbols to include based on the instruction and dataflow, reducing manual context selection.
   - Dependency summaries/decompilation: third-party libraries can be imported, summarized or decompiled into the Workspace so the assistant understands external APIs.
   - Build & history-aware context: Brokk infers build system details and can incorporate compiled artifacts and VCS history to provide richer, correct context for edits.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Files are referenced directly via the Workspace (explicit file inclusion), Agentic Search (symbol-aware file results and usages), and Deep Scan recommendations.
   - Code mode applies edits to concrete files in the Workspace and produces diffs/patches that are surfaced to Git; Ask mode answers are scoped to the files present in the Workspace.
@@ -104,7 +104,7 @@ Brokk is a standalone, Java-based desktop application that rethinks AI-assisted 
   - Edits are produced as diffs/patches and Brokk is Git-aware; users can review changes, commit, or revert using standard VCS workflows.
   - The edit/build/test loop preserves build/test results and incremental revisions, allowing iterative rollback or refinement of agent-produced changes.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

@@ -88,13 +88,13 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
 - No
   - No public, general-purpose "bring your own key" option for the cloud-hosted Copilot service. Enterprise plans provide data controls and policy management but do not expose a documented BYOK for model keys as of the last update.
 
-### LocalOffline
+### Local Offline
 - No
   - Any offline/local-only model hosting is not offered for the standard Copilot cloud service. Some organizations use enterprise features to limit data sharing; however, Copilot itself runs in GitHub/Microsoft cloud.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Methods available for managing and updating context:
     - Editor-provided references: client.file (active file content) and client.selection (current selection) passed when the Copilot Editor Context permission is granted.
@@ -104,7 +104,7 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
     - Chat variables and explicit file references: using chat commands/variables (e.g., #file, #editors or file anchors) to reference or include specific files in a conversation.
     - User-controlled exclusions: context exclusion lists and per-file opt-outs to prevent sharing sensitive files.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - How files can be directly referenced in context:
     - client.file provides the full text of the active editor file to extensions when permitted.
@@ -119,7 +119,7 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
     - PR/commit workflow: when Copilot creates commits or PRs (agent-driven), standard git workflows allow reverting commits, closing or reverting PRs, and using branch-based reviews to avoid autocommit risk.
     - Preview and review steps: Copilot Chat multi-file edits are surfaced for review before commit in supported integrations; enterprise policies can enforce review gates.
 
-### GitSupport
+### Git Support
 - Yes
   - Integrates with GitHub workflows: PR description generation, PR creation by the Copilot agent, and issue-to-PR workflows in enterprise features.
 

@@ -107,7 +107,7 @@ START: finalConfig = clone(userConfigOverrides)
      ┌──────────────────────────────────────────────┐
      │ userConfigOverrides (User Configuration)     │
      │ - Title: "AI Code Editors"                   │
-     │ - Criteria: BYOK, LocalOffline, FreeTrial... │
+     │ - Criteria: BYOK, Local Offline, FreeTrial... │
      └──────────────────────────────────────────────┘
                         ↓
               MERGE.combine(sharedDefaults)

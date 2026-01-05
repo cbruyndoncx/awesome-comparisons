@@ -76,17 +76,17 @@ Eclipse Theia is an open-source, modular IDE framework maintained under the Ecli
 - Yes
   - Theia AI and integrations follow a bring-your-own-key / bring-your-own-model philosophy: you can configure external LLM providers or self-hosted models (e.g., Ollama, LlamaFile, hosted Anthropic/OpenAI keys) depending on deployment and data-control needs.
 
-### LocalOffline
+### Local Offline
 - Yes
   - Theia can run locally as a desktop app or be self-hosted on-premise. Its AI integrations support local/offline models (where supported by the chosen model runtime) enabling air-gapped or privacy-sensitive deployments.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Theia provides multiple, well-defined mechanisms for managing and updating context: workspace scopes (user/workspace/folder) for preferences; a WorkspaceService and WorkspaceState for persisting extension-specific data; context keys and keybinding/menu "when" expressions to gate UI and commands; editor/selection/active widget context propagated by the frontend; and programmatic APIs (e.g. ContextKeyService, PreferenceService, WorkspaceService) that extensions use to observe and update context.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Theia exposes direct file and URI APIs for referencing and manipulating files: FileSystem/FileSystemProvider (backend), URI objects, WorkspaceService for workspace roots, and EditorManager/EditorOpener for opening files. Extensions typically use these services to resolve file paths, create/open editors (EditorManager.open(uri)), and watch file changes (FileSystem.watch). Theia also interoperates with VS Code-style URIs when using VS Code plugins.
 
@@ -94,7 +94,7 @@ Eclipse Theia is an open-source, modular IDE framework maintained under the Ecli
 - Yes
   - Theia provides several mechanisms that function as checkpoints or enable recovery: workspace state persistence (open editors, layout), crash/restart recovery, cloud/workspace snapshots in managed deployments, and extensible local-history or snapshot extensions. For source-controlled checkpoints, Theia integrates with Git extensions (commit/branch/rollback) so users can revert changes via standard VCS workflows. For richer checkpoint semantics, authors typically add an extension (local history, snapshotting service, or backend snapshot API).
 
-### GitSupport
+### Git Support
 - Yes
   - Native Git support via extensions (benefits from VS Code extension ecosystem). Git tooling, source control views and integrations are commonly added through Open VSX extensions.
 

@@ -66,21 +66,21 @@ Testify AI is a fast-growing open-source project that brings AI-powered test aut
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - Yes
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
 
-### DirectFileReferences
+### Direct File References
 - Yes
 
 ### Checkpoints
 - No
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

@@ -79,23 +79,23 @@ The tool features a large 128K token context window, making it suitable for work
 ### BYOK
 - -
 
-### LocalOffline
+### Local Offline
 - -
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - 128K token context window
   - Maintains context across Shell and agent modes
 
-### DirectFileReferences
+### Direct File References
 - Yes
 
 ### Checkpoints
 - -
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

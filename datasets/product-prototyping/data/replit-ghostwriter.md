@@ -87,16 +87,16 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Ghostwriter uses code context awareness: it inspects open files and surrounding code to generate contextually relevant completions, transformations, and explanations. It also powers Ghostwriter Chat, where the assistant leverages project context to answer questions and generate code snippets.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Ghostwriter is integrated into the Replit IDE and can read the files in the current Replit project/workspace to provide suggestions and transformations. Developers can ask Ghostwriter to operate on specific files opened in the editor, and the assistant uses the open-file buffer and project files as context.
 
@@ -104,7 +104,7 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 - Yes
   - Checkpoints/rollback functionality is part of Replit Agent (project history, diffs, and rollback to previous checkpoints). Replit's general workspace history (snapshots, version history) and Agent both provide mechanisms to revert or inspect prior states. Ghostwriter's generated edits can be undone via standard editor undo and Replit's version history.
 
-### GitSupport
+### Git Support
 - Yes
   - Replit provides integrated Git and GitHub support via a visual Git pane and CLI access in the Shell. Developers can clone, commit, push, pull, and manage branches. Replit handles GitHub authentication securely, but warns against sharing tokens in Multiplayer sessions.
 

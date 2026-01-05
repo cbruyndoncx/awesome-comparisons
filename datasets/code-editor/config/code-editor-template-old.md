@@ -121,13 +121,13 @@ AI Native Dev Code Editor category
 - No
 
 ## Developer Experience
-### ContextManagement
+### Context Management
 <!-- Methods for managing and updating the context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. -->
 - Yes
 - No
 
-### DirectFileReferences
+### Direct File References
 <!-- Can with @file or similar provide context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. -->
 - Yes
@@ -139,7 +139,7 @@ AI Native Dev Code Editor category
 - Yes
 - No
 
-### GitSupport
+### Git Support
 <!-- Coding tool is aware of GIT and can work/integrate with GIT repos -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. -->
 - Yes
@@ -152,7 +152,7 @@ AI Native Dev Code Editor category
 - Yes
 - No
 
-### LocalOffline
+### Local Offline
 <!-- Support for local on-site deployment or local offline use -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. -->
 - Yes

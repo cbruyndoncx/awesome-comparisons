@@ -91,17 +91,17 @@ JetBrains AI Assistant embeds AI workflows directly inside JetBrains IDEs and le
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - Yes
   - Local model/server support (Ollama, LM Studio and any server compatible with OpenAI-style endpoints) enables offline workflows and on-device completions. JetBrains added expanded local model support in 2025, including connections to llama.cpp/LiteLLM-style hosts and code-tuned models (Qwen, DeepSeek-Coder, Mellum variants).
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - JetBrains AI Assistant supports project-aware context management. In "Codebase" mode it automatically gathers context from the open project (open files, project tree, symbols, recent commits, and selected files). Users can also manually add context items (files, folders, images, symbols, commits) via the "Add context" UI in the chat, or reference specific files/symbols using in-chat @ references. Automatic context gathering can be disabled to restrict the assistant's view.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - The assistant can reference and include specific files and folders as explicit context for a chat or agent action. Users may add files/folders to the context panel or mention them with @-style references in chat to ensure the model uses that file content. In agent mode, multi-file edits are previewed and can be applied to the working tree.
 
@@ -109,7 +109,7 @@ JetBrains AI Assistant embeds AI workflows directly inside JetBrains IDEs and le
 - Yes
   - The assistant supports review-before-apply for generated edits (preview diffs). Users can accept or reject changes. Additionally, JetBrains IDEs provide VCS integration (Git) and Local History, enabling undo/revert of applied changes even if the assistant makes edits. These mechanisms together act as checkpoints for recovery.
 
-### GitSupport
+### Git Support
 - Yes
   - Assistive features for commit messages, PR descriptions, refactor-aware changes, and multi-file edits that can be staged/reviewed in the IDE.
 

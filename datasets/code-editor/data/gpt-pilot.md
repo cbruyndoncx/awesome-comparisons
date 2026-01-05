@@ -80,17 +80,17 @@ GPT Pilot (by Pythagora) is a source-available AI developer assistant designed t
 - Yes
   - Supports multiple LLM providers (OpenAI, Anthropic/Claude, Groq) via configuration — effectively a vendor-agnostic/BYOK model.
 
-### LocalOffline
+### Local Offline
 - Yes
   - Can be run locally or inside Docker; configurable to use local LLM endpoints or self-hosted inference where supported.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - GPT Pilot uses a multi-part context management strategy designed for large codebases: context-rewinding, recursive conversations, and TDD-driven checkpoints. It maintains a project file/folder tree with human-readable descriptions and generates pseudocode summaries for functions and files. Before implementing a step it: (1) presents the workspace tree + descriptions so the LLM can narrow relevant files, (2) supplies pseudocode summaries for candidate files so the LLM can identify relevant functions, then (3) fetches the actual code for the selected files into the implementation conversation. This selective fetching + pseudocode approach keeps the LLM prompt size bounded while preserving the necessary local context.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Files and folders are represented in the workspace with descriptions; GPT Pilot can present a project tree and selectively fetch files into the active conversation. It also stores generated code in a workspace (CLI-driven) and integrates with Git, VS Code, and a local workspace so the system can operate on real files, commit changes, and run tests. The pseudocode+file-description layer lets the system reference files at function-level granularity before pulling full source.
 
@@ -98,7 +98,7 @@ GPT Pilot (by Pythagora) is a source-available AI developer assistant designed t
 - Yes
   - The workflow explicitly includes human review checkpoints and automated test generation at two granularities (unit tests after steps, integration/e2e tests after tasks). Work is persisted in a workspace with Git support and a CLI/VS Code integration, enabling manual rollbacks or inspection. The system's "95% automated / 5% human oversight" model makes checkpoints first-class (stop-and-review before progressing).
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

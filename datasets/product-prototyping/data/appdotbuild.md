@@ -82,17 +82,17 @@ The default generated stacks commonly include React on the frontend and Fastify 
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - No
   - app.build relies on remote LLMs and hosted infrastructure (Neon/Koyeb) for generation and deployment.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - app.build implements structured context management through an FSM-driven workflow and an error-analysis feedback loop. The agent performs incremental context enrichment (data model → ORM/tests → handlers), validates generated artifacts at each stage, and uses validation failures as feedback to adjust subsequent generation steps. The FSM provides guarded state transitions and guiding events (rather than fully imperative commands) so the system can maintain coherent context while allowing targeted intervention.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - The platform is file-centric: app.build generates a complete, editable codebase and commits it to a user GitHub repository. The CLI/control plane operate on a filesystem/repo model (create files, run tests, push commits), which means files are directly created, written, and referenced as primary artifacts. While there is no publicly documented "in-repo file reference API" for ad-hoc file injection in prompts, the agent's workflow inherently reads/writes repo files and uses them as the single source of truth for the generated application.
 
@@ -100,7 +100,7 @@ The default generated stacks commonly include React on the frontend and Fastify 
 - Yes
   - app.build uses Git (creating a full GitHub repository for each generated app) and CI/CD as implicit checkpoints. Each generation step produces commits and pipeline artifacts, giving users a natural rollback and audit trail. Additionally, the FSM/graph architecture enables targeted re-generation or intervention at intermediate states (avoiding a full restart) — effectively behaving like internal checkpoints during the generation process.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

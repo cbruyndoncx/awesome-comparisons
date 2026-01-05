@@ -72,22 +72,22 @@ Serena is an innovative open-source coding agent toolkit that emerged in 2025, p
 - Yes
   - As an open-source toolkit, users can deploy and configure it with their own infrastructure
 
-### LocalOffline
+### Local Offline
 - Yes
   - Can be deployed and run locally
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
 
-### DirectFileReferences
+### Direct File References
 - Yes
 
 ### Checkpoints
 - No
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

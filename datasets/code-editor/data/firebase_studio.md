@@ -88,17 +88,17 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
 - No
   - Gemini API keys and AI resources are provisioned as part of the workspace flow; explicit BYOK for model keys is not a first-class, user-driven workflow in the initial preview.
 
-### LocalOffline
+### Local Offline
 - No
   - Firebase Studio is a cloud-hosted workspace; the environment and AI features run in Google-managed infrastructure.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Chat- and workspace-centered context: Gemini-in-Firebase chat + the Code OSS workspace provide the active context (open files, project settings, App Blueprints, Genkit configuration, and provisioned Firebase resources). Methods to update context include editing files in the IDE, committing to the integrated Git repo, changing project/settings in the workspace, re-running prototype prompts, and interacting with the in-IDE chat (Gemini) which reads workspace files to inform responses. There is no public programmatic "context API" documented in the preview — context is primarily managed via the workspace and chat.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Files can be directly referenced and accessed inside the workspace: open files in the Code OSS-based IDE, import repositories (GitHub/GitLab/Bitbucket), upload archives, and use plugins (e.g., Builder.io Figma import) to bring design files into the project. Gemini and the App Prototyping agent access the workspace files to provide contextual code generation and edits. There is no public external file-reference API documented beyond the workspace and VCS integration.
 
@@ -106,7 +106,7 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
 - Yes
   - Undo and rollback are handled primarily via standard version control (Git) integration: commits, branches, and repo history allow reverting agent-made changes. Workspace share URLs, preview deployments and published app versions provide additional reference points, but there is no documented first-class "agent checkpoint" system independent of source control in the preview.
 
-### GitSupport
+### Git Support
 - Yes
   - Import from GitHub, GitLab, Bitbucket; code workspace exposes repo integration and basic Git operations.
 

@@ -133,7 +133,7 @@ Autonomous code agents and agent frameworks
 - Yes
 - No
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-### LocalOffline
+### Local Offline
 <!-- Support for local on-site deployment or local offline use -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -141,13 +141,13 @@ Autonomous code agents and agent frameworks
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 ## Developer Experience
 <!-- Developer Experience -->
-### ContextManagement
+### Context Management
 <!-- Methods for managing and updating the context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
 - No
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-### DirectFileReferences
+### Direct File References
 <!-- Can with @file or similar provide context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -159,7 +159,7 @@ Autonomous code agents and agent frameworks
 - Yes
 - No
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
-### GitSupport
+### Git Support
 <!-- Coding tool is aware of GIT and can work/integrate with GIT repos -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes

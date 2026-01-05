@@ -80,16 +80,16 @@ Runner H (from H Company) is an "action-oriented" autonomous web agent designed 
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Runner H manages context through session-scoped task state and planner-generated action sequences. The master planner decomposes user requests into subtasks, and the orchestrator + sub-agents maintain per-task state, step logs, and intermediate results. Users can update context via follow-up natural-language instructions, by editing task parameters/templates before execution, or through connectors that persist external state (e.g., Google Sheets or Drive). The platform also supports human-in-the-loop confirmations and QA checks that allow context correction mid-flight.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Runner H can reference and operate on files through integrated connectors (e.g., Google Workspace—Drive/Sheets, Slack attachments) and by following supplied URLs. Files can be downloaded, parsed (including visual parsing via the VLM), uploaded to target services, and used as inputs to workflows. This is typically done via integrations rather than direct filesystem mounts.
 
@@ -97,7 +97,7 @@ Runner H (from H Company) is an "action-oriented" autonomous web agent designed 
 - Yes
   - The system records step-level logs and maintains run histories that provide the ability to review, replay, and intervene in task execution. There are human-in-the-loop approval gates and a QA/validation agent that can block or confirm changes before finalizing. While not a transactional "database rollback" in all cases, Runner H provides operational checkpoints, re-run/undo patterns, and error-recovery strategies to revert or correct actions performed by an agent.
 
-### GitSupport
+### Git Support
 - No
 
 ## Extensible

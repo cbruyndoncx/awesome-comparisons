@@ -70,16 +70,16 @@ SourceAI is a web-based AI code generation tool that accepts natural language re
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - No
   - Public-facing documentation and the product site do not describe any structured context management APIs or persistent session/context update mechanisms (no docs found indicating context windows, memory, or programmatic context updates).
 
-### DirectFileReferences
+### Direct File References
 - No
   - There is no public documentation indicating the ability to reference or mount repository files, upload project directories, or directly point the assistant at files in a codebase.
 
@@ -87,7 +87,7 @@ SourceAI is a web-based AI code generation tool that accepts natural language re
 - No
   - No documented support for checkpoints, snapshot/undo features, or versioned state management for generated outputs.
 
-### GitSupport
+### Git Support
 - No
 
 ## Extensible

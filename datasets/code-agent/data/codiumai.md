@@ -102,20 +102,20 @@ CodiumAI (rebranded to Qodo) is an AI-first code quality platform focused on aut
 
 - Self-hosted PR-Agent and local/CI installs accept environment-configured LLM API keys (e.g., OPENAI_KEY) and support custom model endpoints; this enables BYOK workflows when self-hosting.
 
-### LocalOffline
+### Local Offline
 - No
   - Some components (for example PR-Agent) are available as open-source/self-hostable tools that can be run locally or in CI, but the full product and advanced model features are primarily cloud-based.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 <!-- Methods for managing and updating the context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
 
 - Uses deep repository indexing, PR-diff context, and MCP-driven tool contexts to provide rich, updating context to the agent. IDE plugins and PR-Agent surface contextual inputs automatically.
 
-### DirectFileReferences
+### Direct File References
 <!-- Can with @file or similar provide context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -129,7 +129,7 @@ CodiumAI (rebranded to Qodo) is an AI-first code quality platform focused on aut
 
 - Rollback and history rely on Git for checkpoints and audit trail. PR-Agent itself does not implement a separate versioned checkpoint UI but integrates with VCS history and CI workflows for undo/rollback.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

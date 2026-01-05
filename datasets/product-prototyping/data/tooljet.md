@@ -110,17 +110,17 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
 - Yes
   - Users provide their own API keys for third-party services and LLMs when configuring integrations.
 
-### LocalOffline
+### Local Offline
 - Yes
   - Self-hostable via Docker and Kubernetes; can be run on-prem or in isolated/cloud VPCs.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - ToolJet exposes multiple ways to manage and surface runtime/contextual data to apps: the built-in globals object (globals.currentUser, globals.groups, globals.theme, globals.urlparams, globals.environment, globals.modes), component bindings and template expressions (eg. {{components.myInput.value}}, {{queryName.data}}), URL parameters, environment identifiers, and the Inspector panel in the app builder that shows available context paths. ToolJet also supports external context integrations via the MCP (Model Context Protocol) bridge for AI assistants and programmatic access to users/workspaces/apps.
 
-### DirectFileReferences
+### Direct File References
 - No
   - ToolJet apps do not provide arbitrary direct filesystem path access inside the app runtime. Files are handled via file-upload / file-picker components, storage connectors (S3, Google Cloud Storage, etc.), the ToolJet Database or external APIs; assets and uploaded files are referenced by URL or connector-managed storage rather than local filesystem paths.
 
@@ -128,7 +128,7 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
 - Yes
   - ToolJet supports versioning and rollback patterns via GitSync / CI integrations (GitHub/GitLab) and app versioning features (enterprise/hosted features). For self-hosted deployments you can also rely on database backups and container snapshots to restore state. Note that the availability and convenience of these checkpointing/rollback features depend on the edition (community vs. enterprise) and how you configure persistence/versioning.
 
-### GitSupport
+### Git Support
 - Yes
   - GitSync / CI integrations for versioning (GitHub/GitLab supported in paid/enterprise tiers).
 

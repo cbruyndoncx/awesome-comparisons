@@ -83,17 +83,17 @@ Amp is designed as an "agentic" coding assistant that can autonomously reason th
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - Yes
   - Supports MCP servers which can point to local or self-hosted model/context providers
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Manages repo context via code search, AGENT.md, and project-aware context windows; supports extended context budgets and multi-repo reasoning.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - CLI and extension workflows can reference and operate on specific files; supports tracing and applying edits to particular files.
 
@@ -101,7 +101,7 @@ Amp is designed as an "agentic" coding assistant that can autonomously reason th
 - Yes
   - Tracks file changes during sessions and provides mechanisms to review and revert edits (per-session change tracking, git-based workflows).
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

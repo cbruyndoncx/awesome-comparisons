@@ -76,17 +76,17 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
 - Unknown (likely available for Enterprise)
   - No public documentation; Teams/Enterprise editions mention on-prem deployment options.
 
-### LocalOffline
+### Local Offline
 - Partial (Enterprise on-prem option available)
   - Standard offering is cloud-based; Enterprise customers can deploy on-premises.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Project-aware analysis and incremental test maintenance; Cover tracks generated tests and can re-generate/update tests as code changes, integrating with the project's source layout and build system.
 
-### DirectFileReferences
+### Direct File References
 - No
   - Cover operates by scanning the project/source tree (IDE or CLI) rather than accepting ad-hoc @file references in a prompt-like fashion.
 
@@ -94,7 +94,7 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
 - No
   - Diffblue does not provide its own checkpoint/undo system; users should rely on VCS (git) to manage changes and review generated tests. Cover does, however, separate Diffblue-managed tests from user-written tests to reduce accidental edits.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

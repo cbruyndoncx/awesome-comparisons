@@ -79,21 +79,21 @@ Sweep is an intelligent open-source AI assistant that automates typical develope
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - Yes
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
 
-### DirectFileReferences
+### Direct File References
 - Yes
 
 ### Checkpoints
 - Yes
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

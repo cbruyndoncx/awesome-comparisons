@@ -86,19 +86,19 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
 - Yes
   - supports connecting your own model/provider credentials when desired
 
-### LocalOffline
+### Local Offline
 - Yes
   - can be used with local model runtimes such as Ollama / LM Studio for offline or on-prem usage
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 <!-- Methods for managing and updating the context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
   - Project-scoped Memory Bank (.kilocode/) stores persistent notes and preferences; Kilo automatically searches and indexes project context and shows the context window size per request.
 
-### DirectFileReferences
+### Direct File References
 <!-- Can with @file or similar provide context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -107,7 +107,7 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
 ### Checkpoints
 - Yes
   - Kilo Code automatically creates checkpoints (snapshots of your project's state) in a shadow Git repository. This allows for safe experimentation with AI-suggested changes, easy recovery from unwanted modifications, and reverting to previous project states.
-### GitSupport
+### Git Support
 - Yes
   - deep Git/GitHub integration patterns for generating commit messages, searching codebase, and automating repo tasks
 

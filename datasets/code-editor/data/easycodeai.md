@@ -97,20 +97,20 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - Yes
   - Local-first architecture; code and context are kept on the developer's machine rather than sent to third-party servers for model training or storage
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 <!-- Methods for managing and updating the context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 - Project-wide context awareness, automatic file relevance analysis, and manual file/tag selection (e.g., @file references) to scope prompts and implementations.
 
-### DirectFileReferences
+### Direct File References
 <!-- Can with @file or similar provide context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -124,7 +124,7 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 - Integrates with local git repositories and provides edition checkpoints and undo flows within the IDE; supports human review before commits.
 
-### GitSupport
+### Git Support
 - Yes
   - Integrates with local repositories and provides VS Code extension workflows
 

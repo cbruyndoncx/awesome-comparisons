@@ -84,17 +84,17 @@ The extension is intended to reduce context switching by letting developers rema
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - No
   - Cloud-first with extension-based integration into VS Code. Local offline modes not advertised; enterprise/enterprise-on-prem options may exist.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Long-horizon memory and repository indexing
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Agents can surface and edit files directly in the workspace
 
@@ -102,7 +102,7 @@ The extension is intended to reduce context switching by letting developers rema
 - Yes
   - Worktree-level commits and rollbacks protect main branches
 
-### GitSupport
+### Git Support
 - Yes
   - Integrated commit/PR workflows
 

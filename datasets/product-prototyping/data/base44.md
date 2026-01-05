@@ -71,21 +71,21 @@ Base44 is an AI-powered application development platform that enables users to c
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
 
-### DirectFileReferences
+### Direct File References
 - Yes
 
 ### Checkpoints
 - Yes
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

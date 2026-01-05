@@ -81,23 +81,23 @@ React Grab is compatible with popular AI coding tools such as Cursor, Claude Cod
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - Yes
   - Runs locally as part of development environment
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Extracts and provides element context to AI assistants
 
-### DirectFileReferences
+### Direct File References
 - No
 
 ### Checkpoints
 - No
 
-### GitSupport
+### Git Support
 - No
 
 ## Extensible

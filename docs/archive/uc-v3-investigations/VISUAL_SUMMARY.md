@@ -100,7 +100,7 @@ Result: Non-destructive, null-preserving merge
   ├─ subtitle (from dataset-specific or defaults)
   ├─ criteria:
   │  ├─ BYOK (from dataset-specific + merged with defaults)
-  │  ├─ LocalOffline (from dataset-specific + merged with defaults)
+  │  ├─ Local Offline (from dataset-specific + merged with defaults)
   │  ├─ Deployment (from shared defaults + dataset values)
   │  └─ ... (more criteria)
   └─ details (from defaults or dataset-specific)

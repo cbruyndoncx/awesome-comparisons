@@ -74,17 +74,17 @@ Cursor reimagines the developer workflow by making AI agents first-class collabo
 - Yes
   - Cursor supports bring-your-own API keys / model endpoints so teams can choose preferred providers (OpenAI, Anthropic, Google, self-hosted endpoints where supported) and reduce exposure of secrets to the Cursor cloud where applicable.
 
-### LocalOffline
+### Local Offline
 - No
   - Cursor is primarily a cloud-first product. While BYOK lets you use private model endpoints, fully offline/local-only deployments are not a documented primary use-case as of the 2.0 release.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Chat buffers and Composer sessions expose context and let you include or edit file contents, terminal logs, and other contextual blocks used to ground agent reasoning.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - You can reference files or selections as part of prompts and Composer sessions; agents can operate on specified files or the entire repo depending on mode and permissions.
 
@@ -92,7 +92,7 @@ Cursor reimagines the developer workflow by making AI agents first-class collabo
 - Yes
   - Agent edits and Composer changes are presented as diffs and create checkpoints or restore points so you can revert unwanted changes.
 
-### GitSupport
+### Git Support
 - Yes
   - Uses git worktrees and integrates with standard Git workflows. Multi-agent execution uses isolated worktrees to avoid merge conflicts while agents make changes.
 

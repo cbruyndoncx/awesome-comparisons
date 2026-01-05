@@ -128,7 +128,7 @@ mux (Coding Agent Multiplexer) is a cross-platform desktop application for AI-as
 - Yes
   - Supports configuring API keys/endpoints for OpenRouter and other cloud providers; local runtimes (Ollama) can be pointed at local model servers.
 
-### LocalOffline
+### Local Offline
 <!-- Support for local on-site deployment or local offline use -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -136,13 +136,13 @@ mux (Coding Agent Multiplexer) is a cross-platform desktop application for AI-as
 
 ## Developer Experience
 <!-- Developer Experience -->
-### ContextManagement
+### Context Management
 <!-- Methods for managing and updating the context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
   - Features like opportunistic compaction, instruction-files, and mode prompts help manage and compact context during long-running agent sessions.
 
-### DirectFileReferences
+### Direct File References
 <!-- Can with @file or similar provide context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -154,7 +154,7 @@ mux (Coding Agent Multiplexer) is a cross-platform desktop application for AI-as
 - Yes
   - Integrates with git (worktrees and divergence view) allowing standard git-based checkpoints, branches, and revert workflows.
 
-### GitSupport
+### Git Support
 <!-- Coding tool is aware of GIT and can work/integrate with GIT repos -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes

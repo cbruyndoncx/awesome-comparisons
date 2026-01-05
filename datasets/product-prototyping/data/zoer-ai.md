@@ -70,21 +70,21 @@ Zoer.ai is a comprehensive AI-powered platform launched in September 2025 that b
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
 
-### DirectFileReferences
+### Direct File References
 - Yes
 
 ### Checkpoints
 - Yes
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

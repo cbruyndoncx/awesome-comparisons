@@ -74,7 +74,7 @@ criteria:
       order: '50'
       children:
         - BYOK
-        - LocalOffline
+        - Local Offline
         - OperatingSystem
         - VSCodeExt
         - JetBrainsExt
@@ -95,8 +95,8 @@ criteria:
       values:
         'Yes':
         'No':
-  - LocalOffline:
-      name: LocalOffline
+  - Local Offline:
+      name: Local Offline
       type: LABEL
       search: true
       table: true
@@ -117,13 +117,13 @@ criteria:
       detail: false
       order: '30'
       children:
-        - ContextManagement
-        - DirectFileReferences
+        - Context Management
+        - Direct File References
         - Checkpoints
-        - GitSupport
+        - Git Support
       defaultExpanded: true
-  - ContextManagement:
-      name: ContextManagement
+  - Context Management:
+      name: Context Management
       type: LABEL
       search: true
       table: true
@@ -136,8 +136,8 @@ criteria:
       values:
         'Yes':
         'No':
-  - DirectFileReferences:
-      name: DirectFileReferences
+  - Direct File References:
+      name: Direct File References
       type: LABEL
       search: true
       table: true
@@ -164,8 +164,8 @@ criteria:
       values:
         'Yes':
         'No':
-  - GitSupport:
-      name: GitSupport
+  - Git Support:
+      name: Git Support
       type: LABEL
       search: true
       table: true

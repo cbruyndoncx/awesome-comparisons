@@ -56,16 +56,16 @@ This proposal outlines suggested GitHub issues to track corrections needed for t
 
 ## Priority 2: Contradictory Information (4 issues)
 
-### Issue 4: Fix Contradictory LocalOffline Answer in CodeRabbit
+### Issue 4: Fix Contradictory Local Offline Answer in CodeRabbit
 **File:** `datasets/code-agent/data/coderabbit.md`
 **Severity:** High - Contradictory Data
 **Description:**
-- Lines 90-92: States LocalOffline is "No" but mentions "self-hosted option is referenced by the vendor"
+- Lines 90-92: States Local Offline is "No" but mentions "self-hosted option is referenced by the vendor"
 - If self-hosted is available, answer should be "Yes (Enterprise self-hosted option available)"
 
 **Action Required:**
 - Research CodeRabbit's actual self-hosted/on-premise offerings
-- Update LocalOffline field to accurately reflect availability
+- Update Local Offline field to accurately reflect availability
 - Ensure Yes/No answer matches the explanation
 
 ---
@@ -84,11 +84,11 @@ This proposal outlines suggested GitHub issues to track corrections needed for t
 
 ---
 
-### Issue 6: Fix Contradictory LocalOffline Answer in Smol Developer
+### Issue 6: Fix Contradictory Local Offline Answer in Smol Developer
 **File:** `datasets/code-agent/data/smol-developer.md`
 **Severity:** High - Contradictory Data
 **Description:**
-- Lines 80-81: States LocalOffline is "Yes" but explains "most common usage relies on a cloud LLM"
+- Lines 80-81: States Local Offline is "Yes" but explains "most common usage relies on a cloud LLM"
 - Misleading if network access is required for typical usage
 
 **Action Required:**
@@ -169,18 +169,18 @@ Multiple files missing MCP-Client Yes/No answers:
 
 ---
 
-### Issue 11: Complete Empty BYOK and LocalOffline Fields
+### Issue 11: Complete Empty BYOK and Local Offline Fields
 **Files:** mutableai.md, diffblue_cover.md, devin.md
 **Severity:** Medium - Incomplete Data
 **Description:**
 Critical enterprise deployment fields are empty:
 - mutableai.md: Empty BYOK (Line 76)
-- diffblue_cover.md: Empty BYOK (Line 77), Empty LocalOffline (Line 80)
+- diffblue_cover.md: Empty BYOK (Line 77), Empty Local Offline (Line 80)
 - devin.md: Empty BYOK (Line 76)
 
 **Action Required:**
 - Research enterprise deployment options for each tool
-- Fill in BYOK and LocalOffline fields with Yes/No + explanation
+- Fill in BYOK and Local Offline fields with Yes/No + explanation
 - These are important for enterprise evaluation
 
 ---

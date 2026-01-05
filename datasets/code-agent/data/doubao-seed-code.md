@@ -73,21 +73,21 @@ Doubao-Seed-Code is ByteDance's professional code generation AI, launched by Vol
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
 
-### DirectFileReferences
+### Direct File References
 - Yes
 
 ### Checkpoints
 - Yes
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

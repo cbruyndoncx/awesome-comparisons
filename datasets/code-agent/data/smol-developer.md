@@ -76,17 +76,17 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
 - Yes
   - Users bring their own LLM API keys (e.g., OpenAI) for generation.
 
-### LocalOffline
+### Local Offline
 - Partial (supports local LLMs but typically uses cloud)
   - Smol can be configured to use locally hosted/open-source LLMs, but most common usage relies on a cloud LLM (e.g., OpenAI GPT-4) which requires network access and an API key.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Context is managed via repository-driven workflows and the Markdown spec + plan structure; users iterate against a git repo and can pass file/dir context into generation steps.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - In repo mode the agent operates on files in the checked-out repository and can reference/modify files directly as part of the workflow.
 
@@ -94,7 +94,7 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
 - Yes
   - Checkpoints are provided by Git (git commits) when using repo mode; users can review, revert, and manage history through standard VCS operations.
 
-### GitSupport
+### Git Support
 - Yes
   - The primary interactive workflow is git-repo driven, enabling human-in-the-loop development, commits, diffs and review.
 

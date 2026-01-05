@@ -80,17 +80,17 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
 - Unknown
   - No public documentation found regarding BYOK (Bring Your Own Key) capability for the proprietary Cogram.ai service
 
-### LocalOffline
+### Local Offline
 - No
   - Appears cloud-hosted; no documented offline/local inference option found for the jupyter-cogram extension.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Uses the notebook execution and cell history (code above the cursor) as context to generate more accurate suggestions.
 
-### DirectFileReferences
+### Direct File References
 - No
   - No indication that the jupyter-cogram extension provides direct file reference management or file browsing capabilities in the documented interface
 
@@ -98,7 +98,7 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
 - No
   - No indication the extension provides its own checkpointing/undo system; relies on Jupyter's native checkpoints and notebook infrastructure.
 
-### GitSupport
+### Git Support
 - No
   - No explicit Git integration documented for the jupyter-cogram extension.
 

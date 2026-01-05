@@ -81,22 +81,22 @@ According to performance analyses, Cheetah AI delivers 230% ROI for engineering 
 ### BYOK
 - -
 
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - deepResearch integration for detailed project specifications
 
-### DirectFileReferences
+### Direct File References
 - Yes
 
 ### Checkpoints
 - -
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

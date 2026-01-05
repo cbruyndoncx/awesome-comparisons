@@ -76,17 +76,17 @@ CodeLayer is an open-source, keyboard-first IDE and orchestration layer for AI c
 - Yes
   - Environment and Claude settings support supplying external LLM API keys and configuring provider settings (e.g., ~/.claude/settings.json, env vars). CLI/desktop app can inherit shell environment variables so teams can use their own provider keys (AWS Bedrock, Anthropic, etc.).
 
-### LocalOffline
+### Local Offline
 - No
   - Primarily designed to run with Claude Code / Anthropic-backed sessions rather than purely local model hosting]
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - CodeLayer / HumanLayer provides multiple explicit context-management mechanisms: session-scoped context across Claude Code sessions, file and region pinning (attach files or file ranges to a session), worktree-aware context (each session can be bound to a git worktree/branch), context windows and prompt templates for engineered context snapshots, message/thread history preserved per session, and state objects that are carried through human approval flows and webhooks. These combine to enable deterministic context engineering and reproducible agent runs.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - CodeLayer integrates with the repository and git worktrees so sessions can directly reference files, open diffs, and operate on file ranges. Sessions surface file metadata (path, revision, worktree) in prompts and diffs so agents and humans can operate on precise file references. The HumanLayer SDK also allows including file-like payloads in approvals and function calls so external systems can reconstruct the referenced files.
 
@@ -94,7 +94,7 @@ CodeLayer is an open-source, keyboard-first IDE and orchestration layer for AI c
 - Yes
   - Checkpoints are supported via git/worktree integration (explicit worktrees per session, diffs, and commits) plus session archiving and approval audit logs. Because CodeLayer operates alongside git, standard git workflows (commits, branches, resets) provide reversible checkpoints; HumanLayer also records approval histories and function-call traces for audit and rollback reasoning.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

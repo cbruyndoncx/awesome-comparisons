@@ -132,8 +132,8 @@ criteria:
       defaultExpanded: true
       children:
         - BYOK
-        - LocalOffline
-        - GitSupport
+        - Local Offline
+        - Git Support
         - Terminal
         - Extensible
         - MCP-Client
@@ -351,8 +351,8 @@ criteria:
       defaultExpanded: true
       children:
         - BYOK
-        - LocalOffline
-        - GitSupport
+        - Local Offline
+        - Git Support
 
   - Integration:
       name: Integration Features
@@ -473,8 +473,8 @@ criteria:
       defaultExpanded: true
       children:
         - BYOK
-        - LocalOffline
-        - GitSupport
+        - Local Offline
+        - Git Support
         - Terminal  # May not exist in all datasets
 ```
 
@@ -573,7 +573,7 @@ criteria:
         - name: "Partial"
           class: "label-info"
 
-  - LocalOffline:
+  - Local Offline:
       name: "Local/Offline"
       type: LABEL
       search: true
@@ -599,7 +599,7 @@ criteria:
       defaultExpanded: true
       children:
         - BYOK
-        - LocalOffline
+        - Local Offline
 ```
 
 **3. Add to dataset manifest:**

@@ -71,13 +71,13 @@ Void is an open-source, privacy-focused AI code editor that forks the Visual Stu
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - Yes
   - Supports running local/open-source models via integrations (Ollama, LM Studio, local runners) so inference can remain on-device or on-prem.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Void maintains multi-file and workspace-level context via file indexing and a project-aware workspace model. The editor exposes this context to its AI features in several ways:
     - File indexing / workspace awareness: Void builds an index of the repository so the AI can reason over multiple files (cross-file references, symbol lookup, project-level search).
@@ -85,7 +85,7 @@ Void is an open-source, privacy-focused AI code editor that forks the Visual Stu
     - Prompt / request customization: the underlying prompts sent to models are visible and editable, enabling explicit control of what context is injected and how it is framed.
     - Model/context selection: users can choose local vs cloud models and control token/context-window usage (selecting models with different context sizes) to manage how much of the project fits into a single request.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Files can be directly referenced and provided to the AI workflows:
     - Inline edits: AI can propose and apply edits directly to files opened in the editor (Ctrl+K inline editing and Fast Apply for large files).
@@ -100,7 +100,7 @@ Void is an open-source, privacy-focused AI code editor that forks the Visual Stu
     - Git / source control: typical Git workflows (commits, branches) can be used to checkpoint and revert agent changes; teams can require PRs for AI changes.
     - Read-only modes: Gather Mode provides a safe, read-only analysis option to avoid accidental changes.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

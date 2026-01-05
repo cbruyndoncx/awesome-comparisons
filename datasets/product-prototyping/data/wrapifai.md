@@ -77,19 +77,19 @@ Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you c
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Upload custom datasets (CSV, JSON, TXT/PDF) into a tool project to provide contextual data
   - Configure prompt templates and variables via the visual builder; edit prompts in the dashboard to change behavior
   - Connect external data sources (APIs, databases, webhooks) so the tool can pull updated context at runtime
   - Use webhooks or the platform API to push updates or new documents to a tool’s dataset
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Files can be uploaded and associated with a specific tool (document ingestion). Uploaded files are used as source context for prompts and can be referenced by the tool's prompt templates or data bindings
   - External URLs or API-driven data sources can be referenced so the tool pulls content on demand
@@ -98,7 +98,7 @@ Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you c
 - No
   - No public evidence of a git-like commit history or automatic checkpointing; tool edits are managed through the dashboard and may have basic version controls, but no documented full rollback/commit workflow
 
-### GitSupport
+### Git Support
 - No
 
 ## Extensible

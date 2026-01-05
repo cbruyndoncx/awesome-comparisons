@@ -85,13 +85,13 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
 - Yes
   - Tabnine supports OpenAI API-compatible endpoints and private certificate authorities for enterprise integrations, and allows organizations to configure custom model endpoints or self-hosted model deployments (Gemma, Qwen, etc.). These capabilities let enterprises use their own model endpoints and credentials in managed/private deployments.
 
-### LocalOffline
+### Local Offline
 - Yes
   - Supports local model execution and private/on-prem deployments. Offers VPC and air-gapped installation options for organizations with strict data residency and compliance requirements.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Tabnine maintains and uses workspace context through a local project index and live file analysis. Methods for managing and updating context include:
     - Workspace indexing: Tabnine scans and indexes files in the opened project to provide organization-aware suggestions.
@@ -100,7 +100,7 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
     - Privacy controls: Enterprise and local deployments allow toggling whether code is sent to cloud models or kept local, which affects what context is available to cloud vs local models.
     - Model selection and scope: Admin-level settings in enterprise deployments can control which models are used and whether organizational learning (repository-level learning) is enabled.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Tabnine consumes the indexed workspace and open-file contents as direct input for completions. Ways files can be referenced in context:
     - Implicit referencing: The completion engine automatically uses related files from the indexed workspace (imports, definitions, tests) to inform suggestions.
@@ -110,7 +110,7 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
 ### Checkpoints
 - No
 
-### GitSupport
+### Git Support
 - Yes
   - Tabnine is repository-aware and supports multi-repo indexing and context. Notable integrations and capabilities:
     - Multi-repo awareness: Tabnine can index and reason across multiple repositories to provide cross-repo completions.

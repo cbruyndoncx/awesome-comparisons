@@ -65,21 +65,21 @@ GPTutor is a Visual Studio Code extension launched in 2025 that specializes in e
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
 
-### DirectFileReferences
+### Direct File References
 - Yes
 
 ### Checkpoints
 - No
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

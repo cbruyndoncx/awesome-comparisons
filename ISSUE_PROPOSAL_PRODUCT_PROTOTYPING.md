@@ -207,7 +207,7 @@ Lines 99-122 have multiple empty fields:
 **Severity:** Medium - Multiple Incomplete Fields
 **Description:**
 Multiple fields contain only blank lines or dashes:
-- Lines 108-109: DirectFileReferences (blank)
+- Lines 108-109: Direct File References (blank)
 - Lines 110-113: Checkpoints (blank)
 - Lines 123-129: SlashCommands (blank)
 - Lines 132-133: CustomModes (blank)

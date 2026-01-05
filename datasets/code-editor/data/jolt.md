@@ -97,21 +97,21 @@ Jolt is a commercial AI coding assistant designed for large production codebases
 - No
   - No public documentation found indicating Bring-Your-Own-Key support for LLM encryption keys.
 
-### LocalOffline
+### Local Offline
 
 - No
   - Jolt operates as a cloud service with IDE integrations; offline/local-only usage is not advertised.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - HyperContext: Jolt's primary method is an automatic, global "HyperContext" index that discovers and maintains context across entire repositories (multi-repo support) so users do not need to manually select files. It runs in the web app and IDE extensions and keeps awareness of local, unsaved/changed files when used via IDE plugins.
   - Automatic context discovery: Jolt identifies relevant files for a task (callsites, tests, configs, module boundaries) and surfaces them in chat and in the UI.
   - Scope controls: In IDEs and the web app users can narrow workspace/repo scope (open folders, repo selection) so HyperContext focuses on a subset of files rather than the whole enterprise index.
   - Use cases: code comprehension, multi-file feature work, cross-file refactors, root-cause analysis from logs.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Jolt can reference specific files and produce direct multi-file edits and git-style patches. Files are referenced in several ways:
     - Automatic selection: HyperContext locates and highlights relevant files for a given request.
@@ -123,7 +123,7 @@ Jolt is a commercial AI coding assistant designed for large production codebases
 - No
   - No public documentation of built-in checkpoint/undo features. Jolt supports exporting patches and integrates with git/IDE workflows, so rollbacks are typically handled via VCS (branches, commits) or IDE undo rather than an internal checkpoint system.
 
-### GitSupport
+### Git Support
 - Yes
   - Can produce git patches and integrate with repositories; IDE extensions apply changes directly
 

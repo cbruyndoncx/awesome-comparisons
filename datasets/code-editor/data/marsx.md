@@ -81,20 +81,20 @@ MarsX is an open-source development platform and marketplace that combines AI as
 ### BYOK
 - Unknown
   - No public documentation found for bring-your-own-key support; platform uses integrated AI services
-### LocalOffline
+### Local Offline
 - No
   - MarsX is primarily a cloud platform with a web-based IDE and Micro AppStore.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - MarsX uses a micro-app abstraction to limit and manage AI context: each Micro-App encapsulates UI, backend logic, DB schema and has its own AI model/fine-tuning lifecycle so the AI is given only the Micro‑App’s surface instead of an entire monolithic codebase.
   - Per-Micro-App model fine-tuning and usage aggregation: models are refined from Micro‑App usage and telemetry so suggestions and completions are contextually scoped to the Micro‑App’s domain.
   - Project-level context in the cloud IDE: the workspace exposes a project structure and component metadata (Micro‑App manifest/config) that the platform and AI use to resolve dependencies and orchestration between Micro‑Apps.
   - AI Landing Page Builder and natural-language-driven UI generation: developers provide high-level prompts; the AI synthesizes UI/components using Micro‑App primitives, effectively managing prompt/context to the relevant Micro‑Apps.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - The platform exposes Git and direct code editing in the cloud IDE, enabling developers to modify microapp source files directly within the workspace.
   - Micro‑Apps are packaged with manifests and source files that can be inspected and edited in the IDE or via Git, allowing direct references to files (components, API handlers, schema files) within a project.
@@ -105,7 +105,7 @@ MarsX is an open-source development platform and marketplace that combines AI as
   - Git integration and source control: MarsX exposes Git support for projects/microapps, enabling standard commit/rollback workflows and history-based recovery.
   - Micro‑App versioning and marketplace releases provide another checkpoint mechanism: published microapps can be versioned and rolled back to prior published releases.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

@@ -67,21 +67,21 @@ Lovable.dev is a 2025 release that combines AI-powered code generation with an i
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
 
-### DirectFileReferences
+### Direct File References
 - Yes
 
 ### Checkpoints
 - Yes
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

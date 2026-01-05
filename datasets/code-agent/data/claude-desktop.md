@@ -78,18 +78,18 @@ Designed for Pro, Max, Team and Enterprise customers, Claude Desktop aims to mak
 - No (Standard plans)
   - Enterprise deployment options may be available; contact Anthropic sales/support for BYOK requirements.
 
-### LocalOffline
+### Local Offline
 - No
   - Anthropic's desktop offering is primarily cloud-connected. Public documentation does not describe a fully local/offline model runtime. Enterprise/Team tooling may support organization-managed endpoints; contact Anthropic sales/support for enterprise deployment options.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Claude Desktop supports project-scoped context and memory with configurable retention policies. Users can create session recaps, use project memory, and enable incognito mode to avoid long-term storage of sensitive content. Memory and context policies are configurable by administrators in Enterprise/Team plans.
 
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Claude Desktop supports referencing files inline using the `@` syntax (e.g., `@path/to/file.txt`) with tab-completion. Referencing a file pulls its content into the conversation context and may also load local CLAUDE.md context files in the same directory. The `@` syntax can also target MCP-exposed resources and directories. Users can also drag-and-drop files into the app to create references.
 
@@ -99,7 +99,7 @@ Designed for Pro, Max, Team and Enterprise customers, Claude Desktop aims to mak
   - Claude Desktop provides automatic checkpoints (snapshots) before Claude performs file or code edits. Checkpoints persist across sessions for a limited retention period (default ~30 days) and can be used to restore code, conversation, or both. They are accessible via UI shortcuts (e.g., Esc Esc or /rewind) and are intended as a safety net, not a replacement for Git or other VCS.
 
 
-### GitSupport
+### Git Support
 - No
 
 ## Extensible

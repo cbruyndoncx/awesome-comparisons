@@ -74,18 +74,18 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - Yes
   - Self-hosted / Docker with local model providers like Ollama
   - Running locally with Ollama or other on-prem model hosts enables offline development.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Context is managed via MCP, attachments to prompts (files/images), and provider/session context mechanisms to supply code and project state to models.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Allows attaching files to prompts and direct file editing in the browser editor; prompts and AI actions can reference project files.
 
@@ -93,7 +93,7 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 - Yes
   - Git integration, automatic commits for major operations, and revert/versioning support provide checkpoint-like workflows.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

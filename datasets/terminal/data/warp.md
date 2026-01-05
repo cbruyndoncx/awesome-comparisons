@@ -70,17 +70,17 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 - Yes
   - Warp allows configuration of LLM providers and supports enterprise proxy/BYOK arrangements (customer-supplied API keys or proxying) in enterprise plans. Public documentation is limited on fully self-hosted/on-prem BYOK flows; contact sales/enterprise docs for details.
 
-### LocalOffline
+### Local Offline
 - No
   - Note: Warp runs a local classifier to detect natural-language input, and some metadata/local processing happens on-device, but AI requests are typically proxied to selected LLM providers (OpenAI, Anthropic/Claude variants) unless explicitly configured via enterprise arrangements. There is no broadly-documented fully-offline LLM mode for the AI assistant as of the latest public releases.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Methods include attaching files and images, referencing file paths, persisting Drive artifacts (Workflows/Notebooks/Env vars), and allowing agents to request additional context interactively during multi-step plans.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - You can reference and attach specific files/paths as context for agents; Warp Code surfaces file-level diffs and agents can propose edits to particular files which are shown in the live diff UI.
 
@@ -88,7 +88,7 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 - Yes
   - Warp provides live diff review and approval before applying changes; edits from agents can be accepted, rejected or modified and then committed to Git. Drive artifacts also provide shared versions and history for collaborative workflows.
 
-### GitSupport
+### Git Support
 - Yes
   - Git workflows are supported via the terminal and Warp's code/diff UX; the tool is used to author and review code diffs produced by agents.
 

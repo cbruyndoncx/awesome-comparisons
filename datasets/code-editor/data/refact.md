@@ -87,20 +87,20 @@ Refact.ai is an open-source AI coding assistant and autonomous engineering agent
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - Yes
   - Self-hosted Docker deployment and on-prem options. Can be run without sending code to third-party services when configured to use local/private models and infrastructure.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Refact.ai uses Retrieval-Augmented Generation (RAG) to maintain and update contextual state across a repository: whole-repo indexing, symbol-aware retrieval, and context windows sourced from the repo index.
   - In-IDE session/chat history is preserved and combined with retrieved artifacts to form answers; users can create custom system prompts to influence context.
   - Explicit context controls: @-commands (e.g., @file, @web, @definition, @references, @tree) let users attach or restrict specific sources of context for a given query.
   - Configurable model selection and BYOK allow controlling which LLM and key are used, indirectly affecting context generation and privacy.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Files can be referenced directly via IDE integrations and chat: @file uploads, file attachments, and by invoking workspace tree/@tree to point the agent at specific files or directories.
   - RAG indexing maps symbols to file locations (definitions/references), enabling queries like “show usages of X” or “apply changes to file Y” that reference files precisely.
@@ -111,7 +111,7 @@ Refact.ai is an open-source AI coding assistant and autonomous engineering agent
   - Actions performed by the agent that modify repository state (branches, commits, PRs) are reversible using standard Git operations (revert, reset, branch/commit history) when the agent's git-level permissions are enabled.
   - Self-hosted deployments can enforce additional backup/versioning policies; enterprise deployments support retaining audit logs and rolling back via git or deployment snapshots.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

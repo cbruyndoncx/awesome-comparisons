@@ -75,17 +75,17 @@ The platform is positioned for both individual developer workflows (autocomplete
 - Unknown
   - No public documentation found regarding BYOK support; enterprise deployment options may vary.
 
-### LocalOffline
+### Local Offline
 - No
   - Enterprise / on-premises deployment options are reported, but the standard cloud offering is not a fully local/offline product.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Auto Wiki creates and maintains structured documentation of the codebase and the system updates documentation/context when code changes; this improves contextual answers in the chat and during transformations.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Documentation and chat responses include file/line citations and clickable links that reference specific files and locations in the repository (integrations available for IDEs and GitHub).
 
@@ -93,7 +93,7 @@ The platform is positioned for both individual developer workflows (autocomplete
 - Yes
   - Integrates with Git workflows: changes are previewed, applied in branches or via pull requests, and can be reverted/undone using standard VCS history.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

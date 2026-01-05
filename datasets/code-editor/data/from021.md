@@ -75,20 +75,20 @@ The platform emphasizes a structured process (uses MoSCoW prioritization) and ta
 ### BYOK
 - Unknown
   - No public documentation found for BYOK support; commercial SaaS with integrated AI services
-### LocalOffline
+### Local Offline
 - No
   - From021 is a hosted web service (cloud SaaS)
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Step-by-step product-definition UI (vision & goals, MVP prioritization, PRD generation) that captures and updates product context.
   - MoSCoW prioritization controls to manage feature importance within the project context.
   - Editable PRDs, user journeys and wireframes in the web UI; outputs can be revised and re-generated.
   - Export capabilities (PRDs, user stories, AI prompts, tickets) to external tools to persist context outside the platform.
 
-### DirectFileReferences
+### Direct File References
 - No
   - No public feature documented for directly referencing repository files or attaching arbitrary external files as "live" references in the product context; inputs are primarily web-form/text-driven with export connectors.
 
@@ -96,7 +96,7 @@ The platform emphasizes a structured process (uses MoSCoW prioritization) and ta
 - No
   - No explicit checkpoint/undo/versioning mechanism is documented publicly; inquire with the vendor for data retention, revision history, or rollback capabilities.
 
-### GitSupport
+### Git Support
 - No
 
 ## Extensible

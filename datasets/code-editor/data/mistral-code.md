@@ -74,20 +74,20 @@ Mistral Code is a packaged AI developer assistant designed for enterprise adopti
 - Yes
   - Supports private deployments and enterprise key management practices through on-prem/air-gapped setups
 
-### LocalOffline
+### Local Offline
 - Yes
   - Supports air-gapped on-premises GPU deployment for fully offline operation
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - RAG / semantic retrieval via Codestral Embed: Mistral Code indexes repositories and returns relevant snippets for prompt construction.
   - IDE-based context aggregation: open-file buffers, git diffs, terminal history and static-analysis metadata are used by the plugin to build contextual prompts for completions and agent tasks.
   - Agent session state for multi-step workflows (Devstral): agents persist task state across steps (scan → edit → test → PR) and Mistral Console exposes usage/acceptance metrics.
   - Admin controls to configure which context sources are allowed (repo indexing, terminal, local files) in enterprise/on‑prem deployments.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Files can be directly referenced via the embedding index and semantic search (path-based results and file snippets returned to the assistant).
   - IDE plugin and agentic workflows operate on explicit files: open/edit staged changes, create draft pull requests, and include file paths in diffs/commits.
@@ -98,7 +98,7 @@ Mistral Code is a packaged AI developer assistant designed for enterprise adopti
   - Agentic edits are surfaced as draft changes / pull requests and pass through configurable approval workflows; audit logs record actions so changes can be reviewed and reversed via normal git history.
   - On‑prem deployments and RBAC reduce risk of unwanted auto-commits; standard VCS workflows (branches, PRs) serve as checkpoints for undoing agent actions.
 
-### GitSupport
+### Git Support
 - Yes
   - Integrates with repositories for retrieval-augmented generation, code search, and fine-tuning
 

@@ -74,8 +74,8 @@ This proposal outlines suggested GitHub issues to track corrections needed for t
 **Severity:** High - Data Contradiction
 **Description:**
 Multiple fields have both "Yes" with explanation AND standalone "No":
-- Lines 87-88: ContextManagement
-- Lines 92-93: DirectFileReferences
+- Lines 87-88: Context Management
+- Lines 92-93: Direct File References
 - Lines 96-97: Checkpoints
 - Lines 109-110: Plugins
 - Lines 114-115: Hooks
@@ -156,11 +156,11 @@ Multiple fields with both "Yes" with notes and standalone "No":
 
 ---
 
-### Issue 10: Fix Contradictory ContextManagement in Ask Codi
+### Issue 10: Fix Contradictory Context Management in Ask Codi
 **File:** `datasets/code-editor/data/ask-codi.md`
 **Severity:** Medium - Data Contradiction
 **Description:**
-- Lines 86-88: ContextManagement has both "Yes" and "No"
+- Lines 86-88: Context Management has both "Yes" and "No"
 - Appears to be template remnants
 
 **Action Required:**
@@ -495,11 +495,11 @@ Multiple empty fields:
 
 ---
 
-### Issue 32: Review Verbose GitSupport in Refraction
+### Issue 32: Review Verbose Git Support in Refraction
 **File:** `datasets/code-editor/data/refraction.md`
 **Severity:** Low - Content Quality
 **Description:**
-- Line 94: GitSupport section has unusual formatting
+- Line 94: Git Support section has unusual formatting
 - Content about GitHub Marketplace plugin is verbose
 
 **Action Required:**

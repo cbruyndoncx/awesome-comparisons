@@ -64,21 +64,21 @@ Gemini CLI is Google's command-line interface for AI-assisted coding, bringing t
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
 
-### DirectFileReferences
+### Direct File References
 - Yes
 
 ### Checkpoints
 - No
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

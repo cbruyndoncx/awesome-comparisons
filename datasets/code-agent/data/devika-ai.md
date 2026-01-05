@@ -77,16 +77,16 @@ Key capabilities include automated planning (breaking objectives into actionable
 - Yes
   - Supports configuring API keys/endpoints for OpenAI, Claude, Gemini, Mistral, Groq, Bing/Google search, Ollama, etc.
 
-### LocalOffline
+### Local Offline
 - Yes
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Project-based workspace model with persistent task and agent state. Context and project history are maintained across sessions to enable progressive work on repositories.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Agent can read and write repository files, operate on project workspaces, and reference files when executing tasks or generating patches.
 
@@ -94,7 +94,7 @@ Key capabilities include automated planning (breaking objectives into actionable
 - Yes
   - Integrates with Git for commits and repository operations; workflows commonly use Git commits as checkpoints and the agent can make/revert commits as part of tasks.
 
-### GitSupport
+### Git Support
 - Yes
   - Integrates with project repositories and can perform Git operations as part of its workflows.
 

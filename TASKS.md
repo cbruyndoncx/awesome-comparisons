@@ -38,7 +38,7 @@ This document consolidates all issues identified in the `ISSUE_PROPOSAL` files.
 - [x] **firebase_studio.md**: Fix Contradictory Fields in Firebase Studio
 - [x] **firebase_studio.md**: Complete Empty MCP-Client Fields
 - [x] **devoxx-genie.md**: Fix Contradictory Fields in Devoxx Genie
-- [x] **ask-codi.md**: Fix Contradictory ContextManagement in Ask Codi
+- [x] **ask-codi.md**: Fix Contradictory Context Management in Ask Codi
 - [x] **windsurf.md**: Fix Terminal Contradiction in Windsurf
 - [x] **windsurf.md**: Fix Version/Update Date Mismatch in Windsurf
 - [x] **jolt.md**: Complete SpecDrivenDevelopment in Jolt
@@ -54,7 +54,7 @@ This document consolidates all issues identified in the `ISSUE_PROPOSAL` files.
 - [x] **augment-code.md**: Fix Malformed Version Numbers Across Multiple Files
 - [x] **sourceai_dev.md**: Fix Malformed Version Numbers Across Multiple Files
 - [x] **refraction.md**: Fix Malformed Version Numbers Across Multiple Files
-- [x] **refraction.md**: Review Verbose GitSupport in Refraction
+- [x] **refraction.md**: Review Verbose Git Support in Refraction
 - [x] **pythagora.md**: Fix Malformed Version Numbers Across Multiple Files
 - [x] **pythagora.md**: Complete Empty MCP-Client Fields
 - [x] **easycodeai.md**: Fix Malformed Version Numbers Across Multiple Files
@@ -79,7 +79,7 @@ This document consolidates all issues identified in the `ISSUE_PROPOSAL` files.
 ## Other (`datasets/other/data/`)
 
 - [x] **cogram.md**: Complete cogram.md Missing BYOK Field
-- [x] **cogram.md**: Complete cogram.md Missing DirectFileReferences Field
+- [x] **cogram.md**: Complete cogram.md Missing Direct File References Field
 - [x] **cogram.md**: Complete cogram.md Malformed SpecDrivenDevelopment Field
 - [x] **cogram.md**: Complete cogram.md Empty Repo Field
 - [x] **cogram.md**: Complete cogram.md Empty Rating Field
@@ -155,10 +155,10 @@ This document consolidates all issues identified in the `ISSUE_PROPOSAL` files.
 - [x] **codenamegoose.md**: Fix Incorrect URL for Codename Goose
 - [x] **codenamegoose.md**: Fix Contradictory Hooks Answer in Codename Goose
 - [x] **smol-developer.md**: Fix MCP/Tessl Confusion in Smol Developer
-- [x] **smol-developer.md**: Fix Contradictory LocalOffline Answer in Smol Developer
+- [x] **smol-developer.md**: Fix Contradictory Local Offline Answer in Smol Developer
 - [x] **claude-desktop.md**: Fix Product Confusion in Claude Desktop SpecDrivenDevelopment Section
 - [x] **claude-desktop.md**: Fix Inconsistent BYOK Information in Claude Desktop
-- [x] **coderabbit.md**: Fix Contradictory LocalOffline Answer in CodeRabbit
+- [x] **coderabbit.md**: Fix Contradictory Local Offline Answer in CodeRabbit
 - [x] **Multiple**: Review Classification Criteria and Reclassify Tools
 - [x] **devika-ai.md**: Fix Malformed Version Numbers
 - [x] **devika-ai.md**: Clarify Product Name Confusion in Devika AI
@@ -166,13 +166,13 @@ This document consolidates all issues identified in the `ISSUE_PROPOSAL` files.
 - [x] **openhands.md**: Complete Empty MCP-Client Fields
 - [x] **diffblue_cover.md**: Fix Malformed Version Numbers
 - [x] **diffblue_cover.md**: Complete Empty MCP-Client Fields
-- [x] **diffblue_cover.md**: Complete Empty BYOK and LocalOffline Fields
+- [x] **diffblue_cover.md**: Complete Empty BYOK and Local Offline Fields
 - [x] **diffblue_cover.md**: Fix CLI vs Slash Command Confusion in Diffblue Cover
 - [x] **mutableai.md**: Complete Empty MCP-Client Fields
-- [x] **mutableai.md**: Complete Empty BYOK and LocalOffline Fields
+- [x] **mutableai.md**: Complete Empty BYOK and Local Offline Fields
 - [x] **mutableai.md**: Complete Empty SpecDrivenDevelopment Sections
 - [x] **devin.md**: Complete Empty MCP-Client Fields
-- [x] **devin.md**: Complete Empty BYOK and LocalOffline Fields
+- [x] **devin.md**: Complete Empty BYOK and Local Offline Fields
 - [x] **devin.md**: Complete Empty Extensibility Fields in Devin
 - [x] **codiumai.md**: Verify and Fix Unverified MCP Claim in CodiumAI
 - [x] **amp.md**: Fix Repository vs Website Confusion in AMP

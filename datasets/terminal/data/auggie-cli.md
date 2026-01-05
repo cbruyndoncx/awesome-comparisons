@@ -75,25 +75,25 @@ Auggie can handle up to 10,000 commit histories, ensuring accurate code suggesti
 ### BYOK
 - -
 
-### LocalOffline
+### Local Offline
 - No
   - Requires connection to Augment's cloud services for AI capabilities
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Advanced context engine that automatically maps project structure, dependencies, and patterns
   - Handles up to 10,000 commit histories
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Can reference and edit specific files based on natural language requests
 
 ### Checkpoints
 - -
 
-### GitSupport
+### Git Support
 - Yes
   - Integrates with git repositories and understands commit history
 

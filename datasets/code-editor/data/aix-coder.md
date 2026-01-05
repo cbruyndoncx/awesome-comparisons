@@ -76,24 +76,24 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
 ### BYOK
 - Unknown
   - Local-first model runs offline without API keys; BYOK for cloud features not publicly documented
-### LocalOffline
+### Local Offline
 - Yes
   - AIXcoder emphasizes local/offline model operation so code and context can remain on-device. The product also offers cloud modes for extended functionality.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - AIXcoder supports multiple context management approaches: local on-device inference (keeps workspace/context local), context windowing in the IDE plugin (captures nearby file contents and project context for completions), and optional cloud mode where selected context may be sent for enhanced generation.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - The IDE integrations surface repository and file-level examples; agent can reference files from the open repo search features and local workspace context when running locally.
 
 ### Checkpoints
 - No
   - No built-in checkpoint/undo system documented; use standard IDE local history or git for rollback
-### GitSupport
+### Git Support
 - Yes
   - Integrates with repository search and can surface examples and API usage from GitHub/open-source code; version-control integration is part of the IDE workflow.
 

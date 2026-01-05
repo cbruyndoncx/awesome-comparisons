@@ -78,17 +78,17 @@ Ona is the rebrand and strategic evolution of Gitpod into an AI-first software e
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - Yes
   - Ona supports private VPC and on-prem/private-hosted deployments for enterprises but is not a fully offline/local-only product.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Ona provides explicit context management for its AI agents via a repository-level AGENTS.md that the agent loads at the start of a session. Additional context sources include workspace definitions (devcontainer.json), automation manifests (e.g. automations.yml / automation configs), environment variables and prebuild metadata, and repository files the agent can read on demand. These artifacts together let teams define project conventions, commands, and policies that are consistently applied by agents.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - AGENTS.md is designed to reference other files in the repo; Ona agents will read files referenced there and can access repository files directly in the sandboxed workspace. This enables pointing to style guides, architecture docs, and specific source files rather than duplicating their contents in the main agent config.
 
@@ -96,7 +96,7 @@ Ona is the rebrand and strategic evolution of Gitpod into an AI-first software e
 - Yes
   - Ona/Gitpod workflows provide workspace snapshots, prebuilds and the normal git history as mechanisms to revert or recover from agent actions. For enterprise users, Guardrails and audit trails further enable tracing and, where necessary, rolling back changes using standard VCS or snapshot workflows.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

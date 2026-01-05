@@ -75,17 +75,17 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - No
   - All user data (code, DBs, etc.) is described as being stored locally on the user's machine, but the assistant makes API calls to OpenAI for model inference — so it is not fully offline.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Reported features include dynamic context management: project scanning, selective file inclusion/exclusion, and optimisations to reduce token usage for large codebases.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - The assistant can open and reference local files directly and include file contents into the chat context for targeted edits and reasoning.
 
@@ -93,7 +93,7 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 - Yes
   - Git integration is reported; users can rely on repository history/checkouts as checkpoints. An explicit in-app checkpoint UI is not documented in publicly-available third-party write-ups.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

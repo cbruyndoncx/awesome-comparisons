@@ -20,9 +20,9 @@ To create these issues on GitHub:
 - `issue-03-claude-desktop-spec.md` - Product confusion
 
 ### Priority 2 - High
-- `issue-04-coderabbit-localoffline.md` - Contradictory LocalOffline
+- `issue-04-coderabbit-localoffline.md` - Contradictory Local Offline
 - `issue-05-goose-hooks.md` - Contradictory Hooks
-- `issue-06-smol-localoffline.md` - Contradictory LocalOffline
+- `issue-06-smol-localoffline.md` - Contradictory Local Offline
 - `issue-07-claude-desktop-byok.md` - Inconsistent BYOK
 
 ### Priority 3-4 - Medium
@@ -31,7 +31,7 @@ To create these issues on GitHub:
 
 ### Priority 5-6 - Medium
 - `issue-10-mcp-client-fields.md` - Empty MCP fields
-- `issue-11-byok-localoffline-fields.md` - Empty BYOK/LocalOffline
+- `issue-11-byok-localoffline-fields.md` - Empty BYOK/Local Offline
 - `issue-12-devin-extensibility.md` - Devin empty fields
 - `issue-13-codiumai-mcp-claim.md` - Unverified MCP claim
 - `issue-14-devika-naming.md` - Product naming

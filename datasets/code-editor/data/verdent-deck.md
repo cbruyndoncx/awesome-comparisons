@@ -82,17 +82,17 @@ Key capabilities include project-wide code indexing, plan decomposition, paralle
 - No
   - No public documentation found for BYOK support.
 
-### LocalOffline
+### Local Offline
 - No
   - Cloud-first product; local-only operation not advertised
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Verdent indexes full repositories and maintains long-horizon session context so agents can reason about project-wide structure rather than only the active file.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Integrates with repo files and exposes relevant files to agents; VS Code extension offers in-editor actions while Deck manages sessions and diffs.
 
@@ -100,7 +100,7 @@ Key capabilities include project-wide code indexing, plan decomposition, paralle
 - Yes
   - Git worktree integration provides commit/rollback and branch management per agent session to prevent unwanted repository-level collisions.
 
-### GitSupport
+### Git Support
 - Yes
   - Built-in workflows for creating commits, opening pull requests, and rolling back changes from the Deck interface.
 

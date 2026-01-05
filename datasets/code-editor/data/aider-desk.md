@@ -70,21 +70,21 @@ AiderDesk is a sophisticated desktop application that brings all the power of Ai
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - Yes
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
 
-### DirectFileReferences
+### Direct File References
 - Yes
 
 ### Checkpoints
 - Yes
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

@@ -103,13 +103,13 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
 
 - The hosted AI Studio environment runs on Google's Gemini models; you cannot plug arbitrary third‑party LLMs directly into the Studio UI. Developers using the Gemini API or the aistudio-mcp-server can supply their own Gemini API key when running self-hosted adapters, but that is separate from the hosted Studio experience.
 
-### LocalOffline
+### Local Offline
 - No
   - Studio is a cloud-hosted web application; there is no known supported offline/self-hosted distribution of the Studio UI or Gemini models.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 <!-- ToDo -->
 <!-- Methods for managing and updating the context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
@@ -117,7 +117,7 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
 
 - Studio provides chat history, project-level saved snapshots/versions, and file-based context (uploaded files and Drive links). The Build workflows and prompt playground allow inserting files and adjusting context windows for multimodal prompts.
 
-### DirectFileReferences
+### Direct File References
 <!-- ToDo -->
 <!-- Can with @file or similar provide context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
@@ -133,7 +133,7 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
 
 - Studio maintains saved snapshots / project history (visible via the history UI) and creates Drive-backed versions for files. Users can restore prior snapshots, though community reports have documented occasional issues with snapshot previews or restores; project files also appear in Drive version history which can be used as a fallback.
 
-### GitSupport
+### Git Support
 - No
   - Studio offers code export but does not act as a git host. Exported snippets are intended to be copied into developer repositories.
 

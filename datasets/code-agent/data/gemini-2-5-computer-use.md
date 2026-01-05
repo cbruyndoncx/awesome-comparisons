@@ -88,17 +88,17 @@ Google's payments platform team implemented the model to fix fragile UI tests, s
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
   - Requires cloud API access
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Maintains action history as context
 
-### DirectFileReferences
+### Direct File References
 - No
   - Operates at UI level
 
@@ -106,7 +106,7 @@ Google's payments platform team implemented the model to fix fragile UI tests, s
 - Unknown
   - No public documentation found.
 
-### GitSupport
+### Git Support
 - No
   - UI-level agent, not code repository aware
 

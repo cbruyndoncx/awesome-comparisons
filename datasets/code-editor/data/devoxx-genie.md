@@ -74,13 +74,13 @@ DevoxxGenie is an IntelliJ IDEA plugin (100% Java-based) that provides an LLM-po
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - Yes
   - Supports running local LLM backends (Ollama, GPT4All, Llama.cpp, LMStudio, etc.) and a fully-local RAG setup via Chroma DB + embeddings.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Project Scanner: include entire project, specific packages, or selected files for prompt context.
   - DEVOXXGENIE.md: generate and maintain a project descriptor that is injected into the system prompt.
@@ -89,7 +89,7 @@ DevoxxGenie is an IntelliJ IDEA plugin (100% Java-based) that provides an LLM-po
   - Include/exclude patterns and .gitignore awareness: filter files and directories with wildcards and respect .gitignore to avoid sending irrelevant or sensitive files.
   - AST-aware context: automatic inclusion of parent class and related symbols to improve code-understanding prompts.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Drag-and-drop files or images directly into the input field to attach them to the prompt.
   - Explicitly add open files, specific files or directories via the Project Scanner or the UI to include them in context.
@@ -100,7 +100,7 @@ DevoxxGenie is an IntelliJ IDEA plugin (100% Java-based) that provides an LLM-po
   - While DevoxxGenie doesn't provide a built-in "checkpoint/undo" system for code edits, typical IDE workflows provide recovery: IntelliJ Local History, VCS (Git) commits and rollbacks, and saved chat history to re-run decisions.
   - Chat history stored locally allows re-opening prior conversations and re-applying previously used prompts/contexts.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

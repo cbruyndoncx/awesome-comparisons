@@ -79,18 +79,18 @@ Tabby is a self-hosted, open-source AI coding assistant that provides code compl
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - Yes
   - Can run fully offline/self-hosted (Docker, from-source). Supports connecting to local model servers such as ollama/llama.cpp backends or on-prem inference stacks.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Uses Tree-sitter based parsing and repository indexing to surface relevant context for completions and chat.
   - Adaptive caching and context windowing to reduce latency and improve relevance.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Repository-aware chat and editor integrations allow referencing files, filenames and providing file-context in prompts; editor plugins can open or point to specific files.
 
@@ -98,7 +98,7 @@ Tabby is a self-hosted, open-source AI coding assistant that provides code compl
 - No
   - Relies on external version control (git) and server logs rather than built-in transactional checkpoints or automatic undo snapshots.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

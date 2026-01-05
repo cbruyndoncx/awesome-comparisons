@@ -29,7 +29,7 @@ criteria:
           display: '✅'
         'No':
           display: '✖'
-  - LocalOffline:
+  - Local Offline:
       values:
         'Yes':
           display: '✅'
@@ -65,13 +65,13 @@ criteria:
           display: '✅'
         'No':
           display: '✖'
-  - ContextManagement:
+  - Context Management:
       values:
         'Yes':
           display: '✅'
         'No':
           display: '✖'
-  - DirectFileReferences:
+  - Direct File References:
       values:
         'Yes':
           display: '✅'
@@ -83,7 +83,7 @@ criteria:
           display: '✅'
         'No':
           display: '✖'
-  - GitSupport:
+  - Git Support:
       values:
         'Yes':
           display: '✅'

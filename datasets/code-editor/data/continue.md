@@ -99,13 +99,13 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
 - Yes
   - You can configure and use your own API keys and model endpoints, and switch between local/remote models.
 
-### LocalOffline
+### Local Offline
 - Yes
   - Supports local model workflows (e.g. via Ollama/local LLMs) and headless/offline operation for air-gapped environments.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Methods for managing and updating context:
     - Conversation-level context (chat state / memory) maintained by the agent across messages.
@@ -117,7 +117,7 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
       - .tessl/framework/agents.md (project spec & workflow guidance)
       - developer extension tool descriptions (developer__text_editor, developer__analyze)
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Files can be directly referenced by path in tool calls and task context:
     - developer__text_editor accepts absolute or repo-relative paths for view/write/insert/str_replace operations.
@@ -140,7 +140,7 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
     - developer__text_editor tool description (undo_edit)
     - developer__shell usage for git commands
 
-### GitSupport
+### Git Support
 - Yes
   - Native integrations (MCP-style integrations) for GitHub and git workflows; automation via CLI for PR/comments/summaries.
 

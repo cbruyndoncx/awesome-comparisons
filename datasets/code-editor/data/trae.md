@@ -76,17 +76,17 @@ Trae is an AI-first IDE intended to act as a full software engineering partner r
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
   - Trae runs cloud models and does not currently advertise a fully local/offline mode
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - [Trae maintains and updates context using a combination of codebase indexing, persistent project "rules" files, and Model Context Protocol (MCP) sessions. The IDE indexes repository files and open buffers to provide file-level and project-level context to agents; rules/metadata files persist project conventions and preferences so the agent remembers them across sessions; MCP enables explicit context objects to be attached to agent calls (scoped contexts for tasks, file lists, or external resources). The Builder/ SOLO flows present "execution previews" before changes are applied so users can review and refine context or constraints.]
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - [Files can be directly referenced via the editor and agent commands: the Builder/agent can accept file paths or scoped file selections, the chat supports inline file references and #Context-like selectors, and the system indexes files so agents can open, diff, and patch specific files. Editor integration also permits selecting an open file or range to provide explicit context to the agent.]
 
@@ -94,7 +94,7 @@ Trae is an AI-first IDE intended to act as a full software engineering partner r
 - Yes
   - [Trae provides undo and checkpointing through several mechanisms: execution previews (inspect changes before apply), native Git/VCS integration (stage/commit/checkout to revert), and the Builder's planned-change workflow which can be canceled or rolled back. These combined affordances let teams undo agent actions or restore prior states.]
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

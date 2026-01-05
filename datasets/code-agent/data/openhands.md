@@ -72,17 +72,17 @@ OpenDevin is an open-source project that implements an autonomous AI software en
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - Yes
   - Can be run locally via Docker; supports local LLM backends where available (may still require internet for some models/providers).
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Repository-level context via .openhands/repo.md and microagents, in-memory/session context in agent runtime, and workspace file mounting for deterministic file access.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Agents can read and modify workspace files; repository customization and microagents support pointing agents at specific files and locations.
 
@@ -90,7 +90,7 @@ OpenDevin is an open-source project that implements an autonomous AI software en
 - Yes
   - Typical workflows rely on Git for commits/branches (agents can create commits and branches). Runtime isolation via Docker provides sandbox snapshots; users can revert via Git or recreate containers to rollback changes.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

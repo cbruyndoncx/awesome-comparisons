@@ -76,16 +76,16 @@ Supermaven is an AI-powered code completion and developer-assistant platform bui
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Supermaven manages and surfaces context via whole-repo indexing and a very large context window (marketing claims up to ~1,000,000 tokens). Available methods include: workspace/repository indexing, capturing recent edits and file diffs, chat session history (conversation context), and cross-file analysis ("next location"/file jump features) so completions are informed by project-wide state.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Supermaven can reference files directly: its IDE integrations allow jumping to files/lines, attaching files or diffs inside the assistant chat, and applying suggested edits as diffs. The system is explicitly designed to reason over repository files rather than single-file completions.
 
@@ -93,7 +93,7 @@ Supermaven is an AI-powered code completion and developer-assistant platform bui
 - Yes
   - Agent-driven changes are presented as diffs and edits that can be previewed before applying; once applied typical safety nets exist (IDE undo, local VCS/git history). For teams using CI or repo protection, any autocommit workflows would still be revertable through standard git history.
 
-### GitSupport
+### Git Support
 - Yes
   - Integrates with IDEs and understands repository context; includes features that operate across the repo and work with recent edits
 

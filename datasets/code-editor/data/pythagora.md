@@ -107,13 +107,13 @@ Pythagora is an AI-driven development assistant that can generate full-stack web
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - No
   - Requires cloud access to LLMs; not designed for fully offline usage.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Pythagora manages context through tight VS Code/workspace integration and a project-local "pythagora core" directory (or cloud workspace) that the platform scans and updates. Context is maintained via:
     - Workspace file scanning and direct file edits (the extension writes files into your repo/workspace).
@@ -121,7 +121,7 @@ Pythagora is an AI-driven development assistant that can generate full-stack web
     - Agent session logs and action traces (visibility into what the AI agents did during a run), which developers can review to understand and update context.
     - Git integration (the usual source-control history acts as a record of context changes).
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Pythagora can be pointed at specific directories and files. Common methods observed include:
     - VS Code extension: operate directly on the open workspace files.
@@ -134,7 +134,7 @@ Pythagora is an AI-driven development assistant that can generate full-stack web
   - The platform also provides activity logs and agent traces which can help reconstruct or revert changes.
   - There is no clearly documented in-platform "checkpoint" snapshot API (e.g., one-click snapshot/restore) beyond using Git and deployment snapshots.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

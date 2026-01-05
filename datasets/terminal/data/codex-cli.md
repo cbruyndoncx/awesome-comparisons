@@ -77,17 +77,17 @@ Sources: GitHub repository (https://github.com/openai/codex) and project documen
 - Yes
   - Uses API keys for model providers; supports configuring different gateways and provider endpoints.
 
-### LocalOffline
+### Local Offline
 - No
   - Primarily uses remote model providers, though configurations and gateways (e.g., Ollama, LiteLLM proxies) can enable local model endpoints in some setups.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Supports persistent guidance via AGENTS.md, per-repo config, and prompt templates; can manage context window by ingesting specified files and project documentation.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Agents operate directly on repository files, can read and propose edits to specific files, and support passing file content or paths into prompts for context.
 
@@ -95,7 +95,7 @@ Sources: GitHub repository (https://github.com/openai/codex) and project documen
 - Yes
   - Typical workflow uses git commits/diffs and can prepare commits or PRs; interactive modes ask for approval before applying changes, enabling easy rollback via git.
 
-### GitSupport
+### Git Support
 - Yes
   - Can produce commits and prepare PR diffs (behavior depends on config and approval mode).
 

@@ -95,13 +95,13 @@ Sourcegraph is a platform that provides precise, scalable code search and code n
 - No
   - Sourcegraph Cloud does not publicly advertise a generic BYOK feature; however self-hosted deployments give organizations full control over their infrastructure and encryption boundaries.
 
-### LocalOffline
+### Local Offline
 - Yes
   - Self-hosted deployments support offline/private hosting and do not require sending code to Sourcegraph cloud. This is a common choice for enterprises with strict data residency or security requirements.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Sourcegraph provides multiple methods for managing and updating context:
     - Search contexts: user-defined or admin-defined named sets of repositories and revisions that limit and focus searches and context retrieval.
@@ -109,7 +109,7 @@ Sourcegraph is a platform that provides precise, scalable code search and code n
     - Indexing and re-indexing: Sourcegraph continuously indexes repositories; re-indexing keeps file-level and symbol-level context up to date for accurate retrieval.
     - Repository-level configuration: external services and repository sync settings (repos, repositoryQuery, exclude, excludePersonalRepositories) influence what code is available for context.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Files can be directly referenced in context via Sourcegraph's code search URLs, search contexts, and repository path references. Cody can include specific files/snippets from the Sourcegraph index into prompts; users and integrations can pass file paths or results from search queries to the assistant.
 
@@ -117,7 +117,7 @@ Sourcegraph is a platform that provides precise, scalable code search and code n
 - Yes
   - Sourcegraph's Batch Changes and code change workflows are designed to be auditable and reversible through version control. Administrators can rely on Git history and repository state to revert changes; self-hosted deployments provide full control over commit histories. There is also support for observability and monitoring of external requests.
 
-### GitSupport
+### Git Support
 - Yes
   - Deep integrations with Git-based hosts and workflows; built to index and search Git repositories at scale.
 

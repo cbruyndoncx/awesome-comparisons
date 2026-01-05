@@ -86,18 +86,18 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
 ### BYOK
 - Not publicly documented
 
-### LocalOffline
+### Local Offline
 - Yes (Enterprise self-hosted option available)
   - Cloud SaaS by default
   - Self-hosted option is referenced by the vendor for enterprise customers, but detailed on-prem / air-gapped support and offline capabilities are not publicly documented.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Performs codebase-aware reviews: analyzes diffs in the context of repository files, builds a code graph/AST to reason about cross-file impacts, and keeps contextual state for PR and IDE sessions.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Comments and suggestions reference files and line ranges in PRs; IDE extensions surface file-scoped feedback directly inside editors.
 
@@ -105,7 +105,7 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
 - No
   - There is no public documentation of a dedicated "checkpoint" feature; suggested changes are surfaced as PR comments or suggested commits which remain under developer control via normal Git history.
 
-### GitSupport
+### Git Support
 - Yes
   - Native integrations for GitHub, GitLab, Azure DevOps; automatic PR monitoring and comments
 

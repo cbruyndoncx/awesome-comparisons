@@ -95,12 +95,12 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Amazon Q provides multiple methods to manage and update context for IDE conversations and agentic workflows:
     - Workspace context: the IDE plugin can analyze the open workspace (project files, dependency manifests, build files) to provide workspace-aware responses and code generation.
@@ -109,7 +109,7 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
     - MCP (Model Context Protocol) servers: external MCP connectors supply additional contextual sources (Jira, Figma, monitoring/security tools) which are merged into the assistant's context when configured via mcp.json and enabled in settings.
     - Command-based context triggers: chat commands (e.g., /doc) initiate workspace-wide analyses that explicitly gather and use project context to produce artifacts (README, docs, etc.).
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Files can be directly referenced and used as context by the IDE plugin:
     - Select-and-action model: highlight code or open a file and invoke Amazon Q actions to send that file/range as direct context to the assistant.
@@ -123,7 +123,7 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
     - Git / VCS: recommended rollback mechanism—users can commit or stash before applying changes and use git to revert unwanted modifications (no built-in Q checkpointing was documented).
     - No documented built-in persistent "checkpoint" or automatic snapshot feature inside Amazon Q itself; rely on editor and VCS for safe rollback.
 
-### GitSupport
+### Git Support
 - Yes
   - Works with repository workflows via IDE integrations; generated suggestions and transformations can be applied to local repos but require human review for correctness and licensing.
 

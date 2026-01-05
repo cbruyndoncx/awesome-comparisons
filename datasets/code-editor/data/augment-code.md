@@ -69,17 +69,17 @@ Augment Code is an AI-first development platform built to help professional engi
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - No
   - Cloud-first product; local/in-IDE operations likely use cloud model/augmentation
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Augment Code provides multiple context management methods: a high-capacity context engine (advertised ~200k tokens) that indexes entire repositories and their docs; persistent "Memories" that learn preferences and reuse prior decisions; explicit focus-context selection (file, folder, or code-block focus); on-demand reindexing/refresh; and MCP-based connectors to enrich context with external services (docs, CI, issue trackers).
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Files can be directly referenced and targeted: users select files or folders in the UI or editor extension, chat answers include source citations and file links, Next Edit and Smart Apply place edits into the correct files, and the CLI/TUI supports file-path targeting. Agents can open PRs and create checkpoints tied to specific files.
 
@@ -87,7 +87,7 @@ Augment Code is an AI-first development platform built to help professional engi
 - Yes
   - The platform provides change checkpoints and snapshotting for safe experimentation: automatic change tracking, named checkpoints before applying edits, easy rollback/restore, and Git/PR-backed snapshots for human review. Checkpoints are central to Smart Apply / Next Edit flows.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

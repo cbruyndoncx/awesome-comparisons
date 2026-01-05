@@ -75,20 +75,20 @@ Cline is designed to act as a development partner rather than a simple autocompl
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - Yes
   - Any additional details like Ollama: supports local model hosts (Ollama, LM Studio) as backends for offline/local use
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Cline maintains a structured "memory bank" (projectbrief.md, activeContext.md, progress.md) to persist and rebuild project understanding across sessions.
   - Checkpoint management creates snapshots at each step and tool call, allowing comparison, restore, and safe experimentation.
   - Plan & Act modes separate strategic planning from execution so context updates can be staged and reviewed before being committed.
   - Context usage is tracked (token/context progress) and Cline selectively reads/indexes files and docs to remain within model windows while preserving salient project state.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Cline reads, opens, edits and creates files directly inside the editor; it shows diffs and writes changes to file paths in the workspace.
   - Files are referenced by path and integrated into Cline's context (diff views, Timeline entries, and checkpoint snapshots) so the agent can cite and act on exact files.
@@ -98,7 +98,7 @@ Cline is designed to act as a development partner rather than a simple autocompl
   - Built-in checkpointing snapshots workspace state at steps and tool calls; users can compare changes, restore previous snapshots, or revert risky edits.
   - File Timeline and standard Git history complement checkpointing for undo/rollback workflows.
 
-### GitSupport
+### Git Support
 - No
 
 ## Extensible

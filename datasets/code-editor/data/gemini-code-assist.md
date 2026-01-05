@@ -65,21 +65,21 @@ Gemini Code Assist is Google's AI-powered coding assistant that leverages the Ge
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
 
-### DirectFileReferences
+### Direct File References
 - Yes
 
 ### Checkpoints
 - No
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

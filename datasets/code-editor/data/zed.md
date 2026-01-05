@@ -80,19 +80,19 @@ Zed is a modern code editor engineered for low latency and smooth UX. It renders
 - Yes
   - Zed supports OpenAI-compatible providers and can be configured to use local LLM hosts (e.g., Ollama) so you can run models with your own keys or entirely offline.
 
-### LocalOffline
+### Local Offline
 - Yes
   - Zed can be configured to use local LLMs (via Ollama or other OpenAI-compatible endpoints) so prompts and code can stay on-device. It also supports running Ollama on remote GPU hosts (SSH/port-forwarding) if needed.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Zed exposes the entire AI request/interaction as an editable text buffer in the Assistant/Agent Panel, allowing you to manage and mutate context directly (edit prior messages, remove sections, fork conversations by copying buffers) [zed.dev docs].
   - Context can be programmatically and interactively extended via slash commands that inject file contents, terminal output, diagnostics or HTTP responses into the assistant buffer (see /file, /tab, /terminal, /diagnostics, /fetch) which are inserted as folded blocks you can expand or collapse for fine-grained control.
   - The inline assistant can combine local selection context with the assistant panel buffer when invoked, enabling targeted transformations while preserving broader context.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Files and whole directory trees can be inserted into the assistant panel using the /file command (or /tab for open tabs). Inserted content appears as folded blocks containing the file text; directory trees are inserted recursively as nested folds so you can include precise file-level context in prompts [zed.dev docs].
   - You can also insert selected text from the main editor into the assistant buffer via keyboard shortcuts or the command palette, and the Agent Panel tools can navigate and open files as the agent reads your workspace.
@@ -101,7 +101,7 @@ Zed is a modern code editor engineered for low latency and smooth UX. It renders
 - Yes
   - When the AI agent makes edits, Zed creates a restore checkpoint for the pre-edit state and surfaces a "Restore Checkpoint" action on the message so you can revert the workspace to the state before the AI change. Checkpoints appear even if an edit was interrupted mid-change, offering a safety net for agentic editing workflows.
 
-### GitSupport
+### Git Support
 - Yes
   - Integrates with Git workflows; project-aware features and diagnostics help with common VCS tasks.
 

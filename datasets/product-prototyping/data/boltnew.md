@@ -77,17 +77,17 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
   - Any additional details: Runs entirely in the browser using WebContainers; requires network access for AI features and many integrations.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Project snapshots, file locking, and diff views are used to manage changes and context; snapshot restoration on reload and Git integration provide history.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - The assistant can read and edit project files directly; the UI surfaces file-level diffs and targeted edits for review.
 
@@ -95,7 +95,7 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
 - Yes
   - Project snapshot/restore and automatic persistence in WebContainers provide rollback points; optional Git integration supports commits and history.
 
-### GitSupport
+### Git Support
 - Yes
   - Import/export with GitHub and connect projects to repos for persistence and collaboration.
 

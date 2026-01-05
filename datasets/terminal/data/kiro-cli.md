@@ -115,7 +115,7 @@
 
 - Kiro is a managed AWS product with models and routing controlled by the service; it does not generally function as a BYOK wrapper for arbitrary external LLM API keys.
 
-### LocalOffline
+### Local Offline
 <!-- Support for local on-site deployment or local offline use -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes as indented "- " entries beneath the kept values. -->
 - No
@@ -123,14 +123,14 @@
 - Kiro CLI is designed to integrate with AWS-managed services and models; it is not designed as an offline, self-hosted LLM stack.
 ## Developer Experience
 <!-- Developer Experience -->
-### ContextManagement
+### Context Management
 <!-- Methods for managing and updating the context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes as indented "- " entries beneath the kept values. -->
 - Yes
 
 - Context is managed via steering files in .kiro/steering/ (workspace and global scopes), AGENTS.md, MCP servers, and automatic workspace/system context injection.
 
-### DirectFileReferences
+### Direct File References
 <!-- Can with @file or similar provide context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes as indented "- " entries beneath the kept values. -->
 - Yes
@@ -144,7 +144,7 @@
 
 - The CLI offers checkpointing/rollback semantics for agent actions so users can revert agent changes or step back through execution stages.
 
-### GitSupport
+### Git Support
 <!-- Coding tool is aware of GIT and can work/integrate with GIT repos -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes as indented "- " entries beneath the kept values. -->
 - Yes

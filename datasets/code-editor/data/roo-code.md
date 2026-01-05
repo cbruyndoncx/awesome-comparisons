@@ -81,17 +81,17 @@ RooCode is designed to be more than an autocomplete plugin — it functions as a
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - Yes
   - Can be configured to use local model runtimes via Ollama / LM Studio or other locally-hosted model endpoints (support and experience depends on provider and model compatibility). Fully offline workflows may be limited compared to cloud API usage.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - RooCode provides multiple context-management methods: semantic workspace indexing (configurable embedding providers and vector DBs), explicit file/selection mentions (using `@` to include files, ranges or terminal output), automatic context condensing when length limits are reached, configurable context limits per mode, and a persistent Memory Bank for long-lived project facts. The extension also supports MCP-based context extensions so external systems can contribute contextual data.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Files and specific ranges can be referenced directly in prompts (via the editor UI and `@` mentions). RooCode can read/write workspace files, present diffs for review, and include terminal output or file snippets inline into the conversation for targeted edits or reasoning.
 
@@ -99,7 +99,7 @@ RooCode is designed to be more than an autocomplete plugin — it functions as a
 - Yes
   - RooCode implements checkpointing and diffs: it records change checkpoints (and ties into VS Code timeline/git workflows), shows diffs for review before applying edits, and allows reverting to previous states. Auto-approve settings can be gated with explicit checkpoints to prevent unwanted changes.
 
-### GitSupport
+### Git Support
 - Yes
   - RooCode can run terminal/cli actions and operate on workspace files; many users run git commands through the integrated terminal or via custom MCP servers.
 

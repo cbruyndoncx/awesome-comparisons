@@ -79,17 +79,17 @@ The tool is focused on large-context reasoning, multi-file code transformations,
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - No
   - Claude Code relies on remote model endpoints by default. Anthropic and enterprise customers can route requests through cloud provider-hosted model deployments or organization-managed endpoints, but a fully offline/local model runtime is not provided as a standard option.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Claude Code manages context via large-model context windows, automatic inclusion of a repository-level CLAUDE.md, and explicit file-injection/piping. Users can also supply files via stdin or configure the CLI to read specific paths into the session context.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - The CLI can read files from the working tree, and its workflow includes asking permission to edit files or run commands. Project conventions (CLAUDE.md and .claude command files) are used to teach the assistant about frequently referenced files and commands.
 
@@ -97,7 +97,7 @@ The tool is focused on large-context reasoning, multi-file code transformations,
 - Yes
   - Claude Code integrates with git workflows and presents interactive prompts before making edits; typical usage includes creating commits, reviewable patches, or requiring user confirmation to apply changes so that git history acts as a checkpoint/undo mechanism.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

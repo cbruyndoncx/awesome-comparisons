@@ -73,17 +73,17 @@ Codename Goose is an open-source, on-machine AI agent framework created to autom
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - Yes
   - Can run on-machine and integrate with local/self-hosted model providers via MCP-compatible bridges; Dockerized self-contained deployments are supported.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Context is managed via Recipes and sub-recipes, conversation state, and configuration files (e.g. .goosehints). Recipe parameters, sub-recipes and extension scopes are used to control and scope context passed to LLMs.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Supports reading/writing code and project files through file-system and git MCP servers; recipes and extensions can reference files for context or patching changes.
 
@@ -91,7 +91,7 @@ Codename Goose is an open-source, on-machine AI agent framework created to autom
 - Yes
   - Integrates with git workflows (read/write/commit/branch) and includes Approve Mode for human review before making irreversible changes, enabling checkpoint-like workflows.
 
-### GitSupport
+### Git Support
 - Yes
   - Integrates with git workflows to read/write/commit/branch as part of automated tasks.
 

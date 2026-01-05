@@ -156,11 +156,16 @@ export class ConfigurationService {
         // Set configuration model
         this.configuration = Configuration.load(configurationSource);
         const processedCriteria = this.configuration.criteria.map(criteria => {
+            if (criteria.name === criteria.id) {
+                criteria.name = deNormalize(criteria.id);
+            }
+
             const context: Record<string, any> = {
                 id: criteria.id,
-                name: (typeof criteria.name === 'string' && criteria.name.trim().length > 0) ? criteria.name : deNormalize(criteria.id),
+                name: criteria.name,
                 type: criteria.type
             };
+
             const resolvedName = ConfigurationService.resolveTemplateValue(criteria.name, context);
             if (resolvedName.length > 0) {
                 context.name = resolvedName;

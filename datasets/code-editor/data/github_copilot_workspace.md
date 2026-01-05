@@ -72,20 +72,20 @@ GitHub Copilot Workspace was an experimental "agentic" IDE hosted by GitHub that
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
   - All processing was cloud-hosted on GitHub's infrastructure; no documented offline/local model execution.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Editable two-stage steering: Specification (current vs desired state) and concrete Plan that can be edited to change downstream code generation.
   - Session context versioning and history: Copilot Workspace tracked the session and allowed regeneration after spec/plan edits.
   - Regenerate/undo workflow: Edits to spec or plan trigger regeneration of downstream steps; generated diffs are editable and can be reverted or revised.
   - Codespaces / VS Code continuity: Context (file references, diffs, session) could be opened in a Codespace or VS Code extension to continue working locally.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Plans explicitly list repository files that will be created, modified, or deleted; generated outputs are presented as file-level diffs.
   - Generated diffs and the plan allow direct navigation to and editing of specific files by path within the workspace UI (and via Codespaces/VS Code).
@@ -96,7 +96,7 @@ GitHub Copilot Workspace was an experimental "agentic" IDE hosted by GitHub that
   - Workspace tracked session state and maintained a history of edits; generated changes were presented as diffs and could be revised, undone, or committed as PRs.
   - While not marketed as a "checkpoint" API, the combination of session versioning, editable specs/plans, and Git-backed commits/PRs provided checkpoint-like rollback and recovery mechanisms.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

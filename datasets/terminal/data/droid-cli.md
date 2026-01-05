@@ -79,23 +79,23 @@ The platform offers code completion, PR review suggestions, automated fixes, and
 ### BYOK
 - -
 
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Droids maintain contextual memory across tools and platforms
   - Persistent knowledge throughout workflows
 
-### DirectFileReferences
+### Direct File References
 - Yes
 
 ### Checkpoints
 - -
 
-### GitSupport
+### Git Support
 - Yes
   - PR review suggestions and automated fixes
   - Workflow automation from design docs to CI

@@ -71,16 +71,16 @@ Marblism provides two complementary offerings: (1) a suite of role-specific "AI 
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Marblism uses role-specific "AI Employees" (e.g., Eva, Penny, Sonny) that retain task- and role-level context for ongoing autonomous workflows. Context is also supplied and updated via connected accounts and integrations (email/calendar, GitHub, S3, mail) and through app-builder prompts and project settings during onboarding and app scaffolding. Public documentation does not detail the exact persistence model or memory API exposed to end users.
 
-### DirectFileReferences
+### Direct File References
 - No
   - Files can be referenced indirectly by the platform when the app builder generates or clones GitHub repositories: generated project files and assets are written to a repo that users can inspect and pull. The platform also supports uploads/attachments (e.g., S3 uploads) and integrates with GitHub which enables direct file access via repository links. There is no public documentation of a generic file-browse API for arbitrary external files beyond these integrations.
 
@@ -88,7 +88,7 @@ Marblism provides two complementary offerings: (1) a suite of role-specific "AI 
 - Yes
   - Generated code and projects are pushed to GitHub repositories, which provides standard version-control checkpoints (commits, branches, revert). Because the platform writes to Git repos, users can undo or revert generated changes via normal Git workflows. There is no widely advertised separate "checkpoint/restore" feature beyond standard VCS usage in public product notes.
 
-### GitSupport
+### Git Support
 - Yes
   - Generates/clones GitHub repositories for created apps
 

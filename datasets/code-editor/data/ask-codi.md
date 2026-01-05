@@ -75,18 +75,18 @@ Proprietary
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Codespaces: full-project upload/workspace that provides the model with repository-wide context (files, deps, project structure) for more accurate, consistent suggestions.
   - Codi Workbook: continuous, Jupyter-style sessions that preserve conversational and code-generation context across interactions within a project.
   - IDE extensions: session- and project-scoped chat history in Codi Chat; model selection and project settings help tailor contextual behavior.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - IDE extensions and Codespaces allow the assistant to reference files by path and read project files — open-file context in editors and uploaded workspace content in Codespaces enable targeted file-level operations.
   - Project-level workbooks/conversations can be associated with a project workspace so prompts and generations can point to specific files or directories within that workspace.
@@ -95,7 +95,7 @@ Proprietary
 - No
   - AskCodi does not publicly document a built-in "checkpoint/undo" feature for generated changes; typical recovery/rollback would be handled via VCS (git) in the uploaded Codespace or local editor. Confirm enterprise/backups features with AskCodi sales/support for advanced checkpointing.
 
-### GitSupport
+### Git Support
 - Yes
   - Reads project context / Codespace-style integrations for richer suggestions
 

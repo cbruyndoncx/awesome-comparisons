@@ -40,7 +40,7 @@ vX.X (yyyy-mm--dd)
 - Yes
 - No
   
-## LocalOffline
+## Local Offline
 - Yes
   - [Any additional details like Ollama as an indented unordered list item]
 - No
@@ -49,7 +49,7 @@ vX.X (yyyy-mm--dd)
 - Yes
 - No
 
-## GitSupport
+## Git Support
 - Yes
 - No
   
@@ -72,12 +72,12 @@ vX.X (yyyy-mm--dd)
 [Additional details that can make a difference in deciding which ai coding tool to use]
 
 <!-- NEW SECTION -->
-## ContextManagement
+## Context Management
 - Yes
   - [Explain avaiilable methods for managing and updating the context] 
 - No
 
-## DirectFileReferences
+## Direct File References
 - Yes
   - [Explain how files can be directly referenced in context.]
 - No

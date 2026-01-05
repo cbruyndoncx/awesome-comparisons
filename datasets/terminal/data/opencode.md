@@ -81,17 +81,17 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - Yes
   - Supports running with local model backends (e.g. Ollama) and Models.dev adapters.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - OpenCode builds and maintains repository-aware context by scanning and indexing the project (repository analysis via `/init`) and persisting session state and conversation history in SQLite. It exposes project-scoped sessions, keeps file associations, and uses LSP and file-system reads to surface relevant snippets when answering questions or generating changes. See: https://github.com/sst/opencode and https://opencode.ai/docs
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Files can be directly referenced and manipulated via the CLI/TUI: file explorer panels, explicit read/view/edit actions, patch/apply operations, and path-based prompts. The assistant can open specific files, show diffs, write changes, and apply/revert patches programmatically.
 
@@ -99,7 +99,7 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
 - Yes
   - OpenCode supports undo/redo for edits, persistent session history (SQLite), and shows diffs/patches to review before applying. It also integrates with Git workflows so developers can rely on VCS history as an additional checkpoint mechanism.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

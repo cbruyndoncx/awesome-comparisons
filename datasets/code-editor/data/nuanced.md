@@ -82,17 +82,17 @@ Nuanced is an MCP (Model Context Protocol) server and code-intelligence layer th
 - No
   - Nuanced provides context to LLMs but does not manage LLM API keys itself; bring-your-own-LLM/API-key is handled by the client (e.g., Claude Desktop, Cursor) rather than the MCP server.
 
-### LocalOffline
+### Local Offline
 - Yes
   - Local-first MCP server: analysis runs on the user's machine or infrastructure; code/context does not need to be uploaded to external APIs.
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Nuanced supports on-demand subgraphs and focused context slices to control what is provided to the model as context.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Function- and file-level resources allow direct references (file paths, function names) so clients can request precise code locations.
 
@@ -100,7 +100,7 @@ Nuanced is an MCP (Model Context Protocol) server and code-intelligence layer th
 - No
   - No built-in checkpoint/undo system documented; versioning or undo workflows should be handled with VCS (git) or client tooling.
 
-### GitSupport
+### Git Support
 - Yes
   - Designed to integrate with developer workflows; commonly used alongside git-based repositories for initialization and analysis.
 

@@ -79,16 +79,16 @@ PearAI provides a unified AI-first IDE experience by combining the familiarity o
 - Yes
   - Users can supply their own API keys for models (BYOK), enabling use with different model providers and preserving control over credentials.
 
-### LocalOffline
+### Local Offline
 - Yes
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - PearAI provides multiple methods for managing and updating context: project-aware @commands (e.g. @codebase, @code, @filename, @foldername, @docs, @terminal, @diff, @problems), a local codebase index for retrieving relevant snippets, inline selection-to-chat flows (CMD+L / CTRL+L), and a memory layer (Mem0) for persisting conversational or developer-specific context. Users can also add documentation manually to the chat context and supply local files for the assistant to reference.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - PearAI supports directly referencing files and folders in prompts and chats via commands like @filename and @foldername, attaching files/docs to chats, and including selected code from open editor tabs. The @diff and @code commands enable referencing specific changes and functions across the repo.
 
@@ -96,7 +96,7 @@ PearAI provides a unified AI-first IDE experience by combining the familiarity o
 - Yes
   - PearAI presents diffs for inline edits before applying changes, supports local undo in the editor, and integrates with Git so changes can be committed and reverted. The @diff workflow and preview/accept model provide checkpoints prior to committing AI-generated edits; standard Git operations (revert/reset) and editor undo serve as recovery mechanisms.
 
-### GitSupport
+### Git Support
 - Yes
   - Integrates with Git workflows; offers @diff referencing of branch changes and commit workflow helpers
 

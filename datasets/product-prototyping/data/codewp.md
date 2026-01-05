@@ -97,16 +97,16 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - CodeWP supports passing external context and conversational context to refine generation; includes dashboard "Sites" and "Packages" to organize project context.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - CodeWP has a "package" system where the AI understands the context of the files within a package.
 
@@ -114,7 +114,7 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
 - No
   - Relies on the user's local version control.
 
-### GitSupport
+### Git Support
 - No
 
 ## Extensible

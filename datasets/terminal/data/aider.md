@@ -76,18 +76,18 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 ### BYOK
 - Yes
 
-### LocalOffline
+### Local Offline
 - Yes
   - Supports local model usage via adapters (community integrations exist for local runtimes such as Ollama and other self-hosted LLMs)
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Maintains a repository code-map to provide broad context and supports targeted context injection via @file, @folder, URLs, and by adding files to the chat.
   - Supports prompt caching and selective file inclusion to manage token usage and focus the model.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Use @file / @folder references and the in-chat /add command to include specific files or folders in the session for precise edits.
 
@@ -95,7 +95,7 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 - Yes
   - Uses Git commits as checkpoints; Aider auto-commits changes with sensible messages and provides /undo and standard git tooling to revert or inspect history.
 
-### GitSupport
+### Git Support
 - Yes
 
 ## Extensible

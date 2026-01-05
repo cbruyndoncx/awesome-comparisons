@@ -9,7 +9,7 @@
 
 Critical review of the Other dataset (single file: cogram.md) revealed 10 data quality issues:
 
-- **3 Critical Issues**: Completely missing required fields (BYOK, DirectFileReferences, SpecDrivenDevelopment)
+- **3 Critical Issues**: Completely missing required fields (BYOK, Direct File References, SpecDrivenDevelopment)
 - **3 High Issues**: Empty metadata fields, severely outdated data (4 years old)
 - **2 Medium Issues**: Classification/directory mismatch, product naming confusion
 - **2 Low Issues**: Vague FreeTrial documentation, missing inactivity warning
@@ -42,18 +42,18 @@ Critical review of the Other dataset (single file: cogram.md) revealed 10 data q
 
 ---
 
-### Issue 2: Complete cogram.md Missing DirectFileReferences Field
+### Issue 2: Complete cogram.md Missing Direct File References Field
 **File:** `datasets/other/data/cogram.md`
 **Severity:** Critical - Data Integrity
 **Description:**
-- Lines 84-85: DirectFileReferences field is completely empty
+- Lines 84-85: Direct File References field is completely empty
 - No value, no dash, no explanation
 - Required field must have proper Yes/No answer
 
 **Action Required:**
 - Add proper value:
 ```
-### DirectFileReferences
+### Direct File References
 - No
   - No indication that the jupyter-cogram extension provides direct file reference management or file browsing capabilities in the documented interface
 ```
@@ -235,7 +235,7 @@ Critical review of the Other dataset (single file: cogram.md) revealed 10 data q
 
 **Priority 1 (Critical - 3 issues):**
 - Issue #1: Missing BYOK field
-- Issue #2: Missing DirectFileReferences field
+- Issue #2: Missing Direct File References field
 - Issue #3: Malformed SpecDrivenDevelopment field
 
 **Priority 2 (High - 3 issues):**

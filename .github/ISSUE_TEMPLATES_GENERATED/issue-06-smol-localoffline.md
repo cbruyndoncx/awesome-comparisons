@@ -1,10 +1,10 @@
 ---
-title: "Fix Contradictory LocalOffline Answer in Smol Developer"
+title: "Fix Contradictory Local Offline Answer in Smol Developer"
 labels: data-quality
 assignees:
 ---
 
-## Issue #6: Fix Contradictory LocalOffline Answer in Smol Developer
+## Issue #6: Fix Contradictory Local Offline Answer in Smol Developer
 
 **File:** `datasets/code-agent/data/smol-developer.md`
 **Severity:** High - Contradictory Data
@@ -12,7 +12,7 @@ assignees:
 
 ### Description
 
-Lines 80-81: States LocalOffline is "Yes" but explains "most common usage relies on a cloud LLM"
+Lines 80-81: States Local Offline is "Yes" but explains "most common usage relies on a cloud LLM"
 
 Misleading if network access is required for typical usage.
 

@@ -84,25 +84,25 @@ The tool integrates with existing repositories, understands full project context
 ### BYOK
 - No
 
-### LocalOffline
+### Local Offline
 - No
   - Requires Cloud VM for repository cloning and execution
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Understands full repository context
   - Powered by Gemini 2.5 Pro's large context window
 
-### DirectFileReferences
+### Direct File References
 - Yes
 
 ### Checkpoints
 - Yes
   - Creates pull requests for review before merging
 
-### GitSupport
+### Git Support
 - Yes
   - Direct GitHub integration
   - Automatic PR creation

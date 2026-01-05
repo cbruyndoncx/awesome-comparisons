@@ -73,16 +73,16 @@ Refraction is a web-first AI development assistant (refraction.dev) which helps 
 ### BYOK
 - No
   - There is no public documentation indicating that Refraction supports a Bring Your Own Key (BYOK) model for connecting external LLM API keys or selecting self-hosted models. Enterprise customers should contact Refraction sales/support for precise details.
-### LocalOffline
+### Local Offline
 - No
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - No
   - Refraction operates as a web-based code assistant that accepts pasted code snippets and natural-language prompts for discrete generations. There is no public documentation of persistent, project-level context management APIs or advanced context orchestration features.
 
-### DirectFileReferences
+### Direct File References
 - No
   - The product provides an editor integration (Sublime Text extension) for in-editor usage, but there is no documentation indicating support for direct file path references, project-wide file indexing, or referencing files on disk via the web UI or an API.
 
@@ -90,7 +90,7 @@ Refraction is a web-first AI development assistant (refraction.dev) which helps 
 - No
   - There is no documented checkpoint or undo system for reverting actions; Refraction stores generation history for user review, but this is not presented as a versioned checkpoint/rollback mechanism.
 
-### GitSupport
+### Git Support
 - Yes
   - Provides GitHub integration, including an "Autoreview" GitHub Marketplace plugin, and IDE/editor extensions (Sublime Text, VS Code) to work with repositories.
 

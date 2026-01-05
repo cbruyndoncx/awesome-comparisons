@@ -77,17 +77,17 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 - Unknown
   - No public documentation available regarding BYOK support.
 
-### LocalOffline
+### Local Offline
 - No
   - Runs as a cloud-hosted sandboxed agent rather than an offline/local-only product
 
 ## Developer Experience
 
-### ContextManagement
+### Context Management
 - Yes
   - Performs project-wide codebase analysis, maintains session context across steps, and uses interactive planning to scope work before execution.
 
-### DirectFileReferences
+### Direct File References
 - Yes
   - Operates on exact repository files (opens/edits specific files), not just isolated snippets.
 
@@ -95,7 +95,7 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 - Yes
   - Integrates with Git (creates branches/commits/PRs) and runs changes in sandboxed environments; users can review and revert via normal Git workflows.
 
-### GitSupport
+### Git Support
 - Yes
   - Integrates with GitHub workflows and can open/modify repositories, create branches and PRs
 
