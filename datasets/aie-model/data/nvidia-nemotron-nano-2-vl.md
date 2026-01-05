@@ -62,6 +62,6 @@ Nemotron Nano 2 VL achieves leading results on OCRBench v2 and scores approximat
 - Proprietary
   - NVIDIA open license (permissive)
 
-### FreeTrial
+### Free Trial
 - Yes
   - Available for free under NVIDIA's open license

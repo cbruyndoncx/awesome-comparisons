@@ -46,6 +46,6 @@ FauxPilot is an open-source code-completion server designed to run on-premises o
 ### License
 - MIT
 
-### FreeTrial
+### Free Trial
 - N/A
   - Open-source software: freely available under MIT license, not a time-limited trial.

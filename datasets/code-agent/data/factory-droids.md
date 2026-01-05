@@ -51,7 +51,7 @@ Factory introduced "Droids" as autonomous software development agents that becam
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -101,7 +101,7 @@ Factory introduced "Droids" as autonomous software development agents that becam
 ### SlashCommands
 - Yes
 
-### CustomModes
+### Custom Modes
 - Yes
 
 ### Subagents

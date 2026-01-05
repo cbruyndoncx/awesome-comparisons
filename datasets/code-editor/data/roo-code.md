@@ -48,7 +48,7 @@ RooCode is designed to be more than an autocomplete plugin — it functions as a
 ### License
 - Apache-2.0
 
-### FreeTrial
+### Free Trial
 - Yes
   - The extension itself is free/open-source; model usage costs depend on the API keys/providers you supply.
 
@@ -121,7 +121,7 @@ RooCode is designed to be more than an autocomplete plugin — it functions as a
 - Yes
   - RooCode integrates with VS Code commands and provides re-usable actions through custom modes and task templates. Users can invoke RooCode functionality from the command palette, configure auto-approve command flows, and reuse mode-specific commands and personas for repeated workflows.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Users can create specialist modes (personas) with custom instructions, file restrictions, model selections, and permission boundaries. Modes are configurable and can be tied to specific models or providers, allowing tailoring of the assistant for tasks like architecture review, QA, or refactoring.
 

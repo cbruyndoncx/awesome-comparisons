@@ -49,7 +49,7 @@ Designed for Pro, Max, Team and Enterprise customers, Claude Desktop aims to mak
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - No
 
 ## MCP-Client
@@ -119,7 +119,7 @@ Designed for Pro, Max, Team and Enterprise customers, Claude Desktop aims to mak
 - Yes
   - Slash commands are user-invoked shortcuts (/command) for repeatable workflows. They are defined in project files (e.g., .claude/commands) and can invoke subagents, run scripts, or execute templated prompts.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Claude Desktop supports custom modes or specialist modes that tailor the chat experience for specific tasks (e.g., coding mode, review mode). These are often delivered via Skills or plugin configurations.
 

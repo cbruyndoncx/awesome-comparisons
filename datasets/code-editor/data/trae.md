@@ -47,7 +47,7 @@ Trae is an AI-first IDE intended to act as a full software engineering partner r
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - As of early 2025 Trae was distributed free with access to several premium models included
 
@@ -114,7 +114,7 @@ Trae is an AI-first IDE intended to act as a full software engineering partner r
 - Yes
   - [Trae supports natural-language command syntax and special inline/directives (examples reported: @Agent, #Context) and provides chat/command surfaces (sidebar/inline). These act like reusable, user-invoked commands and can be used to scope agent behavior, request specific actions, or switch modes (e.g., invoking Builder or SOLO).]
 
-### CustomModes
+### Custom Modes
 - Yes
   - [Trae provides multiple specialist modes out-of-the-box (Builder Mode, SOLO Mode, SOLO Builder) and supports creating tailored workflows via custom agents and MCP-driven sessions. Modes change how the agent plans, previews, and executes changes (manual-review vs autonomous execution), and can be switched by command or configuration.]
 

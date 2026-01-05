@@ -55,6 +55,6 @@ Users of Claude Code find that Haiku 4.5 makes the coding experience—from mult
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Available in GitHub Copilot public preview

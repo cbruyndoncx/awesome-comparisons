@@ -49,7 +49,7 @@ CodeLayer is an open-source, keyboard-first IDE and orchestration layer for AI c
 ### License
 - Apache-2.0
 
-### FreeTrial
+### Free Trial
 - No
 
 ## MCP-Client
@@ -114,7 +114,7 @@ CodeLayer is an open-source, keyboard-first IDE and orchestration layer for AI c
 - Yes
   - The product supports reusable, user-triggered commands in two forms: (1) a keyboard-driven command palette / keybindings inside the CodeLayer IDE for launching common actions, sessions, or agent flows; and (2) integrations with messaging channels (Slack/email) where HumanLayer can surface approval prompts or trigger agents via message-based interactions (including Slack workflows or command-like interactions).
 
-### CustomModes
+### Custom Modes
 - Yes
   - Users can create specialist session modes by configuring models, prompt templates, and session settings (e.g., model type, temperature, tool access). The IDE and SDK permit different session types/workflows (review, refactor, PR authoring, exploratory), and CodeLayer's session-forking and template features let teams codify repeatable modes for specific developer tasks.
 

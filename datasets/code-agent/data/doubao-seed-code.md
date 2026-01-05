@@ -51,7 +51,7 @@ Doubao-Seed-Code is ByteDance's professional code generation AI, launched by Vol
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -101,7 +101,7 @@ Doubao-Seed-Code is ByteDance's professional code generation AI, launched by Vol
 ### SlashCommands
 - Yes
 
-### CustomModes
+### Custom Modes
 - No
 
 ### Subagents

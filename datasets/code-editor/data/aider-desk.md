@@ -48,7 +48,7 @@ AiderDesk is a sophisticated desktop application that brings all the power of Ai
 ### License
 - Apache-2.0
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -98,7 +98,7 @@ AiderDesk is a sophisticated desktop application that brings all the power of Ai
 ### SlashCommands
 - Yes
 
-### CustomModes
+### Custom Modes
 - Yes
 
 ### Subagents

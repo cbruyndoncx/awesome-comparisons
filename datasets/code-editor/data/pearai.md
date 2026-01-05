@@ -48,7 +48,7 @@ PearAI provides a unified AI-first IDE experience by combining the familiarity o
 ### License
 - MIT
 
-### FreeTrial
+### Free Trial
 - Yes
   - Free tier available with basic features and BYOK support; paid tiers unlock advanced features
 
@@ -118,7 +118,7 @@ PearAI provides a unified AI-first IDE experience by combining the familiarity o
 - Yes
   - PearAI includes reusable slash/command-style actions (examples in product docs include /edit and other command triggers), keyboard shortcuts (CMD/CTRL+I, CMD/CTRL+L, CMD/CTRL+SHIFT+L) and an @-command system to invoke contextual behaviors. These can be reused across chats and workflows to trigger editing, context injection, diffs and more.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Users can create tailored workflows by configuring model routing, toggling built-in tools, supplying BYOK keys, and using custom command sequences. Because PearAI is a VSCode fork and supports extensions/plugins, teams can implement specialist modes (e.g., a Web3 mode that loads specific docs, models, and snippets) through configuration and extensions.
 

@@ -58,7 +58,7 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Notes: AWS has offered free tiers or developer-friendly access for prior services (CodeWhisperer) and provides Builder ID sign-in options; enterprise pricing & feature bundles for Amazon Q are documented in AWS pricing/docs.
 
@@ -152,7 +152,7 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
     - Editor actions exposed via context menus and inline chat (these act like command triggers: Explain, Refactor, Fix, Optimize, Generate Tests, Send to Prompt).
     - AWS Console plugin alias prefixing: in the AWS console chat, prefixing questions with a plugin alias triggers calls to third-party plugin APIs (CloudZero, Datadog, Wiz) and surfaces provider data inline.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Customization and tailoring mechanisms include:
     - IDE settings: toggles and preferences (e.g., enable MCP, plugin aliases) to adjust how Amazon Q behaves in the developer's environment.

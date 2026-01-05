@@ -55,7 +55,7 @@ React Grab is compatible with popular AI coding tools such as Cursor, Claude Cod
 ### License
 - -
 
-### FreeTrial
+### Free Trial
 - Yes
   - Open source and freely available
 
@@ -111,7 +111,7 @@ React Grab is compatible with popular AI coding tools such as Cursor, Claude Cod
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - No
 
 ### Subagents

@@ -49,7 +49,7 @@ Cursor reimagines the developer workflow by making AI agents first-class collabo
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Free Hobby tier available with limited agent requests; Pro trial options are commonly offered for evaluation.
 
@@ -114,7 +114,7 @@ Cursor reimagines the developer workflow by making AI agents first-class collabo
 - No
   - Cursor's interaction model centers on Composer/Agent UIs rather than slash-command sets like some other editor assistants.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Cursor supports Composer and Agent modes and exposes team-configurable commands and settings to create tailored workflows.
 

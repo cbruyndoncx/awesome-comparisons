@@ -48,5 +48,5 @@ Kimi K2 Thinking is Moonshot AI's enhanced reasoning model released in November 
 ### License
 - Apache-2.0
 
-### FreeTrial
+### Free Trial
 - Yes

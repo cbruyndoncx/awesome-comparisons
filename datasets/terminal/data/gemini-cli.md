@@ -42,7 +42,7 @@ Gemini CLI is Google's command-line interface for AI-assisted coding, bringing t
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -92,7 +92,7 @@ Gemini CLI is Google's command-line interface for AI-assisted coding, bringing t
 ### SlashCommands
 - Yes
 
-### CustomModes
+### Custom Modes
 - No
 
 ### Subagents

@@ -48,7 +48,7 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 ### License
 - MIT
 
-### FreeTrial
+### Free Trial
 - Yes
   - Open-source project - freely available, no time-limited trial.
 
@@ -113,7 +113,7 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 - No
   - No explicit slash-command system documented; interactive actions are performed via the conversational assistant and UI controls rather than chat-style slash commands.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Bolt.diy supports specialized modes via provider configurations, project templates and MCP-driven tool sets that enable tailored assistant behaviour for tasks like scaffolding, refactoring, or deployment.
 

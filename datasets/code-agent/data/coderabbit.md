@@ -60,7 +60,7 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Public site advertises a 14-day free trial (no credit card required in some offers)
 
@@ -127,7 +127,7 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
 - No
   - No public documentation of custom slash-command support inside PR comment threads; interactions are primarily via automated comments and the chat UI.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Offers focused review modes (e.g., security scans, quality/style checks, or full "codebase-aware" reviews) and configurable rule sets through the UI and integrations.
 

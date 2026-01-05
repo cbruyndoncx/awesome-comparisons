@@ -53,7 +53,7 @@ GPT Pilot (by Pythagora) is a source-available AI developer assistant designed t
 - FSL
   - Functional Source License (FSL) / Fair Source (source-available, not MIT/Apache/GPL)
 
-### FreeTrial
+### Free Trial
 - Yes
   - The open/source-available GPT Pilot codebase is free to run; Pythagora also offers a commercial Pythagora Pro product with paid features.
 
@@ -118,7 +118,7 @@ GPT Pilot (by Pythagora) is a source-available AI developer assistant designed t
 - No
   - Not documented as a chat platform with slash-command interfaces; primary interfaces are CLI and VS Code extension.
 
-### CustomModes
+### Custom Modes
 
 
 ### Subagents

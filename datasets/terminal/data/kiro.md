@@ -43,7 +43,7 @@ Kiro is a new command-line coding utility that focuses on speed and simplicity f
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -93,7 +93,7 @@ Kiro is a new command-line coding utility that focuses on speed and simplicity f
 ### SlashCommands
 - Yes
 
-### CustomModes
+### Custom Modes
 - No
 
 ### Subagents

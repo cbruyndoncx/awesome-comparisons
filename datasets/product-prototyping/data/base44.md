@@ -49,7 +49,7 @@ Base44 is an AI-powered application development platform that enables users to c
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -99,7 +99,7 @@ Base44 is an AI-powered application development platform that enables users to c
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - No
 
 ### Subagents

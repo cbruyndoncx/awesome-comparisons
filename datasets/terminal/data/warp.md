@@ -43,7 +43,7 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -110,7 +110,7 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 - No
   - No public global slash-command system documented; parameterized Workflows serve as invocable shortcuts and templates.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Built-in modes include Command Mode, Agent Mode, and Planning Mode. Agent autonomy and behavior can be tuned per agent/Workflow (pause-for-approval, review diffs, allowlists/denylists).
 

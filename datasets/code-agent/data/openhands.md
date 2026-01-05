@@ -45,7 +45,7 @@ OpenDevin is an open-source project that implements an autonomous AI software en
   - Core OpenHands repositories are published under the permissive MIT license.
   - Some ecosystem components use different licenses (notably OpenHands-Cloud uses a Polyform Free Trial-style license for the cloud product), so verify individual repo LICENSE files for specific components.
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -110,7 +110,7 @@ OpenDevin is an open-source project that implements an autonomous AI software en
 - No
   - No public documentation found for slash commands.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Supports creating custom agent types, microagents and specialized workflows to tailor behavior for specific tasks.
 

@@ -46,7 +46,7 @@ SourceAI is a web-based AI code generation tool that accepts natural language re
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Unknown
 
 ## MCP-Client
@@ -107,7 +107,7 @@ SourceAI is a web-based AI code generation tool that accepts natural language re
 - No
   - The product appears to be a web UI code generator; there is no documentation of reusable slash-style commands or command registries exposed to users.
 
-### CustomModes
+### Custom Modes
 - No
   - No public information about creating specialist operational modes or presets beyond simple prompt templates or language selection.
 

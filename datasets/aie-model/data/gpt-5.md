@@ -48,5 +48,5 @@ GPT-5 is OpenAI's most advanced language model released on August 7, 2025, descr
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes

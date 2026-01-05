@@ -54,6 +54,6 @@ Kite was an early AI-assisted coding tool (founded 2014) that provided context-a
 ### License
 - Mixed / see repository
 
-### FreeTrial
+### Free Trial
 - N/A
   - Open-source (post-shutdown): repositories freely available, not a time-limited trial.

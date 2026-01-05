@@ -46,7 +46,7 @@ Mistral Code is a packaged AI developer assistant designed for enterprise adopti
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Private beta availability; general availability and trial terms may vary
 
@@ -122,7 +122,7 @@ Mistral Code is a packaged AI developer assistant designed for enterprise adopti
 - Yes
   - IDE-exposed commands and quick actions (e.g., invoke Devstral task, run semantic search, create draft PR) available in VS Code and JetBrains plugins.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Preset agent modes and Devstral workflows for common specialist tasks (code review, refactor, documentation, testing) and configurable behavior via admin settings and fine-tuning.
 

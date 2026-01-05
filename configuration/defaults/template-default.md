@@ -45,7 +45,7 @@ vX.X (yyyy-mm--dd)
   - [Any additional details like Ollama as an indented unordered list item]
 - No
   
-## FreeTrial
+## Free Trial
 - Yes
 - No
 
@@ -97,7 +97,7 @@ vX.X (yyyy-mm--dd)
   - [Is it possible to define specialized AI subagents for task-specific workflows ? If so, explain how.]
 - No
 
-## CustomModes
+## Custom Modes
 - Yes
   - [Can the user create specialist modes that enable you to tailor the chat experience for specific tasks.]
 - No

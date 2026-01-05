@@ -48,7 +48,7 @@ The platform emphasizes a structured process (uses MoSCoW prioritization) and ta
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - The product advertises a free trial that does not require a credit card
 
@@ -116,7 +116,7 @@ The platform emphasizes a structured process (uses MoSCoW prioritization) and ta
 - No
   - There is no documentation of slash-commands or user-triggered reusable commands; interactions are performed through the web UI.
 
-### CustomModes
+### Custom Modes
 - No
   - There is no public support documented for creating persistent custom "modes" that change agent behavior; users can adjust inputs and settings per project to influence generated outputs.
 

@@ -43,7 +43,7 @@ Gemini Code Assist is Google's AI-powered coding assistant that leverages the Ge
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -93,7 +93,7 @@ Gemini Code Assist is Google's AI-powered coding assistant that leverages the Ge
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - No
 
 ### Subagents

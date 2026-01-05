@@ -50,7 +50,7 @@ Tabby is a self-hosted, open-source AI coding assistant that provides code compl
 ### License
 - Apache License 2.0
 
-### FreeTrial
+### Free Trial
 - No
   - Community edition is free & open-source; Team/Enterprise tiers exist commercially for additional features/support.
 
@@ -118,7 +118,7 @@ Tabby is a self-hosted, open-source AI coding assistant that provides code compl
 - Yes
   - Editor integrations and chat interfaces expose command-like interactions (mentions/slash-style commands) in supported clients.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Server-side presets, Answer Engine pages, and configurable chat/system prompts enable tailored modes for different workflows (e.g., review, refactor, docs lookup).
 

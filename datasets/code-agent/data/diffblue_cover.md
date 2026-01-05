@@ -44,7 +44,7 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - The Community Edition provides a limited free tier (e.g. a small number of Methods Under Test per month).
 
@@ -114,7 +114,7 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
 - No
   - Diffblue Cover provides CLI subcommands (e.g., `dcover test`, `dcover issues`) and IDE actions, but does not have chat-style slash commands like "/review" or "/test" in an interactive agent interface.
 
-### CustomModes
+### Custom Modes
 - No
   - While Cover offers features like Guided Coverage Improvement and Test Asset Insights, it does not expose user-definable "modes" in the sense of switchable chat/assistant personas.
 

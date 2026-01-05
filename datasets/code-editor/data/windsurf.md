@@ -50,7 +50,7 @@ Windsurf is an AI-powered, agentic development environment (IDE-like) designed t
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -127,7 +127,7 @@ Windsurf is an AI-powered, agentic development environment (IDE-like) designed t
 - Yes
   - Command palette & inline commands: Windsurf provides contextual command suggestions (including terminal commands) and an inline/command-palette style interface for invoking reusable commands or code transformations.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Mode presets & rules: Users can pick between Write / Chat / Legacy modes and define AI rules and memories to create behaviourally customised modes for the assistant.
   - Persistence: Memories and project-level rules make these custom modes repeatable across sessions.

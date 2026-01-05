@@ -46,7 +46,7 @@ Marblism provides two complementary offerings: (1) a suite of role-specific "AI 
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -108,7 +108,7 @@ Marblism provides two complementary offerings: (1) a suite of role-specific "AI 
 - No
   - The platform exposes reusable role-driven actions via its AI Employees (pre-built role behaviours that can be triggered to perform tasks like inbox triage, social scheduling, outreach). While not literally described as "slash commands," these role actions act as repeatable, triggerable automation primitives in the product. There is no public mention of a chat-style slash-command syntax for end users.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Users can customize how the AI Employees operate via onboarding choices, role selection, and prompt/configuration templates used by the app builder. This allows creation of specialist operational modes (e.g., a Penny configuration for SEO-focused output versus a Stan configuration for sales outreach). There is no public documentation describing an exposed "custom mode" editor or marketplace; customization appears to be driven through role settings and prompt inputs.
 

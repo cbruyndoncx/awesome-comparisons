@@ -77,7 +77,7 @@ Pythagora is an AI-driven development assistant that can generate full-stack web
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -157,7 +157,7 @@ Pythagora is an AI-driven development assistant that can generate full-stack web
     - `npx pythagora` usage reported for scaffolding and unit-test generation.
     - VS Code commands provided by the extension for starting/stopping the assistant, toggling local/cloud mode, and invoking generation or test runs.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Pythagora supports different development modes and configuration options:
     - Local mode vs Cloud mode (you can run a local Pythagora core path in VS Code or use the hosted/cloud workflow).

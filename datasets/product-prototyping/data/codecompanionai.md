@@ -48,7 +48,7 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 - Proprietary
   - No authoritative public source indicates an open-source license or public repository for the desktop product; third-party write-ups describe it as a proprietary desktop application.
 
-### FreeTrial
+### Free Trial
 - Other (BYOK model)
   - Requires user's own OpenAI API key (BYOK); no product-provided trial, but usage cost depends on user's OpenAI quota rather than vendor subscription
 
@@ -110,7 +110,7 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 - Unknown
   - Chat-based interface is primary interaction method; slash command support not documented in available sources
 
-### CustomModes
+### Custom Modes
 - Unknown
   - No public documentation found regarding user-definable custom modes
 

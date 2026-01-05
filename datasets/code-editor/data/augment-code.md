@@ -42,7 +42,7 @@ Augment Code is an AI-first development platform built to help professional engi
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -109,7 +109,7 @@ Augment Code is an AI-first development platform built to help professional engi
 - Yes
   - The platform supports re-usable, user-triggered commands across interfaces: editor commands (VS Code/JetBrains), CLI/TUI invocations, and chat actions (apply, propose, create checkpoint). These act like reusable operations users can invoke to apply agent capabilities consistently.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Users can create specialist modes / profiles that tailor the assistant for particular tasks or styles: project profiles, role-specific modes (reviewer, maintainer, refactorer), model and memory selection, and policy/permission presets. These modes adjust agent behavior, allowed actions, and context-scope.
 

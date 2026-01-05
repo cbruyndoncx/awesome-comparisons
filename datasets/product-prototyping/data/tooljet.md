@@ -81,7 +81,7 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
 ### License
 - Apache-2.0
 
-### FreeTrial
+### Free Trial
 - Yes
   - Community Edition is free and open-source; paid plans offer additional features and hosted options.
 
@@ -150,7 +150,7 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
 - No
   - There is no built-in "slash command" palette feature documented as a first-class capability. Developers can implement their own command-like UI (input + event handlers) to emulate slash-commands or quick actions within an app.
 
-### CustomModes
+### Custom Modes
 - Yes
   - ToolJet includes built-in modes (edit, preview, view) surfaced via globals.modes and the Inspector. While there isn't a single "custom modes" API, developers can emulate custom modes and alternate UX states using URL parameters (globals.urlparams), environment identifiers (globals.environment), conditional rendering and logic driven by globals or app-level variables.
 

@@ -47,7 +47,7 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
 ### License
 - MIT
 
-### FreeTrial
+### Free Trial
 - N/A
   - Open-source software (permanently free), not a time-limited trial
 
@@ -119,7 +119,7 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
 - Yes
   - OpenCode provides slash-style commands for common workflows (examples include `/init` to analyze a repo, `/undo` and `/redo` to revert or restore changes). Users can create custom commands/prompts to speed repetitive interactions.
 
-### CustomModes
+### Custom Modes
 - Yes
   - OpenCode provides at least two explicit modes: Plan Mode (read-only design/planning) and Build Mode (apply edits). Modes can be toggled in the TUI (Tab key), enabling different agent behaviours (e.g., generate a plan vs. make changes).
 

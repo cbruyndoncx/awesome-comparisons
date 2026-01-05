@@ -56,7 +56,7 @@ Amp is designed as an "agentic" coding assistant that can autonomously reason th
 - Proprietary
   - Related Sourcegraph example repositories (e.g., cra-github, amp-demo) may carry permissive licenses such as MIT; confirm per-repo LICENSE files for specifics.
 
-### FreeTrial
+### Free Trial
 - Yes
   - Sourcegraph provides trial/pricing info for Amp; consult Sourcegraph sales/docs for details.
 
@@ -121,7 +121,7 @@ Amp is designed as an "agentic" coding assistant that can autonomously reason th
 - Yes
   - CLI and extension expose reusable commands and interactive command palette entries for common operations.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Provides operational modes (e.g., smart vs fast) and configurable thinking budgets.
 

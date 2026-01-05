@@ -50,7 +50,7 @@ Ona is the rebrand and strategic evolution of Gitpod into an AI-first software e
 - MIT 
   - core open-source components
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -116,7 +116,7 @@ Ona is the rebrand and strategic evolution of Gitpod into an AI-first software e
 - Yes
   - Ona agents support slash-command style interactions to trigger automations and common engineering tasks from chat or IDE integrations. These commands are intended to quickly invoke tests, CI-like automations, or agent behaviours and are integrated into the agent UX across browser and IDE clients.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Agent behaviour and operating modes can be tailored via repository-level configuration (AGENTS.md), environment definitions, and automation manifests; teams can create specialized profiles/workspace configs that produce distinct agent behaviours or permissions for particular workflows.
 

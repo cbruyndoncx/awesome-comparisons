@@ -67,7 +67,7 @@ Sourcegraph is a platform that provides precise, scalable code search and code n
 - Proprietary
   - Sourcegraph Enterprise (formerly Apache 2.0 for much of the codebase prior to relicensing)
 
-### FreeTrial
+### Free Trial
 - Yes
   - Free tier/self-hosted free edition for small teams and public code; paid Business/Enterprise plans for larger teams and advanced features.
 
@@ -139,7 +139,7 @@ Sourcegraph is a platform that provides precise, scalable code search and code n
 - Yes
   - Sourcegraph supports CLI tooling (e.g., src CLI / developer tools) and integrations that allow scripted interactions and automation. While not "slash commands" in the chat app sense, IDE and extension commands plus the CLI offer similar actionable command workflows.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Cody and Sourcegraph provide configurable behaviors via deployment choices (self-hosted vs cloud), search contexts, user-defined settings, and extension points. This enables tailoring the assistant's behavior and retrieval scope for specific teams or workflows.
 

@@ -49,7 +49,7 @@ Eclipse Theia is an open-source, modular IDE framework maintained under the Ecli
 - EPL-2.0
   - Eclipse Public License 2.0 (EPL-2.0)
 
-### FreeTrial
+### Free Trial
 - Yes
   - Theia is free/open-source (no trials); commercial services built on top of it may have separate licensing/pricing.
 
@@ -116,7 +116,7 @@ Eclipse Theia is an open-source, modular IDE framework maintained under the Ecli
 - Yes
   - Theia has a first-class commands system. Extensions declare commands via CommandContribution and register handlers with CommandRegistry; commands appear in the Command Palette and can be bound to keybindings or menus. Users can manually trigger commands from the palette, context menus, or keybindings. Commands can be enabled/disabled via context expressions and can execute either frontend logic or delegate work to the backend/container.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Theia supports custom "modes" through language/monaco registrations, custom editors, themes, keymaps, and preference scopes. Extensions can register language contributions (syntax, tokens, language IDs), Monaco editor modes, and view/editor behavior, enabling specialist modes tailored for tasks (e.g., embedded development, data science notebooks, AI copilots).
 

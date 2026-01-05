@@ -50,7 +50,7 @@ Key capabilities include automated planning (breaking objectives into actionable
 ### License
 - MIT
 
-### FreeTrial
+### Free Trial
 - Yes
   - The project is open-source and free to run; commercial clouds/models used via BYOK may incur costs.
 
@@ -116,7 +116,7 @@ Key capabilities include automated planning (breaking objectives into actionable
 - Yes
   - Offers CLI and web UI commands for common operations (start/stop agent, create projects, run tasks); extensible via configuration and scripts.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Configurable modes and profiles (model selection, search/backoff strategies, and task verbosity) to tailor the agent's behavior for different workflows.
 

@@ -50,7 +50,7 @@ Sources: GitHub repository (https://github.com/openai/codex) and project documen
 ### License
 - MIT
 
-### FreeTrial
+### Free Trial
 - Yes
   - Availability depends on chosen model provider (OpenAI, Ollama, etc.)
 
@@ -116,7 +116,7 @@ Sources: GitHub repository (https://github.com/openai/codex) and project documen
 - Yes
   - The interactive interface supports internal commands (for example switching models or toggling behavior) and the CLI exposes flags and subcommands to control operation modes.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Built-in modes (suggest, auto-edit, full-auto) and approval/sandbox configurations let teams tailor agent autonomy and safety boundaries.
 

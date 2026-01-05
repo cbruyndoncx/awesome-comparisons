@@ -52,7 +52,7 @@ MarsX is an open-source development platform and marketplace that combines AI as
 - MIT
   - Core engine: MIT (varies by individual micro-app)
 
-### FreeTrial
+### Free Trial
 - Yes
   - MarsX offers a usable free plan and the core Mars engine is available as open-source.]
 
@@ -126,7 +126,7 @@ MarsX is an open-source development platform and marketplace that combines AI as
 - Unknown
   - There's no explicit public documentation indicating the presence of a slash-command interface inside the MarsX IDE or chat interfaces. The platform does have a conversational AI interface for Micro‑App interactions, but whether it supports user-defined slash commands is not documented.
 
-### CustomModes
+### Custom Modes
 - Unknown
   - There is no clear public documentation showing a user-facing "modes" system for switching the IDE or AI into different specialist modes. The platform does support hybrid No-Code/Code workflows and per-microapp model tuning which effectively create contextual modes, but explicit custom-mode APIs or user-creatable modes are not documented.
 

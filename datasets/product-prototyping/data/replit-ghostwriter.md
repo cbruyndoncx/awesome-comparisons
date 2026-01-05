@@ -58,7 +58,7 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Replit offers a free Starter plan with limited access to Replit AI and a trial of Replit Agent. Ghostwriter's full features require a paid Replit Core subscription or purchase of AI credits/cycles.
 
@@ -125,7 +125,7 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 - Yes
   - Within the Replit IDE chat/command palette, Ghostwriter supports in-editor chat interactions and may accept slash-like quick commands in the chat UI for common tasks (e.g., refactor, explain, generate). Public docs do not provide a formal, documented slash-command syntax; behavior is primarily UI-driven rather than command-driven.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Ghostwriter exposes different usage modes in the UI (e.g., Chat vs. Inline Completion vs. Explain/Transform). Replit Agent offers explicit Plan vs Build modes for more autonomous workflows. Public docs do not document a user-facing API for creating new custom modes beyond UI options and Agent's planning features.
 

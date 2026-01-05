@@ -53,7 +53,7 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Available during preview; typical Firebase usage quotas and billing apply once services are provisioned beyond free tier limits.
 
@@ -130,7 +130,7 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
   - Use `/` in the chat to see available commands; many commands are surfaced contextually based on selected code or active files.
   - The Firebase MCP server provides pre-written prompts surfaced as slash commands (e.g., /firebase:init) in some tool integrations.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Provides specialized workflows through App Prototyping agent and Gemini in-IDE chat for different development tasks
 

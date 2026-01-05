@@ -61,7 +61,7 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Copilot has free tiers (e.g., Copilot Free for qualifying users) and trial/paid plans (Pro/Business/Enterprise) with different capabilities.
 
@@ -147,7 +147,7 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
     - Copilot Chat supports conversational triggers and structured commands/inputs in the chat UI; extensions/agents can expose command-like actions that users invoke from the chat or editor context.
     - In IDE integrations, extension commands (command palette, context menu, chat commands) let users trigger predefined behaviors or workflows.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Can the user create specialist modes that enable you to tailor the chat experience for specific tasks.
     - Custom instructions, persistent prompt files, Copilot Spaces, and workspace-level knowledge bases allow teams to define tailored modes and default context for chat sessions (for example: testing mode, security-aware suggestions, or style-guides).

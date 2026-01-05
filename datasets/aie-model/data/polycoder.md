@@ -58,6 +58,6 @@ PolyCoder was released in multiple sizes (160M, 405M and 2.7B parameters). The 2
 ### License
 - MIT
 
-### FreeTrial
+### Free Trial
 - N/A
   - Open-source model: checkpoints, code, and training artifacts are freely available under MIT license (Zenodo archive and GitHub repo), not a time-limited trial.

@@ -60,7 +60,7 @@ Gemini 3 is now immediately available through the Gemini app and AI search inter
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Available through Gemini app and AI Studio
   - Google Antigravity available at no charge in public preview

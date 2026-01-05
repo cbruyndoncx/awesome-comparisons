@@ -46,7 +46,7 @@ GitHub Copilot Workspace was an experimental "agentic" IDE hosted by GitHub that
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -116,7 +116,7 @@ GitHub Copilot Workspace was an experimental "agentic" IDE hosted by GitHub that
 - No
   - Interaction model was natural-language driven (tasks, specs, plans) rather than a slash-command interface documented for user-triggered commands.
 
-### CustomModes
+### Custom Modes
 - No
   - There was no documented feature for users to create specialist modes that change the overall chat/agent behavior beyond editing specs/plans and choosing when to regenerate.
 

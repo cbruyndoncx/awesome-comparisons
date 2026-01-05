@@ -55,7 +55,7 @@ According to performance analyses, Cheetah AI delivers 230% ROI for engineering 
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - -
 
 ## MCP-Client
@@ -111,7 +111,7 @@ According to performance analyses, Cheetah AI delivers 230% ROI for engineering 
 ### SlashCommands
 - -
 
-### CustomModes
+### Custom Modes
 - Yes
   - Dedicated plan mode with deepResearch
 

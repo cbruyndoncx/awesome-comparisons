@@ -71,7 +71,7 @@
 
 - Distributed and operated by AWS under their commercial terms; third-party models accessible via the service are subject to their respective licenses.
 
-### FreeTrial
+### Free Trial
 <!-- Free access (like opensource), or free (potentially limited) trial available -->
 <!-- Keep only the label values that apply to this comparison. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - -
@@ -173,7 +173,7 @@
 
 - The CLI exposes subcommands rather than chat-style slash commands; interactive chat in the CLI supports editor invocation and commands but not a separate slash-command registry in the same sense as chat UIs.
 
-### CustomModes
+### Custom Modes
 <!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes as indented "- " entries beneath the kept values. -->
 - Yes

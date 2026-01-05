@@ -65,7 +65,7 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
 ### License
 - Apache-2.0
 
-### FreeTrial
+### Free Trial
 - Yes
   - A free/solo tier exists (open-source extensions + hub access for public/shared blocks). Paid team/enterprise tiers add governance and private deployment options.
 
@@ -182,7 +182,7 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
   - Sources:
     - Session command list provided in the runtime instructions at the top of this environment
 
-### CustomModes
+### Custom Modes
 - Yes
   - Specialist modes can be created by combining extensions, execution settings, and curated prompts:
     - Enable/disable specific extensions (platform__manage_extensions) to tailor available tools for the mode.

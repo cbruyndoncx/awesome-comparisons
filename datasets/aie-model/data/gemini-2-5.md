@@ -49,5 +49,5 @@ Gemini 2.5 is Google DeepMind's most advanced model family announced in March 20
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes

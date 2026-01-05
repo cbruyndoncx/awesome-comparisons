@@ -50,7 +50,7 @@ The tool features a large 128K token context window, making it suitable for work
 ### License
 - -
 
-### FreeTrial
+### Free Trial
 - Yes
   - Open source and freely available
 
@@ -109,7 +109,7 @@ The tool features a large 128K token context window, making it suitable for work
 ### SlashCommands
 - -
 
-### CustomModes
+### Custom Modes
 - Yes
   - Dual-mode design: Shell mode and AI agent mode
   - Toggle between modes with Ctrl-K

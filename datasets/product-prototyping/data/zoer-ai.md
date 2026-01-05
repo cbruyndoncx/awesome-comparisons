@@ -48,7 +48,7 @@ Zoer.ai is a comprehensive AI-powered platform launched in September 2025 that b
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -98,7 +98,7 @@ Zoer.ai is a comprehensive AI-powered platform launched in September 2025 that b
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - No
 
 ### Subagents

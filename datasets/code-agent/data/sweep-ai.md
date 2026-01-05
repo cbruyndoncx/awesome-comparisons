@@ -57,7 +57,7 @@ Sweep is an intelligent open-source AI assistant that automates typical develope
 ### License
 - MIT
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -107,7 +107,7 @@ Sweep is an intelligent open-source AI assistant that automates typical develope
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - No
 
 ### Subagents

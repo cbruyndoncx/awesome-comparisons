@@ -43,7 +43,7 @@ TestSprite is an AI-powered test automation platform that leverages machine lear
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -93,7 +93,7 @@ TestSprite is an AI-powered test automation platform that leverages machine lear
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - No
 
 ### Subagents

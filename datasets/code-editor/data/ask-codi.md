@@ -49,7 +49,7 @@ AskCodi is an AI-powered coding assistant and OpenAI-compatible LLM gateway deve
 ### License
 Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -118,7 +118,7 @@ Proprietary
 - No
   - There is no clear, public reference to a Slack-style or chat-slash-command system in AskCodi's public docs. IDE integrations do expose commands via editor command palettes, but an explicit "slash command" interface in the chat is not documented.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Model selection and per-project settings let teams select different LLMs or presets for specific workflows (e.g., choose Claude vs. GPT for particular task types), effectively creating tailored modes.
   - Codi Apps + Workbook combinations function as configurable modes for focused tasks (e.g., a testing mode using the unit-test generator app).

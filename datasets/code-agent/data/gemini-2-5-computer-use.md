@@ -60,7 +60,7 @@ Google's payments platform team implemented the model to fix fragile UI tests, s
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Available in public preview
 
@@ -122,7 +122,7 @@ Google's payments platform team implemented the model to fix fragile UI tests, s
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - Unknown
   - No public documentation found.
 

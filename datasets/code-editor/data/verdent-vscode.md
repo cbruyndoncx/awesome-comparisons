@@ -49,7 +49,7 @@ The extension is intended to reduce context switching by letting developers rema
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - 7-day free trial with 100 credits.
 
@@ -123,7 +123,7 @@ The extension is intended to reduce context switching by letting developers rema
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - Yes
   - Verdent offers "collaboration modes" and allows configuration of AI models for different tasks.
 

@@ -48,5 +48,5 @@ Claude Sonnet 4.5 is Anthropic's best coding model, released on September 29, 20
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes

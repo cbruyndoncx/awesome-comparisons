@@ -55,5 +55,5 @@ In January 2025, Alibaba released Qwen2.5-Max, their most advanced model availab
 ### License
 - Apache-2.0
 
-### FreeTrial
+### Free Trial
 - Yes

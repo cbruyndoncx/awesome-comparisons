@@ -48,5 +48,5 @@ Kimi K2 is a state-of-the-art mixture-of-experts (MoE) language model developed 
 ### License
 - Apache-2.0
 
-### FreeTrial
+### Free Trial
 - Yes

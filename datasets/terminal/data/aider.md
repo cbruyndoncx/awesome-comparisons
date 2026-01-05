@@ -48,7 +48,7 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 ### License
 - MIT
 
-### FreeTrial
+### Free Trial
 - N/A
   - Open-source tool (permanently free); users pay their own LLM provider for API usage, not a time-limited trial
 
@@ -116,7 +116,7 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 - Yes
   - Provides reusable in-chat slash commands for workflow control (e.g., /add, /drop, /model, /undo, /reasoning-effort, /help).
 
-### CustomModes
+### Custom Modes
 - Yes
   - Built-in chat modes to tailor behavior: code (direct edits), architect (design/planning), ask (questions about code), help (explain Aider features).
 

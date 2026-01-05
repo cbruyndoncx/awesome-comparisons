@@ -46,7 +46,7 @@ Google Jules is a 2025 release representing Google's entry into autonomous AI co
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -96,7 +96,7 @@ Google Jules is a 2025 release representing Google's entry into autonomous AI co
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - Yes
 
 ### Subagents

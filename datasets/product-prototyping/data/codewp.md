@@ -65,7 +65,7 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Free starter tier includes a small monthly quota (e.g., ~100 actions) so you can evaluate before upgrading
 
@@ -134,7 +134,7 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - Yes
   - Provides targeted modes/presets for common WordPress ecosystems and builders; v2.5 added more advanced modes and presets.
 

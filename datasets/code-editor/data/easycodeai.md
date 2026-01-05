@@ -55,7 +55,7 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 <!-- Free access (like opensource), or free (potentially limited) trial available -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -155,7 +155,7 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 - Includes slash commands such as /Plan for planning workflows and quick-edit triggers in the IDE and extensions.
 
-### CustomModes
+### Custom Modes
 <!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes

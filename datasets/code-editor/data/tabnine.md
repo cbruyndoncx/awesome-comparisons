@@ -56,7 +56,7 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - No
   - Any additional details: Tabnine sunset its free Basic plan in 2025; access is primarily through paid tiers or enterprise licensing. Trial or pilot options may still be available via sales.
 
@@ -131,7 +131,7 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - Yes
   - While Tabnine does not provide a full agent-creation framework, it exposes many configurable modes and admin controls including completion behaviour settings (whole-line vs token, multiline), model & deployment choices, policy & privacy settings, and per-workspace configuration that produce different operational modes per repo.
 

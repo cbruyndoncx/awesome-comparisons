@@ -53,7 +53,7 @@ The tool integrates with existing repositories, understands full project context
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Free tier: 15 daily tasks, 3 concurrent tasks
   - Available worldwide where Gemini models are accessible
@@ -118,7 +118,7 @@ The tool integrates with existing repositories, understands full project context
 ### SlashCommands
 - -
 
-### CustomModes
+### Custom Modes
 - Yes
   - Asynchronous background operation mode
   - Available via Google AI Pro and Ultra plans with different capability limits

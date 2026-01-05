@@ -60,7 +60,7 @@ JetBrains AI Assistant embeds AI workflows directly inside JetBrains IDEs and le
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Core inline completions and many local workflows are free. Cloud-based features may use provider credits; JetBrains changed to a credit/quota model in 2025 for cloud usage visibility.
 
@@ -131,7 +131,7 @@ JetBrains AI Assistant embeds AI workflows directly inside JetBrains IDEs and le
 - No
   - There is no widely-documented, global "slash command" mechanic inside JetBrains AI Chat analogous to chat-platform slash commands. Users invoke functionality through the chat UI, mode selection (Chat vs Agent), context buttons, and model/option menus rather than typed slash commands. Some quick actions (e.g., apply suggestion, accept completion, run tests) are exposed as UI controls rather than textual slash commands.
 
-### CustomModes
+### Custom Modes
 - No
   - The product exposes distinct interaction modes (Chat mode and Agent/Autonomous mode) and allows selecting different model providers and configurations (cloud vs local models). However, there is no publicly-documented facility for end-users to create arbitrary custom "modes" beyond the provided chat/agent workflows and model/configuration choices.
 

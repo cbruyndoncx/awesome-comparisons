@@ -88,7 +88,7 @@ mux (Coding Agent Multiplexer) is a cross-platform desktop application for AI-as
 - AGPL-3.0
   - GNU Affero General Public License v3.0 (see https://github.com/coder/mux/blob/main/LICENSE)
 
-### FreeTrial
+### Free Trial
 <!-- Free access (like opensource), or free (potentially limited) trial available -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
@@ -180,7 +180,7 @@ mux (Coding Agent Multiplexer) is a cross-platform desktop application for AI-as
 - Yes
   - UI supports slash-style commands (examples: /compact) and vim-style inputs for efficient interactions.
 
-### CustomModes
+### Custom Modes
 <!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes

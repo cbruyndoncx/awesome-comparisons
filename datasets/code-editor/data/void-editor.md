@@ -45,7 +45,7 @@ Void is an open-source, privacy-focused AI code editor that forks the Visual Stu
 ### License
 - Apache-2.0
 
-### FreeTrial
+### Free Trial
 - Yes
   - Core editor is free and open-source.
 
@@ -120,7 +120,7 @@ Void is an open-source, privacy-focused AI code editor that forks the Visual Stu
 - Yes
   - Void provides keyboard-driven commands and a command palette (similar to VS Code) and exposes shortcuts for AI actions (examples: Ctrl+K for inline edits, Ctrl+L for chat). These commands are manually triggerable and reusable via the palette or keybindings.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Void ships with specialized modes (Agent Mode, Gather Mode, Chat) and supports prompt and model configuration so users can create tailored workflows. Users can:
     - Save or edit prompts and model choices to approximate custom modes.

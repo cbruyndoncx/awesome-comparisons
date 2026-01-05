@@ -48,7 +48,7 @@ DevoxxGenie is an IntelliJ IDEA plugin (100% Java-based) that provides an LLM-po
 ### License
 - MIT
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -122,7 +122,7 @@ DevoxxGenie is an IntelliJ IDEA plugin (100% Java-based) that provides an LLM-po
   - Supports prompt-style slash commands from the input field (notably `/init` to create a DEVOXXGENIE.md project descriptor).
   - Commands and shortcuts are entered directly in the chat input and can be combined with context selections (files, images, project scanner options).
 
-### CustomModes
+### Custom Modes
 - Yes
   - DEVOXXGENIE.md + saved prompts: create project-specific prompt templates and system prompts to tailor the assistant's behaviour.
   - Per-model settings: choose different LLM providers, model parameters, memory sizes and token cost constraints to create tailored working modes.

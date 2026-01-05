@@ -48,5 +48,5 @@ Grok 4 is xAI's flagship AI model released on July 9, 2025, described as "the mo
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes

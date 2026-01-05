@@ -44,7 +44,7 @@ Testify AI is a fast-growing open-source project that brings AI-powered test aut
 ### License
 - MIT
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -94,7 +94,7 @@ Testify AI is a fast-growing open-source project that brings AI-powered test aut
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - No
 
 ### Subagents

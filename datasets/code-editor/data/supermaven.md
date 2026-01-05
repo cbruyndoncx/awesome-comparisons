@@ -47,7 +47,7 @@ Supermaven is an AI-powered code completion and developer-assistant platform bui
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -115,7 +115,7 @@ Supermaven is an AI-powered code completion and developer-assistant platform bui
 - No
   - While the product exposes hotkeys and chat-driven actions (apply-change, show-diff, jump-to-file), there is no widely-documented generic "slash command" system for reusable, user-defined commands in the public docs — behavior is primarily via the chat UI and IDE command palette/hotkeys.
 
-### CustomModes
+### Custom Modes
 - No
   - There is no public indication that users can author custom assistant modes; available modes are product-provided (completion, chat, refactor suggestions). Customization is via settings and IDE integration rather than creating new assistant modes.
 

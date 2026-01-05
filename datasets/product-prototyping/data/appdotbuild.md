@@ -52,7 +52,7 @@ The default generated stacks commonly include React on the frontend and Fastify 
 ### License
 - Apache-2.0
 
-### FreeTrial
+### Free Trial
 - Yes
   - The project is open-source and can be self-hosted without cost via the GitHub repository.
   - A hosted app.build service may offer paid tiers or usage limits for hosted generation; confirm on the project's website for current hosted pricing/limits.
@@ -120,7 +120,7 @@ The default generated stacks commonly include React on the frontend and Fastify 
 - No
   - No evidence of a slash-command or chat-style command interface (e.g., in Slack/Discord) is documented in public materials; interaction is via CLI and web UI.
 
-### CustomModes
+### Custom Modes
 - No
   - There is no public documentation describing a user-facing "custom modes" feature that lets users define persistent specialist modes for the agent. Configurable stack choices and BYOK options exist, but no documented mechanism to create custom conversational/behavioral modes for the agent was found.
 

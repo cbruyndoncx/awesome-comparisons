@@ -50,7 +50,7 @@ Runner H (from H Company) is an "action-oriented" autonomous web agent designed 
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Limited beta access was offered during initial launch windows.
 
@@ -117,7 +117,7 @@ Runner H (from H Company) is an "action-oriented" autonomous web agent designed 
 - Yes
   - The platform supports reusable workflows/recipes (templates) that can be invoked on demand. These workflows can be triggered from the Runner H UI or via integrated apps (for example, Slack commands or scheduled jobs through connectors). Users can save common multi-step automations and re-run them as shorthand commands.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Users can create specialist modes/workflows by configuring custom agents, connectors, and templates. Extensibility is provided through connectors (Google Workspace, Slack, Zapier, etc.), custom workflow templates, and configuration of agent behaviors (e.g., QA thresholds, retry policies). During beta the public SDK surface is limited, but the product is designed to be extensible via connectors and workflow configuration.
 

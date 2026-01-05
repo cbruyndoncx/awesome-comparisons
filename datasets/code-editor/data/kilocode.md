@@ -52,7 +52,7 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
 ### License
 - MIT
 
-### FreeTrial
+### Free Trial
 - Yes
   - new users get onboarding credits via the platform (also can operate with your own keys)
 
@@ -131,7 +131,7 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
 - Yes
   - Kilo Code utilizes slash commands for various functionalities, particularly for switching between specialized modes and managing tasks.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Ships with Architect, Coder, Debugger and Orchestrator modes; supports creating custom modes for tailored workflows.
 

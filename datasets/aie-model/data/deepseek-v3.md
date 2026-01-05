@@ -48,5 +48,5 @@ DeepSeek-V3 is a 671-billion parameter Mixture-of-Experts model that achieves st
 ### License
 - MIT
 
-### FreeTrial
+### Free Trial
 - Yes

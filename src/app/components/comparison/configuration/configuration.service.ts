@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { Configuration, Criteria, CriteriaTypes, CriteriaValue, Data, DataElement, Label } from '../../../../../lib/gulp/model/model.module';
 import packageInfo from '../../../../../package.json';
 
+import { deNormalize } from '../../../utils/string.utils';
 import { isNullOrUndefined } from '../../../shared/util/null-check';
 import { renderMarkdown, renderMarkdownToText } from '../../../shared/util/markdown';
 import { Store } from '@ngrx/store';
@@ -157,7 +158,7 @@ export class ConfigurationService {
         const processedCriteria = this.configuration.criteria.map(criteria => {
             const context: Record<string, any> = {
                 id: criteria.id,
-                name: typeof criteria.name === 'string' ? criteria.name : criteria.id,
+                name: (typeof criteria.name === 'string' && criteria.name.trim().length > 0) ? criteria.name : deNormalize(criteria.id),
                 type: criteria.type
             };
             const resolvedName = ConfigurationService.resolveTemplateValue(criteria.name, context);

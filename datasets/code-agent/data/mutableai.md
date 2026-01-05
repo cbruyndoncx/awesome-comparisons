@@ -48,7 +48,7 @@ The platform is positioned for both individual developer workflows (autocomplete
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -114,7 +114,7 @@ The platform is positioned for both individual developer workflows (autocomplete
 - No
   - No documented slash-command system; IDE extensions expose commands through the editor command palette rather than an in-app slash command interface.
 
-### CustomModes
+### Custom Modes
 - No
   - No public documentation describing user-defined specialist chat modes or configurable built-in modes beyond prompt-driven behavior and configurable project settings.
 

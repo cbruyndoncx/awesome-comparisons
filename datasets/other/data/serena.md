@@ -48,7 +48,7 @@ Serena is an innovative open-source coding agent toolkit that emerged in 2025, p
 ### License
 - MIT
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -102,7 +102,7 @@ Serena is an innovative open-source coding agent toolkit that emerged in 2025, p
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - No
 
 ### Subagents

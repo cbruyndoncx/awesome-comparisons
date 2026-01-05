@@ -58,7 +58,7 @@ Key capabilities include project-wide code indexing, plan decomposition, paralle
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - 7-day free trial with 100 credits.
 
@@ -122,7 +122,7 @@ Key capabilities include project-wide code indexing, plan decomposition, paralle
 - No
   - No public documentation found.
 
-### CustomModes
+### Custom Modes
 - No
   - No public documentation found.
 

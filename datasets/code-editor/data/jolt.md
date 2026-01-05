@@ -66,7 +66,7 @@ Jolt is a commercial AI coding assistant designed for large production codebases
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Commercial product with demos / trials and enterprise sales channels.
 
@@ -142,7 +142,7 @@ Jolt is a commercial AI coding assistant designed for large production codebases
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - No
 
 ### Subagents

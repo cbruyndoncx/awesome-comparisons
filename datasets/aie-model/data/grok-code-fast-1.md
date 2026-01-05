@@ -65,6 +65,6 @@ According to xAI's benchmarks, the model executes at approximately 160 tokens pe
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Free access through launch partner tools for limited time

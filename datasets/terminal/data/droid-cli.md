@@ -50,7 +50,7 @@ The platform offers code completion, PR review suggestions, automated fixes, and
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - 20M tokens included
 
@@ -112,7 +112,7 @@ The platform offers code completion, PR review suggestions, automated fixes, and
 ### SlashCommands
 - -
 
-### CustomModes
+### Custom Modes
 - Yes
   - Interactive mode for chat-based assistance
   - Droid Exec: Headless mode for automation

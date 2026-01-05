@@ -46,7 +46,7 @@ Cline is designed to act as a development partner rather than a simple autocompl
 ### License
 - MIT
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -123,7 +123,7 @@ Cline is designed to act as a development partner rather than a simple autocompl
   - Cline exposes VS Code commands accessible via the command palette (e.g., open Cline, add a tool, invoke actions) which act as reusable user-triggered commands.
   - The project also documents a CLI reference (docs.cline.bot/cline-cli/cli-reference) for command-line interactions tied to the extension's features.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Toggleable rulesets (.clinerules) and Plan vs Act modes let teams define specialist behavior profiles and switch modes to tailor the assistant for different tasks or policies.
   - Teams and projects can configure provider/backends (BYOK, local models) that change runtime behavior and constraints for the assistant.

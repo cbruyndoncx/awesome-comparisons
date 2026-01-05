@@ -51,7 +51,7 @@ Manus AI is recognized as the world's first fully autonomous AI agent, developed
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -101,7 +101,7 @@ Manus AI is recognized as the world's first fully autonomous AI agent, developed
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - No
 
 ### Subagents

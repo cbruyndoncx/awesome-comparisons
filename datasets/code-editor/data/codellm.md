@@ -48,7 +48,7 @@ CodeLLM is a revolutionary AI code editor by Abacus.AI that helps developers 10x
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -98,7 +98,7 @@ CodeLLM is a revolutionary AI code editor by Abacus.AI that helps developers 10x
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - No
 
 ### Subagents

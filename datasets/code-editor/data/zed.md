@@ -55,7 +55,7 @@ Zed is a modern code editor engineered for low latency and smooth UX. It renders
 - GPL
   - GPL-3.0 (core editor), AGPL for certain server/collab components; other crates/components may use Apache/MIT for specific parts
 
-### FreeTrial
+### Free Trial
 - Yes
   - The editor and source are available openly; binaries are freely downloadable. (See "Notes" about binary EULA nuance.)
 
@@ -130,7 +130,7 @@ Zed is a modern code editor engineered for low latency and smooth UX. It renders
     - /fetch — insert the response from an arbitrary HTTP URL
   - Slash commands render inserted content as editable, foldable blocks inside the assistant buffer so you can control token usage and visibility when composing prompts.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Zed supports configurable Assistant profiles (assistant.profiles in settings.json) which let you create custom agent/tool configurations (e.g., Read-only, Write-enabled, Minimal) governing what the assistant can access and do. Profiles can be created and edited via the UI or by modifying settings.json directly.
   - The editor also supports extensibility (extensions, settings, keymaps), so you can compose specialist workflows or modes via extensions plus profile/policy configuration.

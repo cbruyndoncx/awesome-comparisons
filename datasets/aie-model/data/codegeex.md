@@ -44,6 +44,6 @@ CodeGeeX is a large-scale multilingual code generation model and toolkit develop
 - Code: Apache-2.0
 - Model weights: released for academic research; commercial use requires application/approval (see repository for details)
 
-### FreeTrial
+### Free Trial
 - Yes
   - Model code is open-source; weights are available for academic research. Commercial use of weights typically requires registration/approval per THUDM's model license terms.

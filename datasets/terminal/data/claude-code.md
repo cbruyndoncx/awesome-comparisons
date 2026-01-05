@@ -52,7 +52,7 @@ The tool is focused on large-context reasoning, multi-file code transformations,
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -117,7 +117,7 @@ The tool is focused on large-context reasoning, multi-file code transformations,
 - Yes
   - Custom project commands placed under .claude/commands are surfaced as slash-style commands and can be invoked from the CLI to run specialized workflows (for example, /project:fix-github-issue).
 
-### CustomModes
+### Custom Modes
 - Yes
   - The CLI allows model selection and configurable behaviors (e.g., read-only analysis, aggressive edit mode, or restricted tool sets). Users can create and store project-specific command templates and flags to emulate specialist modes for common tasks.
 

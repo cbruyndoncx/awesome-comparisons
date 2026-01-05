@@ -46,7 +46,7 @@ Refraction is a web-first AI development assistant (refraction.dev) which helps 
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - New users get a limited number of free generations (commonly reported as ~10 free uses) and a short trial period to evaluate the service.
 
@@ -112,7 +112,7 @@ Refraction is a web-first AI development assistant (refraction.dev) which helps 
 - No
   - There is no documented support for user-triggered reusable slash-style commands or command palettes exposed by the product.
 
-### CustomModes
+### Custom Modes
 - No
   - There is no public information about creating persistent custom modes or specialist modes that alter the assistant's behavior across sessions. The product focuses on one-off, targeted generations rather than configurable modes.
 

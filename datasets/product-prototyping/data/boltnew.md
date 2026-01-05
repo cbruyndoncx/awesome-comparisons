@@ -48,7 +48,7 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Public/free tier available with usage limits; paid plans for advanced features may exist.
 
@@ -117,7 +117,7 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
 - No
   - Users can run CLI commands in the integrated terminal, but there is no distinct slash-command system exposed for the assistant.
 
-### CustomModes
+### Custom Modes
 - No
   - Bolt includes predefined workflows (scaffold, edit, deploy) but does not expose user-created custom chat modes for the assistant.
 

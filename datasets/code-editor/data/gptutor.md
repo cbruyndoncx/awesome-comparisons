@@ -43,7 +43,7 @@ GPTutor is a Visual Studio Code extension launched in 2025 that specializes in e
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -93,7 +93,7 @@ GPTutor is a Visual Studio Code extension launched in 2025 that specializes in e
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - No
 
 ### Subagents

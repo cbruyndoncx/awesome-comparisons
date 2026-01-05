@@ -63,7 +63,7 @@ CodiumAI (rebranded to Qodo) is an AI-first code quality platform focused on aut
 - PR-Agent (qodo-ai/pr-agent) is released under AGPL-3.0 (strong copyleft; network-use clause applies).
 - The hosted Qodo product and some advanced features / models are provided under commercial/proprietary terms by the vendor.
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -158,7 +158,7 @@ CodiumAI (rebranded to Qodo) is an AI-first code quality platform focused on aut
 
 - PR comment slash-commands are supported (examples in repo/docs include commands such as `/add_docs` and other PR interaction triggers).
 
-### CustomModes
+### Custom Modes
 <!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes

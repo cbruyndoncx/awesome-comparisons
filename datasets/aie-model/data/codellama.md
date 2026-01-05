@@ -46,6 +46,6 @@ Code Llama is Meta's open-source family of large language models optimized for c
 ### License
 - Meta / Code Llama license (permits research and commercial use — see repository for exact terms)
 
-### FreeTrial
+### Free Trial
 - N/A
   - Open-source model: weights freely available for download for research and commercial use under Meta's license terms, not a time-limited trial.

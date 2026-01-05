@@ -49,5 +49,5 @@ Seed-Coder is a family of lightweight open-source code language models developed
 - MIT
   - Note: Different sources report both MIT and Apache-2.0; verify from official repository
 
-### FreeTrial
+### Free Trial
 - Yes

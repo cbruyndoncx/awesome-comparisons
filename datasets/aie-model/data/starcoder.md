@@ -51,6 +51,6 @@ The project emphasizes responsible open-source release practices (dataset opt-ou
 - Other
   - BigCode-OpenRAIL / OpenRAIL-M (model card requires agreement on use)
 
-### FreeTrial
+### Free Trial
 - N/A
   - Open-source model: weights and checkpoints are freely available (subject to accepting the model card / license on Hugging Face), not a time-limited trial.

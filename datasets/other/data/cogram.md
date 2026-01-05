@@ -52,7 +52,7 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
 - Proprietary
   - PyPI-distributed package; no official public source repository located. Licensing appears to be commercial/proprietary rather than an OSS license.
 
-### FreeTrial
+### Free Trial
 - Unknown (Likely outdated)
   - Marketing materials from 2022 suggested free account/trial available, but trial terms (duration, limitations) were not documented. Product appears inactive since 2022; verify current availability on cogram.ai before attempting to use
 
@@ -119,7 +119,7 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
 - No
   - No evidence of slash-commands support in the Jupyter extension.
 
-### CustomModes
+### Custom Modes
 - No
   - No public documentation about creating specialist/custom modes for the assistant beyond autosuggest/manual completion settings.
 

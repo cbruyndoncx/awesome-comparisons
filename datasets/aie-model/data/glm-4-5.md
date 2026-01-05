@@ -49,5 +49,5 @@ GLM-4.5 is an open-source large language model series from Zhipu AI (Z.ai) desig
 ### License
 - MIT
 
-### FreeTrial
+### Free Trial
 - Yes

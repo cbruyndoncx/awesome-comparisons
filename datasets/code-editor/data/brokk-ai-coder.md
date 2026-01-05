@@ -52,7 +52,7 @@ Brokk is a standalone, Java-based desktop application that rethinks AI-assisted 
 ### License
 - GNU General Public License v3.0 (GPL-3.0)
 
-### FreeTrial
+### Free Trial
 - Yes
   - Open-source; free to run locally under the GPL-3.0 license (no hosted trial required to use the client).
   - No public hosted SaaS offering documented in the repo as of 2025-11-15; commercial/hosted options, if any, are not clearly listed in the OSS repository.
@@ -123,7 +123,7 @@ Brokk is a standalone, Java-based desktop application that rethinks AI-assisted 
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - Yes
   - Interaction modes: Ask vs Code (different behavior and permissions for read-only exploration vs direct edits) and Architect (orchestration mode) let users tailor the level of automation.
   - Model/config overrides: Brokk allows configuring default models per action and selecting overrides for specific tasks, enabling cost/quality tradeoffs and task-specific tuning.

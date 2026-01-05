@@ -54,7 +54,7 @@ Nuanced is an MCP (Model Context Protocol) server and code-intelligence layer th
 - Permissive (check repository LICENSE)
   - Public materials describe the project as permissively licensed; confirm exact license (MIT/Apache-2.0/etc.) by inspecting the repo's LICENSE file before using in license-sensitive contexts.
 
-### FreeTrial
+### Free Trial
 - Yes
   - Core project is open-source and available to use without payment. Commercial/enterprise add-ons (if offered) may be paid — check project or vendor pages for details.
 
@@ -122,7 +122,7 @@ Nuanced is an MCP (Model Context Protocol) server and code-intelligence layer th
 - No
   - Not a chat-platform agent; no documented slash-command set. Client-side integrations may map commands to MCP calls.
 
-### CustomModes
+### Custom Modes
 - No
   - No documented custom chat modes; clients may implement specialized prompts or modes when calling the server.
 

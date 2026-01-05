@@ -48,7 +48,7 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
 - MIT
   - Repository distributed under the MIT license (per GitHub repository metadata and LICENSE file).
 
-### FreeTrial
+### Free Trial
 - Yes
   - Project is open-source and free to use; using cloud LLMs (e.g., OpenAI) may incur costs depending on provider usage.
 
@@ -116,7 +116,7 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
 - No
   - Not applicable to the core project (these concepts belong to other developer platforms/environments).
 
-### CustomModes
+### Custom Modes
 - No
   - Smol provides usage modes (repo/library/api) but not a formal custom-mode framework or built-in specialized chat modes.
 

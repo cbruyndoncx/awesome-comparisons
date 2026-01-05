@@ -50,7 +50,7 @@ Refact.ai is an open-source AI coding assistant and autonomous engineering agent
 ### License
 - BSD-3
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -132,7 +132,7 @@ Refact.ai is an open-source AI coding assistant and autonomous engineering agent
   - Refact.ai exposes a set of in-chat @-commands (functionally equivalent to slash commands) such as @web, @file, @definition, @references, and @tree to trigger reusable behaviors and context attachments.
   - Users can create and reuse custom system prompts and prompt templates inside the workspace to replicate common command-like workflows.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Users can define custom system prompts, select specific LLMs, and configure workspace-level settings to create tailored modes for different tasks (refactor, document, test, review).
   - BYOK and model selection let teams create specialized modes that enforce privacy or use tuned models for in-house coding standards.

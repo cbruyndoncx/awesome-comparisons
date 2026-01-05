@@ -46,7 +46,7 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Unknown
   - No public information available about free trial availability; contact Cognition Labs for access.
 
@@ -117,7 +117,7 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 - Unknown
   - No public documentation available regarding slash-command style interface.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Features and modes highlighted in product updates include Interactive Planning (plan-first workflows), Devin Search (codebase search), and Devin Wiki (knowledge base/documentation)
 

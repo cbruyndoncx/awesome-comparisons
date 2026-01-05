@@ -83,7 +83,7 @@ AI Native Dev Code Editor category
 - Yes
 - No
 
-### CustomModes
+### Custom Modes
 <!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. -->
 - Yes
@@ -177,7 +177,7 @@ AI Native Dev Code Editor category
 - EPL-2.0
 - GPL-3.0
 
-### FreeTrial
+### Free Trial
 <!-- Free access (like opensource), or free (potentially limited) trial available -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. -->
 - Yes

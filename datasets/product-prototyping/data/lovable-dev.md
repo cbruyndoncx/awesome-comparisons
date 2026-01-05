@@ -45,7 +45,7 @@ Lovable.dev is a 2025 release that combines AI-powered code generation with an i
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -95,7 +95,7 @@ Lovable.dev is a 2025 release that combines AI-powered code generation with an i
 ### SlashCommands
 - No
 
-### CustomModes
+### Custom Modes
 - No
 
 ### Subagents

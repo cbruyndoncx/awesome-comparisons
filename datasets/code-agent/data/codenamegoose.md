@@ -46,7 +46,7 @@ Codename Goose is an open-source, on-machine AI agent framework created to autom
 - Apache-2.0
   - Repository licensed under Apache-2.0 (per project GitHub license).
 
-### FreeTrial
+### Free Trial
 - Yes
   - Open-source and free to use; commercial offerings (if any) not required to run the core framework.
 
@@ -112,7 +112,7 @@ Codename Goose is an open-source, on-machine AI agent framework created to autom
 - No
   - The project provides a CLI for interactive and scripted control, but chat-style slash-commands are not a documented feature.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Built-in modes include Auto, Approve and Chat; recipes and configuration allow customizing agent behavior for specialized workflows.
 

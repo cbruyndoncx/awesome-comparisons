@@ -53,5 +53,5 @@ References & further reading
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes

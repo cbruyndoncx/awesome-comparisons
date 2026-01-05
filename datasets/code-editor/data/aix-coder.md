@@ -50,7 +50,7 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
   - aiXcoder product/distribution is commercially licensed.
   - Note: The aiXcoder-7B model repository is available under Apache-2.0 (model code and weights) on GitHub.
 
-### FreeTrial
+### Free Trial
 - Yes
   - Some distribution channels and IDE marketplace entries list free access or free tiers for the plugin; enterprise features are commercial. Confirm current trial/pricing on the vendor site or marketplace.
 
@@ -114,7 +114,7 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
 - Yes
   - Within supported IDEs, aiXcoder exposes quick actions and command palette entries (e.g., trigger generation, search) that act like reusable commands; exact support depends on the IDE plugin.
 
-### CustomModes
+### Custom Modes
 - Yes
   - Supports local vs cloud mode, different model configurations, and enterprise custom models for specialized workflows
 ### Subagents

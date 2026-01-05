@@ -45,7 +45,7 @@ Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you c
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Offers a free/beta tier with basic features and Wrapifai branding; paid tiers remove branding and add features.
 
@@ -120,7 +120,7 @@ Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you c
 - No
   - No slash command support documented; interface is primarily form/prompt-based rather than command-driven
 
-### CustomModes
+### Custom Modes
 - Yes
   - The visual builder supports custom prompt templates, configurable inputs and styling, and duplicating/adapting tools to create alternate modes (e.g., "SEO mode", "Lead capture mode")
 

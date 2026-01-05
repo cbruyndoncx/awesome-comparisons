@@ -48,7 +48,7 @@ Auggie can handle up to 10,000 commit histories, ensuring accurate code suggesti
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
 
 ## MCP-Client
@@ -108,7 +108,7 @@ Auggie can handle up to 10,000 commit histories, ensuring accurate code suggesti
 ### SlashCommands
 - -
 
-### CustomModes
+### Custom Modes
 - Yes
   - Supports both interactive and non-interactive modes
   - Can be integrated into build systems and automated workflows

@@ -55,7 +55,7 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
 ### License
 - Proprietary
 
-### FreeTrial
+### Free Trial
 - Yes
   - Core prototyping and experimentation features of AI Studio are available without charge.
 
@@ -167,7 +167,7 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
 
 - The Studio UI does not advertise a dedicated slash-command palette for chat prompts; workflows rely on templates, saved prompts and the Build UI.
 
-### CustomModes
+### Custom Modes
 <!-- ToDo -->
 <!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
