@@ -12,6 +12,7 @@ import {
     GroupedCriteriaStructure,
     MarkdownComparisonPayload
 } from '../../models/feature-grouping.model';
+import { isNullOrUndefined } from '../../shared/util/null-check';
 
 @Injectable({
     providedIn: 'root'
@@ -23,6 +24,21 @@ export class FeatureGroupingService {
     private static readonly ID_COLUMN_KEY = 'id';
 
     constructor(private store: Store<IUCAppState>) {
+    }
+
+    private static parseOrder(criteria: Criteria | undefined): number {
+        if (!criteria) {
+            return Number.POSITIVE_INFINITY;
+        }
+        if (criteria.id === 'id') {
+            return Number.NEGATIVE_INFINITY;
+        }
+        const order = criteria.order;
+        if (isNullOrUndefined(order) || order === '') {
+            return Number.POSITIVE_INFINITY;
+        }
+        const numericOrder = Number(order);
+        return Number.isFinite(numericOrder) ? numericOrder : Number.POSITIVE_INFINITY;
     }
 
     private unwrapState(raw: any): IUCAppState {
@@ -145,6 +161,18 @@ export class FeatureGroupingService {
             if (criteria?.name && criteria.name !== groupKey) {
                 seenGroups.add(criteria.name);
             }
+        });
+
+        groups.sort((a, b) => {
+            const criteriaA = criteriaIndex.get(a.key);
+            const criteriaB = criteriaIndex.get(b.key);
+            const orderA = FeatureGroupingService.parseOrder(criteriaA);
+            const orderB = FeatureGroupingService.parseOrder(criteriaB);
+
+            if (orderA !== orderB) {
+                return orderA - orderB;
+            }
+            return (a.displayName || a.key).localeCompare(b.displayName || b.key);
         });
 
         const groupedColumnKeys = new Set(Object.keys(columnGroupMap));

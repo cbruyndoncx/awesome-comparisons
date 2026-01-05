@@ -197,8 +197,45 @@ export class ConfigurationService {
                 shortCriteria.name = 'Short Description';
             }
         }
+        
         this.configuration.criteria = ConfigurationService.sortCriteriaByOrder(processedCriteria);
-        const tableCriteria = this.configuration.criteria.filter(criteria => criteria.table);
+
+        const grouping = this.featureGroupingService.parseGroupedMarkdown({
+            configuration: this.configuration,
+            data: Data.loadJson(dataSource, this.configuration)
+        });
+
+        const groupOrder = grouping.groups.map(g => g.key);
+        const criteriaGroupMap = grouping.columnGroupMap;
+
+        const tableCriteria = this.configuration.criteria
+            .filter(criteria => criteria.table)
+            .sort((a, b) => {
+                const groupA = criteriaGroupMap[a.id] || '';
+                const groupB = criteriaGroupMap[b.id] || '';
+                const groupIndexA = groupOrder.indexOf(groupA);
+                const groupIndexB = groupOrder.indexOf(groupB);
+
+                if (groupIndexA !== -1 && groupIndexB !== -1 && groupIndexA !== groupIndexB) {
+                    return groupIndexA - groupIndexB;
+                }
+                if (groupIndexA !== -1 && groupIndexB === -1) {
+                    return -1;
+                }
+                if (groupIndexA === -1 && groupIndexB !== -1) {
+                    return 1;
+                }
+
+                const orderA = ConfigurationService.parseOrder(a);
+                const orderB = ConfigurationService.parseOrder(b);
+
+                if (orderA !== orderB) {
+                    return orderA - orderB;
+                }
+
+                return a.id.localeCompare(b.id);
+            });
+
         const primaryColumns: Array<string> = [];
         const remainingColumns: Array<string> = [];
 
@@ -319,11 +356,6 @@ export class ConfigurationService {
             }
         );
         this.dataElements = ConfigurationService.data.dataElements;
-
-        const grouping = this.featureGroupingService.parseGroupedMarkdown({
-            configuration: this.configuration,
-            data: ConfigurationService.data
-        });
 
         // Dispatch redux store action
         this.store.dispatch(
