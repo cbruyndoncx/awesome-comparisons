@@ -3,6 +3,81 @@ import { Criteria, CriteriaData, CriteriaTypes, DataElement, Label } from '../..
 import { ConfigurationService } from '../../components/comparison/configuration/configuration.service';
 import { isNullOrUndefined } from '../../shared/util/null-check';
 
+function parseCriteriaOrder(criteria: Criteria | undefined): number {
+    if (!criteria) {
+        return Number.POSITIVE_INFINITY;
+    }
+    if (criteria.id === 'id') {
+        return Number.NEGATIVE_INFINITY;
+    }
+    const order = criteria.order;
+    if (isNullOrUndefined(order) || order === '') {
+        return Number.POSITIVE_INFINITY;
+    }
+    const numericOrder = Number(order);
+    return Number.isFinite(numericOrder) ? numericOrder : Number.POSITIVE_INFINITY;
+}
+
+function buildOrderedColumnKeys(state: IUCAppState): Array<string> {
+    const keys = Array.isArray(state.columnKeys) ? state.columnKeys : [];
+    const groups = Array.isArray(state.featureGroups) ? state.featureGroups : [];
+    if (keys.length === 0 || groups.length === 0) {
+        return keys;
+    }
+
+    const keyOrderIndex = new Map<string, number>();
+    keys.forEach((key, index) => keyOrderIndex.set(key, index));
+
+    const primaryKeys: string[] = keys.filter(key => key === 'id' || key === 'ShortDescription');
+    const added = new Set<string>(primaryKeys);
+    const groupedKeys: string[] = [];
+    const groupLookup = state.groupColumnLookup || {};
+    const criterias = state.criterias;
+
+    groups.forEach(group => {
+        const childKeys = new Set<string>();
+        (group.children || []).forEach(child => {
+            if (child?.id) {
+                childKeys.add(child.id);
+            }
+        });
+        keys.forEach(key => {
+            if (groupLookup[key] === group.key) {
+                childKeys.add(key);
+            }
+        });
+
+        const sortedChildren = Array.from(childKeys).filter(key => !primaryKeys.includes(key));
+        sortedChildren.sort((a, b) => {
+            const orderA = parseCriteriaOrder(criterias?.get(a));
+            const orderB = parseCriteriaOrder(criterias?.get(b));
+            if (orderA !== orderB) {
+                return orderA - orderB;
+            }
+            return (keyOrderIndex.get(a) ?? 0) - (keyOrderIndex.get(b) ?? 0);
+        });
+
+        sortedChildren.forEach(key => {
+            if (!added.has(key)) {
+                groupedKeys.push(key);
+                added.add(key);
+            }
+        });
+    });
+
+    const remaining = keys.filter(key => !added.has(key));
+    remaining.sort((a, b) => {
+        const orderA = parseCriteriaOrder(criterias?.get(a));
+        const orderB = parseCriteriaOrder(criterias?.get(b));
+        if (orderA !== orderB) {
+            return orderA - orderB;
+        }
+        return (keyOrderIndex.get(a) ?? 0) - (keyOrderIndex.get(b) ?? 0);
+    });
+
+    return primaryKeys.concat(groupedKeys, remaining);
+}
+
 export function filterColumns(state: IUCAppState, columns: Map<string, boolean> = new Map()): IUCAppState {
     if (state.criterias === null) {
         return state;
@@ -12,6 +87,11 @@ export function filterColumns(state: IUCAppState, columns: Map<string, boolean> 
     const groupLookup = state.groupColumnLookup || {};
     const expandedState = state.groupExpanded || {};
     const excludedGroups = new Set<string>();
+    const enabledLookup = new Map<string, boolean>();
+
+    state.columnKeys.forEach((key, index) => {
+        enabledLookup.set(key, state.columnsEnabled[index] === true);
+    });
 
     (state.featureGroups || []).forEach(group => {
         if (group.isExcluded) {
@@ -19,8 +99,9 @@ export function filterColumns(state: IUCAppState, columns: Map<string, boolean> 
         }
     });
 
-    state.columnKeys.forEach((value, index) => {
-        if (!state.columnsEnabled[index]) {
+    const orderedKeys = buildOrderedColumnKeys(state);
+    orderedKeys.forEach(value => {
+        if (!enabledLookup.get(value)) {
             return;
         }
         const criteria = state.criterias ? state.criterias.get(value) : undefined;
