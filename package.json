@@ -1,6 +1,6 @@
 {
   "name": "awesome-comparisons-v3",
-  "version": "3.0.0-251029",
+  "version": "3.0.0-260105",
   "scripts": {
     "md2json:compile": "tsc -p ./lib/md2json/tsconfig.json",
     "md2json:run": "node ./lib/md2json/dist/cli.js",

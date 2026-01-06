@@ -5,10 +5,10 @@
 ### Before (Angular 17.3.8):
 ```
 13M	dist/
--rw-r--r-- 1 cb cb 2.7M Dec  8 14:24 dist/ultimate-comparison/main.js
--rw-r--r-- 1 cb cb 414K Dec  8 14:24 dist/ultimate-comparison/288.js
--rw-r--r-- 1 cb cb 35K Dec  8 14:24 dist/ultimate-comparison/polyfills.js
--rw-r--r-- 1 cb cb 2.8K Dec  8 14:24 dist/ultimate-comparison/runtime.js
+-rw-r--r-- 1 cb cb 2.7M Dec  8 14:24 dist/awesome-comparisons/main.js
+-rw-r--r-- 1 cb cb 414K Dec  8 14:24 dist/awesome-comparisons/288.js
+-rw-r--r-- 1 cb cb 35K Dec  8 14:24 dist/awesome-comparisons/polyfills.js
+-rw-r--r-- 1 cb cb 2.8K Dec  8 14:24 dist/awesome-comparisons/runtime.js
 ```
 
 ### After (Angular 21.0.3):

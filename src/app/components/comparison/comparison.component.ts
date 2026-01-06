@@ -96,6 +96,10 @@ export class ComparisonComponent {
         return environment.githubPagesUrl;
     }
 
+    public getDocumentationUrl(): string {
+        return `${environment.githubPagesUrl.replace(/\/$/, '')}/docs/`;
+    }
+
     public criteriaChanged(value: string | string[], crit: Criteria) {
         const map = new Map<string, string | null>();
         const val = Array.isArray(value) ? value.join(',') : value;

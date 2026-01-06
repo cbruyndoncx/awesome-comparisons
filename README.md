@@ -1,6 +1,6 @@
 # Awesome Comparisons
 
-![Checks](https://github.com/ultimate-comparisons/ultimate-comparison-framework/workflows/Checks/badge.svg)
+![Checks](https://github.com/cbruyndoncx/awesome-comparisons/actions/workflows/tests.yml/badge.svg)
 
 > **Awesome Comparisons** (formerly Ultimate Comparison Framework v2) is a powerful framework for creating feature-rich comparison websites with multi-dataset support, visual configuration editing, and shared criteria management.
 
@@ -58,6 +58,19 @@ npm run release
 ```
 
 **Admin interface:** Navigate to `/admin/config` when the dev server is running. The config workspace backend runs on `http://localhost:3100` and is auto-started by `npm run dev`/`npm run start`.
+
+## Deploy to GitHub Pages (full app)
+
+This repository can be deployed as a static site for the public comparison UI. The admin config UI (`/admin/config`) is for local development and will not work on GitHub Pages.
+
+- Workflow: `.github/workflows/pages.yml`
+- Output deployed: `dist/awesome-comparisons/browser`
+- URL: `https://<org>.github.io/awesome-comparisons/`
+- Docs URL: `https://<org>.github.io/awesome-comparisons/docs/`
+
+Setup steps (once):
+1. In GitHub: `Settings` → `Pages` → `Build and deployment` → `Source` = `GitHub Actions`.
+2. Ensure your default branch is `main` (or update the workflow trigger).
 
 See [docs/release-workflow.md](docs/release-workflow.md) for release process.
 

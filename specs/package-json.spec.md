@@ -12,10 +12,10 @@ Package.json configuration file that defines project metadata, scripts, and depe
 
 Defines core package information including name, version, license, repository details, and CLI tool provision.
 
-- Package name is "ultimate-comparison"
+- Package name is "awesome-comparisons-v3"
 - Version follows semantic versioning
 - MIT license is specified
-- Repository points to ultimate-comparison-BASE GitHub repo
+- Repository points to awesome-comparisons GitHub repo
 - Exposes "awcmp-cli" command through bin configuration pointing to ./lib/awcmp-cli/awcmp-cli
 
 ### Published Files

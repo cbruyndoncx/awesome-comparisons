@@ -250,7 +250,7 @@ export class GenericTableComponent implements AfterViewChecked, OnChanges {
         if (typeof debugPath === 'string' && debugPath.trim().length > 0) {
             const base = (typeof window !== 'undefined' && (window as any)['UC_EDIT_LINK_BASE_URL'])
                 ? String((window as any)['UC_EDIT_LINK_BASE_URL'])
-                : 'https://github.com/ultimate-comparisons/ultimate-comparison-framework/blob/main/';
+                : 'https://github.com/cbruyndoncx/awesome-comparisons/blob/main/';
             const segments = String(debugPath).split('/').map(s => s.trim()).filter(s => s && s !== '.');
             if (segments.length === 0) {
                 return null;

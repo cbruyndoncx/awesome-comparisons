@@ -369,7 +369,7 @@ export class ConfigurationService {
     }
 
     private static buildDefaultEditLinkBase(): string {
-        const fallback = 'https://github.com/ultimate-comparisons/ultimate-comparison-framework/blob/main/';
+        const fallback = 'https://github.com/cbruyndoncx/awesome-comparisons/blob/main/';
         const repository: any = (packageInfo as any)?.repository;
         const repoUrl = typeof repository === 'string'
             ? repository

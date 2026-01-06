@@ -15,7 +15,7 @@ Dynamically resolves installation paths based on whether the package is installe
 - Determines correct root directory when running from node_modules [@test](./tests/path-resolution.spec.js)
 - Handles custom directory override via --dir argument [@test](./tests/path-resolution.spec.js)
 - Creates proper file path mappings for tmp, dist, data, config, and assets directories [@test](./tests/path-resolution.spec.js)
-- Strips node_modules/ultimate-comparison path components from installation directory [@test](./tests/path-resolution.spec.js)
+- Strips node_modules/awesome-comparisons path components from installation directory [@test](./tests/path-resolution.spec.js)
 - Handles both forward slash and backslash path separators for cross-platform compatibility [@test](./tests/path-resolution.spec.js)
 
 ### Markdown to JSON Data Processing
@@ -58,7 +58,7 @@ Expands the build to support multiple datasets defined in configuration/datasets
 - Loads and validates the manifest file; fails the build when manifest is missing or empty
 - Iterates each dataset definition, resolving dataset-specific source directories (markdown, configuration, style) via the `sources` metadata
 - Runs the markdown conversion, criteria enrichment, development column enrichment, and config merging per dataset using isolated tmp/dist destinations
-- Copies comparison.json, data.json, and style.css into `src/assets/generated/<datasetId>/` and `dist/ultimate-comparison/assets/generated/<datasetId>/`
+- Copies comparison.json, data.json, and style.css into `src/assets/generated/<datasetId>/` and `dist/awesome-comparisons/assets/generated/<datasetId>/`
 - Ensures generated files exist only beneath their dataset-specific directories (no legacy root mirrors)
 - Copies the manifest itself to `src/assets/configuration/datasets.manifest.json` so the Angular app can request it at runtime
 - Validates that required files exist for every dataset and throws descriptive errors when inputs or generated outputs are missing

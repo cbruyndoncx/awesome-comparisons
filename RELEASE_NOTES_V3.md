@@ -90,7 +90,7 @@ v3 stores the site build under `docs/` by default for GitHub Pages. Typical flow
 # Build the app/site (example)
 npm run build
 # Copy or move the built dist into docs/ (some commits already do this automatically)
-cp -r dist/ultimate-comparison docs/
+cp -r dist/awesome-comparisons docs/
 # Commit and push
 git add docs && git commit -m "Publish v3 site to docs/" && git push origin main
 ```

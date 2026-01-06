@@ -12,7 +12,9 @@
 
 <script>
     (function () {
-        window['_app_base'] = '/';
+        var baseTag = document.querySelector('base');
+        var href = baseTag ? baseTag.getAttribute('href') : null;
+        window['_app_base'] = href || '/';
     })();
 </script>
 

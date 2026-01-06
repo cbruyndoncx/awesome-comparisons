@@ -1,6 +1,6 @@
 # Angular CLI Configuration
 
-Angular CLI workspace configuration for the ultimate-comparison project.
+Angular CLI workspace configuration for the awesome-comparisons project.
 
 ## Target
 
@@ -10,7 +10,7 @@ Angular CLI workspace configuration for the ultimate-comparison project.
 
 ### Single Application Project
 
-Defines the ultimate-comparison application with uc prefix.
+Defines the awesome-comparisons application with uc prefix.
 
 ### Build Configuration
 
@@ -18,7 +18,7 @@ Configures build target with proper entry points and asset handling:
 - Main entry point at src/main.ts
 - Polyfills at src/polyfills.ts  
 - TypeScript configuration at src/tsconfig.app.json
-- Output directory at dist/ultimate-comparison
+- Output directory at dist/awesome-comparisons
 - Assets include favicon, assets, fonts directories and configuration/data content
 
 ### Environment-Specific Builds
@@ -38,7 +38,7 @@ Configures test target with Karma builder and proper test setup.
 
 ### Default Project
 
-Sets ultimate-comparison as the default project in the workspace.
+Sets awesome-comparisons as the default project in the workspace.
 
 ## API
 
@@ -48,7 +48,7 @@ Sets ultimate-comparison as the default project in the workspace.
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ultimate-comparison": {
+    "awesome-comparisons": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -62,7 +62,7 @@ Sets ultimate-comparison as the default project in the workspace.
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ultimate-comparison",
+            "outputPath": "dist/awesome-comparisons",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -127,11 +127,11 @@ Sets ultimate-comparison as the default project in the workspace.
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "buildTarget": "ultimate-comparison:build:development"
+            "buildTarget": "awesome-comparisons:build:development"
           },
           "configurations": {
             "production": {
-              "buildTarget": "ultimate-comparison:build:production"
+              "buildTarget": "awesome-comparisons:build:production"
             }
           }
         },
@@ -166,7 +166,7 @@ Sets ultimate-comparison as the default project in the workspace.
       }
     }
   },
-  "defaultProject": "ultimate-comparison"
+  "defaultProject": "awesome-comparisons"
 }
 ```
 
