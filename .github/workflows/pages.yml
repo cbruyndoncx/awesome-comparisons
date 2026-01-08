@@ -47,10 +47,21 @@ jobs:
           source: ./docs
           destination: ./dist/awesome-comparisons/browser/docs
 
+      - name: Verify Pages artifact contents
+        run: |
+          set -euxo pipefail
+          test -f ./dist/awesome-comparisons/browser/index.html
+          ls -la ./dist/awesome-comparisons/browser | head -n 200
+
+      - name: Disable Jekyll processing
+        run: |
+          set -euxo pipefail
+          touch ./dist/awesome-comparisons/browser/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/awesome-comparisons/browser
+          path: ./dist/awesome-comparisons/browser
 
   deploy:
     needs: build
