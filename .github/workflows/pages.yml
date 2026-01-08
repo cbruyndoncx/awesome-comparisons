@@ -27,8 +27,11 @@ jobs:
         with:
           node-version: 20
           cache: npm
-
+          
       - name: Install dependencies
+        run: npm install
+        
+      - name: ci needed 
         run: npm ci
 
       - name: Build (GitHub Pages base href)
