@@ -37,15 +37,12 @@ jobs:
       - name: Build (GitHub Pages base href)
         run: npm run build:prod -- --base-href "/awesome-comparisons/"
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
-      - name: Build documentation (Jekyll)
-        uses: actions/jekyll-build-pages@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          source: ./docs
-          destination: ./dist/awesome-comparisons/browser/docs
+      - name: Copy documentation into deploy artifact
+        run: |
+          set -euxo pipefail
+          rm -rf ./dist/awesome-comparisons/browser/docs
+          mkdir -p ./dist/awesome-comparisons/browser/docs
+          cp -R ./docs/. ./dist/awesome-comparisons/browser/docs/
 
       - name: Verify Pages artifact contents
         run: |
@@ -57,6 +54,9 @@ jobs:
         run: |
           set -euxo pipefail
           touch ./dist/awesome-comparisons/browser/.nojekyll
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
