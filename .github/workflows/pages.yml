@@ -44,8 +44,8 @@ jobs:
         uses: actions/jekyll-build-pages@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          source: docs
-          destination: dist/awesome-comparisons/browser/docs
+          source: ./docs
+          destination: ./dist/awesome-comparisons/browser/docs
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
