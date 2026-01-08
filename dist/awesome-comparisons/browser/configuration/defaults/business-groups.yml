@@ -1,0 +1,374 @@
+# GENERATED FROM SPEC - DO NOT EDIT
+# @generated with Tessl v0.28.0 from ../../specs/config/business-groups.spec.md
+# (spec:02e64742) (code:6e0fd0a5)
+
+---
+# Business Groups Configuration
+# Business strategy criteria groups and fields configuration
+
+defaultPlaceholder: &defaultPlaceholder
+  template: "Provide details for {} ..."
+  variables: [name]
+
+selectPlaceholder: &selectPlaceholder
+  template: "Select {} ..."
+  variables: [name]
+
+criteria:
+  - id: CompanyProfile
+    type: MARKDOWN
+    name: Company Profile
+    description: Essential company information including basic details, market position, and organizational characteristics
+    children: [Category, Regions, Customers, Partners]
+    order: 10
+    defaultExpanded: true
+    search: false
+    table: false
+    detail: false
+
+  - id: MarketPositioning
+    type: MARKDOWN
+    name: Market Positioning
+    description: Market positioning elements including segments, ideal customer profiles, differentiators, and pricing models
+    children: [Segment, ICP, Differentiators, PricingModel]
+    order: 15
+    search: false
+    table: false
+    detail: false
+
+  - id: SWOT
+    type: MARKDOWN
+    name: SWOT Analysis
+    description: Comprehensive SWOT analysis framework covering strengths, weaknesses, opportunities, and threats
+    children: [Strengths, Weaknesses, Opportunities, Threats]
+    order: 20
+    defaultExpanded: true
+    search: false
+    table: false
+    detail: false
+
+  - id: PortersFiveForces
+    type: MARKDOWN
+    name: Porter's Five Forces
+    description: Porter's Five Forces competitive analysis model covering all competitive forces
+    children: [SupplierPower, BuyerPower, NewEntrants, Substitutes, Rivalry]
+    order: 30
+    search: false
+    table: false
+    detail: false
+
+  - id: BCGPortfolio
+    type: MARKDOWN
+    name: BCG Matrix
+    description: BCG Growth-Share Matrix framework for portfolio evaluation based on market growth and market share
+    children: [MarketGrowthRate, RelativeMarketShare, BCGQuadrant]
+    order: 40
+    search: false
+    table: false
+    detail: false
+
+  - id: GartnerMQ
+    type: MARKDOWN
+    name: Gartner Magic Quadrant
+    description: Gartner Magic Quadrant evaluation framework for market leadership assessment
+    children: [AbilityToExecute, CompletenessOfVision, GartnerQuadrant]
+    order: 50
+    search: false
+    table: false
+    detail: false
+
+  - id: RiskAndCompliance
+    type: MARKDOWN
+    name: Risk Assessment
+    description: Comprehensive risk evaluation categories with severity assessments and compliance tracking
+    children: [RiskLevel, ComplianceNotes]
+    order: 60
+    search: false
+    table: false
+    detail: false
+
+  - id: Category
+    type: MARKDOWN
+    name: Company Category
+    description: Company category and industry classification
+    order: 11
+    search: false
+    table: false
+    detail: true
+    placeholder: *defaultPlaceholder
+
+  - id: Regions
+    type: MARKDOWN
+    name: Operating Regions
+    description: Geographic regions where the company operates
+    order: 12
+    search: false
+    table: false
+    detail: true
+    placeholder: *defaultPlaceholder
+
+  - id: Customers
+    type: MARKDOWN
+    name: Customer Base
+    description: Target customers and market segments served
+    order: 13
+    search: false
+    table: false
+    detail: true
+    placeholder: *defaultPlaceholder
+
+  - id: Partners
+    type: MARKDOWN
+    name: Key Partners
+    description: Strategic partnerships and key business relationships
+    order: 14
+    search: false
+    table: false
+    detail: true
+    placeholder: *defaultPlaceholder
+
+  - id: Segment
+    type: MARKDOWN
+    name: Market Segment
+    description: Primary market segments and target markets
+    order: 16
+    search: false
+    table: false
+    detail: true
+    placeholder: *defaultPlaceholder
+
+  - id: ICP
+    type: MARKDOWN
+    name: Ideal Customer Profile
+    description: Detailed profile of ideal customer characteristics
+    order: 17
+    search: false
+    table: false
+    detail: true
+    placeholder: *defaultPlaceholder
+
+  - id: Differentiators
+    type: MARKDOWN
+    name: Key Differentiators
+    description: Unique value propositions and competitive advantages
+    order: 18
+    search: false
+    table: false
+    detail: true
+    placeholder: *defaultPlaceholder
+
+  - id: PricingModel
+    type: MARKDOWN
+    name: Pricing Model
+    description: Pricing strategy and revenue model approach
+    order: 19
+    search: false
+    table: false
+    detail: true
+    placeholder: *defaultPlaceholder
+
+  - id: Strengths
+    type: MARKDOWN
+    name: Strengths
+    description: Internal positive factors and competitive advantages
+    order: 21
+    search: false
+    table: false
+    detail: true
+    placeholder: *defaultPlaceholder
+
+  - id: Weaknesses
+    type: MARKDOWN
+    name: Weaknesses
+    description: Internal negative factors and areas for improvement
+    order: 22
+    search: false
+    table: false
+    detail: true
+    placeholder: *defaultPlaceholder
+
+  - id: Opportunities
+    type: MARKDOWN
+    name: Opportunities
+    description: External positive factors and growth opportunities
+    order: 23
+    search: false
+    table: false
+    detail: true
+    placeholder: *defaultPlaceholder
+
+  - id: Threats
+    type: MARKDOWN
+    name: Threats
+    description: External negative factors and potential risks
+    order: 24
+    search: false
+    table: false
+    detail: true
+    placeholder: *defaultPlaceholder
+
+  - id: SupplierPower
+    type: LABEL
+    name: Supplier Power
+    description: Bargaining power of suppliers in the industry
+    order: 31
+    values: ['High','Medium','Low']
+    search: true
+    table: true
+    detail: true
+    andSearch: false
+    rangeSearch: false
+    placeholder: *selectPlaceholder
+
+  - id: BuyerPower
+    type: LABEL
+    name: Buyer Power
+    description: Bargaining power of buyers and customers
+    order: 32
+    values: ['High','Medium','Low']
+    search: true
+    table: true
+    detail: true
+    andSearch: false
+    rangeSearch: false
+    placeholder: *selectPlaceholder
+
+  - id: NewEntrants
+    type: LABEL
+    name: Threat of New Entrants
+    description: Threat level from potential new market entrants
+    order: 33
+    values: ['High','Medium','Low']
+    search: true
+    table: true
+    detail: true
+    andSearch: false
+    rangeSearch: false
+    placeholder: *selectPlaceholder
+
+  - id: Substitutes
+    type: LABEL
+    name: Threat of Substitutes
+    description: Threat level from substitute products or services
+    order: 34
+    values: ['High','Medium','Low']
+    search: true
+    table: true
+    detail: true
+    andSearch: false
+    rangeSearch: false
+    placeholder: *selectPlaceholder
+
+  - id: Rivalry
+    type: LABEL
+    name: Competitive Rivalry
+    description: Intensity of competition among existing players
+    order: 35
+    values: ['High','Medium','Low']
+    search: true
+    table: true
+    detail: true
+    andSearch: false
+    rangeSearch: false
+    placeholder: *selectPlaceholder
+
+  - id: MarketGrowthRate
+    type: LABEL
+    name: Market Growth Rate
+    description: Rate of growth in the target market
+    order: 41
+    values: ['High','Medium','Low']
+    search: true
+    table: true
+    detail: true
+    andSearch: false
+    rangeSearch: false
+    placeholder: *selectPlaceholder
+
+  - id: RelativeMarketShare
+    type: LABEL
+    name: Relative Market Share
+    description: Market share relative to competitors
+    order: 42
+    values: ['High','Medium','Low']
+    search: true
+    table: true
+    detail: true
+    andSearch: false
+    rangeSearch: false
+    placeholder: *selectPlaceholder
+
+  - id: BCGQuadrant
+    type: LABEL
+    name: BCG Quadrant
+    description: BCG Matrix quadrant classification representing portfolio positioning based on market growth and market share
+    order: 43
+    values: ['Star','Cash Cow','Question Mark','Dog']
+    search: true
+    table: true
+    detail: true
+    andSearch: false
+    rangeSearch: false
+    placeholder: *selectPlaceholder
+
+  - id: AbilityToExecute
+    type: LABEL
+    name: Ability to Execute
+    description: Operational capability and market execution strength
+    order: 51
+    values: ['High','Medium','Low']
+    search: true
+    table: true
+    detail: true
+    andSearch: false
+    rangeSearch: false
+    placeholder: *selectPlaceholder
+
+  - id: CompletenessOfVision
+    type: LABEL
+    name: Completeness of Vision
+    description: Strategic vision and innovation capability assessment
+    order: 52
+    values: ['High','Medium','Low']
+    search: true
+    table: true
+    detail: true
+    andSearch: false
+    rangeSearch: false
+    placeholder: *selectPlaceholder
+
+  - id: GartnerQuadrant
+    type: LABEL
+    name: Gartner Quadrant
+    description: Magic Quadrant positioning classification representing market leadership based on execution ability and vision completeness
+    order: 53
+    values: ['Leader','Challenger','Visionary','Niche Player']
+    search: true
+    table: true
+    detail: true
+    andSearch: false
+    rangeSearch: false
+    placeholder: *selectPlaceholder
+
+  - id: RiskLevel
+    type: LABEL
+    name: Risk Level
+    description: Overall risk assessment level
+    order: 61
+    values: ['Low','Moderate','High','Critical']
+    search: true
+    table: true
+    detail: true
+    andSearch: false
+    rangeSearch: false
+    placeholder: *selectPlaceholder
+
+  - id: ComplianceNotes
+    type: MARKDOWN
+    name: Compliance Notes
+    description: Regulatory compliance status and considerations
+    order: 62
+    search: false
+    table: false
+    detail: true
+    placeholder: *defaultPlaceholder
