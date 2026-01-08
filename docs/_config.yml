@@ -5,3 +5,8 @@ theme: minima
 # Keep builds non-fatal on Liquid parsing issues.
 liquid:
   error_mode: warn
+
+# These docs are published under a sub-path of the main GitHub Pages site:
+# https://cbruyndoncx.github.io/awesome-comparisons/docs/
+url: https://cbruyndoncx.github.io
+baseurl: /awesome-comparisons/docs
