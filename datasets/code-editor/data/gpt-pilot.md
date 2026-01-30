@@ -41,7 +41,7 @@ GPT Pilot (by Pythagora) is a source-available AI developer assistant designed t
   - PyPI package: https://pypi.org/project/gpt-pilot/
 
 ### Last Update
-- 2025-11-03 (VS Code extension update; project active through 2024–2025)
+2026-01-30
 
 ## Licensing
 
@@ -60,7 +60,8 @@ GPT Pilot (by Pythagora) is a source-available AI developer assistant designed t
 ## MCP-Client
 
 ### MCP-Client
--
+- No
+  - No documented MCP client support; uses direct LLM API integrations (OpenAI, Anthropic, Groq).
 
 ### Prompts
 - Yes
@@ -73,6 +74,9 @@ GPT Pilot (by Pythagora) is a source-available AI developer assistant designed t
 ### Resources
 - Yes
   - Includes example-config.json, .env templates, docker-compose examples, documentation, and a PyPI package for installation.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -118,8 +122,12 @@ GPT Pilot (by Pythagora) is a source-available AI developer assistant designed t
 - No
   - Not documented as a chat platform with slash-command interfaces; primary interfaces are CLI and VS Code extension.
 
-### Custom Modes
+### Skills
+- No
 
+### Custom Modes
+- No
+  - No documented custom mode system; the multi-agent workflow is fixed (Product Owner → Architect → Tech Lead → Developer → etc.).
 
 ### Subagents
 - Yes

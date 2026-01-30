@@ -37,7 +37,7 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
 - Unclear / not publicly confirmed: specific license details for the whole product, BYOK (bring-your-own-key) support for cloud features, explicit terminal/CLI tooling support across all distributions, and whether every component is fully open-source. If these are critical, verify with the vendor or product documentation before selecting the tool.
 
 ### Last Update
-- 2025-10-19
+2026-01-30
 
 ## Licensing
 
@@ -57,8 +57,9 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
 ## MCP-Client
 
 ### MCP-Client
-- Unknown
-  - No public documentation found regarding MCP (Model Context Protocol) support; primarily focuses on local model inference
+- No
+  - No public documentation found regarding MCP (Model Context Protocol) support; primarily focuses on local model inference.
+
 ### Prompts
 - Yes
   - Supports natural-language prompts for method-level generation and NL-to-code workflows.
@@ -71,11 +72,15 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
 - Yes
   - Official documentation, IDE marketplace entries, and a public GitHub repository for aiXcoder-7B (model and usage examples).
 
+### ACP
+- No
+
 ## Deployment
 
 ### BYOK
-- Unknown
-  - Local-first model runs offline without API keys; BYOK for cloud features not publicly documented
+- No
+  - Local-first model runs offline without API keys; BYOK for cloud features not publicly documented.
+
 ### Local Offline
 - Yes
   - AIXcoder emphasizes local/offline model operation so code and context can remain on-device. The product also offers cloud modes for extended functionality.
@@ -113,6 +118,9 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
 ### SlashCommands
 - Yes
   - Within supported IDEs, aiXcoder exposes quick actions and command palette entries (e.g., trigger generation, search) that act like reusable commands; exact support depends on the IDE plugin.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

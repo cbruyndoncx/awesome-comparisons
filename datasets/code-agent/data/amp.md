@@ -8,7 +8,7 @@ A research-preview, agentic AI coding assistant from Sourcegraph that focuses on
 - Code/Autonomous agent
 
 ### Version
-- Unknown (2025-10-19)
+- Standalone product (spun out from Sourcegraph as independent company in 2025; continuous release cycle through Dec 2025)
 
 ### Repo
 - Proprietary (no main public repository)
@@ -42,9 +42,10 @@ Amp is designed as an "agentic" coding assistant that can autonomously reason th
 - Security & testing: Best used alongside automated security testing (DAST/SAST) to catch vulnerabilities introduced during rapid AI-driven edits.
 - Use cases: large-scale refactors, implementing cross-cutting features, writing complex algorithms, creating board-level changes spanning multiple files.
 - Market position: Positioned as a next-generation, high-quality AI coding agent for teams wanting autonomous assistance beyond standard completion tools.
+- 2025-2026 Update: Amp spun out from Sourcegraph as an independent research lab/company. Multi-model architecture added (Claude Sonnet 4, O3, with GPT-5 readiness). Fixed 200K token context window (unconstrained token usage). "Oracle" capability invokes powerful models for complex tasks. Agentic code review feature launched (Dec 2025). Thread Map visualization, Handoff mechanism for long-context drift (Nov 2025), ad-supported free tier (up to $10/day), public developer profiles, and tab completion engine added. CLI tool now provides full agentic functionality from terminal.
 
 ### Last Update
-- 2025-10-19
+- 2026-01-30
 
 ## Licensing
 
@@ -77,6 +78,9 @@ Amp is designed as an "agentic" coding assistant that can autonomously reason th
 ### Resources
 - Yes
   - Can surface and use repo resources, external docs, and model-provided context as part of multi-step reasoning.
+
+### ACP
+- No
 
 ## Deployment
 

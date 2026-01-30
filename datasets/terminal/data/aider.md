@@ -8,7 +8,7 @@ Aider is a python package and frequently updated with a mass following and an ac
 - Code/Terminal
 
 ### Version
-- Unknown (2025-10-18)
+v0.76.0 (2025-12)
   - Actively maintained open-source project; check https://github.com/Aider-AI/aider for current version
 
 ### Repo
@@ -38,7 +38,7 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 - Limitations/considerations: Aider is a thin orchestration layer — actual model behavior, costs, and availability depend on chosen LLM provider or local runtime; evaluate model performance and token costs for your use case before large-scale adoption.
 
 ### Last Update
-- 2025-10-18
+2026-01-30
 
 ## Licensing
 
@@ -70,6 +70,9 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 ### Resources
 - Yes
   - Builds a repo code-map for contextual awareness and can ingest files, folders, URLs and images to provide rich contextual resources to the model.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -115,6 +118,9 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 ### SlashCommands
 - Yes
   - Provides reusable in-chat slash commands for workflow control (e.g., /add, /drop, /model, /undo, /reasoning-effort, /help).
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

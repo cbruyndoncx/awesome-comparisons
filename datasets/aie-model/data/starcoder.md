@@ -7,7 +7,7 @@ An open-source large language model for code, developed by the BigCode community
 - AIE/Model
 
 ### Version
-- v1 (15.5B parameters, 2023)
+- StarCoder2-15B (February 2024)
 
 ### Repo
 - https://github.com/bigcode-project/starcoder
@@ -37,10 +37,10 @@ The project emphasizes responsible open-source release practices (dataset opt-ou
 - Typical uses: editor completions, code generation from docstrings, refactoring assistance, automated code reviews, and local/offline deployments for privacy-sensitive environments.
 - Limitations: may reproduce licensed or low-quality snippets from training data; users should validate generated code for correctness, security, and licensing implications.
 - Integration tips: use temperature/top-p tuning for generation quality, provide clear prompts (function signatures, tests) for best results, and prefer fp16/bf16 runtime on GPU for performance.
+- 2025-2026 Update: StarCoder2 (February 2024) is latest major release with 3B/7B/15B variants trained on 4.3T tokens across 619 languages (330% more training data). Context doubled to 16K tokens with Grouped Query Attention. StarCoder2-15B-Instruct achieves 72.6% HumanEval (surpasses CodeLlama-70B-Instruct). Collaboration between Hugging Face, ServiceNow, and NVIDIA. ServiceNow reported 52% developer productivity increase. Stanford Transparency Index: 85/100 for 2024. Integrated into Theia IDE for AI auto-completion (January 2025). BigCodeBench evaluated at ICLR'25. Active development continues with starcoder.cpp and evaluation harness.
 
 ### Last Update
-- 2023-05-04 (original StarCoder release on Hugging Face / GitHub)
-- 2024-02-28 (StarCoder2 announced / successor family)
+- 2026-01-30
 
 ## Licensing
 

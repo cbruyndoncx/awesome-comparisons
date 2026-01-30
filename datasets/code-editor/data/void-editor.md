@@ -7,8 +7,8 @@ Open-source, privacy-first AI code editor built as a fork of Visual Studio Code 
 - Code/Editor
 
 ### Version
-- v0.1 (2025-01 beta)
-  - Note: Beta version from January 2025; Last Update (2025-11-15) reflects continued development without version number change
+- v0.x (2025 beta, active development)
+  - Y Combinator-backed; beta launched Jan 2025 with frequent updates via GitHub. No stable 1.0 release yet as of Jan 2026.
 
 ### Repo
 - https://github.com/voideditor/void
@@ -33,9 +33,10 @@ Void is an open-source, privacy-focused AI code editor that forks the Visual Stu
 - Model flexibility: works with local open-source models and major cloud providers (OpenAI, Anthropic, Google, etc.) by configuring your own keys or local endpoints.
 - Agent Mode enables the AI to perform repository-wide tasks (read/write/delete files, run terminal commands) — use with care and review generated changes via checkpoints.
 - Good choice for teams or individuals who need AI assistance but require data residency or on-prem constraints.
+- 2025-2026 updates: Y Combinator backing confirmed. Custom FIM (Fill-in-the-Middle) model support added. Lint error detection integrated. Fast Apply for files with thousands of lines. Agent Mode and Gather Mode work with any model including open-source models lacking native tool-calling. Expanded model support: Claude, GPT, Gemini, DeepSeek, Llama, Qwen, Grok. Active development cycle with frequent GitHub releases.
 
 ### Last Update
-- 2025-11-15
+2026-01-30
 
 ## Licensing
 
@@ -65,6 +66,9 @@ Void is an open-source, privacy-focused AI code editor that forks the Visual Stu
 ### Resources
 - Yes
   - Documentation, examples, model adapter configs, and community guides available via the project repository and website; includes sample prompts and setup instructions for local model runtimes.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -119,6 +123,9 @@ Void is an open-source, privacy-focused AI code editor that forks the Visual Stu
 ### SlashCommands
 - Yes
   - Void provides keyboard-driven commands and a command palette (similar to VS Code) and exposes shortcuts for AI actions (examples: Ctrl+K for inline edits, Ctrl+L for chat). These commands are manually triggerable and reusable via the palette or keybindings.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

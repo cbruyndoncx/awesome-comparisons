@@ -8,13 +8,17 @@ Advanced 671B parameter Mixture-of-Experts model excelling in mathematics and co
 - AIE/Model
 
 ### Version
-- V3.2-Exp (2025-09)
+- V3.2 / V3.2-Speciale (December 1, 2025)
 
 ### Repo
 - https://github.com/deepseek-ai/DeepSeek-V3
 
 ### Rating
-- -
+- AIME: 96% accuracy (V3.2-Speciale)
+- IMO 2025: Gold medal
+- ICPC World Finals 2025: Gold medal
+- IOI 2025: Gold medal
+- GPT-5 level performance (V3.2)
 
 ### Short Description
 - 671B parameter MoE model (37B activated) with exceptional math and coding performance, featuring V3.1 hybrid reasoning and V3.2 sparse attention for 128K contexts.
@@ -36,9 +40,10 @@ DeepSeek-V3 is a 671-billion parameter Mixture-of-Experts model that achieves st
 - 2T token training: DeepSeek-Coder models pre-trained on 2 trillion tokens.
 - Active development: Continuous improvements with V3.1 and V3.2 releases in 2025.
 - Open source: Available on GitHub with full model weights and documentation.
+- 2025-2026 Update: V3-0324 (March 2025) with enhanced reasoning (+19.8 AIME, +10 LiveCodeBench). V3.1-Terminus (September 2025) introduced hybrid reasoning architecture (thinking/non-thinking modes). V3.2-Exp added DeepSeek Sparse Attention (DSA) with 50%+ API price reduction. V3.2 (December 1, 2025) reached GPT-5 level with Thinking in Tool-Use capability. V3.2-Speciale rivals Gemini-3.0-Pro, won gold at IMO/ICPC/IOI 2025. Available across web, mobile, and API platforms.
 
 ### Last Update
-- 2025-09
+- 2026-01-30
 
 ## Licensing
 

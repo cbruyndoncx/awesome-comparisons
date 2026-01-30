@@ -46,9 +46,10 @@ GLM-4.6 is available via Z.ai API and OpenRouter, integrates with popular coding
 - Integration: Claude Code, Cline, Roo Code, Kilo Code
 - Developer: Zhipu AI
 - Release: September 30, 2025
+- 2025-2026 Update: GLM-4.6V multimodal variant released for image/video/document understanding and GUI agent operations. GLM-4.7 launched December 2025, topping open-source and domestic model rankings. UI2Code^N RL-enhanced UI coding model unveiled November 2025. GLM-5 announced as upcoming flagship. Zhipu AI MaaS ARR grew 25x in 10 months to over 500M.
 
 ### Last Update
-- 2025-11-18
+- 2026-01-30
 
 ## Licensing
 

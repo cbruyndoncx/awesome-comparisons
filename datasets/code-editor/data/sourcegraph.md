@@ -7,8 +7,8 @@ A code intelligence platform for universal code search, navigation, large-scale 
 - Code/Editor
 
 ### Version
-- Unknown (last checked 2025-10-19)
-  - Sourcegraph uses rolling releases; check sourcegraph.com/changelog for current version
+- Sourcegraph 6.12 (2025-12-10)
+  - Rolling releases; Sourcegraph 6.12 introduced new AI models for Cody Enterprise. Cloud customers transitioning to weekly updates starting Feb 2026.
 
 ### Repo
 - https://github.com/sourcegraph/sourcegraph-public-snapshot
@@ -49,13 +49,21 @@ Sourcegraph is a platform that provides precise, scalable code search and code n
   - Historical repo (public snapshot / info): https://github.com/sourcegraph/sourcegraph (status may be private)
   - News/discussion about relicensing and repo privatization: public coverage across developer news sites and community threads (June 2023 – Aug 2024 timeline)
 
+- 2025-2026 updates:
+  - Sourcegraph 6.12 (Dec 2025) added new AI models for Cody Enterprise.
+  - Cody now supports Claude Sonnet 4, GPT-4o, Mixtral, and Gemini 1.5 models.
+  - SOC 2 Type II certification achieved; verified production deployments at Palo Alto Networks (2,000+ devs), Qualtrics (1,000+ devs), and Leidos.
+  - Sourcegraph announced transition from Cody to Amp, a next-generation coding agent built for teams and optimized outcomes.
+  - Cloud customers moving to weekly product updates starting Feb 25, 2026.
+  - IDE integrations expanded: VS Code, JetBrains, Visual Studio, web, and CLI.
+
 - When to choose Sourcegraph:
   - You need precise, enterprise-grade code search and cross-repo navigation across thousands of repositories and many languages.
   - You require large-scale automated code changes (Batch Changes) or engineering metrics (Code Insights).
   - You need an AI assistant that can reason across multiple repositories and provide actionable code suggestions (Cody), and you can accept the vendor/license model.
 
 ### Last Update
-- 2025-11-15
+2026-01-30
 
 ## Licensing
 
@@ -89,11 +97,14 @@ Sourcegraph is a platform that provides precise, scalable code search and code n
 - Yes
   - Provides indexed repository content, embeddings, symbol graph, search results, Code Insights, and APIs for retrieving context and content for assistant prompts and automation.
 
+### ACP
+- No
+
 ## Deployment
 
 ### BYOK
-- No
-  - Sourcegraph Cloud does not publicly advertise a generic BYOK feature; however self-hosted deployments give organizations full control over their infrastructure and encryption boundaries.
+- Partial
+  - Sourcegraph Cloud does not publicly advertise a generic BYOK feature; however self-hosted deployments (Cody Enterprise) give organizations full control over infrastructure and model selection. Self-hosted supports configurable LLM backends.
 
 ### Local Offline
 - Yes
@@ -138,6 +149,9 @@ Sourcegraph is a platform that provides precise, scalable code search and code n
 ### SlashCommands
 - Yes
   - Sourcegraph supports CLI tooling (e.g., src CLI / developer tools) and integrations that allow scripted interactions and automation. While not "slash commands" in the chat app sense, IDE and extension commands plus the CLI offer similar actionable command workflows.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

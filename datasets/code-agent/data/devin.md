@@ -8,7 +8,7 @@ An autonomous AI software engineer that plans, writes, tests, debugs, and deploy
 - Code/Autonomous agent
 
 ### Version
-v1 (2024-03)
+v2.0 (Devin 2.0, 2025; $20/month Core plan introduced)
 
 ### Repo
 -
@@ -34,9 +34,10 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 - Known demos: autonomous fixes to open-source libraries (e.g., a Sympy patch demo) and building toy/full-stack apps (Game of Life example) in public demos.
 - Caution: As with any autonomous code-writing system, outputs can be incorrect, insecure, or misaligned with architectural constraints. Human review and sandboxing are critical. Also consider IP, secret handling, and compliance when connecting repos or CI.
 - Industry context: Part of a broader shift toward autonomous AI agents that take direct action, not just provide suggestions; competes conceptually with other agent-style developer tools but remains distinct from open-source code assistants.
+- 2025-2026 Update: Devin 2.0 launched with a 96% price reduction (from $500 to $20/month Core plan). Each ACU now delivers 83% more task productivity. Agent-native IDE experience introduced. Pricing tiers: Core ($20/mo, $2.25/ACU), Team ($500/mo, 250 ACUs, $2/ACU), Enterprise (custom with VPC deployment). Nubank reported 4x improvement in task speed after fine-tuning. SWE-bench score: 13.86%. Requires human oversight from senior engineers for quality assurance.
 
 ### Last Update
-2025-02 (Devin 2.0 announcement / agent-native IDE updates)
+2026-01-30
 
 ## Licensing
 
@@ -47,14 +48,14 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 - Proprietary
 
 ### Free Trial
-- Unknown
-  - No public information available about free trial availability; contact Cognition Labs for access.
+- Yes
+  - Core plan at $20/month provides accessible entry point; free trial details may be available via Cognition Labs website.
 
 ## MCP-Client
 
 ### MCP-Client
-- Unknown
-  - No public documentation available for Model Context Protocol (MCP) support.
+- No
+  - No public documentation available for Model Context Protocol (MCP) support as of January 2026.
 
 ### Prompts
 - Yes
@@ -71,11 +72,14 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 - Yes
   - Public documentation, demos, blog posts and changelogs (Devin 2.0 announcement), plus in-product features like Devin Wiki and built-in search/indexing
 
+### ACP
+- No
+
 ## Deployment
 
 ### BYOK
-- Unknown
-  - No public documentation available regarding BYOK support.
+- No
+  - Devin uses Cognition Labs' own model infrastructure; no public BYOK support documented.
 
 ### Local Offline
 - No
@@ -110,11 +114,11 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
   - Supports integrations and connectors for common developer tooling (GitHub, editor integrations, CI hooks)
 
 ### Hooks
-- Unknown
+- No
   - No public documentation available regarding lifecycle hooks or custom event handlers.
 
 ### SlashCommands
-- Unknown
+- No
   - No public documentation available regarding slash-command style interface.
 
 ### Custom Modes
@@ -122,5 +126,5 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
   - Features and modes highlighted in product updates include Interactive Planning (plan-first workflows), Devin Search (codebase search), and Devin Wiki (knowledge base/documentation)
 
 ### Subagents
-- Unknown
-  - No public documentation available regarding subagent or multi-agent architecture.
+- No
+  - No public documentation available regarding subagent or multi-agent architecture as of January 2026.

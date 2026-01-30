@@ -36,7 +36,7 @@ GitHub Copilot Workspace was an experimental "agentic" IDE hosted by GitHub that
 - Useful when comparing AI coding environments for enterprise adoption: strong UX for large-scope edits and planning, but lack of on-prem/local model options and the preview's discontinuation reduce viability for locked-down environments.
 
 ### Last Update
-- 2025-11-15
+2026-01-30
 
 ## Licensing
 
@@ -66,6 +66,9 @@ GitHub Copilot Workspace was an experimental "agentic" IDE hosted by GitHub that
 ### Resources
 - Yes
   - Official GitHub feature pages, blog announcements, and preview documentation were available during the technical preview; some content was archived after the preview sunset.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -115,6 +118,9 @@ GitHub Copilot Workspace was an experimental "agentic" IDE hosted by GitHub that
 ### SlashCommands
 - No
   - Interaction model was natural-language driven (tasks, specs, plans) rather than a slash-command interface documented for user-triggered commands.
+
+### Skills
+- No
 
 ### Custom Modes
 - No

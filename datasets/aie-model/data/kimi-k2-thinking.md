@@ -8,13 +8,15 @@ Enhanced reasoning model from Moonshot AI that tops benchmarks for reasoning, co
 - AIE/Model
 
 ### Version
-- 1.0 (2025-11)
+- K2.5 (January 27, 2026)
 
 ### Repo
 - https://github.com/MoonshotAI/Kimi-K2
 
 ### Rating
-- -
+- MATH-500: Outperformed frontier US models (OpenAI, Anthropic)
+- HLE-Full: Highest score among 2,500 questions across math/physics domains
+- NIST CAISI: Most capable PRC-based AI model at time of release
 
 ### Short Description
 - Advanced reasoning-enhanced version of Kimi K2 that claims top position in reasoning, coding, and agentic-tool benchmarks, surpassing GPT-5 and Claude Sonnet 4.5 Thinking mode.
@@ -35,9 +37,10 @@ Kimi K2 Thinking is Moonshot AI's enhanced reasoning model released in November 
 - November 2025 release: Latest advancement from Alibaba-backed Moonshot AI.
 - Cost-competitive: Maintains competitive API pricing while delivering leading performance.
 - Community impact: Demonstrates that open-weight models can match or exceed proprietary leaders.
+- 2025-2026 Update: K2.5 released January 27, 2026 as open-source with enhanced multimodal capabilities (15T mixed visual/text tokens, 400M vision encoder), Agent Swarm (up to 100 concurrent agents), and parallelized attention. Heavy Mode runs 8 independent reasoning paths simultaneously. INT4 quantization with QAT enables 2x inference speed. Moonshot raised at $4.8B valuation. 2026 roadmap targets 50% inference cost reduction.
 
 ### Last Update
-- 2025-11
+- 2026-01-30
 
 ## Licensing
 

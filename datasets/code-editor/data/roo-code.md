@@ -7,7 +7,7 @@ RooCode (formerly Roo Cline) is an AI-powered VS Code extension that acts as an 
 - Code/Editor
 
 ### Version
-v3.3 (2024-10-18)
+v3.11+ (2025-2026, rolling releases)
 
 ### Repo
 - https://github.com/RooCodeInc/Roo-Code
@@ -34,11 +34,11 @@ RooCode is designed to be more than an autocomplete plugin — it functions as a
 - Cost tracking and usage reporting help teams monitor token usage across models and sessions.
 - Installation: available on Visual Studio Marketplace; can also be built and installed from source (pnpm/npm workflows, build VSIX).
 - Community & forks: active community forks and experimental branches exist; check the primary repo and its forks for the latest features.
-- Considerations: while powerful, RooCode’s autonomy features require careful configuration (auto-approve actions, file restrictions) to avoid unintended changes. Local/offline model support exists but may require additional setup and offers different capabilities than cloud models.
+- Considerations: while powerful, RooCode's autonomy features require careful configuration (auto-approve actions, file restrictions) to avoid unintended changes. Local/offline model support exists but may require additional setup and offers different capabilities than cloud models.
+- 2025-2026 updates: Roo Code Cloud launched as a collaborative team platform with Planner and Coder agents across Slack and GitHub. Sticky model assignment per mode (e.g., o3 for Architect, Claude Sonnet 4 for Code). Context-aware auto-mode switching. Built-in prompt optimization. Browser actions via computer use. Inline terminal output in chat. Granular codebase indexing provider configuration.
 
 ### Last Update
-2024-10-18
--
+2026-01-30
 
 ## Licensing
 
@@ -75,6 +75,9 @@ RooCode is designed to be more than an autocomplete plugin — it functions as a
   - Cost/token tracking, usage reports, and model selection UI are available in the extension settings to help manage API spending.
   - Documentation and install instructions are available on the Visual Studio Marketplace and the GitHub repository; community forks and examples provide additional resources.
   - MCP servers can be configured to extend capabilities to Docker, databases, browsers; Bright Data and Web MCP communities have example integrations.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -120,6 +123,9 @@ RooCode is designed to be more than an autocomplete plugin — it functions as a
 ### SlashCommands
 - Yes
   - RooCode integrates with VS Code commands and provides re-usable actions through custom modes and task templates. Users can invoke RooCode functionality from the command palette, configure auto-approve command flows, and reuse mode-specific commands and personas for repeated workflows.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

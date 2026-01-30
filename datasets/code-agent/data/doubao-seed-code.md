@@ -15,8 +15,8 @@ ByteDance's professional AI coding agent achieving 78.8% on SWE-Bench Verified (
   - Proprietary model; no public repository found.
 
 ### Rating
-- N/A
-  - No public aggregated review score found.
+- [4] State-of-the-art SWE-Bench score (78.8%) with TRAE integration
+- [5] Unprecedented price-to-performance ratio ($1.30/month introductory)
 
 ### Short Description
 - China's most affordable AI coding agent from ByteDance's Volcano Engine, achieving 78.8% on SWE-Bench Verified with TRAE integration, supporting 200+ programming languages at unprecedented $1.30/month pricing.
@@ -39,9 +39,10 @@ Doubao-Seed-Code is ByteDance's professional code generation AI, launched by Vol
 - Minimal configuration: Almost zero-config migration for developers using Claude Code.
 - Cost leadership: Disrupting the market with enterprise-grade capabilities at consumer pricing.
 - November 2025 launch: Recent release establishing new price/performance standard.
+- 2025-2026 Update: ByteDance's Volcano Engine became China's second-largest AI cloud provider (13% market share, $390M revenue H1 2025). Massive AI infrastructure investment with Rmb85B allocated for AI processors in 2025 and $23.1B capex planned for 2026 (over half for AI semiconductors). ByteDance ranked as Nvidia's largest Chinese customer in 2024. Volcano Engine secured exclusive AI cloud partnership with China's Spring Festival Gala 2026. Platform positioned as enterprise-grade with aggressive pricing disrupting the global AI coding agent market.
 
 ### Last Update
-- 2025-11
+- 2026-01-30
 
 ## Licensing
 
@@ -67,6 +68,9 @@ Doubao-Seed-Code is ByteDance's professional code generation AI, launched by Vol
 
 ### Resources
 - Yes
+
+### ACP
+- No
 
 ## Deployment
 

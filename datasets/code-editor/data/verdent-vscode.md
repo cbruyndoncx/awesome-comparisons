@@ -8,7 +8,8 @@ Verdent for VS Code is the Visual Studio Code extension for Verdent AI — an ag
 - Code/Editor
 
 ### Version
-- 2025 (initial public/early access)
+- 2025-2026 (active development, early access)
+  - Multi-model support: Claude Sonnet, Opus 4.5, Gemini 3 Pro, GPT-5 with Codex
 
 ### Repo
 - Proprietary product — no public GitHub repo discovered
@@ -37,9 +38,10 @@ The extension is intended to reduce context switching by letting developers rema
 - Verdent Deck is the desktop counterpart focused on multi-agent orchestration; the VS Code extension brings the same capabilities into the editor.
 - Product is commercial with early access and paid tiers; capabilities and pricing should be verified on the vendor site.
 - Sources: Verdent product announcements and coverage (2025), reviews and demonstrations showing Verdent launching from within VS Code and the Verdent Deck demos.
+- 2025-2026 updates: Built-in AI code reviews integrated into the extension for security and quality checks. Reasoning depth controls and planning mode toggle. Multi-model support (Claude Sonnet, Opus 4.5, Gemini 3 Pro, GPT-5 with Codex). Context-aware task assignment referencing files from the editor. Diff Lens auto-analyzes code changes with jump-to-line navigation. Proactive clarifying questions for underspecified tasks. Parallel task management for background code generation.
 
 ### Last Update
-2025-01-12
+2026-01-30
 
 ## Licensing
 
@@ -78,6 +80,9 @@ The extension is intended to reduce context switching by letting developers rema
 - Yes
   - Public product announcements, demo videos, and press coverage (2024–2025) describe Verdent's Plan-First and Verify-Early methodology, Deck desktop app, and the VS Code extension. These sources are the primary publicly available resources and provide feature overviews, architecture descriptions, and demonstrations.
   - Official documentation, detailed prompt templates, and enterprise deployment guides appear to be available to customers and early access users; they were not publicly accessible in full at the time of the last update.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -121,6 +126,9 @@ The extension is intended to reduce context switching by letting developers rema
   - While not explicitly called "hooks," Verdent provides "rule configuration" and "custom subagents" that can be used to achieve similar functionality.
 
 ### SlashCommands
+- No
+
+### Skills
 - No
 
 ### Custom Modes

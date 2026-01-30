@@ -10,7 +10,7 @@ MiniMax M2 is a compact, fast, and cost-effective MoE (Mixture of Experts) model
 - AIE/Model
 
 ### Version
-- M2 (October 2025)
+- M2.1 (December 23, 2025)
 
 ### Repo
 - https://github.com/MiniMax-AI/MiniMax-M2
@@ -42,9 +42,10 @@ At only 8% of the price of Claude Sonnet and twice the speed, MiniMax M2 offers 
 - Global Ranking: #1 open-source model in composite intelligence score
 - Release: Late October 2025
 - Availability: Open-source on GitHub, available via API platforms
+- 2025-2026 Update: M2.1 released December 23, 2025 with enhanced Rust/Java/Go/C++/Kotlin/ObjC/TS/JS support, improved UI/UX design capabilities (VIBE-Web 91.5), better instruction following, and dialogue/writing enhancements. Revenue grew 7x to $70M ARR. 2026 roadmap includes agent reliability, voice integration, and structured workflows.
 
 ### Last Update
-- 2025-11-18
+- 2026-01-30
 
 ## Licensing
 
@@ -52,4 +53,4 @@ At only 8% of the price of Claude Sonnet and twice the speed, MiniMax M2 offers 
 - Yes
 
 ### License
-- -
+- Open Source (custom MiniMax license)

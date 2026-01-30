@@ -8,7 +8,7 @@ AI-powered unit test generation for Java
 - Test Generation Tool (Java)
 
 ### Version
-N/A (last checked 2025-10-19)
+Continuous releases through 2025-2026; experimental Java 24/25 support added; IntelliJ 2025.2/2025.3 supported
 
 ### Repo
 -
@@ -32,9 +32,10 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
 - Pricing model: free community tier with monthly MUT limits; developer subscriptions with fixed MUT bundles; Teams/Enterprise with capacity- and user-based pricing and bespoke contracts.
 - Use-cases: fast inner-loop test creation for developers, bulk test generation for legacy codebases, regression testing and coverage improvements, test maintenance during refactors.
 - Unknown / not publicly documented here: explicit BYOK/key-management details, detailed on-prem installation steps and specific license terms—contact Diffblue sales for enterprise security, on-prem deployment and licensing specifics.
+- 2025-2026 Update: Added experimental Java 24 and 25 support alongside production Java 8/11/17/21. JUnit Jupiter 5.13.4 and Mockito Core 5.19.0 compatibility. New OSGi test generation support. Significantly faster CLI operations for Maven (especially multi-module) projects. google-java-format as new default formatter. Full IntelliJ IDEA 2025.2 and 2025.3 support. Beta `dcover issues` diagnostic command (Oct 2025). Optional LLM integration (beta) for domain-specific test string generation. Improved Spring XML context and custom annotation handling. Enhanced test readability for fluent builder patterns. Pricing evolved to methods-under-test consumption model.
 
 ### Last Update
-2025-11-15
+2026-01-30
 
 ## Licensing
 
@@ -70,11 +71,14 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
   - Product pages and release notes: https://www.diffblue.com/products/cover and company blog
   - Community Edition download and trial instructions available from Diffblue website
 
+### ACP
+- No
+
 ## Deployment
 
 ### BYOK
-- Unknown (likely available for Enterprise)
-  - No public documentation; Teams/Enterprise editions mention on-prem deployment options.
+- No
+  - Diffblue Cover uses its own AI engine; BYOK is not applicable. Enterprise on-prem deployment available for self-hosted scenarios.
 
 ### Local Offline
 - Partial (Enterprise on-prem option available)

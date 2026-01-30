@@ -14,7 +14,10 @@ Open-source model family from Zhipu AI (Z.ai) unifying reasoning, coding, agenti
 - https://huggingface.co/zai-org/GLM-4.5
 
 ### Rating
-- -
+- SWE-bench Verified: 64.2%
+- TerminalBench: 37.5%
+- Tool-Calling: 90.6% success rate
+- 3rd on combined 12-benchmark evaluation (trailing only top OpenAI and Anthropic models)
 
 ### Short Description
 - Open-source MoE model family with 355B total parameters (32B active) featuring exceptional coding performance, achieving 64.2% on SWE-bench and 80.8% win rate against Qwen3 Coder in real-world challenges.
@@ -37,9 +40,10 @@ GLM-4.5 is an open-source large language model series from Zhipu AI (Z.ai) desig
 - MIT licensed: Open source with full commercial use rights, self-hosting, and custom training.
 - Z.ai/Zhipu AI: Developed by Chinese AI startup, CEO Zhang Peng.
 - Released August 2025 with strong benchmark results.
+- 2025-2026 Update: GLM-4.6 released ~2 months later with #1 coding ranking alongside Anthropic/OpenAI. GLM-4.7 released December 2025 with coding comparable to Claude Sonnet 4.5, topped open-source and domestic rankings in Artificial Analysis. Context expanded to 200K tokens. Interleaved thinking and preserved thinking features added. GLM-5 announced. Zhipu MaaS ARR grew 25x to 500M+ in 10 months. Training used 22T-token corpus with 7T tokens for code/reasoning. Dual-mode operation: thinking mode for complex tasks, non-thinking for speed.
 
 ### Last Update
-- 2025-08
+- 2026-01-30
 
 ## Licensing
 

@@ -8,7 +8,7 @@ A lightweight open-source AI developer agent for generating small projects and p
 - Code/Autonomous agent
 
 ### Version
-- No official releases; repository is commit-driven (latest observed activity: 2025-09-26)
+- v1 (library rewrite, pip install smol_dev); no formal versioned releases; commit-driven (last active 2025)
 
 ### Repo
 - https://github.com/smol-ai/developer
@@ -35,9 +35,10 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
 - Prompting DSL: leans on Markdown as the canonical way to describe requirements and specs for the agent.
 - Good fit: rapid prototyping, scaffolding, learning how to implement features with unfamiliar APIs, and generating small demo apps or PoCs.
 - Limitations: quality and speed depend heavily on the chosen LLM (GPT-4 is common but slower/costly). The tool is experimental — outputs require human review, testing, and iteration. Not designed as a drop-in replacement for full IDE/code-review workflows.
+- 2025-2026 Update: Project in stable maintenance phase with incremental improvements. PR #158 (Apr 2025) migrated dependency management from Poetry to uv for faster builds. Multi-model provider support via litellm (Azure, OpenAI, Palm, Anthropic, Cohere, Replicate). Feedback loop remains 2-4 minutes per generation cycle with GPT-4. Community spawned smol-dev-js (JavaScript variant for incremental live project changes). Project focus remains on lightweight prototyping rather than full IDE workflows.
 
 ### Last Update
-- 2025-09-26 (latest observed commit activity)
+- 2026-01-30
 
 ## Licensing
 
@@ -69,6 +70,9 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
 ### Resources
 - Yes
   - The repository provides documentation, examples, and workflow recipes in the GitHub README.
+
+### ACP
+- No
 
 ## Deployment
 

@@ -8,8 +8,7 @@ AI-powered test generation and code integrity platform (rebranded to Qodo)
 - Test Generation & PR Review Tool
 
 ### Version
-<!-- Latest version used for update -->
-- v0.23 (example pin shown in repo; check GitHub releases for the current latest tag)
+- Qodo platform with 5 specialized agents (Gen, Merge, Cover, Aware, Command); SWE-bench score 71.2% (2025-2026)
 
 ### Repo
 - https://github.com/qodo-ai/pr-agent
@@ -38,15 +37,15 @@ CodiumAI (rebranded to Qodo) is an AI-first code quality platform focused on aut
 - Provides behavior-coverage driven test generation which aims to produce diverse, behavior-focused tests instead of simple smoke tests.
 - Offers IDE integrations, CI/CLI tools, and an open-source PR-Agent for self-hosting/CI use-cases.
 - Enterprise offerings include additional controls and integrations; advanced models (including GPT-4) may be available on paid tiers.
-  
+- 2025-2026 Update: Qodo evolved into an enterprise-scale platform with 5 specialized agents (Qodo Gen, Merge, Cover, Aware, Command). New Codebase Intelligence Engine provides system-wide stateful model across module boundaries and cross-repo dependencies. Achieved verified 71.2% SWE-bench score and detects 42-48% of real-world runtime bugs. Added 15+ automated PR workflows including Jira/Azure DevOps validation, missing-test detection, and risk/complexity scoring. Multi-repo support (10-1000+ repos). Deployment options now include VPC, on-premise, zero-retention, SOC2, and GDPR compliance. Supports all major LLM providers (OpenAI, Claude, DeepSeek, Gemini, Meta AI). Pricing: free tier (250 msgs/month), team at $15/user.
+
 - Repositories
   - https://github.com/qodo-ai/pr-agent
   - https://github.com/codium-ai/codium-code-examples
   - https://github.com/codium-ai/codiumai-jetbrains-release
 
 ### Last Update
-<!-- Note Date last updated -->
-- 2025-11-15
+- 2026-01-30
 
 ## Licensing
 
@@ -69,8 +68,8 @@ CodiumAI (rebranded to Qodo) is an AI-first code quality platform focused on aut
 ## MCP-Client
 
 ### MCP-Client
-- Unknown (needs verification)
-  - No public documentation found confirming Model Context Protocol (MCP) integration; requires verification from vendor.
+- Yes
+  - Qodo platform supports MCP-based integrations and agentic tooling for orchestrating specialized subagents and tool-specific pipelines.
 
 ### Prompts
 <!-- Default description for Prompts -->
@@ -92,6 +91,9 @@ CodiumAI (rebranded to Qodo) is an AI-first code quality platform focused on aut
 - Yes
 
 - Public documentation, GitHub repositories (listed above), example projects, and CLI/Action integration guides are available.
+
+### ACP
+- No
 
 ## Deployment
 

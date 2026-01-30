@@ -8,7 +8,7 @@ A cloud-first AI-powered code review assistant that analyzes pull requests, gene
 - Code/Autonomous agent
 
 ### Version
-unknown (2025-10-19)
+SaaS platform (SOC 2 Type II audit completed 2025; continuous updates through Jan 2026)
 
 ### Repo
 - (no public repository found)
@@ -48,9 +48,10 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
   - Uses isolated execution (Google Cloud Run referenced in architecture notes) to reduce risk from analyzing untrusted code
 - Deployment:
   - Primary offering is SaaS. Vendor materials mention a self-hosted option for enterprises but public details (architecture, BYOK, on-prem instructions, air-gapped support) are limited—contact vendor for enterprise requirements.
+- 2025-2026 Update: SOC 2 Type II audit completed in 2025. Pricing restructured: Lite (free, unlimited PR reviews), Pro ($24/mo annual per dev), Enterprise (custom, self-hosted, 500+ seats). Added adaptive learning (learns from team feedback), agentic workflows with @coderabbitai in PRs (generate tests, draft docs, open Jira/Linear issues). 40+ linters/SAST tools integrated with LLM noise filtering. VS Code extension added (compatible with Cursor, Windsurf). 2025 research found AI-generated code has 40% more critical issues and 70% more major issues, reinforcing need for AI review tools. Enterprise self-hosted option now available with VPN tunneling.
 
 ### Last Update
-2025-10-19
+2026-01-30
 
 ## Licensing
 
@@ -81,10 +82,14 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
 - Yes
   - Public documentation, blog posts, and integration guides are available on the vendor site; further enterprise / on-prem deployment docs may require contacting sales/support.
 
+### ACP
+- No
+
 ## Deployment
 
 ### BYOK
-- Not publicly documented
+- No
+  - CodeRabbit uses its own model infrastructure; BYOK is not publicly documented or supported.
 
 ### Local Offline
 - Yes (Enterprise self-hosted option available)

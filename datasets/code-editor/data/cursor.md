@@ -35,10 +35,13 @@ Cursor reimagines the developer workflow by making AI agents first-class collabo
 - Model flexibility: Cursor supports multiple model providers and BYOK; teams can choose higher-accuracy or lower-latency models depending on workflow needs.
 - Collaboration & teams: Team and Enterprise tiers add centralized billing, SSO, usage analytics, and admin controls for managing agent behavior across an organization.
 - Pricing model: Tiered offering (Hobby free tier, Pro, Pro+, Ultra, Teams, Enterprise) with per-plan usage multipliers and add-ons. Pricing reflects model-inference costs and usage limits—pick plans carefully for heavy agent workloads.
+- Rules: project-level memory system giving developers control over AI behavior; makes AI assistance predictable.
+- Background Agents: long-running agents for planning, creating diffs, and managing branch/PR workflows.
+- Browser control: native browser integration for testing, debugging, and UI refinement.
 - Useful links: Official site: https://cursor.com | Announcement coverage: select product release posts and reviews (search for "Cursor 2.0 Composer multi-agent").
 
 ### Last Update
-2025-10-29
+2026-01-30
 
 ## Licensing
 
@@ -56,8 +59,8 @@ Cursor reimagines the developer workflow by making AI agents first-class collabo
 ## MCP-Client
 
 ### MCP-Client
-- No
-  - Not documented as an MCP client in the same style as some other editor integrations.
+- Yes
+  - Cursor supports MCP (Model Context Protocol) for connecting to external context providers and tool integrations.
 
 ### Prompts
 - Yes
@@ -67,6 +70,9 @@ Cursor reimagines the developer workflow by making AI agents first-class collabo
 
 ### Resources
 - Yes
+
+### ACP
+- No
 
 ## Deployment
 
@@ -111,8 +117,11 @@ Cursor reimagines the developer workflow by making AI agents first-class collabo
   - No public lifecycle hook API documented for external integrations; Cursor focuses on agent tooling and dashboard-managed team commands.
 
 ### SlashCommands
+- Yes
+  - Cursor supports slash commands as quick shortcuts for common operations within the editor.
+
+### Skills
 - No
-  - Cursor's interaction model centers on Composer/Agent UIs rather than slash-command sets like some other editor assistants.
 
 ### Custom Modes
 - Yes

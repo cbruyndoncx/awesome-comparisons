@@ -14,7 +14,9 @@ Google's most advanced model family with thinking capabilities, featuring except
 - -
 
 ### Rating
-- -
+- SWE-bench Verified: 63.8% (2.5 Pro)
+- WebDev Arena: World-leading performance
+- LMArena: Leaderboard leader
 
 ### Short Description
 - Google's advanced thinking model family with 2.5 Pro for complex coding tasks and 2.5 Flash for efficient workhorse operations, featuring 1M token context and native tool use.
@@ -37,9 +39,10 @@ Gemini 2.5 is Google DeepMind's most advanced model family announced in March 20
 - Real-time generation: Direct generation of HTML, CSS, JS within conversations.
 - Google DeepMind: Developed by Google's premier AI research division.
 - Released March 2025 with continuous improvements through 2025.
+- 2025-2026 Update: 2.5 Pro and Flash reached general availability June 26, 2025. Flash became default model in Gemini app. Flash-Lite cost-optimized variant introduced June 2025. Deep Think experimental enhanced reasoning mode added. Native audio output support added for natural conversations. Computer Use Preview launched October 2025. Flash image generation/editing GA October 2, 2025. MCP tool support added to API/SDK. Gemini 1.5 models retired September 29, 2025. Gemini 2.0 models retiring March 3, 2026. Succeeded by Gemini 3 (November 2025).
 
 ### Last Update
-- 2025-09
+- 2026-01-30
 
 ## Licensing
 

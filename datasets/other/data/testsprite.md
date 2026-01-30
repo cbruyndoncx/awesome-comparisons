@@ -8,13 +8,16 @@ AI-powered test automation tool that generates comprehensive code tests automati
 - Code/Other
 
 ### Version
-- 2025
+- 2025 (Seed-stage product, no public version numbers)
+  - TestSprite is a cloud-based SaaS platform; no formal versioned releases are published. Raised $6.7M seed funding in 2025.
 
 ### Repo
-- -
+- No
+  - Proprietary SaaS platform; no public source repository.
 
 ### Rating
-- -
+- Not Rated
+  - Early-stage product with limited public reviews; raised $6.7M seed round indicating investor confidence.
 
 ### Short Description
 - AI-generated code testing tool that automatically creates and maintains test suites with intelligent test case generation.
@@ -31,9 +34,17 @@ TestSprite is an AI-powered test automation platform that leverages machine lear
 - Test maintenance: Updates tests automatically as code evolves.
 - Major public release in 2025 focusing on enterprise test automation needs.
 - Designed to integrate into existing CI/CD pipelines.
+- **2025-2026 updates:**
+  - Raised $6.7M seed funding (Seattle-based startup) to expand AI-generated code testing platform.
+  - Benchmarks show pass rates boosted from 42% to 93% after a single iteration, outperforming GPT, Claude Sonnet, and DeepSeek.
+  - MCP Server integration launched: embeds directly into Cursor, Windsurf, Copilot, and other AI code editors.
+  - Cloud sandbox execution environment for isolated, conflict-free test runs.
+  - Self-repair functionality: provides pinpoint feedback and fix recommendations for automated debugging.
+  - No-code testing option: create tests by describing features in natural language.
+  - Scheduled automated test runs (hourly, daily) for continuous regression testing.
 
 ### Last Update
-- 2025
+- 2026-01-30
 
 ## Licensing
 
@@ -58,6 +69,9 @@ TestSprite is an AI-powered test automation platform that leverages machine lear
 - Yes
 
 ### Resources
+- No
+
+### ACP
 - No
 
 ## Deployment

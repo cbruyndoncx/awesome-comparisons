@@ -7,8 +7,8 @@
 - Product/Prototyping
 
 ### Version
-- Unknown (2025-10-19)
-  - Integrated into Replit IDE; no separate version tracking
+- Deprecated; replaced by Replit Agent (2024-2025)
+  - Agent v2 (Feb 2025), Agent 3 (Sep 2025), Design Mode (Nov 2025), Fast Build (Dec 2025)
 
 ### Repo
 -
@@ -45,10 +45,10 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 - Models and internals: Replit does not publicly document exact model names or weights used by Ghostwriter; descriptions reference "frontier" or large-generation models in marketing material.
 - Use cases: excellent for browser-first workflows, teaching, pair-programming, quick refactors and prototyping. Not suitable when strict on-premises, BYOK, or fully offline operation is required.
 - Recommendation: for teams with strict compliance needs, engage Replit Enterprise sales to confirm options (SSO, data handling, contractual terms). For individual users, Core provides a convenient integrated experience with monthly usage credits.
+- 2025-2026 updates: Ghostwriter deprecated and replaced by Replit Agent. Agent v2 (Feb 2025) introduced near-instant response times. Agent 3 (Sep 2025) added autonomous execution up to 200 minutes and self-testing. Design Mode (Nov 2025) creates interactive designs in under 2 minutes. Fast Build mode (Dec 2025) produces production-ready apps in minutes. Full-stack mobile app development support added. Figma/Lovable import capability. LLM-native web search integration (Jan 2026). Next Edit Predictions for codebase-wide ripple effects. Microsoft Azure partnership. Effort-based pricing model.
 
 ### Last Update
-- 2025-11-15
-  - Note: This date may reflect documentation update; actively maintained SaaS product integrated into Replit IDE
+- 2026-01-30
 
 ## Licensing
 
@@ -81,6 +81,9 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
   - Blog and community resources: Replit Blog (<https://blog.replit.com/>), Replit Community forums, and YouTube tutorials demonstrating Ghostwriter workflows.
   - API and integration docs: Replit API documentation and platform docs for workspace integrations and deploy/webhook features.
   - Example projects and tutorials: sample repls and walkthroughs (e.g., Ghostwriter/Agent tutorials) available from the docs and community.
+
+### ACP
+- No
 
 ## Deployment
 

@@ -31,14 +31,17 @@ The platform emphasizes a structured process (uses MoSCoW prioritization) and ta
 -
 
 ### Notes
-- Integrations / exports: the product advertises exports to project management and developer tools (examples mentioned: Trello, JIRA, v0, Lovable, Cursor) so it can fit into existing workflows for ticketing and prototype generation.
+- Integrations / exports: Figma import, GitHub issues/PRs, Notion, Linear, Confluence sync, plus exports to AI coding tools (Cursor, Bolt, v0, Lovable) and project management (Trello, JIRA).
 - Output types: PRDs, user flows, wireframes, tech stack recommendations, implementation guidelines, AI prompts for code assistants.
 - Target users: Agencies (client scoping & handoff), Product Managers (fast PRD creation), Founders (rapid product definition and prioritization).
 - Pricing & privacy: commercial SaaS; BYOK / self-hosting options are not publicly documented (leave as unknown). Users with strict data residency or security needs should contact From021 for details.
 - Competitors / context: positioned near other AI-assisted product tools (e.g., ChatPRD) but focuses on structured customization and exportable developer artifacts rather than fully automatic summaries.
+- Real-time collaboration on Pro, Org, and Business plans.
+- Roadmap visualization for tracking product progress.
+- Most users create first complete spec in under 10 minutes; planning time reduced by up to 70%.
 
 ### Last Update
-2025-11-15
+2026-01-30
 
 ## Licensing
 
@@ -69,6 +72,9 @@ The platform emphasizes a structured process (uses MoSCoW prioritization) and ta
 ### Resources
 - Yes
   - Includes PRD templates, wireframe and user-journey artifacts, suggested tech stacks, API and data model sketches, and exportable tickets/user stories for development workflows.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -115,6 +121,9 @@ The platform emphasizes a structured process (uses MoSCoW prioritization) and ta
 ### SlashCommands
 - No
   - There is no documentation of slash-commands or user-triggered reusable commands; interactions are performed through the web UI.
+
+### Skills
+- No
 
 ### Custom Modes
 - No

@@ -33,9 +33,10 @@ Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you c
 - Pricing (reported in public materials during beta): starts at around $29/month for paid tier; tiering and limits apply.
 - Limitations: Not intended for building full web applications or heavily customized backend logic. Customization beyond the provided builder can be limited; vendor lock‑in for hosted tools.
 - Security: Platform claims encrypted transmission and secure storage for collected leads (standard for SaaS tools) — verify for specific compliance needs.
+- 2025-2026 updates: Ranked as top tool in no-code AI builders for website engagement in 2025. Tool creation achievable in under 1 minute from a single prompt. Platform supports calculators, AI generators, interactive forms, quizzes, and chatbots. Integrated analytics for traffic, conversions, and engagement. Seamless CMS/e-commerce integration. Strong encryption and data protection compliance. Scalable from individual tools to enterprise deployments.
 
 ### Last Update
-- 2025-10-19
+- 2026-01-30
 
 ## Licensing
 
@@ -71,6 +72,9 @@ Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you c
   - Documentation, templates and onboarding guides available from the dashboard/website.
   - Built-in analytics and exportable data for tool interactions and lead captures.
   - Integrations: Zapier (7,000+ apps), webhooks, and basic API endpoints (contact support for full API specs).
+
+### ACP
+- No
 
 ## Deployment
 

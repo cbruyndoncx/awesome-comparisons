@@ -8,13 +8,14 @@ Lightweight open-source code LLM family from ByteDance Seed trained on 6 trillio
 - AIE/Model
 
 ### Version
-- 1.0 (2025-06)
+- 1.0 (May 8, 2025)
 
 ### Repo
 - https://github.com/ByteDance-Seed/Seed-Coder
 
 ### Rating
-- -
+- SOTA among open-source models at 8B parameter scale
+- Surpasses many larger models on coding benchmarks
 
 ### Short Description
 - Family of lightweight open-source code LLMs (base, instruct, reasoning) trained on 6T tokens from GitHub code, commit histories, and code-related web data, achieving SOTA at 8B scale.
@@ -35,10 +36,14 @@ Seed-Coder is a family of lightweight open-source code language models developed
 - ByteDance Seed: Developed by ByteDance's AI research division.
 - Research-friendly: Accessible for academic research, fine-tuning, and custom deployments.
 - Code-focused training: Specialized corpus emphasizing practical software development.
-- Released June 2025 as part of ByteDance's open-source AI strategy.
+- Released May 8, 2025 as part of ByteDance's open-source AI strategy.
+- Model variants: Base (32K context), Instruct (32K context), Reasoning (64K context), plus bf16 reasoning variant.
+- Model-centric data curation: Uses LLMs to filter and curate training data, minimizing manual effort.
+- Deployment: transformers library, vLLM offline batched inference, multi-GPU distributed serving with tensor parallelism.
+- 2025-2026 Update: Released May 8, 2025. ByteDance Seed team preparing next-generation launches including Doubao 2.0, Seedream 5.0, and Seeddance 2.0 potentially by February 2026. Model supports vLLM deployment and multi-GPU distributed serving for long-context inputs up to 32K tokens.
 
 ### Last Update
-- 2025-06
+- 2026-01-30
 
 ## Licensing
 

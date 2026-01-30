@@ -32,8 +32,7 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 - Recommended when: you want a first-class terminal with integrated AI agents and team sharing (Drive), and you prefer an opinionated, commercial product with enterprise privacy controls rather than an open-source self-hosted solution.
 
 ### Last Update
-- 2025-11-16
-  - Note: This date may reflect documentation update; actively maintained commercial product
+2026-01-30
 
 ## Licensing
 
@@ -63,6 +62,9 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 ### Resources
 - Yes
   - Warp Drive stores shared resources (Workflows, Notebooks, commands, prompts, and environment variables) that agents can access as contextual artifacts.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -109,6 +111,9 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 ### SlashCommands
 - No
   - No public global slash-command system documented; parameterized Workflows serve as invocable shortcuts and templates.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

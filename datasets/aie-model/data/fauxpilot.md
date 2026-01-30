@@ -7,14 +7,13 @@
 - AIE/Infrastructure
 
 ### Version
-- -
-  - No formal releases/tags (GitHub 'releases' list is empty; repository does not provide official release version numbers)
+- No formal releases (last commit: April 9, 2024)
 
 ### Repo
 - https://github.com/fauxpilot/fauxpilot
 
 ### Rating
-- N/A
+- No formal benchmarks; community-driven project for local code completion
 
 ### Short Description
 - Open-source, locally-hosted code-completion server providing a privacy-focused alternative to cloud-based assistants like GitHub Copilot.
@@ -33,10 +32,10 @@ FauxPilot is an open-source code-completion server designed to run on-premises o
 - Privacy: primary selling point is that all inference can be run locally so developer code does not leave the network and no external telemetry is required.
 - Support: community-driven project; documentation is community-maintained (wiki, discussion forum). There is no formal commercial support or warranty.
 - Common pitfalls: accurate VRAM estimation is critical; ensure nvidia-docker and drivers are correctly installed and that the chosen model fits available GPU memory (or configure model sharding across GPUs).
+- 2025-2026 Update: No new releases or significant updates. Project appears largely inactive since April 2024. Still listed among GitHub Copilot alternatives in 2025 for privacy-focused local deployments. The broader AI code completion landscape has evolved significantly with GitHub Copilot becoming multi-model agentic assistant, VS Code Copilot adding parallel subagent execution (January 2026). FauxPilot remains viable for organizations requiring fully on-premise code completion with no external dependencies.
 
 ### Last Update
-- 2024-04-09
-  - Last push timestamp: 2024-04-09T08:42:23Z (from GitHub API)
+- 2026-01-30
 
 ## Licensing
 

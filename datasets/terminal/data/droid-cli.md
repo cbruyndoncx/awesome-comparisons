@@ -17,7 +17,8 @@ Droid CLI is part of Factory AI's developer platform, offering AI assistants (ca
 - -
 
 ### Rating
-- 58.75% on Terminal-Bench v0.1.1 (state-of-the-art performance)
+- [4] State-of-the-art Terminal-Bench performance (58.75% on v0.1.1), rich MCP integration, custom droids and skills
+- [3] Proprietary platform; enterprise pricing may limit individual adoption
 
 ### Short Description
 AI software engineering agent from Factory AI that operates in terminals and IDEs with persistent contextual memory across workflows.
@@ -40,7 +41,7 @@ The platform offers code completion, PR review suggestions, automated fixes, and
 - Installation: Simple curl command to get started
 
 ### Last Update
-- 2025-11-18
+2026-01-30
 
 ## Licensing
 
@@ -57,7 +58,8 @@ The platform offers code completion, PR review suggestions, automated fixes, and
 ## MCP-Client
 
 ### MCP-Client
-- -
+- Yes
+  - Native MCP tool system with three autonomy levels (low, high, confirmation-free). Supports streamable HTTP servers, parallel tool confirmations, and per-server tool enable/disable.
 
 ### Prompts
 - Yes
@@ -74,10 +76,14 @@ The platform offers code completion, PR review suggestions, automated fixes, and
   - Product page: https://factory.ai/product/cli
   - Features: https://factorycli.com/features
 
+### ACP
+- No
+
 ## Deployment
 
 ### BYOK
-- -
+- Yes
+  - Custom BYOK models loaded from settings.json. Supports GPT-5.2 and other providers via model selector.
 
 ### Local Offline
 - No
@@ -93,7 +99,7 @@ The platform offers code completion, PR review suggestions, automated fixes, and
 - Yes
 
 ### Checkpoints
-- -
+- No
 
 ### Git Support
 - Yes
@@ -103,23 +109,27 @@ The platform offers code completion, PR review suggestions, automated fixes, and
 ## Extensible
 
 ### Plugins
-- -
+- No
 
 ### Hooks
 - Yes
-  - Support for pre-commit hooks via Droid Exec
+  - 7 lifecycle hook types with configurable exit codes (success, warning, block, abort). Permanently enabled, no longer experimental. Configurable via `/hooks` command.
 
 ### SlashCommands
-- -
+- Yes
+  - Built-in commands: `/statusline`, `/wrapped`, `/settings`, `/hooks`. Tab auto-completion for custom commands.
+
+### Skills
+- Yes
+  - Auto-included Skill tool in custom droids. LLM-powered auto-generation of custom droids for specialized tasks.
 
 ### Custom Modes
 - Yes
-  - Interactive mode for chat-based assistance
-  - Droid Exec: Headless mode for automation
+  - Interactive mode (chat-first REPL) and Droid Exec (headless single-shot for CI/CD). Spec mode presents multiple implementation options.
 
 ### Subagents
 - Yes
-  - Specialized droids for different tasks
+  - Custom droids enabled by default. Specialized types: Reliability Droid (incidents), Product Droid (tickets/PM), Knowledge Droid (codebase analysis), Tutorial Droid (onboarding).
 
 ## Ungrouped Criteria
 

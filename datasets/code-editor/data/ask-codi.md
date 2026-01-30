@@ -7,8 +7,8 @@ AI-assisted coding assistant and unified LLM gateway for developers
 - Code/Editor
 
 ### Version
-- Unknown (last checked 2025-10-18)
-  - Web service with continuous updates; no public version releases
+- Rolling updates (cloud service)
+  - Supports 300,000+ developers; continuous updates with model additions (GPT-4.5, Claude 4, Gemini 2.5 Pro/Flash, Llama 4, Mistral Medium, Qwen 2, Deepseek-Coder).
 
 ### Repo
 - https://github.com/askcodi
@@ -39,7 +39,7 @@ AskCodi is an AI-powered coding assistant and OpenAI-compatible LLM gateway deve
 - Caveats: not open-source and primarily cloud-based; enterprise/local deployment and exact BYOK/local-offline capabilities should be confirmed against AskCodi's current documentation or sales/enterprise channels for sensitive or regulated environments.
 
 ### Last Update
-- 2025-10-18
+2026-01-30
 
 ## Licensing
 
@@ -47,7 +47,7 @@ AskCodi is an AI-powered coding assistant and OpenAI-compatible LLM gateway deve
 - No
 
 ### License
-Proprietary
+- Proprietary
 
 ### Free Trial
 - Yes
@@ -69,6 +69,9 @@ Proprietary
 ### Resources
 - Yes
   - Documentation and guides on askcodi.com, an OpenAI-compatible API, GitHub repositories for editor extensions (e.g., Sublime), and marketplace listings (VS Code, Package Control).
+
+### ACP
+- No
 
 ## Deployment
 
@@ -117,6 +120,9 @@ Proprietary
 ### SlashCommands
 - No
   - There is no clear, public reference to a Slack-style or chat-slash-command system in AskCodi's public docs. IDE integrations do expose commands via editor command palettes, but an explicit "slash command" interface in the chat is not documented.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

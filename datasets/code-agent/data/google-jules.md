@@ -8,15 +8,15 @@ Google's 2025 cloud-centric coding agent that combines autonomous coding capabil
 - Code/Autonomous agent
 
 ### Version
-- Unknown (2025)
+- GA (August 2025); powered by Gemini 2.5 Pro; Jules Tools CLI launched October 2025
 
 ### Repo
 - N/A
   - Proprietary model; no public repository found.
 
 ### Rating
-- N/A
-  - No public aggregated review score found.
+- [4] Strong asynchronous autonomous coding with deep Google ecosystem integration
+- [4] Powered by Gemini 2.5 Pro; 140,000+ code improvements shared in beta; proactive task discovery
 
 ### Short Description
 - Cloud-centric AI coding agent from Google with autonomous capabilities and deep integration with Google Cloud and workspace services.
@@ -34,9 +34,10 @@ Google Jules is a 2025 release representing Google's entry into autonomous AI co
 - 2025 preview: Announced and previewed in 2025 with gradual rollout.
 - Enterprise focus: Designed with enterprise development workflows in mind.
 - Workflow automation: Can automate repetitive development tasks and processes.
+- 2025-2026 Update: Reached GA in August 2025 after beta at Google I/O (May 2025). Powered by Gemini 2.5 Pro. Asynchronous operation in secure Google Cloud VMs (tasks complete while user is disconnected). 140,000+ code improvements shared during beta. Proactive capabilities: scans repos for #TODO comments, proposes follow-on work, supports scheduled recurring tasks. Event-driven Render integration (auto-fixes deployment failures). Memory feature retains user preferences and corrections. Code review capabilities added. Jules Tools CLI launched October 2025 with public API. Pricing: Free (15 tasks/day), AI Pro ($19.99/mo, 5x), AI Ultra ($124.99/mo, 20x). Multimodal: displays visual outputs from web apps. GitHub integration for repo analysis and PR creation.
 
 ### Last Update
-- 2025
+- 2026-01-30
 
 ## Licensing
 
@@ -62,6 +63,9 @@ Google Jules is a 2025 release representing Google's entry into autonomous AI co
 
 ### Resources
 - Yes
+
+### ACP
+- No
 
 ## Deployment
 

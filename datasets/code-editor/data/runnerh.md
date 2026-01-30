@@ -7,7 +7,8 @@ A web-focused autonomous agent that executes multi-step tasks via natural langua
 - Code/Autonomous agent (Web Automation)
 
 ### Version
-v0.9 (2024-05)
+- Public Beta (2025; free during beta period)
+  - Backed by $220M in funding
 
 ### Repo
 -
@@ -35,11 +36,11 @@ Runner H (from H Company) is an "action-oriented" autonomous web agent designed 
 - Integrations: native connectors for common productivity apps reported (e.g., Google Workspace, Slack, Notion) and extensibility via connectors like Zapier for additional app workflows.
 - Use cases: data extraction across sites, automated form filling and onboarding, multi-site workflows (e-commerce, lead enrichment), and automated testing scenarios that require visual validation.
 - Limitations: early-stage product with limited public SDK/repo; cloud-hosted—which may pose data residency or BYOK concerns for some organisations. Pricing and enterprise controls were evolving during early launches.
-- Related projects: H Company also released Tester H (an AI testing agent) and Holo-1 (open-source VLM) which are part of the same ecosystem.
+- Related projects: H Company also released Tester H (an AI testing agent), Holo-1 (open-source VLM, also called Holo One), and the open-source Surfer H framework for web-native automation.
+- 2025-2026 updates: Runner H moved to public beta (free during beta period); powered by Holo One proprietary VLM family (smaller, specialized models reported to outperform Anthropic Computer Use on WebVoyager benchmark); $220M total funding backing H Company; parallel task processing enables enterprise-scale automation; self-healing automation adapts to UI changes without manual intervention; architecture refined to Policy (action planning), Localiser (coordinate prediction), and Validator (completion confirmation) modules.
 
 ### Last Update
-2025-11-15
--
+2026-01-30
 
 ## Licensing
 
@@ -74,6 +75,9 @@ Runner H (from H Company) is an "action-oriented" autonomous web agent designed 
 - Yes
   - Published materials and docs for Holo-1 (open-source VLM) plus product docs and connector guides for Runner H (limited public SDK during early releases).
   - Cloud-hosted APIs and connector endpoints used as runtime resources; some enterprise customers reported integration guides and onboarding docs.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -116,6 +120,9 @@ Runner H (from H Company) is an "action-oriented" autonomous web agent designed 
 ### SlashCommands
 - Yes
   - The platform supports reusable workflows/recipes (templates) that can be invoked on demand. These workflows can be triggered from the Runner H UI or via integrated apps (for example, Slack commands or scheduled jobs through connectors). Users can save common multi-step automations and re-run them as shorthand commands.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

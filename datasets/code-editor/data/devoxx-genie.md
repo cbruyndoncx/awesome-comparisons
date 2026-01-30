@@ -7,7 +7,8 @@ An AI assistant plugin for IntelliJ IDEA that can use both local and cloud LLMs.
 - Code/Editor
 
 ### Version
-v0.x (initial releases 2024)
+- v0.4.0+ (2024-2025)
+  - RAG introduced in v0.4.0; MCP support added; web search via Google/Tavily; GraphRAG planned.
 
 ### Repo
 - https://github.com/devoxx/DevoxxGenieIDEAPlugin
@@ -36,9 +37,12 @@ DevoxxGenie is an IntelliJ IDEA plugin (100% Java-based) that provides an LLM-po
 - Requirements: Requires JDK 17+ and IntelliJ IDEA 2023.3.4+ (or compatible recent versions).
 - Use cases: Code explanation, unit-test generation, code review/suggestions, natural-language code search, debugging with screenshots, and project-aware Q&A.
 - Good fit for teams that need local/offline LLM execution or want flexible model selection inside IntelliJ.
+- Web search: built-in web search via Google or Tavily for querying external knowledge.
+- GraphRAG: planned feature for enhanced code relationship understanding.
+- PSI context: Program Structure Interface support (v0.1.14+) for smarter prompt context using IntelliJ's syntactic/semantic code model.
 
 ### Last Update
-- 2025-08-06 (v0.7.0 release)
+2026-01-30
 
 ## Licensing
 
@@ -68,6 +72,9 @@ DevoxxGenie is an IntelliJ IDEA plugin (100% Java-based) that provides an LLM-po
 ### Resources
 - Yes
   - Project README and JetBrains Marketplace listing provide usage docs and release notes. Community videos and blog posts (Devoxx talks, YouTube demos) supplement official docs.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -121,6 +128,9 @@ DevoxxGenie is an IntelliJ IDEA plugin (100% Java-based) that provides an LLM-po
 - Yes
   - Supports prompt-style slash commands from the input field (notably `/init` to create a DEVOXXGENIE.md project descriptor).
   - Commands and shortcuts are entered directly in the chat input and can be combined with context selections (files, images, project scanner options).
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

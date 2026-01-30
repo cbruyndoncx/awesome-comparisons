@@ -7,8 +7,7 @@ A terminal-native, open-source AI coding assistant that brings LLM-powered code 
 - Code/Terminal
 
 ### Version
-- Unknown (2025-10-19)
-  - Version information not available; check repository for current version
+v1.1.44 (2026-01-30)
 
 ### Repo
 - https://github.com/sst/opencode
@@ -37,7 +36,7 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
 - Main website: https://opencode.ai — repo and docs live at https://github.com/sst/opencode
 
 ### Last Update
-2025-10-19
+2026-01-30
 
 ## Licensing
 
@@ -75,6 +74,9 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
   - Official docs and usage guides: https://opencode.ai/docs
   - Repository with examples, configuration and adapters: https://github.com/sst/opencode
   - Community and changelog available via the repo's issues and releases pages.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -118,6 +120,10 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
 ### SlashCommands
 - Yes
   - OpenCode provides slash-style commands for common workflows (examples include `/init` to analyze a repo, `/undo` and `/redo` to revert or restore changes). Users can create custom commands/prompts to speed repetitive interactions.
+
+### Skills
+- Yes
+  - Extensible via custom actions/skills. Skills and actions act as specialized capabilities that can be added for domain-specific tasks and reused across sessions.
 
 ### Custom Modes
 - Yes

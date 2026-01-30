@@ -7,8 +7,8 @@ Open-source, low-code internal app builder with visual drag-and-drop authoring, 
 - Product/Prototyping
 
 ### Version
-- Unknown (2025-10-19)
-  - Check https://github.com/ToolJet/ToolJet for current version
+- SaaS + Self-hosted (actively maintained, 2025-2026)
+  - 60+ pre-built templates, 60+ data source connectors, AI app generation, Agent Builder
 
 ### Repo
 - https://github.com/ToolJet/ToolJet
@@ -68,10 +68,10 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
   - Official site: https://www.tooljet.com/
   - Docs: https://docs.tooljet.com/
   - GitHub: https://github.com/ToolJet/ToolJet
+- 2025-2026 updates: Leading open-source low-code platform for internal tools as of 2026. 60+ pre-built templates for dashboards, CRMs, inventory management, and project management. Natural language AI app generation creates product specs, databases, and functional apps from prompts. AI copilots for debugging and logic creation. Built-in PostgreSQL no-code database. Cloud pricing from $79/builder/month; self-hosted free. Emeritus case study: 50% dev time reduction, 600+ hours saved. Infear.org: 7 apps built with 9 data sources, 60+ days saved. Competes favorably with Bubble, Appsmith, and OutSystems for customization-focused teams.
 
 ### Last Update
-- 2025-11-15
-  - Note: This date may reflect documentation update; actively maintained open-source project
+- 2026-01-30
 
 ## Licensing
 
@@ -103,6 +103,9 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
   - Official docs: https://docs.tooljet.com/
   - GitHub repo and examples: https://github.com/ToolJet/ToolJet
   - Community tutorials, sample apps, and videos demonstrating AI features and prompt examples.
+
+### ACP
+- No
 
 ## Deployment
 

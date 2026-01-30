@@ -7,16 +7,16 @@ A desktop AI coding assistant that exposes a ChatGPT-powered chatbot for working
 - Product/Prototyping
 
 ### Version
-- Unknown (last checked 2025-11-15)
-  - No version information found in public documentation; recommend checking vendor site for current version
+- v7.0.45 (2025-06-01)
+  - Major prior release: v6.4 (2025-01-22). Reworked chat context system, LLM Apply system, grep search tool, undo/checkpoint functionality
 
 ### Repo
 - N/A
   - Proprietary desktop application; no public repository found
 
 ### Rating
-- N/A
-  - No public aggregated review score found; project is a niche desktop tool with limited public reviews.
+- [4] Strong local-first privacy with BYOK model; autonomous agentic codebase understanding; 10,000+ users
+- [3] Niche desktop tool with limited public documentation and no formal plugin/extension system
 
 ### Short Description
 A desktop, local-first AI coding assistant (chat-driven) that reads and edits local code, runs shell commands, integrates with Git, and can translate natural language to SQL.
@@ -34,10 +34,10 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 - Open-source status: No authoritative indication that the desktop app is open source. There is an unrelated community project named codecompanion.nvim (a Neovim plugin) on GitHub; do not confuse the two.
 - Documentation: Public, authoritative documentation or an official product site with detailed specs/pricing was not discovered in the sources I reviewed. Recommend checking the vendor domain (https://codecompanion.ai) and any official docs or contact channels for the latest details before deployment or purchase.
 - Research summary based on multiple third-party write-ups and product summaries; authoritative vendor documentation and pricing were not found in the search results available.
+- 2025-2026 updates: v7.0.45 released June 2025. Reworked chat context system to align with LLM format expectations, fixing infinite looping and invalid tool call issues. LLM Apply system replaces diff-based changes with cursor-style methodology using separate cheaper model for applying changes. Grep search tool added. Project-wide undo/checkpoint functionality. Better embeddings for code search and file suggestions. o3-mini model support. Auto-linting for 14+ languages. Over 10,000 users.
 
 ### Last Update
-- 2025-11-15
-  - Note: This date may reflect documentation update; verify current product status on vendor site
+- 2026-01-30
 
 ## Licensing
 
@@ -70,6 +70,9 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 - Yes
   - Integrated resources reported: embedded terminal, browser/preview for documentation, and the ability to scan and index local project files for context.
 
+### ACP
+- No
+
 ## Deployment
 
 ### BYOK
@@ -99,19 +102,19 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 ## Extensible
 
 ### Plugins
-- Unknown
-  - No public documentation found regarding plugin extensibility; recommend checking vendor docs
+- No
+  - No public documentation found regarding plugin extensibility
 
 ### Hooks
-- Unknown
+- No
   - No public documentation found regarding lifecycle hooks or event system
 
 ### SlashCommands
-- Unknown
-  - Chat-based interface is primary interaction method; slash command support not documented in available sources
+- No
+  - Chat-based interface is primary interaction method; no slash command support documented
 
 ### Custom Modes
-- Unknown
+- No
   - No public documentation found regarding user-definable custom modes
 
 

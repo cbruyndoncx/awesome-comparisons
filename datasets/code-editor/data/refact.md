@@ -7,8 +7,8 @@ An open-source autonomous AI coding assistant with RAG-powered completions and i
 - Code/Editor
 
 ### Version
-- Unknown (last checked 2025-10-19)
-  - Check GitHub releases for current version
+- v6.0.2 (JetBrains plugin; last checked 2026-01)
+  - Active releases on GitHub; JetBrains 6.0.2 added RustRover support
 
 ### Repo
 - https://github.com/smallcloudai/refact
@@ -36,9 +36,10 @@ Refact.ai is an open-source AI coding assistant and autonomous engineering agent
 - Benchmarking: ranks highly on SWE-bench (verified) for AI code agents in pass@1 and multimodal tasks.
 - Pricing model: Free tier (e.g., initial "coins" allocation such as 5,000), Pro plans and Enterprise plans with additional features and on-prem support.
 - Security & privacy: Self-hosted option allows code to remain inside your network; BYOK gives control over which LLMs and keys are used.
+- 2025 updates: ranked #1 open-source AI agent on SWE-bench Verified for end-to-end multi-step engineering tasks; JetBrains plugin v6.0.2 added RustRover IDE support; autonomous agent can now plan, execute, and deploy code as an end-to-end engineering teammate; freemium model with initial coins allocation (e.g., 5,000 coins on free tier).
 
 ### Last Update
-- 2025-06-17 (latest public release: server/v1.11.2)
+2026-01-30
 
 <!-- Note Date last updated -->
 
@@ -54,6 +55,8 @@ Refact.ai is an open-source AI coding assistant and autonomous engineering agent
 - Yes
 
 ## MCP-Client
+
+### MCP-Client
 - Yes
   - Refact.ai includes support for the Model Context Protocol (MCP) ecosystem. The platform can act as an MCP client/consumer to request structured context from MCP servers and to integrate external tools and data sources into agent workflows. MCP integration enables richer, streamable, and structured context delivery (e.g., database rows, code search results, tool outputs) to the agent, improving grounding and long-context operations.
   - Implementation notes:
@@ -81,6 +84,9 @@ Refact.ai is an open-source AI coding assistant and autonomous engineering agent
 - Yes
   - Refact.ai uses RAG with a repo index and symbol-aware retrieval to ground responses in repository files; it also supports external knowledge connectors and searchable indexes.
   - Documentation, example configs, and deployment guides are provided in the project's GitHub repository and self-hosting docs.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -131,6 +137,9 @@ Refact.ai is an open-source AI coding assistant and autonomous engineering agent
 - Yes
   - Refact.ai exposes a set of in-chat @-commands (functionally equivalent to slash commands) such as @web, @file, @definition, @references, and @tree to trigger reusable behaviors and context attachments.
   - Users can create and reuse custom system prompts and prompt templates inside the workspace to replicate common command-like workflows.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

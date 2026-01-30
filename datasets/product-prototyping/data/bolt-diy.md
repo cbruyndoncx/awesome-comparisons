@@ -7,7 +7,8 @@ Bolt.diy is an open-source, model-agnostic AI-assisted development platform for 
 - Product/Prototyping
 
 ### Version
-v1.0 (2025-10-19)
+- v1.0+ (2025-10-19)
+  - 19+ AI provider integrations; Electron desktop app; Supabase integration; file locking and diff view
 
 ### Repo
 - https://github.com/stackblitz-labs/bolt.diy
@@ -34,11 +35,11 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 - Uses StackBlitz WebContainers for a full browser-based dev environment with NPM support and hot reload.
 - Installation paths: Cloud (browser), Local (Node.js + pnpm), Docker.
 - Good for prototyping, migrating legacy apps, and experimenting with multiple LLMs.
-- Export options: ZIP export, deploy to Netlify/Cloudflare, Docker image.
+- Export options: ZIP export, deploy to Netlify/Cloudflare/Vercel, Docker image.
+- 2025-2026 updates: Electron desktop app released for native experience. 19+ AI providers now supported including OpenAI, Anthropic, Ollama, OpenRouter, Gemini, DeepSeek, Groq, Cohere, Together, Perplexity, HuggingFace, and more. Supabase integration for database management. File locking system, diff view, voice prompting, and bulk chat operations added. Expo/React Native mobile dev support. Roadmap includes backend agent architecture migration, VSCode integration, and Azure OpenAI/Vertex AI providers.
 
 ### Last Update
-- 2025-11-15
-  - Note: This date may reflect documentation update rather than product release; actively maintained open-source project
+- 2026-01-30
 
 ## Licensing
 
@@ -68,6 +69,9 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 ### Resources
 - Yes
   - MCP Resources expose file-like and API-backed data (files, API responses, DB results). Integrations (e.g., Supabase) surface as MCP resources.
+
+### ACP
+- No
 
 ## Deployment
 

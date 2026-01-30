@@ -8,7 +8,7 @@ AI-native developer platform that generates living documentation, code explanati
 - Code/Autonomous agent
 
 ### Version
-N/A
+SaaS platform (Pro plans from $15/month; continuous updates)
 
 ### Repo
 -
@@ -35,10 +35,11 @@ The platform is positioned for both individual developer workflows (autocomplete
 ### Notes
 - Key features: AI-generated living wiki, code chat / Q&A, architecture diagrams, code transforms/refactors, citations to code lines, notifications on code changes, editable AI docs, prompt-driven code edits, upcoming test-generation features reported.
 - Integrations: Reported integrations include VS Code, GitHub, Jupyter, and a CLI for local workflows.
-- Pricing: Not publicly listed in detail; offers standard and enterprise tiers with on-prem/enterprise support — contact sales for pricing.
+- Pricing: Free tier for open-source projects; Pro plans from $15/month; Enterprise with custom pricing and on-prem options.
+- 2025-2026 Update: Platform continues to focus on AI-native code documentation (Auto Wiki), codebase Q&A, and automated code transformations. Integrations with VS Code, GitHub, Jupyter, and CLI remain core. Custom model training on team codebases available for enterprise. Compliance checking for enterprise standards added. Developer reception positive, with users reporting it is "smarter than Copilot" for contextual code understanding. No specific version numbers published; SaaS delivery model.
 
 ### Last Update
-2025-11-15
+2026-01-30
 
 ## Licensing
 
@@ -54,8 +55,8 @@ The platform is positioned for both individual developer workflows (autocomplete
 ## MCP-Client
 
 ### MCP-Client
-- Unknown
-  - No public documentation found indicating Model Context Protocol (MCP) support.
+- No
+  - No public documentation found indicating Model Context Protocol (MCP) support as of January 2026.
 
 ### Prompts
 - Yes
@@ -69,11 +70,14 @@ The platform is positioned for both individual developer workflows (autocomplete
 - Yes
   - Public documentation, API/CLI, IDE extensions (VS Code), and integration guides are available to onboard and integrate MutableAI into development workflows.
 
+### ACP
+- No
+
 ## Deployment
 
 ### BYOK
-- Unknown
-  - No public documentation found regarding BYOK support; enterprise deployment options may vary.
+- No
+  - No public documentation found regarding BYOK support; enterprise deployment options may include custom model configurations.
 
 ### Local Offline
 - No

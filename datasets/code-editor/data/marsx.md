@@ -7,8 +7,8 @@ A development platform that blends AI, no-code/low-code and traditional pro-code
 - Code/Editor
 
 ### Version
-- Unknown (last checked 2024)
-  - No public version number documented
+- Unknown (last checked 2025)
+  - No public version number documented; platform continuously updated
 
 ### Repo
 - https://github.com/MarsX-dev/devhunt
@@ -34,14 +34,15 @@ MarsX is an open-source development platform and marketplace that combines AI as
 - Marketplace model: micro-apps are contributed by third-party developers and may be free or premium; this enables rapid assembly but introduces variability in quality and licensing.
 - Ideal for startups, rapid prototypes, and teams that want to combine visual editing with direct code access.
 - Considerations: reliance on the MarsX ecosystem for micro-apps can create lock-in for large projects; evaluate individual micro-app licenses and security posture for production use.
-- Usefull links:
+- 2025 updates: platform continues to expand Micro-App marketplace and enhance AI-powered development workflows; AI capabilities being extended beyond UI generation toward automated debugging and security analysis.
+- Useful links:
   - https://marsx.dev/ 
   - https://github.com/MarsX-dev
   - https://github.com/MarsX-dev/devhunt
 
 ### Last Update
-- 2024-10-01
-  - Verified project and website activity during 2024 (GitHub devhunt repo and official site updated in 2024)
+2026-01-30
+  - Verified project and website activity (GitHub devhunt repo and official site active through 2025)
 
 ## Licensing
 
@@ -76,10 +77,13 @@ MarsX is an open-source development platform and marketplace that combines AI as
   - GitHub: https://github.com/MarsX-dev/devhunt
   - Documentation and examples available on the site and repo; community contributions and marketplace micro‑apps provide additional resources.
 
+### ACP
+- No
+
 ## Deployment
 
 ### BYOK
-- Unknown
+- No
   - No public documentation found for bring-your-own-key support; platform uses integrated AI services
 ### Local Offline
 - No
@@ -125,6 +129,9 @@ MarsX is an open-source development platform and marketplace that combines AI as
 ### SlashCommands
 - Unknown
   - There's no explicit public documentation indicating the presence of a slash-command interface inside the MarsX IDE or chat interfaces. The platform does have a conversational AI interface for Micro‑App interactions, but whether it supports user-defined slash commands is not documented.
+
+### Skills
+- No
 
 ### Custom Modes
 - Unknown

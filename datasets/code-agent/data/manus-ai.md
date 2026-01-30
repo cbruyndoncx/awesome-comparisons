@@ -8,15 +8,15 @@ World's first fully autonomous AI agent from Chinese startup Monica.im. Launched
 - Code/Autonomous agent
 
 ### Version
-- 1.0 (2025-03)
+- 1.6 (2025-2026; Manus Max variant added)
 
 ### Repo
 - N/A
   - Proprietary model; no public repository found.
 
 ### Rating
-- N/A
-  - No public aggregated review score found.
+- [4] First fully autonomous AI agent with strong GAIA benchmark results (86.5% accuracy)
+- [4] Asynchronous cloud-based operation with multi-agent architecture (100+ sub-agents)
 
 ### Short Description
 - Fully autonomous AI agent with sandboxed execution environment featuring browser, Python interpreter, file system, and terminal access for independent task planning and execution without human supervision.
@@ -39,9 +39,10 @@ Manus AI is recognized as the world's first fully autonomous AI agent, developed
 - Monica.im: Developed by Chinese AI startup specializing in autonomous agents.
 - Invitation-only beta: Currently requires waitlist approval with use case description.
 - Launched March 2025 with strong benchmark results.
+- 2025-2026 Update: Manus 1.6 released with Manus Max (more powerful agent variant), mobile development support (beyond web apps), Design View for interactive image creation, and enhanced UI aesthetics. Asynchronous cloud operation allows users to disconnect while tasks complete in background. Memory and adaptive learning added (retains user preferences across sessions). CEO announced plans to release agentic foundation models under open-source license. Platform expanded beyond coding to serve business analysts, researchers, marketers, and customer service teams. Still invitation-only beta access.
 
 ### Last Update
-- 2025-03
+- 2026-01-30
 
 ## Licensing
 
@@ -67,6 +68,9 @@ Manus AI is recognized as the world's first fully autonomous AI agent, developed
 
 ### Resources
 - Yes
+
+### ACP
+- No
 
 ## Deployment
 

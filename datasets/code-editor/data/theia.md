@@ -7,7 +7,8 @@ Eclipse Theia: a modular, extensible, open-source IDE framework for desktop and 
 - Code/Editor
 
 ### Version
-v1.65 (2025-10-19)
+- v1.66 (2025-11-13)
+  - Agent Mode support with multiple operational modes (edit/agent, plan/act); slash commands with autocomplete; Project Info Agent; Claude Code integration via official Agent SDK; proxy configuration for corporate firewalls; VS Code API v1.105.0 compatibility; Electron 38.4.0.
 
 ### Repo
 - https://github.com/eclipse-theia/theia
@@ -34,11 +35,11 @@ Eclipse Theia is an open-source, modular IDE framework maintained under the Ecli
 - Governance: Backed by the Eclipse Foundation which provides vendor-neutral stewardship.
 - Use cases: Organizations that need a customizable, self-hosted IDE with strong extension and AI-integration options (especially where data control and on-prem deployment matter) will find Theia well-suited.
 - Caveats: While AI features advanced rapidly in 2025, some integrations and workflows remain actively evolving—evaluate maturity for critical production use and test the specific provider/model setup you plan to use.
+- v1.66 (Nov 2025): Agent Mode support (multiple operational modes per agent, e.g., edit/agent, plan/act via dropdown or Shift+Tab); slash commands with autocomplete in chat; Project Info Agent (discovers .copilot-instructions.md, Claude.md, etc.); Coder Agent flexible content replacer; Claude Code integration migrated to official Agent SDK; proxy configuration for corporate firewalls; SCANOSS integration for AI-generated code license compliance; configurable Orchestrator agent exclusion list; enhanced authentication handling.
+- VS Code API compatibility: v1.105.0; Electron 38.4.0.
 
 ### Last Update
-<!-- ToDo -->
-<!-- Note Date last updated -->
--
+2026-01-30
 
 ## Licensing
 
@@ -69,6 +70,9 @@ Eclipse Theia is an open-source, modular IDE framework maintained under the Ecli
 ### Resources
 - Yes
   - Theia maintains documentation, example extensions, and release notes in its GitHub repo and website. Theia AI includes sample prompt fragments, agent examples, and integration guides for common LLM providers and deployment scenarios.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -115,6 +119,9 @@ Eclipse Theia is an open-source, modular IDE framework maintained under the Ecli
 ### SlashCommands
 - Yes
   - Theia has a first-class commands system. Extensions declare commands via CommandContribution and register handlers with CommandRegistry; commands appear in the Command Palette and can be bound to keybindings or menus. Users can manually trigger commands from the palette, context menus, or keybindings. Commands can be enabled/disabled via context expressions and can execute either frontend logic or delegate work to the backend/container.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

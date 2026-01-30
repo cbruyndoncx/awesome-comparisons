@@ -7,8 +7,8 @@ AI-assisted code generator focused on WordPress development: generates PHP/JS sn
 - Product/Prototyping
 
 ### Version
-- Unknown (2025-10-19)
-  - Proprietary SaaS product; version information not publicly available
+- v2.5+ (2024-2025)
+  - Continuously updated SaaS; new AI modes added weekly. IDE integrations with VS Code, PhpStorm, JetBrains
 
 ### Repo
 -
@@ -52,10 +52,10 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
   - https://codewp.ai/
   - https://codewp.ai/snippets/
   - CodeWP v2.5 release notes / walkthroughs (public posts and videos, 2024-2025)
+- 2025-2026 updates: Continued expansion of WordPress-specific AI modes added weekly for WooCommerce, Elementor, ACF, WPForms, Gravity Forms, and more. IDE integrations with VS Code, PhpStorm, and JetBrains for inline code checks. CI/CD integration for automated code review during deployment. WordPress Coding Standards compliance in generated output. Generates plugin boilerplates, folder structures, webhooks, custom post types, and complete plugins. Conversational AI assistant for debugging and code explanation. Pricing updated: Free plan (10-20 generations/month), Pro from $18/month (annual) or $96/year.
 
 ### Last Update
-- 2025-11-15
-  - Note: This date may reflect documentation update; actively maintained SaaS product
+- 2026-01-30
 
 ## Licensing
 
@@ -91,6 +91,9 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
   - Searchable snippets library: https://codewp.ai/snippets/
   - Documentation and tutorials on the CodeWP site
   - Public walkthroughs and release notes for major updates (v2.5+)
+
+### ACP
+- No
 
 ## Deployment
 

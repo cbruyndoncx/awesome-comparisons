@@ -14,7 +14,7 @@ VSCode extension for AI-powered code explanations and learning. New in 2025, foc
 - -
 
 ### Rating
-- -
+- [3] Niche code explanation tool; useful for learning but limited compared to full AI coding assistants
 
 ### Short Description
 - VSCode extension providing AI-powered code explanations and learning assistance for developers.
@@ -33,7 +33,7 @@ GPTutor is a Visual Studio Code extension launched in 2025 that specializes in e
 - Useful for codebase exploration and understanding legacy code.
 
 ### Last Update
-- 2025
+2026-01-30
 
 ## Licensing
 
@@ -59,6 +59,9 @@ GPTutor is a Visual Studio Code extension launched in 2025 that specializes in e
 
 ### Resources
 - Yes
+
+### ACP
+- No
 
 ## Deployment
 
@@ -91,6 +94,9 @@ GPTutor is a Visual Studio Code extension launched in 2025 that specializes in e
 - No
 
 ### SlashCommands
+- No
+
+### Skills
 - No
 
 ### Custom Modes

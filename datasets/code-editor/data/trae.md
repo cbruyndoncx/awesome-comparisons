@@ -7,8 +7,8 @@ A modern AI-powered IDE and coding assistant ("The Real AI Engineer") focused on
 - Code/Editor
 
 ### Version
-- v1.3.0 (2025-04)
-  - Released April 2025 with MCP support and Builder/SOLO enhancements
+- v1.3.0+ (2025, rolling releases)
+  - v1.3.0 (Apr 2025) added MCP support and Builder/SOLO enhancements; active development continues with frequent updates
 
 ### Repo
 -
@@ -16,7 +16,7 @@ A modern AI-powered IDE and coding assistant ("The Real AI Engineer") focused on
 ### Rating
 - [5] Strong end-to-end workflow and multimodel access
 - [4] Excellent web/dev tooling and deployment integration
-- [4] Rapid feature development but proprietary with privacy considerations
+- [3] Rapid feature development but proprietary with significant telemetry/privacy concerns (ByteDance); data collection reportedly active even when disabled in settings
 
 ### Short Description
 
@@ -35,9 +35,11 @@ Trae is an AI-first IDE intended to act as a full software engineering partner r
 - Supports multimodal inputs (screenshots, design assets) to inform coding and debugging.
 - Privacy/Trust considerations: Proprietary product with cloud-hosted model usage — review organizational policy before use in sensitive codebases.
 - Competitive positioning: Targets Cursor and GitHub Copilot users but differentiates on zero-cost premium-model access, autonomous agent flows, and built-in deployment tooling.
+- Privacy/Telemetry concerns: Independent analysis revealed extensive telemetry with persistent connections to ByteDance domains, device fingerprinting via machineId, behavioral tracking, and data collection reportedly active even when telemetry is disabled in settings. Subject to Chinese data regulations via parent company ByteDance (operated by Singapore-based SPRING(SG) PTE.LTD.).
+- 2025-2026 updates: TRAE CN Enterprise Edition launched supporting massive repos (up to 10 million files, 1.5 billion lines of code) with millisecond-level GPU-cluster-backed response times. Customizable agent system with MCP integrations (e.g., Figma connection for UI-aware development). Integrated webview for in-IDE web page display. Windows version in development (Mac available). Bilingual interface (English + Simplified Chinese).
 
 ### Last Update
-- 2025-04-22 (v1.3.0 release; MCP support, Builder/SOLO enhancements)
+2026-01-30
 
 ## Licensing
 
@@ -70,6 +72,9 @@ Trae is an AI-first IDE intended to act as a full software engineering partner r
 ### Resources
 - Yes
   - Trae exposes Resources through MCP servers for project files, indexed codebase snippets, web search (#Web), and persistent project metadata (.rules files). These resources are used to assemble prompts and provide grounding data for agents' planning and code generation.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -113,6 +118,9 @@ Trae is an AI-first IDE intended to act as a full software engineering partner r
 ### SlashCommands
 - Yes
   - [Trae supports natural-language command syntax and special inline/directives (examples reported: @Agent, #Context) and provides chat/command surfaces (sidebar/inline). These act like reusable, user-invoked commands and can be used to scope agent behavior, request specific actions, or switch modes (e.g., invoking Builder or SOLO).]
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

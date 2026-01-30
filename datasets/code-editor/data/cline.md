@@ -7,7 +7,8 @@ Cline is an open-source AI coding assistant implemented as a Visual Studio Code 
 - Code/Editor
 
 ### Version
-- v3.34.1 (2025-10-27)
+- v3.4+ (2025)
+  - MCP Marketplace added February 2025; computer use capabilities (browser interaction via Claude); 300KB file size limit; repository-level custom rules (.clinerules).
 
 ### Repo
 - https://github.com/cline/cline
@@ -34,9 +35,13 @@ Cline is designed to act as a development partner rather than a simple autocompl
 - Memory bank files persist structured context across sessions to help the assistant retain project knowledge.
 - Uses a usage-based model where you supply API keys (BYOK) and pay providers directly.
 - Good fit for developers wanting an integrated AI assistant inside VS Code with extensible tooling and local model support.
+- MCP Marketplace (v3.4): app store for AI capabilities with curated MCP servers for CI/CD, cloud monitoring, project management.
+- Computer Use: can launch browsers to verify implementations, detect errors, and address issues automatically via Claude's computer use capabilities.
+- Custom rules (.clinerules): repository-level rules to standardize development practices across teams.
+- Local models: supports Ollama and LM Studio up to 70B parameters (Qwen3 Coder 30B recommended).
 
 ### Last Update
-- 2025-11-15
+2026-01-30
 
 ## Licensing
 
@@ -69,6 +74,9 @@ Cline is designed to act as a development partner rather than a simple autocompl
 - Yes
   - Official docs at https://cline.bot and extensive README and examples on the GitHub repo
   - CLI, extension, and MCP server examples included in the repository and community-contributed prompts
+
+### ACP
+- No
 
 ## Deployment
 
@@ -122,6 +130,9 @@ Cline is designed to act as a development partner rather than a simple autocompl
 - Yes
   - Cline exposes VS Code commands accessible via the command palette (e.g., open Cline, add a tool, invoke actions) which act as reusable user-triggered commands.
   - The project also documents a CLI reference (docs.cline.bot/cline-cli/cli-reference) for command-line interactions tied to the extension's features.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

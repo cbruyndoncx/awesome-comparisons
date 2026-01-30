@@ -39,10 +39,10 @@ The default generated stacks commonly include React on the frontend and Fastify 
 - Open-source advantage: transparency and ability to self-host or fork the agent and control generated artifacts.
 - Limitations/considerations: depends on remote LLMs and hosted infra; may require reviewing and hardening generated code before using in production; BYOK/enterprise model key options and advanced integrations may require additional configuration.
 - Sources: coverage gathered from platform README and third-party posts about app.build (Neon/Koyeb posts, GitHub repo).
+- 2025-2026 updates: v1.31.3 released July 2025 with FSM-driven workflow, parallel tree-search orchestration, and specialized actor-based subagent architecture. Integrates Anthropic Claude and Google Gemini for code generation. Neon serverless Postgres + Neon Auth for database/auth. Koyeb for serverless deployments. Open-source Apache-2.0 with full GitHub repo output and CI/CD support.
 
 ### Last Update
-- 2025-07
-  - Release series: v1.31.x published in July 2025 (referenced in project release notes / changelog)
+- 2026-01-30
 
 ## Licensing
 
@@ -60,8 +60,10 @@ The default generated stacks commonly include React on the frontend and Fastify 
 ## MCP-Client
 
 ### MCP-Client
-- Unknown
-  - No public documentation found regarding MCP (Model Context Protocol) support.### Prompts
+- No
+  - No public documentation found regarding MCP (Model Context Protocol) client support.
+
+### Prompts
 - Yes
   - app.build's primary UX is a single natural-language prompt (CLI or web) that describes the desired application; the system also uses internal staged prompt templates and guided prompts during generation to produce models, ORM, handlers, and tests.
 
@@ -76,6 +78,9 @@ The default generated stacks commonly include React on the frontend and Fastify 
   - Documentation and README in the repo provide usage examples, stack choices, and CLI/web instructions.
   - Example/template apps and CI/deploy pipeline code are included in the project repo for reference and self-hosting.
   - Community/support via GitHub issues; project may link to additional channels (Discord/Slack) from the repo landing page.
+
+### ACP
+- No
 
 ## Deployment
 

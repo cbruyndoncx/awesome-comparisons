@@ -14,7 +14,8 @@ Fast, lightweight CLI coding utility that brings AI-powered development assistan
 - -
 
 ### Rating
-- -
+- [3] Lightweight CLI with spec-driven development and custom agent support
+- [2] Limited public documentation on extensibility details
 
 ### Short Description
 - Fast, lightweight CLI coding utility designed for terminal-based AI-assisted development workflows.
@@ -33,7 +34,7 @@ Kiro is a new command-line coding utility that focuses on speed and simplicity f
 - Emphasizes developer productivity through simplicity and speed.
 
 ### Last Update
-- 2025
+2026-01-30
 
 ## Licensing
 
@@ -58,6 +59,9 @@ Kiro is a new command-line coding utility that focuses on speed and simplicity f
 - Yes
 
 ### Resources
+- No
+
+### ACP
 - No
 
 ## Deployment
@@ -92,6 +96,10 @@ Kiro is a new command-line coding utility that focuses on speed and simplicity f
 
 ### SlashCommands
 - Yes
+
+### Skills
+- Yes
+  - Progressive context loading: skills load only metadata at startup, full content on demand.
 
 ### Custom Modes
 - No

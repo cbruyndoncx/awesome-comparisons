@@ -8,7 +8,7 @@ Latest coding-focused model from Alibaba's Qwen family, featuring major upgrades
 - AIE/Model
 
 ### Version
-- 2.5 (September 2024), Qwen2.5-Max (January 2025)
+- Qwen3-Max (September 5, 2025); latest snapshot qwen3-max-2026-01-23 (January 2026)
 
 ### Repo
 - https://github.com/QwenLM/Qwen-Code
@@ -43,9 +43,10 @@ In January 2025, Alibaba released Qwen2.5-Max, their most advanced model availab
 - Competition: Positioned against DeepSeek R3, Codestral, Claude Sonnet
 - Open source: Qwen 2.5 Coder series available for local deployment
 - Developer: Alibaba Cloud
+- 2025-2026 Update: Qwen2.5-Max launched January 2025 as MoE model pretrained on 20T+ tokens, outperforming GPT-4o and DeepSeek-V3. Qwen2.5-VL multimodal family released January 2025. Qwen3-Max launched September 5, 2025, outperforming other foundation models. Latest snapshot qwen3-max-2026-01-23 integrates thinking/non-thinking modes with web search, code interpreter, and webpage extraction tools. Supports 92 programming languages and 29 natural languages with 128K context window.
 
 ### Last Update
-- 2025-11-18
+- 2026-01-30
 
 ## Licensing
 

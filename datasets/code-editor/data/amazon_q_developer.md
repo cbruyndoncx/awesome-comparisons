@@ -7,8 +7,8 @@ Amazon Q Developer (sometimes shortened to "Amazon Q") is AWS's developer-facing
 - Code/Editor
 
 ### Version
-- Unknown (last checked 2025-10-19)
-  - AWS service with rolling updates; no traditional version numbers published
+- Rolling updates (AWS managed service)
+  - No traditional version numbers; major agent update April 2025 achieved 66% on SWE-Bench Verified. Build/test validation added January 2025. Enhanced cost management November 2025.
 
 ### Repo
 - https://aws.amazon.com/q/ (service documentation)
@@ -48,7 +48,7 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
 - Related: Amazon CodeWhisperer functionality was consolidated into Amazon Q Developer around April 2024; for legacy references check CodeWhisperer docs (https://aws.amazon.com/codewhisperer/).
 
 ### Last Update
-- 2025-10-19
+2026-01-30
 
 ## Licensing
 
@@ -90,6 +90,10 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
   - Community prompt libraries: Promptz and community repos (e.g., awesome-q-developer) for shared prompts, agents, and rules.
   - Videos & quick-starts: short videos and demos showing setup and common workflows for IDEs like VS Code and JetBrains.
   - Examples & samples: sample projects showing /doc usage, code refactoring, test generation, and transformation workflows.
+
+### ACP
+- No
+
 ## Deployment
 
 ### BYOK
@@ -151,6 +155,9 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
     - /doc: workspace documentation generation (create README, component docs) by analyzing the project.
     - Editor actions exposed via context menus and inline chat (these act like command triggers: Explain, Refactor, Fix, Optimize, Generate Tests, Send to Prompt).
     - AWS Console plugin alias prefixing: in the AWS console chat, prefixing questions with a plugin alias triggers calls to third-party plugin APIs (CloudZero, Datadog, Wiz) and surfaces provider data inline.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

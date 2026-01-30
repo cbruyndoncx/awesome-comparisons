@@ -7,8 +7,8 @@ AI-first code completion assistant focused on very large context windows, low-la
 - Code/Editor
 
 ### Version
-- Unknown (last checked 2025-10-19)
-  - No public version number documented; service may use rolling updates
+- DISCONTINUED (acquired by Cursor ~January 2025)
+  - Supermaven was acquired by Cursor and is being sunset. Existing customers receive full refunds and free autocomplete inference indefinitely. VS Code users are recommended to migrate to Cursor.
 
 ### Repo
 -
@@ -34,9 +34,10 @@ Supermaven is an AI-powered code completion and developer-assistant platform bui
 - Pricing (public tiers, subject to change): Free tier available; Standard plan and Pro plan historically reported at roughly $18/month and $29/month respectively; enterprise plans available for organizations.
 - Best fit: developers and teams working on medium-to-large codebases who need fast, context-rich completions and cross-file reasoning (e.g., refactors, large feature work, legacy code maintenance).
 - Limitations/considerations: proprietary/cloud-hosted service (no confirmed fully offline/self-hosted option), potential privacy and compliance considerations for sensitive code — review enterprise offerings and data handling policies before adoption.
+- STATUS: Acquired by Cursor (~January 2025) and being sunset. Technology integrated into Cursor. Existing customers receive full refunds for remaining usage and free autocomplete inference indefinitely. VS Code users recommended to migrate to Cursor.
 
 ### Last Update
-2025-11-15
+2026-01-30
 -
 
 ## Licensing
@@ -70,6 +71,9 @@ Supermaven is an AI-powered code completion and developer-assistant platform bui
   - Official integrations and documentation pages (site and plugin repositories) provide setup instructions for VS Code, JetBrains and Neovim.
   - Supermaven provides model-selection and account settings inside the editor UI; logs and usage metrics accessible via plugin settings.
   - Code policy and privacy documentation available on the Supermaven website for enterprise customers (review before onboarding sensitive codebases).
+
+### ACP
+- No
 
 ## Deployment
 
@@ -114,6 +118,9 @@ Supermaven is an AI-powered code completion and developer-assistant platform bui
 ### SlashCommands
 - No
   - While the product exposes hotkeys and chat-driven actions (apply-change, show-diff, jump-to-file), there is no widely-documented generic "slash command" system for reusable, user-defined commands in the public docs — behavior is primarily via the chat UI and IDE command palette/hotkeys.
+
+### Skills
+- No
 
 ### Custom Modes
 - No

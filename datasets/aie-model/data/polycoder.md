@@ -45,9 +45,10 @@ PolyCoder was released in multiple sizes (160M, 405M and 2.7B parameters). The 2
 - Requires modern Transformers (4.23+) for out-of-the-box loading; community adapters support LoRA/QLoRA fine-tuning and GGUF quantized deployments.
 - Good choice for on-premise, privacy-sensitive deployments (no external API calls required).
 - Keep expectations realistic: PolyCoder is a 2022-era model and does not match the capabilities of later multi-hundred-billion-parameter code-specialized models, though it remains valuable for C/C++ and systems-level use-cases.
+- 2025-2026 Update: No new official releases. Model remains a 2022-era artifact, superseded by Code Llama 70B, GPT-4o, and other modern code models. Community maintains GGUF quantized builds for llama.cpp and Text-Generation-WebUI. LoRA/QLoRA fine-tuning adapters available. Still valuable for on-premise C/C++ focused deployments with strict privacy requirements. Can be integrated into CI/CD pipelines via Flask/FastAPI wrappers.
 
 ### Last Update
-- 2022-03-01
+- 2026-01-30
 
 
 ## Licensing

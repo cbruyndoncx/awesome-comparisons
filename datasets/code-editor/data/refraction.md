@@ -7,8 +7,8 @@ A small, practical AI assistant for developers focused on refactoring, test gene
 - Code/Editor
 
 ### Version
-- Unknown (last checked 2025-10-19)
-  - Web-based service with continuous updates; no public version releases
+- Unknown (last checked 2026-01)
+  - Web-based SaaS with continuous updates; no public version releases
 
 ### Repo
 -
@@ -34,9 +34,11 @@ Refraction is a web-first AI development assistant (refraction.dev) which helps 
 - Limitations: not open-source, hosted (no obvious offline/local mode), limited real-time in-editor pairing (it’s oriented around discrete generations rather than streaming in-line completions like Copilot), and limited public detail about the exact underlying model(s) (no explicit, verifiable public claim that it runs on a specific third-party model such as OpenAI).
 - Data & privacy: product materials indicate generations and history are stored to provide a History feature; check Refraction's privacy policy / terms for details before sending sensitive code.
 - Use-cases: adding unit tests, documenting legacy code, refactoring for clarity or minor performance improvements, generating regexes and language-to-language snippet translations.
+- 2025-2026 adoption metrics: 13,700+ active developers, 65,100+ code generations, 2.9M+ lines of code generated. Positioned as a specialized AI linting and code review tool in the broader AI coding assistant landscape.
+- Competitive positioning: focused on discrete code tasks rather than full IDE replacement; competes with Cursor, GitHub Copilot, and Replit AI on specific code quality features.
 
 ### Last Update
-- 2025-11-15
+2026-01-30
 
 ## Licensing
 
@@ -67,6 +69,9 @@ Refraction is a web-first AI development assistant (refraction.dev) which helps 
 ### Resources
 - Yes
   - Refraction provides a history feature storing previous generations and may include documentation and usage guides on the web app (refer to refraction.dev for details).
+
+### ACP
+- No
 
 ## Deployment
 
@@ -111,6 +116,9 @@ Refraction is a web-first AI development assistant (refraction.dev) which helps 
 ### SlashCommands
 - No
   - There is no documented support for user-triggered reusable slash-style commands or command palettes exposed by the product.
+
+### Skills
+- No
 
 ### Custom Modes
 - No

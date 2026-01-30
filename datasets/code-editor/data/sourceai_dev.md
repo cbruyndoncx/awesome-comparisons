@@ -7,14 +7,15 @@
 - Code/Editor
 
 ### Version
-- Unknown (last checked 2025-10-19)
-  - No public version number documented
+- Unknown (last checked 2026-01-30)
+  - No public version number documented; web-based SaaS with no published release cadence
 
 ### Repo
--
+- None (proprietary SaaS; no public repository)
 
 ### Rating
-- N/A
+- [2] Simple natural-language-to-code web generator; limited scope and no IDE integration
+- [1] Sparse documentation, unclear pricing, and no visible 2025-2026 feature updates
 
 ### Short Description
 AI web code generator that converts plain-language prompts into runnable code across many programming languages via a simple web UI; proprietary SaaS focused on fast, one-click code generation.
@@ -32,11 +33,10 @@ SourceAI is a web-based AI code generation tool that accepts natural language re
 - Technology: public-facing site indicates use of large language models (public references list GPT-3 / Codex as underlying tech in marketing/third-party summaries).
 - Limitations: public documentation is sparse. There is no clear information on pricing, enterprise features, private model keys (BYOK), repository or IDE integrations, or offline/local deployment options.
 - Example (from site marketing): Python factorial generator for a user-input number (simple, illustrative use case).
+- 2025-2026 status: No significant public feature updates or product announcements identified. The product appears relatively static compared to the rapidly evolving AI code assistant market. Limited community presence and documentation updates.
 
 ### Last Update
-2025-11-15
-
-## Licensing
+2026-01-30
 
 ## Licensing
 
@@ -48,11 +48,13 @@ SourceAI is a web-based AI code generation tool that accepts natural language re
 
 ### Free Trial
 - Unknown
+  - No public pricing or trial documentation found as of 2026-01-30
 
 ## MCP-Client
 
 ### MCP-Client
--
+- No
+  - No evidence of MCP client support; web-only code generator with no IDE or protocol integrations
 
 ### Prompts
 - Yes
@@ -65,6 +67,10 @@ SourceAI is a web-based AI code generation tool that accepts natural language re
 ### Resources
 - No
   - There is no public documentation describing downloadable SDKs, CLIs, or local runtimes. The product appears to be web-hosted-only without published SDKs or resource packages.
+
+### ACP
+- No
+
 ## Deployment
 
 ### BYOK
@@ -93,7 +99,8 @@ SourceAI is a web-based AI code generation tool that accepts natural language re
 ## Extensible
 
 ### Extensible
--
+- No
+  - Web-based code generator with no documented extension or plugin system
 
 ### Plugins
 - No
@@ -106,6 +113,9 @@ SourceAI is a web-based AI code generation tool that accepts natural language re
 ### SlashCommands
 - No
   - The product appears to be a web UI code generator; there is no documentation of reusable slash-style commands or command registries exposed to users.
+
+### Skills
+- No
 
 ### Custom Modes
 - No

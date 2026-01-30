@@ -8,13 +8,15 @@ AI-powered full-stack app builder that generates production-ready applications f
 - Product/Prototyping
 
 ### Version
-- Unknown (2025)
+- 1.0 (2025-09-17)
+  - Multi-model engine: Claude Sonnet 4.5, MiniMax M2.1, Gemini 3.0 Pro, Nano Banana Pro
 
 ### Repo
 - -
 
 ### Rating
-- -
+- [4] Comprehensive full-stack generation with database-first approach and multi-model AI engine
+- [3] Proprietary closed platform with no BYOK or offline support
 
 ### Short Description
 - AI app builder that generates complete full-stack applications from single-sentence descriptions, including database, backend, frontend, and authentication systems.
@@ -36,9 +38,10 @@ Zoer.ai is a comprehensive AI-powered platform launched in September 2025 that b
 - Production-ready: Generates deployable applications with authentication, responsive design, and proper architecture.
 - Vibe coding: Natural language-first approach to application development.
 - Launched September 17, 2025 in Singapore.
+- 2025-2026 updates: Multi-model engine now supports Claude Sonnet 4.5, MiniMax M2.1, Gemini 3.0 Pro, and Nano Banana Pro. Integrations with Lovable, Supabase, and Netlify added. Platform actively discussed in 2026 AI app builder landscape.
 
 ### Last Update
-- 2025
+- 2026-01-30
 
 ## Licensing
 
@@ -64,6 +67,9 @@ Zoer.ai is a comprehensive AI-powered platform launched in September 2025 that b
 
 ### Resources
 - Yes
+
+### ACP
+- No
 
 ## Deployment
 

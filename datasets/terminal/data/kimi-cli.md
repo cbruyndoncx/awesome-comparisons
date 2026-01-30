@@ -16,7 +16,8 @@ Kimi CLI is a command-line coding tool from Moonshot AI that integrates intellig
 - https://github.com/MoonshotAI/kimi-cli
 
 ### Rating
-- -
+- [3] Innovative dual-mode design with 128K context and native ACP/MCP support
+- [2] Technical preview; limited extensibility ecosystem
 
 ### Short Description
 Dual-mode CLI coding assistant from Moonshot AI with 128K context window, supporting both traditional Shell operations and AI agent mode with ACP and MCP protocols.
@@ -40,7 +41,7 @@ The tool features a large 128K token context window, making it suitable for work
 - IDE Integration: Compatible with any ACP-compatible editor or IDE
 
 ### Last Update
-- 2025-11-18
+2026-01-30
 
 ## Licensing
 
@@ -48,7 +49,7 @@ The tool features a large 128K token context window, making it suitable for work
 - Yes
 
 ### License
-- -
+- Apache-2.0
 
 ### Free Trial
 - Yes
@@ -74,13 +75,18 @@ The tool features a large 128K token context window, making it suitable for work
   - Installation via Python/PyPI
   - Documentation in repository
 
+### ACP
+- Yes
+  - Kimi CLI supports the Agent Client Protocol (ACP) by Zed Industries natively, enabling use with any ACP-compatible editor or IDE for standardized editor-agent communication via JSON-RPC over stdio.
+
 ## Deployment
 
 ### BYOK
-- -
+- Yes
+  - Supports API key configuration via Moonshot AI Open Platform.
 
 ### Local Offline
-- -
+- No
 
 ## Developer Experience
 
@@ -93,7 +99,7 @@ The tool features a large 128K token context window, making it suitable for work
 - Yes
 
 ### Checkpoints
-- -
+- No
 
 ### Git Support
 - Yes
@@ -101,21 +107,23 @@ The tool features a large 128K token context window, making it suitable for work
 ## Extensible
 
 ### Plugins
-- -
+- No
 
 ### Hooks
-- -
+- No
 
 ### SlashCommands
-- -
+- No
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes
-  - Dual-mode design: Shell mode and AI agent mode
-  - Toggle between modes with Ctrl-K
+  - Dual-mode design: Shell mode and AI agent mode. Toggle with Ctrl-K.
 
 ### Subagents
-- -
+- No
 
 ## Ungrouped Criteria
 

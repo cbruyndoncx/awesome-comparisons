@@ -7,8 +7,8 @@ AI-powered code completion and developer assistant focused on privacy and enterp
 - Code/Editor
 
 ### Version
-- Unknown (last checked 2025-10-29)
-  - Tabnine uses different versioning for enterprise/cloud deployments; contact vendor for specific version information
+- v5.24.4+ (2025-10-29)
+  - Switchable models (GPT-4o, Claude 4.0 Sonnet, Gemini 2.5 Flash/Pro); Image-to-Code workflow (March 2025); Code Review Agent (April 2025 AI Tech Awards winner); usage API (July 2025); pause-completion controls.
 
 ### Repo
 -
@@ -44,9 +44,9 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
 - Ideal for: regulated industries (finance, healthcare, government, defense) and organizations that need data residency guarantees and enterprise governance.
 
 ### Last Update
-2025-11-15
-- Notable recent releases and highlights: v5.24.4 (2025-10-29) improvements to VS Code binary updates, chat Apply function and Agent robustness; v5.24.0 (2025-10-16) added hybrid search, markdown-from-remote codebase context, switchable/self-hosted model support (Qwen, Gemma), and Podman support. Multiple 2025 releases added SCIM/IdP sync, remote context scope (remote files/folders, terminal), and CSV usage reports.
--
+2026-01-30
+- Notable recent releases: v5.24.4 (2025-10-29) VS Code binary updates, chat Apply, Agent robustness; v5.24.0 (2025-10-16) hybrid search, switchable/self-hosted models (Qwen, Gemma), Podman support. Multiple 2025 releases added SCIM/IdP sync, remote context scope, CSV usage reports.
+- 2025 highlights: Switchable model architecture (GPT-4o, Claude 4.0 Sonnet, Gemini 2.5 Flash/Pro in real-time); Image-to-Code workflow (March 2025, converts UI mockups/flowcharts to React/SQL/Terraform); Code Review Agent (April 2025 AI Tech Awards "Best Innovation in AI Coding"); usage API for granular analytics (July 2025); pause-completion controls; redesigned provenance UI grouping matches by license; Go coaching guidelines.
 
 ## Licensing
 
@@ -78,6 +78,9 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
 ### Resources
 - Yes
   - Tabnine consumes indexed workspace files, open-file contents, remote-repo contexts (when configured), and terminal context (optional). Enterprise/local deployments can restrict which files are indexed and whether content is sent to cloud models; MCP servers can expose additional structured resources.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -129,6 +132,9 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
 - No
 
 ### SlashCommands
+- No
+
+### Skills
 - No
 
 ### Custom Modes

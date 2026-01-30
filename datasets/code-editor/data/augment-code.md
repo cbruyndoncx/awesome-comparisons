@@ -7,7 +7,8 @@ AI-powered developer platform focused on deep codebase understanding and autonom
 - Code/Editor
 
 ### Version
-- Unknown (last checked 2025-10-19)
+- Rolling updates (2025-2026)
+  - Design Mode launched November 2025; 70.6% SWE-bench accuracy; $252M raised.
 
 ### Repo
 - https://augmentcode.com
@@ -16,7 +17,9 @@ AI-powered developer platform focused on deep codebase understanding and autonom
   - https://github.com/augmentcode/review-pr
 
 ### Rating
-- Not publicly available; no aggregated public user rating found.
+- [5] Enterprise-grade AI coding platform with industry-leading SWE-bench accuracy (70.6%)
+- [4] Deep codebase understanding with ~200k token context and autonomous agents
+- [4] Strong security certifications (SOC 2 Type II, ISO 27001, ISO/IEC 42001)
 
 ### Short Description
 - AI-first developer platform for deep codebase understanding, large-context completions (~200k tokens), autonomous agents, and multi-file "Next Edit" workflows.
@@ -29,10 +32,16 @@ Augment Code is an AI-first development platform built to help professional engi
 
 ### Notes
 - Strong focus on enterprise workflows and large monorepos; features include Smart Apply, Next Edit navigation, change checkpoints, persistent memories, and multi-modal inputs (screenshots, Figma).
-- Industry benchmark claims (HWE Bench top-ranked, e.g., 65.4% on HWE)
+- Industry benchmarks: 70.6% SWE-bench accuracy; HWE Bench top-ranked (65.4% on HWE).
+- Autonomous agents operating on Claude Sonnet 4 for 24/7 remote coordination across multiple repositories.
+- Design Mode (November 2025) enables visual development with agents creating interactive designs.
+- Plan Mode performs read-only codebase analysis before making changes.
+- PR review agents detect architectural violations, SQL injection vulnerabilities, and N+1 query problems.
+- Security: SOC 2 Type II, ISO 27001:2022, ISO/IEC 42001:2023 certifications; first AI coding assistant to achieve ISO/IEC 42001 compliance.
+- Pricing: credit-based model from $20/month (Indie) to $200/month (Max) plus enterprise plans.
 
 ### Last Update
-- 2025-10-19
+2026-01-30
 
 ## Licensing
 
@@ -63,6 +72,9 @@ Augment Code is an AI-first development platform built to help professional engi
 ### Resources
 - Yes
   - Public documentation, blog posts, demo materials, and example GitHub repositories under the augmentcode org.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -108,6 +120,9 @@ Augment Code is an AI-first development platform built to help professional engi
 ### SlashCommands
 - Yes
   - The platform supports re-usable, user-triggered commands across interfaces: editor commands (VS Code/JetBrains), CLI/TUI invocations, and chat actions (apply, propose, create checkpoint). These act like reusable operations users can invoke to apply agent capabilities consistently.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

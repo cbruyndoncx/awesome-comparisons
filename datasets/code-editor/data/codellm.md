@@ -14,7 +14,8 @@ AI code editor by Abacus.AI featuring multi-LLM routing and real-time code chat.
 - -
 
 ### Rating
-- -
+- [4] Multi-LLM smart routing with access to all major SOTA models at competitive $10/month pricing
+- [3] Enterprise security (SOC-2, HIPAA) but limited extensibility (no plugins, hooks, or slash commands)
 
 ### Short Description
 - Multi-LLM AI code editor with intelligent model routing, real-time pair programming chat, and enterprise-grade security at $10/month including both chat interface and code editor.
@@ -38,7 +39,7 @@ CodeLLM is a revolutionary AI code editor by Abacus.AI that helps developers 10x
 - Abacus.AI: Enterprise AI platform company specializing in applied AI solutions.
 
 ### Last Update
-- 2025
+2026-01-30
 
 ## Licensing
 
@@ -64,6 +65,9 @@ CodeLLM is a revolutionary AI code editor by Abacus.AI that helps developers 10x
 
 ### Resources
 - Yes
+
+### ACP
+- No
 
 ## Deployment
 
@@ -96,6 +100,9 @@ CodeLLM is a revolutionary AI code editor by Abacus.AI that helps developers 10x
 - No
 
 ### SlashCommands
+- No
+
+### Skills
 - No
 
 ### Custom Modes

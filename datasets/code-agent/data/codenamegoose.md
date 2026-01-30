@@ -8,7 +8,7 @@ Lightweight open-source agent framework for automating development and productiv
 - Code/Autonomous agent
 
 ### Version
-v1.10.3 (2025-10-19)
+v1.18.0 (2025-12-19)
 
 ### Repo
 - https://github.com/block/goose
@@ -32,10 +32,11 @@ Codename Goose is an open-source, on-machine AI agent framework created to autom
 - Primary early use-cases: code generation & migrations, test generation, scaffolding, build/perf automation, and other developer productivity tasks.
 - Strong emphasis on extensibility and preventing vendor lock-in by supporting multiple LLM providers and MCP-based extensions.
 - Adoption and usefulness will depend on the growth of a healthy extension ecosystem (MCP servers) and high-quality recipes for common workflows.
+- 2025-2026 Update: Rapid release cadence from v1.10.3 to v1.18.0 (Dec 2025). v1.18.0 added Agent Client Protocol (ACP) support, multi-model/provider configuration with automatic switching, Tetrate Agent Router streaming, and configurable Bedrock retry settings. v1.7.0 added Linux Computer Control for Android (Termux), Session Sharing, Extension Malware Check, Chat Session List Navigation, Autovisualiser for Structured Data with MCP-UI capabilities, and Compact UX Design. Added nightly release workflow automation, Windows installation docs, airgapped operation guides. Block launched "Advent of AI" community initiative.
 
 ### Last Update
-2025-10-19
-- Released v1.10.3 on 2025-10-19 (per repository release tag).
+2026-01-30
+- Released v1.18.0 on 2025-12-19 (per repository release tag).
 
 ## Licensing
 
@@ -67,6 +68,10 @@ Codename Goose is an open-source, on-machine AI agent framework created to autom
 ### Resources
 - Yes
   - Documentation, example recipes, built-in extensions and a catalog of MCP servers are provided to help bootstrap agent capabilities and integrations.
+
+### ACP
+- Yes
+  - ACP (Agent Client Protocol) support added in v1.18.0; Goose exposes a standardized JSON-RPC over stdio interface for editor-agent communication per the open standard by Zed Industries
 
 ## Deployment
 

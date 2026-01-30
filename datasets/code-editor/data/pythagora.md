@@ -7,11 +7,12 @@ A developer-focused AI platform that generates full-stack applications and autom
 - Code/Editor
 
 ### Version
-- Unknown (last checked 2025-10-19)
-  - No public version information available
+- Unknown (last checked 2026-01)
+  - No formal public version numbering; platform continuously updated. Underlying GPT Pilot project actively maintained.
 
 ### Repo
--
+- https://github.com/Pythagora-io/gpt-pilot
+  - GPT Pilot is the open-source multi-agent framework underlying Pythagora
 
 ### Rating
 - [4] Strong for rapid prototyping and automated test generation
@@ -65,17 +66,19 @@ Pythagora is an AI-driven development assistant that can generate full-stack web
 - Additional remarks:
   - Pythagora behaves more like an autonomous development agent (planning + execution) rather than a line-completion assistant
   - Good complement to developer workflows when paired with code review and CI/CD practices
+- 2025 updates: Multi-LLM support expanded (OpenAI, Anthropic, Groq, and local LLMs); 14 specialized agents handle distinct development phases (spec writing, architecture, development, code review, debugging, troubleshooting, documentation, deployment); VS Code and Cursor extension integration; one-click deployment capability added; intelligent code filtering to prevent full codebase in context.
 
 ### Last Update
-2025-11-15
+2026-01-30
 
 ## Licensing
 
 ### Opensource
-- No
+- Yes
+  - GPT Pilot (underlying framework) is open-source; some Pythagora platform features may be commercial
 
 ### License
-- Proprietary
+- Mixed (GPT Pilot: open-source; Pythagora platform: proprietary/commercial)
 
 ### Free Trial
 - Yes
@@ -83,8 +86,8 @@ Pythagora is an AI-driven development assistant that can generate full-stack web
 ## MCP-Client
 
 ### MCP-Client
-- Unknown
-  - No public documentation found regarding MCP (Model Context Protocol) support
+- No
+  - No public documentation found regarding MCP (Model Context Protocol) support as of January 2026
 
 ### Prompts
 - Yes
@@ -101,6 +104,9 @@ Pythagora is an AI-driven development assistant that can generate full-stack web
 - Yes
   - Official website/documentation (pythagora.ai) and VS Code Marketplace listing for the extension.
   - Blog posts, demos and community write-ups; underlying GPT Pilot project and related GitHub resources for the multi-agent framework.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -156,6 +162,9 @@ Pythagora is an AI-driven development assistant that can generate full-stack web
   - Pythagora exposes CLI-style commands and VS Code command-palette entries. Known examples:
     - `npx pythagora` usage reported for scaffolding and unit-test generation.
     - VS Code commands provided by the extension for starting/stopping the assistant, toggling local/cloud mode, and invoking generation or test runs.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

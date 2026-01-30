@@ -12,7 +12,8 @@ Browser-based development environment from Google for prototyping and experiment
 - Note: While it has IDE-like features for building multimodal apps, it's primarily a model experimentation environment rather than a general-purpose code editor
 
 ### Version
- (2025-10-19)
+- Rolling updates (2025-2026)
+  - Gemini 3 Flash now default model; Gemini 3 Deep Think for advanced reasoning; Gemini 2.5 Flash Native Audio; Deep Research agent via Interactions API; Antigravity agentic development platform.
 
 ### Repo
 -
@@ -42,9 +43,11 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
 - Vertex AI path: clear migration/upgrade path to Vertex AI for organizations that need enterprise controls, data governance and scalable deployment.
 - Pricing & enterprise details: core Studio use is free for prototyping, but Google documents and community reports indicate advanced grounding or high-volume production may incur costs—validate with Google Cloud sales or the Vertex AI pricing pages for production plans.
 - BYOK / data residency: no public documentation found indicating BYOK or self-hosted Gemini; expect data to be processed in Google Cloud unless an enterprise contract or Vertex AI offering provides specific guarantees.
+- 2025-2026 updates: Gemini 3 Flash (default), Gemini 3 Deep Think (iterative multi-hypothesis reasoning), Deep Research agent via Interactions API, Antigravity agentic development platform for multi-agent workflows, async function calls, multi-tool use (code execution + Google Search grounding).
+- Subscription tiers: Google AI Ultra (highest limits across Studio, Gemini app, Code Assist, Jules), AI Pro (moderate limits).
 
 ### Last Update
-2025-11-15
+2026-01-30
 
 ## Licensing
 
@@ -92,6 +95,9 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
 - Yes
 
 - Files and datasets can be uploaded to projects (UI upload and Files API); Studio integrates with Google Drive for persistent storage and collaboration. Uploaded files include text, PDFs, images, audio and video and can be referenced programmatically via file URIs.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -166,6 +172,9 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
 - No
 
 - The Studio UI does not advertise a dedicated slash-command palette for chat prompts; workflows rely on templates, saved prompts and the Build UI.
+
+### Skills
+- No
 
 ### Custom Modes
 <!-- ToDo -->

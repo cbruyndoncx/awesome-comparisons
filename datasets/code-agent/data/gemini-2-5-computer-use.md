@@ -17,8 +17,8 @@ Gemini 2.5 Computer Use is Google's specialized model built on Gemini 2.5 Pro's 
   - Proprietary model; no public repository found.
 
 ### Rating
-- 18% performance increase on difficult evaluations (reported by Autotab)
-- Outperforms competitors in web and mobile control benchmarks with lower latency
+- [4] 18% performance increase on difficult evaluations (Autotab); 60%+ test rehabilitation rate (Google Payments)
+- [4] Leads web and mobile control benchmarks; Gemini 2.5 Pro achieves 63.8% on SWE-Bench Verified
 
 ### Short Description
 Specialized AI agent model enabling autonomous UI interaction through web browsers and mobile interfaces, with capabilities for clicking, form-filling, scrolling, and navigation.
@@ -48,9 +48,10 @@ Google's payments platform team implemented the model to fix fragile UI tests, s
 - Benchmarks: Leads in web and mobile control with lower latency
 - Developer: Google DeepMind
 - Availability: Public preview
+- 2025-2026 Update: Project Mariner computer use capabilities integrated into 2.5 Pro and 2.5 Flash. Gemini 2.5 Pro achieved 63.8% on SWE-Bench Verified and #1 on WebDev Arena leaderboard (ELO 1415). Deep Think experimental reasoning mode added for complex tasks. 1M token context window (expanding to 2M). MCP tool support added to Gemini API. Native audio I/O with affective dialogue via Live API. Indirect prompt injection protection makes it Google's most secure model family. 2.5 Flash optimized for efficiency (20-30% fewer tokens). Tool use via Live API connects to Calendar, Notes, Tasks, Photos, YouTube, Maps.
 
 ### Last Update
-- 2025-11-18
+- 2026-01-30
 
 ## Licensing
 
@@ -67,7 +68,8 @@ Google's payments platform team implemented the model to fix fragile UI tests, s
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
+  - MCP tool support added to Gemini API and SDK for access to open-source tools
 
 ### Prompts
 - Yes
@@ -82,6 +84,9 @@ Google's payments platform team implemented the model to fix fragile UI tests, s
   - Official blog: https://blog.google/technology/google-deepmind/gemini-computer-use-model/
   - Documentation: https://cloud.google.com/vertex-ai/generative-ai/docs/computer-use
   - Gemini API: https://ai.google.dev/gemini-api/docs/computer-use
+
+### ACP
+- No
 
 ## Deployment
 
@@ -103,8 +108,8 @@ Google's payments platform team implemented the model to fix fragile UI tests, s
   - Operates at UI level
 
 ### Checkpoints
-- Unknown
-  - No public documentation found.
+- No
+  - UI-level agent; no checkpoint system documented. Relies on external workflow orchestration.
 
 ### Git Support
 - No
@@ -116,15 +121,15 @@ Google's payments platform team implemented the model to fix fragile UI tests, s
 - No
 
 ### Hooks
-- Unknown
-  - No public documentation found.
+- No
+  - No lifecycle hook system documented for the computer use model.
 
 ### SlashCommands
 - No
 
 ### Custom Modes
-- Unknown
-  - No public documentation found.
+- No
+  - No user-definable custom modes documented for the computer use model.
 
 ### Subagents
 - Yes

@@ -7,7 +7,7 @@ Nuanced provides compiler-grade code intelligence (call graphs, symbols, types, 
 - Developer Tools (Code Intelligence/MCP Server)
 
 ### Version
-- Unknown (last checked 2025-10-19)
+- Unknown (last checked 2026-01)
   - Early-stage project; check GitHub for releases
 
 ### Repo
@@ -15,8 +15,8 @@ Nuanced provides compiler-grade code intelligence (call graphs, symbols, types, 
   - Repository maintained by Matt Morgis (nuanced-mcp)
 
 ### Rating
-- N/A
-  - No public aggregated review score found; project is a niche open-source tool with limited public reviews.
+- [3] Niche but valuable code-intelligence MCP server for large repos
+- [3] Limited public reviews; early-stage project with specialized use case
 
 ### Short Description
 - Local MCP server that supplies LLMs with compiler-grade call graphs and symbol-level context (TypeScript/Python focus).
@@ -40,9 +40,10 @@ Nuanced is an MCP (Model Context Protocol) server and code-intelligence layer th
 - Deployment: installable via npm/CLI or Python tooling (project implementations vary); configured as an MCP server; designed to run locally or on-prem for secure codebases.
 - Tradeoffs/Unknowns: full license details and exact language-by-language feature parity are not always documented in public materials; enterprise features and expanded language support may be gated under paid plans.
 - Good fit for: teams using LLMs to assist coding on large/complex repos, organizations requiring local analysis for security/privacy, and tooling vendors building LLM-powered code assistants.
+- 2025-2026 context: the broader MCP ecosystem has seen rapid adoption by major platforms (GitHub, Anthropic Claude, etc.); Nuanced occupies a specialized niche providing compiler-grade code context via MCP, complementing general-purpose MCP servers.
 
 ### Last Update
-- 2025-10-19
+2026-01-30
 
 ## Licensing
 
@@ -75,6 +76,9 @@ Nuanced is an MCP (Model Context Protocol) server and code-intelligence layer th
 ### Resources
 - Yes
   - Queryable resources (graph:// style) exist for summaries and function-level data, for example graph://summary, graph://repo/{repo_path}/summary, graph://function/{file_path}/{function_name}.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -121,6 +125,9 @@ Nuanced is an MCP (Model Context Protocol) server and code-intelligence layer th
 ### SlashCommands
 - No
   - Not a chat-platform agent; no documented slash-command set. Client-side integrations may map commands to MCP calls.
+
+### Skills
+- No
 
 ### Custom Modes
 - No

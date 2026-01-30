@@ -17,6 +17,7 @@ criteria:
           - Prompts
           - Tools
           - Resources
+          - ACP
   - Prompts:
       name: Prompts
       type: LABEL
@@ -60,6 +61,20 @@ criteria:
       description: *ref_0
       placeholder: *ref_1
       order: '21'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+        'No':
+  - ACP:
+      name: ACP
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Agent Client Protocol support for standardized editor-agent communication (agentclientprotocol.org)'
+      placeholder: *ref_1
+      order: '22'
       andSearch: false
       rangeSearch: false
       values:
@@ -192,6 +207,7 @@ criteria:
         - Plugins
         - Hooks
         - SlashCommands
+        - Skills
         - CustomModes
         - Subagents
         - RemoteAgents
@@ -231,6 +247,20 @@ criteria:
       table: true
       detail: true
       description: 'Re-usable commands that can be manually triggered by the user.'
+      placeholder: *ref_1
+      order: '60'
+      andSearch: false
+      rangeSearch: false
+      values:
+        'Yes':
+        'No':
+  - Skills:
+      name: Skills
+      type: LABEL
+      search: true
+      table: true
+      detail: true
+      description: 'Reusable skill definitions whose details are loaded on demand; only name and description are kept in context.'
       placeholder: *ref_1
       order: '60'
       andSearch: false

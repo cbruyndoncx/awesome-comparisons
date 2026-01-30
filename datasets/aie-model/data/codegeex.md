@@ -7,13 +7,14 @@ Open-source multilingual code generation model from Tsinghua University (THUDM).
 - AIE/Model
 
 ### Version
-- CodeGeeX2 (2023-07-24)
+- CodeGeeX4-ALL-9B (2025)
 
 ### Repo
 - https://github.com/THUDM/CodeGeeX
 
 ### Rating
-- N/A
+- 83.4% of users reported increased coding efficiency
+- HumanEval-X: Multilingual code generation benchmark leader at release
 
 ### Short Description
 - Multilingual large-scale code generation model (13B) from Tsinghua University (THUDM) for code generation, translation, completion, summarization, and IDE integration.
@@ -31,9 +32,10 @@ CodeGeeX is a large-scale multilingual code generation model and toolkit develop
 - IDE integrations (VS Code, JetBrains) exist to make the model usable as a coding assistant; downstream usage may be subject to the model weights' licensing terms.
 - For commercial deployment, review the repository's instructions and registration process for obtaining the model weights.
 - See also: CodeGeeX2 (follow-up) and related THUDM releases which may have differing licenses or access requirements.
+- 2025-2026 Update: CodeGeeX4-ALL-9B released, built on GLM-4-9B architecture with 9B parameters (down from 13B). Supports code interpreter, web search integration, function calling, repository-level code Q&A, and long context up to 1,048,576 tokens. Available via Cloud Studio and OpenAI-compatible servers. INT8-quantized variants available for resource-constrained deployments. First fully open large-scale multilingual code generation model with public end-to-end pre-training recipes.
 
 ### Last Update
-- 2024-07-24
+- 2026-01-30
 
 ## Licensing
 

@@ -8,7 +8,7 @@
 - AI Assistant (with coding capabilities)
 
 ### Version
-v1.0 (2025-10-18)
+Latest build with Claude Sonnet 4.5 model support (late 2025); Claude Cowork agent feature added for Max subscribers
 
 ### Repo
 -
@@ -37,9 +37,10 @@ Designed for Pro, Max, Team and Enterprise customers, Claude Desktop aims to mak
 - Desktop extensions & MCP: Extensions and MCP-compatible helpers simplify connecting local services and MCP servers to Claude, reducing installation friction for advanced local integrations.
 - Enterprise features: Many advanced deployment, security, and integration details (including BYOK, on-prem routing, and fine-grained admin controls) are oriented toward Team and Enterprise customers and are not fully documented in public product pages.
 - Comparison note: For heavy developer workflows that require CLI-first, git-aware operations and explicit BYOK/local routing, Claude Code (Anthropic's CLI/terminal tool) is a more explicit offering; Claude Desktop is focused on productivity, file workflows, and Skills-driven automation inside a native app.
+- 2025-2026 Update: Claude Sonnet 4.5 released late 2025 as strongest model for computer use and agent behaviors. Claude Cowork general agent feature launched exclusively for Max subscribers ($100-$200/month) on macOS. Desktop Extensions introduced for templatized workflows. Claude for Healthcare announced with HIPAA-ready infrastructure. Anthropic reported internal productivity gains of +50% with 59% of daily work using Claude by mid-2025.
 
 ### Last Update
-- 2025-11-15
+- 2026-01-30
 
 ## Licensing
 
@@ -71,6 +72,9 @@ Designed for Pro, Max, Team and Enterprise customers, Claude Desktop aims to mak
 - Yes
   - Claude Desktop provides in-app documentation for Skills, MCP setup, and file operations. Public resources include Anthropic's help center and developer documentation for MCP. Enterprise customers also receive additional admin and deployment documentation.
 
+
+### ACP
+- No
 
 ## Deployment
 

@@ -7,8 +7,8 @@ AI pair-programmer and code assistant integrated across popular IDEs and GitHub.
 - Code/Editor
 
 ### Version
-- Unknown (last checked 2025-10-19)
-  - GitHub Copilot uses rolling updates without public version numbers; features evolve continuously
+- Rolling updates (2025-2026)
+  - November 2025: 50+ updates across every IDE; GPT-5.1, Claude Opus 4.5, Gemini 3 Pro added. Coding agent GA in Eclipse; Plan Mode across JetBrains/Eclipse/Xcode; Background agents; MCP OAuth support.
 
 ### Repo
 -
@@ -48,9 +48,15 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
 - Copilot Chat supports multi-file edits from a single prompt and can incorporate repository context and organization knowledge bases in Enterprise.
 - The Copilot autonomous coding agent can be assigned GitHub issues and produce pull requests for review; this increases automation but requires careful review for correctness and security.
 - Privacy/data usage: Enterprise tiers offer stronger controls and indemnity options; evaluate data residency and IP policies if using Copilot on proprietary codebases.
+- November 2025 updates: GPT-5.1, Claude Opus 4.5, Gemini 3 Pro model support; coding agent GA in Eclipse; cloud agent preview in Visual Studio 2026; Plan Mode across JetBrains/Eclipse/Xcode.
+- MCP expansion: OAuth support for secure third-party integrations (Slack, Jira, custom APIs); MCP servers can expose custom UI components in Copilot chat; enterprises can host internal MCP servers in private registries.
+- GitHub Spark (public preview): build and deploy full-stack apps using natural-language prompts.
+- Copilot Spaces: centralize code, docs, and specifications as task-specific context.
+- CLI enhancements: image input support for visual debugging, semantic codebase search, Windows Terminal integration.
+- Enterprise admin: usage limits per team/repo, fine-grain scoped tokens, custom instructions management via version-controlled files.
 
 ### Last Update
-2025-11-04
+2026-01-30
 - Based on public GitHub/Microsoft Copilot documentation and product announcements (Oct–Nov 2025).
 
 ## Licensing
@@ -81,6 +87,9 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
 ### Resources
 - Yes
   - Organization knowledge bases (Copilot Spaces), repository docs, and Copilot Spaces can be attached as grounding context for chat and multi-file edits.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -146,6 +155,9 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
   - Is there support for re-usable commands that can be manually triggered by the user:
     - Copilot Chat supports conversational triggers and structured commands/inputs in the chat UI; extensions/agents can expose command-like actions that users invoke from the chat or editor context.
     - In IDE integrations, extension commands (command palette, context menu, chat commands) let users trigger predefined behaviors or workflows.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

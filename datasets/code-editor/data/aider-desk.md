@@ -8,13 +8,14 @@ Sophisticated desktop application bringing Aider's AI pair programming capabilit
 - Code/Editor
 
 ### Version
-- 2025
+- v0.26.0 (2025)
 
 ### Repo
 - https://github.com/hotovo/aider-desk
 
 ### Rating
-- -
+- [4] Full-featured GUI wrapper for Aider with intelligent context management and MCP integration
+- [4] Strong agent mode with Git worktree isolation and multi-model flexibility
 
 ### Short Description
 - Desktop GUI wrapper for Aider featuring automatic IDE sync with IntelliJ IDEA/VSCode plugins, autonomous agent mode, and comprehensive task management with cost tracking and Git worktree isolation.
@@ -38,7 +39,7 @@ AiderDesk is a sophisticated desktop application that brings all the power of Ai
 - Active development: Maintained by hotovo with growing community adoption.
 
 ### Last Update
-- 2025
+2026-01-30
 
 ## Licensing
 
@@ -54,7 +55,8 @@ AiderDesk is a sophisticated desktop application that brings all the power of Ai
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
+  - Integrates external tools from configured MCP servers that the Agent can directly utilize; fine-grained control allows disabling specific MCP tools within agent settings.
 
 ### Prompts
 - Yes
@@ -64,6 +66,9 @@ AiderDesk is a sophisticated desktop application that brings all the power of Ai
 
 ### Resources
 - Yes
+
+### ACP
+- No
 
 ## Deployment
 
@@ -97,6 +102,9 @@ AiderDesk is a sophisticated desktop application that brings all the power of Ai
 
 ### SlashCommands
 - Yes
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

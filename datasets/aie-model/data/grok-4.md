@@ -14,7 +14,8 @@ xAI's flagship AI model described as "the most intelligent model in the world." 
 - -
 
 ### Rating
-- -
+- EQ-Bench: Leadership position (Grok 4.1)
+- Hallucination reduction: ~65% fewer hallucinations in Grok 4.1 vs Grok 4
 
 ### Short Description
 - xAI's most advanced model trained on 200,000 GPU Colossus cluster with reinforcement learning at pretraining scale, featuring native tool use and specialized coding variant Grok Code Fast 1.
@@ -36,9 +37,10 @@ Grok 4 is xAI's flagship AI model released on July 9, 2025, described as "the mo
 - 10x training increase: Grok 3 used 10x more compute than Grok 2, continuing scaling trajectory.
 - xAI: Founded and led by Elon Musk.
 - Released July 9, 2025 with Grok 4 Heavy variant.
+- 2025-2026 Update: Grok 4.1 released November 17, 2025 with EQ-Bench leadership and 65% fewer hallucinations. Grok 2.5 open-sourced under Apache-2.0 (August 2025). September 2025 added low-latency voice interactions and multimodal video generation via Grok Imagine. SuperGrok at $30/mo (128K memory), SuperGrok Heavy at $300/mo. Grok 5 announced for January 2026 with potential AGI capabilities. xAI API provides full access to Grok 4 Pro and Code variants.
 
 ### Last Update
-- 2025-08-28
+- 2026-01-30
 
 ## Licensing
 

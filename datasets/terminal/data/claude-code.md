@@ -7,10 +7,11 @@ Claude Code is Anthropic's command-line, agentic developer assistant that integr
 - Code/Terminal
 
 ### Version
-v1.0 (2025-10-18)
+v2.1.16 (2026-01)
 
 ### Repo
--
+- -
+  - Closed-source proprietary product from Anthropic
 
 ### Rating
 - [4] Strong reasoning and long-context handling
@@ -41,8 +42,7 @@ The tool is focused on large-context reasoning, multi-file code transformations,
 - Further reading: consult the official Claude documentation at <https://claude.ai/> and the Claude Code overview at <https://claude.ai/code> for up-to-date pricing, model names, and deployment options.
 
 ### Last Update
-- 2025-11-16
-  - Note: This date may reflect documentation update; actively maintained product from Anthropic
+2026-01-30
 
 ## Licensing
 
@@ -73,6 +73,10 @@ The tool is focused on large-context reasoning, multi-file code transformations,
   - Official documentation and overview: <https://claude.ai/code>
   - Anthropic developer docs and API references: <https://www.anthropic.com/> and the Anthropic docs pages
   - Community examples and third-party wrappers are available in blog posts and community repos (search "Claude Code CLI").
+
+### ACP
+- Yes
+  - Claude Code implements the Agent Client Protocol (ACP) by Zed Industries, enabling standardized editor-agent communication over JSON-RPC via stdio. Any ACP-compatible editor or IDE can connect to Claude Code as an agent backend.
 
 ## Deployment
 
@@ -116,6 +120,10 @@ The tool is focused on large-context reasoning, multi-file code transformations,
 ### SlashCommands
 - Yes
   - Custom project commands placed under .claude/commands are surfaced as slash-style commands and can be invoked from the CLI to run specialized workflows (for example, /project:fix-github-issue).
+
+### Skills
+- Yes
+  - Skills are modular packages in .claude/skills/ containing a SKILL.md with YAML frontmatter (name, description) and optional bundled resources (scripts, references, assets). Only the name and description are loaded into context; full instructions load on demand when the skill triggers.
 
 ### Custom Modes
 - Yes

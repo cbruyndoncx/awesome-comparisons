@@ -26,8 +26,8 @@
   - Kiro CLI is an AWS-managed product (no public GitHub repo for the core product). Documentation and download links are published by AWS.
 
 ### Rating
-<!-- Avg rating based on review comments -->
-- -
+- [4] Full-featured agentic CLI with MCP, steering files, custom agents, checkpoints, and spec-driven workflows
+- [3] Proprietary AWS-managed product; no BYOK or offline support
 
 ### Short Description
 
@@ -51,9 +51,7 @@
 - The product is a managed AWS offering that uses subscriptions/credits for model usage; teams manage access via AWS Identity Center and related AWS account controls.
 
 ### Last Update
-<!-- Note Date last updated -->
-- 2025-11-24
-  - File updated with researched details about Kiro CLI (steering, MCP, Auto agent, CLI features).
+2026-01-30
 
 ## Licensing
 <!-- Licensing -->
@@ -106,6 +104,9 @@
 - Yes
 
 - The CLI consumes steering files, repository files, MCP server data, and system/workspace metadata as resources to ground agent actions.
+### ACP
+- No
+
 ## Deployment
 <!-- Deployment -->
 ### BYOK
@@ -170,11 +171,13 @@
 <!-- Re-usable commands that can be manually triggered by the user. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes as indented "- " entries beneath the kept values. -->
 - No
+  - The CLI exposes subcommands rather than chat-style slash commands.
 
-- The CLI exposes subcommands rather than chat-style slash commands; interactive chat in the CLI supports editor invocation and commands but not a separate slash-command registry in the same sense as chat UIs.
+### Skills
+- Yes
+  - Progressive context loading: skills load only metadata (name/description) at startup, with full documentation loading on-demand when needed. Supports 18 built-in language skills.
 
 ### Custom Modes
-<!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes as indented "- " entries beneath the kept values. -->
 - Yes
 

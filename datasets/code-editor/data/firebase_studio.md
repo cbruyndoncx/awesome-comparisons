@@ -7,7 +7,8 @@ A cloud-first, AI-powered development environment from Google that combines prot
 - Code/Editor
 
 ### Version
-v0.1 (2025-04-22 preview)
+- Preview (2025)
+  - Launched April 2025 at Google Cloud Next; Gemini 2.5 upgrade April 2025; Autonomous Agent Mode and MCP support added July 2025; Gemini CLI integration June-July 2025.
 
 ### Repo
 -
@@ -41,9 +42,13 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
 - Privacy & security considerations: Workspaces may provision AI resources and API keys automatically; teams should evaluate data residency and key management requirements (enterprise BYOK and compliance workflows may be limited in the initial preview).
 - Best fit: Fast prototyping, startups and teams building Firebase-backed web/mobile apps, AI-enhanced frontends, and teams that prefer managed backend provisioning and tight Firebase integration.
 - Limitations: Cloud-only, proprietary, potential vendor lock-in to Firebase/GCP services; enterprises with strict BYOK or on-prem requirements should validate security/compliance.
+- Autonomous Agent Mode (July 2025): Gemini reasons and works independently without requiring manual approval at each step.
+- Gemini CLI integration: open-source AI agent integrated into Firebase Studio, eliminating context switching between CLI and chat.
+- Firebase AI Logic: evolution from Vertex AI in Firebase; supports Gemini 2.5 series "thinking" budget, grounding with Google Search.
+- Mobile prototyping: App Prototyping agent optimized for mobile devices (May 2025).
 
 ### Last Update
-- 2025-11-15
+2026-01-30
 
 ## Licensing
 
@@ -60,8 +65,8 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
 ## MCP-Client
 
 ### MCP-Client
-- Unknown
-  - Firebase Studio uses Gemini models; no public documentation found for general MCP client support
+- Yes
+  - Native MCP support added July 2025 at Google Cloud Summit London; enables Gemini to access contextual information and work with greater awareness of application architecture and requirements.
 
 ### Prompts
 - Yes
@@ -81,6 +86,9 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
 ### Resources
 - Yes
   - Can access workspace files, repositories, and Firebase resources for context
+
+### ACP
+- No
 
 ## Deployment
 
@@ -129,6 +137,9 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
   - Firebase Studio (Gemini in Firebase) supports slash commands for common tasks such as /fixError, /helpWithError, /addComments, /explain, /transform, and /generate. These commands accelerate common code edits, explanations, and refactors.
   - Use `/` in the chat to see available commands; many commands are surfaced contextually based on selected code or active files.
   - The Firebase MCP server provides pre-written prompts surfaced as slash commands (e.g., /firebase:init) in some tool integrations.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

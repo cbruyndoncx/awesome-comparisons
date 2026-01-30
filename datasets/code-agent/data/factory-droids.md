@@ -8,15 +8,15 @@ Agent-native software development platform with Droids achieving 58.75% on Termi
 - Code/Autonomous agent
 
 ### Version
-- GA (2025-05-28)
+- GA (2025-05-28); Terminal-Bench score improved to 64.9% (January 2026)
 
 ### Repo
 - N/A
   - Proprietary model; no public repository found.
 
 ### Rating
-- N/A
-  - No public aggregated review score found.
+- [5] State-of-the-art 64.9% on Terminal-Bench (Jan 2026), beating all competitors
+- [4] Enterprise-proven with Nvidia, MongoDB, EY, Zapier; $300M valuation at Series B
 
 ### Short Description
 - Autonomous software development agents handling entire SDLC from coding to incident resolution, achieving state-of-the-art 58.75% on Terminal-Bench and beating Claude Code and Codex CLI.
@@ -39,9 +39,10 @@ Factory introduced "Droids" as autonomous software development agents that becam
 - Enterprise customers: Nvidia, MongoDB, EY, Zapier, Bayer, Clari actively using.
 - $50M Series B: Fresh funding (September 2025) to expand capabilities and team.
 - GA launch: May 28, 2025 general availability after extensive beta period.
+- 2025-2026 Update: Terminal-Bench score improved from 58.75% (Sep 2025) to 63.1% (Dec 2025) to 64.9% (Jan 2026), maintaining #1 position ahead of Codex CLI (60.4%), Warp (59.1%), OpenHands (43.8%), and Claude Code (40.1%). $50M Series B at $300M valuation (Sep 2025) led by NEA, Sequoia, J.P. Morgan, Nvidia. 200% quarter-over-quarter growth throughout 2025. Enterprise metrics: 31x faster feature delivery, 96.1% shorter migration times, 95.8% reduction in on-call resolution. SOC 2, GDPR, ISO 42001, CCPA compliance. Single-tenant architecture for regulated industries. Pricing: free for individuals, $20-$2,000/mo for teams, $2.70/M token overages. Model-agnostic and IDE-agnostic design. Expanding beyond engineering to data analysts, PMs, designers, and sales engineers.
 
 ### Last Update
-- 2025-09
+- 2026-01-30
 
 ## Licensing
 
@@ -67,6 +68,9 @@ Factory introduced "Droids" as autonomous software development agents that becam
 
 ### Resources
 - Yes
+
+### ACP
+- No
 
 ## Deployment
 

@@ -14,7 +14,10 @@ Anthropic's best coding model achieving state-of-the-art on SWE-bench Verified. 
 - -
 
 ### Rating
-- -
+- SWE-bench Verified: 77.2%
+- OSWorld computer-use: 61.4% (up from 42.2%)
+- Harmlessness: 99.29% harmless response rate
+- Agentic Security: 98.7% safety score (2/150 failures)
 
 ### Short Description
 - State-of-the-art coding model that can autonomously code for 30 hours, build applications, manage databases, purchase domains, and perform security audits with exceptional editing accuracy.
@@ -36,9 +39,10 @@ Claude Sonnet 4.5 is Anthropic's best coding model, released on September 29, 20
 - Wide integration: Available in GitHub Copilot, Cursor, Windsurf, and other major tools.
 - Anthropic: Leading AI safety-focused company founded by former OpenAI researchers.
 - Released September 29, 2025 as a major advancement in AI coding.
+- 2025-2026 Update: Part of Claude 4.5 family with Haiku 4.5 (October 2025) and Opus 4.5 (November 24, 2025). SWE-bench Verified score reached 77.2%. Hybrid reasoning with extended thinking for complex problems. Computer use capabilities with OSWorld improvement from 42.2% to 61.4%. 200K context window with 64K output (1M preview). Knowledge cutoff: July 2025. Claude Code updates include checkpoints, VS Code extension, Agent SDK. Political bias reduced to 3.3% (1.3% in thinking mode). January 2026: Anthropic released updated 80-page constitution. 5-hour rolling session limits.
 
 ### Last Update
-- 2025-09-29
+- 2026-01-30
 
 ## Licensing
 

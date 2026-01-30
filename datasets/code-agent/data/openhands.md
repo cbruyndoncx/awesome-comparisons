@@ -8,14 +8,14 @@ Open-source autonomous AI software engineer (originally OpenDevin; now maintaine
 - Code/Autonomous agent
 
 ### Version
-Unknown (last checked 2025-10-19)
+v1.2.1 (2026-01-16); OpenHands V1 major architectural overhaul
 
 ### Repo
 - https://github.com/All-Hands-AI/OpenHands
 
 ### Rating
-- [3] Alpha-stage: actively developed and rapidly changing
-- [4] Ambitious functionality: autonomous coding, planning, sandboxed execution
+- [4] Matured from alpha to V1 with production-ready architecture and enterprise features
+- [4] Ambitious functionality: autonomous coding, planning, sandboxed execution; top repo contributor is the AI agent itself
 
 ### Short Description
 OpenHands (formerly OpenDevin) is an open-source platform that provides autonomous AI software engineer agents capable of planning, writing, debugging, and executing code within an isolated workspace. The project includes a web UI/chat interface, a terminal/sandbox for executing commands, and integrations for multiple LLM backends.
@@ -30,10 +30,11 @@ OpenDevin is an open-source project that implements an autonomous AI software en
 - Project rebranded / continued as "OpenHands" (All-Hands-AI/OpenHands); several mirrors/forks exist under the original OpenDevin name.
 - Primary deployment is Docker-based with a sandbox container for executing shell commands; workspace directories are mounted into the sandbox.
 - Requires modern Docker, Python 3.10+, and Node.js for full local UI builds and tooling. 
-- Current status: alpha — rapidly changing; default agents have limited capabilities but roadmap includes more robust agent types, evaluation pipelines, and improved UI.
+- Current status: progressed from alpha to V1 with production-ready architecture; rapidly improving with frequent releases.
+- 2025-2026 Update: OpenHands V1 released as major architectural overhaul emphasizing flexibility, modularity, and production safety. Latest v1.2.1 released January 16, 2026. OpenHands Software Agent SDK launched (Nov 2025). "Bring Your Own LLM" capability added for cloud users (Oct 2025). Enterprise features for remediating CVEs at scale and hosting custom coding agents on NVIDIA DGX Spark. Daytona middleware integration for zero-setup enterprise deployment. OpenHands Index benchmarked 9 leading LLMs (Claude 4.5 Opus won overall). The AI agent became top repository contributor with 660 commits, surpassing all human contributors. MIT-licensed with no vendor lock-in.
 
 ### Last Update
-2025-11-15
+2026-01-30
 
 ## Licensing
 
@@ -51,8 +52,8 @@ OpenDevin is an open-source project that implements an autonomous AI software en
 ## MCP-Client
 
 ### MCP-Client
-- Unknown
-  - No public documentation found indicating Model Context Protocol (MCP) support.
+- No
+  - No public documentation found indicating Model Context Protocol (MCP) support as of January 2026. Uses its own microagent and extension architecture.
 
 
 ### Prompts
@@ -66,6 +67,9 @@ OpenDevin is an open-source project that implements an autonomous AI software en
 ### Resources
 - Yes
   - Provides repo-level customization (.openhands), example microagents, setup.sh for repo setup, and documentation for running locally and with Docker.
+
+### ACP
+- No
 
 ## Deployment
 

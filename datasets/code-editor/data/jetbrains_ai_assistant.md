@@ -48,9 +48,12 @@ JetBrains AI Assistant embeds AI workflows directly inside JetBrains IDEs and le
 - Enterprise: AI Pro has been bundled into some JetBrains subscription tiers (All Products Pack, dotUltimate) since 2025.1 — check licensing for org-wide access and admin quota controls.
 - Model & quota transparency: 2025 updates introduced clearer credit accounting and model cost visibility to help teams manage cloud usage.
 - Good fit for teams already standardized on JetBrains IDEs or for users needing strong on-device privacy controls via local model hosting.
+- Junie (coding agent): December 2025 integrated into unified AI Chat (Beta); previously a separate plugin. Handles complex multi-step tasks: transparent planning, multi-file operations, automatic testing/validation, backend generation, UI component creation.
+- MCP server configuration available in agent settings for external tool integrations.
+- Action Allowlist for customizing permitted agent behaviors.
 
 ### Last Update
-2025-11-15
+2026-01-30
 
 ## Licensing
 
@@ -67,8 +70,8 @@ JetBrains AI Assistant embeds AI workflows directly inside JetBrains IDEs and le
 ## MCP-Client
 
 ### MCP-Client
-- Unknown
-  - No public documentation found for MCP (Model Context Protocol) client support; primarily uses direct LLM integrations
+- Yes
+  - MCP server configuration available in Junie/AI Assistant settings; enables integration with external tools and context providers via Model Context Protocol.
 
 ### Prompts
 - Yes
@@ -85,6 +88,10 @@ JetBrains AI Assistant embeds AI workflows directly inside JetBrains IDEs and le
 ### Resources
 - Yes
   - Can access project files, documentation, and codebase resources for context
+
+### ACP
+- Yes
+  - JetBrains is in active collaboration with Zed Industries on the Agent Client Protocol (ACP), an open standard for standardized editor-agent communication (JSON-RPC over stdio). ACP support is expected to enable JetBrains IDEs to communicate with any ACP-compliant coding agent. See agentclientprotocol.org.
 
 ## Deployment
 
@@ -130,6 +137,9 @@ JetBrains AI Assistant embeds AI workflows directly inside JetBrains IDEs and le
 ### SlashCommands
 - No
   - There is no widely-documented, global "slash command" mechanic inside JetBrains AI Chat analogous to chat-platform slash commands. Users invoke functionality through the chat UI, mode selection (Chat vs Agent), context buttons, and model/option menus rather than typed slash commands. Some quick actions (e.g., apply suggestion, accept completion, run tests) are exposed as UI controls rather than textual slash commands.
+
+### Skills
+- No
 
 ### Custom Modes
 - No

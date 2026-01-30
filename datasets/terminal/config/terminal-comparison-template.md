@@ -125,6 +125,12 @@ Editors and tools with integrated terminal/CLI features
 - Yes
 - No
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+### ACP
+<!-- Agent Client Protocol support for standardized editor-agent communication (agentclientprotocol.org) -->
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+- Yes
+- No
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 ## Deployment
 <!-- Deployment -->
 ### BYOK
@@ -181,6 +187,12 @@ Editors and tools with integrated terminal/CLI features
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 ### SlashCommands
 <!-- Re-usable commands that can be manually triggered by the user. -->
+<!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
+- Yes
+- No
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+### Skills
+<!-- Reusable skill definitions whose details are loaded on demand; only name and description are kept in context. -->
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
 - No

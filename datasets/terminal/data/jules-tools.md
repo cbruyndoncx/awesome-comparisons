@@ -17,7 +17,8 @@ Jules Tools is Google's command-line interface for Jules, their asynchronous AI 
 - -
 
 ### Rating
-- -
+- [3] Async cloud-based agent with strong GitHub integration and Gemini 3 Pro backing
+- [2] No extensibility (no MCP, hooks, plugins, or skills); cloud-only execution model
 
 ### Short Description
 Command-line interface for Google's Jules AI coding agent, enabling terminal-based interaction with Gemini 2.5 Pro-powered asynchronous coding assistance.
@@ -43,7 +44,7 @@ The tool integrates with existing repositories, understands full project context
 - Cloud Execution: Clones repositories to Cloud VM for development
 
 ### Last Update
-- 2025-11-18
+2026-01-30
 
 ## Licensing
 
@@ -61,7 +62,7 @@ The tool integrates with existing repositories, understands full project context
 ## MCP-Client
 
 ### MCP-Client
-- -
+- No
 
 ### Prompts
 - Yes
@@ -78,6 +79,9 @@ The tool integrates with existing repositories, understands full project context
   - Official website: https://jules.google/
   - Documentation: https://jules.google/docs/
   - Google Developer Blog: https://developers.googleblog.com/
+
+### ACP
+- No
 
 ## Deployment
 
@@ -110,21 +114,23 @@ The tool integrates with existing repositories, understands full project context
 ## Extensible
 
 ### Plugins
-- -
+- No
 
 ### Hooks
-- -
+- No
 
 ### SlashCommands
-- -
+- No
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes
-  - Asynchronous background operation mode
-  - Available via Google AI Pro and Ultra plans with different capability limits
+  - Asynchronous background operation mode. Recurring scheduled tasks (e.g. weekly dependency checks, nightly lint fixes).
 
 ### Subagents
-- -
+- No
 
 ## Ungrouped Criteria
 

@@ -8,13 +8,16 @@ State-of-the-art Mixture-of-Experts (MoE) language model from Moonshot AI with 1
 - AIE/Model
 
 ### Version
-- 1.0 (2025-07)
+- K2.5 (January 27, 2026)
 
 ### Repo
 - https://github.com/MoonshotAI/Kimi-K2
 
 ### Rating
-- -
+- SWE-bench Verified: 65.8% (K2), higher on SWE-bench Multilingual (K2.5)
+- SWE-bench Full: 71.6%
+- LiveCodeBench: 53.7%
+- HLE-Full: Surpasses GPT-5.2 and Claude Opus 4.5 (with tools)
 
 ### Short Description
 - Trillion-parameter open-weight MoE model from Alibaba-backed Moonshot AI, achieving state-of-the-art performance in coding, math, and agentic reasoning with 32B activated parameters.
@@ -35,9 +38,10 @@ Kimi K2 is a state-of-the-art mixture-of-experts (MoE) language model developed 
 - Open weights: Available on GitHub and Hugging Face for community use.
 - Moonshot AI: Developed by Alibaba-backed Beijing startup.
 - Released July 2025 as a major advancement in open-weight models.
+- 2025-2026 Update: K2 Thinking and K2 Thinking Turbo released November 6, 2025 for complex reasoning and agentic tasks. Major price cuts: 75% off cached input, 50% off uncached input. K2.5 released January 27, 2026 as native multimodal agentic model trained on 15T mixed visual/text tokens. K2.5 features 256K context, MoonViT 400M vision encoder, 384 experts (8 selected per token), Agent Swarm for multi-agent parallel execution. Benchmarks show K2.5 surpassing GPT-5.2 on SWE-bench Multilingual and VideoMMMU. Moonshot raised at $4.8B valuation.
 
 ### Last Update
-- 2025-07
+- 2026-01-30
 
 ## Licensing
 

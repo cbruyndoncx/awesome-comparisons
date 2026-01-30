@@ -48,9 +48,10 @@ Gemini 3 is now immediately available through the Gemini app and AI search inter
 - Availability: Worldwide where Gemini models are accessible
 - Developer: Google DeepMind
 - Special Capabilities: Advanced reasoning, agentic workflows, generative UI responses
+- 2025-2026 Update: Gemini 3 Flash released December 17, 2025 as new default model with PhD-level reasoning. Gemini 3 Deep Think available December 4, 2025 for AI Ultra subscribers. Gemini 3 Ultra premium tier for enterprise/mission-critical workloads. Gemini 3 launched in Google Search AI Mode day one (120+ countries). Integrated into Google Maps with hands-free conversational driving and landmark-based navigation. Rolling out in Android Auto (250M+ cars). Nano Banana Pro image model built on Gemini 3. Configurable Deep Think mode explores multiple hypotheses simultaneously. 1M token context with caching. Native multimodal handling of text/images/audio/video/code in single model.
 
 ### Last Update
-- 2025-11-18
+- 2026-01-30
 
 ## Licensing
 

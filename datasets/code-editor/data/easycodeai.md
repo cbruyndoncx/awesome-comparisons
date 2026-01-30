@@ -16,7 +16,8 @@ A local-first, agentic IDE focused on taking projects from idea to production wi
 - Ships as a standalone Flow IDE with VS Code and JetBrains integrations; provides agentic workflows and project-wide context management
 
 ### Version
-Unknown (last checked 2025-10-19)
+- Rolling updates (2025)
+  - Agentic IDE optimized for Next.js + Supabase; features /Plan command, CMD+E quick edits, data flow debugger, and Finisher Plan premium tier.
 
 ### Repo
 -
@@ -44,8 +45,7 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 - Use-case fit: excellent for new projects or MVPs that can accept the opinionated stack; less suitable for migrating large existing codebases using other technologies.
 
 ### Last Update
-<!-- Note Date last updated -->
-- 2025-11-15
+2026-01-30
 
 ## Licensing
 
@@ -92,10 +92,14 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 - Documentation, tutorials and examples for Flow IDE, VS Code and JetBrains integrations are available on the EasyCode site and docs.
 
+### ACP
+- No
+
 ## Deployment
 
 ### BYOK
-- No
+- Yes
+  - Free-tier users can use chat by providing their own OpenAI/Anthropic API keys; premium AI models available via paid tiers.
 
 ### Local Offline
 - Yes
@@ -154,6 +158,9 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 - Yes
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
 - Includes slash commands such as /Plan for planning workflows and quick-edit triggers in the IDE and extensions.
+
+### Skills
+- No
 
 ### Custom Modes
 <!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->

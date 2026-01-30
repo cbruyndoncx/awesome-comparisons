@@ -12,8 +12,8 @@ Open-source AI coding assistant / VS Code extension
   - Open-source VS Code (and JetBrains) extension with CLI support, agent orchestration, and project-scoped memory stored under .kilocode/
 
 ### Version
-- Unknown (last checked 2025-10-19)
-  - Check GitHub releases for current version
+- Active development (2025-2026)
+  - 500+ models across 60+ providers; JetBrains and CLI support added; Slack integration (Kilo for Slack); parallel agents via CLI; voice prompting; tab autocomplete; Grok Code Fast access (Aug 2025).
 
 ### Repo
 - https://github.com/Kilo-Org/kilocode
@@ -39,9 +39,12 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
 - Automation & Orchestration: Automates repetitive tasks such as refactors, dependency updates, test runs, and repository-wide edits with user approval. Also includes browser automation in some flows.
 - Installation: Available on the Visual Studio Marketplace; can also be built and installed from source (.vsix). Development mode supports live reloading via F5 in VS Code.
 - Strengths: Open-source, highly extensible (MCP), strong context-awareness and project memory, multi-model support including offline options.
+- 2025-2026 updates: JetBrains IDE and CLI support (cross-platform); Slack integration (@Kilo in channels for code analysis/PR generation); parallel agents via git worktrees in CLI; voice prompting; tab autocomplete; automatic failure recovery with test suite execution; one-click deployment; persistent session context across devices.
+- 500+ models, 60+ providers; no commission pricing (exact provider list prices); Kilo Pass bonus credits program.
+- Grok Code Fast: exclusive free unlimited access through xAI partnership (Aug 2025).
 
 ### Last Update
-- 2025-10-19
+2026-01-30
 
 ## Licensing
 
@@ -79,6 +82,9 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
   - Documentation, blog posts, YouTube tutorials, Discord community, Reddit, GitHub repo & changelog, and web docs available from the official site.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -130,6 +136,9 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
 ### SlashCommands
 - Yes
   - Kilo Code utilizes slash commands for various functionalities, particularly for switching between specialized modes and managing tasks.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

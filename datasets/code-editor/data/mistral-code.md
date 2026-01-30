@@ -7,10 +7,10 @@ Mistral Code is an enterprise-focused AI coding assistant from Mistral AI that b
 - Code/Editor
 
 ### Version
-v1 (2025-06-04)
+- v1 (2025-06-04)
 
 ### Repo
--
+- N/A (proprietary; IDE integration via Continue.dev open-source plugin)
 
 ### Rating
 - [5] Strong enterprise focus with on-prem and air-gapped deployment options
@@ -34,9 +34,11 @@ Mistral Code is a packaged AI developer assistant designed for enterprise adopti
 - Adopted in production by organizations for hybrid/hardened deployments (examples reported: banks, large enterprises, system integrators).
 - Not a drop-in open-source model; organizations seeking fully open-source stacks should evaluate the underlying Mistral model releases and Continue separately.
 - Useful where governance, observability, and private-model customization are required for regulated codebases.
+- 2025 updates: Devstral reportedly outperforms OpenAI GPT-4.1-mini by 20%+ on AI programming benchmarks; enterprise deployments report 90% code completion accuracy and 100% developer adoption; supports fine-tuning and distillation of lightweight model variants on private repos.
+- Supports code migration between languages/frameworks and automated performance analysis with optimization suggestions.
 
 ### Last Update
-2025-07-30
+2026-01-30
 
 ## Licensing
 
@@ -67,6 +69,9 @@ Mistral Code is a packaged AI developer assistant designed for enterprise adopti
 ### Resources
 - Yes
   - Embedding/indexing (Codestral Embed), IDE plugins (Continue.dev integrations), and admin/observability console (Mistral Console). Enterprise deployments include APIs/management surfaces for indexing, policy, and usage telemetry.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -121,6 +126,9 @@ Mistral Code is a packaged AI developer assistant designed for enterprise adopti
 ### SlashCommands
 - Yes
   - IDE-exposed commands and quick actions (e.g., invoke Devstral task, run semantic search, create draft PR) available in VS Code and JetBrains plugins.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

@@ -7,7 +7,8 @@ Bolt.new is a browser-first, AI-powered full-stack development environment that 
 - Product/Prototyping
 
 ### Version
-N/A (2025-10-19)
+- SaaS (continuously updated, 2025-2026)
+  - Powered by Claude 3.5 Sonnet; enterprise features, team collaboration, and Figma import added in 2025
 
 ### Repo
 - N/A
@@ -36,9 +37,10 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
 - Great fit for prototyping, demos, learning, and quick experiments where zero local setup is a priority.
 - Not designed for fully offline/local development or for bringing your own model; it is a cloud/browser service with proprietary components.
 - Good integration for teams wanting fast iteration cycles, but teams that require self‑hosted or open‑source tooling may find limitations.
+- 2025-2026 updates: StackBlitz pivoted corporate focus to Bolt.new as AI-first platform. Enterprise readiness with team collaboration, private repos, and advanced deployment. Figma import for design-to-code. GitHub sync for version control. Supabase database integration, Stripe payments, Clerk authentication. Chat-based conversational mode for planning and debugging. Token-based pricing: Free, Pro ($20/mo), Team ($40/user/mo). Production case study showed 80% dev time reduction. Significant speed and reliability improvements throughout 2025.
 
 ### Last Update
-2025-10-19
+- 2026-01-30
 
 ## Licensing
 
@@ -71,6 +73,9 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
 - Yes
   - Includes project templates, example apps, documentation, and built-in integrations (examples: Supabase, Netlify, Cloudflare).
   - The open-source bolt.diy variant provides additional provider integrations and model-selection configuration for self-hosted workflows.
+
+### ACP
+- No
 
 ## Deployment
 

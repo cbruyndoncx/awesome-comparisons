@@ -36,7 +36,7 @@ Marblism provides two complementary offerings: (1) a suite of role-specific "AI 
 - Limitations: not enterprise-grade (compliance, on-premises), limited tech stack (React/Node), generated code usually needs manual review/hardening for production, documentation/support primarily community/Discord.
 
 ### Last Update
-- 2025-11-15
+2026-01-30
 
 ## Licensing
 
@@ -65,6 +65,9 @@ Marblism provides two complementary offerings: (1) a suite of role-specific "AI 
 ### Resources
 - Yes
   - User-facing resources include onboarding guides, documentation pages, community/Discord support, and access to generated GitHub repositories for code inspection and iteration.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -107,6 +110,9 @@ Marblism provides two complementary offerings: (1) a suite of role-specific "AI 
 ### SlashCommands
 - No
   - The platform exposes reusable role-driven actions via its AI Employees (pre-built role behaviours that can be triggered to perform tasks like inbox triage, social scheduling, outreach). While not literally described as "slash commands," these role actions act as repeatable, triggerable automation primitives in the product. There is no public mention of a chat-style slash-command syntax for end users.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

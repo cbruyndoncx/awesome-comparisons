@@ -7,10 +7,10 @@ PearAI is an open-source AI-powered code editor that aims to be an all-in-one de
 - Code/Editor
 
 ### Version
-v1.x (active; releases during 2024-2025)
+- v2.x (active; PearAI V2 released with database setup, WSL support, and advanced model compatibility)
 
 ### Repo
--
+- https://github.com/trypear/pearai-app
 
 ### Rating
 - [4] Strong project vision and open-source approach
@@ -35,10 +35,12 @@ PearAI provides a unified AI-first IDE experience by combining the familiarity o
   - PearAI Agent: autonomous coding assistant functionality for automating tasks (planned/early)
   - PearAI Creator, Login, Launch: roadmap features for project generation, auth scaffolding, and deployment (Netlify) respectively
 - History & controversy: PearAI launched with a rocky start after initially shipping under a proprietary license despite significant code coming from Continue.dev; the project later reverted to an open-source license and apologized, stabilizing community trust
+- 2025 updates: PearAI V2 released with database setup support, WSL (Windows Subsystem for Linux) integration, compatibility with GPT o1-mini and o1-preview models, and LeetCode integration for interview prep. PearAI Creator (production-ready web app generation) and PearAI Agent (powered by Roo Code/Cline for autonomous feature building) announced as upcoming features.
+- Limitations noted: less polished than Cursor/Windsurf, slower performance, fewer advanced features, better suited for smaller projects and prototyping.
 - Audience: developers who want an open-source, AI-first IDE experience with strong project context awareness and extensibility
 
 ### Last Update
-- 2025-11-15 — researched and updated: clarified Short Description, Prompts, Tools, Resources, Router, BYOK, licensing and history.
+2026-01-30
 
 ## Licensing
 
@@ -72,6 +74,9 @@ PearAI provides a unified AI-first IDE experience by combining the familiarity o
 - Yes
   - Documentation, configuration examples (config.json/config.ts), demo videos and blog posts
   - Open-source repositories and community discussions (GitHub issues/PRs); roadmap and changelog available
+
+### ACP
+- No
 
 ## Deployment
 
@@ -117,6 +122,9 @@ PearAI provides a unified AI-first IDE experience by combining the familiarity o
 ### SlashCommands
 - Yes
   - PearAI includes reusable slash/command-style actions (examples in product docs include /edit and other command triggers), keyboard shortcuts (CMD/CTRL+I, CMD/CTRL+L, CMD/CTRL+SHIFT+L) and an @-command system to invoke contextual behaviors. These can be reused across chats and workflows to trigger editing, context injection, diffs and more.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

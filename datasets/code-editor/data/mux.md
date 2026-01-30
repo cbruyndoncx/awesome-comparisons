@@ -15,8 +15,8 @@ mux (Coding Agent Multiplexer) is a cross-platform desktop application for AI-as
 - IDE
   - Desktop application focused on managing multiple agentic workspaces in parallel.
 ### Version
-<!-- Latest version used for update -->
-- v0.6.0
+- v0.6.0+ (formally announced January 6, 2026)
+  - Open-source agent parallelization platform from Coder; LLM provider-agnostic; integrates with Coder Workspaces for enterprise AI governance.
 
 ### Repo
 <!-- Associated Github repository -->
@@ -70,8 +70,7 @@ mux (Coding Agent Multiplexer) is a cross-platform desktop application for AI-as
 - Licensed AGPL-3.0 (see GitHub repo) and distributed in a Preview state; expect bugs and active development.
 
 ### Last Update
-<!-- Note Date last updated -->
-- 2025-11-24
+2026-01-30
 
 ## Licensing
 <!-- Licensing -->
@@ -119,6 +118,9 @@ mux (Coding Agent Multiplexer) is a cross-platform desktop application for AI-as
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
   - Extensive documentation available at <https://cmux.io>, GitHub repo with README and AGENTS.md for development guidance, and release binaries on GitHub Releases.
+
+### ACP
+- No
 
 ## Deployment
 <!-- Deployment -->
@@ -179,6 +181,9 @@ mux (Coding Agent Multiplexer) is a cross-platform desktop application for AI-as
 <!-- Keep only the label values that apply. Choose either Yes or No and remove the other, or delete both if unknown. Add any supporting notes using indented "- " entries beneath the kept values. -->
 - Yes
   - UI supports slash-style commands (examples: /compact) and vim-style inputs for efficient interactions.
+
+### Skills
+- No
 
 ### Custom Modes
 <!-- Create specialist modes that enable you to tailor the chat experience for specific tasks. -->

@@ -7,7 +7,7 @@ Secure, enterprise-grade AI coding assistant with on-prem and air-gapped deploym
 - AIE/Agent
 
 ### Version
-n/a
+- Latest (January 2026)
 
 ### Repo
 <!-- Associated Github repositories (public components) -->
@@ -37,13 +37,14 @@ Codeium Enterprise is the commercial, enterprise-oriented edition of Codeium tha
 - Impact: Vendor materials and case studies report developer productivity gains (reduced PR cycle time, faster debugging and testing) when teams adopt the enterprise product.
 - Gaps / vendor follow-up: Public-facing documentation does not clearly document Bring-Your-Own-Key (BYOK) key management options or the exact key management integration workflow. Organizations with strict KMS/BYOK requirements should request detailed security architecture and KMS integration docs from Codeium sales/enterprise support.
 
+- 2025-2026 Update: Expanded model access to GPT-5.2, Claude Opus 4.5, and Cognition SWE-1.5 agent model alongside proprietary LLMs. Cascade agentic feature added with deep codebase understanding and auto-fix on linter failures. WWT enterprise testing showed 30-50% efficiency gains for repetitive tasks. Industry shifting toward private self-hosted and fine-tuned LLMs for enterprise. Pricing: Teams $30/user/mo, Enterprise $45/user/mo.
+
 References & further reading
 - https://codeium.com/
 - https://codeium.com/enterprise (vendor enterprise overview)
 
 ### Last Update
-- 2025-01-29
-  - Last known release date for the JetBrains extension. The previous date of 2025-11-16 was likely a documentation update.
+- 2026-01-30
 
 ## Licensing
 

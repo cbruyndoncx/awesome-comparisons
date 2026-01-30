@@ -8,13 +8,15 @@ AI-powered web builder and code editor focused on rapid web prototyping and deve
 - Product/Prototyping
 
 ### Version
-- Unknown (2025)
+- SaaS (continuously updated, 2025-2026)
+  - Agent Mode became default in July 2025; Visual Edits reduced UI iteration by 40%
 
 ### Repo
 - -
 
 ### Rating
-- -
+- [5] Full-stack generation with Supabase backend, GitHub sync, Figma import; Agent Mode for autonomous development
+- [4] Strong for MVPs and rapid prototyping; AI guardrails with RBAC, SSO, and audit logs
 
 ### Short Description
 - AI-powered web builder and code editor designed for rapid web prototyping and application development.
@@ -33,9 +35,10 @@ Lovable.dev is a 2025 release that combines AI-powered code generation with an i
 - Web-focused: Specialized for web development and browser-based applications.
 - Released in 2025 targeting both developers and designers.
 - Bridges no-code and traditional development approaches.
+- 2025-2026 updates: Agent Mode became default interface in July 2025 with autonomous codebase exploration, proactive debugging, and web search. Visual Edits enhanced to reduce UI iteration cycles by 40% via direct element clicking. Real-time multi-team collaboration added. Three working modes: Agent Mode, Chat Mode, and Visual Edits. Generates TypeScript/React apps with Supabase backends and Tailwind CSS. Figma-to-React component conversion. Third-party integrations with GitHub, Stripe, Clerk, OpenAI. One-click deployments to custom domains. Built-in AI guardrails with RBAC, SSO, and audit logs. Users report completing six months of work in two days.
 
 ### Last Update
-- 2025
+- 2026-01-30
 
 ## Licensing
 
@@ -61,6 +64,9 @@ Lovable.dev is a 2025 release that combines AI-powered code generation with an i
 
 ### Resources
 - Yes
+
+### ACP
+- No
 
 ## Deployment
 

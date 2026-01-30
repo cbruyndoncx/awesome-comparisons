@@ -7,8 +7,8 @@ Open-source AI coding assistant focused on developer control, model choice, and 
 - Code/Editor
 
 ### Version
-- Unknown (last checked 2025-10-19)
-  - Check GitHub releases for current version; project uses frequent updates
+- v1.0+ (2025-2026)
+  - 1.0 release stabilized core features; Mission Control redesign for automated development orchestration; Cascade agent for codebase-wide reasoning and multi-file edits.
 
 ### Repo
 - https://github.com/continuedev/continue
@@ -37,8 +37,16 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
   - Extensible hub: shareable building blocks and verified partner integrations.
 
 - Limitations & considerations:
-  - 1.0 release stabilizes core features but some team/enterprise workflows continue to evolve.
+  - 1.0 release stabilized core features; team/enterprise workflows continue to evolve.
   - Running high-quality local models requires additional infrastructure (GPU/memory) and ops work.
+
+- 2025-2026 updates:
+  - Mission Control redesign: converts signals from dev tools into automated fixes, PRs, and documentation.
+  - Cascade agent: understands entire codebases, executes multi-file edits, handles debugging, runs terminal commands.
+  - Supercomplete: advanced multi-line code prediction.
+  - Memories: persistent contextual information across sessions.
+  - Automated workflows: Sentry alert fixes, Snyk vulnerability patches, Sanity CMS docs, Netlify performance audits.
+  - YAML-based configuration for separate chat and autocomplete model settings.
 
 - Use cases:
   - Individual developers: in-editor autocomplete, chat, and edit-by-instruction.
@@ -54,7 +62,7 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
   - GitHub: https://github.com/continuedev/continue
 
 ### Last Update
-- 2025-11-15
+2026-01-30
 
 ## Licensing
 
@@ -92,6 +100,9 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
   - Continue Hub (hub.continue.dev) for shared assistants and reusable building blocks
   - Official docs at https://continue.dev and source at https://github.com/continuedev/continue
   - MCP integrations and context providers (GitHub, issue trackers, error monitoring) available as resources
+
+### ACP
+- No
 
 ## Deployment
 
@@ -181,6 +192,9 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
     - These are small, user-facing commands; broader automation is implemented via the platform and developer tools rather than additional built-in slash commands.
   - Sources:
     - Session command list provided in the runtime instructions at the top of this environment
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

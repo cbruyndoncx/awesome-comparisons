@@ -7,7 +7,8 @@
 - Code/Editor
 
 ### Version
-v0.1 (2025-10-19)
+- v0.18+ (2025)
+  - Modernization update added MCP support, expanded language imports (JS/TS/Python/Rust), Lutz Mode, BlitzForge, and Plan Mode.
 
 ### Repo
 - https://github.com/BrokkAi/brokk
@@ -26,8 +27,12 @@ Brokk is a standalone, Java-based desktop application that rethinks AI-assisted 
 
 ### Languages
 - Java
+- JavaScript
+- TypeScript
+- Python
+- Rust
 - Other
-  - Can analyze and work with other languages via dependency decompilation / semantic indexing; used in demos with Python and mixed stacks)
+  - One-click imports for JS/TS/Python/Rust added in 2025 modernization update; can handle enterprise-scale projects (e.g., NetBeans with 5M+ lines on 16GB RAM).
 
 ### Notes
 - Workspace-first UX: users curate a Workspace of files, summaries, diffs and dependency artifacts so the LLM gets focused, relevant context.
@@ -40,9 +45,10 @@ Brokk is a standalone, Java-based desktop application that rethinks AI-assisted 
 - Best fit: large enterprises and teams working on big Java monorepos or mixed-language monorepos where understanding cross-cutting references and history matters.
 - Licensing note: GPL-3.0 is copyleft — derivative works that incorporate Brokk's code must be released under the same license.
 - Not an IDE plugin: Brokk is a separate application (designed intentionally), though it can work alongside IDEs and version control workflows.
+- 2025 updates: Lutz Mode (agentic research/planning/building loops for million-line codebases), BlitzForge (mass refactors at scale), Plan Mode (.18 update), renamed actions for clarity (Architect → "Code + Plan First", Code → "Code – Plan First", Search → "Answer + Search First", Ask → "Answer – Search First").
 
 ### Last Update
-2025-11-15
+2026-01-30
 
 ## Licensing
 
@@ -60,8 +66,8 @@ Brokk is a standalone, Java-based desktop application that rethinks AI-assisted 
 ## MCP-Client
 
 ### MCP-Client
-- No
-  - No evidence in the public repository or official docs of a built-in "MCP" client integration as of 2025-11-15.
+- Yes
+  - MCP support added in the 2025 modernization update, enabling Model Context Protocol integrations.
 
 ### Prompts
 - Yes
@@ -74,6 +80,9 @@ Brokk is a standalone, Java-based desktop application that rethinks AI-assisted 
 ### Resources
 - Yes
   - The Workspace can include decompiled dependency sources, compiled artifacts, summaries, and VCS history; these resources become first-class context for agent workflows.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -121,6 +130,9 @@ Brokk is a standalone, Java-based desktop application that rethinks AI-assisted 
 - No
 
 ### SlashCommands
+- No
+
+### Skills
 - No
 
 ### Custom Modes

@@ -17,7 +17,8 @@ Cheetah AI is an AI-powered coding agent featuring ultra-high-speed inference at
 - -
 
 ### Rating
-- 230% ROI reported for engineering teams
+- [4] High-speed inference (2000 tokens/sec) with strong code search (70% F1 score)
+- [3] Newer entrant; identity/model origins unclear in some community discussions
 
 ### Short Description
 High-speed AI coding agent powered by Cerebras delivering 2000 tokens/second, with enterprise-focused capabilities, plan mode with deepResearch, and MCP ecosystem integration.
@@ -33,19 +34,21 @@ According to performance analyses, Cheetah AI delivers 230% ROI for engineering 
 - Any
 
 ### Notes
-- Speed: 2000 tokens per second (Cerebras-powered inference)
-- Plan Mode: Integrated with deepResearch for detailed specifications
-- MCP Support: Extends capabilities through MCP ecosystem tools
-- Target: Enterprise-level complexity, not toy projects
-- ROI: 230% reported for engineering teams
-- Pricing: $1.25/M input tokens, $10/M output tokens
-- Use Cases: Code generation, refactoring, project planning
-- Platform: Available at cheetahai.co
-- Model: Underlying provider varies/undisclosed in some contexts
-- Release: 2025
+- Speed: 2000 tokens per second (Cerebras-powered inference) with parallel tool calling for simultaneous operations.
+- Multi Layer Context Engine (GREB MCP): queries across entire codebases (100–100,000 files) using natural language; 70% F1 score on code search benchmarks, 3.47s average query latency.
+- Zero Context Loss Architecture: operates without context window limitations, reads complete files and retains information across longer interactions.
+- Plan Mode: Integrated with deepResearch for detailed specifications.
+- MCP Support: Extends capabilities through MCP ecosystem tools.
+- Models: Access to Claude Sonnet, Claude Opus, Gemini, Deepseek, Minimax, and GLM.
+- Documentation Search: real-time, version-specific documentation from official sources.
+- Target: Enterprise-level complexity, not toy projects.
+- ROI: 230% reported for engineering teams; claims 10x faster task completion.
+- Pricing: $1.25/M input tokens, $10/M output tokens.
+- Platform: Available at cheetahai.co.
+- Release: 2025.
 
 ### Last Update
-- 2025-11-18
+2026-01-30
 
 ## Licensing
 
@@ -75,6 +78,9 @@ According to performance analyses, Cheetah AI delivers 230% ROI for engineering 
 ### Resources
 - Yes
   - Website: https://cheetahai.co/
+
+### ACP
+- No
 
 ## Deployment
 
@@ -110,6 +116,9 @@ According to performance analyses, Cheetah AI delivers 230% ROI for engineering 
 
 ### SlashCommands
 - -
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

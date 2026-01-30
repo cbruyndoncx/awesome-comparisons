@@ -37,9 +37,12 @@ CodeLayer is an open-source, keyboard-first IDE and orchestration layer for AI c
 - Caveats: depends on Claude Code (Anthropic) for core model capabilities, so on-prem / fully local usage is limited unless adapted by contributors.
 - License is permissive (Apache 2.0) — good for commercial adoption and modification.
 - Repo contains legacy HumanLayer SDK and documentation for historical context and SDK features.
+- HumanLayer SDK: framework-agnostic API for human-in-the-loop workflows (require_approval, human_as_tool, omnichannel routing for approvals).
+- 12 Factor Agents framework for reliable agent design patterns.
+- Enterprise: RBAC, audit trails, compliance logging, data residency controls, secrets management.
 
 ### Last Update
-2025-10-03 (matches codelayer-0.1.0-20251003-140552-nightly release date)
+2026-01-30
 
 ## Licensing
 
@@ -69,6 +72,9 @@ CodeLayer is an open-source, keyboard-first IDE and orchestration layer for AI c
 ### Resources
 - Yes
   - Official documentation, GitHub repo with examples, CLI, community channels (Discord/X), and demo/tutorial materials are available in the project repository and docs site.
+
+### ACP
+- No
 
 ## Deployment
 
@@ -113,6 +119,9 @@ CodeLayer is an open-source, keyboard-first IDE and orchestration layer for AI c
 ### SlashCommands
 - Yes
   - The product supports reusable, user-triggered commands in two forms: (1) a keyboard-driven command palette / keybindings inside the CodeLayer IDE for launching common actions, sessions, or agent flows; and (2) integrations with messaging channels (Slack/email) where HumanLayer can surface approval prompts or trigger agents via message-based interactions (including Slack workflows or command-like interactions).
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

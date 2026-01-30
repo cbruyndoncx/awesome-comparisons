@@ -11,13 +11,14 @@ React Grab is a developer tool that lets you select any element directly from yo
 - Code/Other
 
 ### Version
-- 2025
+- 2025 (actively maintained; 4.6k GitHub stars as of early 2026)
 
 ### Repo
 - https://github.com/aidenybai/react-grab
 
 ### Rating
-- -
+- [4] Popular niche tool with strong community adoption (4.6k GitHub stars)
+- [3] Narrow scope (React-only element context extraction)
 
 ### Short Description
 Developer tool enabling AI coding assistants to interact with elements in React applications by providing visual element selection and context extraction.
@@ -43,9 +44,13 @@ React Grab is compatible with popular AI coding tools such as Cursor, Claude Cod
 - Open Source: Available on GitHub at aidenybai/react-grab
 - Use Case: Bridges gap between running React apps and AI coding assistants
 - Developer Experience: Point-and-click interface for element selection
+- Performance claim: makes AI tools run up to 3x faster by providing pre-selected, relevant context
+- Copies HTML trace, React component info, and file source on selection
+- Website: react-grab.com
+- Related projects by same author: React Scan (performance monitoring), Million (React optimizing compiler)
 
 ### Last Update
-- 2025-11-18
+2026-01-30
 
 ## Licensing
 
@@ -53,7 +58,7 @@ React Grab is compatible with popular AI coding tools such as Cursor, Claude Cod
 - Yes
 
 ### License
-- -
+- MIT (check repository LICENSE file for canonical terms)
 
 ### Free Trial
 - Yes
@@ -75,6 +80,9 @@ React Grab is compatible with popular AI coding tools such as Cursor, Claude Cod
 - Yes
   - GitHub repository: https://github.com/aidenybai/react-grab
   - Documentation in repository
+
+### ACP
+- No
 
 ## Deployment
 
@@ -102,6 +110,9 @@ React Grab is compatible with popular AI coding tools such as Cursor, Claude Cod
 
 ## Extensible
 
+### Extensible
+- No
+
 ### Plugins
 - No
 
@@ -109,6 +120,9 @@ React Grab is compatible with popular AI coding tools such as Cursor, Claude Cod
 - No
 
 ### SlashCommands
+- No
+
+### Skills
 - No
 
 ### Custom Modes

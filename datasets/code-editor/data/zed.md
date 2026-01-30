@@ -7,7 +7,8 @@ A next-generation, high-performance code editor focused on speed, real-time coll
 - Code/Editor
 
 ### Version
-- Unknown (2025-10-19)
+- v0.208+ (2025, rolling releases)
+  - Stable 0.208.6 released Oct 2025; frequent updates throughout 2025-2026 with major features every few weeks
 
 ### Repo
 - https://github.com/zed-industries/zed
@@ -35,15 +36,17 @@ Zed is a modern code editor engineered for low latency and smooth UX. It renders
 - Extensions: Extension registry now exists, enabling community contributions, but the ecosystem is younger and smaller than VS Code's—growing quickly.
 - Binary vs source nuance: While the source is open under GPL/AGPL, the binaries distributed from zed.dev have their own EULA and the Zed team has noted this could diverge from the source in future distributions (similar to other editor projects). Review the repo and zed.dev terms if license specifics are important for your use case.
 - Good fit: Developers who prioritize low-latency editing, collaboration-first workflows, and integrated AI (especially teams wanting local model hosting) will find Zed compelling. If you depend on a very mature extension marketplace, account for that gap today.
+- 2025-2026 major updates: Agentic Editing (Jun 2025) with Agent Panel overhaul for autonomous code modification via diffs. Zeta Edit Prediction open-source model predicts entire edits (not just tokens). Native Git support with AI commit messages (May 2025). Windows support achieved via full rendering backend rewrite. DAP-based cross-language debugger. Dev Containers MVP (Dec 2025). Helix keymap, Settings Editor, Agent Servers (Oct 2025). Sticky Scroll, Commit and File History Views, Word Diffs (Nov 2025). Rainbow Brackets (Dec 2025). Multi-provider support: OpenAI, Bedrock, xAI (Grok), Ollama auto_discover. Agent Panel: model favorites/pinning, message queuing, @diagnostics feed, thread history. SSH remoting with Windows target support. Subpixel ClearType text rendering on Windows/Linux.
 
 ### Last Update
-- 2025-11-06 (notable: Agent Server Extensions announced)
+2026-01-30
+- 2025-12-08 (Rainbow Brackets, Dev Containers MVP)
+- 2025-11 (Sticky Scroll, Commit/File History, Word Diffs)
 - 2025-10-30 (Codex AI agent announced)
 - 2025-10-20 (stable release 0.208.6)
 - 2025-10-15 (Windows support announced)
-
-<!-- Note Date last updated -->
--
+- 2025-06-18 (Agentic Editing / Agent Panel overhaul)
+- 2025-05-07 (Minimap, Native Git Support)
 
 ## Licensing
 
@@ -73,6 +76,10 @@ Zed is a modern code editor engineered for low latency and smooth UX. It renders
 
 ### Resources
 - No
+
+### ACP
+- Yes
+  - Zed Industries created the Agent Client Protocol (ACP), an open standard for standardized editor-agent communication (JSON-RPC over stdio). ACP is designed to allow any compliant agent (Claude Code, Gemini, Codex CLI, etc.) to communicate with any compliant editor via a unified protocol. See agentclientprotocol.org.
 
 ## Deployment
 
@@ -129,6 +136,9 @@ Zed is a modern code editor engineered for low latency and smooth UX. It renders
     - /diagnostics — insert aggregated diagnostics across the workspace
     - /fetch — insert the response from an arbitrary HTTP URL
   - Slash commands render inserted content as editable, foldable blocks inside the assistant buffer so you can control token usage and visibility when composing prompts.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes

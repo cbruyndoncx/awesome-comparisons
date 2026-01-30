@@ -53,9 +53,10 @@ According to xAI's benchmarks, the model executes at approximately 160 tokens pe
 - Future: Multimodal variant in training with parallel tool calling and extended context
 - Developer: xAI
 - Release: August 2025
+- 2025-2026 Update: General availability October 1, 2025. January 21, 2026 update added summarized thinking traces in Oracle Cloud Infrastructure Generative AI platform. Free launch period ended, transitioned to paid model. New multimodal variant in training with parallel tool usage and extended context. xAI commits to rapid update cadence (days, not weeks).
 
 ### Last Update
-- 2025-11-18
+- 2026-01-30
 
 ## Licensing
 

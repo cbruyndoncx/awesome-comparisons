@@ -7,8 +7,7 @@ Codex CLI is an open-source command-line interface for interacting with OpenAI's
 - Code/Terminal
 
 ### Version
-- Unknown (2025-10-19)
-  - Version information not available for OpenAI Codex CLI
+v0.89.0 (2026-01-22)
 
 ### Repo
 - https://github.com/openai/codex
@@ -39,8 +38,7 @@ Codex CLI provides a lightweight, terminal-first agent that lets developers read
 Sources: GitHub repository (https://github.com/openai/codex) and project documentation/examples aggregated from public write-ups about Codex CLI and its configuration.
 
 ### Last Update
-- 2025-10-19
-  - Date reflects the most recent project metadata checked during this update.
+2026-01-30
 
 ## Licensing
 
@@ -70,6 +68,10 @@ Sources: GitHub repository (https://github.com/openai/codex) and project documen
 ### Resources
 - Yes
   - Can ingest repository files, AGENTS.md guidance, and external web search or provider-specific context when configured.
+
+### ACP
+- Yes
+  - Codex CLI supports the Agent Client Protocol (ACP) by Zed Industries for standardized editor-agent communication via JSON-RPC over stdio.
 
 ## Deployment
 
@@ -114,7 +116,11 @@ Sources: GitHub repository (https://github.com/openai/codex) and project documen
 
 ### SlashCommands
 - Yes
-  - The interactive interface supports internal commands (for example switching models or toggling behavior) and the CLI exposes flags and subcommands to control operation modes.
+  - The interactive interface supports internal commands (e.g., `/permissions`, `/skill` for enabling/disabling skills) and the CLI exposes flags and subcommands to control operation modes.
+
+### Skills
+- Yes
+  - Custom prompts deprecated in favor of skills for reusable instructions and workflows. `/skill` UI for enabling/disabling individual skills (v0.88.0+).
 
 ### Custom Modes
 - Yes

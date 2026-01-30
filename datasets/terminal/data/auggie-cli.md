@@ -10,13 +10,14 @@ Auggie is Augment's agentic coding CLI that runs in your terminal. It understand
 - Code/Terminal
 
 ### Version
-- 1.0 (2025)
+v0.5.6 (2025)
 
 ### Repo
 - https://github.com/augmentcode/auggie
 
 ### Rating
-- -
+- [3] Strong context engine with automatic codebase mapping and CI/CD integration
+- [3] Limited extensibility; no MCP or BYOK support documented
 
 ### Short Description
 An AI agent that brings Augment Code's power to the terminal, featuring advanced context awareness and flexible integration into developer workflows.
@@ -38,7 +39,7 @@ Auggie can handle up to 10,000 commit histories, ensuring accurate code suggesti
 - Released: 2025
 
 ### Last Update
-- 2025-11-18
+2026-01-30
 
 ## Licensing
 
@@ -54,7 +55,7 @@ Auggie can handle up to 10,000 commit histories, ensuring accurate code suggesti
 ## MCP-Client
 
 ### MCP-Client
-- -
+- No
 
 ### Prompts
 - Yes
@@ -70,10 +71,13 @@ Auggie can handle up to 10,000 commit histories, ensuring accurate code suggesti
   - GitHub repository: https://github.com/augmentcode/auggie
   - Product page: https://www.augmentcode.com/product/CLI
 
+### ACP
+- No
+
 ## Deployment
 
 ### BYOK
-- -
+- No
 
 ### Local Offline
 - No
@@ -91,7 +95,7 @@ Auggie can handle up to 10,000 commit histories, ensuring accurate code suggesti
   - Can reference and edit specific files based on natural language requests
 
 ### Checkpoints
-- -
+- No
 
 ### Git Support
 - Yes
@@ -100,21 +104,24 @@ Auggie can handle up to 10,000 commit histories, ensuring accurate code suggesti
 ## Extensible
 
 ### Plugins
-- -
+- No
 
 ### Hooks
-- -
+- No
 
 ### SlashCommands
-- -
+- Yes
+  - Custom commands via `auggie command <name>` and slash commands within the TUI. `/rules` for workspace rules viewing.
+
+### Skills
+- No
 
 ### Custom Modes
 - Yes
-  - Supports both interactive and non-interactive modes
-  - Can be integrated into build systems and automated workflows
+  - Interactive mode (full-screen TUI) and automation/print mode (`--print` flag) for CI/CD pipelines.
 
 ### Subagents
-- -
+- No
 
 ## Ungrouped Criteria
 
