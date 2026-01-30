@@ -5,6 +5,44 @@ criteria:
         The IDE has an integrated AI terminal for executing commands.: {}
         'Yes': {}
         'No': {}
+  - MCP-Client:
+      type: LABEL
+      values:
+        Integrates external tools from configured MCP servers that the Agent can directly utilize; fine-grained control allows disabling specific MCP tools within agent settings.: {}
+        No public documentation found regarding MCP (Model Context Protocol) support; primarily focuses on local model inference.: {}
+        'Notes: Supports Model Context Protocol / MCP server connections to bring external context into conversations and agent workflows.': {}
+        MCP support added in the 2025 modernization update, enabling Model Context Protocol integrations.: {}
+        Extends capabilities with MCP ecosystem tools: {}
+        Built-in MCP client and HumanLayer SDK enable tool/function calls, approvals, and lifecycle events (e.g., function_call.*, human_contact.*). Sessions can surface tool metadata and perform approved side-effecting operations via the platform's tool integrations.: {}
+        Integrates with Model Context Protocols for adding context providers (GitHub, Jira, etc.) and usable via the hub.: {}
+        Cursor supports MCP (Model Context Protocol) for connecting to external context providers and tool integrations.: {}
+        Integrates with external LLM providers via user API keys; no documented dedicated MCP client/service.: {}
+        Native MCP support added July 2025 at Google Cloud Summit London; enables Gemini to access contextual information and work with greater awareness of application architecture and requirements.: {}
+        MCP migration October 2025 from deprecated Tool Calling API; adds session management, tool discovery, streaming responses, and enhanced observability for tool invocations.: {}
+        No documented MCP client support; uses direct LLM API integrations (OpenAI, Anthropic, Groq).: {}
+        MCP server configuration available in Junie/AI Assistant settings; enables integration with external tools and context providers via Model Context Protocol.: {}
+        No public documentation of MCP client support; uses direct LLM provider integrations (Google Gemini, Anthropic, OpenAI).: {}
+        supports MCP Server Marketplace (JSON-based tool integrations / extensions): {}
+        No public documentation found for a generic "MCP client" implementation. MarsX manages AI through its platform orchestrator and per‑micro‑app model workflows rather than exposing a documented standalone MCP client.: {}
+        Integrates with Continue.dev for IDE plugin functionality (private beta for VSCode and JetBrains); enterprise deployments expose admin console and integration points for enterprise management.: {}
+        mux uses model adapters (Ollama, OpenRouter, etc.) rather than an MCP-specific client.: {}
+        Nuanced is explicitly implemented as an MCP server to deliver structured code context to LLM-based agents.: {}
+        No public documentation found regarding MCP (Model Context Protocol) support as of January 2026: {}
+        Refact.ai includes support for the Model Context Protocol (MCP) ecosystem. The platform can act as an MCP client/consumer to request structured context from MCP servers and to integrate external tools and data sources into agent workflows. MCP integration enables richer, streamable, and structured context delivery (e.g., database rows, code search results, tool outputs) to the agent, improving grounding and long-context operations.: {}
+        'Implementation notes:': {}
+        Refact's architecture exposes connectors and integrations that can be used to surface external information to the agent; MCP support is used to standardize these exchanges.: {}
+        MCP usage in Refact allows dynamic discovery of tools and data sources and can be configured in self-hosted deployments.: {}
+        There is no public documentation or indication that Refraction includes an MCP (Model Control Plane) client for connecting directly to external MCP servers.: {}
+        MCP servers extend RooCode beyond the editor to interact with Docker, databases, browsers and other external tooling.: {}
+        No evidence of MCP client support; web-only code generator with no IDE or protocol integrations: {}
+        Cody and the AI integrations support bringing multi-repo and file-context into model prompts (context-enhanced chat); suitable for advanced, model-backed code assistance workflows.: {}
+        Tabnine/Tabnine Agent supports Model Context Protocol (MCP) servers configured via an mcp_servers.json file. The Agent can launch local STDIO MCP servers, connect to remote MCP endpoints (HTTP/SSE), and manage server lifecycle for integrations that expose external tooling and data to the assistant.: {}
+        'Examples: local STDIO servers (command + args), remote HTTP endpoints with JWT/API key headers, and transport detection based on configuration.': {}
+        Model Context Protocol support added in v1.3.0 to enable custom agents and richer context handling: {}
+        Verdent for VS Code includes "MCP Integration," meaning it can act as an MCP client.: {}
+        MCP servers are integrated similar to other extensions like e.g. theming: {}
+        'Yes': {}
+        'No': {}
   - Opensource:
       type: LABEL
       values:
@@ -18,6 +56,7 @@ criteria:
         Distributed under AGPL-3.0 (see LICENSE in repo): {}
         Nuanced is published as an open-source project on GitHub; users should check the repository's LICENSE file for the canonical license text.: {}
         Core Gitpod components remain open-source; some agent and enterprise-grade features are commercial/proprietary.: {}
+        GPT Pilot (underlying framework) is open-source; some Pythagora platform features may be commercial: {}
         Holo-1 (the VLM) has open-source releases, but Runner H’s orchestration and hosted agent product is closed-source as of initial public information.: {}
         Historically Apache 2.0 (OSS) until 2023; in 2023–2024 Sourcegraph moved large portions of the project to an enterprise/proprietary license and in Aug 2024 made the core repository private. Some related projects (e.g., parts of Cody or community tooling) remain open source.: {}
         Core source available on GitHub: {}
@@ -35,7 +74,8 @@ criteria:
         Permissive (check repository LICENSE): {}
         Public materials describe the project as permissively licensed; confirm exact license (MIT/Apache-2.0/etc.) by inspecting the repo's LICENSE file before using in license-sensitive contexts.: {}
         core open-source components: {}
-        '-': {}
+        'Mixed (GPT Pilot: open-source; Pythagora platform: proprietary/commercial)': {}
+        MIT (check repository LICENSE file for canonical terms): {}
         BSD-3: {}
         Sourcegraph Enterprise (formerly Apache 2.0 for much of the codebase prior to relicensing): {}
         Apache License 2.0: {}
@@ -81,6 +121,7 @@ criteria:
         The extension itself is free/open-source; model usage costs depend on the API keys/providers you supply.: {}
         Limited beta access was offered during initial launch windows.: {}
         Unknown: {}
+        No public pricing or trial documentation found as of 2026-01-30: {}
         Free tier/self-hosted free edition for small teams and public code; paid Business/Enterprise plans for larger teams and advanced features.: {}
         Community edition is free & open-source; Team/Enterprise tiers exist commercially for additional features/support.: {}
         'Any additional details: Tabnine sunset its free Basic plan in 2025; access is primarily through paid tiers or enterprise licensing. Trial or pilot options may still be available via sales.': {}
@@ -89,40 +130,6 @@ criteria:
         7-day free trial with 100 credits.: {}
         Core editor is free and open-source.: {}
         The editor and source are available openly; binaries are freely downloadable. (See "Notes" about binary EULA nuance.): {}
-        'Yes': {}
-        'No': {}
-  - MCP-Client:
-      type: LABEL
-      values:
-        Unknown: {}
-        No public documentation found regarding MCP (Model Context Protocol) support; primarily focuses on local model inference: {}
-        'Notes: Supports Model Context Protocol / MCP server connections to bring external context into conversations and agent workflows.': {}
-        No evidence in the public repository or official docs of a built-in "MCP" client integration as of 2025-11-15.: {}
-        Extends capabilities with MCP ecosystem tools: {}
-        Built-in MCP client and HumanLayer SDK enable tool/function calls, approvals, and lifecycle events (e.g., function_call.*, human_contact.*). Sessions can surface tool metadata and perform approved side-effecting operations via the platform's tool integrations.: {}
-        Integrates with Model Context Protocols for adding context providers (GitHub, Jira, etc.) and usable via the hub.: {}
-        Not documented as an MCP client in the same style as some other editor integrations.: {}
-        Integrates with external LLM providers via user API keys; no documented dedicated MCP client/service.: {}
-        Firebase Studio uses Gemini models; no public documentation found for general MCP client support: {}
-        No public documentation found for MCP (Model Context Protocol) client support; primarily uses direct LLM integrations: {}
-        supports MCP Server Marketplace (JSON-based tool integrations / extensions): {}
-        No public documentation found for a generic "MCP client" implementation. MarsX manages AI through its platform orchestrator and per‑micro‑app model workflows rather than exposing a documented standalone MCP client.: {}
-        Integrates with Continue.dev for IDE plugin functionality (private beta for VSCode and JetBrains); enterprise deployments expose admin console and integration points for enterprise management.: {}
-        mux uses model adapters (Ollama, OpenRouter, etc.) rather than an MCP-specific client.: {}
-        Nuanced is explicitly implemented as an MCP server to deliver structured code context to LLM-based agents.: {}
-        No public documentation found regarding MCP (Model Context Protocol) support: {}
-        Refact.ai includes support for the Model Context Protocol (MCP) ecosystem. The platform can act as an MCP client/consumer to request structured context from MCP servers and to integrate external tools and data sources into agent workflows. MCP integration enables richer, streamable, and structured context delivery (e.g., database rows, code search results, tool outputs) to the agent, improving grounding and long-context operations.: {}
-        'Implementation notes:': {}
-        Refact's architecture exposes connectors and integrations that can be used to surface external information to the agent; MCP support is used to standardize these exchanges.: {}
-        MCP usage in Refact allows dynamic discovery of tools and data sources and can be configured in self-hosted deployments.: {}
-        There is no public documentation or indication that Refraction includes an MCP (Model Control Plane) client for connecting directly to external MCP servers.: {}
-        MCP servers extend RooCode beyond the editor to interact with Docker, databases, browsers and other external tooling.: {}
-        Cody and the AI integrations support bringing multi-repo and file-context into model prompts (context-enhanced chat); suitable for advanced, model-backed code assistance workflows.: {}
-        Tabnine/Tabnine Agent supports Model Context Protocol (MCP) servers configured via an mcp_servers.json file. The Agent can launch local STDIO MCP servers, connect to remote MCP endpoints (HTTP/SSE), and manage server lifecycle for integrations that expose external tooling and data to the assistant.: {}
-        'Examples: local STDIO servers (command + args), remote HTTP endpoints with JWT/API key headers, and transport detection based on configuration.': {}
-        Model Context Protocol support added in v1.3.0 to enable custom agents and richer context handling: {}
-        Verdent for VS Code includes "MCP Integration," meaning it can act as an MCP client.: {}
-        MCP servers are integrated similar to other extensions like e.g. theming: {}
         'Yes': {}
         'No': {}
   - Prompts:
@@ -359,13 +366,14 @@ criteria:
   - BYOK:
       type: LABEL
       values:
-        Unknown: {}
-        Local-first model runs offline without API keys; BYOK for cloud features not publicly documented: {}
+        Local-first model runs offline without API keys; BYOK for cloud features not publicly documented.: {}
         '-': {}
         Environment and Claude settings support supplying external LLM API keys and configuring provider settings (e.g., ~/.claude/settings.json, env vars). CLI/desktop app can inherit shell environment variables so teams can use their own provider keys (AWS Bedrock, Anthropic, etc.).: {}
         You can configure and use your own API keys and model endpoints, and switch between local/remote models.: {}
         Cursor supports bring-your-own API keys / model endpoints so teams can choose preferred providers (OpenAI, Anthropic, Google, self-hosted endpoints where supported) and reduce exposure of secrets to the Cursor cloud where applicable.: {}
+        Free-tier users can use chat by providing their own OpenAI/Anthropic API keys; premium AI models available via paid tiers.: {}
         Gemini API keys and AI resources are provisioned as part of the workspace flow; explicit BYOK for model keys is not a first-class, user-driven workflow in the initial preview.: {}
+        Unknown: {}
         No public documentation found for BYOK support; commercial SaaS with integrated AI services: {}
         No public, general-purpose "bring your own key" option for the cloud-hosted Copilot service. Enterprise plans provide data controls and policy management but do not expose a documented BYOK for model keys as of the last update.: {}
         Supports multiple LLM providers (OpenAI, Anthropic/Claude, Groq) via configuration — effectively a vendor-agnostic/BYOK model.: {}
@@ -377,7 +385,8 @@ criteria:
         Nuanced provides context to LLMs but does not manage LLM API keys itself; bring-your-own-LLM/API-key is handled by the client (e.g., Claude Desktop, Cursor) rather than the MCP server.: {}
         Users can supply their own API keys for models (BYOK), enabling use with different model providers and preserving control over credentials.: {}
         There is no public documentation indicating that Refraction supports a Bring Your Own Key (BYOK) model for connecting external LLM API keys or selecting self-hosted models. Enterprise customers should contact Refraction sales/support for precise details.: {}
-        Sourcegraph Cloud does not publicly advertise a generic BYOK feature; however self-hosted deployments give organizations full control over their infrastructure and encryption boundaries.: {}
+        Partial: {}
+        Sourcegraph Cloud does not publicly advertise a generic BYOK feature; however self-hosted deployments (Cody Enterprise) give organizations full control over infrastructure and model selection. Self-hosted supports configurable LLM backends.: {}
         Tabnine supports OpenAI API-compatible endpoints and private certificate authorities for enterprise integrations, and allows organizations to configure custom model endpoints or self-hosted model deployments (Gemma, Qwen, etc.). These capabilities let enterprises use their own model endpoints and credentials in managed/private deployments.: {}
         'Theia AI and integrations follow a bring-your-own-key / bring-your-own-model philosophy: you can configure external LLM providers or self-hosted models (e.g., Ollama, LlamaFile, hosted Anthropic/OpenAI keys) depending on deployment and data-control needs.': {}
         No public documentation found for BYOK support.: {}
@@ -771,8 +780,10 @@ criteria:
         Integration via plugins and Continue.dev: {}
         Server exposes tools/resources via MCP and can be integrated into other tooling chains; implementations are intended to be extended or wrapped by clients.: {}
         Fork of VSCode + modular submodules for AI features; supports plugins and integrations: {}
+        'No': {}
         Editor extensions are available on paid tiers (editor plugins/support mentioned in product features): {}
         VS Code extension architecture, custom modes, MCP (Model Context Protocol) servers, and provider/plugin integrations: {}
+        Web-based code generator with no documented extension or plugin system: {}
         'Integrations: IDE plugins (VS Code, JetBrains, Visual Studio, Eclipse), browser extensions, code host integrations (GitHub, GitLab, Bitbucket), API and webhooks, app/extensions framework': {}
         Integrates with major IDEs (VS Code, JetBrains, Neovim) and offers chat integrations; product roadmap and integrations may expand: {}
         Modular architecture designed for composing custom IDEs and integrating extensions (supports VS Code extensions via Open VSX): {}
@@ -928,7 +939,7 @@ criteria:
         These are small, user-facing commands; broader automation is implemented via the platform and developer tools rather than additional built-in slash commands.: {}
         'Sources:': {}
         Session command list provided in the runtime instructions at the top of this environment: {}
-        Cursor's interaction model centers on Composer/Agent UIs rather than slash-command sets like some other editor assistants.: {}
+        Cursor supports slash commands as quick shortcuts for common operations within the editor.: {}
         Supports prompt-style slash commands from the input field (notably `/init` to create a DEVOXXGENIE.md project descriptor).: {}
         Commands and shortcuts are entered directly in the chat input and can be combined with context selections (files, images, project scanner options).: {}
         Includes slash commands such as /Plan for planning workflows and quick-edit triggers in the IDE and extensions.: {}
@@ -936,6 +947,7 @@ criteria:
         Use `/` in the chat to see available commands; many commands are surfaced contextually based on selected code or active files.: {}
         The Firebase MCP server provides pre-written prompts surfaced as slash commands (e.g., /firebase:init) in some tool integrations.: {}
         There is no documentation of slash-commands or user-triggered reusable commands; interactions are performed through the web UI.: {}
+        Custom commands to automate repeated steps; chat history for resuming sessions; rule-based response guidance for team standards.: {}
         Interaction model was natural-language driven (tasks, specs, plans) rather than a slash-command interface documented for user-triggered commands.: {}
         'Is there support for re-usable commands that can be manually triggered by the user:': {}
         Copilot Chat supports conversational triggers and structured commands/inputs in the chat UI; extensions/agents can expose command-like actions that users invoke from the chat or editor context.: {}
@@ -1008,9 +1020,11 @@ criteria:
         Distinct Planning, Implementation and Debugging modes that change how the agent reasons about the codebase and produces outputs.: {}
         Provides specialized workflows through App Prototyping agent and Gemini in-IDE chat for different development tasks: {}
         There is no public support documented for creating persistent custom "modes" that change agent behavior; users can adjust inputs and settings per project to influence generated outputs.: {}
+        Rule-based response guidance for team standards/preferences; per-project context controls (.aiexclude, .gitignore enforcement); model selection (Flash vs Pro).: {}
         There was no documented feature for users to create specialist modes that change the overall chat/agent behavior beyond editing specs/plans and choosing when to regenerate.: {}
         Can the user create specialist modes that enable you to tailor the chat experience for specific tasks.: {}
         'Custom instructions, persistent prompt files, Copilot Spaces, and workspace-level knowledge bases allow teams to define tailored modes and default context for chat sessions (for example: testing mode, security-aware suggestions, or style-guides).': {}
+        No documented custom mode system; the multi-agent workflow is fixed (Product Owner → Architect → Tech Lead → Developer → etc.).: {}
         The product exposes distinct interaction modes (Chat mode and Agent/Autonomous mode) and allows selecting different model providers and configurations (cloud vs local models). However, there is no publicly-documented facility for end-users to create arbitrary custom "modes" beyond the provided chat/agent workflows and model/configuration choices.: {}
         Ships with Architect, Coder, Debugger and Orchestrator modes; supports creating custom modes for tailored workflows.: {}
         Users can customize how the AI Employees operate via onboarding choices, role selection, and prompt/configuration templates used by the app builder. This allows creation of specialist operational modes (e.g., a Penny configuration for SEO-focused output versus a Stan configuration for sales outreach). There is no public documentation describing an exposed "custom mode" editor or marketplace; customization appears to be driven through role settings and prompt inputs.: {}
@@ -1079,6 +1093,7 @@ criteria:
         Agentic workflows and task decomposition suggest subagent-like behavior (automated planners, implementation workers and debug tracers); exposes multi-step task orchestration.: {}
         App Prototyping agent handles specialized tasks for app generation and scaffolding: {}
         From021 does not document the ability to define specialized AI subagents or task-specific agent workflows; AI appears to be built-in to the product flows.: {}
+        'Agent Mode orchestrates specialized sub-tasks: planning, code generation, test generation, debugging, and verification in autonomous multi-step workflows.': {}
         Copilot Workspace used specialized built-in agents (e.g., brainstorm agent, plan agent, repair agent, follow-up) to handle different stages of the Task→Spec→Plan→Code workflow.: {}
         These agents coordinated to propose specs, generate concrete plans, produce code diffs, run tests, and attempt repairs when failures occurred.: {}
         There was no public surface documented for users to author or register their own custom agents; the agent set and behavior were provided by the Workspace service.: {}
@@ -1123,7 +1138,7 @@ criteria:
       type: LABEL
       values:
         Other: {}
-        Can analyze and work with other languages via dependency decompilation / semantic indexing; used in demos with Python and mixed stacks): {}
+        One-click imports for JS/TS/Python/Rust added in 2025 modernization update; can handle enterprise-scale projects (e.g., NetBeans with 5M+ lines on 16GB RAM).: {}
         Support for other backend languages via templates and runtime options (examples include Go and Java in templates): {}
         Web UI: {}
         Node.js: {}
@@ -1193,3 +1208,15 @@ criteria:
         Code/Other: {}
         Code/Terminal: {}
         Product/Prototyping: {}
+  - ACP:
+      type: LABEL
+      values:
+        JetBrains is in active collaboration with Zed Industries on the Agent Client Protocol (ACP), an open standard for standardized editor-agent communication (JSON-RPC over stdio). ACP support is expected to enable JetBrains IDEs to communicate with any ACP-compliant coding agent. See agentclientprotocol.org.: {}
+        Zed Industries created the Agent Client Protocol (ACP), an open standard for standardized editor-agent communication (JSON-RPC over stdio). ACP is designed to allow any compliant agent (Claude Code, Gemini, Codex CLI, etc.) to communicate with any compliant editor via a unified protocol. See agentclientprotocol.org.: {}
+        'Yes': {}
+        'No': {}
+  - Skills:
+      type: LABEL
+      values:
+        'Yes': {}
+        'No': {}

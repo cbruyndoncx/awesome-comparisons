@@ -107,6 +107,12 @@ criteria:
           display: '✅'
         'No':
           display: '✖'
+  - Skills:
+      values:
+        'Yes':
+          display: '✅'
+        'No':
+          display: '✖'
   - CustomModes:
       values:
         'Yes':
