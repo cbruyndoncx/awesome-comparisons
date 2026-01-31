@@ -13,6 +13,8 @@ criteria:
         'Notes: Supports Model Context Protocol / MCP server connections to bring external context into conversations and agent workflows.': {}
         MCP support added in the 2025 modernization update, enabling Model Context Protocol integrations.: {}
         Extends capabilities with MCP ecosystem tools: {}
+        First code assistant in China to support MCP: {}
+        Connects to Tencent ecosystem products and external tools/agents: {}
         Built-in MCP client and HumanLayer SDK enable tool/function calls, approvals, and lifecycle events (e.g., function_call.*, human_contact.*). Sessions can surface tool metadata and perform approved side-effecting operations via the platform's tool integrations.: {}
         Integrates with Model Context Protocols for adding context providers (GitHub, Jira, etc.) and usable via the hub.: {}
         Cursor supports MCP (Model Context Protocol) for connecting to external context providers and tool integrations.: {}
@@ -28,6 +30,7 @@ criteria:
         mux uses model adapters (Ollama, OpenRouter, etc.) rather than an MCP-specific client.: {}
         Nuanced is explicitly implemented as an MCP server to deliver structured code context to LLM-based agents.: {}
         No public documentation found regarding MCP (Model Context Protocol) support as of January 2026: {}
+        Supports MCP ecosystem for extending capabilities with community tools: {}
         Refact.ai includes support for the Model Context Protocol (MCP) ecosystem. The platform can act as an MCP client/consumer to request structured context from MCP servers and to integrate external tools and data sources into agent workflows. MCP integration enables richer, streamable, and structured context delivery (e.g., database rows, code search results, tool outputs) to the agent, improving grounding and long-context operations.: {}
         'Implementation notes:': {}
         Refact's architecture exposes connectors and integrations that can be used to surface external information to the agent; MCP support is used to standardize these exchanges.: {}
@@ -100,6 +103,8 @@ criteria:
         Open-source; free to run locally under the GPL-3.0 license (no hosted trial required to use the client).: {}
         No public hosted SaaS offering documented in the repo as of 2025-11-15; commercial/hosted options, if any, are not clearly listed in the OSS repository.: {}
         '-': {}
+        Free tier available for exploration: {}
+        One-time 2-week Pro trial for new users: {}
         A free/solo tier exists (open-source extensions + hub access for public/shared blocks). Paid team/enterprise tiers add governance and private deployment options.: {}
         Free Hobby tier available with limited agent requests; Pro trial options are commonly offered for evaluation.: {}
         'Freemium model: free tier with limited daily credits (e.g. a free plan with daily credits for model usage); paid tiers unlock more credits/models.': {}
@@ -116,6 +121,8 @@ criteria:
         Open-source project and pre-built preview binaries available on GitHub Releases.: {}
         Core project is open-source and available to use without payment. Commercial/enterprise add-ons (if offered) may be paid — check project or vendor pages for details.: {}
         Free tier available with basic features and BYOK support; paid tiers unlock advanced features: {}
+        Free 2-week Pro trial with 300-1,000 credits: {}
+        Free tier available ($0/mo) with limited basic models: {}
         Open source and freely available: {}
         New users get a limited number of free generations (commonly reported as ~10 free uses) and a short trial period to evaluate the service.: {}
         The extension itself is free/open-source; model usage costs depend on the API keys/providers you supply.: {}
@@ -130,6 +137,8 @@ criteria:
         7-day free trial with 100 credits.: {}
         Core editor is free and open-source.: {}
         The editor and source are available openly; binaries are freely downloadable. (See "Notes" about binary EULA nuance.): {}
+        Free Developer plan with 30 daily LLM calls: {}
+        Includes Repo Grokking, agentic mode, code review, automated issue detection: {}
         'Yes': {}
         'No': {}
   - Prompts:
@@ -262,6 +271,7 @@ criteria:
         Extensible via plugin/extension system: {}
         VS Code extension (primary integration) and a CLI (`npx pythagora`).: {}
         Debugging primitives (logs, breakpoints, step-debugging), Git integration, DB connectors, and deployment integrations.: {}
+        Built-in tools combined with MCP integration: {}
         Element selection and context extraction tool: {}
         Refact.ai agents can be granted access to tools such as Git, shell/Docker, CI, and external connectors (GitHub/GitLab, databases) when deployed with appropriate permissions.: {}
         Plugins and connectors expose actions (run tests, create branches, commit changes, open PRs) which the agent can invoke as part of autonomous workflows.: {}
@@ -291,6 +301,9 @@ criteria:
         Built-in AI tools include inline Quick Edit, Tab autocomplete, Chat (multi-mode), Agent Mode (multi-file edits), Gather Mode (read-only analysis), model integrations (Ollama, local runtimes), and terminal command execution for Agent workflows.: {}
         Includes inline code actions, multi-file refactoring tools, image-to-code generator, and an AI terminal for executing commands.: {}
         Integrates with VS Code extensions and external linters/formatters via plugin architecture.: {}
+        Coding Agent for multi-file operations: {}
+        Unit Testing Agent for test generation: {}
+        Integration with 20+ developer tools: {}
         'Yes': {}
         'No': {}
   - Resources:
@@ -361,6 +374,7 @@ criteria:
         Documentation, examples, model adapter configs, and community guides available via the project repository and website; includes sample prompts and setup instructions for local model runtimes.: {}
         Documentation and tutorials available on the Windsurf website and in-product guidance (Cascade walkthroughs, Supercomplete demos).: {}
         Community examples and helper files (.windsurfrules) hosted in community GitHub repositories.: {}
+        Repo Grokking provides deep codebase understanding via vector database and graph representation: {}
         'Yes': {}
         'No': {}
   - BYOK:
@@ -391,6 +405,7 @@ criteria:
         'Theia AI and integrations follow a bring-your-own-key / bring-your-own-model philosophy: you can configure external LLM providers or self-hosted models (e.g., Ollama, LlamaFile, hosted Anthropic/OpenAI keys) depending on deployment and data-control needs.': {}
         No public documentation found for BYOK support.: {}
         Zed supports OpenAI-compatible providers and can be configured to use local LLM hosts (e.g., Ollama) so you can run models with your own keys or entirely offline.: {}
+        Supports GPT, Claude 3.5 Sonnet, and custom models: {}
         'Yes': {}
         'No': {}
   - Local Offline:
@@ -400,6 +415,7 @@ criteria:
         Cloud-first product; local/in-IDE operations likely use cloud model/augmentation: {}
         Brokk's client is open-source Java software; it ships with or can leverage Jlama for local/tiny-model inference and supports workflows that minimize cloud calls. Some advanced features may use hosted models depending on configuration.: {}
         'Any additional details like Ollama: supports local model hosts (Ollama, LM Studio) as backends for offline/local use': {}
+        Requires stable internet connection for AI model services: {}
         Primarily designed to run with Claude Code / Anthropic-backed sessions rather than purely local model hosting]: {}
         Supports local model workflows (e.g. via Ollama/local LLMs) and headless/offline operation for air-gapped environments.: {}
         Cursor is primarily a cloud-first product. While BYOK lets you use private model endpoints, fully offline/local-only deployments are not a documented primary use-case as of the 2.0 release.: {}
@@ -458,6 +474,8 @@ criteria:
         Checkpoint management creates snapshots at each step and tool call, allowing comparison, restore, and safe experimentation.: {}
         Plan & Act modes separate strategic planning from execution so context updates can be staged and reviewed before being committed.: {}
         Context usage is tracked (token/context progress) and Cline selectively reads/indexes files and docs to remain within model windows while preserving salient project state.: {}
+        '@ symbol for selecting code snippets or files as conversation context': {}
+        '@Codebase for project understanding and structure analysis': {}
         'CodeLayer / HumanLayer provides multiple explicit context-management mechanisms: session-scoped context across Claude Code sessions, file and region pinning (attach files or file ranges to a session), worktree-aware context (each session can be bound to a git worktree/branch), context windows and prompt templates for engineered context snapshots, message/thread history preserved per session, and state objects that are carried through human approval flows and webhooks. These combine to enable deterministic context engineering and reproducible agent runs.': {}
         'Methods for managing and updating context:': {}
         Conversation-level context (chat state / memory) maintained by the agent across messages.: {}
@@ -517,6 +535,9 @@ criteria:
         A project-level config.json (Pythagora Core) where LLM keys, development mode (local/cloud), and other settings are declared.: {}
         Agent session logs and action traces (visibility into what the AI agents did during a run), which developers can review to understand and update context.: {}
         Git integration (the usual source-control history acts as a record of context changes).: {}
+        Enhanced context engineering with hybrid retrieval architecture: {}
+        Vector search, code graphs, and pre-indexed knowledge bases: {}
+        Repo Wiki for auto-generated project documentation: {}
         Extracts and provides element context to AI assistants: {}
         'Refact.ai uses Retrieval-Augmented Generation (RAG) to maintain and update contextual state across a repository: whole-repo indexing, symbol-aware retrieval, and context windows sourced from the repo index.': {}
         In-IDE session/chat history is preserved and combined with retrieved artifacts to form answers; users can create custom system prompts to influence context.: {}
@@ -555,6 +576,10 @@ criteria:
         Zed exposes the entire AI request/interaction as an editable text buffer in the Assistant/Agent Panel, allowing you to manage and mutate context directly (edit prior messages, remove sections, fork conversations by copying buffers) [zed.dev docs].: {}
         Context can be programmatically and interactively extended via slash commands that inject file contents, terminal output, diagnostics or HTTP responses into the assistant buffer (see /file, /tab, /terminal, /diagnostics, /fetch) which are inserted as folded blocks you can expand or collapse for fine-grained control.: {}
         The inline assistant can combine local selection context with the assistant panel buffer when invoked, enabling targeted transformations while preserving broader context.: {}
+        Repo Grokking analyzes entire repository structure: {}
+        Vector database embeddings for semantic search: {}
+        Graph representation of codebase architecture: {}
+        Continuously updated as repository evolves: {}
         'Yes': {}
         'No': {}
   - Direct File References:
@@ -573,6 +598,7 @@ criteria:
         Paths, symbols and call-graph locations are surfaced so prompts and agent actions can target precise files or symbols.: {}
         Cline reads, opens, edits and creates files directly inside the editor; it shows diffs and writes changes to file paths in the workspace.: {}
         Files are referenced by path and integrated into Cline's context (diff views, Timeline entries, and checkpoint snapshots) so the agent can cite and act on exact files.: {}
+        '@ symbol for file and context references': {}
         CodeLayer integrates with the repository and git worktrees so sessions can directly reference files, open diffs, and operate on file ranges. Sessions surface file metadata (path, revision, worktree) in prompts and diffs so agents and humans can operate on precise file references. The HumanLayer SDK also allows including file-like payloads in approvals and function calls so external systems can reconstruct the referenced files.: {}
         'Files can be directly referenced by path in tool calls and task context:': {}
         developer__text_editor accepts absolute or repo-relative paths for view/write/insert/str_replace operations.: {}
@@ -702,6 +728,7 @@ criteria:
         Undo/rollback workflows are supported indirectly via standard Git integration; Pythagora writes real files to the workspace/repo so developers can use their normal VCS workflows to create commits, branches and rollbacks.: {}
         The platform also provides activity logs and agent traces which can help reconstruct or revert changes.: {}
         There is no clearly documented in-platform "checkpoint" snapshot API (e.g., one-click snapshot/restore) beyond using Git and deployment snapshots.: {}
+        Quest Mode includes rollback plans and verification cycles: {}
         Actions performed by the agent that modify repository state (branches, commits, PRs) are reversible using standard Git operations (revert, reset, branch/commit history) when the agent's git-level permissions are enabled.: {}
         Self-hosted deployments can enforce additional backup/versioning policies; enterprise deployments support retaining audit logs and rolling back via git or deployment snapshots.: {}
         There is no documented checkpoint or undo system for reverting actions; Refraction stores generation history for user review, but this is not presented as a versioned checkpoint/rollback mechanism.: {}
@@ -730,6 +757,7 @@ criteria:
         Integrates with repository search and can surface examples and API usage from GitHub/open-source code; version-control integration is part of the IDE workflow.: {}
         Works with repository workflows via IDE integrations; generated suggestions and transformations can be applied to local repos but require human review for correctness and licensing.: {}
         Reads project context / Codespace-style integrations for richer suggestions: {}
+        Version control integration: {}
         Native integrations (MCP-style integrations) for GitHub and git workflows; automation via CLI for PR/comments/summaries.: {}
         Uses git worktrees and integrates with standard Git workflows. Multi-agent execution uses isolated worktrees to avoid merge conflicts while agents make changes.: {}
         Integrates with local repositories and provides VS Code extension workflows: {}
@@ -756,6 +784,9 @@ criteria:
         Built-in workflows for creating commits, opening pull requests, and rolling back changes from the Deck interface.: {}
         Integrated commit/PR workflows: {}
         Integrates with Git workflows; project-aware features and diagnostics help with common VCS tasks.: {}
+        Automatically recognizes Git-managed workspaces: {}
+        Integrates with GitHub and GitLab: {}
+        Understands repository structure and conventions: {}
         'Yes': {}
         'No': {}
   - Extensible:
@@ -1006,6 +1037,8 @@ criteria:
         Dedicated plan mode with deepResearch: {}
         Toggleable rulesets (.clinerules) and Plan vs Act modes let teams define specialist behavior profiles and switch modes to tailor the assistant for different tasks or policies.: {}
         Teams and projects can configure provider/backends (BYOK, local models) that change runtime behavior and constraints for the assistant.: {}
+        Craft Mode for autonomous multi-file code generation and modification: {}
+        Testing Agent mode supporting Jest and Mocha frameworks: {}
         Users can create specialist session modes by configuring models, prompt templates, and session settings (e.g., model type, temperature, tool access). The IDE and SDK permit different session types/workflows (review, refactor, PR authoring, exploratory), and CodeLayer's session-forking and template features let teams codify repeatable modes for specific developer tasks.: {}
         'Specialist modes can be created by combining extensions, execution settings, and curated prompts:': {}
         Enable/disable specific extensions (platform__manage_extensions) to tailor available tools for the mode.: {}
@@ -1040,6 +1073,9 @@ criteria:
         BYOK (bring-your-own-key) configuration via `config.json` to choose which LLMs to use.: {}
         Opinionated technology modes (React + Node by default) and settings that steer the generator toward the supported stacks.: {}
         These modes let teams control where work runs, which models are used, and how the assistant behaves in terms of deployment and file writes.: {}
+        Quest Mode with three scenarios (Code with Spec, Build a Website, Prototype Ideas): {}
+        Chat Agent Mode for interactive pair programming: {}
+        Next Edit Suggestion (NES) mode for multi-line predictions: {}
         Users can define custom system prompts, select specific LLMs, and configure workspace-level settings to create tailored modes for different tasks (refactor, document, test, review).: {}
         BYOK and model selection let teams create specialized modes that enforce privacy or use tuned models for in-house coding standards.: {}
         There is no public information about creating persistent custom modes or specialist modes that alter the assistant's behavior across sessions. The product focuses on one-off, targeted generations rather than configurable modes.: {}
@@ -1061,6 +1097,7 @@ criteria:
         'Persistence: Memories and project-level rules make these custom modes repeatable across sessions.': {}
         Zed supports configurable Assistant profiles (assistant.profiles in settings.json) which let you create custom agent/tool configurations (e.g., Read-only, Write-enabled, Minimal) governing what the assistant can access and do. Profiles can be created and edited via the UI or by modifying settings.json directly.: {}
         The editor also supports extensibility (extensions, settings, keymaps), so you can compose specialist workflows or modes via extensions plus profile/policy configuration.: {}
+        Agentic mode with specialized pipeline: {}
         'Yes': {}
         'No': {}
   - Subagents:
@@ -1079,6 +1116,9 @@ criteria:
         '-': {}
         Through the Model Context Protocol (MCP) Cline can add and integrate custom tools/services ("add a tool" flow) that act as specialized subagents for task-specific workflows.: {}
         These MCP-backed tools can fetch external data (Jira, PagerDuty, cloud APIs), perform operations, and be invoked from plans, effectively functioning as domain-specific subagents.: {}
+        Craft Agent for autonomous code generation: {}
+        Testing Agent for automatic test case generation: {}
+        Code Review agent for analyzing and improving code quality: {}
         'CodeLayer is built for multi-agent orchestration: MULTICLAUDE enables running multiple Claude Code sessions in parallel (effectively specialized subagents) bound to separate worktrees or tasks. The HumanLayer SDK pattern also encourages defining specialized agent/tool functions (including "human as a tool") that act as subagents for task-specific workflows and human-in-the-loop approvals.': {}
         'Specialized subagents and task workflows are supported:': {}
         Use dynamic_task__create_task to spawn tasks with custom instructions, extension scoping, and execution settings.: {}
@@ -1114,6 +1154,9 @@ criteria:
         PearAI surfaces agent-like automation features (PearAI Agent is listed as planned/early) and routes tasks to specialized models or toolsets (Aider, Supermaven, Continue, Perplexity, Mem0). Users can achieve subagent-like workflows by combining model routing, tool integrations, and scripted command sequences; PearAI's router automatically selects the best-performing model for each task.: {}
         Pythagora is designed around multiple specialized agents (publicly discussed as ~14 agents) that coordinate to plan, generate, review, test, debug and deploy applications. These subagents cover distinct roles such as planning, frontend generation, backend generation, test generation, and debugging.: {}
         The architecture appears to be orchestrated so that agents pass artifacts and logs among themselves; however, there is no public API documented for creating custom subagents or directly wiring new agent types (the system is opinionated and prebuilt agents do the heavy lifting).: {}
+        Quest Mode autonomous agents for full task delegation: {}
+        Agents handle requirement clarification, spec generation, execution, and verification: {}
+        Supports parallel execution in local, parallel, or remote cloud environments: {}
         Refact.ai supports autonomous agent workflows that can be configured to run multi-step tasks (e.g., run tests, create branches, commit changes, open PRs) and integrate with external tools (Git, Docker, DBs, shell) when enabled.: {}
         Agents leverage the repo index + tool integrations to execute actions, follow-up on results, and iterate (plan→execute→verify) across the codebase.: {}
         Refraction does not document any capability to define or orchestrate specialized AI subagents for task-specific workflows; its model is centered on discrete generation tasks (refactors, tests, docs) per request.: {}
@@ -1132,6 +1175,11 @@ criteria:
         'Specialized flows & model selection: Cascade supports creating distinct AI flows with specific settings (model choice, memory, rules) to act like specialized subagents for task-specific workflows (e.g., refactor agent, test-generator agent).': {}
         'Autonomous vs. assistant modes: Write Mode runs more autonomously (multi-step execution), effectively letting a sub-flow perform a sequence of edits and terminal actions under supervision.': {}
         There is no explicit public documentation describing named "subagents" you can define and register. Zed does provide an Agent Panel with tool calling, profiles that restrict or grant tool access, and MCP server integration for custom tools — these enable agentic workflows, but the term "subagent" (as separately definable autonomous agents) is not documented in the sources used.: {}
+        Coding Agent for code generation/modification/refactoring: {}
+        Q&A Agent for codebase queries: {}
+        Repo-Info Agent for project context: {}
+        Unit Testing Agent for test generation: {}
+        Code review agent for quality analysis: {}
         'Yes': {}
         'No': {}
   - Languages:
@@ -1139,6 +1187,7 @@ criteria:
       values:
         Other: {}
         One-click imports for JS/TS/Python/Rust added in 2025 modernization update; can handle enterprise-scale projects (e.g., NetBeans with 5M+ lines on 16GB RAM).: {}
+        Supports over 200 programming languages with 95% code generation accuracy: {}
         Support for other backend languages via templates and runtime options (examples include Go and Java in templates): {}
         Web UI: {}
         Node.js: {}
@@ -1152,9 +1201,12 @@ criteria:
         React (frontend): {}
         Node.js / Express (backend): {}
         SQLite, PostgreSQL: {}
+        C++: {}
+        Supports over 200 programming languages total: {}
         Specifically for React applications: {}
         Many other popular languages (wide IDE/language support): {}
         Python, JavaScript/TypeScript, Go, Java, Ruby, C#, and most common programming languages (broad support via language-agnostic indexing): {}
+        Supports over 70 programming languages total: {}
         Any: {}
         Java: {}
         Bash: {}
