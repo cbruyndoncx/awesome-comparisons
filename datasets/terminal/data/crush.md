@@ -1,6 +1,4 @@
-# Crush
-https://github.com/charmbracelet/crush
-
+# Crush - https://github.com/charmbracelet/crush
 Crush is a glamorous terminal-based AI coding agent developed by Charmbracelet that integrates multiple large language models directly into terminal workflows. Built with Bubble Tea terminal UI framework, Crush combines AI capabilities with real-time code understanding through Language Server Protocol integration and external system connectivity via Model Context Protocol, providing a visually appealing and intelligent collaborative coding workspace in the command line.
 
 **Dataset ID:** terminal

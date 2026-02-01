@@ -1,6 +1,4 @@
-# CodeBuddy
--
-
+# CodeBuddy - https://codebuddy.tencent.com
 CodeBuddy is a full-stack AI programming tool developed by Tencent Cloud, powered by Tencent Hunyuan and DeepSeek V3 dual language models. Available as both a standalone IDE and plugin for VS Code and JetBrains IDEs, CodeBuddy provides end-to-end development assistance with intelligent code generation, design-to-code conversion, and autonomous multi-file code modifications through its flagship Craft Mode feature.
 
 **Dataset ID:** code-editor

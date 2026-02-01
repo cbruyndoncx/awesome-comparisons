@@ -1,6 +1,4 @@
-# Zencoder
-https://zencoder.ai
-
+# Zencoder - https://zencoder.ai
 Zencoder is an AI coding assistant designed to help developers ship products faster with integrated support for Visual Studio Code and JetBrains IDEs. Using its proprietary Repo Grokking technology, Zencoder analyzes entire repositories through embeddings and graph representations stored in a vector database, enabling specialized agent-based capabilities that automate complex coding tasks while maintaining deep contextual awareness of codebase architecture and conventions.
 
 **Dataset ID:** code-editor

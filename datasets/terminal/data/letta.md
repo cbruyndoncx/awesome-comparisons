@@ -1,6 +1,4 @@
-# Letta
-https://github.com/cpacker/MemGPT
-
+# Letta - https://github.com/cpacker/MemGPT
 Letta (formerly MemGPT) is an open-source, model-agnostic platform for building stateful AI agents with persistent memory capabilities. As a memory-first coding agent designed for terminal environments, Letta enables developers to work with agents that learn and improve across sessions rather than in isolated interactions, using a MemGPT-based architecture with self-editing memory split between in-context and out-of-context storage organized into editable memory blocks.
 
 **Dataset ID:** terminal

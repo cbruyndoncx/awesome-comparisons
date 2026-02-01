@@ -1,6 +1,4 @@
-# Antigravity
-https://antigravity.dev
-
+# Antigravity - https://antigravity.dev
 Antigravity is Google's free AI-powered agentic development platform that represents a fundamental shift from traditional manual coding to autonomous agent-driven development. Built as a VSCode fork with multi-agent orchestration capabilities, Antigravity enables AI agents to plan entire projects, write code across multiple files, test applications, and debug issues automatically through an integrated editor, terminal, and browser environment.
 
 **Dataset ID:** terminal

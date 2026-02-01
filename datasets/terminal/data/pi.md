@@ -1,6 +1,4 @@
-# Pi
-https://github.com/mariozechner/pi
-
+# Pi - https://github.com/mariozechner/pi
 Pi is a minimal terminal-based coding agent harness designed as an alternative to traditional IDEs, enabling developers to interact with AI language models through a command-line interface. Built around the principle of "adapt pi to your workflows, not the other way around," Pi emphasizes constraints and minimalism to avoid unnecessary complexity while providing a complete orchestration system combining an agent loop, terminal UI framework, and execution tools.
 
 **Dataset ID:** terminal

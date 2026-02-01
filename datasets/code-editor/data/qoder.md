@@ -1,6 +1,4 @@
-# Qoder
-https://qoder.com
-
+# Qoder - https://qoder.com
 Qoder is an agentic IDE developed by Alibaba that enables developers to delegate complete coding tasks to AI agents through autonomous programming. Representing Phase 3 of programming in the LLM era, Qoder moves beyond co-pilot assistance to fully autonomous agents that execute development tasks independently through Quest Mode, Chat Agent Mode, and Next Edit Suggestion (NES) capabilities.
 
 **Dataset ID:** code-editor

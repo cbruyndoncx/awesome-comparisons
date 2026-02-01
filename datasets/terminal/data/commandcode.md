@@ -1,6 +1,4 @@
-# CommandCode
-https://commandcode.ai
-
+# CommandCode - https://commandcode.ai
 CommandCode is a terminal-based AI coding agent that continuously learns and adapts to individual developer coding styles and preferences. Using a proprietary meta neuro-symbolic AI model called "taste-1," CommandCode addresses the frustration of AI-generated code that is technically correct but doesn't match personal coding patterns by learning through every interaction and progressively aligning with developer conventions for variable naming, code structure, testing preferences, and architectural patterns.
 
 **Dataset ID:** terminal

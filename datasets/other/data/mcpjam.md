@@ -1,6 +1,4 @@
-# MCPJam Inspector
-https://github.com/mcpjam/inspector
-
+# MCPJam Inspector - https://github.com/mcpjam/inspector
 MCPJam Inspector is an open-source web-based debugging tool for testing Model Context Protocol (MCP) servers, frequently described as "Postman for MCP." Built with Next.js 15 and React 19, MCPJam provides a visual development workspace that lets developers test and validate MCP implementations without deploying them to production clients, offering comprehensive logging, visual OAuth 2.1 debugging, and an integrated LLM playground.
 
 **Dataset ID:** other
