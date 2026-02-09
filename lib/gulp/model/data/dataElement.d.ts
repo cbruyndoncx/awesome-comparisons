@@ -16,6 +16,7 @@ export class DataElement {
   public latex: string;
   public sourcePath?: string | null;
   public editLink?: string | null;
+  public mcpEnrichment?: any;
 
   constructor(
     name: string,
