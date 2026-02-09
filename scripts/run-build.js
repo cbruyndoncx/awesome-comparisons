@@ -80,6 +80,7 @@ if (cleanOutputsFirst) {
 }
 
 runCommand(npmCommand, buildDataPrepareArgs(datasetArgument, forceAllDatasets));
+runCommand(npmCommand, buildMcpEnrichArgs(datasetArgument, forceAllDatasets));
 runCommand(ngBinary, ['build', ...angularArgs]);
 
 function runCommand(command, args) {
@@ -94,6 +95,20 @@ function runCommand(command, args) {
 
 function buildDataPrepareArgs(datasetArg, includeAll) {
     const args = ['run', 'data:prepare'];
+    const forwarded = [];
+    if (includeAll) {
+        forwarded.push('--all-datasets');
+    } else if (datasetArg) {
+        forwarded.push('--dataset', datasetArg);
+    }
+    if (forwarded.length > 0) {
+        args.push('--', ...forwarded);
+    }
+    return args;
+}
+
+function buildMcpEnrichArgs(datasetArg, includeAll) {
+    const args = ['run', 'mcp:enrich'];
     const forwarded = [];
     if (includeAll) {
         forwarded.push('--all-datasets');
