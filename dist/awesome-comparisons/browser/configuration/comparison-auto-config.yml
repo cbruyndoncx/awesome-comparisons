@@ -13,6 +13,7 @@ criteria:
         'Notes: Supports Model Context Protocol / MCP server connections to bring external context into conversations and agent workflows.': {}
         MCP support added in the 2025 modernization update, enabling Model Context Protocol integrations.: {}
         Extends capabilities with MCP ecosystem tools: {}
+        No documented Model Context Protocol (MCP) client support; note that Delphi community has developed separate MCP servers (MCPConnect, delphi-compiler-mcp) but CodeBot itself does not advertise MCP integration: {}
         First code assistant in China to support MCP: {}
         Connects to Tencent ecosystem products and external tools/agents: {}
         Built-in MCP client and HumanLayer SDK enable tool/function calls, approvals, and lifecycle events (e.g., function_call.*, human_contact.*). Sessions can surface tool metadata and perform approved side-effecting operations via the platform's tool integrations.: {}
@@ -50,6 +51,7 @@ criteria:
       type: LABEL
       values:
         aiXcoder's commercial product is proprietary; however, the aiXcoder-7B model code and weights are published on GitHub under an open-source license (see notes).: {}
+        Proprietary product from RemObjects Software; not open-source: {}
         The project is open-source and community contributions are actively encouraged.: {}
         Cursor is a commercial product; the core platform and Composer model are proprietary.: {}
         Studio and Gemini are proprietary Google services; there are no public source repositories for the hosted Studio environment.: {}
@@ -103,6 +105,7 @@ criteria:
         Open-source; free to run locally under the GPL-3.0 license (no hosted trial required to use the client).: {}
         No public hosted SaaS offering documented in the repo as of 2025-11-15; commercial/hosted options, if any, are not clearly listed in the OSS repository.: {}
         '-': {}
+        Beta access available through mailing list signup; pricing for final release not yet announced: {}
         Free tier available for exploration: {}
         One-time 2-week Pro trial for new users: {}
         A free/solo tier exists (open-source extensions + hub access for public/shared blocks). Paid team/enterprise tiers add governance and private deployment options.: {}
@@ -156,6 +159,8 @@ criteria:
         Provides built-in prompt templates and plan/act mode prompts: {}
         Users can supply custom prompts and templates via MCP tools or extension settings: {}
         Community prompt presets available in the repo and docs: {}
+        Conversational mode allows natural language prompts for code generation, analysis, and project guidance: {}
+        Accepts prompts with typos and colloquial language; interprets developer intent: {}
         Supports prompt templates, session templates, and engineered prompt artifacts; prompts can be stored and loaded via configuration and shared across teams (prompt workshop/examples in repo/docs).: {}
         Supports customizable prompts and agent definitions; teams can define behaviors via configuration-as-code: {}
         Modes (Chat / Plan / Agent) enable different prompt/tool access levels for safer workflows: {}
@@ -241,6 +246,10 @@ criteria:
         deepResearch integration for plan mode: {}
         Integrates MCP tools (custom tool servers), terminal execution, browser automation, and file-editing operations: {}
         Supports adding third-party MCP servers to extend functionality (CI hooks, cloud APIs, issue trackers): {}
+        Smart code completion integrated into IDE editor: {}
+        Refactoring tools invokable from editor context: {}
+        Code analysis, review, and generation capabilities: {}
+        Multi-file project transformation tools: {}
         Integrates tool calling and function-style tools (Claude Code tool capabilities), webhooks, and SDK-driven tool definitions; supports approvals and human-in-the-loop function calls.: {}
         MCP-style tool integrations (GitHub, Sentry, Snyk, Linear) allow the assistant to fetch contextual data: {}
         CLI (`cn`) provides headless automation and scripting; IDE extensions expose tool interactions in-editor: {}
@@ -321,6 +330,10 @@ criteria:
         'Website: https://cheetahai.co/': {}
         Official docs at https://cline.bot and extensive README and examples on the GitHub repo: {}
         CLI, extension, and MCP server examples included in the repository and community-contributed prompts: {}
+        'Official documentation: https://www.remobjects.com/codebot/delphi.aspx': {}
+        'Blog posts and announcements: https://blogs.remobjects.com/': {}
+        'Community forum: RemObjects Talk with private beta sub-forum': {}
+        Demo applications and code samples on GitHub: {}
         Official documentation, GitHub repo with examples, CLI, community channels (Discord/X), and demo/tutorial materials are available in the project repository and docs site.: {}
         Continue Hub (hub.continue.dev) for shared assistants and reusable building blocks: {}
         Official docs at https://continue.dev and source at https://github.com/continuedev/continue: {}
@@ -382,6 +395,7 @@ criteria:
       values:
         Local-first model runs offline without API keys; BYOK for cloud features not publicly documented.: {}
         '-': {}
+        Not documented; pricing and configuration details not finalized as of beta phase: {}
         Environment and Claude settings support supplying external LLM API keys and configuring provider settings (e.g., ~/.claude/settings.json, env vars). CLI/desktop app can inherit shell environment variables so teams can use their own provider keys (AWS Bedrock, Anthropic, etc.).: {}
         You can configure and use your own API keys and model endpoints, and switch between local/remote models.: {}
         Cursor supports bring-your-own API keys / model endpoints so teams can choose preferred providers (OpenAI, Anthropic, Google, self-hosted endpoints where supported) and reduce exposure of secrets to the Cursor cloud where applicable.: {}
@@ -415,6 +429,8 @@ criteria:
         Cloud-first product; local/in-IDE operations likely use cloud model/augmentation: {}
         Brokk's client is open-source Java software; it ships with or can leverage Jlama for local/tiny-model inference and supports workflows that minimize cloud calls. Some advanced features may use hosted models depending on configuration.: {}
         'Any additional details like Ollama: supports local model hosts (Ollama, LM Studio) as backends for offline/local use': {}
+        Cloud-based AI models (GPT-4o, Claude 3.5/4); requires internet connection for LLM inference: {}
+        IDE integration is local but model execution is remote: {}
         Requires stable internet connection for AI model services: {}
         Primarily designed to run with Claude Code / Anthropic-backed sessions rather than purely local model hosting]: {}
         Supports local model workflows (e.g. via Ollama/local LLMs) and headless/offline operation for air-gapped environments.: {}
@@ -474,6 +490,10 @@ criteria:
         Checkpoint management creates snapshots at each step and tool call, allowing comparison, restore, and safe experimentation.: {}
         Plan & Act modes separate strategic planning from execution so context updates can be staged and reviewed before being committed.: {}
         Context usage is tracked (token/context progress) and Cline selectively reads/indexes files and docs to remain within model windows while preserving salient project state.: {}
+        Large context windows enable whole-project analysis: {}
+        Understands relationships between .pas source files and .dfm form files: {}
+        Maintains project-wide awareness across multiple units: {}
+        Deep context handling through sophisticated prompt engineering: {}
         '@ symbol for selecting code snippets or files as conversation context': {}
         '@Codebase for project understanding and structure analysis': {}
         'CodeLayer / HumanLayer provides multiple explicit context-management mechanisms: session-scoped context across Claude Code sessions, file and region pinning (attach files or file ranges to a session), worktree-aware context (each session can be bound to a git worktree/branch), context windows and prompt templates for engineered context snapshots, message/thread history preserved per session, and state objects that are carried through human approval flows and webhooks. These combine to enable deterministic context engineering and reproducible agent runs.': {}
@@ -598,6 +618,9 @@ criteria:
         Paths, symbols and call-graph locations are surfaced so prompts and agent actions can target precise files or symbols.: {}
         Cline reads, opens, edits and creates files directly inside the editor; it shows diffs and writes changes to file paths in the workspace.: {}
         Files are referenced by path and integrated into Cline's context (diff views, Timeline entries, and checkpoint snapshots) so the agent can cite and act on exact files.: {}
+        Full IDE access allows reading and analyzing entire project structure: {}
+        Understands multi-file dependencies and component relationships: {}
+        Can reference and modify multiple units in coordinated fashion: {}
         '@ symbol for file and context references': {}
         CodeLayer integrates with the repository and git worktrees so sessions can directly reference files, open diffs, and operate on file ranges. Sessions surface file metadata (path, revision, worktree) in prompts and diffs so agents and humans can operate on precise file references. The HumanLayer SDK also allows including file-like payloads in approvals and function calls so external systems can reconstruct the referenced files.: {}
         'Files can be directly referenced by path in tool calls and task context:': {}
@@ -692,6 +715,7 @@ criteria:
         '-': {}
         Built-in checkpointing snapshots workspace state at steps and tool calls; users can compare changes, restore previous snapshots, or revert risky edits.: {}
         File Timeline and standard Git history complement checkpointing for undo/rollback workflows.: {}
+        Not documented; standard Delphi IDE version control integration likely applies: {}
         Checkpoints are supported via git/worktree integration (explicit worktrees per session, diffs, and commits) plus session archiving and approval audit logs. Because CodeLayer operates alongside git, standard git workflows (commits, branches, resets) provide reversible checkpoints; HumanLayer also records approval histories and function-call traces for audit and rollback reasoning.: {}
         'Undo and recovery mechanisms:': {}
         developer__text_editor undo_edit provides local edit rollback for the last text_editor operation.: {}
@@ -757,6 +781,7 @@ criteria:
         Integrates with repository search and can surface examples and API usage from GitHub/open-source code; version-control integration is part of the IDE workflow.: {}
         Works with repository workflows via IDE integrations; generated suggestions and transformations can be applied to local repos but require human review for correctness and licensing.: {}
         Reads project context / Codespace-style integrations for richer suggestions: {}
+        Not specifically documented; Delphi IDE has standard Git integration which CodeBot can leverage: {}
         Version control integration: {}
         Native integrations (MCP-style integrations) for GitHub and git workflows; automation via CLI for PR/comments/summaries.: {}
         Uses git worktrees and integrates with standard Git workflows. Multi-agent execution uses isolated worktrees to avoid merge conflicts while agents make changes.: {}
@@ -838,6 +863,7 @@ criteria:
         MCP ecosystem support: {}
         'MCP provides a mechanism to bundle commands, tools and integrations: developers create MCP servers/tools and install them into Cline to extend functionality.': {}
         The VS Code extension model plus community MCP servers enables packaging sets of capabilities (commands, hooks, tool endpoints) that behave like plugins.: {}
+        CodeBot itself is a plugin for Delphi IDE; extensibility of CodeBot not documented: {}
         'The platform is extensible: CodeLayer is open-source and designed to be extended via configuration, model selection, and SDK integrations. HumanLayer''s SDK and webhooks let teams bundle commands, agent behaviors, and approval hooks into higher-level integrations (e.g., repo automation, CI hooks, Slack routing). The repo and SDK patterns enable building custom integrations or plugins that orchestrate agents and human approvals.': {}
         'Extension/recipe model allows bundling commands, agents and hooks:': {}
         Extensions are enable/disable units (platform__manage_extensions) that change the agent's available toolset.: {}
@@ -901,6 +927,7 @@ criteria:
         MCP tools act as attachable integrations with lifecycle-like behaviors (tool installation, invocation, and result handling).: {}
         Checkpoint creation/restore and Plan→Act transitions behave as lifecycle events developers can rely on when orchestrating multi-step workflows.: {}
         Terminal execution and browser automation steps emit outputs (terminal output, screenshots, logs) that can be observed and reacted to as event-like signals.: {}
+        Not documented: {}
         'HumanLayer exposes lifecycle and integration hooks via webhooks and SDK callbacks: function_call.* and human_contact.* events, agent message events, and agent_email.received (agent webhooks). These let external systems react to approval requests, completed function calls, agent launches, and other lifecycle events. The SDK also supports local callbacks/handlers to intercept or decorate tool calls (e.g., require approval before a side-effecting operation).': {}
         'Lifecycle-like attachment points available:': {}
         Scheduled jobs (platform__manage_schedule) provide lifecycle actions (create, run_now, pause, unpause, delete, inspect, sessions) that act like hooks for recurring automation.: {}
@@ -961,6 +988,7 @@ criteria:
         '-': {}
         Cline exposes VS Code commands accessible via the command palette (e.g., open Cline, add a tool, invoke actions) which act as reusable user-triggered commands.: {}
         The project also documents a CLI reference (docs.cline.bot/cline-cli/cli-reference) for command-line interactions tied to the extension's features.: {}
+        Not documented; uses conversational interface and IDE-integrated commands: {}
         'The product supports reusable, user-triggered commands in two forms: (1) a keyboard-driven command palette / keybindings inside the CodeLayer IDE for launching common actions, sessions, or agent flows; and (2) integrations with messaging channels (Slack/email) where HumanLayer can surface approval prompts or trigger agents via message-based interactions (including Slack workflows or command-like interactions).': {}
         'The environment provides reusable slash commands that users can trigger from the CLI:': {}
         /exit or /quit — Exit the session: {}
@@ -1037,6 +1065,9 @@ criteria:
         Dedicated plan mode with deepResearch: {}
         Toggleable rulesets (.clinerules) and Plan vs Act modes let teams define specialist behavior profiles and switch modes to tailor the assistant for different tasks or policies.: {}
         Teams and projects can configure provider/backends (BYOK, local models) that change runtime behavior and constraints for the assistant.: {}
+        'Vibe It mode: Rapid snippet generation for quick prototyping': {}
+        'Thorough mode: Architectural reasoning with SOLID principles, interfaces, dependency injection, and testable code': {}
+        'Conversational mode: Interactive chat-based development assistance': {}
         Craft Mode for autonomous multi-file code generation and modification: {}
         Testing Agent mode supporting Jest and Mocha frameworks: {}
         Users can create specialist session modes by configuring models, prompt templates, and session settings (e.g., model type, temperature, tool access). The IDE and SDK permit different session types/workflows (review, refactor, PR authoring, exploratory), and CodeLayer's session-forking and template features let teams codify repeatable modes for specific developer tasks.: {}
@@ -1116,6 +1147,7 @@ criteria:
         '-': {}
         Through the Model Context Protocol (MCP) Cline can add and integrate custom tools/services ("add a tool" flow) that act as specialized subagents for task-specific workflows.: {}
         These MCP-backed tools can fetch external data (Jira, PagerDuty, cloud APIs), perform operations, and be invoked from plans, effectively functioning as domain-specific subagents.: {}
+        Not documented; operates as single agentic system with multi-step planning capabilities: {}
         Craft Agent for autonomous code generation: {}
         Testing Agent for automatic test case generation: {}
         Code Review agent for analyzing and improving code quality: {}
@@ -1187,6 +1219,9 @@ criteria:
       values:
         Other: {}
         One-click imports for JS/TS/Python/Rust added in 2025 modernization update; can handle enterprise-scale projects (e.g., NetBeans with 5M+ lines on 16GB RAM).: {}
+        'Primary focus: Object Pascal (Delphi)': {}
+        'Also supports: Oxygene, C#, Swift via RemObjects Elements': {}
+        'Code translation: Can convert Python, C#, and other languages to Object Pascal': {}
         Supports over 200 programming languages with 95% code generation accuracy: {}
         Support for other backend languages via templates and runtime options (examples include Go and Java in templates): {}
         Web UI: {}
@@ -1241,6 +1276,20 @@ criteria:
       rangeSearch: false
       children:
         - Terminal
+  - ACP:
+      type: LABEL
+      values:
+        No documented Agent Client Protocol (ACP) support: {}
+        JetBrains is in active collaboration with Zed Industries on the Agent Client Protocol (ACP), an open standard for standardized editor-agent communication (JSON-RPC over stdio). ACP support is expected to enable JetBrains IDEs to communicate with any ACP-compliant coding agent. See agentclientprotocol.org.: {}
+        Zed Industries created the Agent Client Protocol (ACP), an open standard for standardized editor-agent communication (JSON-RPC over stdio). ACP is designed to allow any compliant agent (Claude Code, Gemini, Codex CLI, etc.) to communicate with any compliant editor via a unified protocol. See agentclientprotocol.org.: {}
+        'Yes': {}
+        'No': {}
+  - Skills:
+      type: LABEL
+      values:
+        Not documented: {}
+        'Yes': {}
+        'No': {}
   - Classification:
       type: LABEL
       values:
@@ -1260,15 +1309,3 @@ criteria:
         Code/Other: {}
         Code/Terminal: {}
         Product/Prototyping: {}
-  - ACP:
-      type: LABEL
-      values:
-        JetBrains is in active collaboration with Zed Industries on the Agent Client Protocol (ACP), an open standard for standardized editor-agent communication (JSON-RPC over stdio). ACP support is expected to enable JetBrains IDEs to communicate with any ACP-compliant coding agent. See agentclientprotocol.org.: {}
-        Zed Industries created the Agent Client Protocol (ACP), an open standard for standardized editor-agent communication (JSON-RPC over stdio). ACP is designed to allow any compliant agent (Claude Code, Gemini, Codex CLI, etc.) to communicate with any compliant editor via a unified protocol. See agentclientprotocol.org.: {}
-        'Yes': {}
-        'No': {}
-  - Skills:
-      type: LABEL
-      values:
-        'Yes': {}
-        'No': {}
