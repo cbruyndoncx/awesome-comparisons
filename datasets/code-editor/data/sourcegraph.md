@@ -80,8 +80,6 @@ Sourcegraph is a platform that provides precise, scalable code search and code n
   - Free tier/self-hosted free edition for small teams and public code; paid Business/Enterprise plans for larger teams and advanced features.
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - Cody and the AI integrations support bringing multi-repo and file-context into model prompts (context-enhanced chat); suitable for advanced, model-backed code assistance workflows.
 

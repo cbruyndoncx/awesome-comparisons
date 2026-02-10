@@ -53,8 +53,6 @@ AskCodi is an AI-powered coding assistant and OpenAI-compatible LLM gateway deve
 - Yes
 
 ## MCP-Client
-
-### MCP-Client
 - No
 
 ### Prompts

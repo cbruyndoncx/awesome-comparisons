@@ -51,8 +51,6 @@ SourceAI is a web-based AI code generation tool that accepts natural language re
   - No public pricing or trial documentation found as of 2026-01-30
 
 ## MCP-Client
-
-### MCP-Client
 - No
   - No evidence of MCP client support; web-only code generator with no IDE or protocol integrations
 

@@ -84,8 +84,6 @@ Pythagora is an AI-driven development assistant that can generate full-stack web
 - Yes
 
 ## MCP-Client
-
-### MCP-Client
 - No
   - No public documentation found regarding MCP (Model Context Protocol) support as of January 2026
 

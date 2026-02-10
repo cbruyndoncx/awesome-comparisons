@@ -64,8 +64,6 @@ Brokk is a standalone, Java-based desktop application that rethinks AI-assisted 
   - No public hosted SaaS offering documented in the repo as of 2025-11-15; commercial/hosted options, if any, are not clearly listed in the OSS repository.
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - MCP support added in the 2025 modernization update, enabling Model Context Protocol integrations.
 

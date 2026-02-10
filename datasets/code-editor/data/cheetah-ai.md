@@ -62,8 +62,6 @@ According to performance analyses, Cheetah AI delivers 230% ROI for engineering 
 - -
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - Extends capabilities with MCP ecosystem tools
 

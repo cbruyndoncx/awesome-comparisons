@@ -13,13 +13,9 @@ criteria:
       defaultExpanded: true
       values:
         'Yes':
-          display: 'MCP Supported'
-          color: '#00AA00'
-          backgroundColor: '#E6FFE6'
+          display: '✅'
         'No':
-          display: 'No MCP'
-          color: '#999999'
-          backgroundColor: '#F5F5F5'
+          display: '✖'
       children:
           - MCP-Protocol-Version
           - MCP-Tools
@@ -52,11 +48,9 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          display: '✓'
-          color: '#00AA00'
+          display: '✅'
         'No':
-          display: '—'
-          color: '#CCCCCC'
+          display: '✖'
   - MCP-Prompts:
       name: Prompts
       type: LABEL
@@ -70,11 +64,9 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          display: '✓'
-          color: '#00AA00'
+          display: '✅'
         'No':
-          display: '—'
-          color: '#CCCCCC'
+          display: '✖'
   - MCP-Resources:
       name: Resources
       type: LABEL
@@ -88,11 +80,9 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          display: '✓'
-          color: '#00AA00'
+          display: '✅'
         'No':
-          display: '—'
-          color: '#CCCCCC'
+          display: '✖'
   - MCP-Roots:
       name: Roots
       type: LABEL
@@ -106,11 +96,9 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          display: '✓'
-          color: '#00AA00'
+          display: '✅'
         'No':
-          display: '—'
-          color: '#CCCCCC'
+          display: '✖'
   - MCP-Sampling:
       name: Sampling
       type: LABEL
@@ -124,11 +112,9 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          display: '✓'
-          color: '#00AA00'
+          display: '✅'
         'No':
-          display: '—'
-          color: '#CCCCCC'
+          display: '✖'
   - MCP-Tasks:
       name: Tasks
       type: LABEL
@@ -142,11 +128,9 @@ criteria:
       rangeSearch: false
       values:
         'Yes':
-          display: '✓'
-          color: '#00AA00'
+          display: '✅'
         'No':
-          display: '—'
-          color: '#CCCCCC'
+          display: '✖'
   - ACP:
       name: ACP
       type: LABEL

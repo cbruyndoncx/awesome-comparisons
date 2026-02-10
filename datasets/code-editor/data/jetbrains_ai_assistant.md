@@ -68,8 +68,6 @@ JetBrains AI Assistant embeds AI workflows directly inside JetBrains IDEs and le
   - Core inline completions and many local workflows are free. Cloud-based features may use provider credits; JetBrains changed to a credit/quota model in 2025 for cloud usage visibility.
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - MCP server configuration available in Junie/AI Assistant settings; enables integration with external tools and context providers via Model Context Protocol.
 

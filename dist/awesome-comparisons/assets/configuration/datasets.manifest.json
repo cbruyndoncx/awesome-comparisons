@@ -39,7 +39,8 @@
           "datasets/other/data",
           "datasets/aie-model/data",
           "datasets/code-agent/data",
-          "datasets/product-prototyping/data"
+          "datasets/product-prototyping/data",
+          "datasets/ai-chat/data"
         ],
         "config": "configuration/comparison-default.yml",
         "style": "configuration/style.css",
@@ -173,6 +174,28 @@
       "sources": {
         "dataDir": "datasets/product-prototyping/data",
         "config": "datasets/product-prototyping/config/comparison.yml",
+        "style": "configuration/style.css",
+        "configDefaults": [
+          "configuration/comparison-default.yml",
+          "configuration/defaults/general-licensing.yml",
+          "configuration/defaults/groups-advanced.yml",
+          "configuration/defaults/value-displays.yml"
+        ]
+      }
+    },
+    {
+      "id": "ai-chat",
+      "displayLabel": "AI Chat Clients",
+      "shortDescription": "AI chat interfaces and conversational assistants",
+      "description": "AI-powered chat interfaces including official providers (ChatGPT, Claude), self-hostable platforms (LibreChat, Jan AI), and third-party clients with MCP support",
+      "assetDirectory": "assets/generated/ai-chat/",
+      "accentColor": "#9c27b0",
+      "icon": "default-icon.svg",
+      "preferredTheme": "light",
+      "isDefault": false,
+      "sources": {
+        "dataDir": "datasets/ai-chat/data",
+        "config": "datasets/ai-chat/config/comparison.yml",
         "style": "configuration/style.css",
         "configDefaults": [
           "configuration/comparison-default.yml",

@@ -53,8 +53,6 @@ RooCode is designed to be more than an autocomplete plugin — it functions as a
   - The extension itself is free/open-source; model usage costs depend on the API keys/providers you supply.
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - MCP servers extend RooCode beyond the editor to interact with Docker, databases, browsers and other external tooling.
 

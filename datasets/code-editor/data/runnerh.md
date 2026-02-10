@@ -56,8 +56,6 @@ Runner H (from H Company) is an "action-oriented" autonomous web agent designed 
   - Limited beta access was offered during initial launch windows.
 
 ## MCP-Client
-
-### MCP-Client
 - No
 
 ### Prompts

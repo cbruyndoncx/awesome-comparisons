@@ -53,8 +53,6 @@ Refraction is a web-first AI development assistant (refraction.dev) which helps 
   - New users get a limited number of free generations (commonly reported as ~10 free uses) and a short trial period to evaluate the service.
 
 ## MCP-Client
-
-### MCP-Client
 - No
   - There is no public documentation or indication that Refraction includes an MCP (Model Control Plane) client for connecting directly to external MCP servers.
 

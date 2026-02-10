@@ -57,18 +57,17 @@ Cursor reimagines the developer workflow by making AI agents first-class collabo
   - Free Hobby tier available with limited agent requests; Pro trial options are commonly offered for evaluation.
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - Cursor supports MCP (Model Context Protocol) for connecting to external context providers and tool integrations.
 
-### Prompts
+### MCP-Prompts
 - Yes
 
-### Tools
+### MCP-Tools
 - Yes
+  - listChanged: true
 
-### Resources
+### MCP-Resources
 - Yes
 
 ### ACP

@@ -63,8 +63,6 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
   - Available during preview; typical Firebase usage quotas and billing apply once services are provisioned beyond free tier limits.
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - Native MCP support added July 2025 at Google Cloud Summit London; enables Gemini to access contextual information and work with greater awareness of application architecture and requirements.
 

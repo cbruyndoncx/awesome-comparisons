@@ -56,8 +56,6 @@ The platform emphasizes a structured process (uses MoSCoW prioritization) and ta
   - The product advertises a free trial that does not require a credit card
 
 ## MCP-Client
-
-### MCP-Client
 - No
 
 ### Prompts

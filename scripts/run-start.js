@@ -29,6 +29,8 @@ if (dataFlagArgs.length > 0) {
 }
 
 runCommand(npmCommand, dataPrepareArgs);
+runCommand(npmCommand, ['run', 'mcp:enrich']);
+runCommand(npmCommand, ['run', 'mcp:sync']);
 spawnManaged(npmCommand, ['run', 'config:serve']);
 spawnManaged(ngBinary, ['serve', '--proxy-config', 'proxy.config.json', ...parsed.angularArgs]);
 

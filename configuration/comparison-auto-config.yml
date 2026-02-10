@@ -60,6 +60,8 @@ criteria:
         Model Context Protocol support added in v1.3.0 to enable custom agents and richer context handling: {}
         Verdent for VS Code includes "MCP Integration," meaning it can act as an MCP client.: {}
         MCP servers are integrated similar to other extensions like e.g. theming: {}
+        'Yes': {}
+        'No': {}
   - Opensource:
       type: LABEL
       values:
@@ -169,15 +171,9 @@ criteria:
         Supports reusable prompt templates and agent configurations for chat and autonomous agent workflows.: {}
         Prompts are used to drive "Next Edit" suggestions, Smart Apply flows, and agent planning.: {}
         Brokk exposes action-specific prompts/templates and configurable model/prompt settings for different workflows (Code, Ask, Search, Architect), enabling tailored instructions per action.: {}
-        Provides built-in prompt templates and plan/act mode prompts: {}
-        Users can supply custom prompts and templates via MCP tools or extension settings: {}
-        Community prompt presets available in the repo and docs: {}
         Conversational mode allows natural language prompts for code generation, analysis, and project guidance: {}
         Accepts prompts with typos and colloquial language; interprets developer intent: {}
         Supports prompt templates, session templates, and engineered prompt artifacts; prompts can be stored and loaded via configuration and shared across teams (prompt workshop/examples in repo/docs).: {}
-        Supports customizable prompts and agent definitions; teams can define behaviors via configuration-as-code: {}
-        Modes (Chat / Plan / Agent) enable different prompt/tool access levels for safer workflows: {}
-        Prompts and building blocks can be shared via Continue Hub for reuse across teams: {}
         DevoxxGenie provides built-in prompt templates and allows users to create, save and manage custom prompts via the Prompts settings page.: {}
         The `/init` slash command can generate a DEVOXXGENIE.md project descriptor and add it to the system prompt for improved contextual responses.: {}
         Provides built-in system prompts, planning prompts (/Plan), and contextual prompt templates. Supports user-specified prompts and file-tagging to control context.: {}
@@ -235,9 +231,8 @@ criteria:
         Verdent converts vague developer prompts into structured, executable plans via guided dialogue (Plan Mode). The extension surfaces templates and guided prompts to help scope tasks, decompose features into subtasks, and set collaborator permissions and verification strategies.: {}
         Prompts can include high-level goals, desired testing/verification steps, and policy/rule constraints to guide subagent behavior.: {}
         Prompts are editable and savable; users can customize system/user messages and reuse prompt templates for Chat, Agent, and Gather modes.: {}
-        Supports prompt templates and customizable system/user prompts within Cascade flows.: {}
-        Memories and AI Rules provide persistent prompt-like behavior across sessions.: {}
-        Compatible with Model Context Protocol (MCP) for structured prompt/context passing.: {}
+        'Yes': {}
+        'No': {}
   - MCP-Tools:
       type: LABEL
       values:
@@ -255,16 +250,12 @@ criteria:
         Brokk integrates operational tools such as Run-in-Shell, build/test execution, dependency decompilation, Deep Scan automation, and Git-aware patch/diff management exposed as agent actions.: {}
         MCP ecosystem integration: {}
         deepResearch integration for plan mode: {}
-        Integrates MCP tools (custom tool servers), terminal execution, browser automation, and file-editing operations: {}
-        Supports adding third-party MCP servers to extend functionality (CI hooks, cloud APIs, issue trackers): {}
+        'listChanged: true': {}
         Smart code completion integrated into IDE editor: {}
         Refactoring tools invokable from editor context: {}
         Code analysis, review, and generation capabilities: {}
         Multi-file project transformation tools: {}
         Integrates tool calling and function-style tools (Claude Code tool capabilities), webhooks, and SDK-driven tool definitions; supports approvals and human-in-the-loop function calls.: {}
-        MCP-style tool integrations (GitHub, Sentry, Snyk, Linear) allow the assistant to fetch contextual data: {}
-        CLI (`cn`) provides headless automation and scripting; IDE extensions expose tool interactions in-editor: {}
-        Supports configuring local and remote model endpoints (BYOK): {}
         DevoxxGenie integrates RAG tooling (ChromaDB) and local model runners (Ollama, GPT4All) to provide semantic search and local LLM execution. It also supports cloud provider tools via API connectors (OpenAI, Anthropic, Gemini, etc.).: {}
         Ships with integrated debugger/tracer, project analyzers, deployment helpers and quick-edit tooling (CMD/CTRL+E) exposed in the IDE and extensions.: {}
         App Prototyping agent (natural-language & image-driven generator).: {}
@@ -319,11 +310,11 @@ criteria:
         Project configuration and rule enforcement UI to define project-level context, build commands, deny-lists, and permission modes for agents.: {}
         Tools are accessible from the VS Code extension UI and Verdent Deck; some features are desktop-first and may be available earlier in the Deck app.: {}
         Built-in AI tools include inline Quick Edit, Tab autocomplete, Chat (multi-mode), Agent Mode (multi-file edits), Gather Mode (read-only analysis), model integrations (Ollama, local runtimes), and terminal command execution for Agent workflows.: {}
-        Includes inline code actions, multi-file refactoring tools, image-to-code generator, and an AI terminal for executing commands.: {}
-        Integrates with VS Code extensions and external linters/formatters via plugin architecture.: {}
         Coding Agent for multi-file operations: {}
         Unit Testing Agent for test generation: {}
         Integration with 20+ developer tools: {}
+        'Yes': {}
+        'No': {}
   - MCP-Resources:
       type: LABEL
       values:
@@ -337,16 +328,11 @@ criteria:
         Public documentation, blog posts, demo materials, and example GitHub repositories under the augmentcode org.: {}
         The Workspace can include decompiled dependency sources, compiled artifacts, summaries, and VCS history; these resources become first-class context for agent workflows.: {}
         'Website: https://cheetahai.co/': {}
-        Official docs at https://cline.bot and extensive README and examples on the GitHub repo: {}
-        CLI, extension, and MCP server examples included in the repository and community-contributed prompts: {}
         'Official documentation: https://www.remobjects.com/codebot/delphi.aspx': {}
         'Blog posts and announcements: https://blogs.remobjects.com/': {}
         'Community forum: RemObjects Talk with private beta sub-forum': {}
         Demo applications and code samples on GitHub: {}
         Official documentation, GitHub repo with examples, CLI, community channels (Discord/X), and demo/tutorial materials are available in the project repository and docs site.: {}
-        Continue Hub (hub.continue.dev) for shared assistants and reusable building blocks: {}
-        Official docs at https://continue.dev and source at https://github.com/continuedev/continue: {}
-        MCP integrations and context providers (GitHub, issue trackers, error monitoring) available as resources: {}
         Project README and JetBrains Marketplace listing provide usage docs and release notes. Community videos and blog posts (Devoxx talks, YouTube demos) supplement official docs.: {}
         Documentation, tutorials and examples for Flow IDE, VS Code and JetBrains integrations are available on the EasyCode site and docs.: {}
         Can access workspace files, repositories, and Firebase resources for context: {}
@@ -394,9 +380,9 @@ criteria:
         Public product announcements, demo videos, and press coverage (2024–2025) describe Verdent's Plan-First and Verify-Early methodology, Deck desktop app, and the VS Code extension. These sources are the primary publicly available resources and provide feature overviews, architecture descriptions, and demonstrations.: {}
         Official documentation, detailed prompt templates, and enterprise deployment guides appear to be available to customers and early access users; they were not publicly accessible in full at the time of the last update.: {}
         Documentation, examples, model adapter configs, and community guides available via the project repository and website; includes sample prompts and setup instructions for local model runtimes.: {}
-        Documentation and tutorials available on the Windsurf website and in-product guidance (Cascade walkthroughs, Supercomplete demos).: {}
-        Community examples and helper files (.windsurfrules) hosted in community GitHub repositories.: {}
         Repo Grokking provides deep codebase understanding via vector database and graph representation: {}
+        'Yes': {}
+        'No': {}
   - BYOK:
       type: LABEL
       values:
@@ -1316,3 +1302,18 @@ criteria:
         Code/Other: {}
         Code/Terminal: {}
         Product/Prototyping: {}
+  - MCP-Roots:
+      type: LABEL
+      values:
+        'Yes': {}
+        'No': {}
+  - MCP-Sampling:
+      type: LABEL
+      values:
+        'Yes': {}
+        'No': {}
+  - MCP-Tasks:
+      type: LABEL
+      values:
+        'Yes': {}
+        'No': {}

@@ -54,13 +54,13 @@ Currently in experimental phase with documented operational issues including cra
   - Custom MCP integration supported via mcp.json configuration
 
 ### Prompts
-- Yes
+- No
 
 ### Tools
 - Yes
 
 ### Resources
-- Yes
+- No
 
 ### ACP
 - No

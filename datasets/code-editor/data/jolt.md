@@ -71,8 +71,6 @@ Jolt is a commercial AI coding assistant designed for large production codebases
   - Commercial product with demos / trials and enterprise sales channels.
 
 ## MCP-Client
-
-### MCP-Client
 - No
   - No public documentation of MCP client support; uses direct LLM provider integrations (Google Gemini, Anthropic, OpenAI).
 

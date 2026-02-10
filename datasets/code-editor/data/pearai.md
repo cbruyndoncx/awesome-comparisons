@@ -55,8 +55,6 @@ PearAI provides a unified AI-first IDE experience by combining the familiarity o
   - Free tier available with basic features and BYOK support; paid tiers unlock advanced features
 
 ## MCP-Client
-
-### MCP-Client
 - No
 
 ### Prompts

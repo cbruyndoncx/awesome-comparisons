@@ -9,6 +9,7 @@
     "data:watch": "npm run md2json:compile && node ./node_modules/gulp/bin/gulp.js dev --gulpfile=./lib/gulp/gulpfile.js",
     "mcp:enrich": "node ./node_modules/gulp/bin/gulp.js mcp:enrich --gulpfile=./lib/gulp/gulpfile.js",
     "mcp:report": "node ./node_modules/gulp/bin/gulp.js mcp:report --gulpfile=./lib/gulp/gulpfile.js",
+    "mcp:sync": "node ./lib/mcp-enrichment/sync-mcp-to-markdown.js",
     "env:generate": "node scripts/generate-environment.js",
     "start": "node ./scripts/run-start.js",
     "config:serve": "node ./node_modules/gulp/bin/gulp.js config-workspace:serve --gulpfile=./lib/gulp/gulpfile.js",

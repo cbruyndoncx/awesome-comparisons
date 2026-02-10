@@ -53,8 +53,6 @@ CodeLLM is a revolutionary AI code editor by Abacus.AI that helps developers 10x
 - Yes
 
 ## MCP-Client
-
-### MCP-Client
 - No
 
 ### Prompts

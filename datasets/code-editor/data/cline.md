@@ -55,25 +55,17 @@ Cline is designed to act as a development partner rather than a simple autocompl
 - Yes
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
 
-### Prompts
-- Yes
-  - Provides built-in prompt templates and plan/act mode prompts
-  - Users can supply custom prompts and templates via MCP tools or extension settings
-  - Community prompt presets available in the repo and docs
+### MCP-Prompts
+- No
 
-### Tools
+### MCP-Tools
 - Yes
-  - Integrates MCP tools (custom tool servers), terminal execution, browser automation, and file-editing operations
-  - Supports adding third-party MCP servers to extend functionality (CI hooks, cloud APIs, issue trackers)
+  - listChanged: true
 
-### Resources
+### MCP-Resources
 - Yes
-  - Official docs at https://cline.bot and extensive README and examples on the GitHub repo
-  - CLI, extension, and MCP server examples included in the repository and community-contributed prompts
 
 ### ACP
 - No

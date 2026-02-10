@@ -54,8 +54,6 @@ Trae is an AI-first IDE intended to act as a full software engineering partner r
   - As of early 2025 Trae was distributed free with access to several premium models included
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - Model Context Protocol support added in v1.3.0 to enable custom agents and richer context handling
 

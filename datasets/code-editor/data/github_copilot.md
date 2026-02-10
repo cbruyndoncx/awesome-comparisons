@@ -72,8 +72,6 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
   - Copilot has free tiers (e.g., Copilot Free for qualifying users) and trial/paid plans (Pro/Business/Enterprise) with different capabilities.
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
 
 ### Prompts

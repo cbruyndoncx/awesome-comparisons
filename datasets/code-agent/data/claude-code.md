@@ -63,18 +63,12 @@ Claude Code is Anthropic's CLI-based agentic coding tool designed to be intentio
 
 ### Prompts
 - Yes
-  - Accepts natural-language task prompts with codebase-aware context
-  - Supports system prompts, project-specific instructions via CLAUDE.md files, and custom prompt templates
 
 ### Tools
 - Yes
-  - Built-in tools: file read/write, terminal execution, web search, glob, grep, Git operations
-  - MCP server tools for external integrations (Notion, Slack, databases, etc.)
-  - Subagent tools (Explore, Plan, General-purpose) for parallel task execution
 
 ### Resources
 - Yes
-  - Comprehensive documentation, CLAUDE.md project configuration files, skills definitions, and MCP resource access
 
 ### ACP
 - Yes

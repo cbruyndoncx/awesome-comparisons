@@ -63,8 +63,6 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
   - Notes: AWS has offered free tiers or developer-friendly access for prior services (CodeWhisperer) and provides Builder ID sign-in options; enterprise pricing & feature bundles for Amazon Q are documented in AWS pricing/docs.
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - Notes: Supports Model Context Protocol / MCP server connections to bring external context into conversations and agent workflows.
 

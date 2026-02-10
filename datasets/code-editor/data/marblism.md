@@ -50,8 +50,6 @@ Marblism provides two complementary offerings: (1) a suite of role-specific "AI 
 - Yes
 
 ## MCP-Client
-
-### MCP-Client
 - No
 
 ### Prompts

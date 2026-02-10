@@ -52,16 +52,13 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
   - Warp supports selecting/modeling different hosted LLM providers and includes enterprise features like zero-data-retention guarantees and proxying; it exposes autonomy controls for when agents may call MCP servers without human approval.
 
 ### Prompts
-- Yes
-  - Supports natural-language input as the primary interface; stored prompt templates and reusable prompts are persisted in Warp Drive and can seed Workflows and agents. Agents present a plan before execution and prompts can be edited or parameterized per Workflow.
+- No
 
 ### Tools
 - Yes
-  - Agents can invoke shell commands as tools, interact with Git, run code edits via Warp Code, call selected LLM providers via configured MCP/model integrations, and execute Drive Workflows.
 
 ### Resources
-- Yes
-  - Warp Drive stores shared resources (Workflows, Notebooks, commands, prompts, and environment variables) that agents can access as contextual artifacts.
+- No
 
 ### ACP
 - No

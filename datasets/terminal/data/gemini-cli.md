@@ -64,10 +64,9 @@ Gemini CLI is Google's open-source command-line AI agent that provides direct ac
 
 ### Tools
 - Yes
-  - Built-in tools: Google Search grounding, file operations, shell commands, web fetching. Additional tools available via MCP servers.
 
 ### Resources
-- Yes
+- No
 
 ### ACP
 - Yes

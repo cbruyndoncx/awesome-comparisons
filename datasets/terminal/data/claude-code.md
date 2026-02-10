@@ -62,17 +62,12 @@ The tool is focused on large-context reasoning, multi-file code transformations,
 
 ### Prompts
 - Yes
-  - Claude Code is prompt-driven and exposes CLI flags and short-form prompts for interactive and scripted use. The root project file (CLAUDE.md) is automatically included in session context and is used to encode project conventions, common commands, and guardrails. See: <https://claude.ai/code>
 
 ### Tools
 - Yes
-  - The CLI supports running shell commands, file edits, git operations, and configurable "allowed tools" for scripted agent runs. It can be configured to allow or require confirmation before making changes.
 
 ### Resources
 - Yes
-  - Official documentation and overview: <https://claude.ai/code>
-  - Anthropic developer docs and API references: <https://www.anthropic.com/> and the Anthropic docs pages
-  - Community examples and third-party wrappers are available in blog posts and community repos (search "Claude Code CLI").
 
 ### ACP
 - Yes

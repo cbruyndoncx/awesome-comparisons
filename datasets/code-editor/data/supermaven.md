@@ -52,8 +52,6 @@ Supermaven is an AI-powered code completion and developer-assistant platform bui
 - Yes
 
 ## MCP-Client
-
-### MCP-Client
 - No
 
 ### Prompts

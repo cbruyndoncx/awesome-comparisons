@@ -5,6 +5,21 @@ criteria:
         The IDE has an integrated AI terminal for executing commands.: {}
         'Yes': {}
         'No': {}
+  - Prompts:
+      type: LABEL
+      values:
+        'Yes': {}
+        'No': {}
+  - Resources:
+      type: LABEL
+      values:
+        'Yes': {}
+        'No': {}
+  - Tools:
+      type: LABEL
+      values:
+        'Yes': {}
+        'No': {}
   - MCP-Client:
       type: LABEL
       values:
@@ -45,8 +60,6 @@ criteria:
         Model Context Protocol support added in v1.3.0 to enable custom agents and richer context handling: {}
         Verdent for VS Code includes "MCP Integration," meaning it can act as an MCP client.: {}
         MCP servers are integrated similar to other extensions like e.g. theming: {}
-        'Yes': {}
-        'No': {}
   - Opensource:
       type: LABEL
       values:
@@ -144,7 +157,7 @@ criteria:
         Includes Repo Grokking, agentic mode, code review, automated issue detection: {}
         'Yes': {}
         'No': {}
-  - Prompts:
+  - MCP-Prompts:
       type: LABEL
       values:
         Supports natural-language prompts for method-level generation and NL-to-code workflows.: {}
@@ -225,9 +238,7 @@ criteria:
         Supports prompt templates and customizable system/user prompts within Cascade flows.: {}
         Memories and AI Rules provide persistent prompt-like behavior across sessions.: {}
         Compatible with Model Context Protocol (MCP) for structured prompt/context passing.: {}
-        'Yes': {}
-        'No': {}
-  - Tools:
+  - MCP-Tools:
       type: LABEL
       values:
         IDE plugins for VS Code, JetBrains, and Eclipse; local inference tooling and quantization examples available in model repositories.: {}
@@ -313,9 +324,7 @@ criteria:
         Coding Agent for multi-file operations: {}
         Unit Testing Agent for test generation: {}
         Integration with 20+ developer tools: {}
-        'Yes': {}
-        'No': {}
-  - Resources:
+  - MCP-Resources:
       type: LABEL
       values:
         Official documentation, IDE marketplace entries, and a public GitHub repository for aiXcoder-7B (model and usage examples).: {}
@@ -388,8 +397,6 @@ criteria:
         Documentation and tutorials available on the Windsurf website and in-product guidance (Cascade walkthroughs, Supercomplete demos).: {}
         Community examples and helper files (.windsurfrules) hosted in community GitHub repositories.: {}
         Repo Grokking provides deep codebase understanding via vector database and graph representation: {}
-        'Yes': {}
-        'No': {}
   - BYOK:
       type: LABEL
       values:

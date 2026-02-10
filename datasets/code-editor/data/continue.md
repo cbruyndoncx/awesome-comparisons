@@ -78,28 +78,17 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
   - A free/solo tier exists (open-source extensions + hub access for public/shared blocks). Paid team/enterprise tiers add governance and private deployment options.
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - Integrates with Model Context Protocols for adding context providers (GitHub, Jira, etc.) and usable via the hub.
 
 ### Prompts
-- Yes
-  - Supports customizable prompts and agent definitions; teams can define behaviors via configuration-as-code
-  - Modes (Chat / Plan / Agent) enable different prompt/tool access levels for safer workflows
-  - Prompts and building blocks can be shared via Continue Hub for reuse across teams
+- No
 
 ### Tools
 - Yes
-  - MCP-style tool integrations (GitHub, Sentry, Snyk, Linear) allow the assistant to fetch contextual data
-  - CLI (`cn`) provides headless automation and scripting; IDE extensions expose tool interactions in-editor
-  - Supports configuring local and remote model endpoints (BYOK)
 
 ### Resources
-- Yes
-  - Continue Hub (hub.continue.dev) for shared assistants and reusable building blocks
-  - Official docs at https://continue.dev and source at https://github.com/continuedev/continue
-  - MCP integrations and context providers (GitHub, issue trackers, error monitoring) available as resources
+- No
 
 ### ACP
 - No

@@ -58,8 +58,6 @@ MarsX is an open-source development platform and marketplace that combines AI as
   - MarsX offers a usable free plan and the core Mars engine is available as open-source.]
 
 ## MCP-Client
-
-### MCP-Client
 - No
   - No public documentation found for a generic "MCP client" implementation. MarsX manages AI through its platform orchestrator and per‑micro‑app model workflows rather than exposing a documented standalone MCP client.
 

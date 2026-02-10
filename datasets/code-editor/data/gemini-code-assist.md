@@ -54,8 +54,6 @@ Gemini Code Assist is Google's AI-powered coding assistant that leverages the Ge
 - Yes
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - MCP migration October 2025 from deprecated Tool Calling API; adds session management, tool discovery, streaming responses, and enhanced observability for tool invocations.
 

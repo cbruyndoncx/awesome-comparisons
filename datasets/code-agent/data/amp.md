@@ -69,15 +69,12 @@ Amp is designed as an "agentic" coding assistant that can autonomously reason th
 
 ### Prompts
 - Yes
-  - Amp uses structured prompts and prompt engineering under the hood; supports configurable prompts and project-level AGENT.md guidance.
 
 ### Tools
 - Yes
-  - Supports CLI operations, file/system actions, and integrations (e.g., running tests, git operations) with allowlisting controls.
 
 ### Resources
 - Yes
-  - Can surface and use repo resources, external docs, and model-provided context as part of multi-step reasoning.
 
 ### ACP
 - No

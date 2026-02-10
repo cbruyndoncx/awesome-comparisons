@@ -58,16 +58,13 @@ Sources: GitHub repository (https://github.com/openai/codex) and project documen
 - Yes
 
 ### Prompts
-- Yes
-  - Codex CLI supports reusable prompts, per-repo agent settings and prompt templates via configuration files (e.g., ~/.codex/config.toml and repository AGENTS.md).
+- No
 
 ### Tools
-- Yes
-  - Integrates with local tools (linters, test runners, build commands) and can propose/execute shell commands (subject to approval mode and sandboxing).
+- No
 
 ### Resources
-- Yes
-  - Can ingest repository files, AGENTS.md guidance, and external web search or provider-specific context when configured.
+- No
 
 ### ACP
 - Yes

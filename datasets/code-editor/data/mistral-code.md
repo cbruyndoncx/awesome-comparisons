@@ -53,8 +53,6 @@ Mistral Code is a packaged AI developer assistant designed for enterprise adopti
   - Private beta availability; general availability and trial terms may vary
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - Integrates with Continue.dev for IDE plugin functionality (private beta for VSCode and JetBrains); enterprise deployments expose admin console and integration points for enterprise management.
 

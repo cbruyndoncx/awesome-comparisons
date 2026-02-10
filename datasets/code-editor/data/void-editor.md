@@ -51,8 +51,6 @@ Void is an open-source, privacy-focused AI code editor that forks the Visual Stu
   - Core editor is free and open-source.
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
 
 ### Prompts

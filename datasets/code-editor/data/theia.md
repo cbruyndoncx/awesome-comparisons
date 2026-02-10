@@ -55,8 +55,6 @@ Eclipse Theia is an open-source, modular IDE framework maintained under the Ecli
   - Theia is free/open-source (no trials); commercial services built on top of it may have separate licensing/pricing.
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
 
 ### Prompts

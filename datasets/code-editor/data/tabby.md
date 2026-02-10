@@ -57,8 +57,6 @@ Tabby is a self-hosted, open-source AI coding assistant that provides code compl
   - Community edition is free & open-source; Team/Enterprise tiers exist commercially for additional features/support.
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
 
 ### Prompts

@@ -56,8 +56,6 @@ CodeLayer is an open-source, keyboard-first IDE and orchestration layer for AI c
 - No
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - Built-in MCP client and HumanLayer SDK enable tool/function calls, approvals, and lifecycle events (e.g., function_call.*, human_contact.*). Sessions can surface tool metadata and perform approved side-effecting operations via the platform's tool integrations.
 

@@ -53,8 +53,6 @@ AiderDesk is a sophisticated desktop application that brings all the power of Ai
 - Yes
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - Integrates external tools from configured MCP servers that the Agent can directly utilize; fine-grained control allows disabling specific MCP tools within agent settings.
 

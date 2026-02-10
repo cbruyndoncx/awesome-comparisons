@@ -65,8 +65,6 @@ React Grab is compatible with popular AI coding tools such as Cursor, Claude Cod
   - Open source and freely available
 
 ## MCP-Client
-
-### MCP-Client
 - No
 
 ### Prompts

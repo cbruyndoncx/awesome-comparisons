@@ -65,8 +65,6 @@ Key capabilities include project-wide code indexing, plan decomposition, paralle
   - 7-day free trial with 100 credits.
 
 ## MCP-Client
-
-### MCP-Client
 - No
 
 ### Prompts

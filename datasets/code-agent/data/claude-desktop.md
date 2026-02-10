@@ -60,17 +60,14 @@ Designed for Pro, Max, Team and Enterprise customers, Claude Desktop aims to mak
 
 ### Prompts
 - Yes
-  - Claude supports structured prompts and can automatically invoke Skills when a prompt matches a Skill's trigger. Prompts can include file attachments and are used to request file operations (e.g., "Edit this spreadsheet to add a totals column").
 
 
 ### Tools
 - Yes
-  - Claude Desktop can access and invoke external tools via MCP servers and built-in tooling for file editing, document conversion, and task automation. Tools are surfaced through the UI when MCP servers are configured.
 
 
 ### Resources
 - Yes
-  - Claude Desktop provides in-app documentation for Skills, MCP setup, and file operations. Public resources include Anthropic's help center and developer documentation for MCP. Enterprise customers also receive additional admin and deployment documentation.
 
 
 ### ACP

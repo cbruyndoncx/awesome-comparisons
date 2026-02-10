@@ -60,8 +60,6 @@ Ona is the rebrand and strategic evolution of Gitpod into an AI-first software e
 - Yes
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
 
 ### Prompts

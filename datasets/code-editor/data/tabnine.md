@@ -61,8 +61,6 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
   - Any additional details: Tabnine sunset its free Basic plan in 2025; access is primarily through paid tiers or enterprise licensing. Trial or pilot options may still be available via sales.
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - Tabnine/Tabnine Agent supports Model Context Protocol (MCP) servers configured via an mcp_servers.json file. The Agent can launch local STDIO MCP servers, connect to remote MCP endpoints (HTTP/SSE), and manage server lifecycle for integrations that expose external tooling and data to the assistant.
   - Examples: local STDIO servers (command + args), remote HTTP endpoints with JWT/API key headers, and transport detection based on configuration.

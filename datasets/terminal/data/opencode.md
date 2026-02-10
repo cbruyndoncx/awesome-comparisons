@@ -56,7 +56,7 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
 - Yes
 
 ### Prompts
-- Yes
+- No
 
   - Includes built-in prompt templates and system prompts used by agents (Plan, Build) and subagents.
   - Supports user-customizable prompts/skills and slash-style commands for common workflows (e.g. /init, /undo, /redo).
@@ -64,12 +64,13 @@ OpenCode is an open-source AI assistant designed for use from the terminal. It p
 
 ### Tools
 - Yes
+  - listChanged: true
 
   - Provides a programmatic toolset for repository operations: file read/write/patch, grep/glob, shell execution, diagnostics via LSP, fetch/http, Sourcegraph search, and git-aware actions.
   - Tools are exposed to the assistant for robust, repeatable edits and automated workflows.
 
 ### Resources
-- Yes
+- No
 
   - Official docs and usage guides: https://opencode.ai/docs
   - Repository with examples, configuration and adapters: https://github.com/sst/opencode

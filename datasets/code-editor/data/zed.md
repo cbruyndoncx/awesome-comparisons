@@ -63,18 +63,16 @@ Zed is a modern code editor engineered for low latency and smooth UX. It renders
   - The editor and source are available openly; binaries are freely downloadable. (See "Notes" about binary EULA nuance.)
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - MCP servers are integrated similar to other extensions like e.g. theming
 
-### Prompts
-- No
-
-### Tools
+### MCP-Prompts
 - Yes
 
-### Resources
+### MCP-Tools
+- Yes
+
+### MCP-Resources
 - No
 
 ### ACP

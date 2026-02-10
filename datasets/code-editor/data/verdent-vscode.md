@@ -56,8 +56,6 @@ The extension is intended to reduce context switching by letting developers rema
   - 7-day free trial with 100 credits.
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - Verdent for VS Code includes "MCP Integration," meaning it can act as an MCP client.
 

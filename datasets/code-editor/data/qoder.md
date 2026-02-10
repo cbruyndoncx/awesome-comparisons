@@ -59,8 +59,6 @@ Multi-model backend automatically selects optimal AI (Claude for understanding/r
   - Free tier available ($0/mo) with limited basic models
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - Supports MCP ecosystem for extending capabilities with community tools
 

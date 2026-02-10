@@ -55,25 +55,17 @@ Windsurf is an AI-powered, agentic development environment (IDE-like) designed t
 - Yes
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
 
-### Prompts
-- Yes
-  - Supports prompt templates and customizable system/user prompts within Cascade flows.
-  - Memories and AI Rules provide persistent prompt-like behavior across sessions.
-  - Compatible with Model Context Protocol (MCP) for structured prompt/context passing.
+### MCP-Prompts
+- No
 
-### Tools
+### MCP-Tools
 - Yes
-  - Includes inline code actions, multi-file refactoring tools, image-to-code generator, and an AI terminal for executing commands.
-  - Integrates with VS Code extensions and external linters/formatters via plugin architecture.
+  - listChanged: true
 
-### Resources
-- Yes
-  - Documentation and tutorials available on the Windsurf website and in-product guidance (Cascade walkthroughs, Supercomplete demos).
-  - Community examples and helper files (.windsurfrules) hosted in community GitHub repositories.
+### MCP-Resources
+- No
 
 ### ACP
 - No

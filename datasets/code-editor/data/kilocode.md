@@ -60,8 +60,6 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
   - new users get onboarding credits via the platform (also can operate with your own keys)
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - supports MCP Server Marketplace (JSON-based tool integrations / extensions)
 

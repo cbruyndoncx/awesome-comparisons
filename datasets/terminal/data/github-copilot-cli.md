@@ -54,20 +54,13 @@ Requires Node.js 22+ and npm 10+. Free plan includes 50 chat requests per month;
 - No
 
 ### Prompts
-- Yes
-  - Natural language prompts for command generation and code assistance
+- No
 
 ### Tools
 - Yes
-  - Shell command execution with approval system
-  - Git and GitHub operations
-  - Web search, fetch, extensions tools
-  - Approval options: --allow-all-tools, --deny-tool flags
 
 ### Resources
-- Yes
-  - GitHub repository context
-  - Documentation access
+- No
 
 ### ACP
 - No

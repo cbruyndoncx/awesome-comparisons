@@ -56,13 +56,13 @@ Built upon Charmbracelet's broader ecosystem of Go-based libraries and tools. Th
   - Can integrate with external services through standardized MCP server connections
 
 ### Prompts
-- Yes
+- No
 
 ### Tools
 - Yes
 
 ### Resources
-- Yes
+- No
 
 ### ACP
 - No

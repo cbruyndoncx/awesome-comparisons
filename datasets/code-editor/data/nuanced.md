@@ -60,8 +60,6 @@ Nuanced is an MCP (Model Context Protocol) server and code-intelligence layer th
   - Core project is open-source and available to use without payment. Commercial/enterprise add-ons (if offered) may be paid — check project or vendor pages for details.
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - Nuanced is explicitly implemented as an MCP server to deliver structured code context to LLM-based agents.
 

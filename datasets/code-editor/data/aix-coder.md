@@ -55,8 +55,6 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
   - Some distribution channels and IDE marketplace entries list free access or free tiers for the plugin; enterprise features are commercial. Confirm current trial/pricing on the vendor site or marketplace.
 
 ## MCP-Client
-
-### MCP-Client
 - No
   - No public documentation found regarding MCP (Model Context Protocol) support; primarily focuses on local model inference.
 

@@ -55,8 +55,6 @@ Augment Code is an AI-first development platform built to help professional engi
 - Yes
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
 
 ### Prompts

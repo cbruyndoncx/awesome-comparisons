@@ -49,8 +49,6 @@ First code assistant in China to support MCP (Model Context Protocol). Hunyuan m
   - One-time 2-week Pro trial for new users
 
 ## MCP-Client
-
-### MCP-Client
 - Yes
   - First code assistant in China to support MCP
   - Connects to Tencent ecosystem products and external tools/agents
