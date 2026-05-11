@@ -1,0 +1,7 @@
+# Authored by recommendation-engine skill — DO NOT populate `criteria:`
+# The awesome-comparisons prebuild step auto-derives criteria from
+# markdown section headers. Manually-set criteria here will be wiped.
+
+title: Cocktails — Party Planning
+subtitle: Crowd-pleasing cocktails by base spirit, flavor, batch-friendliness, and skill
+criteria: []

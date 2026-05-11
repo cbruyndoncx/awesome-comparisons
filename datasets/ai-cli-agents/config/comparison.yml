@@ -1,0 +1,7 @@
+# Authored by recommendation-engine skill — DO NOT populate `criteria:`
+# The awesome-comparisons prebuild step auto-derives criteria from
+# markdown section headers. Manually-set criteria here will be wiped.
+
+title: AI CLI Agents
+subtitle: Terminal-native AI coding assistants for engineers
+criteria: []

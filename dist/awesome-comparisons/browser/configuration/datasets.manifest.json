@@ -204,6 +204,44 @@
           "configuration/defaults/value-displays.yml"
         ]
       }
+    },
+    {
+      "id": "ai-cli-agents",
+      "displayLabel": "AI CLI Agents",
+      "shortDescription": "Terminal-native AI coding assistants",
+      "description": "AI CLI agents \u2014 Claude Code, Codex, Gemini, OpenCode, OpenClaw, HermesAgent, Goose",
+      "assetDirectory": "assets/generated/ai-cli-agents/",
+      "accentColor": "#9333ea",
+      "icon": "default-icon.svg",
+      "preferredTheme": "dark",
+      "isDefault": false,
+      "sources": {
+        "dataDir": "datasets/ai-cli-agents/data",
+        "config": "datasets/ai-cli-agents/config/comparison.yml",
+        "style": "configuration/style.css",
+        "configDefaults": [
+          "configuration/comparison-default.yml"
+        ]
+      }
+    },
+    {
+      "id": "cocktails-party-planning",
+      "displayLabel": "Cocktails \u2014 Party Planning",
+      "shortDescription": "Crowd-pleasing cocktails by base spirit, flavor, batch-friendliness, and skill",
+      "description": "Crowd-pleasing cocktails by base spirit, flavor, batch-friendliness, and skill",
+      "assetDirectory": "assets/generated/cocktails-party-planning/",
+      "accentColor": "#c2410c",
+      "icon": "default-icon.svg",
+      "preferredTheme": "light",
+      "isDefault": false,
+      "sources": {
+        "dataDir": "datasets/cocktails-party-planning/data",
+        "config": "datasets/cocktails-party-planning/config/comparison.yml",
+        "style": "configuration/style.css",
+        "configDefaults": [
+          "configuration/comparison-default.yml"
+        ]
+      }
     }
   ]
 }

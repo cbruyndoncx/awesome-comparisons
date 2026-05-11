@@ -1,0 +1,40 @@
+# Locked taxonomy for Finsure UAE health insurance plans.
+# Categories → facets. Used by recommendation-engine extract_facets.py.
+# Do NOT change without re-extracting every entry — entries are extracted against
+# this exact schema, and changing it mid-batch fragments the awesome-comparisons UI.
+
+General Info:
+  - Insurance Provider
+  - Plan Tier
+  - Territorial Scope
+  - Annual Aggregate Limit
+  - Eligibility Group
+
+Network & Access:
+  - Medical Network
+  - Inpatient Room Type
+  - Outpatient Copay
+  - Settlement Basis
+
+Benefit Limits:
+  - Maternity Sub-limit
+  - Dental Limit
+  - Alternative Medicine
+  - Dialysis Limit
+  - Optical Limit
+
+Conditions & Wait Times:
+  - Pre-existing Condition Limit
+  - Pre-existing Treatment
+  - Waiting Period
+  - Maternity Declaration Requirement
+  - Age Eligibility
+
+Source:
+  - Premium Band Family-of-4
+  - Source File
+  - Description
+
+Rating:
+  - Overall Quality
+  - Reason

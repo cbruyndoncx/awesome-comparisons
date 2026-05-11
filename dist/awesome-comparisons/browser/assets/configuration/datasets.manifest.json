@@ -39,7 +39,8 @@
           "datasets/other/data",
           "datasets/aie-model/data",
           "datasets/code-agent/data",
-          "datasets/product-prototyping/data"
+          "datasets/product-prototyping/data",
+          "datasets/ai-chat/data"
         ],
         "config": "configuration/comparison-default.yml",
         "style": "configuration/style.css",
@@ -179,6 +180,66 @@
           "configuration/defaults/general-licensing.yml",
           "configuration/defaults/groups-advanced.yml",
           "configuration/defaults/value-displays.yml"
+        ]
+      }
+    },
+    {
+      "id": "ai-chat",
+      "displayLabel": "AI Chat Clients",
+      "shortDescription": "AI chat interfaces and conversational assistants",
+      "description": "AI-powered chat interfaces including official providers (ChatGPT, Claude), self-hostable platforms (LibreChat, Jan AI), and third-party clients with MCP support",
+      "assetDirectory": "assets/generated/ai-chat/",
+      "accentColor": "#9c27b0",
+      "icon": "default-icon.svg",
+      "preferredTheme": "light",
+      "isDefault": false,
+      "sources": {
+        "dataDir": "datasets/ai-chat/data",
+        "config": "datasets/ai-chat/config/comparison.yml",
+        "style": "configuration/style.css",
+        "configDefaults": [
+          "configuration/comparison-default.yml",
+          "configuration/defaults/general-licensing.yml",
+          "configuration/defaults/groups-advanced.yml",
+          "configuration/defaults/value-displays.yml"
+        ]
+      }
+    },
+    {
+      "id": "ai-cli-agents",
+      "displayLabel": "AI CLI Agents",
+      "shortDescription": "Terminal-native AI coding assistants",
+      "description": "AI CLI agents \u2014 Claude Code, Codex, Gemini, OpenCode, OpenClaw, HermesAgent, Goose",
+      "assetDirectory": "assets/generated/ai-cli-agents/",
+      "accentColor": "#9333ea",
+      "icon": "default-icon.svg",
+      "preferredTheme": "dark",
+      "isDefault": false,
+      "sources": {
+        "dataDir": "datasets/ai-cli-agents/data",
+        "config": "datasets/ai-cli-agents/config/comparison.yml",
+        "style": "configuration/style.css",
+        "configDefaults": [
+          "configuration/comparison-default.yml"
+        ]
+      }
+    },
+    {
+      "id": "cocktails-party-planning",
+      "displayLabel": "Cocktails \u2014 Party Planning",
+      "shortDescription": "Crowd-pleasing cocktails by base spirit, flavor, batch-friendliness, and skill",
+      "description": "Crowd-pleasing cocktails by base spirit, flavor, batch-friendliness, and skill",
+      "assetDirectory": "assets/generated/cocktails-party-planning/",
+      "accentColor": "#c2410c",
+      "icon": "default-icon.svg",
+      "preferredTheme": "light",
+      "isDefault": false,
+      "sources": {
+        "dataDir": "datasets/cocktails-party-planning/data",
+        "config": "datasets/cocktails-party-planning/config/comparison.yml",
+        "style": "configuration/style.css",
+        "configDefaults": [
+          "configuration/comparison-default.yml"
         ]
       }
     }

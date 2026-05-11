@@ -95,15 +95,16 @@ export class ConfigurationService {
             return '';
         }
         const normalized = text.replace(/\r\n/g, '\n');
+        const isImageOnly = (line: string) => /^!\[[^\]]*\]\([^)]+\)\s*$/.test(line);
         const lines = normalized.split('\n')
             .map(line => line.trim())
-            .filter(line => line.length > 0 && !line.startsWith('-'));
+            .filter(line => line.length > 0 && !line.startsWith('-') && !isImageOnly(line));
         if (lines.length > 0) {
             return lines[0];
         }
         const fallback = normalized.split('\n')
             .map(line => line.trim())
-            .filter(line => line.length > 0);
+            .filter(line => line.length > 0 && !isImageOnly(line));
         return fallback.length > 0 ? fallback[0] : '';
     }
 
@@ -276,10 +277,15 @@ export class ConfigurationService {
 
                             const markdownSummary = ConfigurationService.buildSummary(criteriaData.text);
                             const markdownFallback = renderMarkdownToText(criteriaData.text || '').split('\n').map(line => line.trim()).filter(line => line.length > 0);
+                            const isImageOnlyText = /^\s*!\[[^\]]*\]\([^)]+\)\s*$/.test(criteriaData.text || '');
                             criteriaData.summaryText = markdownSummary;
                             criteriaData.tableText = markdownSummary.length > 0
                                 ? markdownSummary
-                                : (markdownFallback.length > 0 ? markdownFallback[0] : (criteriaData.text || ''));
+                                : (markdownFallback.length > 0 ? markdownFallback[0] : (isImageOnlyText ? '' : (criteriaData.text || '')));
+                            criteriaData.tableHtml = (criteriaData.html || '').replace(
+                                /(<img[^>]*\ssrc=")([^"]*\/images\/)(?!thumbs\/)([^"]+)(")/gi,
+                                '$1$2thumbs/$3$4'
+                            );
                             break;
                         case CriteriaTypes.LABEL:
                         case CriteriaTypes.REPOSITORY:

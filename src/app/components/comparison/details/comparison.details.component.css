@@ -3,6 +3,13 @@
     padding: 0;
 }
 
+:host img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
 :host h2 ptooltip {
     font-family: Roboto, Noto, sans-serif;
     font-size: 14px;

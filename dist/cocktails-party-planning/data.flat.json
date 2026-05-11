@@ -1,0 +1,1810 @@
+[
+  {
+    "slug": "americano",
+    "title": "Americano",
+    "intro": "Equal parts Campari and sweet vermouth, topped with soda. Italian aperitif served in Schumann's Munich since 1982.",
+    "sections": {
+      "Image": [
+        "![Americano](images/americano.png)"
+      ],
+      "Base Spirit": [
+        "None"
+      ],
+      "Flavor Profile": [
+        "Bitter"
+      ],
+      "Strength": [
+        "Low"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Highball"
+      ],
+      "Occasion": [
+        "Aperitif",
+        "Summer/Outdoor"
+      ],
+      "Rating": [
+        "[4] Lower-ABV Negroni cousin; Schumann's house aperitif"
+      ],
+      "Recipe": [
+        "{\"campari_oz\": 1.5, \"sweet_vermouth_oz\": 1.5, \"soda_oz\": 3.0, \"garnish\": \"orange slice\"}"
+      ],
+      "Description": [
+        "Equal parts Campari and sweet vermouth, topped with soda. Italian aperitif served in Schumann's Munich since 1982."
+      ],
+      "Source": [
+        "Schumann's American Bar"
+      ]
+    }
+  },
+  {
+    "slug": "aperol-spritz",
+    "title": "Aperol Spritz - https://iba-world.com/cocktails/aperol-spritz/",
+    "intro": "3 parts prosecco, 2 parts Aperol, 1 part soda water, served over ice in a wine glass. Italian aperitivo standard.",
+    "sections": {
+      "Image": [
+        "![Aperol Spritz](images/aperol-spritz.png)"
+      ],
+      "Base Spirit": [
+        "Sparkling Wine"
+      ],
+      "Flavor Profile": [
+        "Bitter"
+      ],
+      "Strength": [
+        "Low"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Wine"
+      ],
+      "Occasion": [
+        "Aperitif",
+        "Summer/Outdoor",
+        "Brunch"
+      ],
+      "Rating": [
+        "[5] 3-2-1 formula; fastest party drink to batch"
+      ],
+      "Recipe": [
+        "{\"prosecco_oz\": 3.0, \"aperol_oz\": 2.0, \"soda_oz\": 1.0, \"garnish\": \"orange slice\"}"
+      ],
+      "Description": [
+        "3 parts prosecco, 2 parts Aperol, 1 part soda water, served over ice in a wine glass. Italian aperitivo standard."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "bellini",
+    "title": "Bellini - https://iba-world.com/cocktails/bellini/",
+    "intro": "Prosecco, white peach pur\u00e9e. Invented at Harry's Bar in Venice, 1948.",
+    "sections": {
+      "Image": [
+        "![Bellini](images/bellini.png)"
+      ],
+      "Base Spirit": [
+        "Sparkling Wine"
+      ],
+      "Flavor Profile": [
+        "Fruity"
+      ],
+      "Strength": [
+        "Low"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Flute"
+      ],
+      "Occasion": [
+        "Brunch",
+        "Celebration"
+      ],
+      "Rating": [
+        "[4] Venetian original; white peach pur\u00e9e"
+      ],
+      "Recipe": [
+        "{\"prosecco_oz\": 3.0, \"white_peach_puree_oz\": 1.5, \"garnish\": \"none\"}"
+      ],
+      "Description": [
+        "Prosecco, white peach pur\u00e9e. Invented at Harry's Bar in Venice, 1948."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "bloody-mary",
+    "title": "Bloody Mary - https://iba-world.com/cocktails/bloody-mary/",
+    "intro": "Vodka, tomato juice, lemon, Worcestershire, Tabasco, salt and pepper. The brunch heavyweight.",
+    "sections": {
+      "Image": [
+        "![Bloody Mary](images/bloody-mary.png)"
+      ],
+      "Base Spirit": [
+        "Vodka"
+      ],
+      "Flavor Profile": [
+        "Spicy"
+      ],
+      "Strength": [
+        "Medium"
+      ],
+      "Difficulty": [
+        "Medium"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Highball"
+      ],
+      "Occasion": [
+        "Brunch"
+      ],
+      "Rating": [
+        "[4] Brunch institution; pre-batch the mix night before"
+      ],
+      "Recipe": [
+        "{\"vodka_oz\": 2.0, \"tomato_juice_oz\": 4.0, \"lemon_oz\": 0.5, \"worcestershire_dashes\": 4, \"tabasco_dashes\": 3, \"garnish\": \"celery, lemon, salt rim\"}"
+      ],
+      "Description": [
+        "Vodka, tomato juice, lemon, Worcestershire, Tabasco, salt and pepper. The brunch heavyweight."
+      ],
+      "Source": [
+        "Schumann's American Bar"
+      ]
+    }
+  },
+  {
+    "slug": "caipirinha",
+    "title": "Caipirinha - https://iba-world.com/cocktails/caipirinha/",
+    "intro": "Cacha\u00e7a, fresh lime quartered and muddled with sugar, served over crushed ice. Brazil's national cocktail.",
+    "sections": {
+      "Image": [
+        "![Caipirinha](images/caipirinha.png)"
+      ],
+      "Base Spirit": [
+        "Rum"
+      ],
+      "Flavor Profile": [
+        "Sour"
+      ],
+      "Strength": [
+        "Medium"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "No"
+      ],
+      "Glassware": [
+        "Rocks"
+      ],
+      "Occasion": [
+        "Summer/Outdoor",
+        "Brunch"
+      ],
+      "Rating": [
+        "[4] Brazil's national; muddle in glass per drink"
+      ],
+      "Recipe": [
+        "{\"cachaca_oz\": 2.0, \"lime_pieces\": 4, \"sugar_oz\": 0.75, \"garnish\": \"none\"}"
+      ],
+      "Description": [
+        "Cacha\u00e7a, fresh lime quartered and muddled with sugar, served over crushed ice. Brazil's national cocktail."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "cosmopolitan",
+    "title": "Cosmopolitan - https://iba-world.com/cocktails/cosmopolitan/",
+    "intro": "Citrus vodka, triple sec, cranberry juice, fresh lime, shaken and served in a chilled coupe. Toby Cecchini, 1988.",
+    "sections": {
+      "Image": [
+        "![Cosmopolitan](images/cosmopolitan.png)"
+      ],
+      "Base Spirit": [
+        "Vodka"
+      ],
+      "Flavor Profile": [
+        "Sour"
+      ],
+      "Strength": [
+        "Medium"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Coupe"
+      ],
+      "Occasion": [
+        "Celebration",
+        "Dinner"
+      ],
+      "Rating": [
+        "[4] Sex-and-the-City era staple; clean batch"
+      ],
+      "Recipe": [
+        "{\"vodka_oz\": 1.5, \"triple_sec_oz\": 0.5, \"cranberry_oz\": 0.75, \"lime_oz\": 0.5, \"garnish\": \"lime peel\"}"
+      ],
+      "Description": [
+        "Citrus vodka, triple sec, cranberry juice, fresh lime, shaken and served in a chilled coupe. Toby Cecchini, 1988."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "daiquiri",
+    "title": "Daiquiri - https://iba-world.com/cocktails/daiquiri/",
+    "intro": "White rum, fresh lime juice, simple syrup, shaken hard with ice and double-strained. The platonic ideal of a sour.",
+    "sections": {
+      "Image": [
+        "![Daiquiri](images/daiquiri.png)"
+      ],
+      "Base Spirit": [
+        "Rum"
+      ],
+      "Flavor Profile": [
+        "Sour"
+      ],
+      "Strength": [
+        "Medium"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Coupe"
+      ],
+      "Occasion": [
+        "Summer/Outdoor",
+        "Aperitif"
+      ],
+      "Rating": [
+        "[5] Three-ingredient template; Hemingway's drink"
+      ],
+      "Recipe": [
+        "{\"white_rum_oz\": 2.0, \"lime_oz\": 1.0, \"sugar_oz\": 0.75, \"garnish\": \"lime wheel\"}"
+      ],
+      "Description": [
+        "White rum, fresh lime juice, simple syrup, shaken hard with ice and double-strained. The platonic ideal of a sour."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "dark-and-stormy",
+    "title": "Dark and Stormy - https://iba-world.com/cocktails/dark-and-stormy/",
+    "intro": "Dark rum poured over ice, topped with spicy ginger beer, lime squeeze. Bermuda's national drink.",
+    "sections": {
+      "Image": [
+        "![Dark and Stormy](images/dark-and-stormy.png)"
+      ],
+      "Base Spirit": [
+        "Rum"
+      ],
+      "Flavor Profile": [
+        "Spicy"
+      ],
+      "Strength": [
+        "Medium"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Highball"
+      ],
+      "Occasion": [
+        "Summer/Outdoor",
+        "Brunch"
+      ],
+      "Rating": [
+        "[4] 2-ingredient highball; pre-batch the rum"
+      ],
+      "Recipe": [
+        "{\"dark_rum_oz\": 2.0, \"ginger_beer_oz\": 4.0, \"lime_oz\": 0.5, \"garnish\": \"lime wedge\"}"
+      ],
+      "Description": [
+        "Dark rum poured over ice, topped with spicy ginger beer, lime squeeze. Bermuda's national drink."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "espresso-martini",
+    "title": "Espresso Martini - https://iba-world.com/cocktails/espresso-martini/",
+    "intro": "Vodka, coffee liqueur, fresh espresso, simple syrup. Shaken hard for the signature crema. Dick Bradsell, 1983.",
+    "sections": {
+      "Image": [
+        "![Espresso Martini](images/espresso-martini.png)"
+      ],
+      "Base Spirit": [
+        "Vodka"
+      ],
+      "Flavor Profile": [
+        "Sweet"
+      ],
+      "Strength": [
+        "Strong"
+      ],
+      "Difficulty": [
+        "Medium"
+      ],
+      "Batch Friendly": [
+        "No"
+      ],
+      "Glassware": [
+        "Coupe"
+      ],
+      "Occasion": [
+        "Late-night",
+        "Dinner"
+      ],
+      "Rating": [
+        "[5] Modern classic; needs fresh espresso per drink"
+      ],
+      "Recipe": [
+        "{\"vodka_oz\": 1.5, \"coffee_liqueur_oz\": 0.5, \"espresso_oz\": 1.0, \"sugar_oz\": 0.25, \"garnish\": \"3 coffee beans\"}"
+      ],
+      "Description": [
+        "Vodka, coffee liqueur, fresh espresso, simple syrup. Shaken hard for the signature crema. Dick Bradsell, 1983."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "french-75",
+    "title": "French 75 - https://iba-world.com/cocktails/french-75/",
+    "intro": "Gin, fresh lemon, sugar, topped with champagne. Named for the WWI 75mm field gun. Best as a welcome cocktail.",
+    "sections": {
+      "Image": [
+        "![French 75](images/french-75.png)"
+      ],
+      "Base Spirit": [
+        "Gin"
+      ],
+      "Flavor Profile": [
+        "Sour"
+      ],
+      "Strength": [
+        "Strong"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Flute"
+      ],
+      "Occasion": [
+        "Celebration",
+        "Aperitif"
+      ],
+      "Rating": [
+        "[4] Champagne cocktail; elegant arrival drink"
+      ],
+      "Recipe": [
+        "{\"gin_oz\": 1.0, \"lemon_oz\": 0.5, \"sugar_oz\": 0.5, \"champagne_oz\": 3.0, \"garnish\": \"lemon twist\"}"
+      ],
+      "Description": [
+        "Gin, fresh lemon, sugar, topped with champagne. Named for the WWI 75mm field gun. Best as a welcome cocktail."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "french-martini",
+    "title": "French Martini - https://iba-world.com/cocktails/french-martini/",
+    "intro": "Vodka, Chambord black raspberry liqueur, pineapple juice. The signature foam comes from hard-shaken pineapple.",
+    "sections": {
+      "Image": [
+        "![French Martini](images/french-martini.png)"
+      ],
+      "Base Spirit": [
+        "Vodka"
+      ],
+      "Flavor Profile": [
+        "Fruity"
+      ],
+      "Strength": [
+        "Medium"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Coupe"
+      ],
+      "Occasion": [
+        "Celebration",
+        "Late-night"
+      ],
+      "Rating": [
+        "[3] Pineapple-and-Chambord; sweet party staple"
+      ],
+      "Recipe": [
+        "{\"vodka_oz\": 1.5, \"chambord_oz\": 0.5, \"pineapple_oz\": 1.5, \"garnish\": \"lemon peel\"}"
+      ],
+      "Description": [
+        "Vodka, Chambord black raspberry liqueur, pineapple juice. The signature foam comes from hard-shaken pineapple."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "gin-fizz",
+    "title": "Gin Fizz - https://iba-world.com/cocktails/gin-fizz/",
+    "intro": "Gin, fresh lemon, sugar, topped with soda. The simplest of the fizz family.",
+    "sections": {
+      "Image": [
+        "![Gin Fizz](images/gin-fizz.png)"
+      ],
+      "Base Spirit": [
+        "Gin"
+      ],
+      "Flavor Profile": [
+        "Refreshing"
+      ],
+      "Strength": [
+        "Medium"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Highball"
+      ],
+      "Occasion": [
+        "Brunch",
+        "Summer/Outdoor"
+      ],
+      "Rating": [
+        "[4] Brunch standard; light and citrusy"
+      ],
+      "Recipe": [
+        "{\"gin_oz\": 2.0, \"lemon_oz\": 1.0, \"sugar_oz\": 0.75, \"soda_oz\": 3.0, \"garnish\": \"lemon wheel\"}"
+      ],
+      "Description": [
+        "Gin, fresh lemon, sugar, topped with soda. The simplest of the fizz family."
+      ],
+      "Source": [
+        "Schumann's American Bar"
+      ]
+    }
+  },
+  {
+    "slug": "hugo-spritz",
+    "title": "Hugo Spritz - https://www.diffordsguide.com/cocktails/recipe/4815/hugo",
+    "intro": "Prosecco, elderflower liqueur, soda, fresh mint and lime. South Tyrol original, now a global aperitivo.",
+    "sections": {
+      "Image": [
+        "![Hugo Spritz](images/hugo-spritz.png)"
+      ],
+      "Base Spirit": [
+        "Sparkling Wine"
+      ],
+      "Flavor Profile": [
+        "Refreshing"
+      ],
+      "Strength": [
+        "Low"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Wine"
+      ],
+      "Occasion": [
+        "Aperitif",
+        "Summer/Outdoor",
+        "Brunch"
+      ],
+      "Rating": [
+        "[4] Elderflower spritz; lighter than Aperol"
+      ],
+      "Recipe": [
+        "{\"prosecco_oz\": 3.0, \"elderflower_liqueur_oz\": 1.0, \"soda_oz\": 1.0, \"mint_leaves\": 4, \"lime_oz\": 0.25, \"garnish\": \"mint, lime\"}"
+      ],
+      "Description": [
+        "Prosecco, elderflower liqueur, soda, fresh mint and lime. South Tyrol original, now a global aperitivo."
+      ],
+      "Source": [
+        "Difford's Guide"
+      ]
+    }
+  },
+  {
+    "slug": "jungle-bird",
+    "title": "Jungle Bird - https://deathandcompany.com/jungle-bird",
+    "intro": "Dark rum, Campari, pineapple, lime, sugar. 1978 Kuala Lumpur Hilton original; rediscovered by NYC bartenders 2010s.",
+    "sections": {
+      "Image": [
+        "![Jungle Bird](images/jungle-bird.png)"
+      ],
+      "Base Spirit": [
+        "Rum"
+      ],
+      "Flavor Profile": [
+        "Bitter"
+      ],
+      "Strength": [
+        "Medium"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Tiki/Mug"
+      ],
+      "Occasion": [
+        "Summer/Outdoor",
+        "Aperitif"
+      ],
+      "Rating": [
+        "[5] Tiki + bitter Italian; excellent batch cocktail"
+      ],
+      "Recipe": [
+        "{\"dark_rum_oz\": 1.5, \"campari_oz\": 0.75, \"pineapple_oz\": 1.5, \"lime_oz\": 0.5, \"sugar_oz\": 0.5, \"garnish\": \"pineapple leaf\"}"
+      ],
+      "Description": [
+        "Dark rum, Campari, pineapple, lime, sugar. 1978 Kuala Lumpur Hilton original; rediscovered by NYC bartenders 2010s."
+      ],
+      "Source": [
+        "Death & Co"
+      ]
+    }
+  },
+  {
+    "slug": "kir-royale",
+    "title": "Kir Royale - https://www.diffordsguide.com/cocktails/recipe/2275/kir-royale",
+    "intro": "Champagne with a splash of cr\u00e8me de cassis. Bourgogne classic.",
+    "sections": {
+      "Image": [
+        "![Kir Royale](images/kir-royale.png)"
+      ],
+      "Base Spirit": [
+        "Sparkling Wine"
+      ],
+      "Flavor Profile": [
+        "Sweet"
+      ],
+      "Strength": [
+        "Low"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Flute"
+      ],
+      "Occasion": [
+        "Aperitif",
+        "Celebration"
+      ],
+      "Rating": [
+        "[3] Champagne with cr\u00e8me de cassis; dead simple"
+      ],
+      "Recipe": [
+        "{\"champagne_oz\": 4.0, \"creme_de_cassis_oz\": 0.5, \"garnish\": \"none\"}"
+      ],
+      "Description": [
+        "Champagne with a splash of cr\u00e8me de cassis. Bourgogne classic."
+      ],
+      "Source": [
+        "Difford's Guide"
+      ]
+    }
+  },
+  {
+    "slug": "long-island-iced-tea",
+    "title": "Long Island Iced Tea - https://iba-world.com/cocktails/long-island-iced-tea/",
+    "intro": "Equal parts vodka, gin, rum, tequila, triple sec, lemon, splash of cola. Looks like iced tea, hits like a brick.",
+    "sections": {
+      "Image": [
+        "![Long Island Iced Tea](images/long-island-iced-tea.png)"
+      ],
+      "Base Spirit": [
+        "Vodka"
+      ],
+      "Flavor Profile": [
+        "Sweet"
+      ],
+      "Strength": [
+        "Strong"
+      ],
+      "Difficulty": [
+        "Medium"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Collins"
+      ],
+      "Occasion": [
+        "Late-night",
+        "Summer/Outdoor"
+      ],
+      "Rating": [
+        "[3] Five-spirit party bomb; batch carefully (high ABV)"
+      ],
+      "Recipe": [
+        "{\"vodka_oz\": 0.5, \"gin_oz\": 0.5, \"white_rum_oz\": 0.5, \"tequila_oz\": 0.5, \"triple_sec_oz\": 0.5, \"lemon_oz\": 0.75, \"cola_oz\": 1.0, \"garnish\": \"lemon wedge\"}"
+      ],
+      "Description": [
+        "Equal parts vodka, gin, rum, tequila, triple sec, lemon, splash of cola. Looks like iced tea, hits like a brick."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "mai-tai",
+    "title": "Mai Tai - https://iba-world.com/cocktails/mai-tai/",
+    "intro": "Aged rum, fresh lime, orange cura\u00e7ao, orgeat almond syrup. Trader Vic's 1944 original \u2014 not a fruit punch.",
+    "sections": {
+      "Image": [
+        "![Mai Tai](images/mai-tai.png)"
+      ],
+      "Base Spirit": [
+        "Rum"
+      ],
+      "Flavor Profile": [
+        "Fruity"
+      ],
+      "Strength": [
+        "Strong"
+      ],
+      "Difficulty": [
+        "Medium"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Tiki/Mug"
+      ],
+      "Occasion": [
+        "Summer/Outdoor",
+        "Celebration"
+      ],
+      "Rating": [
+        "[4] Trader Vic's tiki original; batches well"
+      ],
+      "Recipe": [
+        "{\"aged_rum_oz\": 1.5, \"white_rum_oz\": 0.5, \"orgeat_oz\": 0.5, \"orange_curacao_oz\": 0.5, \"lime_oz\": 1.0, \"garnish\": \"mint, lime\"}"
+      ],
+      "Description": [
+        "Aged rum, fresh lime, orange cura\u00e7ao, orgeat almond syrup. Trader Vic's 1944 original \u2014 not a fruit punch."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "manhattan",
+    "title": "Manhattan - https://iba-world.com/cocktails/manhattan/",
+    "intro": "Rye whiskey, sweet vermouth, Angostura bitters, stirred over ice. Garnished with a brandied cherry.",
+    "sections": {
+      "Image": [
+        "![Manhattan](images/manhattan.png)"
+      ],
+      "Base Spirit": [
+        "Whiskey"
+      ],
+      "Flavor Profile": [
+        "Bitter"
+      ],
+      "Strength": [
+        "Strong"
+      ],
+      "Difficulty": [
+        "Medium"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Coupe"
+      ],
+      "Occasion": [
+        "Aperitif",
+        "Dinner",
+        "Winter/Warm"
+      ],
+      "Rating": [
+        "[5] Pre-Prohibition icon; widely batchable in pitcher"
+      ],
+      "Recipe": [
+        "{\"rye_oz\": 2.0, \"sweet_vermouth_oz\": 1.0, \"bitters_dashes\": 2, \"garnish\": \"cherry\"}"
+      ],
+      "Description": [
+        "Rye whiskey, sweet vermouth, Angostura bitters, stirred over ice. Garnished with a brandied cherry."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "margarita",
+    "title": "Margarita - https://iba-world.com/cocktails/margarita/",
+    "intro": "Tequila, triple sec, fresh lime juice, shaken with ice and served in a salt-rimmed glass. The world's most-ordered cocktail.",
+    "sections": {
+      "Image": [
+        "![Margarita](images/margarita.png)"
+      ],
+      "Base Spirit": [
+        "Tequila"
+      ],
+      "Flavor Profile": [
+        "Sour"
+      ],
+      "Strength": [
+        "Medium"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Coupe"
+      ],
+      "Occasion": [
+        "Summer/Outdoor",
+        "Celebration",
+        "Dinner"
+      ],
+      "Rating": [
+        "[5] Universal crowd-pleaser; pitcher-friendly"
+      ],
+      "Recipe": [
+        "{\"tequila_oz\": 2.0, \"triple_sec_oz\": 1.0, \"lime_oz\": 1.0, \"garnish\": \"salt rim, lime wheel\"}"
+      ],
+      "Description": [
+        "Tequila, triple sec, fresh lime juice, shaken with ice and served in a salt-rimmed glass. The world's most-ordered cocktail."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "mimosa",
+    "title": "Mimosa - https://www.diffordsguide.com/cocktails/recipe/780/mimosa",
+    "intro": "Equal parts champagne and fresh orange juice. The brunch standard since 1925.",
+    "sections": {
+      "Image": [
+        "![Mimosa](images/mimosa.png)"
+      ],
+      "Base Spirit": [
+        "Sparkling Wine"
+      ],
+      "Flavor Profile": [
+        "Fruity"
+      ],
+      "Strength": [
+        "Low"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Flute"
+      ],
+      "Occasion": [
+        "Brunch",
+        "Celebration"
+      ],
+      "Rating": [
+        "[4] Brunch default; trivially batchable"
+      ],
+      "Recipe": [
+        "{\"champagne_oz\": 3.0, \"orange_juice_oz\": 3.0, \"garnish\": \"orange wheel\"}"
+      ],
+      "Description": [
+        "Equal parts champagne and fresh orange juice. The brunch standard since 1925."
+      ],
+      "Source": [
+        "Difford's Guide"
+      ]
+    }
+  },
+  {
+    "slug": "mint-julep",
+    "title": "Mint Julep - https://iba-world.com/cocktails/mint-julep/",
+    "intro": "Bourbon, sugar, mint, crushed ice in a copper cup. Mint gently muddled, never bruised.",
+    "sections": {
+      "Image": [
+        "![Mint Julep](images/mint-julep.png)"
+      ],
+      "Base Spirit": [
+        "Whiskey"
+      ],
+      "Flavor Profile": [
+        "Refreshing"
+      ],
+      "Strength": [
+        "Strong"
+      ],
+      "Difficulty": [
+        "Medium"
+      ],
+      "Batch Friendly": [
+        "No"
+      ],
+      "Glassware": [
+        "Rocks"
+      ],
+      "Occasion": [
+        "Summer/Outdoor",
+        "Celebration"
+      ],
+      "Rating": [
+        "[4] Kentucky Derby tradition; serve in copper cups"
+      ],
+      "Recipe": [
+        "{\"bourbon_oz\": 2.5, \"sugar_oz\": 0.5, \"mint_leaves\": 8, \"garnish\": \"mint bouquet\"}"
+      ],
+      "Description": [
+        "Bourbon, sugar, mint, crushed ice in a copper cup. Mint gently muddled, never bruised."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "mojito",
+    "title": "Mojito - https://iba-world.com/cocktails/mojito/",
+    "intro": "White rum, lime juice, sugar, fresh mint leaves muddled, topped with soda water and ice. Classic Cuban highball.",
+    "sections": {
+      "Image": [
+        "![Mojito](images/mojito.png)"
+      ],
+      "Base Spirit": [
+        "Rum"
+      ],
+      "Flavor Profile": [
+        "Refreshing"
+      ],
+      "Strength": [
+        "Medium"
+      ],
+      "Difficulty": [
+        "Medium"
+      ],
+      "Batch Friendly": [
+        "No"
+      ],
+      "Glassware": [
+        "Highball"
+      ],
+      "Occasion": [
+        "Summer/Outdoor",
+        "Brunch"
+      ],
+      "Rating": [
+        "[4] Crowd favorite but muddling per-glass slows service"
+      ],
+      "Recipe": [
+        "{\"white_rum_oz\": 2.0, \"lime_oz\": 1.0, \"sugar_oz\": 0.5, \"mint_leaves\": 8, \"soda_oz\": 2.0, \"garnish\": \"mint sprig\"}"
+      ],
+      "Description": [
+        "White rum, lime juice, sugar, fresh mint leaves muddled, topped with soda water and ice. Classic Cuban highball."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "moscow-mule",
+    "title": "Moscow Mule - https://iba-world.com/cocktails/moscow-mule/",
+    "intro": "Vodka, ginger beer, fresh lime in a copper mug. Mid-century American invention to push vodka and ginger beer.",
+    "sections": {
+      "Image": [
+        "![Moscow Mule](images/moscow-mule.png)"
+      ],
+      "Base Spirit": [
+        "Vodka"
+      ],
+      "Flavor Profile": [
+        "Spicy"
+      ],
+      "Strength": [
+        "Medium"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Highball"
+      ],
+      "Occasion": [
+        "Summer/Outdoor",
+        "Brunch"
+      ],
+      "Rating": [
+        "[4] Copper mug staple; lime + ginger beer batch"
+      ],
+      "Recipe": [
+        "{\"vodka_oz\": 2.0, \"ginger_beer_oz\": 4.0, \"lime_oz\": 0.5, \"garnish\": \"lime wedge, mint\"}"
+      ],
+      "Description": [
+        "Vodka, ginger beer, fresh lime in a copper mug. Mid-century American invention to push vodka and ginger beer."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "naked-and-famous",
+    "title": "Naked and Famous - https://deathandcompany.com/naked-and-famous",
+    "intro": "Equal parts mezcal, yellow Chartreuse, Aperol, fresh lime. Joaqu\u00edn Sim\u00f3 at Death & Co, 2011.",
+    "sections": {
+      "Image": [
+        "![Naked and Famous](images/naked-and-famous.png)"
+      ],
+      "Base Spirit": [
+        "Mezcal"
+      ],
+      "Flavor Profile": [
+        "Smoky"
+      ],
+      "Strength": [
+        "Medium"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Coupe"
+      ],
+      "Occasion": [
+        "Aperitif",
+        "Late-night"
+      ],
+      "Rating": [
+        "[4] Equal-parts mezcal cousin to Last Word"
+      ],
+      "Recipe": [
+        "{\"mezcal_oz\": 0.75, \"yellow_chartreuse_oz\": 0.75, \"aperol_oz\": 0.75, \"lime_oz\": 0.75, \"garnish\": \"none\"}"
+      ],
+      "Description": [
+        "Equal parts mezcal, yellow Chartreuse, Aperol, fresh lime. Joaqu\u00edn Sim\u00f3 at Death & Co, 2011."
+      ],
+      "Source": [
+        "Death & Co"
+      ]
+    }
+  },
+  {
+    "slug": "negroni",
+    "title": "Negroni - https://iba-world.com/cocktails/negroni/",
+    "intro": "Equal parts gin, Campari, and sweet vermouth, stirred and served over ice with an orange peel. The most batch-friendly classic.",
+    "sections": {
+      "Image": [
+        "![Negroni](images/negroni.png)"
+      ],
+      "Base Spirit": [
+        "Gin"
+      ],
+      "Flavor Profile": [
+        "Bitter"
+      ],
+      "Strength": [
+        "Strong"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Rocks"
+      ],
+      "Occasion": [
+        "Aperitif",
+        "Summer/Outdoor"
+      ],
+      "Rating": [
+        "[5] Equal-parts perfection; trivial to batch (1:1:1)"
+      ],
+      "Recipe": [
+        "{\"gin_oz\": 1.0, \"campari_oz\": 1.0, \"sweet_vermouth_oz\": 1.0, \"garnish\": \"orange peel\"}"
+      ],
+      "Description": [
+        "Equal parts gin, Campari, and sweet vermouth, stirred and served over ice with an orange peel. The most batch-friendly classic."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "oaxaca-old-fashioned",
+    "title": "Oaxaca Old Fashioned - https://deathandcompany.com/oaxaca-old-fashioned",
+    "intro": "Reposado tequila, mezcal, agave nectar, Angostura bitters, flamed orange peel. Phil Ward at Death & Co, 2007.",
+    "sections": {
+      "Image": [
+        "![Oaxaca Old Fashioned](images/oaxaca-old-fashioned.png)"
+      ],
+      "Base Spirit": [
+        "Mezcal"
+      ],
+      "Flavor Profile": [
+        "Smoky"
+      ],
+      "Strength": [
+        "Strong"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Rocks"
+      ],
+      "Occasion": [
+        "Late-night",
+        "Winter/Warm"
+      ],
+      "Rating": [
+        "[5] Phil Ward modern classic; mezcal gateway drink"
+      ],
+      "Recipe": [
+        "{\"reposado_tequila_oz\": 1.5, \"mezcal_oz\": 0.5, \"agave_oz\": 0.25, \"bitters_dashes\": 2, \"garnish\": \"flamed orange peel\"}"
+      ],
+      "Description": [
+        "Reposado tequila, mezcal, agave nectar, Angostura bitters, flamed orange peel. Phil Ward at Death & Co, 2007."
+      ],
+      "Source": [
+        "Death & Co"
+      ]
+    }
+  },
+  {
+    "slug": "old-fashioned",
+    "title": "Old Fashioned - https://iba-world.com/cocktails/old-fashioned/",
+    "intro": "Sugar muddled with Angostura bitters and a splash of water, then bourbon stirred over ice. The benchmark spirit-forward cocktail.",
+    "sections": {
+      "Image": [
+        "![Old Fashioned](images/old-fashioned.png)"
+      ],
+      "Base Spirit": [
+        "Whiskey"
+      ],
+      "Flavor Profile": [
+        "Bitter"
+      ],
+      "Strength": [
+        "Strong"
+      ],
+      "Difficulty": [
+        "Medium"
+      ],
+      "Batch Friendly": [
+        "No"
+      ],
+      "Glassware": [
+        "Rocks"
+      ],
+      "Occasion": [
+        "Aperitif",
+        "Late-night",
+        "Winter/Warm"
+      ],
+      "Rating": [
+        "[5] Canonical bourbon classic; #1 worldwide bar pour for years"
+      ],
+      "Recipe": [
+        "{\"bourbon_oz\": 2.0, \"sugar_oz\": 0.25, \"bitters_dashes\": 2, \"garnish\": \"orange peel\"}"
+      ],
+      "Description": [
+        "Sugar muddled with Angostura bitters and a splash of water, then bourbon stirred over ice. The benchmark spirit-forward cocktail."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "paloma",
+    "title": "Paloma - https://iba-world.com/cocktails/paloma/",
+    "intro": "Tequila, grapefruit soda (Squirt or Jarritos), fresh lime, salt rim. Mexico's most-consumed tequila drink \u2014 not the margarita.",
+    "sections": {
+      "Image": [
+        "![Paloma](images/paloma.png)"
+      ],
+      "Base Spirit": [
+        "Tequila"
+      ],
+      "Flavor Profile": [
+        "Refreshing"
+      ],
+      "Strength": [
+        "Medium"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Highball"
+      ],
+      "Occasion": [
+        "Summer/Outdoor",
+        "Brunch"
+      ],
+      "Rating": [
+        "[5] Mexico's actual #1; easier than margarita"
+      ],
+      "Recipe": [
+        "{\"tequila_oz\": 2.0, \"grapefruit_soda_oz\": 4.0, \"lime_oz\": 0.5, \"garnish\": \"salt rim, lime wedge\"}"
+      ],
+      "Description": [
+        "Tequila, grapefruit soda (Squirt or Jarritos), fresh lime, salt rim. Mexico's most-consumed tequila drink \u2014 not the margarita."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "paper-plane",
+    "title": "Paper Plane - https://deathandcompany.com/paper-plane",
+    "intro": "Equal parts bourbon, Aperol, Amaro Nonino, fresh lemon. Sam Ross, 2008. Endlessly batchable.",
+    "sections": {
+      "Image": [
+        "![Paper Plane](images/paper-plane.png)"
+      ],
+      "Base Spirit": [
+        "Whiskey"
+      ],
+      "Flavor Profile": [
+        "Bitter"
+      ],
+      "Strength": [
+        "Medium"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Coupe"
+      ],
+      "Occasion": [
+        "Aperitif",
+        "Dinner"
+      ],
+      "Rating": [
+        "[5] Equal parts (1:1:1:1); ideal pitcher cocktail"
+      ],
+      "Recipe": [
+        "{\"bourbon_oz\": 0.75, \"aperol_oz\": 0.75, \"amaro_nonino_oz\": 0.75, \"lemon_oz\": 0.75, \"garnish\": \"none\"}"
+      ],
+      "Description": [
+        "Equal parts bourbon, Aperol, Amaro Nonino, fresh lemon. Sam Ross, 2008. Endlessly batchable."
+      ],
+      "Source": [
+        "Death & Co"
+      ]
+    }
+  },
+  {
+    "slug": "penicillin",
+    "title": "Penicillin - https://deathandcompany.com/penicillin",
+    "intro": "Blended scotch, fresh lemon, honey-ginger syrup, with an Islay scotch float for smoke. Sam Ross at Milk & Honey, 2005.",
+    "sections": {
+      "Image": [
+        "![Penicillin](images/penicillin.png)"
+      ],
+      "Base Spirit": [
+        "Whiskey"
+      ],
+      "Flavor Profile": [
+        "Smoky"
+      ],
+      "Strength": [
+        "Strong"
+      ],
+      "Difficulty": [
+        "Medium"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Rocks"
+      ],
+      "Occasion": [
+        "Late-night",
+        "Winter/Warm"
+      ],
+      "Rating": [
+        "[5] Sam Ross modern icon; complex but batchable"
+      ],
+      "Recipe": [
+        "{\"blended_scotch_oz\": 2.0, \"lemon_oz\": 0.75, \"honey_ginger_oz\": 0.75, \"islay_scotch_oz\": 0.25, \"garnish\": \"candied ginger\"}"
+      ],
+      "Description": [
+        "Blended scotch, fresh lemon, honey-ginger syrup, with an Islay scotch float for smoke. Sam Ross at Milk & Honey, 2005."
+      ],
+      "Source": [
+        "Death & Co"
+      ]
+    }
+  },
+  {
+    "slug": "pina-colada",
+    "title": "Pi\u00f1a Colada - https://iba-world.com/cocktails/pina-colada/",
+    "intro": "White rum, coconut cream, fresh pineapple juice, blended with ice. Puerto Rico's national drink.",
+    "sections": {
+      "Image": [
+        "![Pi\u00f1a Colada](images/pina-colada.png)"
+      ],
+      "Base Spirit": [
+        "Rum"
+      ],
+      "Flavor Profile": [
+        "Sweet"
+      ],
+      "Strength": [
+        "Medium"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Tiki/Mug"
+      ],
+      "Occasion": [
+        "Summer/Outdoor",
+        "Brunch"
+      ],
+      "Rating": [
+        "[4] Blender batch for 20 in two pitchers"
+      ],
+      "Recipe": [
+        "{\"white_rum_oz\": 2.0, \"coconut_cream_oz\": 1.0, \"pineapple_oz\": 3.0, \"garnish\": \"pineapple wedge, cherry\"}"
+      ],
+      "Description": [
+        "White rum, coconut cream, fresh pineapple juice, blended with ice. Puerto Rico's national drink."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "pisco-sour",
+    "title": "Pisco Sour - https://iba-world.com/cocktails/pisco-sour/",
+    "intro": "Pisco, fresh lime, simple syrup, egg white, dry-shaken then wet-shaken. Angostura dots on the foam.",
+    "sections": {
+      "Image": [
+        "![Pisco Sour](images/pisco-sour.png)"
+      ],
+      "Base Spirit": [
+        "Brandy"
+      ],
+      "Flavor Profile": [
+        "Sour"
+      ],
+      "Strength": [
+        "Medium"
+      ],
+      "Difficulty": [
+        "Medium"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Coupe"
+      ],
+      "Occasion": [
+        "Aperitif"
+      ],
+      "Rating": [
+        "[4] Peruvian standard; egg white foam essential"
+      ],
+      "Recipe": [
+        "{\"pisco_oz\": 2.0, \"lime_oz\": 1.0, \"sugar_oz\": 0.75, \"egg_white\": 1.0, \"bitters_dashes\": 3, \"garnish\": \"Angostura dots\"}"
+      ],
+      "Description": [
+        "Pisco, fresh lime, simple syrup, egg white, dry-shaken then wet-shaken. Angostura dots on the foam."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "sangria",
+    "title": "Red Sangria - https://www.diffordsguide.com/cocktails/recipe/2348/sangria",
+    "intro": "Red wine, brandy, orange liqueur, citrus juice, chopped fruit. Mature 4+ hours. Scales infinitely.",
+    "sections": {
+      "Image": [
+        "![Red Sangria](images/sangria.png)"
+      ],
+      "Base Spirit": [
+        "Brandy"
+      ],
+      "Flavor Profile": [
+        "Fruity"
+      ],
+      "Strength": [
+        "Low"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Wine"
+      ],
+      "Occasion": [
+        "Summer/Outdoor",
+        "Celebration",
+        "Brunch"
+      ],
+      "Rating": [
+        "[5] Spanish standard; the ultimate party batch"
+      ],
+      "Recipe": [
+        "{\"red_wine_oz\": 5.0, \"brandy_oz\": 1.0, \"orange_liqueur_oz\": 0.5, \"orange_juice_oz\": 1.0, \"fruit\": \"orange, apple, lemon\", \"garnish\": \"fruit\"}"
+      ],
+      "Description": [
+        "Red wine, brandy, orange liqueur, citrus juice, chopped fruit. Mature 4+ hours. Scales infinitely."
+      ],
+      "Source": [
+        "Difford's Guide"
+      ]
+    }
+  },
+  {
+    "slug": "sazerac",
+    "title": "Sazerac - https://iba-world.com/cocktails/sazerac/",
+    "intro": "Rye whiskey, sugar, Peychaud's bitters, served in an absinthe-rinsed glass. New Orleans' official cocktail.",
+    "sections": {
+      "Image": [
+        "![Sazerac](images/sazerac.png)"
+      ],
+      "Base Spirit": [
+        "Whiskey"
+      ],
+      "Flavor Profile": [
+        "Bitter"
+      ],
+      "Strength": [
+        "Strong"
+      ],
+      "Difficulty": [
+        "Hard"
+      ],
+      "Batch Friendly": [
+        "No"
+      ],
+      "Glassware": [
+        "Rocks"
+      ],
+      "Occasion": [
+        "Aperitif",
+        "Late-night"
+      ],
+      "Rating": [
+        "[4] New Orleans original; absinthe rinse technique"
+      ],
+      "Recipe": [
+        "{\"rye_oz\": 2.0, \"sugar_oz\": 0.25, \"peychauds_dashes\": 3, \"absinthe_rinse\": true, \"garnish\": \"lemon peel\"}"
+      ],
+      "Description": [
+        "Rye whiskey, sugar, Peychaud's bitters, served in an absinthe-rinsed glass. New Orleans' official cocktail."
+      ],
+      "Source": [
+        "Schumann's American Bar"
+      ]
+    }
+  },
+  {
+    "slug": "seedlip-garden-tonic",
+    "title": "Seedlip Garden & Tonic - https://www.diffordsguide.com/cocktails/recipe/6924/seedlip-garden-108-tonic",
+    "intro": "Seedlip Garden 108 (non-alcoholic distilled spirit) topped with tonic water. The non-alc G&T equivalent.",
+    "sections": {
+      "Image": [
+        "![Seedlip Garden & Tonic](images/seedlip-garden-tonic.png)"
+      ],
+      "Base Spirit": [
+        "None"
+      ],
+      "Flavor Profile": [
+        "Herbal"
+      ],
+      "Strength": [
+        "Low"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Highball"
+      ],
+      "Occasion": [
+        "Aperitif",
+        "Brunch"
+      ],
+      "Rating": [
+        "[4] Modern non-alc; equivalent to a G&T"
+      ],
+      "Recipe": [
+        "{\"seedlip_garden_oz\": 2.0, \"tonic_oz\": 4.0, \"garnish\": \"sugar snap pea, mint\"}"
+      ],
+      "Description": [
+        "Seedlip Garden 108 (non-alcoholic distilled spirit) topped with tonic water. The non-alc G&T equivalent."
+      ],
+      "Source": [
+        "Difford's Guide"
+      ]
+    }
+  },
+  {
+    "slug": "shirley-temple",
+    "title": "Shirley Temple - https://www.diffordsguide.com/cocktails/recipe/2522/shirley-temple",
+    "intro": "Ginger ale, grenadine, lime squeeze, maraschino cherry. Named for the child star, 1930s Hollywood.",
+    "sections": {
+      "Image": [
+        "![Shirley Temple](images/shirley-temple.png)"
+      ],
+      "Base Spirit": [
+        "None"
+      ],
+      "Flavor Profile": [
+        "Sweet"
+      ],
+      "Strength": [
+        "Low"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Highball"
+      ],
+      "Occasion": [
+        "Brunch",
+        "Summer/Outdoor"
+      ],
+      "Rating": [
+        "[3] Family-friendly; works for any age"
+      ],
+      "Recipe": [
+        "{\"ginger_ale_oz\": 5.0, \"grenadine_oz\": 0.5, \"lime_oz\": 0.25, \"garnish\": \"maraschino cherry, orange slice\"}"
+      ],
+      "Description": [
+        "Ginger ale, grenadine, lime squeeze, maraschino cherry. Named for the child star, 1930s Hollywood."
+      ],
+      "Source": [
+        "Difford's Guide"
+      ]
+    }
+  },
+  {
+    "slug": "tom-collins",
+    "title": "Tom Collins - https://iba-world.com/cocktails/tom-collins/",
+    "intro": "Gin, lemon, sugar, soda, served tall over ice. The 1870s template that named the Collins glass.",
+    "sections": {
+      "Image": [
+        "![Tom Collins](images/tom-collins.png)"
+      ],
+      "Base Spirit": [
+        "Gin"
+      ],
+      "Flavor Profile": [
+        "Refreshing"
+      ],
+      "Strength": [
+        "Medium"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Collins"
+      ],
+      "Occasion": [
+        "Summer/Outdoor",
+        "Brunch"
+      ],
+      "Rating": [
+        "[4] Classic tall drink; named the glass"
+      ],
+      "Recipe": [
+        "{\"gin_oz\": 2.0, \"lemon_oz\": 1.0, \"sugar_oz\": 0.75, \"soda_oz\": 4.0, \"garnish\": \"lemon wheel, cherry\"}"
+      ],
+      "Description": [
+        "Gin, lemon, sugar, soda, served tall over ice. The 1870s template that named the Collins glass."
+      ],
+      "Source": [
+        "Schumann's American Bar"
+      ]
+    }
+  },
+  {
+    "slug": "vesper",
+    "title": "Vesper - https://iba-world.com/cocktails/vesper/",
+    "intro": "Gin, vodka, Lillet Blanc, shaken and served in a deep coupe. Ian Fleming's Casino Royale spec.",
+    "sections": {
+      "Image": [
+        "![Vesper](images/vesper.png)"
+      ],
+      "Base Spirit": [
+        "Gin"
+      ],
+      "Flavor Profile": [
+        "Bitter"
+      ],
+      "Strength": [
+        "Strong"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Coupe"
+      ],
+      "Occasion": [
+        "Aperitif",
+        "Celebration"
+      ],
+      "Rating": [
+        "[4] Bond's martini variant; shaken not stirred"
+      ],
+      "Recipe": [
+        "{\"gin_oz\": 3.0, \"vodka_oz\": 1.0, \"lillet_blanc_oz\": 0.5, \"garnish\": \"lemon peel\"}"
+      ],
+      "Description": [
+        "Gin, vodka, Lillet Blanc, shaken and served in a deep coupe. Ian Fleming's Casino Royale spec."
+      ],
+      "Source": [
+        "Schumann's American Bar"
+      ]
+    }
+  },
+  {
+    "slug": "virgin-mojito",
+    "title": "Virgin Mojito - https://www.diffordsguide.com/cocktails/recipe/3742/virgin-mojito",
+    "intro": "Lime juice, sugar, fresh mint muddled, topped with soda water and crushed ice. Alcohol-free version of the Cuban classic.",
+    "sections": {
+      "Image": [
+        "![Virgin Mojito](images/virgin-mojito.png)"
+      ],
+      "Base Spirit": [
+        "None"
+      ],
+      "Flavor Profile": [
+        "Refreshing"
+      ],
+      "Strength": [
+        "Low"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Highball"
+      ],
+      "Occasion": [
+        "Brunch",
+        "Summer/Outdoor"
+      ],
+      "Rating": [
+        "[4] Alcohol-free mojito; serve same as regular"
+      ],
+      "Recipe": [
+        "{\"lime_oz\": 1.0, \"sugar_oz\": 0.5, \"mint_leaves\": 8, \"soda_oz\": 5.0, \"garnish\": \"mint sprig, lime wedge\"}"
+      ],
+      "Description": [
+        "Lime juice, sugar, fresh mint muddled, topped with soda water and crushed ice. Alcohol-free version of the Cuban classic."
+      ],
+      "Source": [
+        "Difford's Guide"
+      ]
+    }
+  },
+  {
+    "slug": "whiskey-sour",
+    "title": "Whiskey Sour - https://iba-world.com/cocktails/whiskey-sour/",
+    "intro": "Bourbon, fresh lemon juice, simple syrup, optional egg white. Shaken hard, strained over fresh ice.",
+    "sections": {
+      "Image": [
+        "![Whiskey Sour](images/whiskey-sour.png)"
+      ],
+      "Base Spirit": [
+        "Whiskey"
+      ],
+      "Flavor Profile": [
+        "Sour"
+      ],
+      "Strength": [
+        "Medium"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Rocks"
+      ],
+      "Occasion": [
+        "Aperitif",
+        "Brunch"
+      ],
+      "Rating": [
+        "[4] Approachable for non-whiskey drinkers"
+      ],
+      "Recipe": [
+        "{\"bourbon_oz\": 2.0, \"lemon_oz\": 1.0, \"sugar_oz\": 0.75, \"egg_white\": 0.5, \"garnish\": \"cherry, orange peel\"}"
+      ],
+      "Description": [
+        "Bourbon, fresh lemon juice, simple syrup, optional egg white. Shaken hard, strained over fresh ice."
+      ],
+      "Source": [
+        "IBA Official Cocktails List"
+      ]
+    }
+  },
+  {
+    "slug": "white-sangria",
+    "title": "White Sangria - https://www.diffordsguide.com/cocktails/recipe/3001/white-sangria",
+    "intro": "White wine, peach schnapps, orange liqueur, stone fruit and citrus. Lighter than red sangria, brunch-friendly.",
+    "sections": {
+      "Image": [
+        "![White Sangria](images/white-sangria.png)"
+      ],
+      "Base Spirit": [
+        "Brandy"
+      ],
+      "Flavor Profile": [
+        "Fruity"
+      ],
+      "Strength": [
+        "Low"
+      ],
+      "Difficulty": [
+        "Easy"
+      ],
+      "Batch Friendly": [
+        "Yes"
+      ],
+      "Glassware": [
+        "Wine"
+      ],
+      "Occasion": [
+        "Summer/Outdoor",
+        "Brunch"
+      ],
+      "Rating": [
+        "[4] Lighter sister to red; peach and citrus forward"
+      ],
+      "Recipe": [
+        "{\"white_wine_oz\": 5.0, \"peach_schnapps_oz\": 1.0, \"orange_liqueur_oz\": 0.5, \"fruit\": \"peach, lemon, orange\", \"soda_oz\": 1.0, \"garnish\": \"fruit\"}"
+      ],
+      "Description": [
+        "White wine, peach schnapps, orange liqueur, stone fruit and citrus. Lighter than red sangria, brunch-friendly."
+      ],
+      "Source": [
+        "Difford's Guide"
+      ]
+    }
+  }
+]

@@ -1,0 +1,84 @@
+# Multi-plan source map — which PDFs contain which plans.
+#
+# For single-plan sources, omit the `plans` list (one entry per PDF).
+# For multi-plan sources, list each plan with slug + plan_name (matching the
+# label as it appears in the source PDF — column header, table row, or section).
+#
+# extract_facets.py uses --target-plan to scope the LLM to a single plan
+# within multi-plan sources.
+
+vertical_label: "UAE health insurance"
+
+sources:
+  # Single-plan TOBs — already done in batch A
+  - pdf: FIDELITY_TOB_NEXTCARE_RN2_0pct.pdf
+    docling_md: FIDELITY_TOB_NEXTCARE_RN2_0pct.md
+    plans:
+      - slug: fidelity-united-health-first-plan-d-0-copay__fidelity-nextcare-rn2-0pct
+        plan_name: null  # single-plan source
+
+  - pdf: RAK_TOB_NAS_SRN_10pct.pdf
+    docling_md: RAK_TOB_NAS_SRN_10pct.md
+    plans:
+      - slug: rak-family-care-plan-super-restricted__srn-10pct
+        plan_name: null
+
+  - pdf: TAKAFUL_TOB_NAS_SRN_20pct.pdf
+    docling_md: TAKAFUL_TOB_NAS_SRN_20pct.md
+    plans:
+      - slug: takaful-emarat-plan-4-opal-dxb-20__takaful-srn-20pct
+        plan_name: null
+
+  # Multi-plan source — Orient basic-tier plans (5 products in one premium summary)
+  - pdf: Basic_Medical_DXB_NorthernEmirates_Premium_Apr2026.pdf
+    docling_md: Basic_Medical_DXB_NorthernEmirates_Premium_Apr2026.md
+    plans:
+      - slug: orient-dmed-lsb-plan__basic-apr2026
+        plan_name: "DMED-LSB"
+      - slug: orient-emed-plan-low-salary-band__basic-apr2026
+        plan_name: "EMED"
+      - slug: orient-imed-plan-investors-partners__basic-apr2026
+        plan_name: "IMED"
+      - slug: orient-nemed-basic-plan__basic-apr2026
+        plan_name: "NEMED-Basic"
+      - slug: orient-nemed-lite-plan__basic-apr2026
+        plan_name: "NEMED-Lite"
+
+  # Multi-plan source — Orient Family Care Plan rate charts (7 plans × 2 emirates = 14 entries)
+  # Note: rate charts contain ONLY premium grids — most benefit facets will be "Not specified".
+  # Sparse output is expected; this fills Plan Tier, Premium Band, Age Eligibility, Territorial Scope.
+  - pdf: ORIENT_FCP_DXB_RATE_CHART.pdf
+    docling_md: ORIENT_FCP_DXB_RATE_CHART.md
+    plans:
+      - slug: orient-family-care-plan-gold__fcp-dxb
+        plan_name: "Gold"
+      - slug: orient-family-care-plan-silver-premium__fcp-dxb
+        plan_name: "Silver Premium"
+      - slug: orient-family-care-plan-silver-classic__fcp-dxb
+        plan_name: "Silver Classic"
+      - slug: orient-family-care-plan-green__fcp-dxb
+        plan_name: "Green"
+      - slug: orient-family-care-plan-emerald__fcp-dxb
+        plan_name: "Emerald"
+      - slug: orient-family-care-plan-pearl__fcp-dxb
+        plan_name: "Pearl"
+      - slug: orient-family-care-plan-silk-road__fcp-dxb
+        plan_name: "Silk Road"
+
+  - pdf: ORIENT_FCP_AUH_RATE_CHART.pdf
+    docling_md: ORIENT_FCP_AUH_RATE_CHART.md
+    plans:
+      - slug: orient-family-care-plan-gold__fcp-auh
+        plan_name: "Gold"
+      - slug: orient-family-care-plan-silver-premium__fcp-auh
+        plan_name: "Silver Premium"
+      - slug: orient-family-care-plan-silver-classic__fcp-auh
+        plan_name: "Silver Classic"
+      - slug: orient-family-care-plan-green__fcp-auh
+        plan_name: "Green"
+      - slug: orient-family-care-plan-emerald__fcp-auh
+        plan_name: "Emerald"
+      - slug: orient-family-care-plan-pearl__fcp-auh
+        plan_name: "Pearl"
+      - slug: orient-family-care-plan-silk-road__fcp-auh
+        plan_name: "Silk Road"

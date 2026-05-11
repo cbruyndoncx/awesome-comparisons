@@ -190,7 +190,7 @@
                                             {{isMarkdownExpanded(itemIndex, column.index) ? 'Show less' : 'Show more'}}
                                         </button>
                                         <ng-template #markdownHtml>
-                                            <div [innerHtml]="item[column.index]?.html | sanitizeHtml"></div>
+                                            <div [innerHtml]="(item[column.index]?.tableHtml || item[column.index]?.html) | sanitizeHtml"></div>
                                         </ng-template>
                                     </td>
                                     <td *ngIf="column.type === 'RATING'">

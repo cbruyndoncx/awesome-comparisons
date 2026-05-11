@@ -1,0 +1,49 @@
+criteria:
+  - SpiritAndFlavor:
+      name: Spirit & Flavor
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      description: 'Base spirit and flavor profile filters'
+      placeholder: ''
+      order: '10'
+      andSearch: false
+      rangeSearch: false
+      defaultExpanded: true
+      children:
+        - BaseSpirit
+        - FlavorProfile
+        - Strength
+  - Serving:
+      name: Serving
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      description: 'Glassware, occasion, and difficulty'
+      placeholder: ''
+      order: '20'
+      andSearch: false
+      rangeSearch: false
+      defaultExpanded: true
+      children:
+        - Glassware
+        - Occasion
+        - Difficulty
+        - BatchFriendly
+  - Recipe:
+      name: Recipe & Rating
+      type: MARKDOWN
+      search: false
+      table: false
+      detail: false
+      description: 'Rating, recipe, and source filters'
+      placeholder: ''
+      order: '30'
+      andSearch: false
+      rangeSearch: false
+      defaultExpanded: true
+      children:
+        - Rating
+        - Source

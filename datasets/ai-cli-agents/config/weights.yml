@@ -1,0 +1,27 @@
+# Default per-criterion weights for ai-cli-agents dataset (taxonomy v2)
+# Sum target: ~1.0. Source File and Description must be 0.0.
+weights:
+  Vendor: 0.02
+  License: 0.03
+  Open Source: 0.10
+  Interface Type: 0.05
+  Platform Support: 0.08
+  Model Providers: 0.08
+  Authentication: 0.04
+  MCP Support: 0.12
+  Skills: 0.10
+  Commands: 0.05
+  Hooks: 0.05
+  Subagents: 0.10
+  Other: 0.03
+  Overall: 0.15
+  Source File: 0.0
+  Source: 0.0
+  Description: 0.0
+
+generated_by: operator
+operator_review: complete
+notes:
+  - Taxonomy v2 introduces Vendor, Open Source, Other (was Extensibility Other), Source File (was Source), Overall (was Rating)
+  - Heaviest weights on MCP Support and Overall rating; Open Source carries 0.10 to support OSS-first profiles
+  - Source File and Description are audit-only with 0.0 weight

@@ -392,6 +392,16 @@ table {
     overflow: hidden;
 }
 
+.markdown-cell__content img {
+    max-width: 120px;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
 .markdown-cell__content--clamped {
     display: -webkit-box;
     -webkit-line-clamp: 3;

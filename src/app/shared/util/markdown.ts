@@ -19,6 +19,12 @@ export function renderMarkdown(markdown: string | null | undefined): string {
         return `<h${level}>${content.trim()}</h${level}>`;
     });
 
+    // Images ![alt](url) — must run before links so '![' isn't consumed as plain text
+    html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_m, alt, url) => `<img src="${url}" alt="${alt}">`);
+
+    // Links [text](url)
+    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_m, text, url) => `<a href="${url}">${text}</a>`);
+
     // Bold **text**
     html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 

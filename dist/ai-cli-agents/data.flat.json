@@ -1,0 +1,491 @@
+[
+  {
+    "slug": "claude-code",
+    "title": "Claude Code - https://code.claude.com/docs/en/overview",
+    "intro": "Claude Code is Anthropic's official agentic tool designed to integrate seamlessly with terminal and IDE environments. It acts as an autonomous coding partner capable of reading codebases, editing files, and executing shell commands.",
+    "sections": {
+      "Vendor": [
+        "Anthropic"
+      ],
+      "License": [
+        "Proprietary"
+      ],
+      "Open Source": [
+        "No"
+      ],
+      "Interface Type": [
+        "CLI",
+        "VS Code Extension",
+        "JetBrains Plugin",
+        "Desktop App",
+        "Web",
+        "Slack",
+        "GitHub Actions",
+        "GitLab CI/CD"
+      ],
+      "Platform Support": [
+        "MacOS",
+        "Linux",
+        "WSL",
+        "Windows"
+      ],
+      "Model Providers": [
+        "Anthropic",
+        "Amazon Bedrock",
+        "Microsoft Foundry",
+        "Google Vertex AI"
+      ],
+      "Authentication": [
+        "Personal Claude Subscription",
+        "Anthropic Console",
+        "Cloud Provider Credentials"
+      ],
+      "MCP Support": [
+        "Yes"
+      ],
+      "Skills": [
+        "Yes"
+      ],
+      "Commands": [
+        "Yes"
+      ],
+      "Hooks": [
+        "Yes"
+      ],
+      "Subagents": [
+        "Yes"
+      ],
+      "Other": [
+        "CLAUDE.md",
+        "Routines",
+        "Auto Memory"
+      ],
+      "Source File": [
+        "claude-code-cli.md"
+      ],
+      "Description": [
+        "This entry serves as the reference implementation for Anthropic's official agentic coding tool featuring a robust permission model with per-tool prompts. The system utilizes a 1M token context window through the Opus 4.7 model to handle massive codebases with high reasoning accuracy. Multi-surface continuity ensures the same engine powers the terminal, desktop, and web environments for a seamless development experience. Security is maintained via project-scoped allowlists that restrict agent actions to specific directories and tools."
+      ],
+      "Overall": [
+        "Ecosystem: [5]",
+        "Integration: [4]",
+        "Openness: [2]"
+      ],
+      "Source": [
+        "claude-code.md"
+      ]
+    }
+  },
+  {
+    "slug": "codex-cli",
+    "title": "Codex CLI - https://github.com/openai/codex",
+    "intro": "Codex CLI is a global terminal utility designed for rapid integration with existing ChatGPT service plans. It provides a direct command-line interface for OpenAI's models to facilitate terminal-based coding workflows.",
+    "sections": {
+      "Vendor": [
+        "OpenAI"
+      ],
+      "License": [
+        "Apache-2.0"
+      ],
+      "Open Source": [
+        "Yes"
+      ],
+      "Interface Type": [
+        "CLI"
+      ],
+      "Platform Support": [
+        "MacOS",
+        "Linux"
+      ],
+      "Model Providers": [
+        "OpenAI"
+      ],
+      "Authentication": [
+        "OAuth",
+        "API Key"
+      ],
+      "MCP Support": [
+        "Yes"
+      ],
+      "Skills": [
+        "Yes"
+      ],
+      "Commands": [
+        "Yes"
+      ],
+      "Hooks": [
+        "Yes"
+      ],
+      "Subagents": [
+        "Yes"
+      ],
+      "Other": [
+        "None"
+      ],
+      "Source File": [
+        "codex-cli.md"
+      ],
+      "Description": [
+        "Users perform installation globally via standard package managers using architecture-specific binaries for Apple Silicon or Linux. After extraction, the binary is typically renamed to a simple command for streamlined terminal access. The tool is optimized for users on Plus, Pro, or Enterprise plans to leverage their existing subscriptions via OAuth."
+      ],
+      "Overall": [
+        "Ease of Use: [3]",
+        "Features: [2]"
+      ],
+      "Source": [
+        "codex-cli.md"
+      ]
+    }
+  },
+  {
+    "slug": "gemini-cli",
+    "title": "Gemini CLI - https://github.com/google-gemini/gemini-cli",
+    "intro": "Gemini CLI is a terminal-first agent providing an open-source path to interact directly with Google\u2019s Gemini model family. It is optimized for developers requiring high-reasoning capabilities and extensive automation within the command line.",
+    "sections": {
+      "Vendor": [
+        "Google"
+      ],
+      "License": [
+        "Apache-2.0"
+      ],
+      "Open Source": [
+        "Yes"
+      ],
+      "Interface Type": [
+        "CLI",
+        "GitHub Action",
+        "VS Code Companion"
+      ],
+      "Platform Support": [
+        "MacOS",
+        "Linux"
+      ],
+      "Model Providers": [
+        "Google"
+      ],
+      "Authentication": [
+        "OAuth",
+        "API Key",
+        "Vertex AI"
+      ],
+      "MCP Support": [
+        "Yes"
+      ],
+      "Skills": [
+        "Yes"
+      ],
+      "Commands": [
+        "Yes"
+      ],
+      "Hooks": [
+        "No"
+      ],
+      "Subagents": [
+        "No"
+      ],
+      "Other": [
+        "GEMINI.md",
+        "Checkpointing",
+        "Token Caching"
+      ],
+      "Source File": [
+        "gemini-cli.md"
+      ],
+      "Description": [
+        "The tool offers a generous free tier for personal Google accounts and supports advanced reasoning via Gemini 3 models. It includes grounding with Google Search for real-time information retrieval during coding tasks. Integration extends to GitHub Actions, enabling automated pull request reviews and issue triage directly in the repository. Gemini CLI also features multimodal capabilities, allowing it to generate apps from PDFs or sketches. Users can also leverage token caching to optimize their usage during long sessions."
+      ],
+      "Overall": [
+        "Value: [5]",
+        "Integration: [4]",
+        "Features: [4]"
+      ],
+      "Source": [
+        "gemini-cli.md"
+      ]
+    }
+  },
+  {
+    "slug": "goose",
+    "title": "Goose - https://github.com/block/goose",
+    "intro": "Goose is a general-purpose AI agent recently transitioned to the Agentic AI Foundation under the Linux Foundation's governance. It serves as a high-performance assistant for code, research, and general automation tasks.",
+    "sections": {
+      "Vendor": [
+        "Agentic AI Foundation"
+      ],
+      "License": [
+        "Apache-2.0"
+      ],
+      "Open Source": [
+        "Yes"
+      ],
+      "Interface Type": [
+        "Desktop App",
+        "CLI",
+        "API"
+      ],
+      "Platform Support": [
+        "MacOS",
+        "Linux",
+        "Windows"
+      ],
+      "Model Providers": [
+        "Anthropic",
+        "OpenAI",
+        "Google",
+        "Ollama",
+        "OpenRouter",
+        "Azure",
+        "Bedrock"
+      ],
+      "Authentication": [
+        "API Key",
+        "Subscription"
+      ],
+      "MCP Support": [
+        "Yes"
+      ],
+      "Skills": [
+        "Yes"
+      ],
+      "Commands": [
+        "Yes"
+      ],
+      "Hooks": [
+        "No"
+      ],
+      "Subagents": [
+        "Yes"
+      ],
+      "Other": [
+        "None"
+      ],
+      "Source File": [
+        "goose-cli.md"
+      ],
+      "Description": [
+        "Goose is built using Rust to ensure high performance and portability across multiple operating systems. The project recently migrated from Block to the Linux Foundation\u2019s Agentic AI Foundation to foster a more open governance model. It supports more than 15 model providers, allowing users to leverage their existing subscriptions through various authentication methods. The tool is extensible via the Model Context Protocol, providing access to dozens of pre-configured extensions."
+      ],
+      "Overall": [
+        "Model Support: [5]",
+        "Portability: [4]",
+        "Extensibility: [3]"
+      ],
+      "Source": [
+        "goose.md"
+      ]
+    }
+  },
+  {
+    "slug": "hermes-agent",
+    "title": "Hermes Agent - https://hermes-agent.nousresearch.com/docs",
+    "intro": "Hermes Agent is a self-improving AI assistant featuring a built-in learning loop that generates new skills from user interaction. It maintains a persistent, deepening model of the user to provide contextually aware assistance across multiple sessions.",
+    "sections": {
+      "Vendor": [
+        "Nous Research"
+      ],
+      "License": [
+        "MIT"
+      ],
+      "Open Source": [
+        "Yes"
+      ],
+      "Interface Type": [
+        "CLI",
+        "TUI",
+        "Messaging Gateway",
+        "Telegram",
+        "Discord",
+        "Slack",
+        "WhatsApp",
+        "Signal",
+        "Email"
+      ],
+      "Platform Support": [
+        "MacOS",
+        "Linux",
+        "WSL2",
+        "Android"
+      ],
+      "Model Providers": [
+        "Multi-provider"
+      ],
+      "Authentication": [
+        "API Key"
+      ],
+      "MCP Support": [
+        "Yes"
+      ],
+      "Skills": [
+        "Yes"
+      ],
+      "Commands": [
+        "Yes"
+      ],
+      "Hooks": [
+        "No"
+      ],
+      "Subagents": [
+        "No"
+      ],
+      "Other": [
+        "Soul.md",
+        "Cron Scheduling",
+        "Skills Hub"
+      ],
+      "Source File": [
+        "hermes-agent.md"
+      ],
+      "Description": [
+        "The messaging gateway allows users to interact with the agent via mobile platforms like Telegram or Signal while the core process runs on a remote server. It features a unique self-improvement loop where it searches past conversations to build persistent procedural memory. For users transitioning from other ecosystems, the tool provides an automated migration path from OpenClaw to import existing memories and settings. The architecture is lightweight enough to run on a $5 VPS but scales to large GPU clusters for complex reasoning tasks. It further includes built-in cron scheduling to manage automated tasks across its supported communication channels."
+      ],
+      "Overall": [
+        "Innovation: [5]",
+        "Accessibility: [5]",
+        "Flexibility: [4]"
+      ],
+      "Source": [
+        "hermes-agent.md"
+      ]
+    }
+  },
+  {
+    "slug": "openclaw",
+    "title": "OpenClaw - https://openclaw.ai",
+    "intro": "OpenClaw is a personal AI assistant centered on local-first operations and multi-channel communication flexibility. It functions as a robust control plane that manages assistant experiences across disparate messaging platforms and hardware devices.",
+    "sections": {
+      "Vendor": [
+        "OpenClaw"
+      ],
+      "License": [
+        "Not Disclosed"
+      ],
+      "Open Source": [
+        "Yes"
+      ],
+      "Interface Type": [
+        "Gateway",
+        "CLI",
+        "Messaging (20+ Channels)",
+        "Voice",
+        "Canvas",
+        "Desktop App",
+        "iOS Node",
+        "Android Node"
+      ],
+      "Platform Support": [
+        "MacOS",
+        "Linux",
+        "Windows",
+        "iOS",
+        "Android"
+      ],
+      "Model Providers": [
+        "Multi-provider"
+      ],
+      "Authentication": [
+        "OAuth",
+        "API Key"
+      ],
+      "MCP Support": [
+        "No"
+      ],
+      "Skills": [
+        "Yes"
+      ],
+      "Commands": [
+        "Yes"
+      ],
+      "Hooks": [
+        "No"
+      ],
+      "Subagents": [
+        "Yes"
+      ],
+      "Other": [
+        "AGENTS.md",
+        "SOUL.md",
+        "TOOLS.md",
+        "Cron",
+        "Webhooks"
+      ],
+      "Source File": [
+        "openclaw.md"
+      ],
+      "Description": [
+        "OpenClaw utilizes a local-first gateway as a single control plane for managing sessions, tools, and events. Originally inspired by the \"Molty\" space lobster project, it supports over 20 messaging channels including WhatsApp, Telegram, and iMessage. The security model defaults to DM pairing, requiring unknown senders to provide a pairing code before the bot processes their input. It also features a live Canvas for visual work and supports companion apps for macOS and mobile operating systems. The system is designed to be highly versatile, offering voice wake capabilities and multi-agent routing for isolated tasks."
+      ],
+      "Overall": [
+        "Versatility: [5]",
+        "Security: [4]",
+        "Multi-device Support: [4]"
+      ],
+      "Source": [
+        "openclaw.md"
+      ]
+    }
+  },
+  {
+    "slug": "opencode",
+    "title": "OpenCode - https://opencode.ai",
+    "intro": "OpenCode is a provider-agnostic, open-source alternative to Claude Code with a heavy focus on the terminal user interface (TUI). It is developed by the creators of terminal.shop with the intent to maximize developer productivity within terminal environments.",
+    "sections": {
+      "Vendor": [
+        "Anomaly Co"
+      ],
+      "License": [
+        "Not Disclosed"
+      ],
+      "Open Source": [
+        "Yes"
+      ],
+      "Interface Type": [
+        "CLI",
+        "TUI",
+        "Desktop App"
+      ],
+      "Platform Support": [
+        "MacOS",
+        "Linux",
+        "Windows"
+      ],
+      "Model Providers": [
+        "Multi-provider"
+      ],
+      "Authentication": [
+        "Not Specified In Source"
+      ],
+      "MCP Support": [
+        "No"
+      ],
+      "Skills": [
+        "No"
+      ],
+      "Commands": [
+        "Yes"
+      ],
+      "Hooks": [
+        "No"
+      ],
+      "Subagents": [
+        "Yes"
+      ],
+      "Other": [
+        "LSP"
+      ],
+      "Source File": [
+        "opencode.md"
+      ],
+      "Description": [
+        "OpenCode utilizes a distinct agent architecture featuring a \"build\" agent for active development and a \"plan\" agent for read-only analysis. The tool is designed with a client/server architecture, allowing the TUI to run as a remote client while the server handles core logic. It includes out-of-the-box support for Language Server Protocol (LSP) to enhance code intelligence during sessions. The project maintains a philosophy of being 100% open source and decoupled from any specific model provider."
+      ],
+      "Overall": [
+        "Philosophy: [4]",
+        "Interface: [3]",
+        "Architecture: [4]"
+      ],
+      "Source": [
+        "opencode.md"
+      ]
+    }
+  }
+]

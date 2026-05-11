@@ -1,0 +1,54 @@
+# Default per-criterion weights for Finsure Individual Medical Insurance.
+#
+# Source: Derived from Individual_Medical_Insurance_Sales_Process.docx
+# (the broker intake script — questions asked first signal which criteria
+# matter most when shortlisting plans).
+#
+# Methodology:
+#   - Critical (0.10–0.20): asked at the top of the intake script,
+#     non-negotiable filters (network, budget, eligibility, maternity).
+#   - Important (0.04–0.09): explicitly asked but secondary
+#     (territorial scope, copay, annual limit).
+#   - Lesser (0.01–0.03): present in TOB but not part of the intake script.
+#   - Zero (0.0): pure metadata.
+#
+# Rationale per criterion is in weights.rationale.md alongside this file.
+# Operator review required before going live.
+
+weights:
+  # Critical — top-of-script intake questions
+  Medical Network: 0.18              # "Required List of clinics or Hospitals" — top buyer question
+  Premium Band Family-of-4: 0.15     # "Ask budget for medical insurance plan"
+  Maternity Sub-limit: 0.10          # Conditional on Marital Status (if female) — high stakes when relevant
+  Pre-existing Condition Limit: 0.08 # "Any existing or previous medical conditions"
+  Waiting Period: 0.04               # Tied to expired-policy gap question
+
+  # Important — explicit intake fields
+  Territorial Scope: 0.07            # Visa Issuing Emirate + India coverage (test persona)
+  Eligibility Group: 0.06            # Visa Type + Salary Slab filters
+  Outpatient Copay: 0.05             # Co-pay differs across panel; affects monthly cost
+  Annual Aggregate Limit: 0.04       # Sets ceiling for catastrophic care
+  Settlement Basis: 0.03             # Direct-billing vs reimbursement is operationally critical
+
+  # Lesser — secondary differentiators
+  Inpatient Room Type: 0.03
+  Pre-existing Treatment: 0.03       # Declared & loaded vs full annual limit — meaningful but often paired with PEC limit
+  Overall Quality: 0.02              # Aggregate broker-side rating
+  Plan Tier: 0.02                    # Largely descriptive once benefits are scored
+  Insurance Provider: 0.02           # Broker-neutral panel; carrier name not a primary driver
+  Age Eligibility: 0.02              # Used as filter, not differentiator within eligible set
+  Maternity Declaration Requirement: 0.01
+  Optical Limit: 0.01
+  Dental Limit: 0.01
+  Alternative Medicine: 0.01
+  Dialysis Limit: 0.01
+  Reason: 0.01                       # Narrative justification of Overall Quality
+
+  # Zero — pure metadata, never weighted
+  Description: 0.0
+  Source File: 0.0
+  Source: 0.0
+
+generated_by: claude-from-sales-process-docx
+operator_review: required
+sum_check: 1.00

@@ -16,6 +16,7 @@ export class CriteriaData {
   public html: string;
   public summaryText: string;
   public tableText: string;
+  public tableHtml: string;
 
   constructor(name: string, text: string, labels: Map<string, Label>, type?: CriteriaTypes, url?: string, html?: string);
 

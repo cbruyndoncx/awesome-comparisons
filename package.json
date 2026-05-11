@@ -109,6 +109,7 @@
     "patch-package": "^8.0.0",
     "playwright-core": "^1.56.1",
     "sass": "^1.79.0",
+    "sharp": "^0.34.5",
     "typescript": "~5.9.3"
   }
 }

@@ -1,0 +1,89 @@
+parent_group: General Info
+
+groups:
+  all_emirates:  [Abu Dhabi, Al Ain, Dubai, Sharjah, Ajman, Ras Al Khaimah, Umm Al Quwain, Fujairah]
+  northern:      [Sharjah, Ajman, Ras Al Khaimah, Umm Al Quwain, Fujairah]
+  dxb_and_north: [Dubai, Sharjah, Ajman, Ras Al Khaimah, Umm Al Quwain, Fujairah]
+  abudhabi:      [Abu Dhabi, Al Ain]
+
+plans:
+  - slug: fidelity-united-health-first-plan-d-0-copay__fidelity-nextcare-rn2-0pct
+    title: "Fidelity United Health First Plan D (0% copay)"
+    facets: { Region: { group: all_emirates } }
+
+  - slug: orient-dmed-lsb-plan__basic-apr2026
+    title: "Orient DMED-LSB"
+    facets: { Region: [Dubai] }
+
+  - slug: orient-emed-plan-low-salary-band__basic-apr2026
+    title: "Orient EMED"
+    facets: { Region: [Dubai] }
+
+  - slug: orient-family-care-plan-emerald__fcp-auh
+    title: "Orient Family Care Plan - Emerald (Abu Dhabi)"
+    facets: { Region: { group: abudhabi } }
+  - slug: orient-family-care-plan-emerald__fcp-dxb
+    title: "Orient Family Care Plan - Emerald (Dubai)"
+    facets: { Region: { group: dxb_and_north } }
+
+  - slug: orient-family-care-plan-gold__fcp-auh
+    title: "Orient Family Care Plan - Gold (Abu Dhabi)"
+    facets: { Region: { group: abudhabi } }
+  - slug: orient-family-care-plan-gold__fcp-dxb
+    title: "Orient Family Care Plan - Gold (Dubai)"
+    facets: { Region: { group: dxb_and_north } }
+
+  - slug: orient-family-care-plan-green__fcp-auh
+    title: "Orient Family Care Plan - Green (Abu Dhabi)"
+    facets: { Region: { group: abudhabi } }
+  - slug: orient-family-care-plan-green__fcp-dxb
+    title: "Orient Family Care Plan - Green (Dubai)"
+    facets: { Region: { group: dxb_and_north } }
+
+  - slug: orient-family-care-plan-pearl__fcp-auh
+    title: "Orient Family Care Plan - Pearl (Abu Dhabi)"
+    facets: { Region: { group: abudhabi } }
+  - slug: orient-family-care-plan-pearl__fcp-dxb
+    title: "Orient Family Care Plan - Pearl (Dubai)"
+    facets: { Region: { group: dxb_and_north } }
+
+  - slug: orient-family-care-plan-silk-road__fcp-auh
+    title: "Orient Family Care Plan - Silk Road (Abu Dhabi)"
+    facets: { Region: { group: abudhabi } }
+  - slug: orient-family-care-plan-silk-road__fcp-dxb
+    title: "Orient Family Care Plan - Silk Road (Dubai)"
+    facets: { Region: { group: dxb_and_north } }
+
+  - slug: orient-family-care-plan-silver-classic__fcp-auh
+    title: "Orient Family Care Plan - Silver Classic (Abu Dhabi)"
+    facets: { Region: { group: abudhabi } }
+  - slug: orient-family-care-plan-silver-classic__fcp-dxb
+    title: "Orient Family Care Plan - Silver Classic (Dubai)"
+    facets: { Region: { group: dxb_and_north } }
+
+  - slug: orient-family-care-plan-silver-premium__fcp-auh
+    title: "Orient Family Care Plan - Silver Premium (Abu Dhabi)"
+    facets: { Region: { group: abudhabi } }
+  - slug: orient-family-care-plan-silver-premium__fcp-dxb
+    title: "Orient Family Care Plan - Silver Premium (Dubai)"
+    facets: { Region: { group: dxb_and_north } }
+
+  - slug: orient-imed-plan-investors-partners__basic-apr2026
+    title: "Orient IMED"
+    facets: { Region: [Dubai] }
+
+  - slug: orient-nemed-basic-plan__basic-apr2026
+    title: "Orient NEMED-Basic"
+    facets: { Region: { group: northern } }
+
+  - slug: orient-nemed-lite-plan__basic-apr2026
+    title: "Orient NEMED-Lite"
+    facets: { Region: { group: northern } }
+
+  - slug: rak-family-care-plan-super-restricted__srn-10pct
+    title: "RAK Family Care Plan - Super Restricted"
+    facets: { Region: [Ras Al Khaimah] }
+
+  - slug: takaful-emarat-plan-4-opal-dxb-20__takaful-srn-20pct
+    title: "Takaful Emarat Plan 4 Opal-DXB 20%"
+    facets: { Region: [Dubai] }

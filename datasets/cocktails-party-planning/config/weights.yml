@@ -1,0 +1,20 @@
+# Default per-criterion weights for cocktails-party-planning.
+# Sum should be approximately 1.0. Source/Description/Image/Recipe must be 0.0.
+# Tunable per-profile via profile.weights_override.
+
+weights:
+  Base Spirit: 0.10        # matters when host has stock constraints
+  Flavor Profile: 0.20     # primary fit dimension for guests
+  Strength: 0.10           # ABV control for the night's pacing
+  Difficulty: 0.10         # bar staffing / host skill constraint
+  Batch Friendly: 0.20     # critical at 20 guests
+  Glassware: 0.05          # ownership / rental constraint
+  Occasion: 0.15           # aperitif vs dinner vs late-night fit
+  Rating: 0.10             # crowd-pleaser score
+  Source: 0.0
+  Description: 0.0
+  Image: 0.0
+  Recipe: 0.0
+
+generated_by: operator
+operator_review: complete
