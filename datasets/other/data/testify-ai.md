@@ -57,7 +57,7 @@ Testify AI is a fast-growing open-source project that brings AI-powered test aut
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

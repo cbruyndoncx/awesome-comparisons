@@ -65,7 +65,7 @@ Serena is an innovative open-source coding agent toolkit that emerged in 2025, p
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
   - Serena is an MCP server, not a client
 
 ### Prompts

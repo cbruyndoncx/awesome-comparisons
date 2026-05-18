@@ -8,7 +8,7 @@ An AI-powered autonomous coding agent integrated into Replit's cloud IDE that pl
 - Code/Autonomous agent
 
 ### Version
-Agent 3 (September 2025; up to 200 minutes continuous operation, 3x faster and 1/10th cost vs. earlier versions)
+Agent 3 (2025-09) — GA; see code-editor/replit.md for full IDE details
 
 ### Repo
 -
@@ -41,8 +41,10 @@ Replit Agent evolved from Replit's earlier Ghostwriter assistant into a fully au
 - Can generate specialized agents for workflows with integrations to Slack, Telegram, and email.
 - Automatic version control with edit logging, code explanation tools, and auto-rollback.
 
+- 2026 status: Agent 3 remains current; 200-minute autonomous runs; pricing: Starter free, Core $20/month ($25 credits), Pro $95/month ($100 credits), Enterprise custom. Design Mode (Nov 2025): interactive designs in under 2 minutes. LLM-native web search (Jan 2026). Next Edit Predictions for codebase-wide ripple effects. Figma/Lovable import capability.
+
 ### Last Update
-2026-01-30
+2026-05-15
 
 ## Licensing
 
@@ -59,7 +61,7 @@ Replit Agent evolved from Replit's earlier Ghostwriter assistant into a fully au
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
   - No public documentation for Model Context Protocol client support as of January 2026
 
 ### Prompts

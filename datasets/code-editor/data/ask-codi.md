@@ -38,8 +38,10 @@ AskCodi is an AI-powered coding assistant and OpenAI-compatible LLM gateway deve
 - Notable strengths: multi-model gateway, modular task-oriented toolset, direct IDE integrations.  
 - Caveats: not open-source and primarily cloud-based; enterprise/local deployment and exact BYOK/local-offline capabilities should be confirmed against AskCodi's current documentation or sales/enterprise channels for sensitive or regulated environments.
 
+- No significant public updates found as of May 2026; verify current status on vendor website or GitHub repository.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
@@ -53,7 +55,7 @@ AskCodi is an AI-powered coding assistant and OpenAI-compatible LLM gateway deve
 - Yes
 
 ## MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

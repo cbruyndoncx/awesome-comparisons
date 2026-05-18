@@ -3,3 +3,7 @@ subtitle: Comparison of AI Code Terminals a.o. listed AINativeDev Code/Terminal 
 selectTitle: Filter Criteria
 tableTitle: Comparison of AI Code Editors
 criteria:
+  - Local Offline:
+      search: false
+      table: false
+      detail: false

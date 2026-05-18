@@ -7,7 +7,7 @@ A modern AI-powered IDE and coding assistant ("The Real AI Engineer") focused on
 - Code/Editor
 
 ### Version
-- v1.3.0+ (2025, rolling releases)
+- v2.0 (2026) — SOLO agent
   - v1.3.0 (Apr 2025) added MCP support and Builder/SOLO enhancements; active development continues with frequent updates
 
 ### Repo
@@ -38,8 +38,10 @@ Trae is an AI-first IDE intended to act as a full software engineering partner r
 - Privacy/Telemetry concerns: Independent analysis revealed extensive telemetry with persistent connections to ByteDance domains, device fingerprinting via machineId, behavioral tracking, and data collection reportedly active even when telemetry is disabled in settings. Subject to Chinese data regulations via parent company ByteDance (operated by Singapore-based SPRING(SG) PTE.LTD.).
 - 2025-2026 updates: TRAE CN Enterprise Edition launched supporting massive repos (up to 10 million files, 1.5 billion lines of code) with millisecond-level GPU-cluster-backed response times. Customizable agent system with MCP integrations (e.g., Figma connection for UI-aware development). Integrated webview for in-IDE web page display. Windows version in development (Mac available). Bilingual interface (English + Simplified Chinese).
 
+- Trae 2.0 additions (2026): SOLO autonomous agent — handles requirements analysis, code generation, terminal commands, browser testing, and deployment end-to-end; Windows support (Windows 10/11); Builder Mode for automated project scaffolding; free access to Claude 4, GPT-4o, DeepSeek R1, Gemini 2.5 Pro; MCP support; custom agents; multimodal input (screenshots, mockups, design files). Pricing: Free (5,000 auto-completions/month), Lite $3/month, Pro $10/month. Data retention policy unchanged (5-year retention, no opt-out).
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

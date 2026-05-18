@@ -64,6 +64,106 @@ Prototyping and product-focused coding tools
 - Scala
 - GraphQL
 <!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### Frontend Stack
+<!-- Frontend framework of the GENERATED OUTPUT — what the developer inherits for the UI layer.
+     A standard open-source framework (React, Next.js, Vue) can be taken into any IDE and extended freely.
+     No-code/Proprietary output locks the developer into the platform's visual builder. -->
+<!-- Keep only the label values that apply. Add specific library/version notes as indented "- " entries. -->
+- React
+  <!-- React (any bundler — Vite, CRA, WebContainers, etc.) -->
+- Next.js
+  <!-- Next.js with React; includes routing and SSR/SSG -->
+- Vue.js
+- Angular
+- Svelte
+- Python (Reflex)
+  <!-- Python-authored frontend compiled to React by the Reflex framework -->
+- PHP / WordPress
+  <!-- PHP templates or WordPress theme/plugin output -->
+- No-code / Proprietary
+  <!-- Visual block builder; not a portable standard framework -->
+- Any / Multi-framework
+  <!-- Platform is stack-agnostic; frontend framework determined by user or project context -->
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### Backend Stack
+<!-- Backend framework/runtime of the GENERATED OUTPUT.
+     Determines whether the app has a real server, serverless functions, or relies on a hosted platform.
+     "None" means frontend-only output that needs a separate backend wired in manually. -->
+<!-- Keep only the label values that apply. Add notes on hosting target or runtime. -->
+- Next.js API Routes
+  <!-- Serverless API routes colocated with the Next.js frontend -->
+- Node.js / Express
+- Node.js / Fastify
+- Node.js / Hono
+- FastAPI (Python)
+- Flask (Python)
+- Python (Reflex)
+  <!-- Python backend managed by the Reflex framework -->
+- PHP / WordPress
+- Platform / BaaS
+  <!-- Backend provided by the platform (Supabase, Firebase, proprietary); no custom server code generated -->
+- None
+  <!-- Frontend-only output; no backend generated -->
+- Any / Multi-framework
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### Database
+<!-- Database of the GENERATED OUTPUT.
+     Key differentiator for whether the app can persist data independently or relies on a managed/proprietary store. -->
+<!-- Keep only the label values that apply. Add notes on hosting or managed service. -->
+- PostgreSQL
+- SQLite
+- MongoDB
+- MySQL
+- Supabase
+  <!-- Managed PostgreSQL via Supabase platform -->
+- Neon
+  <!-- Serverless PostgreSQL via Neon platform -->
+- Firebase / Firestore
+- Built-in / Proprietary
+  <!-- Platform-managed database; not directly portable -->
+- None
+- Any
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### Style Library
+<!-- CSS/component library used in the GENERATED OUTPUT.
+     Fixed means the tool always generates this style library and the developer cannot swap it out.
+     Flexible means the developer can specify a preference in the prompt.
+     This affects the entire component ecosystem the developer inherits. -->
+<!-- Keep only the label values that apply. Add a note indicating Fixed or Flexible. -->
+- Tailwind CSS
+- shadcn/ui
+  <!-- Component library built on Tailwind + Radix UI primitives -->
+- Material UI (MUI)
+- Bootstrap
+- Ant Design
+- Chakra UI
+- Radix UI
+- Platform / Proprietary
+  <!-- Style managed by the platform's own visual system; not a portable CSS framework -->
+- Flexible
+  <!-- Developer specifies style library via prompt; tool is not opinionated -->
+- None
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
+### Testing
+<!-- Test framework(s) included in the GENERATED OUTPUT.
+     Most prototyping tools generate no tests — this is a key signal for production-readiness.
+     Note whether tests are generated automatically or only on explicit request. -->
+<!-- Keep only the label values that apply. Add notes on coverage level or trigger. -->
+- Unit Tests
+- Integration Tests
+- E2E Tests
+  <!-- e.g. Playwright, Cypress -->
+- Static Analysis
+  <!-- e.g. ESLint, SonarQube — code quality checks generated alongside the app -->
+- None
+  <!-- No tests generated; developer must add manually -->
+<!-- Add any supporting notes as indented "- " entries beneath the kept values. -->
+
 ### Notes
 
 -

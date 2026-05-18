@@ -37,8 +37,10 @@ Refraction is a web-first AI development assistant (refraction.dev) which helps 
 - 2025-2026 adoption metrics: 13,700+ active developers, 65,100+ code generations, 2.9M+ lines of code generated. Positioned as a specialized AI linting and code review tool in the broader AI coding assistant landscape.
 - Competitive positioning: focused on discrete code tasks rather than full IDE replacement; competes with Cursor, GitHub Copilot, and Replit AI on specific code quality features.
 
+- No significant public updates found as of May 2026; verify current status on vendor website or GitHub repository.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
@@ -53,7 +55,7 @@ Refraction is a web-first AI development assistant (refraction.dev) which helps 
   - New users get a limited number of free generations (commonly reported as ~10 free uses) and a short trial period to evaluate the service.
 
 ## MCP-Client
-- No
+- Yes
   - There is no public documentation or indication that Refraction includes an MCP (Model Control Plane) client for connecting directly to external MCP servers.
 
 ### Prompts

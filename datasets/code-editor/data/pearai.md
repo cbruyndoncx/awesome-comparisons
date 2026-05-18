@@ -7,7 +7,7 @@ PearAI is an open-source AI-powered code editor that aims to be an all-in-one de
 - Code/Editor
 
 ### Version
-- v2.x (active; PearAI V2 released with database setup, WSL support, and advanced model compatibility)
+- v2.x (2026, active development)
 
 ### Repo
 - https://github.com/trypear/pearai-app
@@ -39,8 +39,10 @@ PearAI provides a unified AI-first IDE experience by combining the familiarity o
 - Limitations noted: less polished than Cursor/Windsurf, slower performance, fewer advanced features, better suited for smaller projects and prototyping.
 - Audience: developers who want an open-source, AI-first IDE experience with strong project context awareness and extensibility
 
+- 2026 additions: PearAI Creator — build full applications from natural language; PearAI Search — AI-powered codebase search and Q&A; free tier now includes unlimited Claude 3.5 Haiku (auto-switches when monthly limits hit); BYOK and local models (Ollama, llama.cpp) remain unlimited at no cost. Pricing: Free (limited) / Premium from $15/month.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
@@ -55,7 +57,7 @@ PearAI provides a unified AI-first IDE experience by combining the familiarity o
   - Free tier available with basic features and BYOK support; paid tiers unlock advanced features
 
 ## MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

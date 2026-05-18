@@ -10,7 +10,8 @@ Kimi CLI is a command-line coding tool from Moonshot AI that integrates intellig
 - Code/Terminal
 
 ### Version
-- Technical Preview (2025)
+- Kimi K2.6 (April 2026)
+  - 1T parameter MoE model with 32B active parameters; 262.1k token context window
 
 ### Repo
 - https://github.com/MoonshotAI/kimi-cli
@@ -37,11 +38,15 @@ The tool features a large 128K token context window, making it suitable for work
 - Performance: Comparable to Claude 4.5 and GLM 4.6 in coding tasks
 - Installation: Available via Python/PyPI
 - Open Source: Code available on GitHub
-- Release Status: Currently in technical preview
+- Release Status: GA — Kimi K2.6 released April 20, 2026
+- K2.6 model: 1T parameter MoE (32B active); 262.1k token context; native multimodal (vision + video); thinking mode + instant mode
+- Agent swarm: coordinates 300 sub-agents across 4,000 steps
+- Benchmark: 80.2 SWE-Bench Verified, 66.7 Terminal-Bench 2.0 — outperforms GPT-5.4 and Claude Opus 4.6 on coding benchmarks
+- License: Modified MIT
 - IDE Integration: Compatible with any ACP-compatible editor or IDE
 
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

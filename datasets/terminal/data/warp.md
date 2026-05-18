@@ -7,8 +7,8 @@ Modern AI-powered terminal and agentic development environment focused on unifyi
 - Code/Terminal
 
 ### Version
-- v2.0 (2025-09-01)
-  - Specific release date unavailable; major v2.0 release occurred in September 2025
+- v2026.05.06 (2026-05)
+  - Date-versioned releases; open-sourced under MIT + AGPL v3 in 2026
 
 ### Repo
 - https://www.warp.dev
@@ -29,18 +29,21 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 - Privacy controls: granular autonomy settings (allowlists/denylists, pause/approve diffs, control file access), network logging, and zero-data-retention guarantees for enterprise customers.
 - Strengths: Unified UX for prompt + shell input, native diff review for agent-made changes, strong collaboration primitives for teams.
 - Limitations / unknowns: public documentation is limited on BYOK (bring-your-own-key) and fully offline local LLM operation; product is proprietary which may limit on-premise customization for some organizations.
-- Recommended when: you want a first-class terminal with integrated AI agents and team sharing (Drive), and you prefer an opinionated, commercial product with enterprise privacy controls rather than an open-source self-hosted solution.
+- Recommended when: you want a first-class terminal with integrated AI agents and team sharing (Drive), MCP support, and open-source transparency.
+- v2026.05 additions: open-sourced MIT + AGPL v3; Cloud Agents (Oz) triggered by webhooks, CI events, or Slack messages; drag-and-drop images into CLI agent sessions; inline Mermaid diagram rendering in agent output; Codex harness for local child agents; Mistral Vibe as recognised CLI agent; Rich Input for third-party agents (Claude Code, Gemini CLI, OpenCode).
 
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
 ### Opensource
-- No
+- Yes
+  - Open-sourced in 2026 under MIT + AGPL v3.
 
 ### License
-- Proprietary
+- MIT
+  - Client is MIT; server components under AGPL v3.
 
 ### Free Trial
 - Yes

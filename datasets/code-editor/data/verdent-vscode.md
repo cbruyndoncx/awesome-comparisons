@@ -38,10 +38,11 @@ The extension is intended to reduce context switching by letting developers rema
 - Verdent Deck is the desktop counterpart focused on multi-agent orchestration; the VS Code extension brings the same capabilities into the editor.
 - Product is commercial with early access and paid tiers; capabilities and pricing should be verified on the vendor site.
 - Sources: Verdent product announcements and coverage (2025), reviews and demonstrations showing Verdent launching from within VS Code and the Verdent Deck demos.
-- 2025-2026 updates: Built-in AI code reviews integrated into the extension for security and quality checks. Reasoning depth controls and planning mode toggle. Multi-model support (Claude Sonnet, Opus 4.5, Gemini 3 Pro, GPT-5 with Codex). Context-aware task assignment referencing files from the editor. Diff Lens auto-analyzes code changes with jump-to-line navigation. Proactive clarifying questions for underspecified tasks. Parallel task management for background code generation.
+- 2025-2026 updates: Built-in AI code reviews integrated into the extension for security and quality checks. Reasoning depth controls and planning mode toggle. Multi-model support (Claude Sonnet 4.5, Opus 4.5, Gemini 3 Pro, GPT-5, GPT-5-Codex) via orchestration layer routing by task type. Context-aware task assignment referencing files from the editor. Diff Lens auto-analyzes code changes with jump-to-line navigation. Proactive clarifying questions for underspecified tasks. Parallel task management with git worktree isolation.
+- January 2026: Review Subagent cross-validates results using three frontier models simultaneously (Gemini 3 Pro, Claude Opus 4.5, GPT-5.2); Skills workflow bundles; Agent Skills open standard (Dec 2025) for cross-platform skill reuse across Claude Code, Codex, Cursor, and GitHub.
 
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

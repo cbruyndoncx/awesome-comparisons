@@ -1,4 +1,4 @@
-# Letta - https://github.com/cpacker/MemGPT
+# Letta - 2026-05 (active; no semantic versions for CLI harness) https://github.com/cpacker/MemGPT
 Letta (formerly MemGPT) is an open-source, model-agnostic platform for building stateful AI agents with persistent memory capabilities. As a memory-first coding agent designed for terminal environments, Letta enables developers to work with agents that learn and improve across sessions rather than in isolated interactions, using a MemGPT-based architecture with self-editing memory split between in-context and out-of-context storage organized into editable memory blocks.
 
 **Dataset ID:** terminal
@@ -31,9 +31,10 @@ The system implements a memory hierarchy distinguishing between in-context and o
 
 ### Notes
 Terminal-use agent implemented in under 200 lines of code using Letta's stateful agents SDK. Supports background mode streaming with resumable streams and crash recovery for long-running tasks (10+ minutes). Installed via pip (pymemgpt). Can be deployed as Letta Cloud (managed service) or self-hosted servers. Performance using Claude 4 Sonnet matches Claude Code using Claude Opus.
+- 2026 additions: Context Repositories (Feb 2026) — git-backed memory replacing specialised memory tools; MemFS (Memory Filesystem) — agents manage memory via filesystem and bash operations on git-versioned context repos; Context Constitution (April 2026) — principles governing how agents learn from experience; ranked #1 model-agnostic coding agent on Terminal-Bench.
 
 ### Last Update
-2026-01-31
+2026-05-14
 
 ## Licensing
 

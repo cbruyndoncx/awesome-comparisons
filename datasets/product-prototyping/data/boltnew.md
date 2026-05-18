@@ -31,6 +31,28 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
 - HTML/CSS
 - (Limited) Python
 
+
+### Frontend Stack
+- React
+  - React/TypeScript most common; Svelte, Vue also supported via WebContainers.
+
+### Backend Stack
+- Node.js / Express
+  - Node.js runtime via StackBlitz WebContainers.
+
+### Database
+- Any
+  - Supabase integration supported; other databases via user configuration.
+
+
+### Style Library
+- Flexible
+  - Tailwind commonly generated but not fixed; user can specify alternative via prompt.
+
+### Testing
+- None
+  - No automatic test generation.
+
 ### Notes
 - Built on StackBlitz WebContainers tech to run a real Node.js environment fully in the browser.
 - AI can generate both frontend and backend code, wire databases (examples: Supabase), and deploy to platforms like Netlify/Cloudflare with minimal friction.
@@ -57,7 +79,7 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

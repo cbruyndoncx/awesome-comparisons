@@ -7,7 +7,7 @@ Open-source, privacy-first AI code editor built as a fork of Visual Studio Code 
 - Code/Editor
 
 ### Version
-- v0.x (2025 beta, active development)
+- v0.x (development paused early 2026)
   - Y Combinator-backed; beta launched Jan 2025 with frequent updates via GitHub. No stable 1.0 release yet as of Jan 2026.
 
 ### Repo
@@ -35,8 +35,10 @@ Void is an open-source, privacy-focused AI code editor that forks the Visual Stu
 - Good choice for teams or individuals who need AI assistance but require data residency or on-prem constraints.
 - 2025-2026 updates: Y Combinator backing confirmed. Custom FIM (Fill-in-the-Middle) model support added. Lint error detection integrated. Fast Apply for files with thousands of lines. Agent Mode and Gather Mode work with any model including open-source models lacking native tool-calling. Expanded model support: Claude, GPT, Gemini, DeepSeek, Llama, Qwen, Grok. Active development cycle with frequent GitHub releases.
 
+- 2026 status: development paused as of early 2026; no new features, security patches, or bug fixes being shipped. Existing builds remain functional. For actively maintained open-source alternatives consider Zed.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

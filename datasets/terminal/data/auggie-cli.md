@@ -10,7 +10,7 @@ Auggie is Augment's agentic coding CLI that runs in your terminal. It understand
 - Code/Terminal
 
 ### Version
-v0.5.6 (2025)
+v0.25.1 (2026-05)
 
 ### Repo
 - https://github.com/augmentcode/auggie
@@ -36,10 +36,11 @@ Auggie can handle up to 10,000 commit histories, ensuring accurate code suggesti
 - Flexible Usage: Supports interactive and non-interactive modes, piped input, and build system integration
 - Codebase Scale: Can handle up to 10,000 commit histories
 - Competition: Positioned as an alternative to Claude Code, Gemini CLI, and OpenAI's Codex CLI
-- Released: 2025
+- Released: 2025; actively maintained with frequent releases
+- v0.25.1 additions (2026): model defaults updated to Claude 4.5/4.6; transcript persistence (keepTranscriptOnNewSession); non-interactive login (--no-tui flag); billing summary with credit/cost breakdown; MCP environment variable expansion and working directory injection; image support (PNG, JPG, GIF, WEBP); improved shell support (sh).
 
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
@@ -55,7 +56,7 @@ Auggie can handle up to 10,000 commit histories, ensuring accurate code suggesti
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

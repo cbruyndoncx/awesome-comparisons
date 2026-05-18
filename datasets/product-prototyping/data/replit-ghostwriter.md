@@ -36,6 +36,26 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 - SQL
 - Bash
 
+
+### Frontend Stack
+- Any / Multi-framework
+  - Supports 50+ languages; framework chosen by developer.
+
+### Backend Stack
+- Any / Multi-framework
+
+### Database
+- Any
+
+
+### Style Library
+- Flexible
+  - Style library determined by prompt and language choice.
+
+### Testing
+- Unit Tests
+  - Agent 3 (Sep 2025) added self-testing capability; tests generated as part of autonomous runs.
+
 ### Notes
 - Key features: "Complete Code" (inline suggestions), "Explain Code" (natural-language explanations), "Transform Code" (refactors/rewrites), and "Generate Code" (from prompts).
 - Pricing is tiered: Starter (free) with limited resources; Core (individual pro tier, commonly around $20/month with monthly credits when billed annually); Teams (team plans around $35/user/month annually with extra credits and collaboration features); Enterprise (custom pricing, SSO/SCIM and enterprise controls available).
@@ -65,7 +85,7 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

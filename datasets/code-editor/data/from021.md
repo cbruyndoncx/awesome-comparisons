@@ -40,8 +40,10 @@ The platform emphasizes a structured process (uses MoSCoW prioritization) and ta
 - Roadmap visualization for tracking product progress.
 - Most users create first complete spec in under 10 minutes; planning time reduced by up to 70%.
 
+- No significant public updates found as of May 2026; verify current status on vendor website or GitHub repository.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
@@ -56,7 +58,7 @@ The platform emphasizes a structured process (uses MoSCoW prioritization) and ta
   - The product advertises a free trial that does not require a credit card
 
 ## MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

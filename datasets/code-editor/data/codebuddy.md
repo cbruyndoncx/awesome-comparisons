@@ -32,8 +32,10 @@ The platform's Craft Mode enables developers to use natural language instruction
 ### Notes
 First code assistant in China to support MCP (Model Context Protocol). Hunyuan models support ultra-long context window of up to 256K tokens. Deep integration with WeChat Mini Program development through Weixin Developer Tools. Performance metrics from Tencent: 20% improvement in R&D efficiency, 94% of code reviews involve AI participation, AI identifies 28% of code defects, 8-hour average reduction per bug fix.
 
+- No significant public updates found as of May 2026; verify current status on vendor website or GitHub repository.
+
 ### Last Update
-2026-01-31
+2026-05-14
 
 ## Licensing
 

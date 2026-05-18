@@ -8,7 +8,7 @@ An agentic command-line coding tool from Anthropic that operates directly in the
 - Code/CLI agent
 
 ### Version
-v1.0 (Production release 2025; grew to billion-dollar product within six months)
+v2.1.128 (2026-05) — see terminal/claude-code.md for full CLI details
 
 ### Repo
 - https://github.com/anthropics/claude-code
@@ -38,8 +38,10 @@ Claude Code is Anthropic's CLI-based agentic coding tool designed to be intentio
 - Many Anthropic engineers use Claude Code for 90%+ of their Git interactions.
 - 2025-2026 context: Grew from experimental research project to production-grade tooling, reaching billion-dollar product status within six months. Organizations report 89% AI adoption with 800+ internally deployed AI agents.
 
+- 2026 additions: native binary; plugin zip support; /loop and /schedule for recurring automation; voice control; Skills 2.0 with self-improving evaluation loops; per-tool MCP result-size override up to 500K; mobile access via Dispatch, iMessage, Telegram; computer use on desktop app; Claude Code Desktop redesigned April 2026 with native multi-session worktree support.
+
 ### Last Update
-2026-01-30
+2026-05-15
 
 ## Licensing
 

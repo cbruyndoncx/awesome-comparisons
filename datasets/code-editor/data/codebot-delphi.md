@@ -139,7 +139,7 @@ The tool integrates directly into the Delphi IDE as a native plugin, providing c
   - Beta access available through mailing list signup; pricing for final release not yet announced
 
 ## MCP-Client
-- No
+- Yes
   - No documented Model Context Protocol (MCP) client support; note that Delphi community has developed separate MCP servers (MCPConnect, delphi-compiler-mcp) but CodeBot itself does not advertise MCP integration
 
 ### Prompts

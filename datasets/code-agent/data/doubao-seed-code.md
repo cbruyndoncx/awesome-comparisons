@@ -41,6 +41,8 @@ Doubao-Seed-Code is ByteDance's professional code generation AI, launched by Vol
 - November 2025 launch: Recent release establishing new price/performance standard.
 - 2025-2026 Update: ByteDance's Volcano Engine became China's second-largest AI cloud provider (13% market share, $390M revenue H1 2025). Massive AI infrastructure investment with Rmb85B allocated for AI processors in 2025 and $23.1B capex planned for 2026 (over half for AI semiconductors). ByteDance ranked as Nvidia's largest Chinese customer in 2024. Volcano Engine secured exclusive AI cloud partnership with China's Spring Festival Gala 2026. Platform positioned as enterprise-grade with aggressive pricing disrupting the global AI coding agent market.
 
+- 2026 status: no significant public updates found. Verify current status at vendor website.
+
 ### Last Update
 - 2026-01-30
 
@@ -58,7 +60,7 @@ Doubao-Seed-Code is ByteDance's professional code generation AI, launched by Vol
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

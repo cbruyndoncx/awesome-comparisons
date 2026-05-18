@@ -8,7 +8,7 @@ Lightweight open-source agent framework for automating development and productiv
 - Code/Autonomous agent
 
 ### Version
-v1.18.0 (2025-12-19)
+v1.30.0 (2026-04-08)
 
 ### Repo
 - https://github.com/block/goose
@@ -34,8 +34,10 @@ Codename Goose is an open-source, on-machine AI agent framework created to autom
 - Adoption and usefulness will depend on the growth of a healthy extension ecosystem (MCP servers) and high-quality recipes for common workflows.
 - 2025-2026 Update: Rapid release cadence from v1.10.3 to v1.18.0 (Dec 2025). v1.18.0 added Agent Client Protocol (ACP) support, multi-model/provider configuration with automatic switching, Tetrate Agent Router streaming, and configurable Bedrock retry settings. v1.7.0 added Linux Computer Control for Android (Termux), Session Sharing, Extension Malware Check, Chat Session List Navigation, Autovisualiser for Structured Data with MCP-UI capabilities, and Compact UX Design. Added nightly release workflow automation, Windows installation docs, airgapped operation guides. Block launched "Advent of AI" community initiative.
 
+- v1.30.0 additions (April 8, 2026): Terminal UI (TUI) overhaul with tab-expandable tool calls for improved output visualization; 15+ LLM providers supported; ACP server functionality for Zed, JetBrains, VS Code integration; 83% autonomy level; general-purpose beyond coding: research, writing, automation, data analysis; Apache 2.0.
+
 ### Last Update
-2026-01-30
+2026-05-15
 - Released v1.18.0 on 2025-12-19 (per repository release tag).
 
 ## Licensing

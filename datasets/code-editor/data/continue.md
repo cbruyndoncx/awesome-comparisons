@@ -7,7 +7,7 @@ Open-source AI coding assistant focused on developer control, model choice, and 
 - Code/Editor
 
 ### Version
-- v1.0+ (2025-2026)
+- v1.4.39 (2026-05)
   - 1.0 release stabilized core features; Mission Control redesign for automated development orchestration; Cascade agent for codebase-wide reasoning and multi-file edits.
 
 ### Repo
@@ -61,8 +61,10 @@ Continue is an open-source AI coding assistant and platform that brings AI capab
   - Hub: https://hub.continue.dev
   - GitHub: https://github.com/continuedev/continue
 
+- v1.4.39 additions (2026): Agent Mode for autonomous multi-step task execution (analyze, plan, modify, execute, verify); PR/CI auto-review agent runs on every PR with team rules in version-controlled Markdown; @codebase, @docs, @github, @terminal, @web context providers; file access beyond workspace with permission controls; smart diffs and settings refresh; streamlined edit mode; improved autocomplete keyboard shortcuts.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

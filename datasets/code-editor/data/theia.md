@@ -7,7 +7,7 @@ Eclipse Theia: a modular, extensible, open-source IDE framework for desktop and 
 - Code/Editor
 
 ### Version
-- v1.66 (2025-11-13)
+- v1.70 (2026-04-16)
   - Agent Mode support with multiple operational modes (edit/agent, plan/act); slash commands with autocomplete; Project Info Agent; Claude Code integration via official Agent SDK; proxy configuration for corporate firewalls; VS Code API v1.105.0 compatibility; Electron 38.4.0.
 
 ### Repo
@@ -38,8 +38,10 @@ Eclipse Theia is an open-source, modular IDE framework maintained under the Ecli
 - v1.66 (Nov 2025): Agent Mode support (multiple operational modes per agent, e.g., edit/agent, plan/act via dropdown or Shift+Tab); slash commands with autocomplete in chat; Project Info Agent (discovers .copilot-instructions.md, Claude.md, etc.); Coder Agent flexible content replacer; Claude Code integration migrated to official Agent SDK; proxy configuration for corporate firewalls; SCANOSS integration for AI-generated code license compliance; configurable Orchestrator agent exclusion list; enhanced authentication handling.
 - VS Code API compatibility: v1.105.0; Electron 38.4.0.
 
+- v1.70 additions (April 16, 2026): AI Coding features graduate from beta — Theia Coder agent, IDE-specific AI Views no longer experimental; AI Chat and Terminal panels open by default; GitHub Copilot auto-discovery and OAuth migration; corporate HTTP proxy support for all AI providers; streaming enhancements for large files (300+ MB); Undo/Redo preservation for AI suggestions; improved Skill slash commands; corrected Gemini model token counting.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

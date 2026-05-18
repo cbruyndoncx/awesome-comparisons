@@ -7,7 +7,8 @@ AI pair-programmer and code assistant integrated across popular IDEs and GitHub.
 - Code/Editor
 
 ### Version
-- Rolling updates (2025-2026)
+- Rolling updates (2026-05)
+  - Agent Mode GA March 2026 for VS Code and JetBrains
   - November 2025: 50+ updates across every IDE; GPT-5.1, Claude Opus 4.5, Gemini 3 Pro added. Coding agent GA in Eclipse; Plan Mode across JetBrains/Eclipse/Xcode; Background agents; MCP OAuth support.
 
 ### Repo
@@ -55,8 +56,10 @@ Copilot is positioned as an AI pair programmer: suggestions appear as you type i
 - CLI enhancements: image input support for visual debugging, semantic codebase search, Windows Terminal integration.
 - Enterprise admin: usage limits per team/repo, fine-grain scoped tokens, custom instructions management via version-controlled files.
 
+- 2026 additions: Agent Mode GA (March 2026) for VS Code and JetBrains — autonomously edits multiple files, runs tests, fixes errors in loops; JetBrains: custom agents, sub-agents, plan agent all GA; AGENTS.md and CLAUDE.md instruction file support; auto-approve for MCP; Agent Skills in public preview (Feb 2026); async Coding Agent (assign GitHub issues → draft PRs) GA for all paid subscribers; Next Edit Suggestions; multi-model support (GPT-4o, Claude Sonnet/Opus, Gemini); billing transitioning to GitHub AI Credits (June 1, 2026).
+
 ### Last Update
-2026-01-30
+2026-05-14
 - Based on public GitHub/Microsoft Copilot documentation and product announcements (Oct–Nov 2025).
 
 ## Licensing

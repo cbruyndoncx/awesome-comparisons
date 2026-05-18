@@ -7,7 +7,7 @@ Claude Code is Anthropic's command-line, agentic developer assistant that integr
 - Code/Terminal
 
 ### Version
-v2.1.16 (2026-01)
+v2.1.128 (2026-05)
 
 ### Repo
 - -
@@ -40,9 +40,10 @@ The tool is focused on large-context reasoning, multi-file code transformations,
 - Safety & controls: interactive permission prompts, enterprise controls for data handling, and options to route through organization-managed endpoints.
 - Ecosystem: community tooling and integrations exist (context engineers, wrappers, "awesome" lists) though the official product is closed-source.
 - Further reading: consult the official Claude documentation at <https://claude.ai/> and the Claude Code overview at <https://claude.ai/code> for up-to-date pricing, model names, and deployment options.
+- v2.1.128 additions (2026): native binary (no longer bundled JS); plugin zip support via --plugin-dir; per-tool MCP result-size override up to 500K; /loop and /schedule for recurring automation; voice control; Skills 2.0 with self-improving evaluation loops; mobile access via Dispatch, iMessage, Telegram; computer use on desktop app.
 
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

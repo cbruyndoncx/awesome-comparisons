@@ -39,8 +39,10 @@ Runner H (from H Company) is an "action-oriented" autonomous web agent designed 
 - Related projects: H Company also released Tester H (an AI testing agent), Holo-1 (open-source VLM, also called Holo One), and the open-source Surfer H framework for web-native automation.
 - 2025-2026 updates: Runner H moved to public beta (free during beta period); powered by Holo One proprietary VLM family (smaller, specialized models reported to outperform Anthropic Computer Use on WebVoyager benchmark); $220M total funding backing H Company; parallel task processing enables enterprise-scale automation; self-healing automation adapts to UI changes without manual intervention; architecture refined to Policy (action planning), Localiser (coordinate prediction), and Validator (completion confirmation) modules.
 
+- No significant public updates found as of May 2026; verify current status on vendor website or GitHub repository.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
@@ -56,7 +58,7 @@ Runner H (from H Company) is an "action-oriented" autonomous web agent designed 
   - Limited beta access was offered during initial launch windows.
 
 ## MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

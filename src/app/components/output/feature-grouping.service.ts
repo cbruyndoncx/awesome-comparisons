@@ -47,7 +47,13 @@ export class FeatureGroupingService {
 
     public parseGroupedMarkdown(payload: MarkdownComparisonPayload): GroupedCriteriaStructure {
         const criteriaIndex = new Map<string, Criteria>();
-        (payload.configuration?.criteria || []).forEach(criteria => criteriaIndex.set(criteria.id, criteria));
+        const criteriaIndexNormalized = new Map<string, Criteria>();
+        (payload.configuration?.criteria || []).forEach(criteria => {
+            criteriaIndex.set(criteria.id, criteria);
+            criteriaIndexNormalized.set(criteria.id.replace(/[^A-Za-z0-9]+/g, '').toLowerCase(), criteria);
+        });
+        const lookupCriteria = (id: string): Criteria | undefined =>
+            criteriaIndex.get(id) ?? criteriaIndexNormalized.get(id.replace(/[^A-Za-z0-9]+/g, '').toLowerCase());
 
         const groups: FeatureGroupView[] = [];
         const flat: Criteria[] = [];
@@ -72,7 +78,7 @@ export class FeatureGroupingService {
                 }
 
                 criteria.children
-                    .map(childId => criteriaIndex.get(childId))
+                    .map(childId => lookupCriteria(childId))
                     .filter((child): child is Criteria => !!child)
                     .forEach(child => {
                         if (!childSet.has(child.id)) {
@@ -128,7 +134,7 @@ export class FeatureGroupingService {
             }
 
             childIds
-                .map(childId => criteriaIndex.get(childId))
+                .map(childId => lookupCriteria(childId))
                 .filter((child): child is Criteria => !!child)
                 .forEach(child => {
                     if (!childSet.has(child.id)) {

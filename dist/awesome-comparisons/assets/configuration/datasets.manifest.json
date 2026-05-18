@@ -184,6 +184,28 @@
       }
     },
     {
+      "id": "code-orchestration",
+      "displayLabel": "Code Orchestration",
+      "shortDescription": "Multi-agent parallel coding orchestration systems",
+      "description": "Systems that coordinate multiple AI coding agents running in parallel to build software. Covers commercial platforms, open-source frameworks, and git-native protocols for parallel agent execution, dependency management, and cross-agent verification.",
+      "assetDirectory": "assets/generated/code-orchestration/",
+      "accentColor": "#e83e8c",
+      "icon": "default-icon.svg",
+      "preferredTheme": "dark",
+      "isDefault": false,
+      "sources": {
+        "dataDir": "datasets/code-orchestration/data",
+        "config": "datasets/code-orchestration/config/comparison.yml",
+        "style": "configuration/style.css",
+        "configDefaults": [
+          "configuration/comparison-default.yml",
+          "configuration/defaults/general-licensing.yml",
+          "configuration/defaults/groups-advanced.yml",
+          "configuration/defaults/value-displays.yml"
+        ]
+      }
+    },
+    {
       "id": "ai-chat",
       "displayLabel": "AI Chat Clients",
       "shortDescription": "AI chat interfaces and conversational assistants",

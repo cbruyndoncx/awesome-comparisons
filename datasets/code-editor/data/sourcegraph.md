@@ -7,7 +7,7 @@ A code intelligence platform for universal code search, navigation, large-scale 
 - Code/Editor
 
 ### Version
-- Sourcegraph 6.12 (2025-12-10)
+- Sourcegraph 2026.1 (2026)
   - Rolling releases; Sourcegraph 6.12 introduced new AI models for Cody Enterprise. Cloud customers transitioning to weekly updates starting Feb 2026.
 
 ### Repo
@@ -62,8 +62,10 @@ Sourcegraph is a platform that provides precise, scalable code search and code n
   - You require large-scale automated code changes (Batch Changes) or engineering metrics (Code Insights).
   - You need an AI assistant that can reason across multiple repositories and provide actionable code suggestions (Cody), and you can accept the vendor/license model.
 
+- 2026.1 additions: Skills API with Jira and Notion integrations; Auto-Remediation (CI/CD integration for auto-fixing lint errors and test failures); Smart Hover Summaries (beta); new models: Claude Opus 4.5, Gemini 3 Pro, GPT-5.1; 1M token context window for comprehensive codebase understanding; JetBrains now GA (with feature gaps); Visual Studio experimental support.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

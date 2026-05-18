@@ -11,7 +11,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -47,19 +47,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "-",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- -"
           }
         ]
       },
@@ -77,7 +69,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
             "type": "text",
@@ -88,7 +80,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -184,7 +176,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -194,31 +186,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Available in GitHub Copilot public preview",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "Available in GitHub Copilot public preview"
               }
             ]
           }
@@ -239,7 +207,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -275,19 +243,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "-",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- -"
           }
         ]
       },
@@ -305,26 +265,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Anthropic's most intelligent model achieving 80.9% on SWE-bench Verified with advanced effort parameter, enhanced computer use capabilities, and self-improving agent features at 67% lower pricing than previous Opus.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Anthropic's most intelligent model achieving 80.9% on SWE-bench Verified with advanced effort parameter, enhanced computer use capabilities, and self-improving agent features at 67% lower pricing than previous Opus."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -420,7 +372,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -431,24 +383,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -469,7 +403,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -505,19 +439,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "-",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- -"
           }
         ]
       },
@@ -535,26 +461,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Anthropic's most intelligent model with 1M token context window, agent teams feature, and best-in-class agentic coding capabilities for complex multi-step tasks and large codebase operations.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Anthropic's most intelligent model with 1M token context window, agent teams feature, and best-in-class agentic coding capabilities for complex multi-step tasks and large codebase operations."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -650,7 +568,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -661,24 +579,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -699,7 +599,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -735,19 +635,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "-",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- -"
           }
         ]
       },
@@ -765,26 +657,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "State-of-the-art coding model that can autonomously code for 30 hours, build applications, manage databases, purchase domains, and perform security audits with exceptional editing accuracy.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- State-of-the-art coding model that can autonomously code for 30 hours, build applications, manage databases, purchase domains, and perform security audits with exceptional editing accuracy."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -880,7 +764,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -891,24 +775,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -929,7 +795,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -965,19 +831,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/THUDM/CodeGeeX",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://github.com/THUDM/CodeGeeX"
           }
         ]
       },
@@ -995,26 +853,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Multilingual large-scale code generation model (13B) from Tsinghua University (THUDM) for code generation, translation, completion, summarization, and IDE integration.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Multilingual large-scale code generation model (13B) from Tsinghua University (THUDM) for code generation, translation, completion, summarization, and IDE integration."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -1116,7 +966,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -1126,31 +976,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Model code is open-source; weights are available for academic research. Commercial use of weights typically requires registration/approval per THUDM's model license terms.",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "Model code is open-source; weights are available for academic research. Commercial use of weights typically requires registration/approval per THUDM's model license terms."
               }
             ]
           }
@@ -1171,7 +997,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -1207,35 +1033,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Associated Github repositories (public components) -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/exafunction/codeium.el",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/exafunction/codeium-react-code-editor",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Note: The core Codeium Enterprise server and model infrastructure are proprietary; no public GitHub repo for the full enterprise/server distribution is published by the vendor.",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- https://github.com/exafunction/codeium.el    \n- https://github.com/exafunction/codeium-react-code-editor    \n- Note: The core Codeium Enterprise server and model infrastructure are proprietary; no public GitHub repo for the full enterprise/server distribution is published by the vendor.    \n\n<!-- Associated Github repositories (public components) -->"
           }
         ]
       },
@@ -1253,7 +1055,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
             "type": "text",
@@ -1264,7 +1066,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -1360,7 +1162,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -1371,24 +1173,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -1409,7 +1193,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -1445,19 +1229,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/meta-llama/codellama",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://github.com/meta-llama/codellama"
           }
         ]
       },
@@ -1475,7 +1251,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
             "type": "text",
@@ -1486,7 +1262,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -1582,7 +1358,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -1592,31 +1368,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "N/A",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Open-source model: weights freely available for download for research and commercial use under Meta's license terms, not a time-limited trial.",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "Open-source model: weights freely available for download for research and commercial use under Meta's license terms, not a time-limited trial."
               }
             ]
           }
@@ -1637,7 +1389,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -1673,19 +1425,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://huggingface.co/mistralai",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://huggingface.co/mistralai"
           }
         ]
       },
@@ -1703,26 +1447,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Mistral's code-focused model family: Codestral for real-time code completion and Devstral for autonomous multi-step agentic coding workflows, with competitive SWE-bench performance at 24B parameters.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Mistral's code-focused model family: Codestral for real-time code completion and Devstral for autonomous multi-step agentic coding workflows, with competitive SWE-bench performance at 24B parameters."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -1818,7 +1554,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -1829,24 +1565,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -1867,7 +1585,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -1903,19 +1621,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "-",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- -"
           }
         ]
       },
@@ -1933,26 +1643,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Cursor's exclusive frontier coding model trained with reinforcement learning on real-world software engineering, optimized for 4x faster generation with production-grade tools integration and low-latency agentic workflows.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Cursor's exclusive frontier coding model trained with reinforcement learning on real-world software engineering, optimized for 4x faster generation with production-grade tools integration and low-latency agentic workflows."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -2048,7 +1750,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -2058,31 +1760,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Available through Cursor 2.0",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "Available through Cursor 2.0"
               }
             ]
           }
@@ -2103,7 +1781,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -2139,19 +1817,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/deepseek-ai/DeepSeek-R1",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://github.com/deepseek-ai/DeepSeek-R1"
           }
         ]
       },
@@ -2169,26 +1839,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Open-source reasoning model using MoE architecture and reinforcement learning, matching OpenAI o1 on reasoning tasks with self-verification and chain-of-thought capabilities.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Open-source reasoning model using MoE architecture and reinforcement learning, matching OpenAI o1 on reasoning tasks with self-verification and chain-of-thought capabilities."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -2284,7 +1946,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -2295,24 +1957,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -2333,7 +1977,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -2369,19 +2013,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/deepseek-ai/DeepSeek-V3",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://github.com/deepseek-ai/DeepSeek-V3"
           }
         ]
       },
@@ -2399,26 +2035,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "671B parameter MoE model (37B activated) with exceptional math and coding performance, featuring V3.1 hybrid reasoning and V3.2 sparse attention for 128K contexts.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- 671B parameter MoE model (37B activated) with exceptional math and coding performance, featuring V3.1 hybrid reasoning and V3.2 sparse attention for 128K contexts."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -2514,7 +2142,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -2525,24 +2153,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -2563,7 +2173,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -2599,19 +2209,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/fauxpilot/fauxpilot",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://github.com/fauxpilot/fauxpilot"
           }
         ]
       },
@@ -2629,26 +2231,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Open-source, locally-hosted code-completion server providing a privacy-focused alternative to cloud-based assistants like GitHub Copilot.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Open-source, locally-hosted code-completion server providing a privacy-focused alternative to cloud-based assistants like GitHub Copilot."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -2744,7 +2338,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -2754,31 +2348,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "N/A",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Open-source software: freely available under MIT license, not a time-limited trial.",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "Open-source software: freely available under MIT license, not a time-limited trial."
               }
             ]
           }
@@ -2799,7 +2369,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -2835,19 +2405,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "-",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- -"
           }
         ]
       },
@@ -2865,26 +2427,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Google's advanced thinking model family with 2.5 Pro for complex coding tasks and 2.5 Flash for efficient workhorse operations, featuring 1M token context and native tool use.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Google's advanced thinking model family with 2.5 Pro for complex coding tasks and 2.5 Flash for efficient workhorse operations, featuring 1M token context and native tool use."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -2980,7 +2534,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -2991,24 +2545,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -3029,7 +2565,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -3065,19 +2601,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "-",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- -"
           }
         ]
       },
@@ -3095,7 +2623,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
             "type": "text",
@@ -3106,7 +2634,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -3140,7 +2668,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- Release: November 18, 2025    \n- Benchmarks:    \n- SWE-bench Verified: 76.2%    \n- Terminal-Bench 2.0: 54.2%    \n- Key Feature: Multimodal vibe coding (visual code instruction)    \n- Google Antigravity: Multi-pane agentic coding interface (free public preview)    \n- Platforms: AI Studio, Vertex AI, Gemini CLI, third-party tools    \n- Integrations: Cursor, GitHub, JetBrains, Replit, Manus    \n- Availability: Worldwide where Gemini models are accessible    \n- Developer: Google DeepMind    \n- Special Capabilities: Advanced reasoning, agentic workflows, generative UI responses    \n- 2025-2026 Update: Gemini 3 Flash released December 17, 2025 as new default model with PhD-level reasoning. Gemini 3 Deep Think available December 4, 2025 for AI Ultra subscribers. Gemini 3 Ultra premium tier for enterprise/mission-critical workloads. Gemini 3 launched in Google Search AI Mode day one (120+ countries). Integrated into Google Maps with hands-free conversational driving and landmark-based navigation. Rolling out in Android Auto (250M+ cars). Nano Banana Pro image model built on Gemini 3. Configurable Deep Think mode explores multiple hypotheses simultaneously. 1M token context with caching. Native multimodal handling of text/images/audio/video/code in single model."
+            "content": "- Release: November 18, 2025    \n- Benchmarks:    SWE-bench Verified: 76.2% Terminal-Bench 2.0: 54.2%\n- Key Feature: Multimodal vibe coding (visual code instruction)    \n- Google Antigravity: Multi-pane agentic coding interface (free public preview)    \n- Platforms: AI Studio, Vertex AI, Gemini CLI, third-party tools    \n- Integrations: Cursor, GitHub, JetBrains, Replit, Manus    \n- Availability: Worldwide where Gemini models are accessible    \n- Developer: Google DeepMind    \n- Special Capabilities: Advanced reasoning, agentic workflows, generative UI responses    \n- 2025-2026 Update: Gemini 3 Flash released December 17, 2025 as new default model with PhD-level reasoning. Gemini 3 Deep Think available December 4, 2025 for AI Ultra subscribers. Gemini 3 Ultra premium tier for enterprise/mission-critical workloads. Gemini 3 launched in Google Search AI Mode day one (120+ countries). Integrated into Google Maps with hands-free conversational driving and landmark-based navigation. Rolling out in Android Auto (250M+ cars). Nano Banana Pro image model built on Gemini 3. Configurable Deep Think mode explores multiple hypotheses simultaneously. 1M token context with caching. Native multimodal handling of text/images/audio/video/code in single model."
           }
         ]
       },
@@ -3202,7 +2730,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -3212,37 +2740,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Available through Gemini app and AI Studio",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Google Antigravity available at no charge in public preview",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "Available through Gemini app and AI Studio Google Antigravity available at no charge in public preview"
               }
             ]
           }
@@ -3263,7 +2761,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -3299,19 +2797,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://huggingface.co/zai-org/GLM-4.5",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://huggingface.co/zai-org/GLM-4.5"
           }
         ]
       },
@@ -3329,26 +2819,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Open-source MoE model family with 355B total parameters (32B active) featuring exceptional coding performance, achieving 64.2% on SWE-bench and 80.8% win rate against Qwen3 Coder in real-world challenges.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Open-source MoE model family with 355B total parameters (32B active) featuring exceptional coding performance, achieving 64.2% on SWE-bench and 80.8% win rate against Qwen3 Coder in real-world challenges."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -3444,7 +2926,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -3455,24 +2937,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -3493,7 +2957,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -3529,19 +2993,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://huggingface.co/zai-org/GLM-4.6",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://huggingface.co/zai-org/GLM-4.6"
           }
         ]
       },
@@ -3559,7 +3015,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
             "type": "text",
@@ -3570,7 +3026,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -3638,13 +3094,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Open-weight model",
-                "plainChildren": ""
+                "plainChildren": "Open-weight model"
               }
             ]
           }
@@ -3668,24 +3118,6 @@
             ]
           }
         ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
-              }
-            ]
-          }
-        ]
       }
     ],
     "sourcePath": "glm-4-6.md"
@@ -3702,7 +3134,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -3738,19 +3170,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/THUDM/GLM-4",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://github.com/THUDM/GLM-4"
           }
         ]
       },
@@ -3768,26 +3192,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Zhipu AI's 355B/32B active MoE model with top-tier coding benchmarks, 200K context, Chain-of-Thought reasoning, and native English-Chinese bilingual support.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Zhipu AI's 355B/32B active MoE model with top-tier coding benchmarks, 200K context, Chain-of-Thought reasoning, and native English-Chinese bilingual support."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -3883,7 +3299,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -3894,24 +3310,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -3932,7 +3330,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -3968,19 +3366,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "-",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- -"
           }
         ]
       },
@@ -3998,26 +3388,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "OpenAI's flagship agentic coding model combining GPT-5.2 and GPT-5.1-Codex-Max capabilities with enhanced long-horizon work, native context compaction, improved tool calling, and specialized defensive cybersecurity features.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- OpenAI's flagship agentic coding model combining GPT-5.2 and GPT-5.1-Codex-Max capabilities with enhanced long-horizon work, native context compaction, improved tool calling, and specialized defensive cybersecurity features."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -4113,7 +3495,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -4124,24 +3506,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -4162,7 +3526,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -4198,19 +3562,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "-",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- -"
           }
         ]
       },
@@ -4228,26 +3584,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "OpenAI's most advanced agentic coding model combining frontier coding performance with enhanced reasoning, achieving state-of-the-art benchmarks while operating 25% faster with fewer tokens than any prior model.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- OpenAI's most advanced agentic coding model combining frontier coding performance with enhanced reasoning, achieving state-of-the-art benchmarks while operating 25% faster with fewer tokens than any prior model."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -4343,7 +3691,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -4354,24 +3702,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -4392,7 +3722,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -4428,19 +3758,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "-",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- -"
           }
         ]
       },
@@ -4458,26 +3780,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "OpenAI's flagship model achieving state-of-the-art 74.9% on SWE-bench Verified and 88% on Aider Polyglot, featuring significant improvements in math, coding, visual perception, and health analysis.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- OpenAI's flagship model achieving state-of-the-art 74.9% on SWE-bench Verified and 88% on Aider Polyglot, featuring significant improvements in math, coding, visual perception, and health analysis."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -4573,7 +3887,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -4584,24 +3898,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -4622,7 +3918,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -4658,19 +3954,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://huggingface.co/xai-org",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://huggingface.co/xai-org"
           }
         ]
       },
@@ -4688,26 +3976,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "xAI's 314B open-source MoE model with 64 transformer layers and Apache 2.0 licensing, enabling commercial use and customization of enterprise-grade language capabilities.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- xAI's 314B open-source MoE model with 64 transformer layers and Apache 2.0 licensing, enabling commercial use and customization of enterprise-grade language capabilities."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -4803,7 +4083,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -4814,24 +4094,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -4852,7 +4114,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -4888,19 +4150,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "-",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- -"
           }
         ]
       },
@@ -4918,26 +4172,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "xAI's most advanced model trained on 200,000 GPU Colossus cluster with reinforcement learning at pretraining scale, featuring native tool use and specialized coding variant Grok Code Fast 1.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- xAI's most advanced model trained on 200,000 GPU Colossus cluster with reinforcement learning at pretraining scale, featuring native tool use and specialized coding variant Grok Code Fast 1."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -5033,7 +4279,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -5044,24 +4290,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -5082,7 +4310,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -5118,19 +4346,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "-",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- -"
           }
         ]
       },
@@ -5148,7 +4368,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
             "type": "text",
@@ -5159,7 +4379,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -5210,13 +4430,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Go",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Supports other languages but particularly adept at these",
-                "plainChildren": ""
+                "plainChildren": "Supports other languages but particularly adept at these"
               }
             ]
           }
@@ -5291,7 +4505,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -5301,31 +4515,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Free access through launch partner tools for limited time",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "Free access through launch partner tools for limited time"
               }
             ]
           }
@@ -5346,7 +4536,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -5382,19 +4572,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/MoonshotAI/Kimi-K2",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://github.com/MoonshotAI/Kimi-K2"
           }
         ]
       },
@@ -5412,26 +4594,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Advanced reasoning-enhanced version of Kimi K2 that claims top position in reasoning, coding, and agentic-tool benchmarks, surpassing GPT-5 and Claude Sonnet 4.5 Thinking mode.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Advanced reasoning-enhanced version of Kimi K2 that claims top position in reasoning, coding, and agentic-tool benchmarks, surpassing GPT-5 and Claude Sonnet 4.5 Thinking mode."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -5499,13 +4673,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Open weights available on Hugging Face",
-                "plainChildren": ""
+                "plainChildren": "Open weights available on Hugging Face"
               }
             ]
           }
@@ -5533,7 +4701,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -5544,24 +4712,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -5582,7 +4732,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -5618,19 +4768,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/MoonshotAI/Kimi-K2",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://github.com/MoonshotAI/Kimi-K2"
           }
         ]
       },
@@ -5648,26 +4790,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Trillion-parameter open-weight MoE model from Alibaba-backed Moonshot AI, achieving state-of-the-art performance in coding, math, and agentic reasoning with 32B activated parameters.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Trillion-parameter open-weight MoE model from Alibaba-backed Moonshot AI, achieving state-of-the-art performance in coding, math, and agentic reasoning with 32B activated parameters."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -5735,13 +4869,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Open weights available on GitHub and Hugging Face",
-                "plainChildren": ""
+                "plainChildren": "Open weights available on GitHub and Hugging Face"
               }
             ]
           }
@@ -5769,7 +4897,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -5780,24 +4908,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -5818,7 +4928,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -5854,19 +4964,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/MoonshotAI/Kimi-Linear",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://github.com/MoonshotAI/Kimi-Linear"
           }
         ]
       },
@@ -5884,26 +4986,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Efficient 48B/3B MoE model with hybrid linear attention achieving 6x faster decoding at 1M token contexts and 75% memory reduction through Kimi Delta Attention, outperforming full attention architectures.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Efficient 48B/3B MoE model with hybrid linear attention achieving 6x faster decoding at 1M token contexts and 75% memory reduction through Kimi Delta Attention, outperforming full attention architectures."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -5999,7 +5093,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -6010,24 +5104,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -6048,7 +5124,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -6084,25 +5160,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/kiteco/kiteco",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/kiteco",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://github.com/kiteco/kiteco    \n- https://github.com/kiteco"
           }
         ]
       },
@@ -6120,26 +5182,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Former AI-powered code-completion assistant that ran local ML models for low-latency, privacy-first context-aware completions and inline documentation across popular editors; company ceased operations in late 2022 and released parts of its codebase as open source.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Former AI-powered code-completion assistant that ran local ML models for low-latency, privacy-first context-aware completions and inline documentation across popular editors; company ceased operations in late 2022 and released parts of its codebase as open source."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -6184,13 +5238,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Other",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Many others via editor plugins",
-                "plainChildren": ""
+                "plainChildren": "Many others via editor plugins"
               }
             ]
           }
@@ -6237,13 +5285,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Company published several repositories under the kiteco GitHub organization after winding down; some components and research artifacts are available for reuse.",
-                "plainChildren": ""
+                "plainChildren": "Company published several repositories under the kiteco GitHub organization after winding down; some components and research artifacts are available for reuse."
               }
             ]
           }
@@ -6271,7 +5313,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -6281,31 +5323,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "N/A",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Open-source (post-shutdown): repositories freely available, not a time-limited trial.",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "Open-source (post-shutdown): repositories freely available, not a time-limited trial."
               }
             ]
           }
@@ -6326,7 +5344,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -6362,19 +5380,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/meta-llama/llama-models",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://github.com/meta-llama/llama-models"
           }
         ]
       },
@@ -6392,26 +5402,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Meta's open-weight multimodal MoE models with 17B active parameters per token, supporting up to 10M token context and rivaling GPT-4 and Gemini 2.0 on coding, reasoning, and image tasks.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Meta's open-weight multimodal MoE models with 17B active parameters per token, supporting up to 10M token context and rivaling GPT-4 and Gemini 2.0 on coding, reasoning, and image tasks."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -6507,7 +5509,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -6518,24 +5520,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -6556,7 +5540,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -6592,19 +5576,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/MiniMax-AI/MiniMax-M2",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://github.com/MiniMax-AI/MiniMax-M2"
           }
         ]
       },
@@ -6622,7 +5598,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
             "type": "text",
@@ -6633,7 +5609,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -6725,24 +5701,6 @@
             ]
           }
         ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
-              }
-            ]
-          }
-        ]
       }
     ],
     "sourcePath": "minimax-m2.md"
@@ -6759,7 +5717,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -6795,19 +5753,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://huggingface.co/nvidia/NVIDIA-Nemotron-Nano-12B-v2-VL-BF16"
           }
         ]
       },
@@ -6825,7 +5775,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
             "type": "text",
@@ -6836,7 +5786,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -6857,13 +5807,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Any",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Primarily focused on visual understanding tasks rather than code generation",
-                "plainChildren": ""
+                "plainChildren": "Primarily focused on visual understanding tasks rather than code generation"
               }
             ]
           }
@@ -6910,13 +5854,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Open-weights with permissive NVIDIA license",
-                "plainChildren": ""
+                "plainChildren": "Open-weights with permissive NVIDIA license"
               }
             ]
           }
@@ -6944,7 +5882,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -6954,31 +5892,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Available for free under NVIDIA's open license",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "Available for free under NVIDIA's open license"
               }
             ]
           }
@@ -6999,7 +5913,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -7035,19 +5949,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://huggingface.co/microsoft/phi-4",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://huggingface.co/microsoft/phi-4"
           }
         ]
       },
@@ -7065,26 +5971,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Microsoft's 14B small language model excelling at mathematical reasoning and on-device deployment, competing with models many times its size through data quality optimization.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Microsoft's 14B small language model excelling at mathematical reasoning and on-device deployment, competing with models many times its size through data quality optimization."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -7180,7 +6078,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -7191,24 +6089,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -7229,7 +6109,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -7258,26 +6138,18 @@
         "children": [
           {
             "type": "text",
-            "content": "- 2022-03-01    \n- Available in multiple model sizes: 160M, 405M, and 2.7B parameters"
+            "content": "- 2022-03-01    Available in multiple model sizes: 160M, 405M, and 2.7B parameters"
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/VHellendoorn/Code-LMs",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://github.com/VHellendoorn/Code-LMs"
           }
         ]
       },
@@ -7295,26 +6167,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Open-source GPT-2-style autoregressive code model (160M/405M/2.7B) with particularly strong performance on C/C++ code; includes checkpoints, training scripts, and tokenizer configs under the MIT license for reproducible research and on-prem deployments.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Open-source GPT-2-style autoregressive code model (160M/405M/2.7B) with particularly strong performance on C/C++ code; includes checkpoints, training scripts, and tokenizer configs under the MIT license for reproducible research and on-prem deployments."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -7383,13 +6247,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Other",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "12 in total",
-                "plainChildren": ""
+                "plainChildren": "12 in total"
               }
             ]
           }
@@ -7464,7 +6322,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -7474,31 +6332,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "N/A",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Open-source model: checkpoints, code, and training artifacts are freely available under MIT license (Zenodo archive and GitHub repo), not a time-limited trial.",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "Open-source model: checkpoints, code, and training artifacts are freely available under MIT license (Zenodo archive and GitHub repo), not a time-limited trial."
               }
             ]
           }
@@ -7519,7 +6353,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -7555,19 +6389,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/QwenLM/Qwen-Code",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://github.com/QwenLM/Qwen-Code"
           }
         ]
       },
@@ -7585,26 +6411,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Alibaba Cloud's family of specialized coding models (1.5B-32B parameters) with state-of-the-art performance on code generation and debugging benchmarks.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Alibaba Cloud's family of specialized coding models (1.5B-32B parameters) with state-of-the-art performance on code generation and debugging benchmarks."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -7638,7 +6456,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- Model Family: 1.5B, 3B, 7B, 14B, 32B parameters    \n- Release: Qwen 2.5 Coder (September 2024), Qwen2.5-Max (January 2025)    \n- Benchmarks:    \n- HumanEval: 88.4% (7B model)    \n- Spider: 82.0% (7B model)    \n- LiveCodeBench: 38.7 (Max model)    \n- Strengths: Code generation, debugging, SQL generation    \n- Availability: Alibaba Cloud Model Studio, Qwen Chat platform    \n- Competition: Positioned against DeepSeek R3, Codestral, Claude Sonnet    \n- Open source: Qwen 2.5 Coder series available for local deployment    \n- Developer: Alibaba Cloud    \n- 2025-2026 Update: Qwen2.5-Max launched January 2025 as MoE model pretrained on 20T+ tokens, outperforming GPT-4o and DeepSeek-V3. Qwen2.5-VL multimodal family released January 2025. Qwen3-Max launched September 5, 2025, outperforming other foundation models. Latest snapshot qwen3-max-2026-01-23 integrates thinking/non-thinking modes with web search, code interpreter, and webpage extraction tools. Supports 92 programming languages and 29 natural languages with 128K context window."
+            "content": "- Model Family: 1.5B, 3B, 7B, 14B, 32B parameters    \n- Release: Qwen 2.5 Coder (September 2024), Qwen2.5-Max (January 2025)    \n- Benchmarks:    HumanEval: 88.4% (7B model) Spider: 82.0% (7B model) LiveCodeBench: 38.7 (Max model)\n- Strengths: Code generation, debugging, SQL generation    \n- Availability: Alibaba Cloud Model Studio, Qwen Chat platform    \n- Competition: Positioned against DeepSeek R3, Codestral, Claude Sonnet    \n- Open source: Qwen 2.5 Coder series available for local deployment    \n- Developer: Alibaba Cloud    \n- 2025-2026 Update: Qwen2.5-Max launched January 2025 as MoE model pretrained on 20T+ tokens, outperforming GPT-4o and DeepSeek-V3. Qwen2.5-VL multimodal family released January 2025. Qwen3-Max launched September 5, 2025, outperforming other foundation models. Latest snapshot qwen3-max-2026-01-23 integrates thinking/non-thinking modes with web search, code interpreter, and webpage extraction tools. Supports 92 programming languages and 29 natural languages with 128K context window."
           }
         ]
       },
@@ -7700,7 +6518,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -7711,24 +6529,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -7749,7 +6549,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -7785,19 +6585,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/QwenLM/Qwen3",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://github.com/QwenLM/Qwen3"
           }
         ]
       },
@@ -7815,26 +6607,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Alibaba's trillion-parameter MoE model excelling at reasoning, coding, and multilingual tasks with adaptive thinking modes and 262K token context.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Alibaba's trillion-parameter MoE model excelling at reasoning, coding, and multilingual tasks with adaptive thinking modes and 262K token context."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -7930,7 +6714,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -7941,24 +6725,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -7979,7 +6745,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -8015,19 +6781,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/ByteDance-Seed/Seed-Coder",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://github.com/ByteDance-Seed/Seed-Coder"
           }
         ]
       },
@@ -8045,26 +6803,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Family of lightweight open-source code LLMs (base, instruct, reasoning) trained on 6T tokens from GitHub code, commit histories, and code-related web data, achieving SOTA at 8B scale.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Family of lightweight open-source code LLMs (base, instruct, reasoning) trained on 6T tokens from GitHub code, commit histories, and code-related web data, achieving SOTA at 8B scale."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -8151,13 +6901,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "MIT",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Note: Different sources report both MIT and Apache-2.0; verify from official repository",
-                "plainChildren": ""
+                "plainChildren": "Note: Different sources report both MIT and Apache-2.0; verify from official repository"
               }
             ]
           }
@@ -8166,7 +6910,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -8177,24 +6921,6 @@
                 "level": 1,
                 "content": "Yes",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -8215,7 +6941,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": []
       },
       {
@@ -8251,25 +6977,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/bigcode-project/starcoder",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Hugging Face: https://huggingface.co/bigcode/starcoder",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- https://github.com/bigcode-project/starcoder    \n- Hugging Face: https://huggingface.co/bigcode/starcoder"
           }
         ]
       },
@@ -8287,26 +6999,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Open-source 15.5B-parameter decoder-only transformer for code generation and infilling, trained on permissively licensed GitHub code (The Stack). Optimized for code completion, infilling, translation between languages, and code-aware QA.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Open-source 15.5B-parameter decoder-only transformer for code generation and infilling, trained on permissively licensed GitHub code (The Stack). Optimized for code completion, infilling, translation between languages, and code-aware QA."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -8327,13 +7031,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Any",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "80+ programming languages (Python, JavaScript, Java, C/C++, Go, Ruby, Rust, TypeScript, PHP, Shell, SQL, etc.)",
-                "plainChildren": ""
+                "plainChildren": "80+ programming languages (Python, JavaScript, Java, C/C++, Go, Ruby, Rust, TypeScript, PHP, Shell, SQL, etc.)"
               }
             ]
           }
@@ -8399,13 +7097,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Other",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "BigCode-OpenRAIL / OpenRAIL-M (model card requires agreement on use)",
-                "plainChildren": ""
+                "plainChildren": "BigCode-OpenRAIL / OpenRAIL-M (model card requires agreement on use)"
               }
             ]
           }
@@ -8414,7 +7106,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Free Trial",
+        "content": "FreeTrial",
         "children": [
           {
             "type": "list",
@@ -8424,31 +7116,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "N/A",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Open-source model: weights and checkpoints are freely available (subject to accepting the model card / license on Hugging Face), not a time-limited trial.",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "Open-source model: weights and checkpoints are freely available (subject to accepting the model card / license on Hugging Face), not a time-limited trial."
               }
             ]
           }

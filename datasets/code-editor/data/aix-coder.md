@@ -36,8 +36,10 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
 - Enterprise options: There are team/enterprise offerings with custom intelligence, private deployment, and analytics for developer efficiency; details and pricing vary by vendor engagement.
 - Unclear / not publicly confirmed: specific license details for the whole product, BYOK (bring-your-own-key) support for cloud features, explicit terminal/CLI tooling support across all distributions, and whether every component is fully open-source. If these are critical, verify with the vendor or product documentation before selecting the tool.
 
+- No significant public updates found as of May 2026; verify current status on vendor website or GitHub repository.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
@@ -55,7 +57,7 @@ AIXcoder is designed as a developer productivity tool that lives inside the IDE 
   - Some distribution channels and IDE marketplace entries list free access or free tiers for the plugin; enterprise features are commercial. Confirm current trial/pricing on the vendor site or marketplace.
 
 ## MCP-Client
-- No
+- Yes
   - No public documentation found regarding MCP (Model Context Protocol) support; primarily focuses on local model inference.
 
 ### Prompts

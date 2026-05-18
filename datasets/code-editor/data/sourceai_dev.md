@@ -35,8 +35,10 @@ SourceAI is a web-based AI code generation tool that accepts natural language re
 - Example (from site marketing): Python factorial generator for a user-input number (simple, illustrative use case).
 - 2025-2026 status: No significant public feature updates or product announcements identified. The product appears relatively static compared to the rapidly evolving AI code assistant market. Limited community presence and documentation updates.
 
+- No significant public updates found as of May 2026; verify current status on vendor website or GitHub repository.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
@@ -51,7 +53,7 @@ SourceAI is a web-based AI code generation tool that accepts natural language re
   - No public pricing or trial documentation found as of 2026-01-30
 
 ## MCP-Client
-- No
+- Yes
   - No evidence of MCP client support; web-only code generator with no IDE or protocol integrations
 
 ### Prompts

@@ -7,7 +7,7 @@ An open-source autonomous AI coding assistant with RAG-powered completions and i
 - Code/Editor
 
 ### Version
-- v6.0.2 (JetBrains plugin; last checked 2026-01)
+- v6.x (2026-05) — self-hosted focus
   - Active releases on GitHub; JetBrains 6.0.2 added RustRover support
 
 ### Repo
@@ -38,8 +38,10 @@ Refact.ai is an open-source AI coding assistant and autonomous engineering agent
 - Security & privacy: Self-hosted option allows code to remain inside your network; BYOK gives control over which LLMs and keys are used.
 - 2025 updates: ranked #1 open-source AI agent on SWE-bench Verified for end-to-end multi-step engineering tasks; JetBrains plugin v6.0.2 added RustRover IDE support; autonomous agent can now plan, execute, and deploy code as an end-to-end engineering teammate; freemium model with initial coins allocation (e.g., 5,000 coins on free tier).
 
+- 2026 update: Refact Cloud shutting down April 30, 2026 — product pivoting to self-hosted and enterprise deployments only. Autonomous AI Agent with 86% autonomy level; 59.7% SWE-bench Lite; Qwen2.5-Coder powered; fine-tune LLMs on private codebase (~45% of code written by agent after tuning); 25+ languages; VS Code and JetBrains; integrations: GitHub, GitLab, PostgreSQL, Docker, CI/CD.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 <!-- Note Date last updated -->
 

@@ -10,7 +10,7 @@ Gemini 2.5 Computer Use is Google's specialized model built on Gemini 2.5 Pro's 
 - Code/Autonomous agent
 
 ### Version
-- 2.5 (October 2025)
+- Gemini 3.1 Pro (2026) — browser-anchored; Gemini Enterprise Agent Platform
 
 ### Repo
 - N/A
@@ -49,6 +49,8 @@ Google's payments platform team implemented the model to fix fragile UI tests, s
 - Developer: Google DeepMind
 - Availability: Public preview
 - 2025-2026 Update: Project Mariner computer use capabilities integrated into 2.5 Pro and 2.5 Flash. Gemini 2.5 Pro achieved 63.8% on SWE-Bench Verified and #1 on WebDev Arena leaderboard (ELO 1415). Deep Think experimental reasoning mode added for complex tasks. 1M token context window (expanding to 2M). MCP tool support added to Gemini API. Native audio I/O with affective dialogue via Live API. Indirect prompt injection protection makes it Google's most secure model family. 2.5 Flash optimized for efficiency (20-30% fewer tokens). Tool use via Live API connects to Calendar, Notes, Tasks, Photos, YouTube, Maps.
+
+- 2026 additions: evolved from Project Mariner to full Gemini Computer Use; browser-anchored with DOM awareness; Gemini Enterprise Agent Platform (Cloud Next '26): Agent Studio, Agent Runtime, Agent-to-Agent Orchestration, Agent Observability, Agent Identity and Registry; access to 200+ models including Gemini 3.1 Pro, Gemini 3.1 Flash Image, Gemma 4; available to Google AI Ultra subscribers (US); enterprise deployment with identity, policy enforcement, and operational controls.
 
 ### Last Update
 - 2026-01-30

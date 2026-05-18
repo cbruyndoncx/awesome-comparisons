@@ -7,7 +7,7 @@ A cloud-first, AI-powered development environment from Google that combines prot
 - Code/Editor
 
 ### Version
-- Preview (2025)
+- Sunset scheduled March 22, 2027
   - Launched April 2025 at Google Cloud Next; Gemini 2.5 upgrade April 2025; Autonomous Agent Mode and MCP support added July 2025; Gemini CLI integration June-July 2025.
 
 ### Repo
@@ -47,8 +47,10 @@ Firebase Studio is an integrated, agentic development workspace built to speed a
 - Firebase AI Logic: evolution from Vertex AI in Firebase; supports Gemini 2.5 series "thinking" budget, grounding with Google Search.
 - Mobile prototyping: App Prototyping agent optimized for mobile devices (May 2025).
 
+- 2026 status: Firebase Studio is being sunset March 22, 2027. Google AI Studio is now the active rapid prototyping platform (major update March 21, 2026 added Firebase integration, multiplayer, Secrets Manager, NPM packages, Next.js support, session persistence). For full IDE development, Google Antigravity is the next-generation platform. Migration tools to Google AI Studio are available.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

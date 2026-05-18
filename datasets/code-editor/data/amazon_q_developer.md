@@ -7,7 +7,7 @@ Amazon Q Developer (sometimes shortened to "Amazon Q") is AWS's developer-facing
 - Code/Editor
 
 ### Version
-- Rolling updates (AWS managed service)
+- Rolling updates — transitioning to AWS Kiro (2026)
   - No traditional version numbers; major agent update April 2025 achieved 66% on SWE-Bench Verified. Build/test validation added January 2025. Enhanced cost management November 2025.
 
 ### Repo
@@ -47,8 +47,11 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
 - Limitations: cloud-hosted (no fully local/offline mode), generated code requires human review for correctness/security/licensing, enterprise controls and BYOK options are limited compared to self-hosted offerings.
 - Related: Amazon CodeWhisperer functionality was consolidated into Amazon Q Developer around April 2024; for legacy references check CodeWhisperer docs (https://aws.amazon.com/codewhisperer/).
 
+- 2026 critical update: New Q Developer signups blocked May 15, 2026; full end-of-support for IDE plugins and paid subscriptions April 30, 2027. AWS transitioning to Kiro as next-generation agentic development platform.
+- 2026 additions before transition: MCP support for extending IDE plugins with external tools and data sources; agentic coding enhancements (autonomous feature implementation, automated code reviews, documentation generation); multi-IDE support (VS Code, JetBrains, Visual Studio, Eclipse).
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

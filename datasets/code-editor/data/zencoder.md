@@ -1,4 +1,4 @@
-# Zencoder - https://zencoder.ai
+# Zencoder April 2026 (monthly releases) https://zencoder.ai
 Zencoder is an AI coding assistant designed to help developers ship products faster with integrated support for Visual Studio Code and JetBrains IDEs. Using its proprietary Repo Grokking technology, Zencoder analyzes entire repositories through embeddings and graph representations stored in a vector database, enabling specialized agent-based capabilities that automate complex coding tasks while maintaining deep contextual awareness of codebase architecture and conventions.
 
 **Dataset ID:** code-editor
@@ -39,8 +39,10 @@ The platform's Agentic Pipeline orchestrates specialized AI components including
 ### Notes
 Integrates with GitHub, GitLab, Jira, and Sentry for executing tasks like resolving issues and creating pull requests. Supports multiple AI models (GPT, Claude 3.5 Sonnet, custom models). Continuously updates embeddings and graph as repository evolves. Community-driven zenagents-library for custom agent configurations.
 
+- April 2026 additions: GPT-5.5 and Claude Opus 4.7 support; auto permission mode; image generation; agent-browser skill. Feb 2026: research agent, subagent streaming, Zenflow scheduled automation. March 2026: multi-model code reviews, skills in UI, major stability upgrades. Core: multi-agent architecture (Zentester, Zen Agents for CI/CD); repository grokking; 100+ integrations (GitHub, GitLab, Jira, Datadog, CircleCI); 70+ languages; VS Code and JetBrains.
+
 ### Last Update
-2026-01-31
+2026-05-14
 
 ## Licensing
 

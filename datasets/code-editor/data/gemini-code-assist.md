@@ -8,7 +8,7 @@ Google's dedicated Gemini coding assistant that supports multi-modal capabilitie
 - Code/Editor
 
 ### Version
-- Rolling updates (2025-2026)
+- Rolling updates (2026-05) — Gemini 2.5; Gemini 3 coming soon
   - Agent Mode introduced 2025; MCP migration October 2025; Gemini 2.5 Flash/Pro models; 1M token context window.
 
 ### Repo
@@ -39,8 +39,10 @@ Gemini Code Assist is Google's AI-powered coding assistant that leverages the Ge
 - Enterprise: Standard and Enterprise editions with higher quotas, private codebase indexing, and Google Cloud service integrations.
 - Auto-outline: AI-assisted documentation generating English-language summaries of code blocks.
 
+- 2026 additions: Agent Mode widely available — handles complex multi-file tasks with codebase analysis and plan proposals; Next Edit Predictions (Preview) for IntelliJ and VS Code; 1M token context window; Gemini 2.5 model (Gemini 3 announced coming soon); agentic chat with MCP server support; inline diffs with visual highlighting; revert to checkpoints; free tier: 6,000 code requests/day, 240 chat requests/day.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

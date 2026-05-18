@@ -1,4 +1,5 @@
-# CommandCode - https://commandcode.ai
+# CommandCode - v0.25.14 (May 2026)
+  - 218+ releases shipped; active weekly cadence https://commandcode.ai
 CommandCode is a terminal-based AI coding agent that continuously learns and adapts to individual developer coding styles and preferences. Using a proprietary meta neuro-symbolic AI model called "taste-1," CommandCode addresses the frustration of AI-generated code that is technically correct but doesn't match personal coding patterns by learning through every interaction and progressively aligning with developer conventions for variable naming, code structure, testing preferences, and architectural patterns.
 
 **Dataset ID:** terminal
@@ -32,10 +33,12 @@ The agent learns from explicit feedback (accepted/rejected suggestions), implici
 - HTML
 
 ### Notes
-Installed via npm (npm i -g command-code). Claimed performance improvements include 10x faster coding, 2x faster code reviews, and 5x fewer bugs. Learned taste can be shared across teams using npx taste push/pull commands.
+Installed via npm (npm i -g command-code) or shorthand cmdc alias (v0.25.13, Windows-compatible). Claimed performance improvements include 10x faster coding, 2x faster code reviews, and 5x fewer bugs. Learned taste can be shared across teams using npx taste push/pull commands.
+- taste-1: neuro-symbolic AI model pairing LLMs with learned developer preferences; every accept/reject/edit is a training signal; auto-generates reusable skills from observed patterns.
+- v0.25.x additions (May 2026): cmdc alias for Windows compatibility; ZDR-only provider flag (CMD_ZDR=1); plan-based model access control in model selector.
 
 ### Last Update
-2026-01-31
+2026-05-14
 
 ## Licensing
 

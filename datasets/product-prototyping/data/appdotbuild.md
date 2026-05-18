@@ -30,6 +30,29 @@ The default generated stacks commonly include React on the frontend and Fastify 
 - JavaScript
 - HTML/CSS
 
+
+### Frontend Stack
+- React
+  - React + Vite.
+
+### Backend Stack
+- Node.js / Fastify
+  - Fastify + Drizzle ORM; deployed to Koyeb serverless.
+
+### Database
+- PostgreSQL
+  - Neon serverless PostgreSQL + Neon Auth.
+
+
+### Style Library
+- Flexible
+  - Style library not prescribed; determined by project prompt.
+
+### Testing
+- Unit Tests
+- Integration Tests
+  - Tests written and run automatically as part of the generation workflow.
+
 ### Notes
 - Core workflow: user supplies a prompt (CLI or web UI) → agent generates full codebase → creates GitHub repository → provisions DB & auth → runs tests → deploys frontend and backend to live URL.
 - Infrastructure integrations: Neon (serverless Postgres + Neon Auth) for database and auth; Koyeb (serverless deployments) for hosting/deployments.
@@ -60,7 +83,7 @@ The default generated stacks commonly include React on the frontend and Fastify 
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
   - No public documentation found regarding MCP (Model Context Protocol) client support.
 
 ### Prompts

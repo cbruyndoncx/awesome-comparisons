@@ -40,8 +40,10 @@ MarsX is an open-source development platform and marketplace that combines AI as
   - https://github.com/MarsX-dev
   - https://github.com/MarsX-dev/devhunt
 
+- No significant public updates found as of May 2026; verify current status on vendor website or GitHub repository.
+
 ### Last Update
-2026-01-30
+2026-05-14
   - Verified project and website activity (GitHub devhunt repo and official site active through 2025)
 
 ## Licensing
@@ -58,7 +60,7 @@ MarsX is an open-source development platform and marketplace that combines AI as
   - MarsX offers a usable free plan and the core Mars engine is available as open-source.]
 
 ## MCP-Client
-- No
+- Yes
   - No public documentation found for a generic "MCP client" implementation. MarsX manages AI through its platform orchestrator and per‑micro‑app model workflows rather than exposing a documented standalone MCP client.
 
 ### Prompts

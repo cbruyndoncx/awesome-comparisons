@@ -7,7 +7,7 @@ AI-powered agentic IDE and coding assistant focused on whole-project understandi
 - Code/Editor
 
 ### Version
-- Wave 13+ (2025-2026, rolling releases)
+- v1.13.6 (2026-01)
   - Wave 13 introduced multi-agent worktree sessions. JetBrains plugin v2.12.5 (Jan 2026). Supports GPT-5.2-Codex, Claude Opus 4.5, Gemini 3 Flash models.
 
 ### Repo
@@ -39,8 +39,10 @@ Windsurf is an AI-powered, agentic development environment (IDE-like) designed t
 - Community artifacts: there are community-driven helper files and rules (e.g., .windsurfrules) circulated to help guide AI assistants on code style and project rules; these can be found in various GitHub repos but the main product is not open-source.
 - 2025-2026 updates: Wave 13 introduced first-class multi-agent parallel sessions with Git worktree support (multiple Cascade sessions without conflicts, side-by-side panes). New model support: GPT-5.2-Codex (4 reasoning tiers), GPT-5.1-Codex Max, Gemini 3 Flash, Claude Opus 4.5 at Sonnet pricing. Code Integrity Layer (Jan 2026 Secure-by-Default update) scans AI-generated code for vulnerabilities before production. Improved Codemaps and Cascade summarization for long conversations. Fast Context now respects .codeiumignore and .gitignore. Zero Data Retention mode available. JetBrains plugin v2.12.5 (Jan 2026) for Python, JavaScript, Java, Go. Windsurf Tab (Supercomplete) predicts next 3 steps instead of just next line.
 
+- v1.13.6 additions (2026): GPT-5.1 and GPT-5.1-Codex models with variable thinking for adaptive reasoning depth; Agent Command Center for managing Cascade and cloud Devin agents; Cascade Agent Skills via .agents/skills directory; expanded Codemaps (chat, Mermaid diagrams, AI suggestions); improved Windsurf Browser with Cascade integration; plan mode auto-switch to Code Mode.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 
 ## Licensing

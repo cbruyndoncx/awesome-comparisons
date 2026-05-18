@@ -70,7 +70,7 @@ mux (Coding Agent Multiplexer) is a cross-platform desktop application for AI-as
 - Licensed AGPL-3.0 (see GitHub repo) and distributed in a Preview state; expect bugs and active development.
 
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 <!-- Licensing -->

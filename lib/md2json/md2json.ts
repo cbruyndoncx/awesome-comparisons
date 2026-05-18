@@ -123,6 +123,7 @@ export class Md2Json {
 
         const mainContent: string[] = [];
         let mainList: string[] = [];
+        let mainListPlainChildren: string[] = [];
         let inMainList = false;
 
         const flushMainText = () => {
@@ -145,11 +146,11 @@ export class Md2Json {
           }
           const listChildren: ListItemNode[] = mainList
             .filter(item => item.trim().length > 0)
-            .map(item => ({
+            .map((item, idx) => ({
               type: "item",
               level: 2,
               content: item,
-              plainChildren: ""
+              plainChildren: mainListPlainChildren[idx] || ""
             }));
           if (listChildren.length > 0) {
             criterionHeader.children.push({
@@ -159,6 +160,7 @@ export class Md2Json {
             });
           }
           mainList = [];
+          mainListPlainChildren = [];
           inMainList = false;
         };
 
@@ -201,17 +203,19 @@ export class Md2Json {
               subContent.length = 0;
             };
 
+            let subListPlainChildren: string[] = [];
+
             const flushSubList = () => {
               if (!inSubList || subList.length === 0) {
                 return;
               }
               const listChildren: ListItemNode[] = subList
                 .filter(item => item.trim().length > 0)
-                .map(item => ({
+                .map((item, idx) => ({
                   type: "item",
                   level: 3,
                   content: item,
-                  plainChildren: ""
+                  plainChildren: subListPlainChildren[idx] || ""
                 }));
               if (listChildren.length > 0) {
                 subHeader.children.push({
@@ -221,6 +225,7 @@ export class Md2Json {
                 });
               }
               subList = [];
+              subListPlainChildren = [];
               inSubList = false;
             };
 
@@ -232,12 +237,22 @@ export class Md2Json {
                   (st.startsWith('#') && !st.startsWith('##'))) {
                 break;
               }
-              if (st.startsWith('- ')) {
+              const isTopLevelBullet = /^- /.test(subLine);
+              const isIndentedBullet = !isTopLevelBullet && /^\s+- /.test(subLine);
+              if (isTopLevelBullet) {
                 inSubList = true;
                 subList.push(st.substring(2).trim());
+                subListPlainChildren.push("");
+              } else if (isIndentedBullet && inSubList && subList.length > 0) {
+                // Append indented sub-bullet as plainChildren on the last top-level item
+                const lastIdx = subList.length - 1;
+                const existing = subListPlainChildren[lastIdx];
+                subListPlainChildren[lastIdx] = existing
+                  ? existing + ' ' + st.substring(2).trim()
+                  : st.substring(2).trim();
               } else if (inSubList && st === '') {
                 // keep list open
-              } else if (inSubList && !st.startsWith('- ')) {
+              } else if (inSubList && !isTopLevelBullet) {
                 flushSubList();
                 subContent.push(subLine);
               } else {
@@ -252,12 +267,22 @@ export class Md2Json {
             continue;
           }
 
-          if (t.startsWith('- ')) {
+          const isMainTopLevelBullet = /^- /.test(line);
+          const isMainIndentedBullet = !isMainTopLevelBullet && /^\s+- /.test(line);
+          if (isMainTopLevelBullet) {
             inMainList = true;
             mainList.push(t.substring(2).trim());
+            mainListPlainChildren.push("");
+          } else if (isMainIndentedBullet && inMainList && mainList.length > 0) {
+            // Append indented sub-bullet as plainChildren on the last top-level item
+            const lastIdx = mainList.length - 1;
+            const existing = mainListPlainChildren[lastIdx];
+            mainListPlainChildren[lastIdx] = existing
+              ? existing + ' ' + t.substring(2).trim()
+              : t.substring(2).trim();
           } else if (inMainList && t === '') {
             // keep list open across blank lines
-          } else if (inMainList && !t.startsWith('- ')) {
+          } else if (inMainList && !isMainTopLevelBullet) {
             flushMainList();
             mainContent.push(line);
           } else {

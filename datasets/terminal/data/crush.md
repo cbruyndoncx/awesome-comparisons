@@ -9,7 +9,8 @@ Crush is a glamorous terminal-based AI coding agent developed by Charmbracelet t
 - Code/Terminal
 
 ### Version
-v0.33.2
+90+ releases (2026-05)
+  - Check https://github.com/charmbracelet/crush for current version
 
 ### Repo
 https://github.com/charmbracelet/crush
@@ -31,9 +32,10 @@ Crush supports multi-model flexibility with providers including OpenAI, Anthropi
 
 ### Notes
 Built upon Charmbracelet's broader ecosystem of Go-based libraries and tools. The Charm ecosystem reportedly powers 25,000+ applications. Supports installation via Homebrew, npm, Arch Linux, Go, FreeBSD, and Nix. Recent updates include expandable thinking, improved UI structure, and interface enhancements.
+- 2026 status: 90+ releases, 65+ contributors, 12k+ GitHub stars; FSL-1.1-MIT license; upcoming Ultraviolet toolkit integration.
 
 ### Last Update
-2026-01-31
+2026-05-14
 
 ## Licensing
 

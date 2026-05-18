@@ -8,7 +8,7 @@ An autonomous cloud-based coding agent from OpenAI that plans, writes, tests, de
 - Code/Autonomous agent
 
 ### Version
-GPT-5.2-Codex (2025; most advanced coding model with long-horizon reasoning and context compaction)
+GPT-5.5 (April 23, 2026) — 1M token context; Fast Mode
 
 ### Repo
 -
@@ -39,8 +39,10 @@ OpenAI Codex has evolved from a code-completion co-pilot into a fully autonomous
 - GPT-5.2-Codex adds stronger vision performance for interpreting screenshots, technical diagrams, and UI surfaces.
 - Human-in-the-loop workflows remain central; sandboxing and approval modes ensure developer control.
 
+- GPT-5.5 additions (April 23, 2026): 1M token context window (400K in Codex); Fast Mode 1.5x faster token generation at 2.5x cost; available across Plus/Pro/Business/Enterprise/Edu/Go tiers; NVIDIA GB200 NVL72 infrastructure (35x lower cost/million tokens, 50x higher throughput/megawatt); debugging cycles reduced days→hours; experimentation weeks→overnight. Enterprise: remote SSH to approved cloud VMs; zero-data retention; full auditability. Note: GPT-5.5 supports ChatGPT auth only; GPT-5.2-Codex remains recommended for API key workflows.
+
 ### Last Update
-2026-01-30
+2026-05-15
 
 ## Licensing
 

@@ -41,8 +41,10 @@ CodeLayer is an open-source, keyboard-first IDE and orchestration layer for AI c
 - 12 Factor Agents framework for reliable agent design patterns.
 - Enterprise: RBAC, audit trails, compliance logging, data residency controls, secrets management.
 
+- No significant public updates found as of May 2026; verify current status on vendor website or GitHub repository.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

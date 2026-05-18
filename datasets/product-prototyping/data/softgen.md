@@ -29,6 +29,29 @@ Softgen is an AI-powered web app builder that generates complete full-stack appl
 - TypeScript
 - HTML/CSS
 
+
+### Frontend Stack
+- Next.js
+  - Next.js v15 + Tailwind CSS + shadcn/ui.
+
+### Backend Stack
+- Platform / BaaS
+  - Supabase for backend, auth, and API.
+
+### Database
+- Supabase
+  - Supabase managed PostgreSQL; code exported to GitHub.
+
+
+### Style Library
+- Tailwind CSS
+- shadcn/ui
+  - Fixed — Tailwind CSS + shadcn/ui always generated; dark mode included.
+
+### Testing
+- None
+  - No test generation documented.
+
 ### Notes
 - Conversational scaffolding: AI agent "Cascade" dialogues with users to clarify goals and plan development before generating code.
 - Production-grade stack: React, Next.js v15, Tailwind CSS, shadcn/ui for frontend; Supabase for database and backend.
@@ -62,7 +85,7 @@ Softgen is an AI-powered web app builder that generates complete full-stack appl
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

@@ -30,6 +30,28 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 - JavaScript
 - HTML/CSS
 
+
+### Frontend Stack
+- React
+  - React/TypeScript default via StackBlitz WebContainers; other JS frameworks possible.
+
+### Backend Stack
+- Node.js / Express
+  - Node.js runtime in browser via WebContainers; framework varies by prompt.
+
+### Database
+- Any
+  - Database integration depends on user prompt; Supabase and others commonly wired in.
+
+
+### Style Library
+- Flexible
+  - Style library specified via prompt; Tailwind common but not fixed.
+
+### Testing
+- None
+  - No automatic test generation; developer adds manually.
+
 ### Notes
 - Multi-LLM architecture: supports OpenAI, Anthropic, Google Gemini, Mistral, Ollama, HuggingFace, DeepSeek, Groq, and others.
 - Uses StackBlitz WebContainers for a full browser-based dev environment with NPM support and hot reload.

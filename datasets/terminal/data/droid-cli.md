@@ -11,7 +11,7 @@ Droid CLI is part of Factory AI's developer platform, offering AI assistants (ca
 - Code/Autonomous agent
 
 ### Version
-- 2025
+- 2026-05 (active release cadence; no semantic versions published)
 
 ### Repo
 - -
@@ -32,7 +32,7 @@ The platform offers code completion, PR review suggestions, automated fixes, and
 - Any
 
 ### Notes
-- Terminal-Bench Performance: 58.75% on v0.1.1 (state-of-the-art), testing 80 human-verified, Dockerized tasks
+- Terminal-Bench Performance: #1 at 58.75% (Terminal-Bench v0.1.1); also ranked #1 on Terminal-Bench 2.0
 - Benchmark Coverage: Coding, build/test, dependency management, data/ML workflows, systems, networking, security, and core CLI
 - Free Trial: 20M tokens included
 - Droid Exec: Headless CLI mode for automation (CI pipelines, cron jobs, pre-commit hooks)
@@ -40,8 +40,10 @@ The platform offers code completion, PR review suggestions, automated fixes, and
 - Features: Code completion, PR reviews, automated fixes, workflow automation
 - Installation: Simple curl command to get started
 
+- 2026 additions: thinking duration display in CLI/App; live streaming of partial text; interval loop command for scheduled tasks; per-tool MCP autonomy overrides; Windows setup script; MCP menu revamp; deny-list command explanations; force-kill occupied ports; Italian language support; auto-fallback to Droid Core on rate limits.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

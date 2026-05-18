@@ -1,4 +1,4 @@
-# Pi - https://github.com/mariozechner/pi
+# Pi - 2026 (actively maintained; check https://pi.dev for current version) https://github.com/mariozechner/pi
 Pi is a minimal terminal-based coding agent harness designed as an alternative to traditional IDEs, enabling developers to interact with AI language models through a command-line interface. Built around the principle of "adapt pi to your workflows, not the other way around," Pi emphasizes constraints and minimalism to avoid unnecessary complexity while providing a complete orchestration system combining an agent loop, terminal UI framework, and execution tools.
 
 **Dataset ID:** terminal
@@ -31,9 +31,10 @@ The system employs differential rendering where the interface only redraws chang
 
 ### Notes
 Distributed via npm as command-line package. Supports Gateway architecture for multi-platform integration (WhatsApp, Telegram, Discord, iMessage). Includes pi-interactive-shell extension for autonomous CLI control within observable overlay (vim, htop, psql, ssh, docker logs). Supports streaming output, session continuation and branching.
+- Key differentiation: minimal attack surface vs browser-based tools; works in air-gapped and regulated environments (CMMC Level 2/3); four operating modes: Interactive, Print/JSON, RPC, SDK; on-premise model endpoint support.
 
 ### Last Update
-2026-01-31
+2026-05-14
 
 ## Licensing
 

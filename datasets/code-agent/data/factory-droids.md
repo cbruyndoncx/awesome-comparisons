@@ -8,7 +8,7 @@ Agent-native software development platform with Droids achieving 58.75% on Termi
 - Code/Autonomous agent
 
 ### Version
-- GA (2025-05-28); Terminal-Bench score improved to 64.9% (January 2026)
+- GA (2026-05) — Terminal-Bench #1; 63.1% (Dec 2025)
 
 ### Repo
 - N/A
@@ -41,6 +41,8 @@ Factory introduced "Droids" as autonomous software development agents that becam
 - GA launch: May 28, 2025 general availability after extensive beta period.
 - 2025-2026 Update: Terminal-Bench score improved from 58.75% (Sep 2025) to 63.1% (Dec 2025) to 64.9% (Jan 2026), maintaining #1 position ahead of Codex CLI (60.4%), Warp (59.1%), OpenHands (43.8%), and Claude Code (40.1%). $50M Series B at $300M valuation (Sep 2025) led by NEA, Sequoia, J.P. Morgan, Nvidia. 200% quarter-over-quarter growth throughout 2025. Enterprise metrics: 31x faster feature delivery, 96.1% shorter migration times, 95.8% reduction in on-call resolution. SOC 2, GDPR, ISO 42001, CCPA compliance. Single-tenant architecture for regulated industries. Pricing: free for individuals, $20-$2,000/mo for teams, $2.70/M token overages. Model-agnostic and IDE-agnostic design. Expanding beyond engineering to data analysts, PMs, designers, and sales engineers.
 
+- 2026 status: Terminal-Bench #1 at 58.75% (Core v0.1.1); latest eval 63.1% (Dec 2025). Sonnet-based Droid outperforms Opus-based competitors — agent architecture is the decisive factor. Three-tier prompting hierarchy (Tool Descriptions, System Prompts, System Notifications); system intelligence bootstrapping with environmental context; controlled background execution primitives; speed optimizations with LLM runtime awareness; multi-platform: VS Code, JetBrains, Vim, terminals, web UI. See also droid-cli.md in terminal dataset for CLI-specific 2026 updates.
+
 ### Last Update
 - 2026-01-30
 
@@ -58,7 +60,7 @@ Factory introduced "Droids" as autonomous software development agents that becam
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

@@ -7,7 +7,7 @@ RooCode (formerly Roo Cline) is an AI-powered VS Code extension that acts as an 
 - Code/Editor
 
 ### Version
-v3.11+ (2025-2026, rolling releases)
+v3.53.0 (2026-05)
 
 ### Repo
 - https://github.com/RooCodeInc/Roo-Code
@@ -37,8 +37,11 @@ RooCode is designed to be more than an autocomplete plugin — it functions as a
 - Considerations: while powerful, RooCode's autonomy features require careful configuration (auto-approve actions, file restrictions) to avoid unintended changes. Local/offline model support exists but may require additional setup and offers different capabilities than cloud models.
 - 2025-2026 updates: Roo Code Cloud launched as a collaborative team platform with Planner and Coder agents across Slack and GitHub. Sticky model assignment per mode (e.g., o3 for Architect, Claude Sonnet 4 for Code). Context-aware auto-mode switching. Built-in prompt optimization. Browser actions via computer use. Inline terminal output in chat. Granular codebase indexing provider configuration.
 
+- v3.53.0 additions (2026): GPT-5.5 support via OpenAI Codex provider; Claude Opus 4.7 on Vertex AI; previous checkpoint navigation controls in chat; Roo Code Cloud for PR reviews and remote task creation; 5M+ developers.
+- Note: original Roo Veterinary Inc. team transitioned focus to Roomote; community team now maintains Roo Code going forward.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

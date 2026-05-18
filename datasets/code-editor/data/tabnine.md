@@ -7,7 +7,7 @@ AI-powered code completion and developer assistant focused on privacy and enterp
 - Code/Editor
 
 ### Version
-- v5.24.4+ (2025-10-29)
+- v5.28+ (2026-04)
   - Switchable models (GPT-4o, Claude 4.0 Sonnet, Gemini 2.5 Flash/Pro); Image-to-Code workflow (March 2025); Code Review Agent (April 2025 AI Tech Awards winner); usage API (July 2025); pause-completion controls.
 
 ### Repo
@@ -43,8 +43,10 @@ Tabnine is a commercial AI coding assistant that emphasizes privacy, flexible de
 - Limitations: free/basic tier availability was reduced in 2025; on-prem/self-hosted deployments require operational expertise (Kubernetes, infra); most public performance benchmarks are vendor-provided — evaluate with a pilot before enterprise-wide roll-out.
 - Ideal for: regulated industries (finance, healthcare, government, defense) and organizations that need data residency guarantees and enterprise governance.
 
+- v5.28+ additions (2026): Generalist Agent; CLI expanded with extensions, /ide command, and sandboxing; tool-scope security restrictions; thinking transparency for GPT and Gemini models; enterprise token/cost APIs and per-team quota enforcement; self-managed model support; VS2026 support (Visual Studio 2026); ripgrep-based Search File Content tool; MCP tool enable/disable controls per user; usage and performance metrics.
+
 ### Last Update
-2026-01-30
+2026-05-14
 - Notable recent releases: v5.24.4 (2025-10-29) VS Code binary updates, chat Apply, Agent robustness; v5.24.0 (2025-10-16) hybrid search, switchable/self-hosted models (Qwen, Gemma), Podman support. Multiple 2025 releases added SCIM/IdP sync, remote context scope, CSV usage reports.
 - 2025 highlights: Switchable model architecture (GPT-4o, Claude 4.0 Sonnet, Gemini 2.5 Flash/Pro in real-time); Image-to-Code workflow (March 2025, converts UI mockups/flowcharts to React/SQL/Terraform); Code Review Agent (April 2025 AI Tech Awards "Best Innovation in AI Coding"); usage API for granular analytics (July 2025); pause-completion controls; redesigned provenance UI grouping matches by license; Go coaching guidelines.
 

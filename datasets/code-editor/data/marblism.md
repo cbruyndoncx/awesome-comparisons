@@ -35,8 +35,10 @@ Marblism provides two complementary offerings: (1) a suite of role-specific "AI 
 - Strengths: very fast prototyping, simple onboarding (<30 minutes), GitHub repo output, useful for MVPs and solo founders.
 - Limitations: not enterprise-grade (compliance, on-premises), limited tech stack (React/Node), generated code usually needs manual review/hardening for production, documentation/support primarily community/Discord.
 
+- No significant public updates found as of May 2026; verify current status on vendor website or GitHub repository.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
@@ -50,7 +52,7 @@ Marblism provides two complementary offerings: (1) a suite of role-specific "AI 
 - Yes
 
 ## MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

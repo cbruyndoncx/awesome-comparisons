@@ -7,7 +7,7 @@ Mistral Code is an enterprise-focused AI coding assistant from Mistral AI that b
 - Code/Editor
 
 ### Version
-- v1 (2025-06-04)
+- v1.14+ (2026)
 
 ### Repo
 - N/A (proprietary; IDE integration via Continue.dev open-source plugin)
@@ -37,8 +37,10 @@ Mistral Code is a packaged AI developer assistant designed for enterprise adopti
 - 2025 updates: Devstral reportedly outperforms OpenAI GPT-4.1-mini by 20%+ on AI programming benchmarks; enterprise deployments report 90% code completion accuracy and 100% developer adoption; supports fine-tuning and distillation of lightweight model variants on private repos.
 - Supports code migration between languages/frameworks and automated performance analysis with optimization suggestions.
 
+- v1.14 additions (2026): Next Edit Prediction (VS Code only) replaces classic autocomplete — intelligently jumps to next edit locations, handles deletions, powered by codestral-next-edit model; Devstral model for agentic coding tasks; models: Codestral (completion), Codestral Embed (search/retrieval), Devstral (agent), Mistral Medium (chat); 80+ programming languages; context awareness over files, Git diffs, terminal output, issues; Enterprise only (VS Code + JetBrains).
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

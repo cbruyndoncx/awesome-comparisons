@@ -11,13 +11,13 @@ Jules Tools is Google's command-line interface for Jules, their asynchronous AI 
 - Code/Autonomous agent
 
 ### Version
-- Public Beta (October 2025)
+- GA (August 2025; CLI October 2025)
 
 ### Repo
 - -
 
 ### Rating
-- [3] Async cloud-based agent with strong GitHub integration and Gemini 3 Pro backing
+- [4] Async cloud-based agent now GA; Gemini 3.1 Pro backing; clear pricing tiers; environment snapshots for consistent execution
 - [2] No extensibility (no MCP, hooks, plugins, or skills); cloud-only execution model
 
 ### Short Description
@@ -34,17 +34,19 @@ The tool integrates with existing repositories, understands full project context
 - Any
 
 ### Notes
-- Model: Powered by Gemini 2.5 Pro
-- Async Operation: Works in background while developers focus on other tasks
-- Launch: Public beta began August 2025, CLI launched October 2025
-- Free Tier: Up to 15 individual daily tasks and 3 concurrent tasks
-- Paid Plans: Google AI Pro ($19.99/month - 5x limits), Ultra ($124.99/month - 20x limits)
-- Features: Test writing, feature building, bug fixing, dependency updates, audio changelogs
+- Model: Powered by Gemini 3.1 Pro (updated from 2.5 Pro)
+- Async Operation: Works in background while developers focus on other tasks; submit and return to completed PRs
+- GA: Exited public beta August 2025 after hundreds of UI and quality improvements; CLI launched October 2025
+- Free Tier: 15 tasks/day, 3 concurrent tasks
+- Paid Plans: Pro $19.99/month (100 tasks/day, 15 concurrent); Ultra $124.99/month (300 tasks/day, 60 concurrent)
+- Features: Test writing, feature building, bug fixing, dependency updates, audio changelogs, multimodal input
+- Environment Snapshots: Ensures faster, consistent execution across sessions
+- User Steerability: Modify Jules' execution plan at different stages before and during execution
 - Integration: Public API available for custom workflow integration
-- Cloud Execution: Clones repositories to Cloud VM for development
+- Cloud Execution: Clones repositories to isolated Google Cloud VM
 
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
@@ -62,7 +64,7 @@ The tool integrates with existing repositories, understands full project context
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

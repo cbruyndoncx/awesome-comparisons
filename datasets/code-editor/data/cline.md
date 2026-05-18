@@ -7,7 +7,7 @@ Cline is an open-source AI coding assistant implemented as a Visual Studio Code 
 - Code/Editor
 
 ### Version
-- v3.4+ (2025)
+- v3.16.2 (2026-05)
   - MCP Marketplace added February 2025; computer use capabilities (browser interaction via Claude); 300KB file size limit; repository-level custom rules (.clinerules).
 
 ### Repo
@@ -40,8 +40,10 @@ Cline is designed to act as a development partner rather than a simple autocompl
 - Custom rules (.clinerules): repository-level rules to standardize development practices across teams.
 - Local models: supports Ollama and LM Studio up to 70B parameters (Qwen3 Coder 30B recommended).
 
+- v3.16.x additions (2026): workflow feature for reusable workflow files injectable via slash commands; Gemini 2.5 Flash Preview via Vertex AI with 1M token context; quick focus shortcut (Cmd+'); lightbulb actions for selected text (Add to Cline, Explain, Improve); collapsible task list for screen sharing; Vertex AI global endpoint reducing rate limit errors.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

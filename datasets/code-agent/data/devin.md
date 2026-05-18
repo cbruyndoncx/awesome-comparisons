@@ -8,7 +8,7 @@ An autonomous AI software engineer that plans, writes, tests, debugs, and deploy
 - Code/Autonomous agent
 
 ### Version
-v2.0 (Devin 2.0, 2025; $20/month Core plan introduced)
+v3.0 (2026)
 
 ### Repo
 -
@@ -36,8 +36,10 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 - Industry context: Part of a broader shift toward autonomous AI agents that take direct action, not just provide suggestions; competes conceptually with other agent-style developer tools but remains distinct from open-source code assistants.
 - 2025-2026 Update: Devin 2.0 launched with a 96% price reduction (from $500 to $20/month Core plan). Each ACU now delivers 83% more task productivity. Agent-native IDE experience introduced. Pricing tiers: Core ($20/mo, $2.25/ACU), Team ($500/mo, 250 ACUs, $2/ACU), Enterprise (custom with VPC deployment). Nubank reported 4x improvement in task speed after fine-tuning. SWE-bench score: 13.86%. Requires human oversight from senior engineers for quality assurance.
 
+- v3.0 additions (2026): Devin Manages Devins — orchestrates multiple Devin agents in parallel with isolated environments (March 2026); Devin Review with GitHub commit status checks and batch PR comments; native Linear integration for issue/project management; 3x faster startup with new unified UI; Fast Mode (~2x faster responses at 4x ACU); inline file previews (HTML, PDF, SVG); session secrets via API for secure credential management; enterprise ACU hard caps; dynamic re-planning when obstacles arise.
+
 ### Last Update
-2026-01-30
+2026-05-15
 
 ## Licensing
 
@@ -54,7 +56,7 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
   - No public documentation available for Model Context Protocol (MCP) support as of January 2026.
 
 ### Prompts

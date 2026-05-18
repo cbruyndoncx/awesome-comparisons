@@ -1,4 +1,5 @@
-# Neovate Code - https://github.com/NeovateAI
+# Neovate Code - April 2026 (last updated April 28, 2026)
+  - Developer: Ant Group https://github.com/NeovateAI
 Neovate Code is an open-source AI-powered coding agent developed by Ant Group that provides a terminal CLI interface for code generation, debugging, testing, and refactoring tasks. As a model-agnostic platform supporting multiple AI providers, Neovate Code follows the latest AI coding best practices including Spec Driven Development and Parallel Agent approaches, offering both interactive and headless modes with robust session management and an extensible plugin system.
 
 **Dataset ID:** terminal
@@ -33,9 +34,11 @@ Session persistence allows developers to continue work across sessions with hist
 
 ### Notes
 Installed via npm (npm install -g @neovate/code). Supports multimodal input with drag-and-drop for images, screenshots, and diagrams. File references via @ symbol with fuzzy search. Session forking with esc-esc for branching workflows. Desktop client variant in development. Roadmap includes Smart Debug, Smart Review, and Smart Inspection tools.
+- Developer: Ant Group; 1.5k+ GitHub stars; MIT license.
+- Last updated April 28, 2026.
 
 ### Last Update
-2026-01-31
+2026-05-14
 
 ## Licensing
 

@@ -9,7 +9,8 @@ GitHub Copilot CLI is a terminal-based AI assistant that provides a chat-like in
 - Code/Terminal
 
 ### Version
--
+- GA (2026)
+  - Available across all Copilot plans (Free, Pro, Pro+, Business, Enterprise). Transitioning to GitHub AI Credits usage-based billing June 1, 2026.
 
 ### Repo
 https://github.com/github/copilot-cli
@@ -31,9 +32,12 @@ The CLI includes a flexible approval system for tool usage, allowing developers 
 
 ### Notes
 Requires Node.js 22+ and npm 10+. Free plan includes 50 chat requests per month; full access requires GitHub Copilot Individual, Business, or Enterprise subscription. Installation via npm install -g @github/copilot or gh copilot (GitHub CLI integration as of January 2026). Automatically inherits organization's Copilot policies and governance settings. Can create draft PRs and work in background for substantial changes.
+- Billing change (June 1, 2026): transitioning from premium request counts to GitHub AI Credits (token-based billing). Base plan pricing unchanged; code completions remain free.
+- MCP support added for extending CLI capabilities via MCP servers.
+- Model options include Claude Sonnet 4.5, GPT-5, and GPT-5 mini.
 
 ### Last Update
-2026-01-31
+2026-05-14
 
 ## Licensing
 
@@ -51,7 +55,8 @@ Requires Node.js 22+ and npm 10+. Free plan includes 50 chat requests per month;
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
+  - MCP support added; extends CLI capabilities via MCP servers.
 
 ### Prompts
 - No

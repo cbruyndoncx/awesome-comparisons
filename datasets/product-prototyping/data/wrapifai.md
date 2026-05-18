@@ -26,6 +26,28 @@ Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you c
 - JavaScript / TypeScript (front-end embeds)
 - Python (integrations / data uploads)
 
+
+### Frontend Stack
+- No-code / Proprietary
+  - Visual drag-and-drop widget builder; output is script/iframe embed.
+
+### Backend Stack
+- Platform / BaaS
+  - Backend managed entirely by Wrapifai platform.
+
+### Database
+- Built-in / Proprietary
+  - Data managed by Wrapifai platform; not portable.
+
+
+### Style Library
+- Platform / Proprietary
+  - Platform-managed visual styling; no portable CSS framework.
+
+### Testing
+- None
+  - No test generation; output is embeddable widgets.
+
 ### Notes
 - Primary use case: SEO and lead generation. Interactive tools increase time‑on‑site and can be optimized for keyword targets.
 - UX: Drag‑and‑drop/no‑code builder → quick to launch; good for non‑technical users and marketers.
@@ -53,7 +75,7 @@ Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you c
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

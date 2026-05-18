@@ -42,8 +42,10 @@ The Next Edit Suggestion (NES) system predicts multi-line code edits based on co
 ### Notes
 Multi-model backend automatically selects optimal AI (Claude for understanding/refactoring, GPT for generation, Gemini for multimodal). Quest supports local execution, parallel environments, and remote cloud execution for hours-long tasks with automatic recovery. ActionRL alignment achieves >53% increase in code generation ratio. Three-column layout: task list, conversation area, output area with live previews.
 
+- No significant public updates found as of May 2026; verify current status on vendor website or GitHub repository.
+
 ### Last Update
-2026-01-31
+2026-05-14
 
 ## Licensing
 

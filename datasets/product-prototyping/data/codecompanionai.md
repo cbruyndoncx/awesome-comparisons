@@ -27,6 +27,26 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 ### Languages
 - Any
 
+
+### Frontend Stack
+- Any / Multi-framework
+  - Stack determined by user prompt and project context.
+
+### Backend Stack
+- Any / Multi-framework
+
+### Database
+- Any
+
+
+### Style Library
+- Flexible
+  - Stack and style determined entirely by user prompt.
+
+### Testing
+- None
+  - No test generation documented.
+
 ### Notes
 - Privacy: Multiple sources emphasize a local-first design where code and data remain on the user's machine; network calls appear limited to OpenAI API usage.
 - Features reported: semantic code search, natural-language-to-SQL, integrated terminal, Git integration, project scaffolding, file creation and updates, ability to execute shell commands and read outputs.
@@ -55,7 +75,7 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
   - The desktop product is described as running locally and making API calls to OpenAI using the user's key (BYOK). There is no documentation indicating a built-in MCP client connecting to external MCP servers.
 
 ### Prompts

@@ -9,7 +9,7 @@ Antigravity is Google's free AI-powered agentic development platform that repres
 - Code/Terminal
 
 ### Version
-Preview (November 2025)
+Preview / Early Access (November 2025 — enterprise GA not yet announced)
 
 ### Repo
 -
@@ -30,9 +30,12 @@ The platform uses natural language commands triggered through keyboard shortcuts
 
 ### Notes
 Currently in experimental phase with documented operational issues including crashes and quota-management problems. Uses Gemini 3 Pro as primary model with generous usage limits during preview.
+- Enterprise GA not announced as of May 2026; enterprise plan listed as "Coming Soon" with no published pricing or SOC 2 certifications.
+- 2026 additions: expanded agent support (Junie, Claude Agent, OpenAI Codex); CLI plugins via Google Cloud Data Agent Kit; skills system for extensible agent capabilities.
+- Note: Workspace AI Ultra Access add-on deprecated July 7, 2026 — suggests Google is reorganising its agentic development offering. For production enterprise use, consider Gemini Code Assist or Gemini CLI.
 
 ### Last Update
-2026-01-31
+2026-05-14
 
 ## Licensing
 

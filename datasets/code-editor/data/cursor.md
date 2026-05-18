@@ -8,7 +8,8 @@ Cursor is an AI-first code editor and agent platform that layers advanced AI rea
 - Code/Editor
 
 ### Version
-v2.0 (2025-10-29)
+v3.3 (2026-05)
+  - Cursor 3.0 launched April 2, 2026; 3.3 adds faster plan execution with parallel agents
 
 ### Repo
 - -
@@ -40,8 +41,10 @@ Cursor reimagines the developer workflow by making AI agents first-class collabo
 - Browser control: native browser integration for testing, debugging, and UI refinement.
 - Useful links: Official site: https://cursor.com | Announcement coverage: select product release posts and reviews (search for "Cursor 2.0 Composer multi-agent").
 
+- v3.x additions (2026): /multitask command for async parallel subagents; Agents Window for running multiple agents across repos; /worktree isolates agent edits in separate git branches; /best-of-n runs same task across models in parallel with isolated worktrees; Composer 2 frontier coding model; interactive canvases (3.1+); PR review experience (3.3); multi-repo support; cloud/local agent handoff.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

@@ -42,8 +42,10 @@ Nuanced is an MCP (Model Context Protocol) server and code-intelligence layer th
 - Good fit for: teams using LLMs to assist coding on large/complex repos, organizations requiring local analysis for security/privacy, and tooling vendors building LLM-powered code assistants.
 - 2025-2026 context: the broader MCP ecosystem has seen rapid adoption by major platforms (GitHub, Anthropic Claude, etc.); Nuanced occupies a specialized niche providing compiler-grade code context via MCP, complementing general-purpose MCP servers.
 
+- No significant public updates found as of May 2026; verify current status on vendor website or GitHub repository.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

@@ -44,8 +44,10 @@ EasyCode is a local-first AI-powered development environment that emphasizes fin
 - Limitations: locked-in stack (Next.js + Supabase), limited team collaboration features compared with cloud IDEs, no public OSS repo or permissive license available as of this note.
 - Use-case fit: excellent for new projects or MVPs that can accept the opinionated stack; less suitable for migrating large existing codebases using other technologies.
 
+- No significant public updates found as of May 2026; verify current status on vendor website or GitHub repository.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

@@ -8,7 +8,7 @@ AI-powered test generation and code integrity platform (rebranded to Qodo)
 - Test Generation & PR Review Tool
 
 ### Version
-- Qodo platform with 5 specialized agents (Gen, Merge, Cover, Aware, Command); SWE-bench score 71.2% (2025-2026)
+- Qodo platform (2026-05) — 71.2% SWE-bench Verified (ranked 5th globally)
 
 ### Repo
 - https://github.com/qodo-ai/pr-agent
@@ -43,6 +43,8 @@ CodiumAI (rebranded to Qodo) is an AI-first code quality platform focused on aut
   - https://github.com/qodo-ai/pr-agent
   - https://github.com/codium-ai/codium-code-examples
   - https://github.com/codium-ai/codiumai-jetbrains-release
+
+- 2026 additions: expanded to 15+ specialized agentic workflows; Multi-Repository Context Engine for enterprise-scale codebases; real-time IDE code review with instant fix suggestions; automated compliance enforcement; configurable coding standards; SDLC-wide review from IDE to PRs; automated issue resolution with pre-commit verification; compatible with any AI model (not vendor-locked); broad IDE, GitHub, GitLab, and CLI integration.
 
 ### Last Update
 - 2026-01-30

@@ -28,6 +28,28 @@ Base44 is an AI-powered application development platform that enables users to c
 - TypeScript
 - HTML/CSS
 
+
+### Frontend Stack
+- React
+  - React with TypeScript.
+
+### Backend Stack
+- Platform / BaaS
+  - Backend, auth, and APIs managed by Base44 platform.
+
+### Database
+- Built-in / Proprietary
+  - Database hosted and managed by Base44.
+
+
+### Style Library
+- Flexible
+  - Style not prescribed; determined by platform and prompt.
+
+### Testing
+- None
+  - No test generation documented.
+
 ### Notes
 - Wix acquisition: Acquired by Wix for $80 million in June 2025, demonstrating strong market validation.
 - All-in-one stack: Includes UI, database, authentication, and hosting all within Base44.
@@ -57,7 +79,7 @@ Base44 is an AI-powered application development platform that enables users to c
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

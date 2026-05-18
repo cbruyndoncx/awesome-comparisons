@@ -7,7 +7,7 @@ AI-first code completion assistant focused on very large context windows, low-la
 - Code/Editor
 
 ### Version
-- DISCONTINUED (acquired by Cursor ~January 2025)
+- DISCONTINUED (sunsetting November 2025+)
   - Supermaven was acquired by Cursor and is being sunset. Existing customers receive full refunds and free autocomplete inference indefinitely. VS Code users are recommended to migrate to Cursor.
 
 ### Repo
@@ -36,8 +36,10 @@ Supermaven is an AI-powered code completion and developer-assistant platform bui
 - Limitations/considerations: proprietary/cloud-hosted service (no confirmed fully offline/self-hosted option), potential privacy and compliance considerations for sensitive code — review enterprise offerings and data handling policies before adoption.
 - STATUS: Acquired by Cursor (~January 2025) and being sunset. Technology integrated into Cursor. Existing customers receive full refunds for remaining usage and free autocomplete inference indefinitely. VS Code users recommended to migrate to Cursor.
 
+- Sunsetting timeline: acquired by Anysphere (Cursor) November 2024; began sunsetting November 2025 (one year post-acquisition). VS Code standalone product discontinued — users directed to Cursor. Features integrated into Cursor Tab AI model. Existing Neovim and JetBrains users receive free autocomplete inference indefinitely. Agent conversations no longer supported. All remaining user balances refunded.
+
 ### Last Update
-2026-01-30
+2026-05-14
 -
 
 ## Licensing
@@ -52,7 +54,7 @@ Supermaven is an AI-powered code completion and developer-assistant platform bui
 - Yes
 
 ## MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

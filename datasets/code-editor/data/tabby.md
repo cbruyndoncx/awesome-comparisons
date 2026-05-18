@@ -7,7 +7,7 @@ An open-source, self-hosted AI coding assistant for local code completion and ch
 - Code/Editor
 
 ### Version
-v0.20.0 (2025-12)
+v0.29 (2025-05) — no confirmed 2026 updates in available sources
   - v0.20.0 introduced GitHub issues integration with Pochi task management and PR generation from sidebar with CI/Lint/Test summaries
 
 ### Repo
@@ -41,8 +41,10 @@ Tabby is a self-hosted, open-source AI coding assistant that provides code compl
 - Best experience with access to GPU-backed inference or fast local model runners; smaller models usable for lightweight setups.
 - 2025 release highlights: v0.20.0 (Dec 2025) GitHub issues integration and Pochi task management with PR generation; v0.30 GitLab MR indexing as context; v0.29 (May 2025) REST API for doc ingestion; v0.28 (May 2025) Answer Engine messages as persistent shareable Pages; v0.27 (Mar 2025) enhanced @-mention menu; VSCode 1.20.0 (Feb 2025) file mention for chat and inline editing via right-click. LDAP authentication, GitHub/GitLab SSO, and role-based team management added in recent enterprise updates.
 
+- v0.29 additions (May 2025): REST API-based custom documentation integration into completions and chat; Pochi multi-step planning agent for full-stack tasks; Data Connectors (Confluence, Jira, internal knowledge sources); persistent shareable Pages from Answer Engine messages (v0.28); richer @ menu in chat side panel (v0.27). Note: no confirmed v0.30+ releases found in public sources as of May 2026.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

@@ -29,6 +29,28 @@ Tempo is a 2025-era AI development platform accessible at tempo.new that bridges
 - HTML/CSS
 - React/JSX
 
+
+### Frontend Stack
+- React
+  - React/JSX with TypeScript and Tailwind; visual editor syncs with VS Code.
+
+### Backend Stack
+- None
+  - Frontend-only output; no backend generated.
+
+### Database
+- None
+  - No database generated; developer wires in separately.
+
+
+### Style Library
+- Tailwind CSS
+  - Fixed — Tailwind CSS always generated; visual editor exposes Tailwind properties panel.
+
+### Testing
+- None
+  - No test generation documented.
+
 ### Notes
 - Planning-first approach: Generates PRDs and user flow diagrams before code generation, improving architecture for complex applications.
 - Visual-code duality: Drag-and-drop React editor with Figma-like styling panel plus direct VSCode integration for granular control.
@@ -58,7 +80,7 @@ Tempo is a 2025-era AI development platform accessible at tempo.new that bridges
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
   - Has an MCP App Store for API integrations, but does not function as a general MCP client
 
 ### Prompts

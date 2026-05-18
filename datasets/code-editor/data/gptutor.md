@@ -32,8 +32,10 @@ GPTutor is a Visual Studio Code extension launched in 2025 that specializes in e
 - New in 2025 targeting developer education and onboarding.
 - Useful for codebase exploration and understanding legacy code.
 
+- No significant public updates found as of May 2026; verify current status on vendor website or GitHub repository.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
@@ -47,7 +49,7 @@ GPTutor is a Visual Studio Code extension launched in 2025 that specializes in e
 - Yes
 
 ## MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

@@ -7,7 +7,7 @@ An AI assistant plugin for IntelliJ IDEA that can use both local and cloud LLMs.
 - Code/Editor
 
 ### Version
-- v0.4.0+ (2024-2025)
+- v1.4.4 (2026-05-14)
   - RAG introduced in v0.4.0; MCP support added; web search via Google/Tavily; GraphRAG planned.
 
 ### Repo
@@ -41,8 +41,10 @@ DevoxxGenie is an IntelliJ IDEA plugin (100% Java-based) that provides an LLM-po
 - GraphRAG: planned feature for enhanced code relationship understanding.
 - PSI context: Program Structure Interface support (v0.1.14+) for smarter prompt context using IntelliJ's syntactic/semantic code model.
 
+- v1.4.4 (May 14, 2026): persistent semantic conversation memory backed by ChromaDB; blog feed on welcome screen. Recent features: MCP server integration; RAG project context; Git diff/merge viewer; local LLM support (Ollama, LMStudio, GPT4All) and cloud (OpenAI, Anthropic, Mistral, Gemini); multimodal image support; AST context; token cost calculator; web search (Google + Tavily); DEVOXXGENIE.md project customization.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

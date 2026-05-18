@@ -8,7 +8,7 @@ A cloud-first AI-powered code review assistant that analyzes pull requests, gene
 - Code/Autonomous agent
 
 ### Version
-SaaS platform (SOC 2 Type II audit completed 2025; continuous updates through Jan 2026)
+SaaS platform (2026-05) — 2M+ repositories, 13M+ PRs processed
 
 ### Repo
 - (no public repository found)
@@ -50,8 +50,10 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
   - Primary offering is SaaS. Vendor materials mention a self-hosted option for enterprises but public details (architecture, BYOK, on-prem instructions, air-gapped support) are limited—contact vendor for enterprise requirements.
 - 2025-2026 Update: SOC 2 Type II audit completed in 2025. Pricing restructured: Lite (free, unlimited PR reviews), Pro ($24/mo annual per dev), Enterprise (custom, self-hosted, 500+ seats). Added adaptive learning (learns from team feedback), agentic workflows with @coderabbitai in PRs (generate tests, draft docs, open Jira/Linear issues). 40+ linters/SAST tools integrated with LLM noise filtering. VS Code extension added (compatible with Cursor, Windsurf). 2025 research found AI-generated code has 40% more critical issues and 70% more major issues, reinforcing need for AI review tools. Enterprise self-hosted option now available with VPN tunneling.
 
+- 2026 additions: Pro+ tier launched (between Pro and Enterprise) — unit test generation, merge conflict resolution, code simplification, higher rate limits; CLI v0.4.5 for large repos; secret scanning upgraded from Gitleaks to Betterleaks; Custom Finishing Touches (open beta) — reusable automation recipes in .coderabbit.yaml; Issue Planner generates detailed coding plans; 8+ new tool integrations (Stylelint, TruffleHog, OpenGrep, Trivy, PSScriptAnalyzer, TFLint, Fortitude, Blinter); now supports 35+ coding agents including Claude Code, Cursor, Gemini CLI.
+
 ### Last Update
-2026-01-30
+2026-05-15
 
 ## Licensing
 
@@ -68,7 +70,7 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

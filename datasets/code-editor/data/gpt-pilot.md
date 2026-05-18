@@ -41,7 +41,7 @@ GPT Pilot (by Pythagora) is a source-available AI developer assistant designed t
   - PyPI package: https://pypi.org/project/gpt-pilot/
 
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
@@ -58,7 +58,7 @@ GPT Pilot (by Pythagora) is a source-available AI developer assistant designed t
   - The open/source-available GPT Pilot codebase is free to run; Pythagora also offers a commercial Pythagora Pro product with paid features.
 
 ## MCP-Client
-- No
+- Yes
   - No documented MCP client support; uses direct LLM API integrations (OpenAI, Anthropic, Groq).
 
 ### Prompts

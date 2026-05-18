@@ -28,6 +28,28 @@ Create.xyz (rebranded as Anything) is a generative AI app builder that enables u
 - TypeScript
 - HTML/CSS
 
+
+### Frontend Stack
+- React
+  - React components and Next.js pages with TypeScript.
+
+### Backend Stack
+- Next.js API Routes
+  - Backend logic via Next.js API routes.
+
+### Database
+- Any
+  - Database not prescribed; user wires in Supabase or other.
+
+
+### Style Library
+- Flexible
+  - Style library can be specified in prompt; not opinionated.
+
+### Testing
+- None
+  - No automatic test generation.
+
 ### Notes
 - Conversational development: Users describe apps in 1-3 sentences; AI generates pages, components, and backend infrastructure.
 - Real code output: Generates actual production-ready code, not proprietary visual blocks, reducing vendor lock-in.
@@ -59,7 +81,7 @@ Create.xyz (rebranded as Anything) is a generative AI app builder that enables u
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

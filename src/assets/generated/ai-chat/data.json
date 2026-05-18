@@ -11,7 +11,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": [
           {
             "type": "text",
@@ -49,42 +49,18 @@
         "children": [
           {
             "type": "text",
-            "content": "- GPT-5.2 (January 2026)    \n- GPT-5.2 Instant for high-volume fast responses    \n- GPT-5.2 Thinking for deeper reasoning    \n- GPT-5.3-Codex running 25% faster    \n\n<!-- Latest version used for update -->"
+            "content": "- GPT-5.2 (January 2026)    GPT-5.2 Instant for high-volume fast responses GPT-5.2 Thinking for deeper reasoning GPT-5.3-Codex running 25% faster\n\n<!-- Latest version used for update -->"
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Associated Github repository -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "None (proprietary service)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Community projects and reverse-engineered APIs exist",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Official ChatGPT code not released by OpenAI",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- None (proprietary service)    Community projects and reverse-engineered APIs exist Official ChatGPT code not released by OpenAI\n\n<!-- Associated Github repository -->"
           }
         ]
       },
@@ -102,26 +78,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "OpenAI's flagship conversational AI interface providing access to GPT models with web browsing, file analysis, code execution, image generation, and MCP protocol support for extensible integrations.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- OpenAI's flagship conversational AI interface providing access to GPT models with web browsing, file analysis, code execution, image generation, and MCP protocol support for extensible integrations."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -166,23 +134,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Last Update",
+        "content": "LastUpdated",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Note Date last updated -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "February 9, 2026",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- February 9, 2026    \n\n<!-- Note Date last updated -->"
           }
         ]
       },
@@ -260,25 +216,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Free tier: GPT-4o-mini access, 10 messages per 5 hours, file/image uploads, basic web browsing, GPT Store access",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Plus tier: 7-day free trial",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Business: 14-day free trial",
-                "plainChildren": ""
+                "plainChildren": "Free tier: GPT-4o-mini access, 10 messages per 5 hours, file/image uploads, basic web browsing, GPT Store access Plus tier: 7-day free trial Business: 14-day free trial"
               }
             ]
           }
@@ -503,19 +441,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "ChatGPT uses OpenAI's infrastructure exclusively",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No documented support for third-party model providers",
-                "plainChildren": ""
+                "plainChildren": "ChatGPT uses OpenAI's infrastructure exclusively No documented support for third-party model providers"
               }
             ]
           }
@@ -538,19 +464,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Cloud-based service requiring internet connectivity",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No local/offline deployment options available",
-                "plainChildren": ""
+                "plainChildren": "Cloud-based service requiring internet connectivity No local/offline deployment options available"
               }
             ]
           }
@@ -559,7 +473,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Developer Experience",
+        "content": "DeveloperExperience",
         "children": [
           {
             "type": "text",
@@ -584,43 +498,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Projects feature maintains workspace-specific context and memory",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Conversation-level memory that persists across sessions",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Temporary chat mode for privacy-sensitive queries",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "GPT-4.1 family supports up to 1,000,000 tokens of context",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "File storage up to 10 GB per user",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Project memory keeps conversations self-contained",
-                "plainChildren": ""
+                "plainChildren": "Projects feature maintains workspace-specific context and memory Conversation-level memory that persists across sessions Temporary chat mode for privacy-sensitive queries GPT-4.1 family supports up to 1,000,000 tokens of context File storage up to 10 GB per user Project memory keeps conversations self-contained"
               }
             ]
           }
@@ -643,37 +521,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "File uploads supported (up to 512 MB per file)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Text/documents support ~2 million tokens",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Images up to 20 MB",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Spreadsheets (CSV/XLSX) can exceed millions of tokens",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Files can be attached to conversations and referenced throughout",
-                "plainChildren": ""
+                "plainChildren": "File uploads supported (up to 512 MB per file) Text/documents support ~2 million tokens Images up to 20 MB Spreadsheets (CSV/XLSX) can exceed millions of tokens Files can be attached to conversations and referenced throughout"
               }
             ]
           }
@@ -696,25 +544,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Conversation branching allows exploring new ideas without losing original threads",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Branched chats preserved in project workspace",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Can restore earlier conversation states",
-                "plainChildren": ""
+                "plainChildren": "Conversation branching allows exploring new ideas without losing original threads Branched chats preserved in project workspace Can restore earlier conversation states"
               }
             ]
           }
@@ -737,25 +567,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No native Git integration",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Community tools and GitHub Action integrations available",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Custom GPTs can connect to GitHub API via custom actions",
-                "plainChildren": ""
+                "plainChildren": "No native Git integration Community tools and GitHub Action integrations available Custom GPTs can connect to GitHub API via custom actions"
               }
             ]
           }
@@ -789,31 +601,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "GPT Store with custom AI assistants",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Custom actions via API schemas (OpenAPI specification)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "MCP Apps support interactive UI components",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Custom connectors through MCP protocol",
-                "plainChildren": ""
+                "plainChildren": "GPT Store with custom AI assistants Custom actions via API schemas (OpenAPI specification) MCP Apps support interactive UI components Custom connectors through MCP protocol"
               }
             ]
           }
@@ -859,13 +647,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Interaction through natural language only",
-                "plainChildren": ""
+                "plainChildren": "Interaction through natural language only"
               }
             ]
           }
@@ -888,13 +670,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Skills are a Claude-specific feature",
-                "plainChildren": ""
+                "plainChildren": "Skills are a Claude-specific feature"
               }
             ]
           }
@@ -917,25 +693,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "GPTs provide specialized modes for specific tasks",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Custom system prompts and configurations",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Task-specific knowledge and capabilities",
-                "plainChildren": ""
+                "plainChildren": "GPTs provide specialized modes for specific tasks Custom system prompts and configurations Task-specific knowledge and capabilities"
               }
             ]
           }
@@ -958,35 +716,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "GPTs operate as separate specialized assistants but not as coordinated subagents",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "text",
-            "content": "MCP Support"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "GPTs operate as separate specialized assistants but not as coordinated subagents"
               }
             ]
           }
@@ -1023,7 +753,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": [
           {
             "type": "text",
@@ -1074,23 +804,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Associated Github repository -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/CherryHQ/cherry-studio",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- https://github.com/CherryHQ/cherry-studio    \n\n<!-- Associated Github repository -->"
           }
         ]
       },
@@ -1108,26 +826,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Cross-platform AI desktop client supporting 300+ assistants and 50+ LLM providers with autonomous coding, MCP integration, and unified access to frontier models.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Cross-platform AI desktop client supporting 300+ assistants and 50+ LLM providers with autonomous coding, MCP integration, and unified access to frontier models."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -1172,23 +882,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Last Update",
+        "content": "LastUpdated",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Note Date last updated -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "February 9, 2026",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- February 9, 2026    \n\n<!-- Note Date last updated -->"
           }
         ]
       },
@@ -1266,19 +964,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Completely free for personal use",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Enterprise Edition available for businesses",
-                "plainChildren": ""
+                "plainChildren": "Completely free for personal use Enterprise Edition available for businesses"
               }
             ]
           }
@@ -1503,19 +1189,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Users can integrate their own API keys for cloud services",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Supports multiple provider API configurations",
-                "plainChildren": ""
+                "plainChildren": "Users can integrate their own API keys for cloud services Supports multiple provider API configurations"
               }
             ]
           }
@@ -1538,19 +1212,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Supports local model integration via Ollama and LM Studio",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Enables offline operation without cloud dependency",
-                "plainChildren": ""
+                "plainChildren": "Supports local model integration via Ollama and LM Studio Enables offline operation without cloud dependency"
               }
             ]
           }
@@ -1559,7 +1221,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Developer Experience",
+        "content": "DeveloperExperience",
         "children": [
           {
             "type": "text",
@@ -1584,37 +1246,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Knowledge base system with semantic search",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Documents are chunked, embedded, and retrieved to augment prompts",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "LibSQL vector storage with embeddings (bge-m3 and others)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Selection Assistant with smart content selection",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Planned Memory System with global context awareness",
-                "plainChildren": ""
+                "plainChildren": "Knowledge base system with semantic search Documents are chunked, embedded, and retrieved to augment prompts LibSQL vector storage with embeddings (bge-m3 and others) Selection Assistant with smart content selection Planned Memory System with global context awareness"
               }
             ]
           }
@@ -1637,37 +1269,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Drag-and-drop interface for file upload",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Supports multiple document formats (PDF, DOCX, PPTX, XLSX, TXT, MD, MDX)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "WebDAV file management and backup",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "URL and sitemap import for knowledge base",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Document preprocessing capabilities",
-                "plainChildren": ""
+                "plainChildren": "Drag-and-drop interface for file upload Supports multiple document formats (PDF, DOCX, PPTX, XLSX, TXT, MD, MDX) WebDAV file management and backup URL and sitemap import for knowledge base Document preprocessing capabilities"
               }
             ]
           }
@@ -1713,13 +1315,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Agent workspace supports \"open-in-external-editor\" but no direct git features",
-                "plainChildren": ""
+                "plainChildren": "Agent workspace supports \"open-in-external-editor\" but no direct git features"
               }
             ]
           }
@@ -1753,37 +1349,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "MCP server support enables tool integration",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Context information can be decomposed into independent modules (plugins)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Planned MCP Marketplace",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Mini program support",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "OpenCode CLI tool integration",
-                "plainChildren": ""
+                "plainChildren": "MCP server support enables tool integration Context information can be decomposed into independent modules (plugins) Planned MCP Marketplace Mini program support OpenCode CLI tool integration"
               }
             ]
           }
@@ -1875,49 +1441,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "300+ pre-configured AI assistants with customizable settings",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Users can create custom assistants with specific:",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Model selection",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "System prompts",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Temperature settings",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Tool integrations",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Custom instructions and preferences",
-                "plainChildren": ""
+                "plainChildren": "300+ pre-configured AI assistants with customizable settings Users can create custom assistants with specific: Model selection System prompts Temperature settings Tool integrations Custom instructions and preferences"
               }
             ]
           }
@@ -1940,53 +1464,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "AI Agent + Coding Agent architecture",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Agents execute MCP tools with permission modes (default, acceptEdits, bypassPermissions, plan)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Agent workspace with autonomous coding capabilities",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Support for specialized assistants (Web Search, PDF Reader, Citation Manager, etc.)",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "text",
-            "content": "MCP Support"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "AI Agent + Coding Agent architecture Agents execute MCP tools with permission modes (default, acceptEdits, bypassPermissions, plan) Agent workspace with autonomous coding capabilities Support for specialized assistants (Web Search, PDF Reader, Citation Manager, etc.)"
               }
             ]
           }
@@ -2023,7 +1501,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": [
           {
             "type": "text",
@@ -2074,29 +1552,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Associated Github repository -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No official public repository for Claude Desktop app itself",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Related: https://github.com/anthropics/claude-code",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- No official public repository for Claude Desktop app itself    \n- Related: https://github.com/anthropics/claude-code    \n\n<!-- Associated Github repository -->"
           }
         ]
       },
@@ -2114,26 +1574,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Native desktop application for macOS and Windows that brings Claude AI into your everyday workflow with quick access, file drag-and-drop, MCP desktop extensions for tool integrations, and Mac-specific features like screenshot sharing and voice input.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Native desktop application for macOS and Windows that brings Claude AI into your everyday workflow with quick access, file drag-and-drop, MCP desktop extensions for tool integrations, and Mac-specific features like screenshot sharing and voice input."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -2178,23 +1630,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Last Update",
+        "content": "LastUpdated",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Note Date last updated -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "February 9, 2026",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- February 9, 2026    \n\n<!-- Note Date last updated -->"
           }
         ]
       },
@@ -2272,25 +1712,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Free tier available (Claude Free plan with access to Sonnet 4.5 and Haiku 4.5)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "When major upgrades are released, Anthropic often offers 14-day Pro trials for new users",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Available to all plan types: Free, Pro, Max, Team, and Enterprise",
-                "plainChildren": ""
+                "plainChildren": "Free tier available (Claude Free plan with access to Sonnet 4.5 and Haiku 4.5) When major upgrades are released, Anthropic often offers 14-day Pro trials for new users Available to all plan types: Free, Pro, Max, Team, and Enterprise"
               }
             ]
           }
@@ -2515,19 +1937,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "The official Claude Desktop app uses Anthropic's service and does not support BYOK",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Note: Third-party open-source alternatives like Kuse offer BYOK functionality, but this is not a feature of the official app",
-                "plainChildren": ""
+                "plainChildren": "The official Claude Desktop app uses Anthropic's service and does not support BYOK Note: Third-party open-source alternatives like Kuse offer BYOK functionality, but this is not a feature of the official app"
               }
             ]
           }
@@ -2550,19 +1960,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Claude Desktop requires internet connectivity to access Claude's cloud-based AI services",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "While local MCP servers can interact with your machine, they don't enable fully offline operation",
-                "plainChildren": ""
+                "plainChildren": "Claude Desktop requires internet connectivity to access Claude's cloud-based AI services While local MCP servers can interact with your machine, they don't enable fully offline operation"
               }
             ]
           }
@@ -2571,7 +1969,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Developer Experience",
+        "content": "DeveloperExperience",
         "children": [
           {
             "type": "text",
@@ -2596,31 +1994,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Sessions track their own context and changes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Claude automatically summarizes conversations when context fills up",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "You can manually ask Claude to compact context to free up space",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Session management in sidebar with rename, archive, and context usage viewing",
-                "plainChildren": ""
+                "plainChildren": "Sessions track their own context and changes Claude automatically summarizes conversations when context fills up You can manually ask Claude to compact context to free up space Session management in sidebar with rename, archive, and context usage viewing"
               }
             ]
           }
@@ -2643,31 +2017,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Drag and drop files directly into chat",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Claude can read files and accept pasted snippets",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "File inclusion through MCP servers and extensions",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Support for .claudeignore files to exclude irrelevant directories",
-                "plainChildren": ""
+                "plainChildren": "Drag and drop files directly into chat Claude can read files and accept pasted snippets File inclusion through MCP servers and extensions Support for .claudeignore files to exclude irrelevant directories"
               }
             ]
           }
@@ -2690,19 +2040,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Standard chat interface does not have checkpoint/undo functionality",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Note: This differs from Claude Code which has git-based checkpoints",
-                "plainChildren": ""
+                "plainChildren": "Standard chat interface does not have checkpoint/undo functionality Note: This differs from Claude Code which has git-based checkpoints"
               }
             ]
           }
@@ -2725,25 +2063,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Standard Claude Desktop chat interface does not have direct git integration",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Git integration available through MCP servers (e.g., github-mcp-server)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Note: Claude Code (the developer CLI tool) has full git integration, but that's a separate product",
-                "plainChildren": ""
+                "plainChildren": "Standard Claude Desktop chat interface does not have direct git integration Git integration available through MCP servers (e.g., github-mcp-server) Note: Claude Code (the developer CLI tool) has full git integration, but that's a separate product"
               }
             ]
           }
@@ -2777,25 +2097,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Desktop Extensions (.mcpb files) for installing MCP servers",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "One-click installation of MCP servers",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Enterprise can upload custom extensions and control access via allowlist",
-                "plainChildren": ""
+                "plainChildren": "Desktop Extensions (.mcpb files) for installing MCP servers One-click installation of MCP servers Enterprise can upload custom extensions and control access via allowlist"
               }
             ]
           }
@@ -2818,13 +2120,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No public lifecycle hook API documented",
-                "plainChildren": ""
+                "plainChildren": "No public lifecycle hook API documented"
               }
             ]
           }
@@ -2847,25 +2143,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Skills can be invoked with /skill-name syntax",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Custom skills defined in .claude/skills/ directories",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Skills work across Claude.ai web, Claude Desktop, and Claude Code",
-                "plainChildren": ""
+                "plainChildren": "Skills can be invoked with /skill-name syntax Custom skills defined in .claude/skills/ directories Skills work across Claude.ai web, Claude Desktop, and Claude Code"
               }
             ]
           }
@@ -2888,37 +2166,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Skills are reusable prompts that extend Claude's capabilities",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Defined as markdown files in .claude/skills/",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Can be user-invoked or model-invoked (automatic)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Organization-wide skill management for Team and Enterprise plans",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Partner-built skills available through open standard (Agent Skills)",
-                "plainChildren": ""
+                "plainChildren": "Skills are reusable prompts that extend Claude's capabilities Defined as markdown files in .claude/skills/ Can be user-invoked or model-invoked (automatic) Organization-wide skill management for Team and Enterprise plans Partner-built skills available through open standard (Agent Skills)"
               }
             ]
           }
@@ -2941,25 +2189,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Plan mode for structured planning workflow",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Specialized agent skills for complex capabilities",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Organization can create custom modes for specific tasks",
-                "plainChildren": ""
+                "plainChildren": "Plan mode for structured planning workflow Specialized agent skills for complex capabilities Organization can create custom modes for specific tasks"
               }
             ]
           }
@@ -2982,47 +2212,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Claude Cowork enables autonomous task delegation (Pro and above)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Can handle multi-step projects with minimal manual intervention",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Available to Pro, Max, Team, and Enterprise subscribers",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "text",
-            "content": "MCP Support"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "Claude Cowork enables autonomous task delegation (Pro and above) Can handle multi-step projects with minimal manual intervention Available to Pro, Max, Team, and Enterprise subscribers"
               }
             ]
           }
@@ -3059,7 +2249,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": [
           {
             "type": "text",
@@ -3110,23 +2300,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Associated Github repository -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/dust-tt/dust",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- https://github.com/dust-tt/dust    \n\n<!-- Associated Github repository -->"
           }
         ]
       },
@@ -3144,26 +2322,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "AI agent platform enabling organizations to deploy, orchestrate, and govern specialized AI agents with enterprise-grade security and comprehensive data integration.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- AI agent platform enabling organizations to deploy, orchestrate, and govern specialized AI agents with enterprise-grade security and comprehensive data integration."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -3208,23 +2378,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Last Update",
+        "content": "LastUpdated",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Note Date last updated -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "February 9, 2026",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- February 9, 2026    \n\n<!-- Note Date last updated -->"
           }
         ]
       },
@@ -3279,19 +2437,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "MIT",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Main repository and several components under MIT",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Some proprietary features for commercial platform",
-                "plainChildren": ""
+                "plainChildren": "Main repository and several components under MIT Some proprietary features for commercial platform"
               }
             ]
           }
@@ -3314,19 +2460,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "14-day free trial",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No credit card required",
-                "plainChildren": ""
+                "plainChildren": "14-day free trial No credit card required"
               }
             ]
           }
@@ -3551,13 +2685,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Platform is model-agnostic but BYOK not explicitly documented",
-                "plainChildren": ""
+                "plainChildren": "Platform is model-agnostic but BYOK not explicitly documented"
               }
             ]
           }
@@ -3580,25 +2708,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Primarily cloud-based platform",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "CLI tool available for local MCP server with selected Dust agents",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No full on-premise deployment option documented",
-                "plainChildren": ""
+                "plainChildren": "Primarily cloud-based platform CLI tool available for local MCP server with selected Dust agents No full on-premise deployment option documented"
               }
             ]
           }
@@ -3607,7 +2717,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Developer Experience",
+        "content": "DeveloperExperience",
         "children": [
           {
             "type": "text",
@@ -3632,31 +2742,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Knowledge references can be added inline using \"/\" or Attach knowledge button",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Pasting URLs retrieves associated content",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Agent can access connected data sources (Slack, Notion, GitHub, etc.)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Fine-grained permissions control what data is accessible",
-                "plainChildren": ""
+                "plainChildren": "Knowledge references can be added inline using \"/\" or Attach knowledge button Pasting URLs retrieves associated content Agent can access connected data sources (Slack, Notion, GitHub, etc.) Fine-grained permissions control what data is accessible"
               }
             ]
           }
@@ -3679,31 +2765,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "@mention syntax for agents and knowledge",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Drag and drop files directly into conversations (JPEG, PNG, PDF)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "\"/\" prefix for searching relevant content by title",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "URL pasting for content retrieval",
-                "plainChildren": ""
+                "plainChildren": "@mention syntax for agents and knowledge Drag and drop files directly into conversations (JPEG, PNG, PDF) \"/\" prefix for searching relevant content by title URL pasting for content retrieval"
               }
             ]
           }
@@ -3749,37 +2811,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "GitHub integration for Issues, Pull Requests, Discussions, and codebase",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Real-time synchronization for Issues, Discussions, and Pull Requests",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Code synchronized every 8 hours",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Agents can create/manage GitHub issues, retrieve PR info, generate code reviews",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "GitLab support also available",
-                "plainChildren": ""
+                "plainChildren": "GitHub integration for Issues, Pull Requests, Discussions, and codebase Real-time synchronization for Issues, Discussions, and Pull Requests Code synchronized every 8 hours Agents can create/manage GitHub issues, retrieve PR info, generate code reviews GitLab support also available"
               }
             ]
           }
@@ -3813,25 +2845,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Custom integration and LLM orchestration through Dust Apps",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Can execute code that agents run",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Custom tool creation for agents",
-                "plainChildren": ""
+                "plainChildren": "Custom integration and LLM orchestration through Dust Apps Can execute code that agents run Custom tool creation for agents"
               }
             ]
           }
@@ -3877,19 +2891,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Skills can be invoked with slash prefix",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Unified system with Skills",
-                "plainChildren": ""
+                "plainChildren": "Skills can be invoked with slash prefix Unified system with Skills"
               }
             ]
           }
@@ -3912,37 +2914,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Reusable packages of instructions, knowledge, and tools",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Can be shared across multiple agents",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Just-in-time skill addition/removal mid-conversation",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Customize global skills with branding and instructions",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Automatic context loading and frontmatter-controlled invocation",
-                "plainChildren": ""
+                "plainChildren": "Reusable packages of instructions, knowledge, and tools Can be shared across multiple agents Just-in-time skill addition/removal mid-conversation Customize global skills with branding and instructions Automatic context loading and frontmatter-controlled invocation"
               }
             ]
           }
@@ -3965,19 +2937,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Two modes of execution for agent interactions",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Separate conversation mode vs. direct user interaction mode",
-                "plainChildren": ""
+                "plainChildren": "Two modes of execution for agent interactions Separate conversation mode vs. direct user interaction mode"
               }
             ]
           }
@@ -4000,47 +2960,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Agents can run other agents as tools via run_agent",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Two execution modes: separate conversation with output return, or direct takeover",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Modular architecture for specialized capabilities",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "text",
-            "content": "MCP Support"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "Agents can run other agents as tools via run_agent Two execution modes: separate conversation with output return, or direct takeover Modular architecture for specialized capabilities"
               }
             ]
           }
@@ -4077,7 +2997,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": [
           {
             "type": "text",
@@ -4122,29 +3042,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Associated Github repository -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/glama-ai",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Limited public repositories available",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- https://github.com/glama-ai    Limited public repositories available\n\n<!-- Associated Github repository -->"
           }
         ]
       },
@@ -4162,26 +3064,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "All-in-one AI workspace providing unified access to 100+ AI models with MCP protocol support and enterprise-grade security.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- All-in-one AI workspace providing unified access to 100+ AI models with MCP protocol support and enterprise-grade security."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -4226,23 +3120,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Last Update",
+        "content": "LastUpdated",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Note Date last updated -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "February 9, 2026",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- February 9, 2026    \n\n<!-- Note Date last updated -->"
           }
         ]
       },
@@ -4320,25 +3202,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Free sign-up without credit card requirement",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Starter tier at $9/month includes $9 in credits",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Unused credits persist through billing cycle",
-                "plainChildren": ""
+                "plainChildren": "Free sign-up without credit card requirement Starter tier at $9/month includes $9 in credits Unused credits persist through billing cycle"
               }
             ]
           }
@@ -4391,13 +3255,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "listChanged: true",
-                "plainChildren": ""
+                "plainChildren": "listChanged: true"
               }
             ]
           }
@@ -4489,13 +3347,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "requests: [object Object]",
-                "plainChildren": ""
+                "plainChildren": "requests: [object Object]"
               }
             ]
           }
@@ -4552,13 +3404,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Platform uses credit-based pricing model",
-                "plainChildren": ""
+                "plainChildren": "Platform uses credit-based pricing model"
               }
             ]
           }
@@ -4581,13 +3427,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Cloud-based SaaS platform",
-                "plainChildren": ""
+                "plainChildren": "Cloud-based SaaS platform"
               }
             ]
           }
@@ -4596,7 +3436,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Developer Experience",
+        "content": "DeveloperExperience",
         "children": [
           {
             "type": "text",
@@ -4621,25 +3461,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Persistent context management via MCP",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Cross-document and chat searching with tagging capabilities",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Vector embeddings for semantic search",
-                "plainChildren": ""
+                "plainChildren": "Persistent context management via MCP Cross-document and chat searching with tagging capabilities Vector embeddings for semantic search"
               }
             ]
           }
@@ -4662,25 +3484,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Upload PDFs, Word docs, and text files",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Instant answers with page references",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Supports file analysis and context extraction",
-                "plainChildren": ""
+                "plainChildren": "Upload PDFs, Word docs, and text files Instant answers with page references Supports file analysis and context extraction"
               }
             ]
           }
@@ -4880,28 +3684,6 @@
             ]
           }
         ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "text",
-            "content": "MCP Support"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
-              }
-            ]
-          }
-        ]
       }
     ],
     "sourcePath": "glama.md",
@@ -4945,7 +3727,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": [
           {
             "type": "text",
@@ -4990,23 +3772,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Associated Github repository -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/janhq/jan",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- https://github.com/janhq/jan    \n\n<!-- Associated Github repository -->"
           }
         ]
       },
@@ -5024,26 +3794,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Open-source ChatGPT alternative that runs 100% offline on your computer with local LLM support and cloud provider integration.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Open-source ChatGPT alternative that runs 100% offline on your computer with local LLM support and cloud provider integration."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -5088,23 +3850,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Last Update",
+        "content": "LastUpdated",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Note Date last updated -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "February 9, 2026",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- February 9, 2026    \n\n<!-- Note Date last updated -->"
           }
         ]
       },
@@ -5182,13 +3932,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Completely free and open source",
-                "plainChildren": ""
+                "plainChildren": "Completely free and open source"
               }
             ]
           }
@@ -5413,13 +4157,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Supports OpenAI, Anthropic, Groq, Mistral, and other API providers",
-                "plainChildren": ""
+                "plainChildren": "Supports OpenAI, Anthropic, Groq, Mistral, and other API providers"
               }
             ]
           }
@@ -5442,19 +4180,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Can run 100% offline with local models",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Desktop application with Docker/Kubernetes deployment options available via Jan Platform",
-                "plainChildren": ""
+                "plainChildren": "Can run 100% offline with local models Desktop application with Docker/Kubernetes deployment options available via Jan Platform"
               }
             ]
           }
@@ -5463,7 +4189,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Developer Experience",
+        "content": "DeveloperExperience",
         "children": [
           {
             "type": "text",
@@ -5488,25 +4214,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Configurable context windows (default 8192 tokens)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Remembers conversation history",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "RAG-based document retrieval",
-                "plainChildren": ""
+                "plainChildren": "Configurable context windows (default 8192 tokens) Remembers conversation history RAG-based document retrieval"
               }
             ]
           }
@@ -5529,19 +4237,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Drag-and-drop file attachments (PDF, text)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Enhanced file parsing for context extraction",
-                "plainChildren": ""
+                "plainChildren": "Drag-and-drop file attachments (PDF, text) Enhanced file parsing for context extraction"
               }
             ]
           }
@@ -5621,25 +4317,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Extension system with core extensions",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "System monitoring",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "MCP server integration",
-                "plainChildren": ""
+                "plainChildren": "Extension system with core extensions System monitoring MCP server integration"
               }
             ]
           }
@@ -5731,13 +4409,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Assistants feature for customizable AI behaviors with specific instructions and parameters",
-                "plainChildren": ""
+                "plainChildren": "Assistants feature for customizable AI behaviors with specific instructions and parameters"
               }
             ]
           }
@@ -5761,28 +4433,6 @@
                 "level": 1,
                 "content": "No",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "text",
-            "content": "MCP Support"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }
@@ -5819,7 +4469,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": [
           {
             "type": "text",
@@ -5870,23 +4520,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Associated Github repository -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/danny-avila/LibreChat",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- https://github.com/danny-avila/LibreChat    \n\n<!-- Associated Github repository -->"
           }
         ]
       },
@@ -5904,26 +4542,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Self-hosted AI chat platform unifying all major AI providers with MCP support, AI Agents, Code Interpreter, and enterprise multi-user authentication.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Self-hosted AI chat platform unifying all major AI providers with MCP support, AI Agents, Code Interpreter, and enterprise multi-user authentication."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -5968,23 +4598,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Last Update",
+        "content": "LastUpdated",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Note Date last updated -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "February 9, 2026",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- February 9, 2026    \n\n<!-- Note Date last updated -->"
           }
         ]
       },
@@ -6062,13 +4680,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Open source, free to use",
-                "plainChildren": ""
+                "plainChildren": "Open source, free to use"
               }
             ]
           }
@@ -6293,13 +4905,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Users can provide their own API keys through the web interface for various AI providers",
-                "plainChildren": ""
+                "plainChildren": "Users can provide their own API keys through the web interface for various AI providers"
               }
             ]
           }
@@ -6322,25 +4928,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Supports local model deployment through Ollama and LM Studio integration",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Enables fully offline operation with self-hosted models",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Docker-based self-hosting",
-                "plainChildren": ""
+                "plainChildren": "Supports local model deployment through Ollama and LM Studio integration Enables fully offline operation with self-hosted models Docker-based self-hosting"
               }
             ]
           }
@@ -6349,7 +4937,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Developer Experience",
+        "content": "DeveloperExperience",
         "children": [
           {
             "type": "text",
@@ -6374,25 +4962,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Message threading/splitting for multiple conversation contexts",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Token limit control via fileTokenLimit",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Dynamic user context in agent memory management",
-                "plainChildren": ""
+                "plainChildren": "Message threading/splitting for multiple conversation contexts Token limit control via fileTokenLimit Dynamic user context in agent memory management"
               }
             ]
           }
@@ -6415,31 +4985,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Seamless file upload and processing with multi-modal support",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "File size and MIME type filtering",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Direct upload to supported providers without intermediate processing",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "OCR and STT support",
-                "plainChildren": ""
+                "plainChildren": "Seamless file upload and processing with multi-modal support File size and MIME type filtering Direct upload to supported providers without intermediate processing OCR and STT support"
               }
             ]
           }
@@ -6485,19 +5031,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Not explicitly documented as a built-in feature",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Integrations possible through MCP servers and custom actions",
-                "plainChildren": ""
+                "plainChildren": "Not explicitly documented as a built-in feature Integrations possible through MCP servers and custom actions"
               }
             ]
           }
@@ -6531,19 +5065,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "MCP servers",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Custom OpenAPI Actions",
-                "plainChildren": ""
+                "plainChildren": "MCP servers Custom OpenAPI Actions"
               }
             ]
           }
@@ -6635,19 +5157,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "AI Agents provide no-code framework for creating custom assistants with specialized configurations",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Presets system for saving conversation templates and settings",
-                "plainChildren": ""
+                "plainChildren": "AI Agents provide no-code framework for creating custom assistants with specialized configurations Presets system for saving conversation templates and settings"
               }
             ]
           }
@@ -6670,35 +5180,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "AI Agents framework allows creation of specialized agents with tools like DALL-E-3, semantic search, calculators, file management, and code execution",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "text",
-            "content": "MCP Support"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "AI Agents framework allows creation of specialized agents with tools like DALL-E-3, semantic search, calculators, file management, and code execution"
               }
             ]
           }
@@ -6735,7 +5217,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": [
           {
             "type": "text",
@@ -6792,23 +5274,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Associated Github repository -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/lobehub/lobehub",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- https://github.com/lobehub/lobehub    \n\n<!-- Associated Github repository -->"
           }
         ]
       },
@@ -6826,26 +5296,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Open-source AI workspace for building, collaborating with, and managing agent teammates through multi-agent orchestration with 10,000+ MCP-compatible tools.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Open-source AI workspace for building, collaborating with, and managing agent teammates through multi-agent orchestration with 10,000+ MCP-compatible tools."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -6890,23 +5352,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Last Update",
+        "content": "LastUpdated",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Note Date last updated -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "February 9, 2026",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- February 9, 2026    \n\n<!-- Note Date last updated -->"
           }
         ]
       },
@@ -6961,25 +5411,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Apache-2.0",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "With LobeHub Community License",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Transitioned from MIT to Apache 2.0 starting with version 1.0",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Includes commercialization authorization supplementary clause",
-                "plainChildren": ""
+                "plainChildren": "With LobeHub Community License Transitioned from MIT to Apache 2.0 starting with version 1.0 Includes commercialization authorization supplementary clause"
               }
             ]
           }
@@ -7002,25 +5434,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Free Plan with basic assistant creation, multi-device syncing, limited integrations",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "New registrants receive 450,000 free compute credits",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Open source version can be self-hosted for free",
-                "plainChildren": ""
+                "plainChildren": "Free Plan with basic assistant creation, multi-device syncing, limited integrations New registrants receive 450,000 free compute credits Open source version can be self-hosted for free"
               }
             ]
           }
@@ -7245,25 +5659,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Supports custom API keys for various AI providers",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Environment variable configuration for OPENAI_API_KEY and other providers",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Custom S3 endpoints and authentication services supported",
-                "plainChildren": ""
+                "plainChildren": "Supports custom API keys for various AI providers Environment variable configuration for OPENAI_API_KEY and other providers Custom S3 endpoints and authentication services supported"
               }
             ]
           }
@@ -7286,31 +5682,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Full Ollama integration for local LLM deployment",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Supports running completely offline with local models",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Docker/Docker Compose deployment for on-premises hosting",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Pre-configured with models like Llama3, Gemma, Mistral",
-                "plainChildren": ""
+                "plainChildren": "Full Ollama integration for local LLM deployment Supports running completely offline with local models Docker/Docker Compose deployment for on-premises hosting Pre-configured with models like Llama3, Gemma, Mistral"
               }
             ]
           }
@@ -7319,7 +5691,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Developer Experience",
+        "content": "DeveloperExperience",
         "children": [
           {
             "type": "text",
@@ -7344,37 +5716,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Knowledge base with file upload (documents, images, audio, video)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "RAG (Retrieval-Augmented Generation) search",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "PostgreSQL with PGVector extension for vector operations",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Branch conversations for multi-path exploration",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Personal memory with continual learning",
-                "plainChildren": ""
+                "plainChildren": "Knowledge base with file upload (documents, images, audio, video) RAG (Retrieval-Augmented Generation) search PostgreSQL with PGVector extension for vector operations Branch conversations for multi-path exploration Personal memory with continual learning"
               }
             ]
           }
@@ -7397,25 +5739,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "File upload and knowledge base functionality",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Can utilize files during conversations",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Knowledge base page creation and file management",
-                "plainChildren": ""
+                "plainChildren": "File upload and knowledge base functionality Can utilize files during conversations Knowledge base page creation and file management"
               }
             ]
           }
@@ -7461,19 +5785,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Uses Git for development but not integrated as a user feature",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Offers Lobe Commit CLI tool for AI-generated Gitmoji commit messages",
-                "plainChildren": ""
+                "plainChildren": "Uses Git for development but not integrated as a user feature Offers Lobe Commit CLI tool for AI-generated Gitmoji commit messages"
               }
             ]
           }
@@ -7507,31 +5819,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Plugin marketplace with extensive ecosystem",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Plugin store accessible via Extension Tools → Plugin Store",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Developers can submit plugins via PR to lobe-chat-plugins repository",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Integration with platforms like Bilibili, Steam, and third-party services",
-                "plainChildren": ""
+                "plainChildren": "Plugin marketplace with extensive ecosystem Plugin store accessible via Extension Tools → Plugin Store Developers can submit plugins via PR to lobe-chat-plugins repository Integration with platforms like Bilibili, Steam, and third-party services"
               }
             ]
           }
@@ -7600,19 +5888,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Library of 10,000+ skills via MCP integration",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "One-click installation from marketplace",
-                "plainChildren": ""
+                "plainChildren": "Library of 10,000+ skills via MCP integration One-click installation from marketplace"
               }
             ]
           }
@@ -7658,47 +5934,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Agent Groups enabling parallel collaboration",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Multi-agent orchestration as core feature",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Agents treated as teammates with scheduling and project organization",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "text",
-            "content": "MCP Support"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "Agent Groups enabling parallel collaboration Multi-agent orchestration as core feature Agents treated as teammates with scheduling and project organization"
               }
             ]
           }
@@ -7735,7 +5971,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": [
           {
             "type": "text",
@@ -7780,29 +6016,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Associated Github repository -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/mistralai",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Various tools and SDKs available; Le Chat itself is proprietary",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- https://github.com/mistralai    Various tools and SDKs available; Le Chat itself is proprietary\n\n<!-- Associated Github repository -->"
           }
         ]
       },
@@ -7820,26 +6038,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Enterprise-ready AI assistant powered by Mistral's frontier models with MCP protocol support, deep research capabilities, voice mode, canvas editing, and privacy-first deployment.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Enterprise-ready AI assistant powered by Mistral's frontier models with MCP protocol support, deep research capabilities, voice mode, canvas editing, and privacy-first deployment."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -7884,23 +6094,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Last Update",
+        "content": "LastUpdated",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Note Date last updated -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "February 9, 2026",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- February 9, 2026    \n\n<!-- Note Date last updated -->"
           }
         ]
       },
@@ -7978,19 +6176,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Free tier with majority of features",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Pro at $14.99/month with upgraded limits",
-                "plainChildren": ""
+                "plainChildren": "Free tier with majority of features Pro at $14.99/month with upgraded limits"
               }
             ]
           }
@@ -8215,19 +6401,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Available on Le Chat Pro and Team plans",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Especially for Mistral Vibe 2.0",
-                "plainChildren": ""
+                "plainChildren": "Available on Le Chat Pro and Team plans Especially for Mistral Vibe 2.0"
               }
             ]
           }
@@ -8250,25 +6424,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Le Chat Enterprise offers self-hosted deployment",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "All data and processing remain inside your infrastructure",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Can be deployed on-premise, in public/private cloud, or as Mistral-hosted SaaS",
-                "plainChildren": ""
+                "plainChildren": "Le Chat Enterprise offers self-hosted deployment All data and processing remain inside your infrastructure Can be deployed on-premise, in public/private cloud, or as Mistral-hosted SaaS"
               }
             ]
           }
@@ -8277,7 +6433,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Developer Experience",
+        "content": "DeveloperExperience",
         "children": [
           {
             "type": "text",
@@ -8302,37 +6458,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Projects feature organizes conversations into context-rich folders",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Each project has its own default Library and remembers enabled tools",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Memories feature (opt-in) learns and remembers user preferences",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "File uploads directly into projects",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "128K token context window",
-                "plainChildren": ""
+                "plainChildren": "Projects feature organizes conversations into context-rich folders Each project has its own default Library and remembers enabled tools Memories feature (opt-in) learns and remembers user preferences File uploads directly into projects 128K token context window"
               }
             ]
           }
@@ -8355,31 +6481,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Upload images and files (PDF, DOCX, PPT, XLSX, etc.)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Libraries allow indexing of uploaded files",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Multi-turn conversations maintain context with uploaded files",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "@file syntax available in Mistral Code",
-                "plainChildren": ""
+                "plainChildren": "Upload images and files (PDF, DOCX, PPT, XLSX, etc.) Libraries allow indexing of uploaded files Multi-turn conversations maintain context with uploaded files @file syntax available in Mistral Code"
               }
             ]
           }
@@ -8425,31 +6527,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "GitHub integration via MCP connectors",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Manage issues, pull requests, repositories, and code analysis",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Sentry integration for error monitoring",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Linear integration for task creation",
-                "plainChildren": ""
+                "plainChildren": "GitHub integration via MCP connectors Manage issues, pull requests, repositories, and code analysis Sentry integration for error monitoring Linear integration for task creation"
               }
             ]
           }
@@ -8483,13 +6561,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Uses MCP connectors instead",
-                "plainChildren": ""
+                "plainChildren": "Uses MCP connectors instead"
               }
             ]
           }
@@ -8535,13 +6607,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Mistral Vibe 2.0 includes slash-command skills",
-                "plainChildren": ""
+                "plainChildren": "Mistral Vibe 2.0 includes slash-command skills"
               }
             ]
           }
@@ -8564,13 +6630,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Mistral Vibe 2.0 includes custom skills functionality",
-                "plainChildren": ""
+                "plainChildren": "Mistral Vibe 2.0 includes custom skills functionality"
               }
             ]
           }
@@ -8593,25 +6653,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Unified agent modes in Mistral Vibe 2.0",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Deep Research mode for structured research",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Code interpreter mode for sandboxed execution",
-                "plainChildren": ""
+                "plainChildren": "Unified agent modes in Mistral Vibe 2.0 Deep Research mode for structured research Code interpreter mode for sandboxed execution"
               }
             ]
           }
@@ -8634,47 +6676,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Mistral Vibe 2.0 introduces custom subagents",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Built-in agent builder for creating custom AI workflows",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Le Chat Agents for functional tools and micro-apps",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "text",
-            "content": "MCP Support"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "Mistral Vibe 2.0 introduces custom subagents Built-in agent builder for creating custom AI workflows Le Chat Agents for functional tools and micro-apps"
               }
             ]
           }
@@ -8713,7 +6715,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": [
           {
             "type": "text",
@@ -8764,35 +6766,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Associated Github repository -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/postmanlabs",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Main support repo: https://github.com/postmanlabs/postman-app-support",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "MCP server repo: https://github.com/postmanlabs/postman-mcp-server",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- https://github.com/postmanlabs    \n- Main support repo: https://github.com/postmanlabs/postman-app-support    \n- MCP server repo: https://github.com/postmanlabs/postman-mcp-server    \n\n<!-- Associated Github repository -->"
           }
         ]
       },
@@ -8810,26 +6788,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "API platform with AI-native capabilities including Postbot AI assistant, MCP client and server support, AI Agent Builder, and bring-your-own-model (BYOM) integration for testing, developing, and automating API workflows.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- API platform with AI-native capabilities including Postbot AI assistant, MCP client and server support, AI Agent Builder, and bring-your-own-model (BYOM) integration for testing, developing, and automating API workflows."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -8854,19 +6824,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Any",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Supports API testing and code generation for all major programming languages",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Code generators available for JavaScript, Python, Java, Go, Ruby, PHP, C#, Swift, Kotlin, and more",
-                "plainChildren": ""
+                "plainChildren": "Supports API testing and code generation for all major programming languages Code generators available for JavaScript, Python, Java, Go, Ruby, PHP, C#, Swift, Kotlin, and more"
               }
             ]
           }
@@ -8886,23 +6844,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Last Update",
+        "content": "LastUpdated",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Note Date last updated -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "February 9, 2026",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- February 9, 2026    \n\n<!-- Note Date last updated -->"
           }
         ]
       },
@@ -8934,13 +6880,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Postman platform is proprietary, though some components and tools are open source",
-                "plainChildren": ""
+                "plainChildren": "Postman platform is proprietary, though some components and tools are open source"
               }
             ]
           }
@@ -8986,25 +6926,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Free plan available (limited to 1 user starting March 2026, 25 runs, tight API/mock caps)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "30-day Enterprise trial available for advanced collaboration and automation features",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Core features available on Free plan with upgrade options for teams",
-                "plainChildren": ""
+                "plainChildren": "Free plan available (limited to 1 user starting March 2026, 25 runs, tight API/mock caps) 30-day Enterprise trial available for advanced collaboration and automation features Core features available on Free plan with upgrade options for teams"
               }
             ]
           }
@@ -9229,37 +7151,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "BYOM (Bring Your Own Model) support introduced January 2026",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Connect any OpenAI-compatible endpoint",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Works with proprietary, self-hosted, or local deployments",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Supports OpenAI, Anthropic, Google, and other OpenAI-compatible providers",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Expanded authentication options for providers with custom or non-standard requirements",
-                "plainChildren": ""
+                "plainChildren": "BYOM (Bring Your Own Model) support introduced January 2026 Connect any OpenAI-compatible endpoint Works with proprietary, self-hosted, or local deployments Supports OpenAI, Anthropic, Google, and other OpenAI-compatible providers Expanded authentication options for providers with custom or non-standard requirements"
               }
             ]
           }
@@ -9282,25 +7174,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Postman is primarily cloud-based, requiring internet connectivity",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "MCP server can communicate via local stdio for IDE integrations",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Some features may work offline but core AI capabilities require cloud access",
-                "plainChildren": ""
+                "plainChildren": "Postman is primarily cloud-based, requiring internet connectivity MCP server can communicate via local stdio for IDE integrations Some features may work offline but core AI capabilities require cloud access"
               }
             ]
           }
@@ -9309,7 +7183,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Developer Experience",
+        "content": "DeveloperExperience",
         "children": [
           {
             "type": "text",
@@ -9334,37 +7208,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "AI requests support model comparison and switching",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Agent Mode maintains context for natural language automation",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "MCP requests can be saved, reused, shared, and documented",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Collections organize and persist API requests with documentation",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Workspaces provide context organization for teams",
-                "plainChildren": ""
+                "plainChildren": "AI requests support model comparison and switching Agent Mode maintains context for natural language automation MCP requests can be saved, reused, shared, and documented Collections organize and persist API requests with documentation Workspaces provide context organization for teams"
               }
             ]
           }
@@ -9387,31 +7231,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Import/export capabilities for collections, environments, and data files",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Support for external data files in test execution",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "API schema imports from various formats (OpenAPI, GraphQL, etc.)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Integration with Git repositories for version control",
-                "plainChildren": ""
+                "plainChildren": "Import/export capabilities for collections, environments, and data files Support for external data files in test execution API schema imports from various formats (OpenAPI, GraphQL, etc.) Integration with Git repositories for version control"
               }
             ]
           }
@@ -9434,31 +7254,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Version history for collections",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Git integration for versioning and branching",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Forking and merging capabilities for collaborative workflows",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Native Git workflows becoming core part of platform (2026)",
-                "plainChildren": ""
+                "plainChildren": "Version history for collections Git integration for versioning and branching Forking and merging capabilities for collaborative workflows Native Git workflows becoming core part of platform (2026)"
               }
             ]
           }
@@ -9481,31 +7277,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Import data from Git repositories",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "GitHub integration for syncing collections",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Native Git workflows as core platform feature (launching 2026)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Version control for API definitions and collections",
-                "plainChildren": ""
+                "plainChildren": "Import data from Git repositories GitHub integration for syncing collections Native Git workflows as core platform feature (launching 2026) Version control for API definitions and collections"
               }
             ]
           }
@@ -9539,31 +7311,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Extensive integration marketplace with 30+ integrations",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "MCP server generation through AI Tool Builder",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Custom MCP servers can be built using public APIs",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Integration with external services (GitHub, Slack, Linear, Notion, etc.)",
-                "plainChildren": ""
+                "plainChildren": "Extensive integration marketplace with 30+ integrations MCP server generation through AI Tool Builder Custom MCP servers can be built using public APIs Integration with external services (GitHub, Slack, Linear, Notion, etc.)"
               }
             ]
           }
@@ -9586,31 +7334,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Pre-request scripts that run before sending requests",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Test scripts that run after receiving responses",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Collection-level and folder-level scripts",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Environment variable manipulation through scripts",
-                "plainChildren": ""
+                "plainChildren": "Pre-request scripts that run before sending requests Test scripts that run after receiving responses Collection-level and folder-level scripts Environment variable manipulation through scripts"
               }
             ]
           }
@@ -9633,25 +7357,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Natural language Agent Mode instead of slash commands",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Postbot responds to conversational requests",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No documented slash command syntax",
-                "plainChildren": ""
+                "plainChildren": "Natural language Agent Mode instead of slash commands Postbot responds to conversational requests No documented slash command syntax"
               }
             ]
           }
@@ -9674,31 +7380,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Postbot has finite set of \"skills\" mapped from natural language instructions",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Automatic test generation, debugging, documentation, data analysis",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "MCP servers expose tools, prompts, and resources as reusable capabilities",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "AI Agent Builder for creating and orchestrating intelligent workflows",
-                "plainChildren": ""
+                "plainChildren": "Postbot has finite set of \"skills\" mapped from natural language instructions Automatic test generation, debugging, documentation, data analysis MCP servers expose tools, prompts, and resources as reusable capabilities AI Agent Builder for creating and orchestrating intelligent workflows"
               }
             ]
           }
@@ -9721,31 +7403,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Agent Mode for natural language API workflow automation",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Different MCP server configurations (Minimal, Code, Full)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Postman Flows for visual, low-code AI model experimentation",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Custom workspace configurations for different project types",
-                "plainChildren": ""
+                "plainChildren": "Agent Mode for natural language API workflow automation Different MCP server configurations (Minimal, Code, Full) Postman Flows for visual, low-code AI model experimentation Custom workspace configurations for different project types"
               }
             ]
           }
@@ -9768,53 +7426,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "AI Agent Builder for creating specialized AI agents",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "MCP server tools can be composed into agent workflows",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Agent Mode orchestrates multi-step automations",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Support for agentic frameworks through MCP integration",
-                "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "text",
-            "content": "MCP Support"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
+                "plainChildren": "AI Agent Builder for creating specialized AI agents MCP server tools can be composed into agent workflows Agent Mode orchestrates multi-step automations Support for agentic frameworks through MCP integration"
               }
             ]
           }
@@ -9851,7 +7463,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "General Info",
+        "content": "General",
         "children": [
           {
             "type": "text",
@@ -9896,29 +7508,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Repo",
+        "content": "Repository",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Associated Github repository -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "https://github.com/raycast/extensions",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Extensions are MIT licensed; core app is proprietary",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- https://github.com/raycast/extensions    Extensions are MIT licensed; core app is proprietary\n\n<!-- Associated Github repository -->"
           }
         ]
       },
@@ -9936,26 +7530,18 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Short Description",
+        "content": "ShortDescription",
         "children": [
           {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Productivity launcher with integrated AI chat supporting 32+ models, MCP protocol, and extensive extension ecosystem.",
-                "plainChildren": ""
-              }
-            ]
+            "type": "text",
+            "content": "- Productivity launcher with integrated AI chat supporting 32+ models, MCP protocol, and extensive extension ecosystem."
           }
         ]
       },
       {
         "type": "header",
         "level": 2,
-        "content": "Description",
+        "content": "description",
         "children": [
           {
             "type": "text",
@@ -10000,23 +7586,11 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Last Update",
+        "content": "LastUpdated",
         "children": [
           {
             "type": "text",
-            "content": "<!-- Note Date last updated -->"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "February 9, 2026",
-                "plainChildren": ""
-              }
-            ]
+            "content": "- February 9, 2026    \n\n<!-- Note Date last updated -->"
           }
         ]
       },
@@ -10048,19 +7622,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Extensions are MIT licensed",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Core app is proprietary",
-                "plainChildren": ""
+                "plainChildren": "Extensions are MIT licensed Core app is proprietary"
               }
             ]
           }
@@ -10083,13 +7645,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Proprietary",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Extensions: MIT",
-                "plainChildren": ""
+                "plainChildren": "Extensions: MIT"
               }
             ]
           }
@@ -10112,19 +7668,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Free tier: Core features + 50 AI messages (free forever)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Pro trial: 14-day free trial (does not include Advanced AI models)",
-                "plainChildren": ""
+                "plainChildren": "Free tier: Core features + 50 AI messages (free forever) Pro trial: 14-day free trial (does not include Advanced AI models)"
               }
             ]
           }
@@ -10246,13 +7790,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "listChanged: true",
-                "plainChildren": ""
+                "plainChildren": "listChanged: true"
               }
             ]
           }
@@ -10355,25 +7893,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Supported providers: Anthropic, Google, OpenAI, OpenRouter",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Note: Requests (except OpenRouter) processed through Raycast servers for API unification",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "BYOK usage may cost more than Raycast Pro subscription",
-                "plainChildren": ""
+                "plainChildren": "Supported providers: Anthropic, Google, OpenAI, OpenRouter Note: Requests (except OpenRouter) processed through Raycast servers for API unification BYOK usage may cost more than Raycast Pro subscription"
               }
             ]
           }
@@ -10396,31 +7916,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Ollama integration for local model execution",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Access to 100+ local AI models",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Experimental tool calling support",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Complete privacy with local-only data storage",
-                "plainChildren": ""
+                "plainChildren": "Ollama integration for local model execution Access to 100+ local AI models Experimental tool calling support Complete privacy with local-only data storage"
               }
             ]
           }
@@ -10429,7 +7925,7 @@
       {
         "type": "header",
         "level": 2,
-        "content": "Developer Experience",
+        "content": "DeveloperExperience",
         "children": [
           {
             "type": "text",
@@ -10454,31 +7950,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "File attachments (PDF, CSV, etc.)",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Screen content integration",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Dynamic placeholders in prompts",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "@-mention context injection via MCP servers and AI Extensions",
-                "plainChildren": ""
+                "plainChildren": "File attachments (PDF, CSV, etc.) Screen content integration Dynamic placeholders in prompts @-mention context injection via MCP servers and AI Extensions"
               }
             ]
           }
@@ -10501,19 +7973,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Chat with PDF documents and CSV files",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Attachment system for providing context",
-                "plainChildren": ""
+                "plainChildren": "Chat with PDF documents and CSV files Attachment system for providing context"
               }
             ]
           }
@@ -10593,31 +8053,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Thousands of community extensions in Raycast Store",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "MIT-licensed extension SDK",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "2,899+ contributors",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Categories: productivity, engineering, design, writing, time management",
-                "plainChildren": ""
+                "plainChildren": "Thousands of community extensions in Raycast Store MIT-licensed extension SDK 2,899+ contributors Categories: productivity, engineering, design, writing, time management"
               }
             ]
           }
@@ -10663,25 +8099,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Custom AI Commands with natural language",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "AI Extensions with @-mention support",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Pre-configured command templates",
-                "plainChildren": ""
+                "plainChildren": "Custom AI Commands with natural language AI Extensions with @-mention support Pre-configured command templates"
               }
             ]
           }
@@ -10727,19 +8145,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "AI Chat Presets for task-specific customization",
-                "plainChildren": ""
-              },
-              {
-                "type": "item",
-                "level": 1,
-                "content": "Fine-tuned chat configurations",
-                "plainChildren": ""
+                "plainChildren": "AI Chat Presets for task-specific customization Fine-tuned chat configurations"
               }
             ]
           }
@@ -10763,28 +8169,6 @@
                 "level": 1,
                 "content": "No",
                 "plainChildren": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "level": 2,
-        "content": "MCP-Client",
-        "children": [
-          {
-            "type": "text",
-            "content": "MCP Support"
-          },
-          {
-            "type": "list",
-            "level": 2,
-            "children": [
-              {
-                "type": "item",
-                "level": 1,
-                "content": "No"
               }
             ]
           }

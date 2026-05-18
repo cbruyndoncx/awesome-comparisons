@@ -7,7 +7,7 @@ A deeply integrated AI assistant built into JetBrains IDEs (IntelliJ IDEA, PyCha
 - Code/Editor
 
 ### Version
-v2025.2 (2025-08-25)
+v2026.1 (2026)
 
 ### Repo
 -
@@ -52,8 +52,10 @@ JetBrains AI Assistant embeds AI workflows directly inside JetBrains IDEs and le
 - MCP server configuration available in agent settings for external tool integrations.
 - Action Allowlist for customizing permitted agent behaviors.
 
+- v2026.1 additions: Junie autonomous agent for multi-step, multi-file tasks; multi-agent support (Codex, Cursor, ACP-compatible agents); multimodal prompts (paste images/Figma designs into chat); Database Intelligence (natural language queries on connected databases); AI-powered command completion; Terminal Intelligence for shell/Gradle/Maven commands; Recap and Insights experimental features; local model support (Ollama, LM Studio); multi-model: GPT-4.1, Claude 3.7 Sonnet, Gemini 2.5 Pro.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

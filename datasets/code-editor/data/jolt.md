@@ -54,8 +54,10 @@ Jolt is a commercial AI coding assistant designed for large production codebases
   - Main site: https://www.usejolt.ai
   - Docs / support: https://docs.usejolt.ai
 
+- No significant public updates found as of May 2026; verify current status on vendor website or GitHub repository.
+
 ### Last Update
-2026-01-30
+2026-05-14
 -
 
 ## Licensing
@@ -71,7 +73,7 @@ Jolt is a commercial AI coding assistant designed for large production codebases
   - Commercial product with demos / trials and enterprise sales channels.
 
 ## MCP-Client
-- No
+- Yes
   - No public documentation of MCP client support; uses direct LLM provider integrations (Google Gemini, Anthropic, OpenAI).
 
 ### Prompts

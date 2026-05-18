@@ -7,7 +7,8 @@ AI-powered developer platform focused on deep codebase understanding and autonom
 - Code/Editor
 
 ### Version
-- Rolling updates (2025-2026)
+- Rolling updates (2026-05)
+  - Intent 0.3.11; VS Code 0.840.7; IntelliJ v0.457.5
   - Design Mode launched November 2025; 70.6% SWE-bench accuracy; $252M raised.
 
 ### Repo
@@ -40,8 +41,10 @@ Augment Code is an AI-first development platform built to help professional engi
 - Security: SOC 2 Type II, ISO 27001:2022, ISO/IEC 42001:2023 certifications; first AI coding assistant to achieve ISO/IEC 42001 compliance.
 - Pricing: credit-based model from $20/month (Indie) to $200/month (Max) plus enterprise plans.
 
+- 2026 additions: Context Engine released as MCP server (Feb 2026) — semantic indexing now available as plugin for Cursor, Claude Code, Zed, and other MCP tools, improving agentic performance 70%+; Intent 0.3.11: workspace editor controls, terminal sidebar improvements; IntelliJ: hooks settings view, /fork and /ask slash commands, Figma OAuth restored; VS Code: /settings slash command, forked conversation recovery; Next Edit and Completions features sunsetting for non-Enterprise plans (March 31).
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

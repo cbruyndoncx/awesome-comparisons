@@ -47,7 +47,7 @@ Google AI Studio is a web-based IDE and playground from Google that exposes the 
 - Subscription tiers: Google AI Ultra (highest limits across Studio, Gemini app, Code Assist, Jules), AI Pro (moderate limits).
 
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

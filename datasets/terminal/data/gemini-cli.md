@@ -10,7 +10,7 @@ Since its 2025 launch, Gemini CLI has expanded rapidly with an extensions framew
 - Code/Terminal
 
 ### Version
-v0.21.0 (2025-12-15)
+v0.42.0 (2026-05)
 
 ### Repo
 - https://github.com/google-gemini/gemini-cli
@@ -36,9 +36,10 @@ Gemini CLI is Google's open-source command-line AI agent that provides direct ac
 - GEMINI.md: Project-level context files that customize agent behavior per repository, similar to .cursorrules or CLAUDE.md.
 - Authentication: Supports Google Account (free), Gemini API key, or Google Cloud Vertex AI.
 - Install: `npm install -g @google/gemini-cli@latest`
+- v0.42.0 additions (2026): Gemma 4 models enabled by default; real-time voice mode with wave animation feedback; git worktree support for isolated parallel sessions; plan mode research subagents; /rewind command for session navigation; refreshed Composer UX; interactive shell autocompletion; Solarized themes; advanced shell validation; auto memory inbox; policy engine enhancements.
 
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

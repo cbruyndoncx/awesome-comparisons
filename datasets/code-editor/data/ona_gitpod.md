@@ -36,14 +36,14 @@ Ona is the rebrand and strategic evolution of Gitpod into an AI-first software e
 - Good fit for teams that want to adopt AI-driven automation while retaining strict governance and compliance controls.
 - Limitations: true autonomous workflows require careful policy and guardrail configuration; smaller teams without enterprise needs may not need the full Ona stack.
 - Agent modes: Autonomous (no approval needed), Assisted (changes with visibility), and Manual (suggestions only).
-- Default LLM: Anthropic Claude Sonnet 3.5; enterprise customers can configure alternative models.
+- Default LLM: upgraded to Claude Opus 4.6 (May 2026) with adaptive thinking, more output tokens, and improved tool use; enterprise customers can configure alternative models.
 - Reported metrics: autonomous agents co-authored 60% of merged PRs and contributed 72% of merged code internally; customers report 4x development throughput increase.
 - Pricing: Ona Compute Units (OCU) model; Core plan starts at $10/40 OCUs with at least 80 OCUs/month. Task costs vary (e.g., new web app ~4 OCUs, medium feature ~8 OCUs).
 - IDE support expanded to: browser VS Code, smartphone, desktop VS Code, Cursor, Windsurf, JetBrains IDEs, and Zed.
 - Recommended evaluation steps: trial with a sandbox project, configure guardrails and VPC options, measure agent outputs against existing PR and review metrics, and validate audit/compliance reporting.
 
 ### Last Update
-2026-01-30
+2026-05-14
 
 
 ## Licensing

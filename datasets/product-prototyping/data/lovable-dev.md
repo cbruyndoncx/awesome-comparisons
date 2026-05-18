@@ -29,6 +29,28 @@ Lovable.dev is a 2025 release that combines AI-powered code generation with an i
 - TypeScript
 - HTML/CSS
 
+
+### Frontend Stack
+- React
+  - React with TypeScript.
+
+### Backend Stack
+- Platform / BaaS
+  - Supabase for backend logic and auth.
+
+### Database
+- Supabase
+  - Supabase managed PostgreSQL.
+
+
+### Style Library
+- Tailwind CSS
+  - Fixed — Tailwind CSS always generated.
+
+### Testing
+- None
+  - No test generation documented.
+
 ### Notes
 - Rapid prototyping: Designed specifically for quick web application development and iteration.
 - AI-powered generation: Uses AI to generate code and suggest implementations.
@@ -54,7 +76,7 @@ Lovable.dev is a 2025 release that combines AI-powered code generation with an i
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

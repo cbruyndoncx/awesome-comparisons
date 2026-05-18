@@ -63,7 +63,7 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
   - No evidence that the Jupyter extension includes a built-in MCP client for connecting to MCP servers.
 
 ### Prompts

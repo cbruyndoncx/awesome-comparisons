@@ -7,7 +7,7 @@ A next-generation, high-performance code editor focused on speed, real-time coll
 - Code/Editor
 
 ### Version
-- v0.208+ (2025, rolling releases)
+- v1.2.3 (2026-05)
   - Stable 0.208.6 released Oct 2025; frequent updates throughout 2025-2026 with major features every few weeks
 
 ### Repo
@@ -38,8 +38,10 @@ Zed is a modern code editor engineered for low latency and smooth UX. It renders
 - Good fit: Developers who prioritize low-latency editing, collaboration-first workflows, and integrated AI (especially teams wanting local model hosting) will find Zed compelling. If you depend on a very mature extension marketplace, account for that gap today.
 - 2025-2026 major updates: Agentic Editing (Jun 2025) with Agent Panel overhaul for autonomous code modification via diffs. Zeta Edit Prediction open-source model predicts entire edits (not just tokens). Native Git support with AI commit messages (May 2025). Windows support achieved via full rendering backend rewrite. DAP-based cross-language debugger. Dev Containers MVP (Dec 2025). Helix keymap, Settings Editor, Agent Servers (Oct 2025). Sticky Scroll, Commit and File History Views, Word Diffs (Nov 2025). Rainbow Brackets (Dec 2025). Multi-provider support: OpenAI, Bedrock, xAI (Grok), Ollama auto_discover. Agent Panel: model favorites/pinning, message queuing, @diagnostics feed, thread history. SSH remoting with Windows target support. Subpixel ClearType text rendering on Windows/Linux.
 
+- v1.2.3 additions (2026): parallel subagents; more reliable agent edits (applies changes even if file changed on disk); Vercel AI Gateway as new LLM provider; DeepSeek V4-Pro/Flash and Ministral 3 models; OpenCode provider support; business plan with org-wide AI model controls and spend tracking; git graph view; split diffs; panel layout switcher (classic vs agentic); reduced token usage for LLM edits; thinking blocks auto-expanded.
+
 ### Last Update
-2026-01-30
+2026-05-14
 - 2025-12-08 (Rainbow Brackets, Dev Containers MVP)
 - 2025-11 (Sticky Scroll, Commit/File History, Word Diffs)
 - 2025-10-30 (Codex AI agent announced)

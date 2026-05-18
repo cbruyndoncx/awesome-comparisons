@@ -47,10 +47,11 @@ Key capabilities include project-wide code indexing, plan decomposition, paralle
 - Early access / paid subscription model with credits was reported in public coverage; detailed pricing and enterprise plans should be confirmed on the vendor site.
 - Verdent aims to reduce manual overhead by letting agents handle repetitive engineering work while humans focus on strategy and validation.
 - Sources: Vendor and press coverage (product announcements and interviews, 2025), early user reports and blog posts discussing Verdent's plan-first approach and Deck application.
-- 2025-2026 updates: Built-in AI code reviews for security, quality, and best practices with direct Git commit support. Reasoning depth controls and planning mode toggle. Multi-model support added (Claude Sonnet, Opus 4.5, Gemini 3 Pro, GPT-5 with Codex). Proactive clarifying questions for vague tasks. Parallel task management for concurrent background code generation. Demonstrated real-time building of complete applications including HTML/CSS/JS frontend, APIs, database setup, testing, and documentation. Founded by TikTok's former head of algorithms.
+- 2025-2026 updates: Built-in AI code reviews for security, quality, and best practices with direct Git commit support. Reasoning depth controls and planning mode toggle. Multi-model support (Claude Sonnet 4.5, Opus 4.5, Gemini 3 Pro, GPT-5, GPT-5-Codex) via multi-model orchestration layer that routes by task type. Proactive clarifying questions for vague tasks. Parallel task management with git worktree isolation.
+- January 2026: Review Subagent cross-validates results using three frontier models simultaneously (Gemini 3 Pro, Claude Opus 4.5, GPT-5.2); Skills workflow bundles shipped as core feature; Agent Skills open standard support (published Dec 2025) for cross-platform skill reuse.
 
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
@@ -65,7 +66,7 @@ Key capabilities include project-wide code indexing, plan decomposition, paralle
   - 7-day free trial with 100 credits.
 
 ## MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

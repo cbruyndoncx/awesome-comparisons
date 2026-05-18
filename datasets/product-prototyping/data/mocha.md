@@ -35,6 +35,28 @@ Unlike template-based no-code builders, Mocha actually writes code that users ow
 - SQL
   - SQLite database
 
+
+### Frontend Stack
+- React
+  - React frontend deployed to Cloudflare.
+
+### Backend Stack
+- Node.js / Hono
+  - Hono API framework; deployed to Cloudflare Workers.
+
+### Database
+- SQLite
+  - SQLite database hosted on Cloudflare infrastructure.
+
+
+### Style Library
+- -
+  - Style library not documented.
+
+### Testing
+- None
+  - No test generation documented.
+
 ### Notes
 - Core strengths:
   - Vibe coding: Describe desired app functionality with words or images and iterate through conversational interface
@@ -95,7 +117,7 @@ Unlike template-based no-code builders, Mocha actually writes code that users ow
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
   - No documented Model Context Protocol client support for connecting to external MCP servers
 
 ### Prompts

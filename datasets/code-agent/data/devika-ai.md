@@ -40,8 +40,10 @@ Key capabilities include automated planning (breaking objectives into actionable
 - Naming Confusion: The agent is referred to as both Devika and Opcode in different places. The exact relationship is unclear.
 - 2025-2026 Update: No official versioned releases have been published on GitHub. The project announced a transition to "Opcode" branding with a "new version out soon" notice, but no Opcode release has materialized as of January 2026. The repository remains available but development activity appears stalled.
 
+- 2026 status: project transitioned to 'Opcode' rebrand; no significant public activity found in 2026. Consider archived.
+
 ### Last Update
-2026-01-30
+2026-05-15
 
 ## Licensing
 

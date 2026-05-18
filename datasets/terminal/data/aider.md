@@ -8,7 +8,7 @@ Aider is a python package and frequently updated with a mass following and an ac
 - Code/Terminal
 
 ### Version
-v0.76.0 (2025-12)
+v0.86.0 (2026-05)
   - Actively maintained open-source project; check https://github.com/Aider-AI/aider for current version
 
 ### Repo
@@ -36,9 +36,10 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 - Installation: pip-based installer (e.g., python -m pip install aider-install; then run aider-install), then run aider in a repo with your chosen model and API key.
 - Good fit for: teams wanting repo-aware AI edits, those requiring private/local model runs, developers who prefer CLI workflows and Git-backed safety for AI edits.
 - Limitations/considerations: Aider is a thin orchestration layer — actual model behavior, costs, and availability depend on chosen LLM provider or local runtime; evaluate model performance and token costs for your use case before large-scale adoption.
+- v0.86.0 additions (2026): GPT-5, Grok-4, and o3-pro model support; /context command auto-identifies files needing edits; /reasoning-effort command; --commit-language flag; co-authored-by attribution enabled by default; "overeager" mode for Claude 3.7 Sonnet; Playwright-backed web scraping.
 
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
@@ -55,7 +56,7 @@ Aider is an open-source AI pair-programming tool focused on the terminal-first d
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

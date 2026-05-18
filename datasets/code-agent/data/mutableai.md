@@ -8,7 +8,7 @@ AI-native developer platform that generates living documentation, code explanati
 - Code/Autonomous agent
 
 ### Version
-SaaS platform (Pro plans from $15/month; continuous updates)
+SaaS platform (2026) — code generation + refactoring focus
 
 ### Repo
 -
@@ -38,8 +38,10 @@ The platform is positioned for both individual developer workflows (autocomplete
 - Pricing: Free tier for open-source projects; Pro plans from $15/month; Enterprise with custom pricing and on-prem options.
 - 2025-2026 Update: Platform continues to focus on AI-native code documentation (Auto Wiki), codebase Q&A, and automated code transformations. Integrations with VS Code, GitHub, Jupyter, and CLI remain core. Custom model training on team codebases available for enterprise. Compliance checking for enterprise standards added. Developer reception positive, with users reporting it is "smarter than Copilot" for contextual code understanding. No specific version numbers published; SaaS delivery model.
 
+- 2026 status: positioned as a code generation and refactoring tool rather than a fully autonomous end-to-end agent. Specializes in comprehension + generation for existing codebases. Features: natural language code modification, repository-wide context awareness, auto-refactoring, test creation, documentation generation, CI/CD integration (PRs), code architecture diagrams. 30-day free trial. Not typically cited among top autonomous coding agents (Devin, Claude Code, Copilot Agent) for full project autonomy.
+
 ### Last Update
-2026-01-30
+2026-05-15
 
 ## Licensing
 
@@ -55,7 +57,7 @@ The platform is positioned for both individual developer workflows (autocomplete
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
   - No public documentation found indicating Model Context Protocol (MCP) support as of January 2026.
 
 ### Prompts

@@ -29,6 +29,29 @@ Zoer.ai is a comprehensive AI-powered platform launched in September 2025 that b
 - TypeScript
 - HTML/CSS
 
+
+### Frontend Stack
+- Next.js
+  - Next.js with TypeScript; full code export to GitHub.
+
+### Backend Stack
+- Next.js API Routes
+  - API layer colocated with Next.js frontend.
+
+### Database
+- Built-in / Proprietary
+  - Built-in database with automated schema design; managed by Zoer platform.
+
+
+### Style Library
+- Flexible
+  - Style not explicitly prescribed; likely Tailwind based on Next.js stack.
+
+### Testing
+- Unit Tests
+- Static Analysis
+  - 85%+ test coverage generated automatically; ESLint and SonarQube static analysis applied to all output.
+
 ### Notes
 - Full-stack generation: Creates complete applications including database schemas, API endpoints, business logic, and UI components using Next.js.
 - Database-first approach: Built-in database with automated schema design eliminates need for external services.
@@ -57,7 +80,7 @@ Zoer.ai is a comprehensive AI-powered platform launched in September 2025 that b
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

@@ -38,8 +38,10 @@ CodeLLM is a revolutionary AI code editor by Abacus.AI that helps developers 10x
 - Bundle offering: Includes ChatLLM (chat interface) and CodeLLM (code editor) in one subscription.
 - Abacus.AI: Enterprise AI platform company specializing in applied AI solutions.
 
+- No significant public updates found as of May 2026; verify current status on vendor website or GitHub repository.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
@@ -53,7 +55,7 @@ CodeLLM is a revolutionary AI code editor by Abacus.AI that helps developers 10x
 - Yes
 
 ## MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

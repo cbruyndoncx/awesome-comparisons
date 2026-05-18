@@ -8,7 +8,7 @@ Sophisticated desktop application bringing Aider's AI pair programming capabilit
 - Code/Editor
 
 ### Version
-- v0.26.0 (2025)
+- v0.26.0 (2025-2026 rolling)
 
 ### Repo
 - https://github.com/hotovo/aider-desk
@@ -38,8 +38,10 @@ AiderDesk is a sophisticated desktop application that brings all the power of Ai
 - Open source: Community-developed wrapper for Aider available on GitHub.
 - Active development: Maintained by hotovo with growing community adoption.
 
+- v0.26.0 additions: agentic workflows with MCP tool integration; custom instructions for agent; new chat modes (Agent, Code, Ask, Architect, Context); expanded model support (gpt-4.1, gpt-4.1-mini, o4-mini, Gemini 2.5 Flash, Ollama local models); Git Worktrees for multi-project management; Vercel AI SDK integration; /reasoning-effort and /think-tokens commands; real-time cost control dashboard; repo map context for agent; VSCode and IntelliJ auto-sync.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

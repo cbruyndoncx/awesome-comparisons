@@ -16,8 +16,7 @@
 - Kiro CLI is the terminal client for AWS's Kiro agentic development platform; it brings agent-driven, spec-driven development flows to the shell and can act autonomously to modify multiple files, run tools, and follow project "steering" files.
 
 ### Version
-<!-- Latest version used for update -->
-- GA (General Availability)
+- v2.0 GA (April 2026)
   - Kiro CLI is the production/GA release of AWS's Kiro platform (the successor to Amazon Q Developer CLI). No single semantic version number is published like an open-source repo; updates are rolled out by AWS.
 
 ### Repo
@@ -48,10 +47,11 @@
 ### Notes
 
 - Kiro CLI shares steering files and configuration with the Kiro IDE, enabling consistent behavior across IDE and terminal workflows.
-- The product is a managed AWS offering that uses subscriptions/credits for model usage; teams manage access via AWS Identity Center and related AWS account controls.
+- The product is a managed AWS offering; teams manage access via AWS Identity Center and related AWS account controls.
+- v2.0 additions (April 2026): headless CI/CD mode via KIRO_API_KEY env var (GitHub Actions, GitLab CI, Jenkins); Windows support; agent swapping mid-session (/agent swap); custom agent JSON configuration; property-based testing from specs; Agent Output Side Channels (AGENT_DISPLAY_OUT, AGENT_CONTEXT_OUT); granular web fetch URL allowlists; team subscription plans; kiro-cli translate (NL to shell) and kiro-cli inline (inline suggestions).
 
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 <!-- Licensing -->

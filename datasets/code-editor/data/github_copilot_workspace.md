@@ -7,7 +7,7 @@ A cloud-hosted, agentic development environment experiment from GitHub (technica
 - Code/Editor
 
 ### Version
-Archived v0.1 (2025-05-30)
+Active development (2026-05)
 
 ### Repo
 -
@@ -35,8 +35,10 @@ GitHub Copilot Workspace was an experimental "agentic" IDE hosted by GitHub that
 - Limitations: no documented BYOK or local/offline execution; service was cloud-only and proprietary. Pricing and GA plans were not published for the technical preview prior to sunset.
 - Useful when comparing AI coding environments for enterprise adoption: strong UX for large-scope edits and planning, but lack of on-prem/local model options and the preview's discontinuation reduce viability for locked-down environments.
 
+- 2026 additions: Autopilot (public preview) for fully autonomous agent sessions; Enhanced Session List — sessions appear earlier in lifecycle supporting VS Code brainstorming feature; agentic memory (public preview, auto-expires 28 days) learns repository-specific insights; integrated browser debugging; image and video support in chat; unified editor for managing chat customizations, custom agents, skills, and plugins; multi-model selection; expanded context windows.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
@@ -50,7 +52,7 @@ GitHub Copilot Workspace was an experimental "agentic" IDE hosted by GitHub that
 - Yes
 
 ## MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

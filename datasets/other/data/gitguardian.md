@@ -83,7 +83,7 @@ GitGuardian provides comprehensive NHI governance with centralized inventory of 
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
   - GitGuardian provides an MCP server, not an MCP client
 
 ### Prompts

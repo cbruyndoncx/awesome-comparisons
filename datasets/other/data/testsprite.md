@@ -60,7 +60,7 @@ TestSprite is an AI-powered test automation platform that leverages machine lear
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

@@ -12,7 +12,7 @@ Open-source AI coding assistant / VS Code extension
   - Open-source VS Code (and JetBrains) extension with CLI support, agent orchestration, and project-scoped memory stored under .kilocode/
 
 ### Version
-- Active development (2025-2026)
+- GA (April 2026) — rebuilt on OpenCode server
   - 500+ models across 60+ providers; JetBrains and CLI support added; Slack integration (Kilo for Slack); parallel agents via CLI; voice prompting; tab autocomplete; Grok Code Fast access (Aug 2025).
 
 ### Repo
@@ -43,8 +43,10 @@ Kilo Code is an open-source AI coding assistant implemented primarily as a Visua
 - 500+ models, 60+ providers; no commission pricing (exact provider list prices); Kilo Pass bonus credits program.
 - Grok Code Fast: exclusive free unlimited access through xAI partnership (Aug 2025).
 
+- April 2026 GA: completely rebuilt extension based on OpenCode server (open-source portable core shared across VS Code, CLI, and Cloud Agents); parallel tool calls and parallel subagents for concurrent execution; subagent delegation; git worktrees for independent agent work without conflicts; multi-model comparisons (run same prompt across models side-by-side); line-level code review comments on diffs; cross-platform session continuity; 500+ AI models; native MCP marketplace in extension.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

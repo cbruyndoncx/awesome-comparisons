@@ -31,6 +31,28 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
 - Python
 - SQL
 
+
+### Frontend Stack
+- No-code / Proprietary
+  - Widget-based drag-and-drop builder; not a standard exportable framework.
+
+### Backend Stack
+- Platform / BaaS
+  - Self-hostable Node.js platform backend; not custom server code.
+
+### Database
+- Any
+  - Connects to external databases (PostgreSQL, MySQL, MongoDB, REST APIs, etc.).
+
+
+### Style Library
+- Platform / Proprietary
+  - Widget-based visual builder; no CSS framework in generated output.
+
+### Testing
+- None
+  - No test generation; platform is a visual builder.
+
 ### Notes
 - Key features:
   - Visual app builder with ~60+ UI components (tables, charts, forms, lists, etc.)
@@ -88,7 +110,7 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

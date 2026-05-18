@@ -7,7 +7,8 @@ Codex CLI is an open-source command-line interface for interacting with OpenAI's
 - Code/Terminal
 
 ### Version
-v0.89.0 (2026-01-22)
+v0.124.x (2026-05)
+  - GPT-5.5 is the recommended default model as of April 2026
 
 ### Repo
 - https://github.com/openai/codex
@@ -36,9 +37,10 @@ Codex CLI provides a lightweight, terminal-first agent that lets developers read
 - Useful for exploratory code tasks, automated refactors, running test-fix cycles, and generating PR-ready diffs; best results when the repository includes clear tests and documentation.
 
 Sources: GitHub repository (https://github.com/openai/codex) and project documentation/examples aggregated from public write-ups about Codex CLI and its configuration.
+- v0.122-0.124 additions (2026): GPT-5.5 recommended default (April 2026); GPT-5.4 and GPT-5.4 mini added (March 2026); codex remote-control command for headless app-server sessions; Amazon Bedrock auth support; configurable TUI keymaps; persistent goals; multi-agent v2 with sub-agent path addressing; planning workflow improvements; MCP debugging enhancements; safer approval profiles.
 
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

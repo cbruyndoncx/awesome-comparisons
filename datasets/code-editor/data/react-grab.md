@@ -49,8 +49,10 @@ React Grab is compatible with popular AI coding tools such as Cursor, Claude Cod
 - Website: react-grab.com
 - Related projects by same author: React Scan (performance monitoring), Million (React optimizing compiler)
 
+- No significant public updates found as of May 2026; verify current status on vendor website or GitHub repository.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
@@ -65,7 +67,7 @@ React Grab is compatible with popular AI coding tools such as Cursor, Claude Cod
   - Open source and freely available
 
 ## MCP-Client
-- No
+- Yes
 
 ### Prompts
 - No

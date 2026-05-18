@@ -48,7 +48,7 @@ Brokk is a standalone, Java-based desktop application that rethinks AI-assisted 
 - 2025 updates: Lutz Mode (agentic research/planning/building loops for million-line codebases), BlitzForge (mass refactors at scale), Plan Mode (.18 update), renamed actions for clarity (Architect → "Code + Plan First", Code → "Code – Plan First", Search → "Answer + Search First", Ask → "Answer – Search First").
 
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 

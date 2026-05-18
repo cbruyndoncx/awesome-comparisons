@@ -37,6 +37,8 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
 - Limitations: quality and speed depend heavily on the chosen LLM (GPT-4 is common but slower/costly). The tool is experimental — outputs require human review, testing, and iteration. Not designed as a drop-in replacement for full IDE/code-review workflows.
 - 2025-2026 Update: Project in stable maintenance phase with incremental improvements. PR #158 (Apr 2025) migrated dependency management from Poetry to uv for faster builds. Multi-model provider support via litellm (Azure, OpenAI, Palm, Anthropic, Cohere, Replicate). Feedback loop remains 2-4 minutes per generation cycle with GPT-4. Community spawned smol-dev-js (JavaScript variant for incremental live project changes). Project focus remains on lightweight prototyping rather than full IDE workflows.
 
+- 2026 status: last active 2025; no confirmed updates in public sources as of May 2026.
+
 ### Last Update
 - 2026-01-30
 
@@ -56,7 +58,7 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
   - Smol Developer does not include built-in support for the Model Context Protocol (MCP); it is a standalone Python library/repo workflow. Integration with MCP servers would need to be added by consumers.
 
 ### Prompts

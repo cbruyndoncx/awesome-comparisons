@@ -8,7 +8,7 @@ An asynchronous autonomous coding agent from GitHub that works in the background
 - Code/Autonomous agent
 
 ### Version
-GA (General Availability September 25, 2025; announced May 2025 at Microsoft Build)
+GA (2026-05) — Agent HQ launched; multi-agent orchestration
 
 ### Repo
 -
@@ -40,8 +40,10 @@ GitHub Copilot Coding Agent is an asynchronous AI developer that works independe
 - GitHub Models integration enables access to additional AI models including Grok 3 from xAI.
 - Can work collaboratively with other AI agents throughout the development lifecycle.
 
+- 2026 additions: Agent HQ — unified platform enabling multiple AI agents (Copilot, Claude, Codex, Google, xAI, Cognition) to work within GitHub workflows; Mission Control — unified command center across GitHub, VS Code, mobile, and CLI for parallel agent assignment and tracking; enterprise governance with compliance enforcement and metrics dashboards; Plan Mode (VS Code) for step-by-step planning before implementation; custom agents via AGENTS.md files with specific guardrails; GitHub MCP Registry with Stripe, Figma, Sentry integrations; agentic code review with automated issue flagging.
+
 ### Last Update
-2026-01-30
+2026-05-15
 
 ## Licensing
 
@@ -59,7 +61,7 @@ GitHub Copilot Coding Agent is an asynchronous AI developer that works independe
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
   - No documented MCP client support for the coding agent as of January 2026; Copilot ecosystem focuses on GitHub-native integrations
 
 ### Prompts

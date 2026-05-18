@@ -8,7 +8,7 @@ Open-source AI junior developer that transforms GitHub issues into pull requests
 - Code/Autonomous agent
 
 ### Version
-- v1.27.15 (JetBrains plugin, January 4, 2026); open-weights 1.5B model released 2025
+- v1.27.15 (2026-01-04) — latest confirmed release
 
 ### Repo
 - https://github.com/sweepai/sweep
@@ -47,6 +47,8 @@ Sweep is an intelligent open-source AI assistant that automates typical develope
 - Maintenance focus: Particularly effective for routine tasks, bug fixes, and small features.
 - 2025-2026 Update: Released open-weights 1.5B parameter code autocomplete model that outperforms Qwen2.5-Coder-7B (4.6x larger) by 12% on next-edit benchmarks. Model trained in 4 hours on 8 H100 GPUs. JetBrains plugin v1.27.15 released Jan 2026 with active development (v1.27.10-1.27.15 in Dec 2025-Jan 2026). SOC 2 compliant with zero data retention. Next-edit autocomplete predicts changes based on editing context (not just fill-in-the-middle). Community-built Neovim integration (cursortab.nvim) created within hours of announcement. 7.6k GitHub stars, 453 forks, 35 contributors. Free open-weights model vs. Copilot $10/mo and Cursor $20/mo.
 
+- v1.27.15 additions (Jan 4, 2026): background Bash tool runs commands without opening new terminal; improved accept/reject code blocks display; autocomplete includes all open files; file deletion on reject for newly created files. Recent features: AI Code Review (v1.25.9); Ask Mode for codebase exploration without edits (v1.24.4); next-edit autocomplete predictions; Claude Code skills integration; diff-level commit messages; Slack integration; JetBrains support (IntelliJ, PyCharm, Android Studio).
+
 ### Last Update
 - 2026-01-30
 
@@ -64,7 +66,7 @@ Sweep is an intelligent open-source AI assistant that automates typical develope
 ## MCP-Client
 
 ### MCP-Client
-- No
+- Yes
 
 ### Prompts
 - Yes

@@ -47,8 +47,10 @@ According to performance analyses, Cheetah AI delivers 230% ROI for engineering 
 - Platform: Available at cheetahai.co.
 - Release: 2025.
 
+- No significant public updates found as of May 2026; verify current status on vendor website or GitHub repository.
+
 ### Last Update
-2026-01-30
+2026-05-14
 
 ## Licensing
 
