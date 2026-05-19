@@ -5,6 +5,69 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.0.0-260518] - 2026-05-18
+
+### Added
+
+**New entries — `terminal` dataset**
+- `hermes.md` — Nous Research open-source terminal agent; MIT; model-agnostic (local + cloud); git worktree isolation; LSP-aware edits; native MCP client+server; skills/curator system; ACP server support; multi-channel (Telegram, email, web)
+- `openclaw.md` — Privacy-first open-source terminal agent; MIT; local/cloud LLMs; native MCP client+server; skills system; multi-channel integrations
+
+### Fixed
+
+**Parser & data model (systemic)**
+- Fix ReDoS catastrophic backtracking in `splitNameUrl` — titles with dashes but no URL (e.g. `CommandCode - v0.25.14`) caused infinite gulp hang
+- Fix `splitNameUrl` name extraction — version strings in titles no longer pollute tool names (CommandCode, Letta, Pi, Neovate Code now show clean names)
+- Fix md2json parser — indented sub-bullets (`  - description`) now stored as `plainChildren` on parent item instead of being treated as separate top-level filter values
+- Fix `getCriteria()` normalization — added fallback lookup by display name, resolving `### Tools` → `MCP-Tools`, `### Prompts` → `MCP-Prompts` etc. across 53+ data files
+- Fix `criteriaData` key to use `criteria.id` ensuring Angular downstream lookups succeed
+- Fix feature-grouping service — normalized children lookup so Parallelism and Coordination column groups correctly resolve camelCase criteria IDs (AgentTopology, CoordinationMode, etc.)
+- Fix `processMcpEnrichment` — skip when no enrichment data present (prevents overwriting markdown Yes values with No); use `criteria.id` as Map key to prevent duplicate serialized entries
+
+**MCP data fixes**
+- Fix 164 entries across all datasets where `MCP-Client` overall was `No` but sub-fields (Tools/Prompts/Resources) were `Yes` — overall now set to `Yes` to match the more-detailed sub-field data
+
+**Configuration**
+- `datasets/terminal/config/comparison.yml` — hide `Local Offline` deployment filter (terminal CLI tools are always local by definition)
+- `datasets/code-orchestration/config/comparison.yml` — scope Classification to orchestration values; hide Languages, MCP sub-fields, Extensible sub-fields not relevant to orchestrators
+
+## [Unreleased] - 2026-05-14
+
+### Added
+
+**New dataset: `code-orchestration`**
+- 17 entries covering multi-agent parallel coding orchestration systems: Intent, Bernstein, Miyabi, DeerFlow, MetaGPT, MagiC, AgentScope, Claude-Flow, ChatDev, GNAP, Gas Town, Antigravity, Conductor, Vibe Kanban, Claude Squad, Swarm Tools, Paperclip
+- Dataset-specific template fields: Agent Topology (Fixed/Dynamic), Coordination Mode (Autonomous/Supervised/Managed), Parallelism Model, Coordination Mechanism, Verification, Task Source, External Task Integrations (GitHub, Jira, Linear, Azure DevOps, Trello, ClickUp, Notion, Asana)
+- Template aligned with terminal/code-editor for shared fields: MCP-Client (Prompts, Resources, ACP), Deployment (Local Offline), Languages, Licensing comments, Extensible (Plugins, Skills, Custom Modes), Developer Experience (Context Management, Direct File References)
+
+**New entries — `terminal` dataset**
+- `goose.md` — Block/Square open-source Apache 2.0 CLI agent; 3,000+ MCP servers; BYOK; ACP server support
+- `junie-cli.md` — JetBrains Junie CLI (March 2026); standalone cross-platform; BYOK for OpenAI/Anthropic/Google/Grok
+
+**New entries — `code-editor` dataset**
+- `kiro.md` — AWS Kiro IDE (GA 2026); VS Code-based; spec-driven development; Agent Hooks; 50+ MCP integrations
+- `jetbrains-junie.md` — JetBrains Junie AI agent (Dec 2025); Code Mode + Ask Mode; post-generation validation; 10 JetBrains IDEs; ACP support
+- `replit.md` — Replit browser-based cloud IDE; Ghostwriter + Replit Agent 3 (200-min autonomous runs)
+
+**New entries — `code-agent` dataset**
+- `blinky.md` — Open-source VS Code debugging agent; LSP + print-statement + LLM triangulation; MIT
+
+**New entries — `product-prototyping` dataset**
+- `emergent-sh.md` — Five-agent full-stack builder (Architect/Designer/Developer/Integration/PM); native OAuth/API handling; YC backed
+- `reflex.md` — Python full-stack framework + AI builder; no JavaScript; Apache 2.0; MCP integration
+
+**`product-prototyping` template enhancements**
+- `Frontend Stack` — frontend framework of generated output (React, Next.js, Vue.js, Python/Reflex, No-code/Proprietary, Any)
+- `Backend Stack` — backend framework of generated output (Next.js API Routes, Node.js/Fastify, FastAPI, Platform/BaaS, None, Any)
+- `Database` — database of generated output (PostgreSQL, SQLite, MongoDB, Supabase, Neon, Built-in/Proprietary, None, Any)
+- `Style Library` — CSS/component library in generated output (Tailwind CSS, shadcn/ui, MUI, Bootstrap, Flexible, None) with Fixed/Flexible notation
+- `Testing` — test framework(s) in generated output (Unit Tests, Integration Tests, E2E Tests, Static Analysis, None)
+- All 18 entries backfilled with the new fields
+
+### Fixed
+- Closed GitHub issues: #8 (Grok CLI — already in dataset), #9 (Mocha — already in dataset), #13 (CodeBot Delphi — already in dataset), #14 (emergent.sh), #15 (reflex.dev)
+- `code-orchestration` dataset registered in `datasets.manifest.json` and `all` dataset aggregate
+
 ## [3.0.0] - 2025-10-28
 
 ### Added
