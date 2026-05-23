@@ -12,14 +12,30 @@ Requires Node 20+.
 
 ```bash
 npm install
+npm run dev -- --dataset code-orchestration
+## or launch other datasets
+npm run dev -- --dataset code-editor
+npm run dev -- --dataset terminal
+npm run dev -- --dataset product-prototyping
 npm run dev -- --dataset aie-model
-## or launch the business strategy dataset
-npm run dev -- --dataset business-competition
 ```
 
 Then open `http://localhost:4200` (comparison) or `http://localhost:4200/admin/config` (config editor).
 
 **→ Full guide:** [Creating Your Comparison](docs/uc-v3/Update_YOUR_Comparison.md)
+
+## Datasets
+
+| Dataset | ID | Entries | Description |
+|---|---|---|---|
+| Code/Editors | `code-editor` | 57 | AI-native IDEs and editor extensions |
+| Terminal CLI | `terminal` | 22 | CLI-first AI coding agents |
+| Code Agent | `code-agent` | 22 | Autonomous software engineering agents |
+| Code Orchestration | `code-orchestration` | 17 | Multi-agent parallel coding orchestration systems |
+| Prototyping | `product-prototyping` | 18 | AI app builders and prototyping tools |
+| Code Models | `aie-model` | 36 | AI coding models and model tooling |
+| AI Chat Clients | `ai-chat` | 11 | AI-powered chat interfaces with MCP support |
+| Other | `other` | 10 | Miscellaneous code editing tools |
 
 ## Key Features
 
