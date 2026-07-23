@@ -21,6 +21,9 @@ Modern AI-powered terminal and agentic development environment focused on unifyi
 - AI-powered terminal and Agentic Development Environment (ADE) that combines natural-language Agent Mode, Warp Code (live diffing and stepwise code edits), and Warp Drive (shared Workflows, Notebooks, prompts and environment variables) to enable collaborative, model-driven development workflows within the terminal.### Description
 Warp is a modern terminal that has evolved into an "Agentic Development Environment" (ADE). It tightly integrates large language models and agent workflows with the command line, providing natural-language command generation, an interactive chat/agent interface (Agent Mode), collaborative Drive features (Workflows, Notebooks, shared Environment Variables), and code-focused tooling (Warp Code with diff-tracking). Warp's interface lets developers mix prompts and shell commands in a single input, run multi-step agent plans, review and accept diffs produced by agents, and share/run parameterized Workflows across teams.
 
+### Description
+- Not documented in the available source record.
+
 ### Languages
 - Any
 
@@ -30,7 +33,7 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 - Strengths: Unified UX for prompt + shell input, native diff review for agent-made changes, strong collaboration primitives for teams.
 - Limitations / unknowns: public documentation is limited on BYOK (bring-your-own-key) and fully offline local LLM operation; product is proprietary which may limit on-premise customization for some organizations.
 - Recommended when: you want a first-class terminal with integrated AI agents and team sharing (Drive), MCP support, and open-source transparency.
-- v2026.05 additions: open-sourced MIT + AGPL v3; Cloud Agents (Oz) triggered by webhooks, CI events, or Slack messages; drag-and-drop images into CLI agent sessions; inline Mermaid diagram rendering in agent output; Codex harness for local child agents; Mistral Vibe as recognised CLI agent; Rich Input for third-party agents (Claude Code, Gemini CLI, OpenCode).
+- 2026 additions: Cloud Agents (Oz), image inputs, inline Mermaid rendering, Codex harness support, and Rich Input for third-party agents. The product remains proprietary; the open-source licensing claim is not retained without a primary licensing source.
 
 ### Last Update
 2026-05-14
@@ -122,4 +125,3 @@ Warp is a modern terminal that has evolved into an "Agentic Development Environm
 ### Subagents
 - Yes
   - Warp supports running multiple agents and orchestrating multi-agent workflows. While there is multi-agent orchestration and task chaining, there is no widely-published "subagent API" name — orchestration is handled via the agent management UI and planning features.
-

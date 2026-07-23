@@ -11,10 +11,7 @@ OpenAI's flagship conversational AI interface providing access to GPT models wit
 
 ### Version
 <!-- Latest version used for update -->
-- GPT-5.2 (January 2026)
-  - GPT-5.2 Instant for high-volume fast responses
-  - GPT-5.2 Thinking for deeper reasoning
-  - GPT-5.3-Codex running 25% faster
+- GPT-5.5 Instant, Thinking, and Pro (current as of 2026-07-22)
 
 ### Repo
 <!-- Associated Github repository -->
@@ -42,6 +39,8 @@ The platform now provides full Model Context Protocol (MCP) support through Deve
 - Any
 
 ### Notes
+- GPT-5, GPT-5.1, GPT-4o, GPT-4.1, GPT-4.1 mini, and o4-mini have been retired from ChatGPT.
+- Sources: https://help.openai.com/en/articles/11909943-gpt-5-3-and-gpt-55-in-chatgpt and https://help.openai.com/en/articles/20001051 (verified 2026-07-22).
 - Ad-supported free and Go tiers (Plus/Pro/Business/Enterprise remain ad-free)
 - Multi-device access (web, iOS, Android, desktop apps)
 - API access for developers

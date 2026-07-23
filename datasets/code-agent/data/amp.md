@@ -8,7 +8,7 @@ A research-preview, agentic AI coding assistant from Sourcegraph that focuses on
 - Code/Autonomous agent
 
 ### Version
-- Continuous releases (May 2026) — GPT-5.5 in deep mode; Opus 4.7 in smart mode
+- Current version not published; active independent product rather than a Sourcegraph research preview.
 
 ### Repo
 - Proprietary (no main public repository)
@@ -45,6 +45,11 @@ Amp is designed as an "agentic" coding assistant that can autonomously reason th
 - 2025-2026 Update: Amp spun out from Sourcegraph as an independent research lab/company. Multi-model architecture added (Claude Sonnet 4, O3, with GPT-5 readiness). Fixed 200K token context window (unconstrained token usage). "Oracle" capability invokes powerful models for complex tasks. Agentic code review feature launched (Dec 2025). Thread Map visualization, Handoff mechanism for long-context drift (Nov 2025), ad-supported free tier (up to $10/day), public developer profiles, and tab completion engine added. CLI tool now provides full agentic functionality from terminal.
 
 - May 2026 additions: GPT-5.5 added to deep mode; Claude Opus 4.7 in smart mode; automatic context compaction at 90% window — no more manual handoffs; official Plugin API released (custom tools, commands, events, UI); three agent modes: Smart (state-of-the-art unconstrained), Rush (fast/focused), Deep (extended reasoning); agentic Code Review with structured feedback; Thread Map for conversation visualization; ad-supported free tier.
+- Source: https://help.sourcegraph.com/article/troubleshooting-amp-related-issues (verified 2026-07-22).
+
+### Skills
+- Unknown
+  - Not documented in the available source record.
 
 ### Last Update
 - 2026-01-30
@@ -131,4 +136,3 @@ Amp is designed as an "agentic" coding assistant that can autonomously reason th
 ### Subagents
 - Yes
   - Specialized agents/components (Librarian, review agents, task-specific helpers) enable task decomposition and targeted workflows.
-

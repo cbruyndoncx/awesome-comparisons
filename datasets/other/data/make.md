@@ -69,6 +69,10 @@ The complementary Make MCP Server (open source, MIT licensed on GitHub) exposes 
 ### Resources
 - No
 
+### Custom Modes
+- Unknown
+  - Not documented in the available source record.
+
 ### ACP
 - No
 

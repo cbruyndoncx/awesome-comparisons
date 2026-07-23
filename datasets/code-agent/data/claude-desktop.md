@@ -41,6 +41,10 @@ Designed for Pro, Max, Team and Enterprise customers, Claude Desktop aims to mak
 
 - 2026 additions: Claude Opus 4.6 and 4.7 model support; computer use capabilities on desktop; Claude Code Desktop redesigned April 14, 2026 with native multi-session support and built-in worktree management; voice control integration; /loop and /schedule for recurring automation; mobile access via iMessage, Telegram, Dispatch.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

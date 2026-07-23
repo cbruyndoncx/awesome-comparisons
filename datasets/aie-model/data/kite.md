@@ -42,6 +42,12 @@ Kite was an early AI-assisted coding tool (founded 2014) that provided context-a
 - As of 2025 the company is inactive; repositories remain as historical artifacts and starting points for community forks and research.
 - 2025-2026 Update: No new development. Company remains defunct since late 2022. Repositories serve as historical artifacts only. The AI coding assistant space has been dominated by GitHub Copilot, Cursor, Cline, and other modern tools. Kite's legacy influence is visible in privacy-first local inference approaches adopted by newer tools.
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

@@ -36,6 +36,10 @@ Codename Goose is an open-source, on-machine AI agent framework created to autom
 
 - v1.30.0 additions (April 8, 2026): Terminal UI (TUI) overhaul with tab-expandable tool calls for improved output visualization; 15+ LLM providers supported; ACP server functionality for Zed, JetBrains, VS Code integration; 83% autonomy level; general-purpose beyond coding: research, writing, automation, data analysis; Apache 2.0.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 2026-05-15
 - Released v1.18.0 on 2025-12-19 (per repository release tag).

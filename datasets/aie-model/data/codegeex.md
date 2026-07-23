@@ -34,6 +34,12 @@ CodeGeeX is a large-scale multilingual code generation model and toolkit develop
 - See also: CodeGeeX2 (follow-up) and related THUDM releases which may have differing licenses or access requirements.
 - 2025-2026 Update: CodeGeeX4-ALL-9B released, built on GLM-4-9B architecture with 9B parameters (down from 13B). Supports code interpreter, web search integration, function calling, repository-level code Q&A, and long context up to 1,048,576 tokens. Available via Cloud Studio and OpenAI-compatible servers. INT8-quantized variants available for resource-constrained deployments. First fully open large-scale multilingual code generation model with public end-to-end pre-training recipes.
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

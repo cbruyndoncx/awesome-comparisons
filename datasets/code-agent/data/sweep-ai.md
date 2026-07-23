@@ -49,6 +49,10 @@ Sweep is an intelligent open-source AI assistant that automates typical develope
 
 - v1.27.15 additions (Jan 4, 2026): background Bash tool runs commands without opening new terminal; improved accept/reject code blocks display; autocomplete includes all open files; file deletion on reject for newly created files. Recent features: AI Code Review (v1.25.9); Ask Mode for codebase exploration without edits (v1.24.4); next-edit autocomplete predictions; Claude Code skills integration; diff-level commit messages; Slack integration; JetBrains support (IntelliJ, PyCharm, Android Studio).
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

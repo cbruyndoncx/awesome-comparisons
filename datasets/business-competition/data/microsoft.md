@@ -19,7 +19,7 @@ Azure spans IaaS, PaaS, SaaS, and security offerings underpinned by Active Direc
 - Technology Conglomerate (Microsoft)
 
 ### Regions
-- 60+ cloud regions worldwide with Azure Arc + Stack for hybrid deployments
+- 70+ announced cloud regions worldwide, with Azure Arc + Stack for hybrid deployments (verified 2026-07-22)
 
 ### Customers
 - Fortune 500, SMB via CSP partners, public sector/DoD, ISVs building on Azure + GitHub

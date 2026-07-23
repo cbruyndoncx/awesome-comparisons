@@ -50,6 +50,15 @@ Claude Opus 4.5 is Anthropic's flagship model released on November 24, 2025, as 
 - Dynamic performance: Described as "dynamic rather than overthinking" with remarkable speed improvements.
 - Released November 24, 2025 as Anthropic's most intelligent model.
 
+### Lifecycle
+- legacy
+
+### Successor
+- Claude Opus 4.6
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-02-06
 

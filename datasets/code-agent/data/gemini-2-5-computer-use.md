@@ -52,6 +52,10 @@ Google's payments platform team implemented the model to fix fragile UI tests, s
 
 - 2026 additions: evolved from Project Mariner to full Gemini Computer Use; browser-anchored with DOM awareness; Gemini Enterprise Agent Platform (Cloud Next '26): Agent Studio, Agent Runtime, Agent-to-Agent Orchestration, Agent Observability, Agent Identity and Registry; access to 200+ models including Gemini 3.1 Pro, Gemini 3.1 Flash Image, Gemma 4; available to Google AI Ultra subscribers (US); enterprise deployment with identity, policy enforcement, and operational controls.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

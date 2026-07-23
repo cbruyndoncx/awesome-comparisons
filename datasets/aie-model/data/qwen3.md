@@ -35,6 +35,12 @@ Qwen3-Max is Alibaba's flagship large language model featuring approximately one
 - Multimodal extensions available (Qwen3-VL, Qwen3-Omni)
 - Ranked third globally on Text Arena leaderboard, surpassing GPT-5-Chat
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

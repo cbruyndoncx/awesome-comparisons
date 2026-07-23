@@ -34,6 +34,12 @@ Code Llama is Meta's open-source family of large language models optimized for c
 - Limitations: still requires careful prompt engineering for complex multi-file project reasoning; ecosystem tooling (IDE/product integrations) is smaller than some commercial competitors but growing quickly.
 - 2025-2026 Update: No new Code Llama-specific releases. Meta shifted focus to Llama 4 (April 2025) with Scout (17B active/109B total, 10M context) and Maverick (17B active/400B total, 1M context) as natively multimodal models. Broader Llama family reached 1.2B downloads by April 2025 (1M/day). Code Llama 70B remains at 67.8% HumanEval with 100K context. Code Llama effectively superseded by Llama 4 multimodal models for new deployments.
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

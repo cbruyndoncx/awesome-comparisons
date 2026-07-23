@@ -38,6 +38,10 @@ Google Jules is a 2025 release representing Google's entry into autonomous AI co
 
 - 2026 additions: model upgraded from Gemini 2.5 Pro to Gemini 3.1 Pro; pricing tiers: Free (15 tasks/day, 3 concurrent), Pro $19.99/month (100 tasks/day, 15 concurrent), Ultra $124.99/month (300 tasks/day, 60 concurrent); Environment Snapshots for faster consistent execution; user steerability to modify execution plan mid-run; multimodal input support; audio changelogs.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

@@ -57,6 +57,10 @@ Wrapifai is a SaaS no-code builder for creating small AI-powered web tools you c
 - Security: Platform claims encrypted transmission and secure storage for collected leads (standard for SaaS tools) — verify for specific compliance needs.
 - 2025-2026 updates: Ranked as top tool in no-code AI builders for website engagement in 2025. Tool creation achievable in under 1 minute from a single prompt. Platform supports calculators, AI generators, interactive forms, quizzes, and chatbots. Integrated analytics for traffic, conversions, and engagement. Seamless CMS/e-commerce integration. Strong encryption and data protection compliance. Scalable from individual tools to enterprise deployments.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

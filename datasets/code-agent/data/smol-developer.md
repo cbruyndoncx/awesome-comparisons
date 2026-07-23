@@ -39,6 +39,10 @@ Smol Developer is an opinionated, small-footprint AI "developer" agent that aims
 
 - 2026 status: last active 2025; no confirmed updates in public sources as of May 2026.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

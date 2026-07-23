@@ -44,6 +44,15 @@ At only 8% of the price of Claude Sonnet and twice the speed, MiniMax M2 offers 
 - Availability: Open-source on GitHub, available via API platforms
 - 2025-2026 Update: M2.1 released December 23, 2025 with enhanced Rust/Java/Go/C++/Kotlin/ObjC/TS/JS support, improved UI/UX design capabilities (VIBE-Web 91.5), better instruction following, and dialogue/writing enhancements. Revenue grew 7x to $70M ARR. 2026 roadmap includes agent reliability, voice integration, and structured workflows.
 
+### Free Trial
+- Unknown
+
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

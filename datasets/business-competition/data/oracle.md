@@ -19,7 +19,7 @@ OCI differentiates through Exadata/Autonomous Database, low-latency RDMA network
 - Enterprise Software Vendor
 
 ### Regions
-- 46 public cloud regions incl. dual-regions per country (US, EU, JP, AUS) plus sovereign and dedicated regions
+- 50+ public cloud regions across 28 countries, plus sovereign and dedicated regions (verified 2026-07-22)
 
 ### Customers
 - Oracle database estates, ERP/HCM customers, telcos, governments, gaming studios seeking predictable costs

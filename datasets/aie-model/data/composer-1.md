@@ -51,6 +51,12 @@ Composer 1 is a frontier coding model released in October 2025 as part of Cursor
 - Minor limitations: Occasional issues with specific integrations (e.g., YouTube transcript functions).
 - Released October 2025 as part of Cursor 2.0 launch.
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-02-06
 

@@ -92,6 +92,10 @@ ToolJet is an open-source low-code platform focused on building internal tools, 
   - GitHub: https://github.com/ToolJet/ToolJet
 - 2025-2026 updates: Leading open-source low-code platform for internal tools as of 2026. 60+ pre-built templates for dashboards, CRMs, inventory management, and project management. Natural language AI app generation creates product specs, databases, and functional apps from prompts. AI copilots for debugging and logic creation. Built-in PostgreSQL no-code database. Cloud pricing from $79/builder/month; self-hosted free. Emeritus case study: 50% dev time reduction, 600+ hours saved. Infear.org: 7 apps built with 9 data sources, 60+ days saved. Competes favorably with Bubble, Appsmith, and OutSystems for customization-focused teams.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

@@ -51,6 +51,12 @@ Nemotron Nano 2 VL achieves leading results on OCRBench v2 and scores approximat
 - Pricing: $0.20/M input tokens, $0.60/M output tokens (January 2026)
 - 2025-2026 Update: Context window extended to 128K tokens (from 16K). Available in BF16, FP8, and FP4 precision formats on HuggingFace. Supports reasoning-on/off modes for flexible inference. 35% higher throughput than Llama-3.1-Nemotron-Nano-VL-8B. Up to 6x higher inference throughput on reasoning tasks on single NVIDIA A10G GPU. Multi-language support including English, Chinese, Arabic, Turkish, Russian. Free tier available on OpenRouter.
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

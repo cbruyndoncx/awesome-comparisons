@@ -36,6 +36,12 @@ DeepSeek-R1 is an open-source reasoning model released January 2025 that achieve
 - Full 22-page research paper published detailing training methodology
 - Signaled China's growing influence in open-source LLM ecosystem
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

@@ -56,6 +56,10 @@ CodeCompanion.ai (desktop) is described in third-party write-ups as a local-firs
 - Research summary based on multiple third-party write-ups and product summaries; authoritative vendor documentation and pricing were not found in the search results available.
 - 2025-2026 updates: v7.0.45 released June 2025. Reworked chat context system to align with LLM format expectations, fixing infinite looping and invalid tool call issues. LLM Apply system replaces diff-based changes with cursor-style methodology using separate cheaper model for applying changes. Grep search tool added. Project-wide undo/checkpoint functionality. Better embeddings for code search and file suggestions. o3-mini model support. Auto-linting for 14+ languages. Over 10,000 users.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

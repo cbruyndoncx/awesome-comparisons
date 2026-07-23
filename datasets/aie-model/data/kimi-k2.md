@@ -40,6 +40,12 @@ Kimi K2 is a state-of-the-art mixture-of-experts (MoE) language model developed 
 - Released July 2025 as a major advancement in open-weight models.
 - 2025-2026 Update: K2 Thinking and K2 Thinking Turbo released November 6, 2025 for complex reasoning and agentic tasks. Major price cuts: 75% off cached input, 50% off uncached input. K2.5 released January 27, 2026 as native multimodal agentic model trained on 15T mixed visual/text tokens. K2.5 features 256K context, MoonViT 400M vision encoder, 384 experts (8 selected per token), Agent Swarm for multi-agent parallel execution. Benchmarks show K2.5 surpassing GPT-5.2 on SWE-bench Multilingual and VideoMMMU. Moonshot raised at $4.8B valuation.
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

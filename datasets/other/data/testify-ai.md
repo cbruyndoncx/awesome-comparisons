@@ -40,6 +40,10 @@ Testify AI is a fast-growing open-source project that brings AI-powered test aut
   - stretchr/testify released v1.11.1 (Aug 27, 2025) with performance improvements and bug fixes, but this is a different product.
   - Verify this entry's repo URL and product claims before relying on this data.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

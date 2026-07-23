@@ -35,6 +35,12 @@ GLM-4.7 is Zhipu AI's latest-generation flagship large language model, released 
 - API pricing: $0.42/M input tokens, $2.2/M output tokens
 - Top open-source ranking on SWE-bench-Verified
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

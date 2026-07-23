@@ -45,6 +45,12 @@ Users of Claude Code find that Haiku 4.5 makes the coding experience—from mult
 - Developer: Anthropic
 - 2025-2026 Update: Part of Claude 4.5 family with Sonnet 4.5 (Sept 2025) and Opus 4.5 (Nov 2025). First Haiku-tier model with extended thinking, computer use, and context awareness. Supports 200K context window with up to 64K output tokens. Anthropic's safest model by automated alignment assessment. January 2026: Anthropic released updated 80-page constitution with reason-based alignment approach. Future iterations targeting native audio/video support and 1M+ context windows.
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

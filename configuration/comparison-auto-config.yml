@@ -80,6 +80,7 @@ criteria:
       values:
         '-': {}
         Integrates with local git repositories and provides edition checkpoints and undo flows within the IDE; supports human review before commits.: {}
+        Unknown: {}
         'Yes': {}
         'No': {}
   - Hooks:
@@ -140,6 +141,7 @@ criteria:
       type: LABEL
       values:
         Integrates with external LLM providers via user API keys; no documented dedicated MCP client/service.: {}
+        Unknown: {}
         'Yes': {}
         'No': {}
   - MCP-Prompts:
@@ -158,6 +160,7 @@ criteria:
       type: LABEL
       values:
         Documentation, tutorials and examples for Flow IDE, VS Code and JetBrains integrations are available on the EasyCode site and docs.: {}
+        Unknown: {}
         'Yes': {}
         'No': {}
   - Context Management:
@@ -176,12 +179,37 @@ criteria:
       type: LABEL
       values:
         Offers VS Code and JetBrains plugins/extensions; the Flow IDE acts as a native application with plugin-style integrations.: {}
+        Unknown: {}
         'Yes': {}
         'No': {}
   - CustomModes:
       type: LABEL
       values:
         Distinct Planning, Implementation and Debugging modes that change how the agent reasons about the codebase and produces outputs.: {}
+        Unknown: {}
+        'Yes': {}
+        'No': {}
+  - ACP:
+      type: LABEL
+      values:
+        Unknown: {}
+        'Yes': {}
+        'No': {}
+  - Local Offline:
+      type: LABEL
+      values:
+        Unknown: {}
+        'Yes': {}
+        'No': {}
+  - Git Support:
+      type: LABEL
+      values:
+        Unknown: {}
+        'Yes': {}
+        'No': {}
+  - Skills:
+      type: LABEL
+      values:
         Unknown: {}
         'Yes': {}
         'No': {}
@@ -201,26 +229,6 @@ criteria:
         'Yes': {}
         'No': {}
   - MCP-Tasks:
-      type: LABEL
-      values:
-        'Yes': {}
-        'No': {}
-  - ACP:
-      type: LABEL
-      values:
-        'Yes': {}
-        'No': {}
-  - Local Offline:
-      type: LABEL
-      values:
-        'Yes': {}
-        'No': {}
-  - Git Support:
-      type: LABEL
-      values:
-        'Yes': {}
-        'No': {}
-  - Skills:
       type: LABEL
       values:
         'Yes': {}

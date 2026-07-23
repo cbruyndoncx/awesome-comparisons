@@ -1127,7 +1127,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- Rolling updates — transitioning to AWS Kiro (2026)    No traditional version numbers; major agent update April 2025 achieved 66% on SWE-Bench Verified. Build/test validation added January 2025. Enhanced cost management November 2025."
+            "content": "- IDE plugins and paid subscriptions: new signups blocked 2026-05-15; end of support 2027-04-30. AWS is transitioning the CLI experience to Kiro.    No traditional version numbers; major agent update April 2025 achieved 66% on SWE-Bench Verified. Build/test validation added January 2025. Enhanced cost management November 2025."
           }
         ]
       },
@@ -1201,7 +1201,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- Supported IDEs: Visual Studio Code, JetBrains IDEs (IntelliJ, PyCharm, WebStorm, etc.), Eclipse, and Visual Studio — feature parity varies by IDE (VSCode and JetBrains typically have the richest feature set).    \n- Authentication: Supports AWS Builder ID and IAM Identity Center. Builder ID allows individuals to use Amazon Q without an AWS account; IAM Identity Center sessions for Amazon Q may have extended durations (90 days for setups created on/after 2024-04-18 in some configurations).    \n- Example editor actions: select code → right-click → Amazon Q → Explain / Refactor / Fix / Optimize / Generate Tests / Send to Prompt / Inline Chat.    \n- Documentation generation: a chat command (e.g. `/doc`) can be used to create README or other docs by analyzing the workspace.    \n- Security & reference tracking: inherits capabilities from CodeWhisperer lineage — surfaces potential vulnerabilities, license/reference links when generated code closely matches examples, and provides remediation guidance.    \n- Third-party plugins: Amazon Q supports integrations with monitoring/security providers via a plugin alias system in the AWS Console; examples reported include CloudZero, Datadog, Wiz (these pull provider data via APIs and Q surfaces results and deep links without sending the user's chat content to the provider).    \n- Use cases: onboarding and code comprehension, generating boilerplate, test generation, migrating or modernizing code, documenting projects, security scanning and remediation guidance, and creating AWS infra-aware code snippets.    \n- Limitations: cloud-hosted (no fully local/offline mode), generated code requires human review for correctness/security/licensing, enterprise controls and BYOK options are limited compared to self-hosted offerings.    \n- Related: Amazon CodeWhisperer functionality was consolidated into Amazon Q Developer around April 2024; for legacy references check CodeWhisperer docs (https://aws.amazon.com/codewhisperer/).    \n- 2026 critical update: New Q Developer signups blocked May 15, 2026; full end-of-support for IDE plugins and paid subscriptions April 30, 2027. AWS transitioning to Kiro as next-generation agentic development platform.    \n- 2026 additions before transition: MCP support for extending IDE plugins with external tools and data sources; agentic coding enhancements (autonomous feature implementation, automated code reviews, documentation generation); multi-IDE support (VS Code, JetBrains, Visual Studio, Eclipse)."
+            "content": "- Supported IDEs: Visual Studio Code, JetBrains IDEs (IntelliJ, PyCharm, WebStorm, etc.), Eclipse, and Visual Studio — feature parity varies by IDE (VSCode and JetBrains typically have the richest feature set).    \n- Authentication: Supports AWS Builder ID and IAM Identity Center. Builder ID allows individuals to use Amazon Q without an AWS account; IAM Identity Center sessions for Amazon Q may have extended durations (90 days for setups created on/after 2024-04-18 in some configurations).    \n- Example editor actions: select code → right-click → Amazon Q → Explain / Refactor / Fix / Optimize / Generate Tests / Send to Prompt / Inline Chat.    \n- Documentation generation: a chat command (e.g. `/doc`) can be used to create README or other docs by analyzing the workspace.    \n- Security & reference tracking: inherits capabilities from CodeWhisperer lineage — surfaces potential vulnerabilities, license/reference links when generated code closely matches examples, and provides remediation guidance.    \n- Third-party plugins: Amazon Q supports integrations with monitoring/security providers via a plugin alias system in the AWS Console; examples reported include CloudZero, Datadog, Wiz (these pull provider data via APIs and Q surfaces results and deep links without sending the user's chat content to the provider).    \n- Use cases: onboarding and code comprehension, generating boilerplate, test generation, migrating or modernizing code, documenting projects, security scanning and remediation guidance, and creating AWS infra-aware code snippets.    \n- Limitations: cloud-hosted (no fully local/offline mode), generated code requires human review for correctness/security/licensing, enterprise controls and BYOK options are limited compared to self-hosted offerings.    \n- Related: Amazon CodeWhisperer functionality was consolidated into Amazon Q Developer around April 2024; for legacy references check CodeWhisperer docs (https://aws.amazon.com/codewhisperer/).    \n- 2026 critical update: New Q Developer signups blocked May 15, 2026; full end-of-support for IDE plugins and paid subscriptions April 30, 2027. AWS transitioning to Kiro as next-generation agentic development platform.    \n- Source: https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/ and https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/upgrade-to-kiro.html (verified 2026-07-22).    \n- 2026 additions before transition: MCP support for extending IDE plugins with external tools and data sources; agentic coding enhancements (autonomous feature implementation, automated code reviews, documentation generation); multi-IDE support (VS Code, JetBrains, Visual Studio, Eclipse)."
           }
         ]
       },
@@ -8908,7 +8908,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- Sunset scheduled March 22, 2027    Launched April 2025 at Google Cloud Next; Gemini 2.5 upgrade April 2025; Autonomous Agent Mode and MCP support added July 2025; Gemini CLI integration June-July 2025."
+            "content": "- New workspace creation and signup unavailable; sunset scheduled March 22, 2027.    Launched April 2025 at Google Cloud Next; Gemini 2.5 upgrade April 2025; Autonomous Agent Mode and MCP support added July 2025; Gemini CLI integration June-July 2025."
           }
         ]
       },
@@ -9006,7 +9006,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- App Prototyping agent: Create Next.js web app prototypes from natural language, images, or Figma designs. The agent can add auth and database patterns automatically when requested.    \n- Automated backend provisioning: Prompts that specify data/auth needs result in recommended App Blueprints (Firestore, Firebase Auth, Hosting) and one-click provisioning when publishing.    \n- Gemini integration: The environment is powered by Gemini models (Gemini in Firebase, upgraded to Gemini 2.5 during 2025 previews), providing code completion, refactor suggestions, test generation, and conversational guidance contextualized to the workspace.    \n- Templates & import: Large template gallery (dozens of starter apps) plus the ability to import existing projects or compressed archives from source control.    \n- Deployment: One-click publish to Firebase App Hosting with preview URLs and QR codes for quick device testing; handles builds and CDN deployment.    \n- Collaboration: Shareable workspaces and real-time collaboration for teams; supports rapid feedback cycles.    \n- Privacy & security considerations: Workspaces may provision AI resources and API keys automatically; teams should evaluate data residency and key management requirements (enterprise BYOK and compliance workflows may be limited in the initial preview).    \n- Best fit: Fast prototyping, startups and teams building Firebase-backed web/mobile apps, AI-enhanced frontends, and teams that prefer managed backend provisioning and tight Firebase integration.    \n- Limitations: Cloud-only, proprietary, potential vendor lock-in to Firebase/GCP services; enterprises with strict BYOK or on-prem requirements should validate security/compliance.    \n- Autonomous Agent Mode (July 2025): Gemini reasons and works independently without requiring manual approval at each step.    \n- Gemini CLI integration: open-source AI agent integrated into Firebase Studio, eliminating context switching between CLI and chat.    \n- Firebase AI Logic: evolution from Vertex AI in Firebase; supports Gemini 2.5 series \"thinking\" budget, grounding with Google Search.    \n- Mobile prototyping: App Prototyping agent optimized for mobile devices (May 2025).    \n- 2026 status: Firebase Studio is being sunset March 22, 2027. Google AI Studio is now the active rapid prototyping platform (major update March 21, 2026 added Firebase integration, multiplayer, Secrets Manager, NPM packages, Next.js support, session persistence). For full IDE development, Google Antigravity is the next-generation platform. Migration tools to Google AI Studio are available."
+            "content": "- App Prototyping agent: Create Next.js web app prototypes from natural language, images, or Figma designs. The agent can add auth and database patterns automatically when requested.    \n- Automated backend provisioning: Prompts that specify data/auth needs result in recommended App Blueprints (Firestore, Firebase Auth, Hosting) and one-click provisioning when publishing.    \n- Gemini integration: The environment is powered by Gemini models (Gemini in Firebase, upgraded to Gemini 2.5 during 2025 previews), providing code completion, refactor suggestions, test generation, and conversational guidance contextualized to the workspace.    \n- Templates & import: Large template gallery (dozens of starter apps) plus the ability to import existing projects or compressed archives from source control.    \n- Deployment: One-click publish to Firebase App Hosting with preview URLs and QR codes for quick device testing; handles builds and CDN deployment.    \n- Collaboration: Shareable workspaces and real-time collaboration for teams; supports rapid feedback cycles.    \n- Privacy & security considerations: Workspaces may provision AI resources and API keys automatically; teams should evaluate data residency and key management requirements (enterprise BYOK and compliance workflows may be limited in the initial preview).    \n- Best fit: Fast prototyping, startups and teams building Firebase-backed web/mobile apps, AI-enhanced frontends, and teams that prefer managed backend provisioning and tight Firebase integration.    \n- Limitations: Cloud-only, proprietary, potential vendor lock-in to Firebase/GCP services; enterprises with strict BYOK or on-prem requirements should validate security/compliance.    \n- Autonomous Agent Mode (July 2025): Gemini reasons and works independently without requiring manual approval at each step.    \n- Gemini CLI integration: open-source AI agent integrated into Firebase Studio, eliminating context switching between CLI and chat.    \n- Firebase AI Logic: evolution from Vertex AI in Firebase; supports Gemini 2.5 series \"thinking\" budget, grounding with Google Search.    \n- Mobile prototyping: App Prototyping agent optimized for mobile devices (May 2025).    \n- 2026 status: Firebase Studio is being sunset March 22, 2027. Google AI Studio is now the active rapid prototyping platform (major update March 21, 2026 added Firebase integration, multiplayer, Secrets Manager, NPM packages, Next.js support, session persistence). For full IDE development, Google Antigravity is the next-generation platform. Migration tools to Google AI Studio are available.    \n- Source: https://firebase.google.com/docs/studio/get-started and https://firebase.google.com/docs/studio/migrating-project (verified 2026-07-22)."
           }
         ]
       },
@@ -11707,6 +11707,549 @@
         "tasks": false
       }
     }
+  },
+  {
+    "type": "header",
+    "level": 1,
+    "content": "Google Antigravity IDE - https://antigravity.google/product/antigravity-ide",
+    "children": [
+      {
+        "type": "text",
+        "content": "Google's agent-first development environment with an editor, terminal, browser-operating agents, artifacts, and an agent manager."
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "General",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Classification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Editor",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Autonomous agent",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Version",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Continuously updated; current public version not independently verified."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Repository",
+        "children": [
+          {
+            "type": "text",
+            "content": "- -"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Rating",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ShortDescription",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Agentic IDE for delegating coding tasks across editor, terminal, and browser workflows."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "description",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Antigravity provides an agent manager and development surfaces for agents that can modify code, use a terminal, operate a browser, and return artifacts for review."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Languages",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Any",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Notes",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Official sources: https://antigravity.google/product/antigravity-ide and https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "LastUpdated",
+        "children": [
+          {
+            "type": "text",
+            "content": "- 2026-07-23"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Licensing",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Opensource",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "License",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Proprietary",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "FreeTrial",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Client",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Prompts",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Tools",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Resources",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ACP",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Deployment",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "BYOK",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Local Offline",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "DeveloperExperience",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Context Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Direct File References",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Checkpoints",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Git Support",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Extensible",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Plugins",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Hooks",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "SlashCommands",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomModes",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Subagents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourcePath": "google-antigravity.md"
   },
   {
     "type": "header",
@@ -25874,7 +26417,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- DISCONTINUED (sunsetting November 2025+)    Supermaven was acquired by Cursor and is being sunset. Existing customers receive full refunds and free autocomplete inference indefinitely. VS Code users are recommended to migrate to Cursor."
+            "content": "- Discontinued as a standalone product; agent conversations are no longer supported. Existing autocomplete inference continues for existing customers.    Supermaven was acquired by Cursor and is being sunset. Existing customers receive full refunds and free autocomplete inference indefinitely. VS Code users are recommended to migrate to Cursor."
           }
         ]
       },
@@ -25948,7 +26491,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- Key differentiators: extremely large context window (public claims up to 1,000,000 tokens in marketing material), very low latency (reported ~250ms), and \"next location prediction\" that can jump to the file/line where the assistant thinks a change belongs.    \n- Integrations: official support for Visual Studio Code, JetBrains family of IDEs, and Neovim. Also offers an integrated editor/IDE built around the Supermaven assistant.    \n- Models & chat: Supermaven runs its own inference for completions and provides a chat interface that can surface large-context diffs; some product messaging references integrations with third-party models for chat features.    \n- Pricing (public tiers, subject to change): Free tier available; Standard plan and Pro plan historically reported at roughly $18/month and $29/month respectively; enterprise plans available for organizations.    \n- Best fit: developers and teams working on medium-to-large codebases who need fast, context-rich completions and cross-file reasoning (e.g., refactors, large feature work, legacy code maintenance).    \n- Limitations/considerations: proprietary/cloud-hosted service (no confirmed fully offline/self-hosted option), potential privacy and compliance considerations for sensitive code — review enterprise offerings and data handling policies before adoption.    \n- STATUS: Acquired by Cursor (~January 2025) and being sunset. Technology integrated into Cursor. Existing customers receive full refunds for remaining usage and free autocomplete inference indefinitely. VS Code users recommended to migrate to Cursor.    \n- Sunsetting timeline: acquired by Anysphere (Cursor) November 2024; began sunsetting November 2025 (one year post-acquisition). VS Code standalone product discontinued — users directed to Cursor. Features integrated into Cursor Tab AI model. Existing Neovim and JetBrains users receive free autocomplete inference indefinitely. Agent conversations no longer supported. All remaining user balances refunded."
+            "content": "- Key differentiators: extremely large context window (public claims up to 1,000,000 tokens in marketing material), very low latency (reported ~250ms), and \"next location prediction\" that can jump to the file/line where the assistant thinks a change belongs.    \n- Integrations: official support for Visual Studio Code, JetBrains family of IDEs, and Neovim. Also offers an integrated editor/IDE built around the Supermaven assistant.    \n- Models & chat: Supermaven runs its own inference for completions and provides a chat interface that can surface large-context diffs; some product messaging references integrations with third-party models for chat features.    \n- Pricing (public tiers, subject to change): Free tier available; Standard plan and Pro plan historically reported at roughly $18/month and $29/month respectively; enterprise plans available for organizations.    \n- Best fit: developers and teams working on medium-to-large codebases who need fast, context-rich completions and cross-file reasoning (e.g., refactors, large feature work, legacy code maintenance).    \n- Limitations/considerations: proprietary/cloud-hosted service (no confirmed fully offline/self-hosted option), potential privacy and compliance considerations for sensitive code — review enterprise offerings and data handling policies before adoption.    \n- STATUS: Acquired by Cursor (~January 2025) and being sunset. Technology integrated into Cursor. Existing customers receive full refunds for remaining usage and free autocomplete inference indefinitely. VS Code users recommended to migrate to Cursor.    \n- Sunsetting timeline: acquired by Anysphere (Cursor) November 2024; began sunsetting November 2025 (one year post-acquisition). VS Code standalone product discontinued — users directed to Cursor. Features integrated into Cursor Tab AI model. Existing Neovim and JetBrains users receive free autocomplete inference indefinitely. Agent conversations no longer supported. All remaining user balances refunded.    \n- Source: https://supermaven.com/blog/sunsetting-supermaven (verified 2026-07-22)."
           }
         ]
       },
@@ -29874,7 +30417,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- v0.x (development paused early 2026)    Y Combinator-backed; beta launched Jan 2025 with frequent updates via GitHub. No stable 1.0 release yet as of Jan 2026."
+            "content": "- Development currently paused; some features may be outdated or broken.    Y Combinator-backed; beta launched Jan 2025 with frequent updates via GitHub. No stable 1.0 release yet as of Jan 2026."
           }
         ]
       },
@@ -29948,7 +30491,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- Privacy-first architecture: no private backend proxying—connections go directly from the editor to the chosen model provider or local runtime.    \n- Model flexibility: works with local open-source models and major cloud providers (OpenAI, Anthropic, Google, etc.) by configuring your own keys or local endpoints.    \n- Agent Mode enables the AI to perform repository-wide tasks (read/write/delete files, run terminal commands) — use with care and review generated changes via checkpoints.    \n- Good choice for teams or individuals who need AI assistance but require data residency or on-prem constraints.    \n- 2025-2026 updates: Y Combinator backing confirmed. Custom FIM (Fill-in-the-Middle) model support added. Lint error detection integrated. Fast Apply for files with thousands of lines. Agent Mode and Gather Mode work with any model including open-source models lacking native tool-calling. Expanded model support: Claude, GPT, Gemini, DeepSeek, Llama, Qwen, Grok. Active development cycle with frequent GitHub releases.    \n- 2026 status: development paused as of early 2026; no new features, security patches, or bug fixes being shipped. Existing builds remain functional. For actively maintained open-source alternatives consider Zed."
+            "content": "- Privacy-first architecture: no private backend proxying—connections go directly from the editor to the chosen model provider or local runtime.    \n- Model flexibility: works with local open-source models and major cloud providers (OpenAI, Anthropic, Google, etc.) by configuring your own keys or local endpoints.    \n- Agent Mode enables the AI to perform repository-wide tasks (read/write/delete files, run terminal commands) — use with care and review generated changes via checkpoints.    \n- Good choice for teams or individuals who need AI assistance but require data residency or on-prem constraints.    \n- 2025-2026 updates: Y Combinator backing confirmed. Custom FIM (Fill-in-the-Middle) model support added. Lint error detection integrated. Fast Apply for files with thousands of lines. Agent Mode and Gather Mode work with any model including open-source models lacking native tool-calling. Expanded model support: Claude, GPT, Gemini, DeepSeek, Llama, Qwen, Grok. Active development cycle with frequent GitHub releases.    \n- 2026 status: development paused as of early 2026; no new features, security patches, or bug fixes being shipped. Existing builds remain functional. For actively maintained open-source alternatives consider Zed.    \n- Source: https://voideditor.com/ (verified 2026-07-22)."
           }
         ]
       },

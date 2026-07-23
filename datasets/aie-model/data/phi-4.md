@@ -36,6 +36,12 @@ Phi-4 is Microsoft's 14-billion parameter small language model designed for high
 - Knowledge cutoff: June 2024 and earlier
 - Philosophy: data quality over model scale
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

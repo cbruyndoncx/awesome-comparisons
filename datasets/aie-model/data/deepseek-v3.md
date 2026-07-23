@@ -42,6 +42,15 @@ DeepSeek-V3 is a 671-billion parameter Mixture-of-Experts model that achieves st
 - Open source: Available on GitHub with full model weights and documentation.
 - 2025-2026 Update: V3-0324 (March 2025) with enhanced reasoning (+19.8 AIME, +10 LiveCodeBench). V3.1-Terminus (September 2025) introduced hybrid reasoning architecture (thinking/non-thinking modes). V3.2-Exp added DeepSeek Sparse Attention (DSA) with 50%+ API price reduction. V3.2 (December 1, 2025) reached GPT-5 level with Thinking in Tool-Use capability. V3.2-Speciale rivals Gemini-3.0-Pro, won gold at IMO/ICPC/IOI 2025. Available across web, mobile, and API platforms.
 
+### Lifecycle
+- legacy
+
+### Successor
+- DeepSeek V4
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

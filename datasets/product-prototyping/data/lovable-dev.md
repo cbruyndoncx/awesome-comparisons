@@ -59,6 +59,10 @@ Lovable.dev is a 2025 release that combines AI-powered code generation with an i
 - Bridges no-code and traditional development approaches.
 - 2025-2026 updates: Agent Mode became default interface in July 2025 with autonomous codebase exploration, proactive debugging, and web search. Visual Edits enhanced to reduce UI iteration cycles by 40% via direct element clicking. Real-time multi-team collaboration added. Three working modes: Agent Mode, Chat Mode, and Visual Edits. Generates TypeScript/React apps with Supabase backends and Tailwind CSS. Figma-to-React component conversion. Third-party integrations with GitHub, Stripe, Clerk, OpenAI. One-click deployments to custom domains. Built-in AI guardrails with RBAC, SSO, and audit logs. Users report completing six months of work in two days.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

@@ -45,6 +45,15 @@ In January 2025, Alibaba released Qwen2.5-Max, their most advanced model availab
 - Developer: Alibaba Cloud
 - 2025-2026 Update: Qwen2.5-Max launched January 2025 as MoE model pretrained on 20T+ tokens, outperforming GPT-4o and DeepSeek-V3. Qwen2.5-VL multimodal family released January 2025. Qwen3-Max launched September 5, 2025, outperforming other foundation models. Latest snapshot qwen3-max-2026-01-23 integrates thinking/non-thinking modes with web search, code interpreter, and webpage extraction tools. Supports 92 programming languages and 29 natural languages with 128K context window.
 
+### Lifecycle
+- legacy
+
+### Successor
+- Qwen3-Coder-Next
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

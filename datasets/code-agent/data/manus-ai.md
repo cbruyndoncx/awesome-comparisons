@@ -37,11 +37,16 @@ Manus AI is recognized as the world's first fully autonomous AI agent, developed
 - Autonomous deployment: Can execute code, browse web, interact with files, and deploy to production.
 - Claude + Qwen powered: Uses Anthropic's Claude 3.5 Sonnet and Alibaba's Qwen models.
 - Monica.im: Developed by Chinese AI startup specializing in autonomous agents.
-- Invitation-only beta: Currently requires waitlist approval with use case description.
+- Official product pages list public web, desktop, iOS, and Android availability; no longer describe Manus as invitation-only beta.
 - Launched March 2025 with strong benchmark results.
 - 2025-2026 Update: Manus 1.6 released with Manus Max (more powerful agent variant), mobile development support (beyond web apps), Design View for interactive image creation, and enhanced UI aesthetics. Asynchronous cloud operation allows users to disconnect while tasks complete in background. Memory and adaptive learning added (retains user preferences across sessions). CEO announced plans to release agentic foundation models under open-source license. Platform expanded beyond coding to serve business analysts, researchers, marketers, and customer service teams. Still invitation-only beta access.
 
-- 2026 additions: Web App Builder (March 2026) — creates full websites/apps with built-in database, Stripe integration, and SEO; desktop app with local file system access; Manus 1.6 Max (complex/creative) and 1.6 Lite (fast/everyday) model tiers. Acquisition: Meta acquired Manus AI late 2025 for ~$2 billion. Platform access: Web, Telegram, WhatsApp, LINE, Slack. Pricing: credit-based (300 daily credits free tier).
+- Manus is now part of Meta. Current availability includes web, desktop, iOS, and Android.
+- Sources: https://manus.im/download and https://manus.im/blog (verified 2026-07-22).
+
+### Skills
+- Unknown
+  - Not documented in the available source record.
 
 ### Last Update
 - 2026-01-30
@@ -112,4 +117,3 @@ Manus AI is recognized as the world's first fully autonomous AI agent, developed
 
 ### Subagents
 - Yes
-

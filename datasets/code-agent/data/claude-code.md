@@ -11,8 +11,8 @@ An agentic command-line coding tool from Anthropic that operates directly in the
 v2.1.128 (2026-05) — see terminal/claude-code.md for full CLI details
 
 ### Repo
-- https://github.com/anthropics/claude-code
-  - Open-source under BSD license
+- -
+  - Anthropic's official Claude Code product is closed-source; the GitHub link previously listed here was not an official source-code repository.
 
 ### Rating
 - [5] Powerful agentic CLI with deep codebase understanding, MCP integration, hooks, skills, subagents, and extensive automation capabilities.
@@ -46,11 +46,11 @@ Claude Code is Anthropic's CLI-based agentic coding tool designed to be intentio
 ## Licensing
 
 ### Opensource
-- Yes
-  - Source code available on GitHub under BSD license
+- No
+  - Claude Code is a proprietary closed-source product from Anthropic.
 
 ### License
-- BSD
+- Proprietary
 
 ### Free Trial
 - Yes

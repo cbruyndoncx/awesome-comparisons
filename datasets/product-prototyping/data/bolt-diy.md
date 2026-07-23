@@ -60,6 +60,10 @@ Bolt.diy brings AI-assisted coding to full-stack web development. It runs on Sta
 - Export options: ZIP export, deploy to Netlify/Cloudflare/Vercel, Docker image.
 - 2025-2026 updates: Electron desktop app released for native experience. 19+ AI providers now supported including OpenAI, Anthropic, Ollama, OpenRouter, Gemini, DeepSeek, Groq, Cohere, Together, Perplexity, HuggingFace, and more. Supabase integration for database management. File locking system, diff view, voice prompting, and bulk chat operations added. Expo/React Native mobile dev support. Roadmap includes backend agent architecture migration, VSCode integration, and Azure OpenAI/Vertex AI providers.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

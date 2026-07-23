@@ -36,6 +36,10 @@ Diffblue Cover is a commercial AI-driven product that automatically generates an
 
 - March 2026 additions: Diffblue Testing Agent — first purpose-built AI agent for enterprise unit testing; works autonomously with Claude Code and GitHub Copilot CLI; supports Java 8-25 and Python 3; processes entire multi-module projects without human intervention. Three new capabilities: Test Asset Insights (analyzes existing tests, generates based on patterns); LLM-Augmented Intelligence (integrates Claude Code + Copilot CLI); Guided Coverage Improvement (50% coverage increase in 1 hour). Claims 20x more productive than LLM-based coding assistants on unit test generation.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 2026-05-15
 

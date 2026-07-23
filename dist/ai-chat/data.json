@@ -49,7 +49,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- GPT-5.2 (January 2026)    GPT-5.2 Instant for high-volume fast responses GPT-5.2 Thinking for deeper reasoning GPT-5.3-Codex running 25% faster\n\n<!-- Latest version used for update -->"
+            "content": "- GPT-5.5 Instant, Thinking, and Pro (current as of 2026-07-22)    \n\n<!-- Latest version used for update -->"
           }
         ]
       },
@@ -127,7 +127,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- Ad-supported free and Go tiers (Plus/Pro/Business/Enterprise remain ad-free)    \n- Multi-device access (web, iOS, Android, desktop apps)    \n- API access for developers    \n- Enterprise SSO and admin controls    \n- ChatGPT Health (HIPAA-compliant health conversations)    \n- Visual-first responses with highlighted key information    \n- Conversation branching preserves original threads while exploring alternatives"
+            "content": "- GPT-5, GPT-5.1, GPT-4o, GPT-4.1, GPT-4.1 mini, and o4-mini have been retired from ChatGPT.    \n- Sources: https://help.openai.com/en/articles/11909943-gpt-5-3-and-gpt-55-in-chatgpt and https://help.openai.com/en/articles/20001051 (verified 2026-07-22).    \n- Ad-supported free and Go tiers (Plus/Pro/Business/Enterprise remain ad-free)    \n- Multi-device access (web, iOS, Android, desktop apps)    \n- API access for developers    \n- Enterprise SSO and admin controls    \n- ChatGPT Health (HIPAA-compliant health conversations)    \n- Visual-first responses with highlighted key information    \n- Conversation branching preserves original threads while exploring alternatives"
           }
         ]
       },
@@ -1545,7 +1545,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- 1.1.2321 (February 8, 2026)    \n\n<!-- Latest version used for update -->"
+            "content": "- Continuously updated desktop application; current public build number not specified.    \n\n<!-- Latest version used for update -->"
           }
         ]
       },
@@ -1623,7 +1623,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- Claude Desktop (the chat app) is different from Claude Code (the developer CLI tool)    \n- Claude Code has additional features like git integration, worktrees, and checkpoints    \n- Some features (like Cowork) require Pro or higher subscription    \n- Mac-specific features include screenshot sharing, window sharing, and voice input    \n- Desktop-native features: Quick entry from any app, dock integration, file drag-and-drop"
+            "content": "- Sources: https://www.anthropic.com/product/claude-cowork and https://support.anthropic.com/en/articles/10065433-installing-claude-for-desktop (verified 2026-07-22).    \n- Claude Desktop (the chat app) is different from Claude Code (the developer CLI tool)    \n- Claude Code has additional features like git integration, worktrees, and checkpoints    \n- Some features (like Cowork) require Pro or higher subscription    \n- Mac-specific features include screenshot sharing, window sharing, and voice input    \n- Desktop-native features: Quick entry from any app, dock integration, file drag-and-drop"
           }
         ]
       },
@@ -3114,6 +3114,25 @@
           {
             "type": "text",
             "content": "- Leading platform for MCP server discovery and management    \n- 50,000+ businesses and professionals    \n- Notable clients: Databricks, Accenture, Shopify, Cloudflare, Duolingo    \n- SOC 2 compliance    \n- AES 256 encryption, TLS 1.2+    \n- New models added within 24 hours upon request    \n- OpenAI-compatible API with load balancing    \n- Discord: 1,976 members    \n- Reddit: 216 community members"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Roots",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
           }
         ]
       },

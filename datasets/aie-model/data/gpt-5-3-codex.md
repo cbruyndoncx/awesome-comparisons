@@ -52,6 +52,15 @@ GPT-5.3 Codex is OpenAI's most capable agentic coding model released on February
 - Real-world impact: Used internally to optimize infrastructure, identify bugs, debug cache issues, dynamically scale GPU clusters.
 - Released February 5, 2026 as OpenAI's most advanced agentic coding model.
 
+### Lifecycle
+- legacy
+
+### Successor
+- GPT-5.5 / GPT-5.6
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-02-06
 

@@ -51,6 +51,12 @@ Kimi Linear is a hybrid linear attention model released by Moonshot AI in Octobe
 - Released October 31 - November 1, 2025 as efficiency-focused alternative to K2.
 - Moonshot AI: From Alibaba-backed Beijing startup known for long-context innovations.
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-02-06
 

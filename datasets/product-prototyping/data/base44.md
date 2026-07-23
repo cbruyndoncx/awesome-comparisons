@@ -62,6 +62,10 @@ Base44 is an AI-powered application development platform that enables users to c
 - Base44 2.0 launched October 30, 2025 with enhanced features.
 - 2025-2026 updates: Reached 2 million users within 6 months of Wix acquisition (7x growth). Over 1,000 new paying subscribers daily. Projected $50M ARR by end of 2025 with path to $100M. Captured 10%+ of AI app builder market by Q4 2025. Multi-LLM now includes Claude Opus 4.5 and Gemini 2.5 Pro. GitHub sync and ZIP export in beta. GDPR and HIPAA compliance built-in. Freemium pricing starting at $16/month.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

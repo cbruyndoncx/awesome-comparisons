@@ -40,6 +40,12 @@ GPT-5 is OpenAI's most advanced language model released on August 7, 2025, descr
 - Released August 7, 2025 with immediate availability.
 - 2025-2026 Update: GPT-5.2 released January 2026 with enhanced reasoning, coding, and professional capabilities. GPT-5-Codex and GPT-5.2-Codex (November 2025) for professional software engineering and defensive cybersecurity. GPT-5 Instant (October 2025) improved mental health support. GPT-5 Pro replaces o3-pro with 88.4% GPQA. Custom GPTs auto-updated to GPT-5.2 on January 12, 2025. Knowledge cutoff: August 2025. Safe completions training with transparent refusals. Older GPT-5 models being phased out in favor of GPT-5.2.
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

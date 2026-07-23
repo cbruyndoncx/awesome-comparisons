@@ -19,7 +19,7 @@ Google Cloud blends hyperscale compute, Vertex AI, Workspace productivity, and A
 - Technology Conglomerate (Alphabet)
 
 ### Regions
-- Global coverage with >35 regions across NA, EMEA, APAC, LATAM
+- 43 regions and 130 zones across NA, EMEA, APAC, and LATAM (verified 2026-07-22)
 
 ### Customers
 - Digital natives, media/retail, public sector, financial services, telco edge workloads

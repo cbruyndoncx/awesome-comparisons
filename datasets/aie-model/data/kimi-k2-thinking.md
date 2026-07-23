@@ -39,6 +39,12 @@ Kimi K2 Thinking is Moonshot AI's enhanced reasoning model released in November 
 - Community impact: Demonstrates that open-weight models can match or exceed proprietary leaders.
 - 2025-2026 Update: K2.5 released January 27, 2026 as open-source with enhanced multimodal capabilities (15T mixed visual/text tokens, 400M vision encoder), Agent Swarm (up to 100 concurrent agents), and parallelized attention. Heavy Mode runs 8 independent reasoning paths simultaneously. INT4 quantization with QAT enables 2x inference speed. Moonshot raised at $4.8B valuation. 2026 roadmap targets 50% inference cost reduction.
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

@@ -76,6 +76,10 @@ CodeWP is a commercial AI code-generation tool tailored to WordPress development
   - CodeWP v2.5 release notes / walkthroughs (public posts and videos, 2024-2025)
 - 2025-2026 updates: Continued expansion of WordPress-specific AI modes added weekly for WooCommerce, Elementor, ACF, WPForms, Gravity Forms, and more. IDE integrations with VS Code, PhpStorm, and JetBrains for inline code checks. CI/CD integration for automated code review during deployment. WordPress Coding Standards compliance in generated output. Generates plugin boilerplates, folder structures, webhooks, custom post types, and complete plugins. Conversational AI assistant for debugging and code explanation. Pricing updated: Free plan (10-20 generations/month), Pro from $18/month (annual) or $96/year.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

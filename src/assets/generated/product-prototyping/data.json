@@ -234,6 +234,25 @@
       {
         "type": "header",
         "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
         "content": "LastUpdated",
         "children": [
           {
@@ -872,6 +891,25 @@
       {
         "type": "header",
         "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
         "content": "LastUpdated",
         "children": [
           {
@@ -1491,6 +1529,25 @@
           {
             "type": "text",
             "content": "- Multi-LLM architecture: supports OpenAI, Anthropic, Google Gemini, Mistral, Ollama, HuggingFace, DeepSeek, Groq, and others.    \n- Uses StackBlitz WebContainers for a full browser-based dev environment with NPM support and hot reload.    \n- Installation paths: Cloud (browser), Local (Node.js + pnpm), Docker.    \n- Good for prototyping, migrating legacy apps, and experimenting with multiple LLMs.    \n- Export options: ZIP export, deploy to Netlify/Cloudflare/Vercel, Docker image.    \n- 2025-2026 updates: Electron desktop app released for native experience. 19+ AI providers now supported including OpenAI, Anthropic, Ollama, OpenRouter, Gemini, DeepSeek, Groq, Cohere, Together, Perplexity, HuggingFace, and more. Supabase integration for database management. File locking system, diff view, voice prompting, and bulk chat operations added. Expo/React Native mobile dev support. Roadmap includes backend agent architecture migration, VSCode integration, and Azure OpenAI/Vertex AI providers."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },
@@ -2141,6 +2198,25 @@
       {
         "type": "header",
         "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
         "content": "LastUpdated",
         "children": [
           {
@@ -2553,6 +2629,638 @@
   {
     "type": "header",
     "level": 1,
+    "content": "Bubble AI App Generator - https://bubble.io/ai-app-generator/",
+    "children": [
+      {
+        "type": "text",
+        "content": "Bubble's prompt-driven no-code application generator for creating and visually refining Bubble applications.\n\n**Dataset ID:** product-prototyping"
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "General",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Classification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Product/Prototyping",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Version",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Beta"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Repository",
+        "children": [
+          {
+            "type": "text",
+            "content": "- -"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Rating",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ShortDescription",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Generates Bubble applications with responsive UI, workflows, and a built-in database from natural-language prompts."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "description",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Bubble's AI App Generator turns an application idea into a Bubble project, then lets users refine the UI, workflows, data model, preview, and deployment through Bubble's hosted visual platform."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Languages",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No-code / Proprietary",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Frontend Stack",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No-code / Proprietary",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Backend Stack",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Platform / BaaS",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Database",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Built-in / Proprietary",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Style Library",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Platform / Proprietary",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Testing",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "None",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Notes",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Official documentation identifies the AI App Generator as beta.    \n- Sources: https://bubble.io/ai-app-generator/ and https://manual.bubble.io/help-guides/ai/bubbles-ai-app-generator/about-ai-app-generation"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "LastUpdated",
+        "children": [
+          {
+            "type": "text",
+            "content": "- 2026-07-22"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Licensing",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Opensource",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "License",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Proprietary",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "FreeTrial",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Client",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Prompts",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Tools",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Resources",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ACP",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Deployment",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "BYOK",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Local Offline",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "DeveloperExperience",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Context Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Direct File References",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Checkpoints",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Git Support",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Extensible",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Plugins",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Hooks",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "SlashCommands",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomModes",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Subagents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourcePath": "bubble-ai-app-generator.md"
+  },
+  {
+    "type": "header",
+    "level": 1,
     "content": "CodeCompanion.ai - https://codecompanion.ai",
     "children": [
       {
@@ -2761,6 +3469,25 @@
           {
             "type": "text",
             "content": "- Privacy: Multiple sources emphasize a local-first design where code and data remain on the user's machine; network calls appear limited to OpenAI API usage.    \n- Features reported: semantic code search, natural-language-to-SQL, integrated terminal, Git integration, project scaffolding, file creation and updates, ability to execute shell commands and read outputs.    \n- Pricing/details: I could not find an official pricing page or clear subscription tiers in the public third-party descriptions. The vendor appears to support BYOK (use your OpenAI API key), which means costs for model usage are borne by the user via their OpenAI account.    \n- Open-source status: No authoritative indication that the desktop app is open source. There is an unrelated community project named codecompanion.nvim (a Neovim plugin) on GitHub; do not confuse the two.    \n- Documentation: Public, authoritative documentation or an official product site with detailed specs/pricing was not discovered in the sources I reviewed. Recommend checking the vendor domain (https://codecompanion.ai) and any official docs or contact channels for the latest details before deployment or purchase.    \n- Research summary based on multiple third-party write-ups and product summaries; authoritative vendor documentation and pricing were not found in the search results available.    \n- 2025-2026 updates: v7.0.45 released June 2025. Reworked chat context system to align with LLM format expectations, fixing infinite looping and invalid tool call issues. LLM Apply system replaces diff-based changes with cursor-style methodology using separate cheaper model for applying changes. Grep search tool added. Project-wide undo/checkpoint functionality. Better embeddings for code search and file suggestions. o3-mini model support. Auto-linting for 14+ languages. Over 10,000 users."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },
@@ -3398,6 +4125,25 @@
           {
             "type": "text",
             "content": "- Pricing tiers (public info at time of research):    Free / Starter: limited monthly actions (about 100), 1 project, community support Pro: ~$28/month — larger action quota (~10k/mo), multiple projects Agency: ~$68/month — unlimited actions, unlimited projects, team features\n- Key strengths:    WordPress-focused outputs that save time for common WP tasks Specialized modes for major plugins and page builders help generate compatible code Ability to export generated snippets as a plugin simplifies deployment Large searchable snippets library and tutorials at https://codewp.ai/snippets/\n- Considerations:    Not open source — code generation is a hosted service Limited built-in Git or terminal integration; workflow expects copying generated code into your WP projects or using the plugin export Review generated code and test in staging — as with all AI-generated code, manual review is recommended for security and compatibility\n- Sources & further reading:    https://codewp.ai/ https://codewp.ai/snippets/ CodeWP v2.5 release notes / walkthroughs (public posts and videos, 2024-2025)\n- 2025-2026 updates: Continued expansion of WordPress-specific AI modes added weekly for WooCommerce, Elementor, ACF, WPForms, Gravity Forms, and more. IDE integrations with VS Code, PhpStorm, and JetBrains for inline code checks. CI/CD integration for automated code review during deployment. WordPress Coding Standards compliance in generated output. Generates plugin boilerplates, folder structures, webhooks, custom post types, and complete plugins. Conversational AI assistant for debugging and code explanation. Pricing updated: Free plan (10-20 generations/month), Pro from $18/month (annual) or $96/year."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },
@@ -5104,6 +5850,1306 @@
   {
     "type": "header",
     "level": 1,
+    "content": "Firebase Studio - https://firebase.google.com/docs/studio",
+    "children": [
+      {
+        "type": "text",
+        "content": "Google's agentic cloud development environment for generating, testing, iterating, and publishing full-stack applications with Gemini and Firebase services.\n\n**Dataset ID:** product-prototyping"
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "General",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Classification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Product/Prototyping",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Editor",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Version",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Preview; new workspace creation and signup are currently unavailable."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Repository",
+        "children": [
+          {
+            "type": "text",
+            "content": "- -"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Rating",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ShortDescription",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Agentic cloud development environment with a Gemini-powered App Prototyping agent."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "description",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Browser-based Code OSS environment with Gemini coding assistance and an App Prototyping agent. The documented workflow targets Next.js web apps and Firebase App Hosting."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Languages",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "JavaScript",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "TypeScript",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "HTML/CSS",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Python",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Java",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Go",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Frontend Stack",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Next.js",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Backend Stack",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Firebase / Google Cloud",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Database",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Firebase / Firestore",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Style Library",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Flexible",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Testing",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Integration Tests",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Notes",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Existing workspaces can be continued and deployed, but new workspace creation and signup are no longer supported.    \n- Sources: https://firebase.google.com/docs/studio and https://firebase.google.com/docs/studio/get-started"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "LastUpdated",
+        "children": [
+          {
+            "type": "text",
+            "content": "- 2026-07-22"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Licensing",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Opensource",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "License",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Proprietary",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "FreeTrial",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": "Access is documented as no-cost; connected Firebase or Google Cloud services may require billing."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Client",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Prompts",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Tools",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Resources",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ACP",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Deployment",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "BYOK",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Local Offline",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "DeveloperExperience",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Context Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Direct File References",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Checkpoints",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Git Support",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Extensible",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Plugins",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Hooks",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "SlashCommands",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomModes",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Subagents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourcePath": "firebase-studio.md"
+  },
+  {
+    "type": "header",
+    "level": 1,
+    "content": "Hostinger Horizons - https://www.hostinger.com/in/horizons",
+    "children": [
+      {
+        "type": "text",
+        "content": "Hosted AI web-app builder for generating, editing, publishing, and hosting responsive applications from natural-language prompts.\n\n**Dataset ID:** product-prototyping"
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "General",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Classification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Product/Prototyping",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Version",
+        "children": [
+          {
+            "type": "text",
+            "content": "- SaaS (continuously updated)"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Repository",
+        "children": [
+          {
+            "type": "text",
+            "content": "- -"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Rating",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ShortDescription",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Hosted AI web-app builder with hosting, domains, databases, user accounts, and file storage."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "description",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Hostinger Horizons generates and iterates on web applications through natural-language prompts and publishes them through Hostinger. The official sources describe hosted web apps, integrations, and AI features such as chatbots and smart search."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Languages",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No-code / Proprietary",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Frontend Stack",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No-code / Proprietary",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Backend Stack",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Platform / BaaS",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Database",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Built-in / Proprietary",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Style Library",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Platform / Proprietary",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Testing",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "None",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Notes",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Native mobile publishing and portable framework source output were not confirmed in the cited primary sources.    \n- Sources: https://www.hostinger.com/in/horizons and https://support.hostinger.com/en/articles/10505889-hostinger-horizons-how-to-get-started"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "LastUpdated",
+        "children": [
+          {
+            "type": "text",
+            "content": "- 2026-07-22"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Licensing",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Opensource",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "License",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Proprietary",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "FreeTrial",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Client",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Prompts",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Tools",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Resources",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ACP",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Deployment",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "BYOK",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Local Offline",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "DeveloperExperience",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Context Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Direct File References",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Checkpoints",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Git Support",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Extensible",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Plugins",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Hooks",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "SlashCommands",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomModes",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Subagents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourcePath": "hostinger-horizons.md"
+  },
+  {
+    "type": "header",
+    "level": 1,
     "content": "Lovable.dev - https://lovable.dev/",
     "children": [
       {
@@ -5324,6 +7370,25 @@
           {
             "type": "text",
             "content": "- Rapid prototyping: Designed specifically for quick web application development and iteration.    \n- AI-powered generation: Uses AI to generate code and suggest implementations.    \n- Web-focused: Specialized for web development and browser-based applications.    \n- Released in 2025 targeting both developers and designers.    \n- Bridges no-code and traditional development approaches.    \n- 2025-2026 updates: Agent Mode became default interface in July 2025 with autonomous codebase exploration, proactive debugging, and web search. Visual Edits enhanced to reduce UI iteration cycles by 40% via direct element clicking. Real-time multi-team collaboration added. Three working modes: Agent Mode, Chat Mode, and Visual Edits. Generates TypeScript/React apps with Supabase backends and Tailwind CSS. Figma-to-React component conversion. Third-party integrations with GitHub, Stripe, Clerk, OpenAI. One-click deployments to custom domains. Built-in AI guardrails with RBAC, SSO, and audit logs. Users report completing six months of work in two days."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },
@@ -5767,7 +7832,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- v1.2 (2025-2026)    Mocha Max: High-power agent mode with increased compute for complex tasks, improved reasoning, and stronger structural support"
+            "content": "- Retiring; service shuts down 2026-08-01.    Mocha Max: High-power agent mode with increased compute for complex tasks, improved reasoning, and stronger structural support"
           }
         ]
       },
@@ -5954,7 +8019,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- Core strengths:    Vibe coding: Describe desired app functionality with words or images and iterate through conversational interface True all-in-one stack: Backend, database, authentication, payments, hosting with zero configuration Code ownership: Export complete project code at any time with full freedom to modify and deploy elsewhere Opinionated tech stack: TypeScript + React + Hono + SQLite eliminates decision paralysis Cloudflare deployment: Automatic hosting and deployment with custom domain support\n- Developer features:    Dev Mode: View and edit code directly with real-time preview updates Direct Edit Mode: Click-to-edit text without consuming credits Discuss Mode: Conversational planning and debugging assistance API integration: Connect external backends by providing API keys\n- Pricing (2025-2026):    Starter: Free with 120 credits, deploy 1 app Bronze: $20/month for 1,500 credits, publish up to 5 apps, custom domains Silver: $50/month for 4,500 credits, publish up to 15 apps, priority support Gold: $200/month for 20,000 credits, publish up to 25 apps, early access to new features All paid plans support custom domains and watermark removal\n- Limitations and considerations:    No custom tech stacks: Cannot bring your own frameworks or libraries No external deployment: Must use Cloudflare hosting (though code can be exported) No Figma import: Screenshots and descriptions serve as alternatives App complexity limits vary by subscription tier Generated code should be reviewed for accessibility, security, and edge-case handling\n- Typical workflow:    1. Describe the app or upload screenshots/wireframes 2. Iterate through chat to refine features, design, and functionality 3. Preview in real-time as the agent builds 4. Deploy to mocha.app subdomain or connect custom domain 5. Export code for further customization or migration\n- Useful links:    Product: https://getmocha.com Documentation: https://docs.getmocha.com Pricing: https://getmocha.com/pricing Y Combinator profile: https://www.ycombinator.com/companies/mocha"
+            "content": "- Building, previews, and hosted apps stop working on 2026-08-01; migrate before the shutdown deadline.    \n- Source: https://getmocha.com/blog/mocha-shutdown/ (verified 2026-07-22).    \n- Core strengths:    Vibe coding: Describe desired app functionality with words or images and iterate through conversational interface True all-in-one stack: Backend, database, authentication, payments, hosting with zero configuration Code ownership: Export complete project code at any time with full freedom to modify and deploy elsewhere Opinionated tech stack: TypeScript + React + Hono + SQLite eliminates decision paralysis Cloudflare deployment: Automatic hosting and deployment with custom domain support\n- Developer features:    Dev Mode: View and edit code directly with real-time preview updates Direct Edit Mode: Click-to-edit text without consuming credits Discuss Mode: Conversational planning and debugging assistance API integration: Connect external backends by providing API keys\n- Pricing (2025-2026):    Starter: Free with 120 credits, deploy 1 app Bronze: $20/month for 1,500 credits, publish up to 5 apps, custom domains Silver: $50/month for 4,500 credits, publish up to 15 apps, priority support Gold: $200/month for 20,000 credits, publish up to 25 apps, early access to new features All paid plans support custom domains and watermark removal\n- Limitations and considerations:    No custom tech stacks: Cannot bring your own frameworks or libraries No external deployment: Must use Cloudflare hosting (though code can be exported) No Figma import: Screenshots and descriptions serve as alternatives App complexity limits vary by subscription tier Generated code should be reviewed for accessibility, security, and edge-case handling\n- Typical workflow:    1. Describe the app or upload screenshots/wireframes 2. Iterate through chat to refine features, design, and functionality 3. Preview in real-time as the agent builds 4. Deploy to mocha.app subdomain or connect custom domain 5. Export code for further customization or migration\n- Useful links:    Product: https://getmocha.com Documentation: https://docs.getmocha.com Pricing: https://getmocha.com/pricing Y Combinator profile: https://www.ycombinator.com/companies/mocha"
           }
         ]
       },
@@ -7011,7 +9076,7 @@
   {
     "type": "header",
     "level": 1,
-    "content": "Replit Ghostwriter - https://replit.com/site/ghostwriter/",
+    "content": "Replit Agent - https://replit.com",
     "children": [
       {
         "type": "text",
@@ -7049,7 +9114,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- Deprecated; replaced by Replit Agent (2024-2025)    Agent v2 (Feb 2025), Agent 3 (Sep 2025), Design Mode (Nov 2025), Fast Build (Dec 2025)"
+            "content": "- Replaced by Replit Agent; Ghostwriter is retired as a product name.    Agent v2 (Feb 2025), Agent 3 (Sep 2025), Design Mode (Nov 2025), Fast Build (Dec 2025)"
           }
         ]
       },
@@ -7266,7 +9331,26 @@
         "children": [
           {
             "type": "text",
-            "content": "- Key features: \"Complete Code\" (inline suggestions), \"Explain Code\" (natural-language explanations), \"Transform Code\" (refactors/rewrites), and \"Generate Code\" (from prompts).    \n- Pricing is tiered: Starter (free) with limited resources; Core (individual pro tier, commonly around $20/month with monthly credits when billed annually); Teams (team plans around $35/user/month annually with extra credits and collaboration features); Enterprise (custom pricing, SSO/SCIM and enterprise controls available).    \n- Billing uses a credit model: agent/AI compute, deployments and some resources consume credits; heavy usage can increase costs beyond subscription fees.    \n- Deployments: static deploys can be free but autoscale/reserved VM deployments carry additional costs starting from low-dollar/month tiers upward.    \n- Privacy/enterprise controls: enterprise plans advertise SSO and provisioning (SAML/SCIM). Public docs do not disclose BYOK, data residency or detailed data-retention controls — contact Replit sales for enterprise privacy/data-residency specifics.    \n- Models and internals: Replit does not publicly document exact model names or weights used by Ghostwriter; descriptions reference \"frontier\" or large-generation models in marketing material.    \n- Use cases: excellent for browser-first workflows, teaching, pair-programming, quick refactors and prototyping. Not suitable when strict on-premises, BYOK, or fully offline operation is required.    \n- Recommendation: for teams with strict compliance needs, engage Replit Enterprise sales to confirm options (SSO, data handling, contractual terms). For individual users, Core provides a convenient integrated experience with monthly usage credits.    \n- 2025-2026 updates: Ghostwriter deprecated and replaced by Replit Agent. Agent v2 (Feb 2025) introduced near-instant response times. Agent 3 (Sep 2025) added autonomous execution up to 200 minutes and self-testing. Design Mode (Nov 2025) creates interactive designs in under 2 minutes. Fast Build mode (Dec 2025) produces production-ready apps in minutes. Full-stack mobile app development support added. Figma/Lovable import capability. LLM-native web search integration (Jan 2026). Next Edit Predictions for codebase-wide ripple effects. Microsoft Azure partnership. Effort-based pricing model."
+            "content": "- Key features: \"Complete Code\" (inline suggestions), \"Explain Code\" (natural-language explanations), \"Transform Code\" (refactors/rewrites), and \"Generate Code\" (from prompts).    \n- Source: https://docs.replit.com/learn/build-with-agent (verified 2026-07-22).    \n- Pricing is tiered: Starter (free) with limited resources; Core (individual pro tier, commonly around $20/month with monthly credits when billed annually); Teams (team plans around $35/user/month annually with extra credits and collaboration features); Enterprise (custom pricing, SSO/SCIM and enterprise controls available).    \n- Billing uses a credit model: agent/AI compute, deployments and some resources consume credits; heavy usage can increase costs beyond subscription fees.    \n- Deployments: static deploys can be free but autoscale/reserved VM deployments carry additional costs starting from low-dollar/month tiers upward.    \n- Privacy/enterprise controls: enterprise plans advertise SSO and provisioning (SAML/SCIM). Public docs do not disclose BYOK, data residency or detailed data-retention controls — contact Replit sales for enterprise privacy/data-residency specifics.    \n- Models and internals: Replit does not publicly document exact model names or weights used by Ghostwriter; descriptions reference \"frontier\" or large-generation models in marketing material.    \n- Use cases: excellent for browser-first workflows, teaching, pair-programming, quick refactors and prototyping. Not suitable when strict on-premises, BYOK, or fully offline operation is required.    \n- Recommendation: for teams with strict compliance needs, engage Replit Enterprise sales to confirm options (SSO, data handling, contractual terms). For individual users, Core provides a convenient integrated experience with monthly usage credits.    \n- 2025-2026 updates: Ghostwriter deprecated and replaced by Replit Agent. Agent v2 (Feb 2025) introduced near-instant response times. Agent 3 (Sep 2025) added autonomous execution up to 200 minutes and self-testing. Design Mode (Nov 2025) creates interactive designs in under 2 minutes. Fast Build mode (Dec 2025) produces production-ready apps in minutes. Full-stack mobile app development support added. Figma/Lovable import capability. LLM-native web search integration (Jan 2026). Next Edit Predictions for codebase-wide ripple effects. Microsoft Azure partnership. Effort-based pricing model."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },
@@ -9217,6 +11301,25 @@
       {
         "type": "header",
         "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
         "content": "LastUpdated",
         "children": [
           {
@@ -9629,7 +11732,7 @@
   {
     "type": "header",
     "level": 1,
-    "content": "v0 - https://v0.dev",
+    "content": "v0 - https://v0.app",
     "children": [
       {
         "type": "text",
@@ -9667,7 +11770,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- v0-1.5 (2025-2026)    Transitioned from v0.dev to v0.app. Composite model family: v0-1.5-sm, v0-1.5-md, v0-1.5-lg with GPT-5 integration"
+            "content": "- Continuously updated; current model-family version not independently verified.    Transitioned from v0.dev to v0.app. Composite model family: v0-1.5-sm, v0-1.5-md, v0-1.5-lg with GPT-5 integration"
           }
         ]
       },
@@ -9777,7 +11880,7 @@
               {
                 "type": "item",
                 "level": 1,
-                "content": "None",
+                "content": "Full-stack app backends and API endpoints supported.",
                 "plainChildren": "Frontend components only; no backend generated."
               }
             ]
@@ -9796,7 +11899,7 @@
               {
                 "type": "item",
                 "level": 1,
-                "content": "None",
+                "content": "Varies by generated application and integrations.",
                 "plainChildren": "No database generated."
               }
             ]
@@ -9854,7 +11957,26 @@
         "children": [
           {
             "type": "text",
-            "content": "- Core strengths:    Fast design-to-code: accepts plain-English prompts or Figma uploads and returns React + Tailwind code Iterative chat UX: keep context within a project chat to refine components and ask for fixes or new variants Integration-ready: designed to fit into Vercel-hosted Next.js/React flows and can push code to GitHub for automatic deployments Platform/API: offers a platform/API for building custom AI-assisted app builders or automations\n- Typical outputs:    Component files (React + Tailwind), layout scaffolding, and style variants Workable but often requires manual tuning for accessibility, edge-case logic, or complex interactions\n- Pricing (subject to change):    Freemium tier exists for trial and light usage Paid tiers provide larger \"credits\" allocation for higher-volume generation and team/enterprise features (team seats, SSO, audit logs, SLAs) Exact pricing and credit rules change over time—check https://v0.dev or https://v0.app/pricing for the current plans\n- Limitations and considerations:    Best for frontend UI generation and prototyping; not a full backend builder Generated code should be reviewed for accessibility, security, and performance before shipping Quality depends on prompt clarity; more detailed prompts yield better results\n- Suggested workflow:    1. Start a new v0 project/chat and describe the UI or upload a Figma frame 2. Accept an initial draft, then iterate via chat commands (colors, spacing, interactions) 3. Connect GitHub/Vercel to push generated code into a repo and enable preview deployments 4. Review and refactor generated code as part of the normal code-review process\n- Useful links:    Product: https://v0.dev (primary site) Alternate entry: https://v0.app Vercel: https://vercel.com\n- 2025-2026 updates: Major transition from v0.dev to v0.app with \"describe and deliver\" agentic model replacing \"prompt and fix\" workflow. Now targets founders, designers, marketers, and non-developers beyond just engineers. Agentic capabilities: step-by-step planning, error checking, web search, file reading, live website inspection, design inspiration generation, and task management. Composite model family (v0-1.5-sm/md/lg) with GPT-5 integration. Full-stack backend support including database and API routes. CLI \"Blocks\" feature for npx component installation. iOS app for mobile building. Design system management with centralized styles. No customer data used for model training. Enterprise compliance standards."
+            "content": "- Core strengths:    Fast design-to-code: accepts plain-English prompts or Figma uploads and returns React + Tailwind code Iterative chat UX: keep context within a project chat to refine components and ask for fixes or new variants Integration-ready: designed to fit into Vercel-hosted Next.js/React flows and can push code to GitHub for automatic deployments Platform/API: offers a platform/API for building custom AI-assisted app builders or automations\n- Typical outputs:    Component files (React + Tailwind), layout scaffolding, and style variants Workable but often requires manual tuning for accessibility, edge-case logic, or complex interactions\n- Pricing (subject to change):    Freemium tier exists for trial and light usage Paid tiers provide larger \"credits\" allocation for higher-volume generation and team/enterprise features (team seats, SSO, audit logs, SLAs) Exact pricing and credit rules change over time—check https://v0.dev or https://v0.app/pricing for the current plans\n- Limitations and considerations:    Best for frontend UI generation and prototyping; not a full backend builder Generated code should be reviewed for accessibility, security, and performance before shipping Quality depends on prompt clarity; more detailed prompts yield better results\n- Suggested workflow:    1. Start a new v0 project/chat and describe the UI or upload a Figma frame 2. Accept an initial draft, then iterate via chat commands (colors, spacing, interactions) 3. Connect GitHub/Vercel to push generated code into a repo and enable preview deployments 4. Review and refactor generated code as part of the normal code-review process\n- Useful links:    \n- Sources: https://v0.app/docs/quickstart and https://vercel.com/docs/v0 (verified 2026-07-22).    Product: https://v0.dev (primary site) Alternate entry: https://v0.app Vercel: https://vercel.com\n- 2025-2026 updates: Major transition from v0.dev to v0.app with \"describe and deliver\" agentic model replacing \"prompt and fix\" workflow. Now targets founders, designers, marketers, and non-developers beyond just engineers. Agentic capabilities: step-by-step planning, error checking, web search, file reading, live website inspection, design inspiration generation, and task management. Composite model family (v0-1.5-sm/md/lg) with GPT-5 integration. Full-stack backend support including database and API routes. CLI \"Blocks\" feature for npx component installation. iOS app for mobile building. Design system management with centralized styles. No customer data used for model training. Enterprise compliance standards."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },
@@ -10487,6 +12609,25 @@
           {
             "type": "text",
             "content": "- Primary use case: SEO and lead generation. Interactive tools increase time‑on‑site and can be optimized for keyword targets.    \n- UX: Drag‑and‑drop/no‑code builder → quick to launch; good for non‑technical users and marketers.    \n- Integrations: Embeds via script/iframe, email capture, webhooks; analytics for engagement and conversions.    \n- Pricing (reported in public materials during beta): starts at around $29/month for paid tier; tiering and limits apply.    \n- Limitations: Not intended for building full web applications or heavily customized backend logic. Customization beyond the provided builder can be limited; vendor lock‑in for hosted tools.    \n- Security: Platform claims encrypted transmission and secure storage for collected leads (standard for SaaS tools) — verify for specific compliance needs.    \n- 2025-2026 updates: Ranked as top tool in no-code AI builders for website engagement in 2025. Tool creation achievable in under 1 minute from a single prompt. Platform supports calculators, AI generators, interactive forms, quizzes, and chatbots. Integrated analytics for traffic, conversions, and engagement. Seamless CMS/e-commerce integration. Strong encryption and data protection compliance. Scalable from individual tools to enterprise deployments."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },
@@ -11131,6 +13272,25 @@
           {
             "type": "text",
             "content": "- Full-stack generation: Creates complete applications including database schemas, API endpoints, business logic, and UI components using Next.js.    \n- Database-first approach: Built-in database with automated schema design eliminates need for external services.    \n- Zoer Copilot: Built-in data analyst and admin that allows database management through natural language queries instead of SQL.    \n- App Market: Integrated marketplace where developers can publish and sell their applications, enabling path from idea to revenue.    \n- Code quality: All output undergoes static analysis (ESLint, SonarQube) with 85%+ test coverage.    \n- Production-ready: Generates deployable applications with authentication, responsive design, and proper architecture.    \n- Vibe coding: Natural language-first approach to application development.    \n- Launched September 17, 2025 in Singapore.    \n- 2025-2026 updates: Multi-model engine now supports Claude Sonnet 4.5, MiniMax M2.1, Gemini 3.0 Pro, and Nano Banana Pro. Integrations with Lovable, Supabase, and Netlify added. Platform actively discussed in 2026 AI app builder landscape."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },

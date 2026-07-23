@@ -52,6 +52,15 @@ GPT-5.2 Codex is OpenAI's most advanced agentic coding model released on Decembe
 - Integration: Available through ChatGPT Enterprise, Codex CLI, and IDE integrations.
 - Evolution: Successor to GPT-5.2 Codex, preceded GPT-5.3 Codex (February 2026).
 
+### Lifecycle
+- legacy
+
+### Successor
+- GPT-5.3-Codex
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-02-06
 

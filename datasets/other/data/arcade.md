@@ -70,6 +70,10 @@ Arcade's MCP implementation supports the new streamable HTTP transport protocol,
 ### Resources
 - No
 
+### Custom Modes
+- Unknown
+  - Not documented in the available source record.
+
 ### Elicitation
 - Yes
   - URL elicitation for secure OAuth 2.1 flows

@@ -40,6 +40,10 @@ The platform is positioned for both individual developer workflows (autocomplete
 
 - 2026 status: positioned as a code generation and refactoring tool rather than a fully autonomous end-to-end agent. Specializes in comprehension + generation for existing codebases. Features: natural language code modification, repository-wide context awareness, auto-refactoring, test creation, documentation generation, CI/CD integration (PRs), code architecture diagrams. 30-day free trial. Not typically cited among top autonomous coding agents (Devin, Claude Code, Copilot Agent) for full project autonomy.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 2026-05-15
 

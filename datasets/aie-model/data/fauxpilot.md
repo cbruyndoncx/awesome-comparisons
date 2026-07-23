@@ -34,6 +34,12 @@ FauxPilot is an open-source code-completion server designed to run on-premises o
 - Common pitfalls: accurate VRAM estimation is critical; ensure nvidia-docker and drivers are correctly installed and that the chosen model fits available GPU memory (or configure model sharding across GPUs).
 - 2025-2026 Update: No new releases or significant updates. Project appears largely inactive since April 2024. Still listed among GitHub Copilot alternatives in 2025 for privacy-focused local deployments. The broader AI code completion landscape has evolved significantly with GitHub Copilot becoming multi-model agentic assistant, VS Code Copilot adding parallel subagent execution (January 2026). FauxPilot remains viable for organizations requiring fully on-premise code completion with no external dependencies.
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

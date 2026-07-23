@@ -64,6 +64,10 @@ The default generated stacks commonly include React on the frontend and Fastify 
 - Sources: coverage gathered from platform README and third-party posts about app.build (Neon/Koyeb posts, GitHub repo).
 - 2025-2026 updates: v1.31.3 released July 2025 with FSM-driven workflow, parallel tree-search orchestration, and specialized actor-based subagent architecture. Integrates Anthropic Claude and Google Gemini for code generation. Neon serverless Postgres + Neon Auth for database/auth. Koyeb for serverless deployments. Open-source Apache-2.0 with full GitHub repo output and CI/CD support.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

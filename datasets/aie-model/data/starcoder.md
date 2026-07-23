@@ -39,6 +39,12 @@ The project emphasizes responsible open-source release practices (dataset opt-ou
 - Integration tips: use temperature/top-p tuning for generation quality, provide clear prompts (function signatures, tests) for best results, and prefer fp16/bf16 runtime on GPU for performance.
 - 2025-2026 Update: StarCoder2 (February 2024) is latest major release with 3B/7B/15B variants trained on 4.3T tokens across 619 languages (330% more training data). Context doubled to 16K tokens with Grouped Query Attention. StarCoder2-15B-Instruct achieves 72.6% HumanEval (surpasses CodeLlama-70B-Instruct). Collaboration between Hugging Face, ServiceNow, and NVIDIA. ServiceNow reported 52% developer productivity increase. Stanford Transparency Index: 85/100 for 2024. Integrated into Theia IDE for AI auto-completion (January 2025). BigCodeBench evaluated at ICLR'25. Active development continues with starcoder.cpp and evaluation harness.
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

@@ -43,6 +43,10 @@ TestSprite is an AI-powered test automation platform that leverages machine lear
   - No-code testing option: create tests by describing features in natural language.
   - Scheduled automated test runs (hourly, daily) for continuous regression testing.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

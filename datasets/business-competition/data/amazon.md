@@ -19,7 +19,7 @@ AWS combines granular infrastructure primitives, managed databases, analytics, A
 - Technology Conglomerate (Amazon)
 
 ### Regions
-- 33 launched regions / 105+ availability zones plus Local Zones and Wavelength edge sites
+- 39 geographic Regions and 123 Availability Zones, plus Local Zones and Wavelength edge sites (verified 2026-07-22)
 
 ### Customers
 - Global 2000, digital natives, public sector, startups, ISV ecosystems

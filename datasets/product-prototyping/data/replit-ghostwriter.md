@@ -1,4 +1,4 @@
-# Replit Ghostwriter - https://replit.com/site/ghostwriter/
+# Replit Agent - https://replit.com
 [AI-powered coding assistant integrated into the Replit cloud IDE for real-time code completion, explanation, transformation and generation.]
 
 ## General Info
@@ -7,7 +7,7 @@
 - Product/Prototyping
 
 ### Version
-- Deprecated; replaced by Replit Agent (2024-2025)
+- Replaced by Replit Agent; Ghostwriter is retired as a product name.
   - Agent v2 (Feb 2025), Agent 3 (Sep 2025), Design Mode (Nov 2025), Fast Build (Dec 2025)
 
 ### Repo
@@ -58,6 +58,7 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 
 ### Notes
 - Key features: "Complete Code" (inline suggestions), "Explain Code" (natural-language explanations), "Transform Code" (refactors/rewrites), and "Generate Code" (from prompts).
+- Source: https://docs.replit.com/learn/build-with-agent (verified 2026-07-22).
 - Pricing is tiered: Starter (free) with limited resources; Core (individual pro tier, commonly around $20/month with monthly credits when billed annually); Teams (team plans around $35/user/month annually with extra credits and collaboration features); Enterprise (custom pricing, SSO/SCIM and enterprise controls available).
 - Billing uses a credit model: agent/AI compute, deployments and some resources consume credits; heavy usage can increase costs beyond subscription fees.
 - Deployments: static deploys can be free but autoscale/reserved VM deployments carry additional costs starting from low-dollar/month tiers upward.
@@ -66,6 +67,10 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 - Use cases: excellent for browser-first workflows, teaching, pair-programming, quick refactors and prototyping. Not suitable when strict on-premises, BYOK, or fully offline operation is required.
 - Recommendation: for teams with strict compliance needs, engage Replit Enterprise sales to confirm options (SSO, data handling, contractual terms). For individual users, Core provides a convenient integrated experience with monthly usage credits.
 - 2025-2026 updates: Ghostwriter deprecated and replaced by Replit Agent. Agent v2 (Feb 2025) introduced near-instant response times. Agent 3 (Sep 2025) added autonomous execution up to 200 minutes and self-testing. Design Mode (Nov 2025) creates interactive designs in under 2 minutes. Fast Build mode (Dec 2025) produces production-ready apps in minutes. Full-stack mobile app development support added. Figma/Lovable import capability. LLM-native web search integration (Jan 2026). Next Edit Predictions for codebase-wide ripple effects. Microsoft Azure partnership. Effort-based pricing model.
+
+### Skills
+- Unknown
+  - Not documented in the available source record.
 
 ### Last Update
 - 2026-01-30
@@ -155,4 +160,3 @@ Ghostwriter focuses on developer productivity in an always-online environment â€
 ### Subagents
 - Yes
   - Ghostwriter is complemented by Replit Agent, which provides multi-step planning, execution, and autonomous behaviors. While Ghostwriter itself is primarily an assistant for inline edits and chat, Agent can be considered a higher-level subagent for orchestrating builds, checkpoints and deployment workflows. There is no public API for defining custom subagents within Ghostwriter as of available documentation.
-

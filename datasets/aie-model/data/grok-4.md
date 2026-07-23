@@ -39,6 +39,12 @@ Grok 4 is xAI's flagship AI model released on July 9, 2025, described as "the mo
 - Released July 9, 2025 with Grok 4 Heavy variant.
 - 2025-2026 Update: Grok 4.1 released November 17, 2025 with EQ-Bench leadership and 65% fewer hallucinations. Grok 2.5 open-sourced under Apache-2.0 (August 2025). September 2025 added low-latency voice interactions and multimodal video generation via Grok Imagine. SuperGrok at $30/mo (128K memory), SuperGrok Heavy at $300/mo. Grok 5 announced for January 2026 with potential AGI capabilities. xAI API provides full access to Grok 4 Pro and Code variants.
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

@@ -48,6 +48,10 @@ Serena is an innovative open-source coding agent toolkit that emerged in 2025, p
   - Extensible tool system: developers subclass `serena.agent.Tool` and implement `apply` method.
   - OpenAPI tool calling support added for non-MCP clients like ChatGPT.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

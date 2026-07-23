@@ -1,5 +1,5 @@
-# CodiumAI - https://qodo.ai
-AI-powered test generation and code integrity platform (rebranded to Qodo)
+# Qodo (formerly CodiumAI) - https://qodo.ai
+Qodo platform for test generation, behavior-coverage analysis, and automated pull-request review. Qodo has deprecated IDE autocomplete and code-generation chat; the IDE plugin continues to support review capabilities.
 
 ## General Info
 
@@ -32,6 +32,7 @@ CodiumAI (rebranded to Qodo) is an AI-first code quality platform focused on aut
 - Additional languages likely supported (check official documentation for complete list)
 
 ### Notes
+- Source: https://www.qodo.ai/blog/an-update-on-code-generation-at-qodo/ (verified 2026-07-22).
 - Rebranded to Qodo in 2024; platform and docs may be under either the Codium AI or Qodo name.
 - Strong fit for teams that need better automated test coverage and PR-level code quality checks rather than just inline code completion.
 - Provides behavior-coverage driven test generation which aims to produce diverse, behavior-focused tests instead of simple smoke tests.
@@ -45,6 +46,10 @@ CodiumAI (rebranded to Qodo) is an AI-first code quality platform focused on aut
   - https://github.com/codium-ai/codiumai-jetbrains-release
 
 - 2026 additions: expanded to 15+ specialized agentic workflows; Multi-Repository Context Engine for enterprise-scale codebases; real-time IDE code review with instant fix suggestions; automated compliance enforcement; configurable coding standards; SDLC-wide review from IDE to PRs; automated issue resolution with pre-commit verification; compatible with any AI model (not vendor-locked); broad IDE, GitHub, GitLab, and CLI integration.
+
+### Skills
+- Unknown
+  - Not documented in the available source record.
 
 ### Last Update
 - 2026-01-30
@@ -175,4 +180,3 @@ CodiumAI (rebranded to Qodo) is an AI-first code quality platform focused on aut
 - Yes
 
 - MCP-based integrations and Qodo agentic tooling enable orchestrating specialized subagents/tools for task-specific pipelines.
-

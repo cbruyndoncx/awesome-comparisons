@@ -34,6 +34,12 @@ Llama 4 is Meta's fourth-generation open-weight large language model family, fea
 - Trained on 200 languages with fine-tuning for 12 specific languages
 - Maverick matches or exceeds GPT-4 and Gemini 2.0 on many benchmarks
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

@@ -35,6 +35,15 @@ Codestral and Devstral are Mistral AI's specialized coding models released in 20
 - Mistral Code platform integrates with VS Code and JetBrains IDEs
 - Devstral API: $0.1/M input, $0.3/M output tokens
 
+### Lifecycle
+- legacy
+
+### Successor
+- Devstral 2
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

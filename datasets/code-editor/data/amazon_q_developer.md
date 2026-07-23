@@ -7,7 +7,7 @@ Amazon Q Developer (sometimes shortened to "Amazon Q") is AWS's developer-facing
 - Code/Editor
 
 ### Version
-- Rolling updates — transitioning to AWS Kiro (2026)
+- IDE plugins and paid subscriptions: new signups blocked 2026-05-15; end of support 2027-04-30. AWS is transitioning the CLI experience to Kiro.
   - No traditional version numbers; major agent update April 2025 achieved 66% on SWE-Bench Verified. Build/test validation added January 2025. Enhanced cost management November 2025.
 
 ### Repo
@@ -48,6 +48,7 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
 - Related: Amazon CodeWhisperer functionality was consolidated into Amazon Q Developer around April 2024; for legacy references check CodeWhisperer docs (https://aws.amazon.com/codewhisperer/).
 
 - 2026 critical update: New Q Developer signups blocked May 15, 2026; full end-of-support for IDE plugins and paid subscriptions April 30, 2027. AWS transitioning to Kiro as next-generation agentic development platform.
+- Source: https://aws.amazon.com/blogs/devops/amazon-q-developer-end-of-support-announcement/ and https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/upgrade-to-kiro.html (verified 2026-07-22).
 - 2026 additions before transition: MCP support for extending IDE plugins with external tools and data sources; agentic coding enhancements (autonomous feature implementation, automated code reviews, documentation generation); multi-IDE support (VS Code, JetBrains, Visual Studio, Eclipse).
 
 ### Last Update
@@ -174,4 +175,3 @@ Amazon Q unifies prior AWS assistants (CodeWhisperer features were integrated in
     - Feature development agents: natural-language feature descriptions can spawn agentic workflows that modify multiple files across the workspace to implement that feature.
     - MCP-enabled connectors: MCP servers act as specialized tool connectors (Jira, Figma, EKS server) that the assistant can query as part of an orchestrated workflow.
     - Automated test/code-review agents: built-in units for generating tests and performing code reviews behave like task-specialist agents executed within the IDE.
-

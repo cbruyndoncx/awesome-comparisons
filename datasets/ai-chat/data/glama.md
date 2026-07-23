@@ -48,6 +48,9 @@ The platform emphasizes security with AES 256 encryption, TLS 1.2+, SOC 2 compli
 - Discord: 1,976 members
 - Reddit: 216 community members
 
+### MCP-Roots
+- No
+
 ### Last Update
 <!-- Note Date last updated -->
 - February 9, 2026

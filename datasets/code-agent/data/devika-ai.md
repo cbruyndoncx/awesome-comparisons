@@ -8,7 +8,7 @@ An open-source agentic AI software engineer for end-to-end code generation, rese
 - Code/Autonomous agent
 
 ### Version
-No official releases published (project transitioned to "Opcode" rebrand; last checked 2026-01-30)
+Early-stage experimental project; official repository still lists unfinished and broken features.
 
 ### Repo
 - https://github.com/stitionai/devika
@@ -40,7 +40,12 @@ Key capabilities include automated planning (breaking objectives into actionable
 - Naming Confusion: The agent is referred to as both Devika and Opcode in different places. The exact relationship is unclear.
 - 2025-2026 Update: No official versioned releases have been published on GitHub. The project announced a transition to "Opcode" branding with a "new version out soon" notice, but no Opcode release has materialized as of January 2026. The repository remains available but development activity appears stalled.
 
-- 2026 status: project transitioned to 'Opcode' rebrand; no significant public activity found in 2026. Consider archived.
+- The official repository still describes Devika as early-stage and experimental. The transition-to-Opcode claim is not confirmed by the official repository.
+- Source: https://github.com/stitionai/devika (verified 2026-07-22).
+
+### Skills
+- Unknown
+  - Not documented in the available source record.
 
 ### Last Update
 2026-05-15
@@ -129,4 +134,3 @@ Key capabilities include automated planning (breaking objectives into actionable
 ### Subagents
 - Yes
   - Supports decomposing work into sub-tasks/agents (planner, researcher, executor) and orchestrates them to complete complex jobs; architecture enables parallel or staged task execution.
-

@@ -5018,6 +5018,843 @@
   {
     "type": "header",
     "level": 1,
+    "content": "Composio Agent Orchestrator - https://github.com/ComposioHQ/agent-orchestrator",
+    "children": [
+      {
+        "type": "text",
+        "content": "Open-source harness for running fleets of coding agents in isolated worktrees with planning, CI fixes, merging, review, and supervision.\n**Dataset ID:** code-orchestration"
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "General",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Classification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Orchestration",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Autonomous agent",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Terminal",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Version",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Continuously updated."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Repository",
+        "children": [
+          {
+            "type": "text",
+            "content": "- https://github.com/ComposioHQ/agent-orchestrator"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Rating",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ShortDescription",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Multi-agent coding orchestrator with isolated worktrees and supervision."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "description",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Agent Orchestrator manages coding-agent fleets, spawning isolated workspaces, coordinating tasks, handling CI failures and merge conflicts, and supporting review and dashboard supervision."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Languages",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "TypeScript",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Notes",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Source: https://github.com/ComposioHQ/agent-orchestrator"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "LastUpdated",
+        "children": [
+          {
+            "type": "text",
+            "content": "- 2026-07-23"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Licensing",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Opensource",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "License",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Apache-2.0",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "FreeTrial",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Parallelism",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Agent Topology",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Dynamic",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Coordination Mode",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Managed",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Max Concurrent Agents",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Parallelism Model",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Role-based",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Dependency Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Automatic",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Conflict Resolution",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Worktree isolation and merge-conflict handling",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Coordination",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Coordination Mechanism",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Git State",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Agent Types Supported",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Custom / Any",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Verification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Verifier Agent",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Test Execution",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Deployment",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Self-hosted",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "BYOK",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Cloud Managed",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Local Offline",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Task Management",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Task Source",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "GitHub Issues",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Natural Language Goal",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "External Task Integrations",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "GitHub Issues",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Client",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Prompts",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Tools",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Resources",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ACP",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "DeveloperExperience",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Context Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Direct File References",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Git Support",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Checkpoints",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Observability",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Extensible",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Plugins",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomModes",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomAgents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Hooks",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Subagents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourcePath": "composio-agent-orchestrator.md"
+  },
+  {
+    "type": "header",
+    "level": 1,
     "content": "Conductor - https://melty.sh/conductor",
     "children": [
       {
@@ -11724,6 +12561,2487 @@
   {
     "type": "header",
     "level": 1,
+    "content": "Open SWE - https://docs.langchain.com/labs/swe",
+    "children": [
+      {
+        "type": "text",
+        "content": "Open-source LangGraph-based coding agent from LangChain for repository-level implementation tasks and GitHub issue workflows.\n\n**Dataset ID:** code-orchestration"
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "General",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Classification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Orchestration",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Autonomous agent",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Version",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Experimental / active development (2026); not production-ready."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Repository",
+        "children": [
+          {
+            "type": "text",
+            "content": "- https://github.com/langchain-ai/open-swe"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Rating",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ShortDescription",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Cloud-based coding agent coordinating Manager, Planner, and Programmer graphs."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "description",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Open SWE understands repository tasks, creates plans, executes code changes, and can open pull requests. It supports interactive web use and GitHub webhook-triggered runs, with manual approval or automatic execution modes."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Languages",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Python",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "TypeScript",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Notes",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Sources: https://docs.langchain.com/labs/swe, https://docs.langchain.com/labs/swe/usage/webhook, and https://github.com/langchain-ai/open-swe"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "LastUpdated",
+        "children": [
+          {
+            "type": "text",
+            "content": "- 2026-07-22"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Licensing",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Opensource",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "License",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "FreeTrial",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Parallelism",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Agent Topology",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Fixed",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Coordination Mode",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Supervised",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Max Concurrent Agents",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Parallelism Model",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Role-based",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Dependency Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Automatic",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Conflict Resolution",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Plan approval and pull-request review",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Coordination",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Coordination Mechanism",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Message Passing",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Agent Types Supported",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Custom / Any",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Verification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Human Review",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Deployment",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Self-hosted",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "BYOK",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Cloud Managed",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Local Offline",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Task Management",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Task Source",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Natural Language Goal",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "GitHub Issues",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "External Task Integrations",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "GitHub Issues",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Client",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Prompts",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Tools",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Resources",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ACP",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "DeveloperExperience",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Context Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Direct File References",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Git Support",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Checkpoints",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Observability",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Extensible",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Plugins",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomModes",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomAgents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Hooks",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Subagents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourcePath": "open-swe.md"
+  },
+  {
+    "type": "header",
+    "level": 1,
+    "content": "OpenAI Symphony - https://github.com/openai/symphony",
+    "children": [
+      {
+        "type": "text",
+        "content": "Experimental orchestration framework for turning project work into isolated autonomous coding-agent implementation runs.\n\n**Dataset ID:** code-orchestration"
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "General",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Classification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Orchestration",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Autonomous agent",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Version",
+        "children": [
+          {
+            "type": "text",
+            "content": "- v0.0.1 (2026-07-18); experimental reference implementation."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Repository",
+        "children": [
+          {
+            "type": "text",
+            "content": "- https://github.com/openai/symphony"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Rating",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ShortDescription",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Open-source OpenAI framework for isolated autonomous implementation runs."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "description",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Symphony coordinates coding-agent runs around project work items. The official repository includes a language-independent specification and an Elixir reference implementation."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Languages",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Elixir",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Python",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Notes",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Apache-2.0. No production-readiness or fixed concurrency limit is documented.    \n- Sources: https://github.com/openai/symphony and https://github.com/openai/symphony/blob/main/SPEC.md"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "LastUpdated",
+        "children": [
+          {
+            "type": "text",
+            "content": "- 2026-07-22"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Licensing",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Opensource",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "License",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Apache-2.0",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "FreeTrial",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Parallelism",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Agent Topology",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Dynamic",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Coordination Mode",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Autonomous",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Max Concurrent Agents",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Parallelism Model",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Free-form",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Dependency Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Conflict Resolution",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Isolated workspaces",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Coordination",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Coordination Mechanism",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Git State",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Agent Types Supported",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Custom / Any",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Verification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Test Execution",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Deployment",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Self-hosted",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "BYOK",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Cloud Managed",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Local Offline",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Task Management",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Task Source",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "External Tracker",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "External Task Integrations",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Client",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Prompts",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Tools",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Resources",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ACP",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "DeveloperExperience",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Context Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Direct File References",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Git Support",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Checkpoints",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Observability",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Extensible",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Plugins",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomModes",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomAgents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Hooks",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Subagents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourcePath": "openai-symphony.md"
+  },
+  {
+    "type": "header",
+    "level": 1,
+    "content": "OpenHands Software Agent SDK - https://github.com/OpenHands/software-agent-sdk",
+    "children": [
+      {
+        "type": "text",
+        "content": "SDK and agent-server framework for building software-engineering agents with execution, parallelism, MCP, ACP, hooks, and observability.\n**Dataset ID:** code-orchestration"
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "General",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Classification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Orchestration",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Autonomous agent",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Version",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Continuously updated."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Repository",
+        "children": [
+          {
+            "type": "text",
+            "content": "- https://github.com/OpenHands/software-agent-sdk"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Rating",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ShortDescription",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Framework for creating and operating software-engineering agents."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "description",
+        "children": [
+          {
+            "type": "text",
+            "content": "- The OpenHands SDK provides conversations, tools, agent servers, parallel execution, security controls, MCP/ACP integration, hooks, plugins, and observability for software agents."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Languages",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Python",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Notes",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Distinct from the OpenHands end-user application. Source: https://github.com/OpenHands/software-agent-sdk"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "LastUpdated",
+        "children": [
+          {
+            "type": "text",
+            "content": "- 2026-07-23"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Licensing",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Opensource",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "License",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "MIT",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "FreeTrial",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Parallelism",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Agent Topology",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Dynamic",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Coordination Mode",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Autonomous",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Max Concurrent Agents",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Parallelism Model",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Free-form",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Dependency Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Automatic",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Conflict Resolution",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Coordination",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Coordination Mechanism",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Message Passing",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Agent Types Supported",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Custom / Any",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Verification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Verifier Agent",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Test Execution",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Deployment",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Self-hosted",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "BYOK",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Cloud Managed",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Local Offline",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Task Management",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Task Source",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Natural Language Goal",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "External Task Integrations",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Client",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Prompts",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Tools",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Resources",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ACP",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "DeveloperExperience",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Context Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Direct File References",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Git Support",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Checkpoints",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Observability",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Extensible",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Plugins",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomModes",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomAgents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Hooks",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Subagents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourcePath": "openhands-software-agent-sdk.md"
+  },
+  {
+    "type": "header",
+    "level": 1,
     "content": "Paperclip - https://github.com/paperclip-ai/paperclip",
     "children": [
       {
@@ -13404,6 +16722,831 @@
       }
     ],
     "sourcePath": "swarm-tools.md"
+  },
+  {
+    "type": "header",
+    "level": 1,
+    "content": "SWE-agent - https://github.com/SWE-agent/SWE-agent",
+    "children": [
+      {
+        "type": "text",
+        "content": "Research-oriented software-engineering agent framework for autonomous work on GitHub issues and coding tasks.\n**Dataset ID:** code-orchestration"
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "General",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Classification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Autonomous agent",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Orchestration",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Version",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Continuously updated research framework."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Repository",
+        "children": [
+          {
+            "type": "text",
+            "content": "- https://github.com/SWE-agent/SWE-agent"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Rating",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ShortDescription",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Agent-computer-interface framework for autonomous software engineering."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "description",
+        "children": [
+          {
+            "type": "text",
+            "content": "- SWE-agent lets language models interact with repositories and issue tasks through a structured agent-computer interface."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Languages",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Python",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Notes",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Source: https://github.com/SWE-agent/SWE-agent"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "LastUpdated",
+        "children": [
+          {
+            "type": "text",
+            "content": "- 2026-07-23"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Licensing",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Opensource",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "License",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "MIT",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "FreeTrial",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Parallelism",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Agent Topology",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Dynamic",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Coordination Mode",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Autonomous",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Max Concurrent Agents",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Parallelism Model",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Free-form",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Dependency Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Conflict Resolution",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Coordination",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Coordination Mechanism",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Message Passing",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Agent Types Supported",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Custom / Any",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Verification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Test Execution",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Deployment",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Self-hosted",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "BYOK",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Cloud Managed",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Local Offline",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Task Management",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Task Source",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "GitHub Issues",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Natural Language Goal",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "External Task Integrations",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "GitHub Issues",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Client",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Prompts",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Tools",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Resources",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ACP",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "DeveloperExperience",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Context Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Direct File References",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Git Support",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Checkpoints",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Observability",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Extensible",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Plugins",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomModes",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomAgents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Hooks",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Subagents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourcePath": "swe-agent.md"
   },
   {
     "type": "header",

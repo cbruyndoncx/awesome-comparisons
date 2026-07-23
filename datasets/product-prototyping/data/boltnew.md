@@ -61,6 +61,10 @@ Bolt.new (by StackBlitz) combines an in‑browser IDE powered by WebContainers w
 - Good integration for teams wanting fast iteration cycles, but teams that require self‑hosted or open‑source tooling may find limitations.
 - 2025-2026 updates: StackBlitz pivoted corporate focus to Bolt.new as AI-first platform. Enterprise readiness with team collaboration, private repos, and advanced deployment. Figma import for design-to-code. GitHub sync for version control. Supabase database integration, Stripe payments, Clerk authentication. Chat-based conversational mode for planning and debugging. Token-based pricing: Free, Pro ($20/mo), Team ($40/user/mo). Production case study showed 80% dev time reduction. Significant speed and reliability improvements throughout 2025.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

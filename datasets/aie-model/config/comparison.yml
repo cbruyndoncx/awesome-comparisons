@@ -25,3 +25,36 @@ criteria:
       order: 0
       description: Note Date last updated
       placeholder: ""
+  - Last Verified:
+      name: Last Verified
+      type: MARKDOWN
+      search: false
+      table: true
+      detail: true
+      andSearch: false
+      rangeSearch: false
+      order: 0
+      description: Date the record's source and lifecycle were last verified
+      placeholder: "YYYY-MM-DD"
+  - Lifecycle:
+      name: Lifecycle
+      type: MARKDOWN
+      search: true
+      table: true
+      detail: true
+      andSearch: false
+      rangeSearch: false
+      order: 1
+      description: Current availability and historical status
+      placeholder: "active, preview, restricted, legacy, retired"
+  - Successor:
+      name: Successor
+      type: MARKDOWN
+      search: false
+      table: true
+      detail: true
+      andSearch: false
+      rangeSearch: false
+      order: 2
+      description: Newer model family or record replacing this entry
+      placeholder: ""

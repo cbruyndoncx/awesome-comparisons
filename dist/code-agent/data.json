@@ -40,7 +40,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- Continuous releases (May 2026) — GPT-5.5 in deep mode; Opus 4.7 in smart mode"
+            "content": "- Current version not published; active independent product rather than a Sourcegraph research preview."
           }
         ]
       },
@@ -114,7 +114,26 @@
         "children": [
           {
             "type": "text",
-            "content": "- Agentic design: Amp works as an autonomous agent that can perform multi-step reasoning, gather context from the repo, and iteratively refine changes.    \n- AGENT.md integration: Amp reads project AGENT.md files to adopt repo-specific conventions and standards, improving alignment with existing codebase patterns.    \n- Extended thinking: Supports adjustable \"thinking budget\" for deeper, higher-quality reasoning on complex tasks.    \n- Thread sharing & collaboration: Conversation threads can be synced and shared to a web console for team collaboration, knowledge sharing, and reproducibility of AI-driven change sequences.    \n- Command allowlisting: Security control that limits which shell/CLI commands the agent may execute, stored with project settings.    \n- Dual environment: Both VS Code extension and CLI are available — the CLI enables parallel, lightweight agent runs; the extension surfaces suggestions inline while preserving developer workflows.    \n- Security & testing: Best used alongside automated security testing (DAST/SAST) to catch vulnerabilities introduced during rapid AI-driven edits.    \n- Use cases: large-scale refactors, implementing cross-cutting features, writing complex algorithms, creating board-level changes spanning multiple files.    \n- Market position: Positioned as a next-generation, high-quality AI coding agent for teams wanting autonomous assistance beyond standard completion tools.    \n- 2025-2026 Update: Amp spun out from Sourcegraph as an independent research lab/company. Multi-model architecture added (Claude Sonnet 4, O3, with GPT-5 readiness). Fixed 200K token context window (unconstrained token usage). \"Oracle\" capability invokes powerful models for complex tasks. Agentic code review feature launched (Dec 2025). Thread Map visualization, Handoff mechanism for long-context drift (Nov 2025), ad-supported free tier (up to $10/day), public developer profiles, and tab completion engine added. CLI tool now provides full agentic functionality from terminal.    \n- May 2026 additions: GPT-5.5 added to deep mode; Claude Opus 4.7 in smart mode; automatic context compaction at 90% window — no more manual handoffs; official Plugin API released (custom tools, commands, events, UI); three agent modes: Smart (state-of-the-art unconstrained), Rush (fast/focused), Deep (extended reasoning); agentic Code Review with structured feedback; Thread Map for conversation visualization; ad-supported free tier."
+            "content": "- Agentic design: Amp works as an autonomous agent that can perform multi-step reasoning, gather context from the repo, and iteratively refine changes.    \n- AGENT.md integration: Amp reads project AGENT.md files to adopt repo-specific conventions and standards, improving alignment with existing codebase patterns.    \n- Extended thinking: Supports adjustable \"thinking budget\" for deeper, higher-quality reasoning on complex tasks.    \n- Thread sharing & collaboration: Conversation threads can be synced and shared to a web console for team collaboration, knowledge sharing, and reproducibility of AI-driven change sequences.    \n- Command allowlisting: Security control that limits which shell/CLI commands the agent may execute, stored with project settings.    \n- Dual environment: Both VS Code extension and CLI are available — the CLI enables parallel, lightweight agent runs; the extension surfaces suggestions inline while preserving developer workflows.    \n- Security & testing: Best used alongside automated security testing (DAST/SAST) to catch vulnerabilities introduced during rapid AI-driven edits.    \n- Use cases: large-scale refactors, implementing cross-cutting features, writing complex algorithms, creating board-level changes spanning multiple files.    \n- Market position: Positioned as a next-generation, high-quality AI coding agent for teams wanting autonomous assistance beyond standard completion tools.    \n- 2025-2026 Update: Amp spun out from Sourcegraph as an independent research lab/company. Multi-model architecture added (Claude Sonnet 4, O3, with GPT-5 readiness). Fixed 200K token context window (unconstrained token usage). \"Oracle\" capability invokes powerful models for complex tasks. Agentic code review feature launched (Dec 2025). Thread Map visualization, Handoff mechanism for long-context drift (Nov 2025), ad-supported free tier (up to $10/day), public developer profiles, and tab completion engine added. CLI tool now provides full agentic functionality from terminal.    \n- May 2026 additions: GPT-5.5 added to deep mode; Claude Opus 4.7 in smart mode; automatic context compaction at 90% window — no more manual handoffs; official Plugin API released (custom tools, commands, events, UI); three agent modes: Smart (state-of-the-art unconstrained), Rush (fast/focused), Deep (extended reasoning); agentic Code Review with structured feedback; Thread Map for conversation visualization; ad-supported free tier.    \n- Source: https://help.sourcegraph.com/article/troubleshooting-amp-related-issues (verified 2026-07-22)."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },
@@ -1135,7 +1154,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- https://github.com/anthropics/claude-code    Open-source under BSD license"
+            "content": "- -    Anthropic's official Claude Code product is closed-source; the GitHub link previously listed here was not an official source-code repository."
           }
         ]
       },
@@ -1231,8 +1250,8 @@
               {
                 "type": "item",
                 "level": 1,
-                "content": "Yes",
-                "plainChildren": "Source code available on GitHub under BSD license"
+                "content": "No",
+                "plainChildren": "Claude Code is a proprietary closed-source product from Anthropic."
               }
             ]
           }
@@ -1250,7 +1269,7 @@
               {
                 "type": "item",
                 "level": 1,
-                "content": "BSD",
+                "content": "Proprietary",
                 "plainChildren": ""
               }
             ]
@@ -1771,6 +1790,25 @@
       {
         "type": "header",
         "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
         "content": "LastUpdated",
         "children": [
           {
@@ -2199,6 +2237,549 @@
   {
     "type": "header",
     "level": 1,
+    "content": "Codebuff - https://github.com/CodebuffAI/codebuff",
+    "children": [
+      {
+        "type": "text",
+        "content": "Open-source terminal AI coding agent that edits your codebase and runs terminal commands via natural language instructions, using a multi-agent architecture with model-agnostic routing.\n\n**Dataset ID:** code-agent"
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "General",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Classification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Autonomous agent",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Terminal",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Version",
+        "children": [
+          {
+            "type": "text",
+            "content": "- 1.0.684 (2026-07)    Latest npm package version observed in the official package listing; verify before release."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Repository",
+        "children": [
+          {
+            "type": "text",
+            "content": "- https://github.com/CodebuffAI/codebuff    Apache-2.0 license; install via `npm install -g codebuff`"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Rating",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ShortDescription",
+        "children": [
+          {
+            "type": "text",
+            "content": "Terminal-native AI coding agent that edits codebases and executes shell commands via natural language, with a multi-agent architecture and model-agnostic routing via OpenRouter."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "description",
+        "children": [
+          {
+            "type": "text",
+            "content": "Codebuff is an open-source CLI coding agent that lets developers describe what they want in natural language and then autonomously edits files and runs terminal commands to accomplish it. It uses a multi-agent architecture where specialized agents coordinate to understand the project, plan changes, and apply precise edits across multiple files. The tool is model-agnostic and routes through OpenRouter, supporting Claude, GPT, Qwen, DeepSeek, and other providers. Codebuff can be used with BYOK (your own API keys) or through their hosted cloud router. A TypeScript SDK allows embedding Codebuff into CI/CD pipelines or custom tooling.\n\nFreebuff is the free, ad-supported tier of Codebuff — the same CLI with usage subsidized by ads rather than a subscription. The hosted router also offers approximately 500 free credits per month with pay-as-you-go beyond that."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Languages",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Any",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Notes",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Install: `npm install -g codebuff && cd your-project && codebuff`    \n- Freebuff = free, ad-supported usage mode (same CLI, model usage subsidized by ads)    \n- Hosted router: ~500 free credits/month, then usage-based pay-as-you-go    \n- BYOK: plug in your own OpenAI, Anthropic, or other provider API keys via OpenRouter    \n- Multi-agent: specialized agents for analysis, planning, and code editing coordinate on tasks    \n- TypeScript SDK available for programmatic/CI use    \n- Git workflow is manual — Codebuff edits files, you manage commits and PRs yourself    \n- \"Codebuff agents are the new MCP\" per README — positions agents as an alternative pattern, not an MCP client implementation    \n- Current source: https://github.com/CodebuffAI/codebuff    \n- The project remains actively maintained, with the official npm package reporting 1.0.684."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "LastUpdated",
+        "children": [
+          {
+            "type": "text",
+            "content": "- 2026-07-22"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Licensing",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Opensource",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": "Apache-2.0"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "License",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Apache-2.0",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "FreeTrial",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": "Freebuff is a free, ad-supported usage tier — no subscription required Hosted router includes ~500 free credits/month"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Client",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": "No MCP client implementation; positions its own multi-agent pattern as an alternative"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Prompts",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Tools",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Resources",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ACP",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Deployment",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "BYOK",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": "Model-agnostic via OpenRouter; supports Claude, GPT, Qwen, DeepSeek, and more Configure your own API keys to bypass the hosted router"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Local Offline",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": "Requires connectivity to a model provider (cloud API or BYOK)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "DeveloperExperience",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Context Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": "Multi-agent architecture: specialized agents analyze the codebase and gather relevant context before applying changes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Direct File References",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": "Edits files directly in the local project directory based on natural language instructions"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Checkpoints",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": "No built-in checkpoint or undo system; relies on user's own git workflow for rollback"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Git Support",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": "No built-in git commands; edits files in-place and leaves commit/PR management to the developer"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Extensible",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Plugins",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Hooks",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "SlashCommands",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": "Reusable workflows are composed through the multi-agent architecture and TypeScript SDK"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomModes",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Subagents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": "Multi-agent architecture with specialized agents for analysis, planning, and code editing Agents coordinate internally; composable and shareable via the SDK"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourcePath": "codebuff.md"
+  },
+  {
+    "type": "header",
+    "level": 1,
     "content": "Codename Goose - https://github.com/block/goose",
     "children": [
       {
@@ -2312,6 +2893,25 @@
           {
             "type": "text",
             "content": "- Key features: autonomous multi-step task execution, \".goosehints\" project guidance, shareable and repeatable \"Recipes\" to capture workflows and make agentic behavior reproducible.    \n- Operational modes: Auto (full autonomy), Approve (prompt before making changes), Chat (suggestions only).    \n- Primary early use-cases: code generation & migrations, test generation, scaffolding, build/perf automation, and other developer productivity tasks.    \n- Strong emphasis on extensibility and preventing vendor lock-in by supporting multiple LLM providers and MCP-based extensions.    \n- Adoption and usefulness will depend on the growth of a healthy extension ecosystem (MCP servers) and high-quality recipes for common workflows.    \n- 2025-2026 Update: Rapid release cadence from v1.10.3 to v1.18.0 (Dec 2025). v1.18.0 added Agent Client Protocol (ACP) support, multi-model/provider configuration with automatic switching, Tetrate Agent Router streaming, and configurable Bedrock retry settings. v1.7.0 added Linux Computer Control for Android (Termux), Session Sharing, Extension Malware Check, Chat Session List Navigation, Autovisualiser for Structured Data with MCP-UI capabilities, and Compact UX Design. Added nightly release workflow automation, Windows installation docs, airgapped operation guides. Block launched \"Advent of AI\" community initiative.    \n- v1.30.0 additions (April 8, 2026): Terminal UI (TUI) overhaul with tab-expandable tool calls for improved output visualization; 15+ LLM providers supported; ACP server functionality for Zed, JetBrains, VS Code integration; 83% autonomy level; general-purpose beyond coding: research, writing, automation, data analysis; Apache 2.0."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },
@@ -2784,7 +3384,7 @@
         "children": [
           {
             "type": "text",
-            "content": "SaaS platform (2026-05) — 2M+ repositories, 13M+ PRs processed"
+            "content": "- Current plans: Free, Pro ($24/user/month annual billing), Pro Plus ($48/user/month annual billing), and Enterprise. Lite and Pro Legacy plans retired 2026-06-08.    \n\nSaaS platform (2026-05) — 2M+ repositories, 13M+ PRs processed"
           }
         ]
       },
@@ -2900,7 +3500,26 @@
         "children": [
           {
             "type": "text",
-            "content": "- Key features:    PR summaries and guided walkthroughs of changes Automated security & quality analysis via many linters and scanners Code graph / AST analysis to understand cross-file impacts IDE extensions to bring reviews earlier into the developer workflow Integrations with issue trackers and chat (Jira, Linear, Slack)\n- Security / privacy:    Claims SOC2 Type II compliance, ephemeral review environments, end-to-end encryption, and zero data retention after analysis Uses isolated execution (Google Cloud Run referenced in architecture notes) to reduce risk from analyzing untrusted code\n- Deployment:    Primary offering is SaaS. Vendor materials mention a self-hosted option for enterprises but public details (architecture, BYOK, on-prem instructions, air-gapped support) are limited—contact vendor for enterprise requirements.\n- 2025-2026 Update: SOC 2 Type II audit completed in 2025. Pricing restructured: Lite (free, unlimited PR reviews), Pro ($24/mo annual per dev), Enterprise (custom, self-hosted, 500+ seats). Added adaptive learning (learns from team feedback), agentic workflows with @coderabbitai in PRs (generate tests, draft docs, open Jira/Linear issues). 40+ linters/SAST tools integrated with LLM noise filtering. VS Code extension added (compatible with Cursor, Windsurf). 2025 research found AI-generated code has 40% more critical issues and 70% more major issues, reinforcing need for AI review tools. Enterprise self-hosted option now available with VPN tunneling.    \n- 2026 additions: Pro+ tier launched (between Pro and Enterprise) — unit test generation, merge conflict resolution, code simplification, higher rate limits; CLI v0.4.5 for large repos; secret scanning upgraded from Gitleaks to Betterleaks; Custom Finishing Touches (open beta) — reusable automation recipes in .coderabbit.yaml; Issue Planner generates detailed coding plans; 8+ new tool integrations (Stylelint, TruffleHog, OpenGrep, Trivy, PSScriptAnalyzer, TFLint, Fortitude, Blinter); now supports 35+ coding agents including Claude Code, Cursor, Gemini CLI."
+            "content": "- Key features:    PR summaries and guided walkthroughs of changes Automated security & quality analysis via many linters and scanners Code graph / AST analysis to understand cross-file impacts IDE extensions to bring reviews earlier into the developer workflow Integrations with issue trackers and chat (Jira, Linear, Slack)\n- Security / privacy:    Claims SOC2 Type II compliance, ephemeral review environments, end-to-end encryption, and zero data retention after analysis Uses isolated execution (Google Cloud Run referenced in architecture notes) to reduce risk from analyzing untrusted code\n- Deployment:    Primary offering is SaaS. Vendor materials mention a self-hosted option for enterprises but public details (architecture, BYOK, on-prem instructions, air-gapped support) are limited—contact vendor for enterprise requirements.\n- 2025-2026 Update: SOC 2 Type II audit completed in 2025. Pricing restructured: Lite (free, unlimited PR reviews), Pro ($24/mo annual per dev), Enterprise (custom, self-hosted, 500+ seats). Added adaptive learning (learns from team feedback), agentic workflows with @coderabbitai in PRs (generate tests, draft docs, open Jira/Linear issues). 40+ linters/SAST tools integrated with LLM noise filtering. VS Code extension added (compatible with Cursor, Windsurf). 2025 research found AI-generated code has 40% more critical issues and 70% more major issues, reinforcing need for AI review tools. Enterprise self-hosted option now available with VPN tunneling.    \n- 2026 additions: Pro+ tier launched (between Pro and Enterprise) — unit test generation, merge conflict resolution, code simplification, higher rate limits; CLI v0.4.5 for large repos; secret scanning upgraded from Gitleaks to Betterleaks; Custom Finishing Touches (open beta) — reusable automation recipes in .coderabbit.yaml; Issue Planner generates detailed coding plans; 8+ new tool integrations (Stylelint, TruffleHog, OpenGrep, Trivy, PSScriptAnalyzer, TFLint, Fortitude, Blinter); now supports 35+ coding agents including Claude Code, Cursor, Gemini CLI.    \n- Sources: https://www.coderabbit.ai/pricing and https://kb.coderabbit.ai/articles/2508018126-sunset-of-lite-and-pro-legacy-subscription-plans?lang=en (verified 2026-07-22)."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },
@@ -3319,11 +3938,11 @@
   {
     "type": "header",
     "level": 1,
-    "content": "CodiumAI - https://qodo.ai",
+    "content": "Qodo (formerly CodiumAI) - https://qodo.ai",
     "children": [
       {
         "type": "text",
-        "content": "AI-powered test generation and code integrity platform (rebranded to Qodo)"
+        "content": "Qodo platform for test generation, behavior-coverage analysis, and automated pull-request review. Qodo has deprecated IDE autocomplete and code-generation chat; the IDE plugin continues to support review capabilities."
       },
       {
         "type": "header",
@@ -3443,7 +4062,26 @@
         "children": [
           {
             "type": "text",
-            "content": "- Rebranded to Qodo in 2024; platform and docs may be under either the Codium AI or Qodo name.    \n- Strong fit for teams that need better automated test coverage and PR-level code quality checks rather than just inline code completion.    \n- Provides behavior-coverage driven test generation which aims to produce diverse, behavior-focused tests instead of simple smoke tests.    \n- Offers IDE integrations, CI/CLI tools, and an open-source PR-Agent for self-hosting/CI use-cases.    \n- Enterprise offerings include additional controls and integrations; advanced models (including GPT-4) may be available on paid tiers.    \n- 2025-2026 Update: Qodo evolved into an enterprise-scale platform with 5 specialized agents (Qodo Gen, Merge, Cover, Aware, Command). New Codebase Intelligence Engine provides system-wide stateful model across module boundaries and cross-repo dependencies. Achieved verified 71.2% SWE-bench score and detects 42-48% of real-world runtime bugs. Added 15+ automated PR workflows including Jira/Azure DevOps validation, missing-test detection, and risk/complexity scoring. Multi-repo support (10-1000+ repos). Deployment options now include VPC, on-premise, zero-retention, SOC2, and GDPR compliance. Supports all major LLM providers (OpenAI, Claude, DeepSeek, Gemini, Meta AI). Pricing: free tier (250 msgs/month), team at $15/user.    \n- Repositories    https://github.com/qodo-ai/pr-agent https://github.com/codium-ai/codium-code-examples https://github.com/codium-ai/codiumai-jetbrains-release\n- 2026 additions: expanded to 15+ specialized agentic workflows; Multi-Repository Context Engine for enterprise-scale codebases; real-time IDE code review with instant fix suggestions; automated compliance enforcement; configurable coding standards; SDLC-wide review from IDE to PRs; automated issue resolution with pre-commit verification; compatible with any AI model (not vendor-locked); broad IDE, GitHub, GitLab, and CLI integration."
+            "content": "- Source: https://www.qodo.ai/blog/an-update-on-code-generation-at-qodo/ (verified 2026-07-22).    \n- Rebranded to Qodo in 2024; platform and docs may be under either the Codium AI or Qodo name.    \n- Strong fit for teams that need better automated test coverage and PR-level code quality checks rather than just inline code completion.    \n- Provides behavior-coverage driven test generation which aims to produce diverse, behavior-focused tests instead of simple smoke tests.    \n- Offers IDE integrations, CI/CLI tools, and an open-source PR-Agent for self-hosting/CI use-cases.    \n- Enterprise offerings include additional controls and integrations; advanced models (including GPT-4) may be available on paid tiers.    \n- 2025-2026 Update: Qodo evolved into an enterprise-scale platform with 5 specialized agents (Qodo Gen, Merge, Cover, Aware, Command). New Codebase Intelligence Engine provides system-wide stateful model across module boundaries and cross-repo dependencies. Achieved verified 71.2% SWE-bench score and detects 42-48% of real-world runtime bugs. Added 15+ automated PR workflows including Jira/Azure DevOps validation, missing-test detection, and risk/complexity scoring. Multi-repo support (10-1000+ repos). Deployment options now include VPC, on-premise, zero-retention, SOC2, and GDPR compliance. Supports all major LLM providers (OpenAI, Claude, DeepSeek, Gemini, Meta AI). Pricing: free tier (250 msgs/month), team at $15/user.    \n- Repositories    https://github.com/qodo-ai/pr-agent https://github.com/codium-ai/codium-code-examples https://github.com/codium-ai/codiumai-jetbrains-release\n- 2026 additions: expanded to 15+ specialized agentic workflows; Multi-Repository Context Engine for enterprise-scale codebases; real-time IDE code review with instant fix suggestions; automated compliance enforcement; configurable coding standards; SDLC-wide review from IDE to PRs; automated issue resolution with pre-commit verification; compatible with any AI model (not vendor-locked); broad IDE, GitHub, GitLab, and CLI integration."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },
@@ -4004,6 +4642,543 @@
   {
     "type": "header",
     "level": 1,
+    "content": "Cursor Background Agents - https://docs.cursor.com/background-agent/api/overview",
+    "children": [
+      {
+        "type": "text",
+        "content": "Cursor's autonomous repository agents exposed through background, web, mobile, and API workflows."
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "General",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Classification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Autonomous agent",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Version",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Continuously updated; current public version not independently verified."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Repository",
+        "children": [
+          {
+            "type": "text",
+            "content": "- -"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Rating",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ShortDescription",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Asynchronous Cursor agents that work on repositories away from the local editor session."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "description",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Background Agents run coding tasks in isolated remote environments and can be started through Cursor's API and web/mobile surfaces. They are a distinct agent surface from the Cursor editor."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Languages",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Any",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Notes",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Source: https://docs.cursor.com/background-agent/api/overview and https://docs.cursor.com/en/background-agent/web-and-mobile"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "LastUpdated",
+        "children": [
+          {
+            "type": "text",
+            "content": "- 2026-07-23"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Licensing",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Opensource",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "License",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Proprietary",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "FreeTrial",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Client",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Prompts",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Tools",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Resources",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ACP",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Deployment",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "BYOK",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Local Offline",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "DeveloperExperience",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Context Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Direct File References",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Checkpoints",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Git Support",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Extensible",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Plugins",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Hooks",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "SlashCommands",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomModes",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Subagents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourcePath": "cursor-background-agents.md"
+  },
+  {
+    "type": "header",
+    "level": 1,
     "content": "Devika AI - https://github.com/stitionai/devika",
     "children": [
       {
@@ -4042,7 +5217,7 @@
         "children": [
           {
             "type": "text",
-            "content": "No official releases published (project transitioned to \"Opcode\" rebrand; last checked 2026-01-30)"
+            "content": "Early-stage experimental project; official repository still lists unfinished and broken features."
           }
         ]
       },
@@ -4116,7 +5291,26 @@
         "children": [
           {
             "type": "text",
-            "content": "- Multi-model support: commonly used with Claude 3, GPT-4, Gemini, Mistral, Groq and local models via Ollama.    \n- Requirements: commonly references Bun (JavaScript runtime), Ollama for local LLMs, Git, and standard development tooling.    \n- Project organization: project-based workspace model with persistent state and task tracking so agents can continue work across sessions.    \n- Research and browsing: built-in research module for fetching and summarizing web documentation, API references, and examples.    \n- Use cases: full-stack feature implementation, repo maintenance, automated testing, documentation generation, and static site deployment.    \n- Community & contribution: open-source repo on GitHub encourages contributions; check repository for issues, contribution guidelines and exact license details.    \n- Naming Confusion: The agent is referred to as both Devika and Opcode in different places. The exact relationship is unclear.    \n- 2025-2026 Update: No official versioned releases have been published on GitHub. The project announced a transition to \"Opcode\" branding with a \"new version out soon\" notice, but no Opcode release has materialized as of January 2026. The repository remains available but development activity appears stalled.    \n- 2026 status: project transitioned to 'Opcode' rebrand; no significant public activity found in 2026. Consider archived."
+            "content": "- Multi-model support: commonly used with Claude 3, GPT-4, Gemini, Mistral, Groq and local models via Ollama.    \n- Requirements: commonly references Bun (JavaScript runtime), Ollama for local LLMs, Git, and standard development tooling.    \n- Project organization: project-based workspace model with persistent state and task tracking so agents can continue work across sessions.    \n- Research and browsing: built-in research module for fetching and summarizing web documentation, API references, and examples.    \n- Use cases: full-stack feature implementation, repo maintenance, automated testing, documentation generation, and static site deployment.    \n- Community & contribution: open-source repo on GitHub encourages contributions; check repository for issues, contribution guidelines and exact license details.    \n- Naming Confusion: The agent is referred to as both Devika and Opcode in different places. The exact relationship is unclear.    \n- 2025-2026 Update: No official versioned releases have been published on GitHub. The project announced a transition to \"Opcode\" branding with a \"new version out soon\" notice, but no Opcode release has materialized as of January 2026. The repository remains available but development activity appears stalled.    \n- The official repository still describes Devika as early-stage and experimental. The transition-to-Opcode claim is not confirmed by the official repository.    \n- Source: https://github.com/stitionai/devika (verified 2026-07-22)."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },
@@ -4654,6 +5848,25 @@
       {
         "type": "header",
         "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
         "content": "LastUpdated",
         "children": [
           {
@@ -5179,6 +6392,25 @@
           {
             "type": "text",
             "content": "- Editions: Community (free, limited Methods Under Test), Developer (paid tiers with higher MUT quotas), Teams and Enterprise (larger-scale, CLI/CI integration, analytics/dashboard and on-prem/enterprise deployment options).    \n- Integrations: IntelliJ plugin, GitHub/GitLab, Jenkins and other CI systems, Docker and common Java build ecosystems (Maven/Gradle/Spring).    \n- Pricing model: free community tier with monthly MUT limits; developer subscriptions with fixed MUT bundles; Teams/Enterprise with capacity- and user-based pricing and bespoke contracts.    \n- Use-cases: fast inner-loop test creation for developers, bulk test generation for legacy codebases, regression testing and coverage improvements, test maintenance during refactors.    \n- Unknown / not publicly documented here: explicit BYOK/key-management details, detailed on-prem installation steps and specific license terms—contact Diffblue sales for enterprise security, on-prem deployment and licensing specifics.    \n- 2025-2026 Update: Added experimental Java 24 and 25 support alongside production Java 8/11/17/21. JUnit Jupiter 5.13.4 and Mockito Core 5.19.0 compatibility. New OSGi test generation support. Significantly faster CLI operations for Maven (especially multi-module) projects. google-java-format as new default formatter. Full IntelliJ IDEA 2025.2 and 2025.3 support. Beta `dcover issues` diagnostic command (Oct 2025). Optional LLM integration (beta) for domain-specific test string generation. Improved Spring XML context and custom annotation handling. Enhanced test readability for fluent builder patterns. Pricing evolved to methods-under-test consumption model.    \n- March 2026 additions: Diffblue Testing Agent — first purpose-built AI agent for enterprise unit testing; works autonomously with Claude Code and GitHub Copilot CLI; supports Java 8-25 and Python 3; processes entire multi-module projects without human intervention. Three new capabilities: Test Asset Insights (analyzes existing tests, generates based on patterns); LLM-Augmented Intelligence (integrates Claude Code + Copilot CLI); Guided Coverage Improvement (50% coverage increase in 1 hour). Claims 20x more productive than LLM-based coding assistants on unit test generation."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },
@@ -5716,6 +6948,25 @@
       {
         "type": "header",
         "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
         "content": "LastUpdated",
         "children": [
           {
@@ -6234,6 +7485,25 @@
       {
         "type": "header",
         "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
         "content": "LastUpdated",
         "children": [
           {
@@ -6746,6 +8016,25 @@
           {
             "type": "text",
             "content": "- Release: October 2025 (public preview)    \n- API Access: Gemini API via Google AI Studio and Vertex AI    \n- Core Tool: `computer_use` tool in Gemini API    \n- Capabilities: Web navigation, button clicking, form filling, scrolling, page interaction    \n- Input Requirements: User request, screenshot, action history    \n- Real-World Applications: Project Mariner, Firebase Testing Agent, AI Mode in Search    \n- Performance: 18% improvement on difficult evaluations (Autotab)    \n- UI Test Success: 60%+ test rehabilitation rate (Google Payments)    \n- Benchmarks: Leads in web and mobile control with lower latency    \n- Developer: Google DeepMind    \n- Availability: Public preview    \n- 2025-2026 Update: Project Mariner computer use capabilities integrated into 2.5 Pro and 2.5 Flash. Gemini 2.5 Pro achieved 63.8% on SWE-Bench Verified and #1 on WebDev Arena leaderboard (ELO 1415). Deep Think experimental reasoning mode added for complex tasks. 1M token context window (expanding to 2M). MCP tool support added to Gemini API. Native audio I/O with affective dialogue via Live API. Indirect prompt injection protection makes it Google's most secure model family. 2.5 Flash optimized for efficiency (20-30% fewer tokens). Tool use via Live API connects to Calendar, Notes, Tasks, Photos, YouTube, Maps.    \n- 2026 additions: evolved from Project Mariner to full Gemini Computer Use; browser-anchored with DOM awareness; Gemini Enterprise Agent Platform (Cloud Next '26): Agent Studio, Agent Runtime, Agent-to-Agent Orchestration, Agent Observability, Agent Identity and Registry; access to 200+ models including Gemini 3.1 Pro, Gemini 3.1 Flash Image, Gemma 4; available to Google AI Ultra subscribers (US); enterprise deployment with identity, policy enforcement, and operational controls."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },
@@ -7845,6 +9134,25 @@
       {
         "type": "header",
         "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
         "content": "LastUpdated",
         "children": [
           {
@@ -8356,7 +9664,26 @@
         "children": [
           {
             "type": "text",
-            "content": "- Fully autonomous: Independently thinks, plans, and executes complex tasks without human supervision.    \n- 100+ AI agents: System of over 100 independent AI agents working in concert.    \n- Sandboxed execution: Full browser, Python interpreter, file system, and terminal in secure environment.    \n- Superior performance: 86.5% accuracy vs ~67.9% for other models; beats OpenAI Deep Research in GAIA.    \n- Real-world coding: Tested on Python scripts, debugging, algorithm explanations, HTML/React/games.    \n- Speed and accuracy: Stands out for both rapid execution and clear explanations.    \n- Autonomous deployment: Can execute code, browse web, interact with files, and deploy to production.    \n- Claude + Qwen powered: Uses Anthropic's Claude 3.5 Sonnet and Alibaba's Qwen models.    \n- Monica.im: Developed by Chinese AI startup specializing in autonomous agents.    \n- Invitation-only beta: Currently requires waitlist approval with use case description.    \n- Launched March 2025 with strong benchmark results.    \n- 2025-2026 Update: Manus 1.6 released with Manus Max (more powerful agent variant), mobile development support (beyond web apps), Design View for interactive image creation, and enhanced UI aesthetics. Asynchronous cloud operation allows users to disconnect while tasks complete in background. Memory and adaptive learning added (retains user preferences across sessions). CEO announced plans to release agentic foundation models under open-source license. Platform expanded beyond coding to serve business analysts, researchers, marketers, and customer service teams. Still invitation-only beta access.    \n- 2026 additions: Web App Builder (March 2026) — creates full websites/apps with built-in database, Stripe integration, and SEO; desktop app with local file system access; Manus 1.6 Max (complex/creative) and 1.6 Lite (fast/everyday) model tiers. Acquisition: Meta acquired Manus AI late 2025 for ~$2 billion. Platform access: Web, Telegram, WhatsApp, LINE, Slack. Pricing: credit-based (300 daily credits free tier)."
+            "content": "- Fully autonomous: Independently thinks, plans, and executes complex tasks without human supervision.    \n- 100+ AI agents: System of over 100 independent AI agents working in concert.    \n- Sandboxed execution: Full browser, Python interpreter, file system, and terminal in secure environment.    \n- Superior performance: 86.5% accuracy vs ~67.9% for other models; beats OpenAI Deep Research in GAIA.    \n- Real-world coding: Tested on Python scripts, debugging, algorithm explanations, HTML/React/games.    \n- Speed and accuracy: Stands out for both rapid execution and clear explanations.    \n- Autonomous deployment: Can execute code, browse web, interact with files, and deploy to production.    \n- Claude + Qwen powered: Uses Anthropic's Claude 3.5 Sonnet and Alibaba's Qwen models.    \n- Monica.im: Developed by Chinese AI startup specializing in autonomous agents.    \n- Official product pages list public web, desktop, iOS, and Android availability; no longer describe Manus as invitation-only beta.    \n- Launched March 2025 with strong benchmark results.    \n- 2025-2026 Update: Manus 1.6 released with Manus Max (more powerful agent variant), mobile development support (beyond web apps), Design View for interactive image creation, and enhanced UI aesthetics. Asynchronous cloud operation allows users to disconnect while tasks complete in background. Memory and adaptive learning added (retains user preferences across sessions). CEO announced plans to release agentic foundation models under open-source license. Platform expanded beyond coding to serve business analysts, researchers, marketers, and customer service teams. Still invitation-only beta access.    \n- Manus is now part of Meta. Current availability includes web, desktop, iOS, and Android.    \n- Sources: https://manus.im/download and https://manus.im/blog (verified 2026-07-22)."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },
@@ -8762,6 +10089,543 @@
   {
     "type": "header",
     "level": 1,
+    "content": "Mistral Vibe Code - https://docs.mistral.ai/vibe/overview",
+    "children": [
+      {
+        "type": "text",
+        "content": "Mistral's coding agent spanning CLI, VS Code, and web sessions with planning, execution, skills, subagents, and MCP support."
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "General",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Classification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Autonomous agent",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Version",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Continuously updated; current public version not independently verified."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Repository",
+        "children": [
+          {
+            "type": "text",
+            "content": "- -"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Rating",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ShortDescription",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Agentic coding workflow available across terminal, editor, and web surfaces."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "description",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Vibe Code supports repository work through CLI, VS Code, and web sessions, with planning and execution modes, shared configuration, skills, subagents, and remote repository workflows."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Languages",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Any",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Notes",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Sources: https://docs.mistral.ai/vibe/overview and https://docs.mistral.ai/vibe/code/choose-cli-vscode-web-sessions"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "LastUpdated",
+        "children": [
+          {
+            "type": "text",
+            "content": "- 2026-07-23"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Licensing",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Opensource",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "License",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Proprietary",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "FreeTrial",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Client",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Prompts",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Tools",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Resources",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ACP",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Deployment",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "BYOK",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Local Offline",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "DeveloperExperience",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Context Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Direct File References",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Checkpoints",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Git Support",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Extensible",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Plugins",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Hooks",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "SlashCommands",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomModes",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Subagents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourcePath": "mistral-vibe-code.md"
+  },
+  {
+    "type": "header",
+    "level": 1,
     "content": "MutableAI - https://mutable.ai",
     "children": [
       {
@@ -8899,6 +10763,25 @@
           {
             "type": "text",
             "content": "- Key features: AI-generated living wiki, code chat / Q&A, architecture diagrams, code transforms/refactors, citations to code lines, notifications on code changes, editable AI docs, prompt-driven code edits, upcoming test-generation features reported.    \n- Integrations: Reported integrations include VS Code, GitHub, Jupyter, and a CLI for local workflows.    \n- Pricing: Free tier for open-source projects; Pro plans from $15/month; Enterprise with custom pricing and on-prem options.    \n- 2025-2026 Update: Platform continues to focus on AI-native code documentation (Auto Wiki), codebase Q&A, and automated code transformations. Integrations with VS Code, GitHub, Jupyter, and CLI remain core. Custom model training on team codebases available for enterprise. Compliance checking for enterprise standards added. Developer reception positive, with users reporting it is \"smarter than Copilot\" for contextual code understanding. No specific version numbers published; SaaS delivery model.    \n- 2026 status: positioned as a code generation and refactoring tool rather than a fully autonomous end-to-end agent. Specializes in comprehension + generation for existing codebases. Features: natural language code modification, repository-wide context awareness, auto-refactoring, test creation, documentation generation, CI/CD integration (PRs), code architecture diagrams. 30-day free trial. Not typically cited among top autonomous coding agents (Devin, Claude Code, Copilot Agent) for full project autonomy."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },
@@ -9905,7 +11788,7 @@
         "children": [
           {
             "type": "text",
-            "content": "v1.x (2026-03) — Planning Mode BETA added"
+            "content": "- 1.8.0 (released 2026-06-10)    \n\nv1.x (2026-03) — Planning Mode BETA added"
           }
         ]
       },
@@ -9979,7 +11862,26 @@
         "children": [
           {
             "type": "text",
-            "content": "- Project rebranded / continued as \"OpenHands\" (All-Hands-AI/OpenHands); several mirrors/forks exist under the original OpenDevin name.    \n- Primary deployment is Docker-based with a sandbox container for executing shell commands; workspace directories are mounted into the sandbox.    \n- Requires modern Docker, Python 3.10+, and Node.js for full local UI builds and tooling.    \n- Current status: progressed from alpha to V1 with production-ready architecture; rapidly improving with frequent releases.    \n- 2025-2026 Update: OpenHands V1 released as major architectural overhaul emphasizing flexibility, modularity, and production safety. Latest v1.2.1 released January 16, 2026. OpenHands Software Agent SDK launched (Nov 2025). \"Bring Your Own LLM\" capability added for cloud users (Oct 2025). Enterprise features for remediating CVEs at scale and hosting custom coding agents on NVIDIA DGX Spark. Daytona middleware integration for zero-setup enterprise deployment. OpenHands Index benchmarked 9 leading LLMs (Claude 4.5 Opus won overall). The AI agent became top repository contributor with 660 commits, surpassing all human contributors. MIT-licensed with no vendor lock-in.    \n- 2026 additions: Planning Mode (BETA, March 2026) — seamless Plan/Code mode switching; agent generates structured PLAN.md; can ask clarifying questions before implementation; user approval required before execution begins. GUI Slash Menu: type '/' to access loaded Agent Skills inline. SWE-bench: 53%+ resolution rate on Verified; Claude 4.5 Sonnet performs best. OpenHands Index benchmark launched January 2026."
+            "content": "- Project rebranded / continued as \"OpenHands\" (All-Hands-AI/OpenHands); several mirrors/forks exist under the original OpenDevin name.    \n- Primary deployment is Docker-based with a sandbox container for executing shell commands; workspace directories are mounted into the sandbox.    \n- Requires modern Docker, Python 3.10+, and Node.js for full local UI builds and tooling.    \n- Current status: progressed from alpha to V1 with production-ready architecture; rapidly improving with frequent releases.    \n- 2025-2026 Update: OpenHands V1 released as major architectural overhaul emphasizing flexibility, modularity, and production safety. Latest v1.2.1 released January 16, 2026. OpenHands Software Agent SDK launched (Nov 2025). \"Bring Your Own LLM\" capability added for cloud users (Oct 2025). Enterprise features for remediating CVEs at scale and hosting custom coding agents on NVIDIA DGX Spark. Daytona middleware integration for zero-setup enterprise deployment. OpenHands Index benchmarked 9 leading LLMs (Claude 4.5 Opus won overall). The AI agent became top repository contributor with 660 commits, surpassing all human contributors. MIT-licensed with no vendor lock-in.    \n- 2026 additions: Planning Mode (BETA, March 2026) — seamless Plan/Code mode switching; agent generates structured PLAN.md; can ask clarifying questions before implementation; user approval required before execution begins. GUI Slash Menu: type '/' to access loaded Agent Skills inline. SWE-bench: 53%+ resolution rate on Verified; Claude 4.5 Sonnet performs best. OpenHands Index benchmark launched January 2026.    \n- Source: https://github.com/OpenHands/OpenHands/releases (verified 2026-07-22)."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },
@@ -10436,7 +12338,7 @@
         "children": [
           {
             "type": "text",
-            "content": "Agent 3 (2025-09) — GA; see code-editor/replit.md for full IDE details"
+            "content": "- Agent 4 (current generation)    \n\nAgent 3 (2025-09) — GA; see code-editor/replit.md for full IDE details"
           }
         ]
       },
@@ -10510,7 +12412,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- Distinguishing features: embedded self-testing and debugging loop, Design Mode for visual development, Fast Build for rapid prototyping, full-stack mobile app development with React Native/Expo, web search for real-time information.    \n- Agent v2 (February 2025) was powered by Claude 3.7 Sonnet; first 10 checkpoints free for all builders.    \n- Agent 3 performs up to 3x faster at 1/10th cost compared to earlier computer-use models.    \n- Custom Agent Instructions via replit.md for coding style preferences, project context, and workflow settings.    \n- Multi-tool calling delivers 15% cost savings and 30% faster results.    \n- Agent Queue system organizes requests like a task list for structured task management.    \n- General Agent removes template limitations, working on any codebase in any language on NixOS.    \n- Real-time collaboration includes shared execution environments and integrated chat.    \n- Developers report 10x productivity improvements; 85% recommendation rate and 90% renewal rate.    \n- Can generate specialized agents for workflows with integrations to Slack, Telegram, and email.    \n- Automatic version control with edit logging, code explanation tools, and auto-rollback.    \n- 2026 status: Agent 3 remains current; 200-minute autonomous runs; pricing: Starter free, Core $20/month ($25 credits), Pro $95/month ($100 credits), Enterprise custom. Design Mode (Nov 2025): interactive designs in under 2 minutes. LLM-native web search (Jan 2026). Next Edit Predictions for codebase-wide ripple effects. Figma/Lovable import capability."
+            "content": "- Distinguishing features: embedded self-testing and debugging loop, Design Mode for visual development, Fast Build for rapid prototyping, full-stack mobile app development with React Native/Expo, web search for real-time information.    \n- Agent v2 (February 2025) was powered by Claude 3.7 Sonnet; first 10 checkpoints free for all builders.    \n- Agent 3 performs up to 3x faster at 1/10th cost compared to earlier computer-use models.    \n- Custom Agent Instructions via replit.md for coding style preferences, project context, and workflow settings.    \n- Multi-tool calling delivers 15% cost savings and 30% faster results.    \n- Agent Queue system organizes requests like a task list for structured task management.    \n- General Agent removes template limitations, working on any codebase in any language on NixOS.    \n- Real-time collaboration includes shared execution environments and integrated chat.    \n- Developers report 10x productivity improvements; 85% recommendation rate and 90% renewal rate.    \n- Can generate specialized agents for workflows with integrations to Slack, Telegram, and email.    \n- Automatic version control with edit logging, code explanation tools, and auto-rollback.    \n- Agent 4 supersedes Agent 3. Design Canvas replaced Design Mode, and planning evolved to plan-while-building.    \n- Sources: https://replit.com/blog/introducing-agent-4-built-for-creativity and https://replit.com/blog/whats-changed-agent3-to-agent4 (verified 2026-07-22)."
           }
         ]
       },
@@ -11061,6 +12963,25 @@
           {
             "type": "text",
             "content": "- Core value: whole-program synthesis — Smol focuses on producing small, coherent applications from a single natural-language specification rather than only single-file completions.    \n- Usage modes:    Git Repo Mode: operate against a checked-out repository for iterative development and human review. Library Mode: import smol as a Python package to script generation steps (planning, specifying file paths, generate). API/Recipe Mode: integrate the agent into higher-level tooling or automated flows.\n- Prompting DSL: leans on Markdown as the canonical way to describe requirements and specs for the agent.    \n- Good fit: rapid prototyping, scaffolding, learning how to implement features with unfamiliar APIs, and generating small demo apps or PoCs.    \n- Limitations: quality and speed depend heavily on the chosen LLM (GPT-4 is common but slower/costly). The tool is experimental — outputs require human review, testing, and iteration. Not designed as a drop-in replacement for full IDE/code-review workflows.    \n- 2025-2026 Update: Project in stable maintenance phase with incremental improvements. PR #158 (Apr 2025) migrated dependency management from Poetry to uv for faster builds. Multi-model provider support via litellm (Azure, OpenAI, Palm, Anthropic, Cohere, Replicate). Feedback loop remains 2-4 minutes per generation cycle with GPT-4. Community spawned smol-dev-js (JavaScript variant for incremental live project changes). Project focus remains on lightweight prototyping rather than full IDE workflows.    \n- 2026 status: last active 2025; no confirmed updates in public sources as of May 2026."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },
@@ -11634,6 +13555,25 @@
           {
             "type": "text",
             "content": "- GitHub automation: Transforms \"Sweep:\" issues into automated pull requests without IDE.    \n- End-to-end workflows: Plans solutions, writes code, and creates PRs autonomously.    \n- 100 PRs daily: Currently processes around 100 pull requests per day across projects.    \n- Open source: 5,000+ GitHub stars with active community development.    \n- JetBrains integration: Plugin for IntelliJ, PyCharm, GoLand, and more.    \n- Follow-up handling: Processes issue comments for iterative PR refinements.    \n- Test generation: Automatically generates tests alongside code changes.    \n- Static analysis: Includes automated code analysis and feedback.    \n- Self-hosted option: Can be deployed via hosted service or self-hosted setup.    \n- Multi-language: Broad language support across popular development stacks.    \n- Maintenance focus: Particularly effective for routine tasks, bug fixes, and small features.    \n- 2025-2026 Update: Released open-weights 1.5B parameter code autocomplete model that outperforms Qwen2.5-Coder-7B (4.6x larger) by 12% on next-edit benchmarks. Model trained in 4 hours on 8 H100 GPUs. JetBrains plugin v1.27.15 released Jan 2026 with active development (v1.27.10-1.27.15 in Dec 2025-Jan 2026). SOC 2 compliant with zero data retention. Next-edit autocomplete predicts changes based on editing context (not just fill-in-the-middle). Community-built Neovim integration (cursortab.nvim) created within hours of announcement. 7.6k GitHub stars, 453 forks, 35 contributors. Free open-weights model vs. Copilot $10/mo and Cursor $20/mo.    \n- v1.27.15 additions (Jan 4, 2026): background Bash tool runs commands without opening new terminal; improved accept/reject code blocks display; autocomplete includes all open files; file deletion on reject for newly created files. Recent features: AI Code Review (v1.25.9); Ask Mode for codebase exploration without edits (v1.24.4); next-edit autocomplete predictions; Claude Code skills integration; diff-level commit messages; Slack integration; JetBrains support (IntelliJ, PyCharm, Android Studio)."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": "Not documented in the available source record."
+              }
+            ]
           }
         ]
       },

@@ -43,6 +43,10 @@ Factory introduced "Droids" as autonomous software development agents that becam
 
 - 2026 status: Terminal-Bench #1 at 58.75% (Core v0.1.1); latest eval 63.1% (Dec 2025). Sonnet-based Droid outperforms Opus-based competitors — agent architecture is the decisive factor. Three-tier prompting hierarchy (Tool Descriptions, System Prompts, System Notifications); system intelligence bootstrapping with environmental context; controlled background execution primitives; speed optimizations with LLM runtime awareness; multi-platform: VS Code, JetBrains, Vim, terminals, web UI. See also droid-cli.md in terminal dataset for CLI-specific 2026 updates.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

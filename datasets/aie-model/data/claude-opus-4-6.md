@@ -51,6 +51,12 @@ Claude Opus 4.6 is Anthropic's most advanced AI model, released on February 5, 2
 - Broader audience: Originally positioned for developers, now serves product managers, financial analysts, and knowledge workers.
 - Released February 5, 2026 as Anthropic's most advanced model to date.
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-02-06
 

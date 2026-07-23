@@ -7,7 +7,7 @@ An AI-powered no-code app builder that turns ideas into live web applications in
 - Product/Prototyping
 
 ### Version
-- v1.2 (2025-2026)
+- Retiring; service shuts down 2026-08-01.
   - Mocha Max: High-power agent mode with increased compute for complex tasks, improved reasoning, and stronger structural support
 
 ### Repo
@@ -58,6 +58,8 @@ Unlike template-based no-code builders, Mocha actually writes code that users ow
   - No test generation documented.
 
 ### Notes
+- Building, previews, and hosted apps stop working on 2026-08-01; migrate before the shutdown deadline.
+- Source: https://getmocha.com/blog/mocha-shutdown/ (verified 2026-07-22).
 - Core strengths:
   - Vibe coding: Describe desired app functionality with words or images and iterate through conversational interface
   - True all-in-one stack: Backend, database, authentication, payments, hosting with zero configuration

@@ -1,13 +1,13 @@
-# Cogram - https://cogram.ai/
+# Cogram - https://cogram.com/
 [AI-powered coding assistant for Jupyter Notebooks / data-science workflows. Note: there is a different product with the same name at cogram.com (construction/architecture).]
 
 ## General Info
 
 ### Classification
-- Other
+- Productivity/Project management
 
 ### Version
-- 0.11.23 (OUTDATED - Last update 2022-01-24)
+- Continuously updated SaaS platform; no public product version identified.
   - PyPI: jupyter-cogram 0.11.23 (2022-01-24)
   - NOTE: Product appears to have no updates since January 2022 (~4 years old). Verify current status and availability on cogram.ai before use
 
@@ -20,15 +20,17 @@
   - Insufficient public review data to provide a rating; product appears inactive since 2022
 
 ### Short Description
-- AI coding assistant for Jupyter Notebooks that generates Python code from natural-language comments and provides context-aware autocompletions for data-science workflows.
+- AI project information-management platform for architects, engineers, consultants, and builders, covering meeting minutes, field reports, project documents, emails, and project reporting.
 
 ### Description
-Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyter Notebooks. It generates or autocompletes Python code from natural-language comments, offers code explanations, and can help convert English queries into SQL. The tool is distributed as a Jupyter extension (pip-installable) and requires an API token obtained by signing up on cogram.ai.
+Cogram is an AI project information-management platform for architects, engineers, consultants, and builders. It supports meeting minutes, field reports, project documents, emails, and project reporting.
 
 ### Languages
-- Python
+- Any
 
 ### Notes
+- Current product focus: project information management for meetings, field reports, documents, and project reporting.
+- Sources: https://cogram.com/about and https://docs.cogram.com/ (verified 2026-07-22).
 - **PRODUCT STATUS: INACTIVE/ABANDONED:**
   - Latest recorded update: January 24, 2022 (~4 years old)
   - No recent PyPI releases or updates found since 2022
@@ -42,6 +44,10 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
   - No new releases, updates, or activity detected as of January 2026. Product remains inactive since January 2022.
   - The AI coding assistant market is now dominated by GitHub Copilot, Claude, Cursor, and Tabnine; Cogram.ai has not kept pace.
   - Recommend treating this product as abandoned for evaluation purposes.
+
+### Skills
+- Unknown
+  - Not documented in the available source record.
 
 ### Last Update
 - 2026-01-30
@@ -133,4 +139,3 @@ Cogram.ai is an AI assistant focused on accelerating data-science work in Jupyte
 ### Subagents
 - No
   - No evidence of definable subagents or specialized agent workflows in the jupyter-cogram public docs.
-

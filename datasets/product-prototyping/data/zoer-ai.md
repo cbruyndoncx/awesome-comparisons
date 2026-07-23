@@ -63,6 +63,10 @@ Zoer.ai is a comprehensive AI-powered platform launched in September 2025 that b
 - Launched September 17, 2025 in Singapore.
 - 2025-2026 updates: Multi-model engine now supports Claude Sonnet 4.5, MiniMax M2.1, Gemini 3.0 Pro, and Nano Banana Pro. Integrations with Lovable, Supabase, and Netlify added. Platform actively discussed in 2026 AI app builder landscape.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

@@ -43,6 +43,10 @@ Doubao-Seed-Code is ByteDance's professional code generation AI, launched by Vol
 
 - 2026 status: no significant public updates found. Verify current status at vendor website.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 - 2026-01-30
 

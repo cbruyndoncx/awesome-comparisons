@@ -34,6 +34,12 @@ Grok 2.5 is xAI's 314 billion parameter language model released under the Apache
 - Open-source adopters report 51% ROI vs 41% for proprietary solutions
 - Full source code available on Hugging Face
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

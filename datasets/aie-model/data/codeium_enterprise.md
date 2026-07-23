@@ -43,6 +43,12 @@ References & further reading
 - https://codeium.com/
 - https://codeium.com/enterprise (vendor enterprise overview)
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

@@ -38,6 +38,10 @@ Devin is designed as an autonomous software engineering agent created by Cogniti
 
 - v3.0 additions (2026): Devin Manages Devins — orchestrates multiple Devin agents in parallel with isolated environments (March 2026); Devin Review with GitHub commit status checks and batch PR comments; native Linear integration for issue/project management; 3x faster startup with new unified UI; Fast Mode (~2x faster responses at 4x ACU); inline file previews (HTML, PDF, SVG); session secrets via API for secure credential management; enterprise ACU hard caps; dynamic re-planning when obstacles arise.
 
+### Skills
+- Unknown
+  - Not documented in the available source record.
+
 ### Last Update
 2026-05-15
 

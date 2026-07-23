@@ -2235,6 +2235,549 @@
   {
     "type": "header",
     "level": 1,
+    "content": "Cline CLI - https://github.com/cline/cline/tree/main/cli",
+    "children": [
+      {
+        "type": "text",
+        "content": "Cline's terminal and headless coding agent, also available as an SDK and IDE extension."
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "General",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Classification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Terminal",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Autonomous agent",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Version",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Continuously updated; current public version not independently verified."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Repository",
+        "children": [
+          {
+            "type": "text",
+            "content": "- https://github.com/cline/cline"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Rating",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ShortDescription",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Open-source terminal coding agent with file, shell, browser, MCP, and multi-model capabilities."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "description",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Cline CLI performs repository operations, executes commands, automates browsers, connects to MCP servers, and supports headless workflows, worktrees, checkpoints, and parallel agents."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Languages",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Any",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Notes",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Apache-2.0. Source: https://github.com/cline/cline/tree/main/cli"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "LastUpdated",
+        "children": [
+          {
+            "type": "text",
+            "content": "- 2026-07-23"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Licensing",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Opensource",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "License",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Apache-2.0",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "FreeTrial",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Client",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Prompts",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Tools",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Resources",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ACP",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Deployment",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "BYOK",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Local Offline",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "DeveloperExperience",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Context Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Direct File References",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Checkpoints",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Git Support",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Extensible",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Plugins",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Hooks",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "SlashCommands",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomModes",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Subagents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourcePath": "cline-cli.md"
+  },
+  {
+    "type": "header",
+    "level": 1,
     "content": "Codex CLI - https://github.com/openai/codex/",
     "children": [
       {
@@ -3871,6 +4414,549 @@
   {
     "type": "header",
     "level": 1,
+    "content": "Cursor CLI - https://www.cursor.com/changelog/cli-jan-16-2026",
+    "children": [
+      {
+        "type": "text",
+        "content": "Cursor's standalone terminal coding agent with Ask and Plan modes, hooks, MCP authentication, diffs, and cloud-agent handoff."
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "General",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Classification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Terminal",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Autonomous agent",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Version",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Continuously updated; current public version not independently verified."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Repository",
+        "children": [
+          {
+            "type": "text",
+            "content": "- -"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Rating",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ShortDescription",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Terminal-native Cursor agent for repository tasks."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "description",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Cursor CLI brings Cursor agent workflows to the terminal, including planning, edits, diffs, hooks, MCP authentication, and handoff to background agents."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Languages",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Any",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Notes",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Source: https://www.cursor.com/changelog/cli-jan-16-2026"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "LastUpdated",
+        "children": [
+          {
+            "type": "text",
+            "content": "- 2026-07-23"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Licensing",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Opensource",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "License",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Proprietary",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "FreeTrial",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Client",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Prompts",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Tools",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Resources",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ACP",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Deployment",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "BYOK",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Local Offline",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "No",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "DeveloperExperience",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Context Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Direct File References",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Checkpoints",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Git Support",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Extensible",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Plugins",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Hooks",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "SlashCommands",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomModes",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Subagents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourcePath": "cursor-cli.md"
+  },
+  {
+    "type": "header",
+    "level": 1,
     "content": "Droid CLI - https://factory.ai/product/cli",
     "children": [
       {
@@ -4992,11 +6078,11 @@
   {
     "type": "header",
     "level": 1,
-    "content": "GitHub Copilot CLI - https://github.com/github/copilot-cli",
+    "content": "GitHub Copilot CLI - https://github.com/features/copilot/cli",
     "children": [
       {
         "type": "text",
-        "content": "GitHub Copilot CLI is a terminal-based AI assistant that provides a chat-like interface in your command line, enabling developers to generate shell commands from natural language, explain terminal operations, and receive AI-driven coding assistance directly in their terminal environment. Integrated with the GitHub CLI via gh copilot, the tool helps write, explain, and automate Git, GitHub, and shell operations using conversational prompts.\n\n**Dataset ID:** terminal"
+        "content": "GitHub's terminal-native Copilot agent for interactive and scripted coding workflows."
       },
       {
         "type": "header",
@@ -5018,6 +6104,12 @@
                 "level": 1,
                 "content": "Code/Terminal",
                 "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Autonomous agent",
+                "plainChildren": ""
               }
             ]
           }
@@ -5030,7 +6122,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- GA (2026)    Available across all Copilot plans (Free, Pro, Pro+, Business, Enterprise). Transitioning to GitHub AI Credits usage-based billing June 1, 2026."
+            "content": "- Continuously updated; current public version not independently verified."
           }
         ]
       },
@@ -5041,7 +6133,7 @@
         "children": [
           {
             "type": "text",
-            "content": "https://github.com/github/copilot-cli"
+            "content": "- -"
           }
         ]
       },
@@ -5063,7 +6155,7 @@
         "children": [
           {
             "type": "text",
-            "content": "Terminal-based AI assistant for generating and explaining shell commands via natural language"
+            "content": "- Terminal interface for GitHub Copilot coding assistance and agent workflows."
           }
         ]
       },
@@ -5074,7 +6166,7 @@
         "children": [
           {
             "type": "text",
-            "content": "GitHub Copilot CLI operates as an interactive terminal assistant that translates natural language requests into executable shell commands and provides explanations for complex terminal operations. The tool supports two primary interaction modes: Interactive Mode (continuous chat-like conversation with follow-up questions) and Programmatic Mode (single-prompt execution via -p/--prompt flag for automation and scripting).\n\nThe CLI includes a flexible approval system for tool usage, allowing developers to control which commands Copilot can execute with options to approve commands one-time only, approve tools for the entire session, or deny specific tools entirely. Commands can be directly executed with ! prefix without AI model calls. The tool supports custom agents that can be invoked via /agent slash command, direct prompt references, or --agent command-line option."
+            "content": "- Copilot CLI brings GitHub Copilot into terminal workflows for code generation, repository questions, command assistance, and agentic task execution."
           }
         ]
       },
@@ -5091,7 +6183,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Any",
-                "plainChildren": "Language-agnostic shell command generation and explanation"
+                "plainChildren": ""
               }
             ]
           }
@@ -5104,7 +6196,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- Billing change (June 1, 2026): transitioning from premium request counts to GitHub AI Credits (token-based billing). Base plan pricing unchanged; code completions remain free.    \n- MCP support added for extending CLI capabilities via MCP servers.    \n- Model options include Claude Sonnet 4.5, GPT-5, and GPT-5 mini.    \n\nRequires Node.js 22+ and npm 10+. Free plan includes 50 chat requests per month; full access requires GitHub Copilot Individual, Business, or Enterprise subscription. Installation via npm install -g @github/copilot or gh copilot (GitHub CLI integration as of January 2026). Automatically inherits organization's Copilot policies and governance settings. Can create draft PRs and work in background for substantial changes."
+            "content": "- Distinct from GitHub's asynchronous cloud Coding Agent. Source: https://github.com/features/copilot/cli"
           }
         ]
       },
@@ -5115,7 +6207,7 @@
         "children": [
           {
             "type": "text",
-            "content": "2026-05-14"
+            "content": "- 2026-07-23"
           }
         ]
       },
@@ -5175,8 +6267,8 @@
               {
                 "type": "item",
                 "level": 1,
-                "content": "Yes",
-                "plainChildren": "Free plan with 50 chat requests per month Full subscription plans: Individual, Business, Enterprise"
+                "content": "Unknown",
+                "plainChildren": ""
               }
             ]
           }
@@ -5213,7 +6305,7 @@
               {
                 "type": "item",
                 "level": 1,
-                "content": "No",
+                "content": "Yes",
                 "plainChildren": ""
               }
             ]
@@ -5251,7 +6343,7 @@
               {
                 "type": "item",
                 "level": 1,
-                "content": "No",
+                "content": "Unknown",
                 "plainChildren": ""
               }
             ]
@@ -5270,7 +6362,7 @@
               {
                 "type": "item",
                 "level": 1,
-                "content": "No",
+                "content": "Unknown",
                 "plainChildren": ""
               }
             ]
@@ -5295,8 +6387,8 @@
               {
                 "type": "item",
                 "level": 1,
-                "content": "No",
-                "plainChildren": "Uses GitHub's AI infrastructure"
+                "content": "Unknown",
+                "plainChildren": ""
               }
             ]
           }
@@ -5315,7 +6407,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "No",
-                "plainChildren": "Requires GitHub authentication and internet connectivity"
+                "plainChildren": ""
               }
             ]
           }
@@ -5340,7 +6432,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": "Session-based context in interactive mode Repository-aware when run in code directories"
+                "plainChildren": ""
               }
             ]
           }
@@ -5359,7 +6451,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": "Can reference files and code in active editor"
+                "plainChildren": ""
               }
             ]
           }
@@ -5377,8 +6469,8 @@
               {
                 "type": "item",
                 "level": 1,
-                "content": "Yes",
-                "plainChildren": "Creates new branches and commits unstaged changes as checkpoints for substantial changes Draft PR creation for background work"
+                "content": "Unknown",
+                "plainChildren": ""
               }
             ]
           }
@@ -5397,7 +6489,7 @@
                 "type": "item",
                 "level": 1,
                 "content": "Yes",
-                "plainChildren": "Native Git command generation and execution GitHub CLI integration via gh copilot Can create branches, commits, and draft pull requests Granular control over git subcommands (e.g., deny git push)"
+                "plainChildren": ""
               }
             ]
           }
@@ -5421,7 +6513,7 @@
               {
                 "type": "item",
                 "level": 1,
-                "content": "No",
+                "content": "Unknown",
                 "plainChildren": ""
               }
             ]
@@ -5440,7 +6532,7 @@
               {
                 "type": "item",
                 "level": 1,
-                "content": "No",
+                "content": "Unknown",
                 "plainChildren": ""
               }
             ]
@@ -5459,8 +6551,8 @@
               {
                 "type": "item",
                 "level": 1,
-                "content": "Yes",
-                "plainChildren": "/explain for understanding code and commands /agent for selecting custom agents /login for authentication"
+                "content": "Unknown",
+                "plainChildren": ""
               }
             ]
           }
@@ -5478,7 +6570,7 @@
               {
                 "type": "item",
                 "level": 1,
-                "content": "No",
+                "content": "Unknown",
                 "plainChildren": ""
               }
             ]
@@ -5497,8 +6589,8 @@
               {
                 "type": "item",
                 "level": 1,
-                "content": "Yes",
-                "plainChildren": "Interactive mode for continuous chat Programmatic mode for single-prompt automation (-p/--prompt flag) Custom agent invocation via --agent flag"
+                "content": "Unknown",
+                "plainChildren": ""
               }
             ]
           }
@@ -5516,8 +6608,8 @@
               {
                 "type": "item",
                 "level": 1,
-                "content": "Yes",
-                "plainChildren": "Custom agents can be created and invoked Example: refactoring agent, testing agent Invoked via /agent command, direct prompts, or --agent CLI option"
+                "content": "Unknown",
+                "plainChildren": ""
               }
             ]
           }
@@ -7222,7 +8314,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- GA (August 2025; CLI October 2025)"
+            "content": "- Jules interface; no separately versioned public CLI release confirmed."
           }
         ]
       },
@@ -7296,7 +8388,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- Model: Powered by Gemini 3.1 Pro (updated from 2.5 Pro)    \n- Async Operation: Works in background while developers focus on other tasks; submit and return to completed PRs    \n- GA: Exited public beta August 2025 after hundreds of UI and quality improvements; CLI launched October 2025    \n- Free Tier: 15 tasks/day, 3 concurrent tasks    \n- Paid Plans: Pro $19.99/month (100 tasks/day, 15 concurrent); Ultra $124.99/month (300 tasks/day, 60 concurrent)    \n- Features: Test writing, feature building, bug fixing, dependency updates, audio changelogs, multimodal input    \n- Environment Snapshots: Ensures faster, consistent execution across sessions    \n- User Steerability: Modify Jules' execution plan at different stages before and during execution    \n- Integration: Public API available for custom workflow integration    \n- Cloud Execution: Clones repositories to isolated Google Cloud VM"
+            "content": "- Model: Powered by Gemini 3.1 Pro (updated from 2.5 Pro)    \n- Async Operation: Works in background while developers focus on other tasks; submit and return to completed PRs    \n- GA: Exited public beta August 2025 after hundreds of UI and quality improvements; CLI launched October 2025    \n- Free Tier: 15 tasks/day, 3 concurrent tasks    \n- Paid Plans: Pro $19.99/month (100 tasks/day, 15 concurrent); Ultra $124.99/month (300 tasks/day, 60 concurrent)    \n- Features: Test writing, feature building, bug fixing, dependency updates, audio changelogs, multimodal input    \n- Environment Snapshots: Ensures faster, consistent execution across sessions    \n- User Steerability: Modify Jules' execution plan at different stages before and during execution    \n- Integration: Public API available for custom workflow integration    \n- Cloud Execution: Clones repositories to isolated Google Cloud VM    \n- Source: https://jules.google/ (verified 2026-07-22)."
           }
         ]
       },
@@ -8851,7 +9943,7 @@
   {
     "type": "header",
     "level": 1,
-    "content": "Kiro CLI - https://www.example.com",
+    "content": "Kiro CLI - https://kiro.dev/",
     "children": [
       {
         "type": "text",
@@ -8922,7 +10014,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- v2.0 GA (April 2026)    Kiro CLI is the production/GA release of AWS's Kiro platform (the successor to Amazon Q Developer CLI). No single semantic version number is published like an open-source repo; updates are rolled out by AWS."
+            "content": "- Current rolling AWS Kiro CLI releases; no verified semantic version found.    Kiro CLI is the production/GA release of AWS's Kiro platform (the successor to Amazon Q Developer CLI). No single semantic version number is published like an open-source repo; updates are rolled out by AWS."
           }
         ]
       },
@@ -9006,7 +10098,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- Kiro CLI shares steering files and configuration with the Kiro IDE, enabling consistent behavior across IDE and terminal workflows.    \n- The product is a managed AWS offering; teams manage access via AWS Identity Center and related AWS account controls.    \n- v2.0 additions (April 2026): headless CI/CD mode via KIRO_API_KEY env var (GitHub Actions, GitLab CI, Jenkins); Windows support; agent swapping mid-session (/agent swap); custom agent JSON configuration; property-based testing from specs; Agent Output Side Channels (AGENT_DISPLAY_OUT, AGENT_CONTEXT_OUT); granular web fetch URL allowlists; team subscription plans; kiro-cli translate (NL to shell) and kiro-cli inline (inline suggestions)."
+            "content": "- Kiro CLI shares steering files and configuration with the Kiro IDE, enabling consistent behavior across IDE and terminal workflows.    \n- The product is a managed AWS offering; teams manage access via AWS Identity Center and related AWS account controls.    \n- v2.0 additions (April 2026): headless CI/CD mode via KIRO_API_KEY env var (GitHub Actions, GitLab CI, Jenkins); Windows support; agent swapping mid-session (/agent swap); custom agent JSON configuration; property-based testing from specs; Agent Output Side Channels (AGENT_DISPLAY_OUT, AGENT_CONTEXT_OUT); granular web fetch URL allowlists; team subscription plans; kiro-cli translate (NL to shell) and kiro-cli inline (inline suggestions).    \n- Source: https://kiro.dev/docs/cli/ (verified 2026-07-22)."
           }
         ]
       },
@@ -9625,7 +10717,7 @@
   {
     "type": "header",
     "level": 1,
-    "content": "Letta - https://github.com/cpacker/MemGPT",
+    "content": "Letta Code - https://docs.letta.com/letta-code/cli",
     "children": [
       {
         "type": "text",
@@ -9663,7 +10755,7 @@
         "children": [
           {
             "type": "text",
-            "content": "-"
+            "content": "- Current CLI package: @letta-ai/letta-code; version is package-managed."
           }
         ]
       },
@@ -9674,7 +10766,7 @@
         "children": [
           {
             "type": "text",
-            "content": "https://github.com/cpacker/MemGPT"
+            "content": "- https://github.com/letta-ai/letta-code"
           }
         ]
       },
@@ -9743,7 +10835,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- 2026 additions: Context Repositories (Feb 2026) — git-backed memory replacing specialised memory tools; MemFS (Memory Filesystem) — agents manage memory via filesystem and bash operations on git-versioned context repos; Context Constitution (April 2026) — principles governing how agents learn from experience; ranked #1 model-agnostic coding agent on Terminal-Bench.    \n\nTerminal-use agent implemented in under 200 lines of code using Letta's stateful agents SDK. Supports background mode streaming with resumable streams and crash recovery for long-running tasks (10+ minutes). Installed via pip (pymemgpt). Can be deployed as Letta Cloud (managed service) or self-hosted servers. Performance using Claude 4 Sonnet matches Claude Code using Claude Opus."
+            "content": "- 2026 additions: Context Repositories (Feb 2026) — git-backed memory replacing specialised memory tools; MemFS (Memory Filesystem) — agents manage memory via filesystem and bash operations on git-versioned context repos; Context Constitution (April 2026) — principles governing how agents learn from experience; ranked #1 model-agnostic coding agent on Terminal-Bench.    \n- Source: https://docs.letta.com/letta-code/cli (verified 2026-07-22).    \n\nTerminal-use agent implemented in under 200 lines of code using Letta's stateful agents SDK. Supports background mode streaming with resumable streams and crash recovery for long-running tasks (10+ minutes). Installed via pip (pymemgpt). Can be deployed as Letta Cloud (managed service) or self-hosted servers. Performance using Claude 4 Sonnet matches Claude Code using Claude Opus."
           }
         ]
       },
@@ -10140,6 +11232,549 @@
       }
     ],
     "sourcePath": "letta.md"
+  },
+  {
+    "type": "header",
+    "level": 1,
+    "content": "mini-SWE-agent - https://github.com/SWE-agent/mini-swe-agent",
+    "children": [
+      {
+        "type": "text",
+        "content": "Lightweight SWE-agent-derived CLI and Python harness for software-engineering tasks."
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "General",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Classification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Terminal",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Autonomous agent",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Version",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Active v2.x releases."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Repository",
+        "children": [
+          {
+            "type": "text",
+            "content": "- https://github.com/SWE-agent/mini-swe-agent"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Rating",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ShortDescription",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Minimal software-engineering agent with CLI, batch inference, trajectory browsing, and Python bindings."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "description",
+        "children": [
+          {
+            "type": "text",
+            "content": "- mini-SWE-agent provides a compact agent harness for executing software-engineering tasks through a shell-oriented agent-computer interface, with batch and programmatic workflows."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Languages",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Python",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Notes",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Source: https://github.com/SWE-agent/mini-swe-agent"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "LastUpdated",
+        "children": [
+          {
+            "type": "text",
+            "content": "- 2026-07-23"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Licensing",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Opensource",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "License",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "MIT",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "FreeTrial",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Client",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Prompts",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Tools",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Resources",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ACP",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Deployment",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "BYOK",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Local Offline",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "DeveloperExperience",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Context Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Direct File References",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Checkpoints",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Git Support",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Extensible",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Plugins",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Hooks",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "SlashCommands",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomModes",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Subagents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourcePath": "mini-swe-agent.md"
   },
   {
     "type": "header",
@@ -12287,6 +13922,1092 @@
   {
     "type": "header",
     "level": 1,
+    "content": "Plandex - https://github.com/plandex-ai/plandex",
+    "children": [
+      {
+        "type": "text",
+        "content": "Open-source terminal coding agent for planning and executing large multi-step software tasks."
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "General",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Classification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Terminal",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Autonomous agent",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Version",
+        "children": [
+          {
+            "type": "text",
+            "content": "- v2.2.1 (2025-07-16); maintenance status should be monitored."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Repository",
+        "children": [
+          {
+            "type": "text",
+            "content": "- https://github.com/plandex-ai/plandex"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Rating",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ShortDescription",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Planning-first terminal agent for large projects and multi-step code changes."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "description",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Plandex provides planning, REPL, scripting, and terminal workflows for large coding tasks and can be self-hosted."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Languages",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Any",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Notes",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Source: https://github.com/plandex-ai/plandex"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "LastUpdated",
+        "children": [
+          {
+            "type": "text",
+            "content": "- 2026-07-23"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Licensing",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Opensource",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "License",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "MIT",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "FreeTrial",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Client",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Prompts",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Tools",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Resources",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ACP",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Deployment",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "BYOK",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Local Offline",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "DeveloperExperience",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Context Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Direct File References",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Checkpoints",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Git Support",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Extensible",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Plugins",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Hooks",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "SlashCommands",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomModes",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Subagents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourcePath": "plandex.md"
+  },
+  {
+    "type": "header",
+    "level": 1,
+    "content": "Qwen Code - https://github.com/QwenLM/qwen-code",
+    "children": [
+      {
+        "type": "text",
+        "content": "Open-source terminal coding agent optimized for Qwen models and adapted from Gemini CLI workflows."
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "General",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Classification",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Terminal",
+                "plainChildren": ""
+              },
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Code/Autonomous agent",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Version",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Continuously updated; current public version not independently verified."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Repository",
+        "children": [
+          {
+            "type": "text",
+            "content": "- https://github.com/QwenLM/qwen-code"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Rating",
+        "children": [
+          {
+            "type": "text",
+            "content": "-"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ShortDescription",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Open-source command-line coding agent for repository tasks."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "description",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Qwen Code provides terminal-based code understanding, editing, command execution, and agent workflows with Qwen model integration."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Languages",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Any",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Notes",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Source: https://github.com/QwenLM/qwen-code"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "LastUpdated",
+        "children": [
+          {
+            "type": "text",
+            "content": "- 2026-07-23"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Licensing",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Opensource",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "License",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Apache-2.0",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "FreeTrial",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Client",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Prompts",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Tools",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "MCP-Resources",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "ACP",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Deployment",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "BYOK",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Local Offline",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "DeveloperExperience",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Context Management",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Direct File References",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Checkpoints",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Git Support",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Yes",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Extensible",
+        "children": []
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Plugins",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Hooks",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "SlashCommands",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Skills",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "CustomModes",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
+        "content": "Subagents",
+        "children": [
+          {
+            "type": "list",
+            "level": 2,
+            "children": [
+              {
+                "type": "item",
+                "level": 1,
+                "content": "Unknown",
+                "plainChildren": ""
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "sourcePath": "qwen-code.md"
+  },
+  {
+    "type": "header",
+    "level": 1,
     "content": "Warp - https://www.warp.dev",
     "children": [
       {
@@ -12365,6 +15086,17 @@
       {
         "type": "header",
         "level": 2,
+        "content": "description",
+        "children": [
+          {
+            "type": "text",
+            "content": "- Not documented in the available source record."
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "level": 2,
         "content": "Languages",
         "children": [
           {
@@ -12388,7 +15120,7 @@
         "children": [
           {
             "type": "text",
-            "content": "- Key features: Agent Mode (natural language -> commands), Warp Code (diff-tracking and stepwise code edits by agents), Drive (shared Workflows and Notebooks), Planning Mode and multi-agent orchestration.    \n- Privacy controls: granular autonomy settings (allowlists/denylists, pause/approve diffs, control file access), network logging, and zero-data-retention guarantees for enterprise customers.    \n- Strengths: Unified UX for prompt + shell input, native diff review for agent-made changes, strong collaboration primitives for teams.    \n- Limitations / unknowns: public documentation is limited on BYOK (bring-your-own-key) and fully offline local LLM operation; product is proprietary which may limit on-premise customization for some organizations.    \n- Recommended when: you want a first-class terminal with integrated AI agents and team sharing (Drive), MCP support, and open-source transparency.    \n- v2026.05 additions: open-sourced MIT + AGPL v3; Cloud Agents (Oz) triggered by webhooks, CI events, or Slack messages; drag-and-drop images into CLI agent sessions; inline Mermaid diagram rendering in agent output; Codex harness for local child agents; Mistral Vibe as recognised CLI agent; Rich Input for third-party agents (Claude Code, Gemini CLI, OpenCode)."
+            "content": "- Key features: Agent Mode (natural language -> commands), Warp Code (diff-tracking and stepwise code edits by agents), Drive (shared Workflows and Notebooks), Planning Mode and multi-agent orchestration.    \n- Privacy controls: granular autonomy settings (allowlists/denylists, pause/approve diffs, control file access), network logging, and zero-data-retention guarantees for enterprise customers.    \n- Strengths: Unified UX for prompt + shell input, native diff review for agent-made changes, strong collaboration primitives for teams.    \n- Limitations / unknowns: public documentation is limited on BYOK (bring-your-own-key) and fully offline local LLM operation; product is proprietary which may limit on-premise customization for some organizations.    \n- Recommended when: you want a first-class terminal with integrated AI agents and team sharing (Drive), MCP support, and open-source transparency.    \n- 2026 additions: Cloud Agents (Oz), image inputs, inline Mermaid rendering, Codex harness support, and Rich Input for third-party agents. The product remains proprietary; the open-source licensing claim is not retained without a primary licensing source."
           }
         ]
       },

@@ -12,7 +12,7 @@ AI-powered desktop application for macOS and Windows with MCP support, file drag
 
 ### Version
 <!-- Latest version used for update -->
-- 1.1.2321 (February 8, 2026)
+- Continuously updated desktop application; current public build number not specified.
 
 ### Repo
 <!-- Associated Github repository -->
@@ -39,6 +39,7 @@ In January 2026, Anthropic released Claude Cowork, a feature that transforms Cla
 - Any
 
 ### Notes
+- Sources: https://www.anthropic.com/product/claude-cowork and https://support.anthropic.com/en/articles/10065433-installing-claude-for-desktop (verified 2026-07-22).
 - Claude Desktop (the chat app) is different from Claude Code (the developer CLI tool)
 - Claude Code has additional features like git integration, worktrees, and checkpoints
 - Some features (like Cowork) require Pro or higher subscription

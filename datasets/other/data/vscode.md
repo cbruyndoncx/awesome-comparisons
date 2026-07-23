@@ -64,6 +64,10 @@ MCP support generally available since v1.102. First major AI code editor with fu
 ### Resources
 - Yes
 
+### Custom Modes
+- Unknown
+  - Not documented in the available source record.
+
 ### Sampling
 - Yes
 

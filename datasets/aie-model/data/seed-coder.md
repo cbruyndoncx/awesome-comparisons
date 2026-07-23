@@ -42,6 +42,12 @@ Seed-Coder is a family of lightweight open-source code language models developed
 - Deployment: transformers library, vLLM offline batched inference, multi-GPU distributed serving with tensor parallelism.
 - 2025-2026 Update: Released May 8, 2025. ByteDance Seed team preparing next-generation launches including Doubao 2.0, Seedream 5.0, and Seeddance 2.0 potentially by February 2026. Model supports vLLM deployment and multi-GPU distributed serving for long-context inputs up to 32K tokens.
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

@@ -11,7 +11,7 @@ Jules Tools is Google's command-line interface for Jules, their asynchronous AI 
 - Code/Autonomous agent
 
 ### Version
-- GA (August 2025; CLI October 2025)
+- Jules interface; no separately versioned public CLI release confirmed.
 
 ### Repo
 - -
@@ -44,6 +44,7 @@ The tool integrates with existing repositories, understands full project context
 - User Steerability: Modify Jules' execution plan at different stages before and during execution
 - Integration: Public API available for custom workflow integration
 - Cloud Execution: Clones repositories to isolated Google Cloud VM
+- Source: https://jules.google/ (verified 2026-07-22).
 
 ### Last Update
 2026-05-14
@@ -138,4 +139,3 @@ The tool integrates with existing repositories, understands full project context
 
 ### Terminal
 - Yes
-

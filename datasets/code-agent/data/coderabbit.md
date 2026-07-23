@@ -8,6 +8,7 @@ A cloud-first AI-powered code review assistant that analyzes pull requests, gene
 - Code/Autonomous agent
 
 ### Version
+- Current plans: Free, Pro ($24/user/month annual billing), Pro Plus ($48/user/month annual billing), and Enterprise. Lite and Pro Legacy plans retired 2026-06-08.
 SaaS platform (2026-05) — 2M+ repositories, 13M+ PRs processed
 
 ### Repo
@@ -51,6 +52,11 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
 - 2025-2026 Update: SOC 2 Type II audit completed in 2025. Pricing restructured: Lite (free, unlimited PR reviews), Pro ($24/mo annual per dev), Enterprise (custom, self-hosted, 500+ seats). Added adaptive learning (learns from team feedback), agentic workflows with @coderabbitai in PRs (generate tests, draft docs, open Jira/Linear issues). 40+ linters/SAST tools integrated with LLM noise filtering. VS Code extension added (compatible with Cursor, Windsurf). 2025 research found AI-generated code has 40% more critical issues and 70% more major issues, reinforcing need for AI review tools. Enterprise self-hosted option now available with VPN tunneling.
 
 - 2026 additions: Pro+ tier launched (between Pro and Enterprise) — unit test generation, merge conflict resolution, code simplification, higher rate limits; CLI v0.4.5 for large repos; secret scanning upgraded from Gitleaks to Betterleaks; Custom Finishing Touches (open beta) — reusable automation recipes in .coderabbit.yaml; Issue Planner generates detailed coding plans; 8+ new tool integrations (Stylelint, TruffleHog, OpenGrep, Trivy, PSScriptAnalyzer, TFLint, Fortitude, Blinter); now supports 35+ coding agents including Claude Code, Cursor, Gemini CLI.
+- Sources: https://www.coderabbit.ai/pricing and https://kb.coderabbit.ai/articles/2508018126-sunset-of-lite-and-pro-legacy-subscription-plans?lang=en (verified 2026-07-22).
+
+### Skills
+- Unknown
+  - Not documented in the available source record.
 
 ### Last Update
 2026-05-15
@@ -141,4 +147,3 @@ CodeRabbit provides automated, AI-driven code reviews for pull requests and in-I
 ### Subagents
 - Yes
   - Provides agentic workflows and a conversational assistant for multi-step tasks (generate tests, propose fixes, create release notes) though internal subagent architecture details are not public.
-

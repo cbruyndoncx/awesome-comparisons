@@ -42,6 +42,12 @@ GLM-4.5 is an open-source large language model series from Zhipu AI (Z.ai) desig
 - Released August 2025 with strong benchmark results.
 - 2025-2026 Update: GLM-4.6 released ~2 months later with #1 coding ranking alongside Anthropic/OpenAI. GLM-4.7 released December 2025 with coding comparable to Claude Sonnet 4.5, topped open-source and domestic rankings in Artificial Analysis. Context expanded to 200K tokens. Interleaved thinking and preserved thinking features added. GLM-5 announced. Zhipu MaaS ARR grew 25x to 500M+ in 10 months. Training used 22T-token corpus with 7T tokens for code/reasoning. Dual-mode operation: thinking mode for complex tasks, non-thinking for speed.
 
+### Lifecycle
+- legacy
+
+### Last Verified
+- 2026-07-22
+
 ### Last Update
 - 2026-01-30
 

@@ -11,7 +11,8 @@ Open-source terminal AI coding agent that edits your codebase and runs terminal 
 - Code/Terminal
 
 ### Version
--
+- 1.0.684 (2026-07)
+  - Latest npm package version observed in the official package listing; verify before release.
 
 ### Repo
 - https://github.com/CodebuffAI/codebuff
@@ -40,9 +41,11 @@ Freebuff is the free, ad-supported tier of Codebuff — the same CLI with usage 
 - TypeScript SDK available for programmatic/CI use
 - Git workflow is manual — Codebuff edits files, you manage commits and PRs yourself
 - "Codebuff agents are the new MCP" per README — positions agents as an alternative pattern, not an MCP client implementation
+- Current source: https://github.com/CodebuffAI/codebuff
+- The project remains actively maintained, with the official npm package reporting 1.0.684.
 
 ### Last Update
-2025-05
+- 2026-07-22
 
 ## Licensing
 
